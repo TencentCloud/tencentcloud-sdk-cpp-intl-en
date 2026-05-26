@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API ID
-                     * @return APIId API ID
+                     * 获取API ID.
+                     * @return APIId API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置API ID
-                     * @param _aPIId API ID
+                     * 设置API ID.
+                     * @param _aPIId API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API ID
+                     * API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

@@ -125,12 +125,18 @@
 #include <tencentcloud/trtc/v20190722/model/StopStreamIngestResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopWebRecordRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StopWebRecordResponse.h>
+#include <tencentcloud/trtc/v20190722/model/TextToSpeechRequest.h>
+#include <tencentcloud/trtc/v20190722/model/TextToSpeechResponse.h>
+#include <tencentcloud/trtc/v20190722/model/TextToSpeechSSERequest.h>
+#include <tencentcloud/trtc/v20190722/model/TextToSpeechSSEResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateStreamIngestRequest.h>
 #include <tencentcloud/trtc/v20190722/model/UpdateStreamIngestResponse.h>
+#include <tencentcloud/trtc/v20190722/model/VoiceCloneRequest.h>
+#include <tencentcloud/trtc/v20190722/model/VoiceCloneResponse.h>
 
 
 namespace TencentCloud
@@ -298,6 +304,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StopWebRecordResponse> StopWebRecordOutcome;
                 typedef std::future<StopWebRecordOutcome> StopWebRecordOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StopWebRecordRequest&, StopWebRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopWebRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechResponse> TextToSpeechOutcome;
+                typedef std::future<TextToSpeechOutcome> TextToSpeechOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::TextToSpeechRequest&, TextToSpeechOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechSSEResponse> TextToSpeechSSEOutcome;
+                typedef std::future<TextToSpeechSSEOutcome> TextToSpeechSSEOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::TextToSpeechSSERequest&, TextToSpeechSSEOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechSSEAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateAIConversationResponse> UpdateAIConversationOutcome;
                 typedef std::future<UpdateAIConversationOutcome> UpdateAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdateAIConversationRequest&, UpdateAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAIConversationAsyncHandler;
@@ -307,6 +319,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateStreamIngestResponse> UpdateStreamIngestOutcome;
                 typedef std::future<UpdateStreamIngestOutcome> UpdateStreamIngestOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::UpdateStreamIngestRequest&, UpdateStreamIngestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateStreamIngestAsyncHandler;
+                typedef Outcome<Core::Error, Model::VoiceCloneResponse> VoiceCloneOutcome;
+                typedef std::future<VoiceCloneOutcome> VoiceCloneOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::VoiceCloneRequest&, VoiceCloneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VoiceCloneAsyncHandler;
 
 
 
@@ -368,8 +383,7 @@ This API is used to achieve the following goals:
                 CreateCloudSliceTaskOutcomeCallable CreateCloudSliceTaskCallable(const Model::CreateCloudSliceTaskRequest& request);
 
                 /**
-                 *API description:
-Enable the cloud transcription feature.
+                 *API description: Enable the cloud transcription feature.
                  * @param req CreateCloudTranscriptionRequest
                  * @return CreateCloudTranscriptionOutcome
                  */
@@ -773,11 +787,16 @@ The TRTC AI dialogue function has built-in speech-to-text capability and provide
                 StartAIConversationOutcomeCallable StartAIConversationCallable(const Model::StartAIConversationRequest& request);
 
                 /**
-                 *Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
-- Pull the stream of the entire room.
-- Pull the stream of a specific user.
+                 *Start up the transcription bot. The backend will pass the robot stream pulling to perform real-time speech recognition and deliver subtitles and transcription messages.
+The transcription bot supports two stream pulling methods, controlled by the TranscriptionMode field.
+- Pull the stream of all players in the room.
+- Pull the stream for a specific user.
 
-The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+The server delivers subtitles and transcription messages in real time through TRTC custom messages, with CmdId fixed to 1. Clients just need to listen to the custom message callback, such as the C++ callback (https://www.tencentcloud.com/document/product/647/79637?from_cn_redirect=1#4cd82f4edb24992a15a25187089e1565). Other clients such as Android and Web can likewise find it at the same link.
+
+
+**Note:**
+When TranscriptionMode is 0, ensure only one task is initiated in a room. If multiple tasks are initiated, robots will subscribe with each other. Unless the task is stopped proactively, it will timeout exit after 10 hours. In such cases, it is advisable to fill in SessionId to ensure subsequent repeated task failures.
                  * @param req StartAITranscriptionRequest
                  * @return StartAITranscriptionOutcome
                  */
@@ -867,6 +886,24 @@ You can create a relay task before the anchor enters the room. When the relay ta
                 StopWebRecordOutcomeCallable StopWebRecordCallable(const Model::StopWebRecordRequest& request);
 
                 /**
+                 *This API is used to perform text to speech.
+                 * @param req TextToSpeechRequest
+                 * @return TextToSpeechOutcome
+                 */
+                TextToSpeechOutcome TextToSpeech(const Model::TextToSpeechRequest &request);
+                void TextToSpeechAsync(const Model::TextToSpeechRequest& request, const TextToSpeechAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechOutcomeCallable TextToSpeechCallable(const Model::TextToSpeechRequest& request);
+
+                /**
+                 *This API is used to stream text-to-speech.
+                 * @param req TextToSpeechSSERequest
+                 * @return TextToSpeechSSEOutcome
+                 */
+                TextToSpeechSSEOutcome TextToSpeechSSE(const Model::TextToSpeechSSERequest &request);
+                void TextToSpeechSSEAsync(const Model::TextToSpeechSSERequest& request, const TextToSpeechSSEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechSSEOutcomeCallable TextToSpeechSSECallable(const Model::TextToSpeechSSERequest& request);
+
+                /**
                  *Update AI conversation task parameters
                  * @param req UpdateAIConversationRequest
                  * @return UpdateAIConversationOutcome
@@ -893,6 +930,15 @@ Note: For details about how to use this API, see the `StartPublishCdnStream` doc
                 UpdateStreamIngestOutcome UpdateStreamIngest(const Model::UpdateStreamIngestRequest &request);
                 void UpdateStreamIngestAsync(const Model::UpdateStreamIngestRequest& request, const UpdateStreamIngestAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateStreamIngestOutcomeCallable UpdateStreamIngestCallable(const Model::UpdateStreamIngestRequest& request);
+
+                /**
+                 *This API is used to clone sound.
+                 * @param req VoiceCloneRequest
+                 * @return VoiceCloneOutcome
+                 */
+                VoiceCloneOutcome VoiceClone(const Model::VoiceCloneRequest &request);
+                void VoiceCloneAsync(const Model::VoiceCloneRequest& request, const VoiceCloneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                VoiceCloneOutcomeCallable VoiceCloneCallable(const Model::VoiceCloneRequest& request);
 
             };
         }

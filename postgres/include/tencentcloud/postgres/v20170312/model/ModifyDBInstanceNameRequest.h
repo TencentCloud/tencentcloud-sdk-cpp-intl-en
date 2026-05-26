@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database instance ID in the format of postgres-6fego161
-                     * @return DBInstanceId Database instance ID in the format of postgres-6fego161
+                     * 获取Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Database instance ID in the format of postgres-6fego161
-                     * @param _dBInstanceId Database instance ID in the format of postgres-6fego161
+                     * 设置Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,18 +64,18 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * 获取Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
-                     * @return InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * @return InstanceName Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * 设置Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
-                     * @param _instanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * @param _instanceName Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
                      * 
                      */
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database instance ID in the format of postgres-6fego161
+                     * Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+                     * Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
                      */
                     std::string m_instanceName;

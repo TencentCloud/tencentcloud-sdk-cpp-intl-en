@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User management list
+                * Response for querying the user list.
                 */
                 class DescribeUserListResp : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
+                     * 获取Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of entries
+                     * @return TotalCount Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of entries
+                     * 设置Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Total number of entries
+                     * @param _totalCount Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +73,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List data
+                     * 获取List data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataList List data
+                     * @return DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeUserListData> GetDataList() const;
 
                     /**
-                     * 设置List data
+                     * 设置List data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataList List data
+                     * @param _dataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -100,14 +100,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List data
+                     * List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeUserListData> m_dataList;

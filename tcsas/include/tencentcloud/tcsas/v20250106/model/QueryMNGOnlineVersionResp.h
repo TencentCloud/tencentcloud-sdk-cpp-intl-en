@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Queries the released mini game version ID
+                * Response for querying mini game released version IDs.
                 */
                 class QueryMNGOnlineVersionResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version number</p>
-                     * @return MNPVersion <p>Version number</p>
+                     * 获取<p>Version number.</p>
+                     * @return MNPVersion <p>Version number.</p>
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置<p>Version number</p>
-                     * @param _mNPVersion <p>Version number</p>
+                     * 设置<p>Version number.</p>
+                     * @param _mNPVersion <p>Version number.</p>
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version ID</p>
-                     * @return MNPVersionId <p>Version ID</p>
+                     * 获取<p>Version ID.</p>
+                     * @return MNPVersionId <p>Version ID.</p>
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置<p>Version ID</p>
-                     * @param _mNPVersionId <p>Version ID</p>
+                     * 设置<p>Version ID.</p>
+                     * @param _mNPVersionId <p>Version ID.</p>
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version remarks</p>
-                     * @return MNPVersionNote <p>Version remarks</p>
+                     * 获取<p>Version note.</p>
+                     * @return MNPVersionNote <p>Version note.</p>
                      * 
                      */
                     std::string GetMNPVersionNote() const;
 
                     /**
-                     * 设置<p>Version remarks</p>
-                     * @param _mNPVersionNote <p>Version remarks</p>
+                     * 设置<p>Version note.</p>
+                     * @param _mNPVersionNote <p>Version note.</p>
                      * 
                      */
                     void SetMNPVersionNote(const std::string& _mNPVersionNote);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MNPVersionNoteHasBeenSet() const;
 
                     /**
-                     * 获取<p>Update time</p>
-                     * @return UpdateTime <p>Update time</p>
+                     * 获取<p>Last modified time.</p>
+                     * @return UpdateTime <p>Last modified time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置<p>Update time</p>
-                     * @param _updateTime <p>Update time</p>
+                     * 设置<p>Last modified time.</p>
+                     * @param _updateTime <p>Last modified time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Version number</p>
+                     * <p>Version number.</p>
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * <p>Version ID</p>
+                     * <p>Version ID.</p>
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * <p>Version remarks</p>
+                     * <p>Version note.</p>
                      */
                     std::string m_mNPVersionNote;
                     bool m_mNPVersionNoteHasBeenSet;
 
                     /**
-                     * <p>Update time</p>
+                     * <p>Last modified time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

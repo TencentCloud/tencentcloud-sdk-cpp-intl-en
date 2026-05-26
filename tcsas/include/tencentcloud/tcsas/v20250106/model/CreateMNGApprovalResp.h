@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response for submitting a mini game version for approval
+                * Response for submitting a mini game version for approval.
                 */
                 class CreateMNGApprovalResp : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Boolean response object</p>
+                     * 获取<p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Result <p>Boolean response object</p>
+                     * @return Result <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetResult() const;
 
                     /**
-                     * 设置<p>Boolean response object</p>
+                     * 设置<p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _result <p>Boolean response object</p>
+                     * @param _result <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,15 +72,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取<p>Approval number</p>
-                     * @return ApprovalNo <p>Approval number</p>
+                     * 获取<p>Approval number.</p>
+                     * @return ApprovalNo <p>Approval number.</p>
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置<p>Approval number</p>
-                     * @param _approvalNo <p>Approval number</p>
+                     * 设置<p>Approval number.</p>
+                     * @param _approvalNo <p>Approval number.</p>
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -95,14 +95,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Boolean response object</p>
+                     * <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * <p>Approval number</p>
+                     * <p>Approval number.</p>
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;

@@ -29,7 +29,8 @@ ModifyMNGRequest::ModifyMNGRequest() :
     m_mNPDescHasBeenSet(false),
     m_mNPIdHasBeenSet(false),
     m_platformIdHasBeenSet(false),
-    m_mNPIconHasBeenSet(false)
+    m_mNPIconHasBeenSet(false),
+    m_i18nListHasBeenSet(false)
 {
 }
 
@@ -94,6 +95,21 @@ string ModifyMNGRequest::ToJsonString() const
         string key = "MNPIcon";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_mNPIcon.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_i18nListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "I18nList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_i18nList.begin(); itr != m_i18nList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -214,6 +230,22 @@ void ModifyMNGRequest::SetMNPIcon(const string& _mNPIcon)
 bool ModifyMNGRequest::MNPIconHasBeenSet() const
 {
     return m_mNPIconHasBeenSet;
+}
+
+vector<MNPI18NSyncDto> ModifyMNGRequest::GetI18nList() const
+{
+    return m_i18nList;
+}
+
+void ModifyMNGRequest::SetI18nList(const vector<MNPI18NSyncDto>& _i18nList)
+{
+    m_i18nList = _i18nList;
+    m_i18nListHasBeenSet = true;
+}
+
+bool ModifyMNGRequest::I18nListHasBeenSet() const
+{
+    return m_i18nListHasBeenSet;
 }
 
 

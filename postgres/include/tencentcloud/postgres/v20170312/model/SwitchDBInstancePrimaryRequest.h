@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,19 +64,19 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
-                     * @return Force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
+                     * 获取Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
+                     * @return Force Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
                      * 
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
-                     * @param _force Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
+                     * 设置Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
+                     * @param _force Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
                      * 
                      */
                     void SetForce(const bool& _force);
@@ -89,31 +89,31 @@ namespace TencentCloud
                     bool ForceHasBeenSet() const;
 
                     /**
-                     * 获取Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
-                     * @return SwitchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+                     * 获取Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+                     * @return SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
-                     * @param _switchTag Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+                     * 设置Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+                     * @param _switchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
@@ -170,24 +170,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-<li>Default: `false`.
+                     * Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+<Li>Default: false</li>.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;
 
                     /**
-                     * Switch time for the specified instance after configuration modification.
-<li>`0`: Switch now. 
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-<li>Default value: `0`. 
+                     * Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      */
                     uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;

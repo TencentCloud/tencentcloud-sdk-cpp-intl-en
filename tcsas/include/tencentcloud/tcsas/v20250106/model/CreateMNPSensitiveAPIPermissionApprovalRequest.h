@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API Id
-                     * @return APIId API Id
+                     * 获取API ID.
+                     * @return APIId API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置API Id
-                     * @param _aPIId API Id
+                     * 设置API ID.
+                     * @param _aPIId API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取Reason for application
-                     * @return ApplyReason Reason for application
+                     * 获取Reason for request.
+                     * @return ApplyReason Reason for request.
                      * 
                      */
                     std::string GetApplyReason() const;
 
                     /**
-                     * 设置Reason for application
-                     * @param _applyReason Reason for application
+                     * 设置Reason for request.
+                     * @param _applyReason Reason for request.
                      * 
                      */
                     void SetApplyReason(const std::string& _applyReason);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApplyReasonHasBeenSet() const;
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API Id
+                     * API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * Reason for application
+                     * Reason for request.
                      */
                     std::string m_applyReason;
                     bool m_applyReasonHasBeenSet;
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

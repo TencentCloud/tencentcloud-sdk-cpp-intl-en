@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ReadOnlyGroupId RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取RO group identifier.
+                     * @return ReadOnlyGroupId RO group identifier.
                      * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
-                     * 设置RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _readOnlyGroupId RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置RO group identifier.
+                     * @param _readOnlyGroupId RO group identifier.
                      * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
@@ -75,19 +71,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ReadOnlyGroupName RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the read-only group name.
+                     * @return ReadOnlyGroupName Specifies the read-only group name.
                      * 
                      */
                     std::string GetReadOnlyGroupName() const;
 
                     /**
-                     * 设置RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _readOnlyGroupName RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the read-only group name.
+                     * @param _readOnlyGroupName Specifies the read-only group name.
                      * 
                      */
                     void SetReadOnlyGroupName(const std::string& _readOnlyGroupName);
@@ -100,19 +92,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ReadOnlyGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _projectId Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -125,19 +113,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MasterDBInstanceId Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Primary instance id.
+                     * @return MasterDBInstanceId Primary instance id.
                      * 
                      */
                     std::string GetMasterDBInstanceId() const;
 
                     /**
-                     * 设置Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _masterDBInstanceId Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Primary instance id.
+                     * @param _masterDBInstanceId Primary instance id.
                      * 
                      */
                     void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
@@ -150,19 +134,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MasterDBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the minimum number of instances to retain.
+                     * @return MinDelayEliminateReserve Specifies the minimum number of instances to retain.
                      * 
                      */
                     int64_t GetMinDelayEliminateReserve() const;
 
                     /**
-                     * 设置The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _minDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the minimum number of instances to retain.
+                     * @param _minDelayEliminateReserve Specifies the minimum number of instances to retain.
                      * 
                      */
                     void SetMinDelayEliminateReserve(const int64_t& _minDelayEliminateReserve);
@@ -175,15 +155,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MinDelayEliminateReserveHasBeenSet() const;
 
                     /**
-                     * 获取Delayed log size threshold
-                     * @return MaxReplayLatency Delayed log size threshold
+                     * 获取Specifies the delay threshold for space size in MB.
+                     * @return MaxReplayLatency Specifies the delay threshold for space size in MB.
                      * 
                      */
                     int64_t GetMaxReplayLatency() const;
 
                     /**
-                     * 设置Delayed log size threshold
-                     * @param _maxReplayLatency Delayed log size threshold
+                     * 设置Specifies the delay threshold for space size in MB.
+                     * @param _maxReplayLatency Specifies the delay threshold for space size in MB.
                      * 
                      */
                     void SetMaxReplayLatency(const int64_t& _maxReplayLatency);
@@ -196,15 +176,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxReplayLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @return ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 获取Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+                     * @return ReplayLatencyEliminate Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
                      * 
                      */
                     int64_t GetReplayLatencyEliminate() const;
 
                     /**
-                     * 设置Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @param _replayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 设置Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+                     * @param _replayLatencyEliminate Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
                      * 
                      */
                     void SetReplayLatencyEliminate(const int64_t& _replayLatencyEliminate);
@@ -217,15 +197,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ReplayLatencyEliminateHasBeenSet() const;
 
                     /**
-                     * 获取Delay threshold
-                     * @return MaxReplayLag Delay threshold
+                     * 获取Delay time size threshold, in seconds.
+                     * @return MaxReplayLag Delay time size threshold, in seconds.
                      * 
                      */
                     double GetMaxReplayLag() const;
 
                     /**
-                     * 设置Delay threshold
-                     * @param _maxReplayLag Delay threshold
+                     * 设置Delay time size threshold, in seconds.
+                     * @param _maxReplayLag Delay time size threshold, in seconds.
                      * 
                      */
                     void SetMaxReplayLag(const double& _maxReplayLag);
@@ -238,15 +218,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxReplayLagHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @return ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 获取Delay time switch. 0 - turn off. 1 - turn on.
+                     * @return ReplayLagEliminate Delay time switch. 0 - turn off. 1 - turn on.
                      * 
                      */
                     int64_t GetReplayLagEliminate() const;
 
                     /**
-                     * 设置Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @param _replayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 设置Delay time switch. 0 - turn off. 1 - turn on.
+                     * @param _replayLagEliminate Delay time switch. 0 - turn off. 1 - turn on.
                      * 
                      */
                     void SetReplayLagEliminate(const int64_t& _replayLagEliminate);
@@ -281,18 +261,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _subnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -347,15 +323,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status. valid values: creating, ok, modifying, deleting, deleted.
+                     * @return Status Status. valid values: creating, ok, modifying, deleting, deleted.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status. valid values: creating, ok, modifying, deleting, deleted.
+                     * @param _status Status. valid values: creating, ok, modifying, deleting, deleted.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -458,60 +434,55 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * RO group identifier.
                      */
                     std::string m_readOnlyGroupId;
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the read-only group name.
                      */
                     std::string m_readOnlyGroupName;
                     bool m_readOnlyGroupNameHasBeenSet;
 
                     /**
-                     * Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Project ID.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Primary instance id.
                      */
                     std::string m_masterDBInstanceId;
                     bool m_masterDBInstanceIdHasBeenSet;
 
                     /**
-                     * The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the minimum number of instances to retain.
                      */
                     int64_t m_minDelayEliminateReserve;
                     bool m_minDelayEliminateReserveHasBeenSet;
 
                     /**
-                     * Delayed log size threshold
+                     * Specifies the delay threshold for space size in MB.
                      */
                     int64_t m_maxReplayLatency;
                     bool m_maxReplayLatencyHasBeenSet;
 
                     /**
-                     * Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
                      */
                     int64_t m_replayLatencyEliminate;
                     bool m_replayLatencyEliminateHasBeenSet;
 
                     /**
-                     * Delay threshold
+                     * Delay time size threshold, in seconds.
                      */
                     double m_maxReplayLag;
                     bool m_maxReplayLagHasBeenSet;
 
                     /**
-                     * Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * Delay time switch. 0 - turn off. 1 - turn on.
                      */
                     int64_t m_replayLagEliminate;
                     bool m_replayLagEliminateHasBeenSet;
@@ -524,7 +495,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -542,7 +512,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Status
+                     * Status. valid values: creating, ok, modifying, deleting, deleted.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

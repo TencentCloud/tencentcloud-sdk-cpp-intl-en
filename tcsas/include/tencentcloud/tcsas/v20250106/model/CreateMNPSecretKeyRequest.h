@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini program or mini game appid</p>
-                     * @return MNPId <p>Mini program or mini game appid</p>
+                     * 获取<p>Mini program or mini game appid.</p>
+                     * @return MNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini program or mini game appid</p>
-                     * @param _mNPId <p>Mini program or mini game appid</p>
+                     * 设置<p>Mini program or mini game appid.</p>
+                     * @param _mNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Mini program or mini game appid</p>
+                     * <p>Mini program or mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;

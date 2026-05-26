@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Approval ID
-                     * @return ApprovalNo Approval ID
+                     * 获取Approval number.
+                     * @return ApprovalNo Approval number.
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval ID
-                     * @param _approvalNo Approval ID
+                     * 设置Approval number.
+                     * @param _approvalNo Approval number.
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Approval status. 20: Rejected; 30: Approved
-                     * @return ApprovalStatus Approval status. 20: Rejected; 30: Approved
+                     * 获取Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+                     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置Approval status. 20: Rejected; 30: Approved
-                     * @param _approvalStatus Approval status. 20: Rejected; 30: Approved
+                     * 设置Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+                     * @param _approvalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Approval notes
-                     * @return ApprovalNote Approval notes
+                     * 获取Approval note.
+                     * @return ApprovalNote Approval note.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
-                     * 设置Approval notes
-                     * @param _approvalNote Approval notes
+                     * 设置Approval note.
+                     * @param _approvalNote Approval note.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Approval ID
+                     * Approval number.
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Approval status. 20: Rejected; 30: Approved
+                     * Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Approval notes
+                     * Approval note.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;

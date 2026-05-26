@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time in YYYYMMDD format
-                     * @return TimeBegin Start time in YYYYMMDD format
+                     * 获取Start time in YYYYMMDD format.
+                     * @return TimeBegin Start time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetTimeBegin() const;
 
                     /**
-                     * 设置Start time in YYYYMMDD format
-                     * @param _timeBegin Start time in YYYYMMDD format
+                     * 设置Start time in YYYYMMDD format.
+                     * @param _timeBegin Start time in YYYYMMDD format.
                      * 
                      */
                     void SetTimeBegin(const int64_t& _timeBegin);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TimeBeginHasBeenSet() const;
 
                     /**
-                     * 获取Mini program appid
-                     * @return MNPId Mini program appid
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid
-                     * @param _mNPId Mini program appid
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Type: 0 Non-production data, 1 Production data
-                     * @return DataType Type: 0 Non-production data, 1 Production data
+                     * 获取Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @return DataType Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     int64_t GetDataType() const;
 
                     /**
-                     * 设置Type: 0 Non-production data, 1 Production data
-                     * @param _dataType Type: 0 Non-production data, 1 Production data
+                     * 设置Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @param _dataType Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     void SetDataType(const int64_t& _dataType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DataTypeHasBeenSet() const;
 
                     /**
-                     * 获取End time in YYYYMMDD format
-                     * @return TimeEnd End time in YYYYMMDD format
+                     * 获取End time in YYYYMMDD format.
+                     * @return TimeEnd End time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetTimeEnd() const;
 
                     /**
-                     * 设置End time in YYYYMMDD format
-                     * @param _timeEnd End time in YYYYMMDD format
+                     * 设置End time in YYYYMMDD format.
+                     * @param _timeEnd End time in YYYYMMDD format.
                      * 
                      */
                     void SetTimeEnd(const int64_t& _timeEnd);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TimeEndHasBeenSet() const;
 
                     /**
-                     * 获取0 All, 2-Android, 3 iOS
-                     * @return Platform 0 All, 2-Android, 3 iOS
+                     * 获取Platform type. Valid values: 0: All; 2: Android; 3: iOS.
+                     * @return Platform Platform type. Valid values: 0: All; 2: Android; 3: iOS.
                      * 
                      */
                     int64_t GetPlatform() const;
 
                     /**
-                     * 设置0 All, 2-Android, 3 iOS
-                     * @param _platform 0 All, 2-Android, 3 iOS
+                     * 设置Platform type. Valid values: 0: All; 2: Android; 3: iOS.
+                     * @param _platform Platform type. Valid values: 0: All; 2: Android; 3: iOS.
                      * 
                      */
                     void SetPlatform(const int64_t& _platform);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time in YYYYMMDD format
+                     * Start time in YYYYMMDD format.
                      */
                     int64_t m_timeBegin;
                     bool m_timeBeginHasBeenSet;
 
                     /**
-                     * Mini program appid
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Type: 0 Non-production data, 1 Production data
+                     * Data type. Valid values: 0: Non-production data; 1: Production data.
                      */
                     int64_t m_dataType;
                     bool m_dataTypeHasBeenSet;
 
                     /**
-                     * End time in YYYYMMDD format
+                     * End time in YYYYMMDD format.
                      */
                     int64_t m_timeEnd;
                     bool m_timeEndHasBeenSet;
 
                     /**
-                     * 0 All, 2-Android, 3 iOS
+                     * Platform type. Valid values: 0: All; 2: Android; 3: iOS.
                      */
                     int64_t m_platform;
                     bool m_platformHasBeenSet;

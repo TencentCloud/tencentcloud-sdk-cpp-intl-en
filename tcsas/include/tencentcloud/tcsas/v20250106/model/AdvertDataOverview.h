@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advertising data overview
+                * Ad data overview.
                 */
                 class AdvertDataOverview : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Estimated revenue
+                     * 获取Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EstimatedEarnings Estimated revenue
+                     * @return EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEstimatedEarnings() const;
 
                     /**
-                     * 设置Estimated revenue
+                     * 设置Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _estimatedEarnings Estimated revenue
+                     * @param _estimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EstimatedEarningsHasBeenSet() const;
 
                     /**
-                     * 获取Requests
+                     * 获取Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RequestsNumber Requests
+                     * @return RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRequestsNumber() const;
 
                     /**
-                     * 设置Requests
+                     * 设置Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _requestsNumber Requests
+                     * @param _requestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,18 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RequestsNumberHasBeenSet() const;
 
                     /**
-                     * 获取Impressions
+                     * 获取Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Impressions Impressions
+                     * @return Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetImpressions() const;
 
                     /**
-                     * 设置Impressions
+                     * 设置Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _impressions Impressions
+                     * @param _impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImpressionsHasBeenSet() const;
 
                     /**
-                     * 获取Taps
+                     * 获取Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClicksNumber Taps
+                     * @return ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetClicksNumber() const;
 
                     /**
-                     * 设置Taps
+                     * 设置Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clicksNumber Taps
+                     * @param _clicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +147,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClicksNumberHasBeenSet() const;
 
                     /**
-                     * 获取Impressions
+                     * 获取eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ECPM Impressions
+                     * @return ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetECPM() const;
 
                     /**
-                     * 设置Impressions
+                     * 设置eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eCPM Impressions
+                     * @param _eCPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -174,35 +174,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Estimated revenue
+                     * Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_estimatedEarnings;
                     bool m_estimatedEarningsHasBeenSet;
 
                     /**
-                     * Requests
+                     * Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_requestsNumber;
                     bool m_requestsNumberHasBeenSet;
 
                     /**
-                     * Impressions
+                     * Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_impressions;
                     bool m_impressionsHasBeenSet;
 
                     /**
-                     * Taps
+                     * Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clicksNumber;
                     bool m_clicksNumberHasBeenSet;
 
                     /**
-                     * Impressions
+                     * eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_eCPM;

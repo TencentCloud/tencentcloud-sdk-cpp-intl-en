@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program appid
-                     * @return MNPId Mini program appid
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid
-                     * @param _mNPId Mini program appid
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Fixed value: mnp_data_analysis
-                     * @return ReportId Fixed value: mnp_data_analysis
+                     * 获取Fixed value: mnp_data_analysis.
+                     * @return ReportId Fixed value: mnp_data_analysis.
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置Fixed value: mnp_data_analysis
-                     * @param _reportId Fixed value: mnp_data_analysis
+                     * 设置Fixed value: mnp_data_analysis.
+                     * @param _reportId Fixed value: mnp_data_analysis.
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取IndexId
-                     * @return IndexId IndexId
+                     * 获取IndexId.
+                     * @return IndexId IndexId.
                      * 
                      */
                     std::string GetIndexId() const;
 
                     /**
-                     * 设置IndexId
-                     * @param _indexId IndexId
+                     * 设置IndexId.
+                     * @param _indexId IndexId.
                      * 
                      */
                     void SetIndexId(const std::string& _indexId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IndexIdHasBeenSet() const;
 
                     /**
-                     * 获取Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
-                     * @return QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+                     * 获取Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
+                     * @return QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
                      * 
                      */
                     std::string GetQueryData() const;
 
                     /**
-                     * 设置Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
-                     * @param _queryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+                     * 设置Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
+                     * @param _queryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
                      * 
                      */
                     void SetQueryData(const std::string& _queryData);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program appid
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Fixed value: mnp_data_analysis
+                     * Fixed value: mnp_data_analysis.
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * IndexId
+                     * IndexId.
                      */
                     std::string m_indexId;
                     bool m_indexIdHasBeenSet;
 
                     /**
-                     * Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+                     * Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
                      */
                     std::string m_queryData;
                     bool m_queryDataHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time in YYYYMMDD format
-                     * @return DataTime Start time in YYYYMMDD format
+                     * 获取Start time in YYYYMMDD format.
+                     * @return DataTime Start time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetDataTime() const;
 
                     /**
-                     * 设置Start time in YYYYMMDD format
-                     * @param _dataTime Start time in YYYYMMDD format
+                     * 设置Start time in YYYYMMDD format.
+                     * @param _dataTime Start time in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const int64_t& _dataTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Superapp ID
-                     * @return ApplicationIds Superapp ID
+                     * 获取Superapp ID.
+                     * @return ApplicationIds Superapp ID.
                      * 
                      */
                     std::vector<std::string> GetApplicationIds() const;
 
                     /**
-                     * 设置Superapp ID
-                     * @param _applicationIds Superapp ID
+                     * 设置Superapp ID.
+                     * @param _applicationIds Superapp ID.
                      * 
                      */
                     void SetApplicationIds(const std::vector<std::string>& _applicationIds);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Start time in YYYYMMDD format
+                     * Start time in YYYYMMDD format.
                      */
                     int64_t m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Superapp ID
+                     * Superapp ID.
                      */
                     std::vector<std::string> m_applicationIds;
                     bool m_applicationIdsHasBeenSet;

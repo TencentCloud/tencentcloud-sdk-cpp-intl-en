@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * String object
+                * String data object.
                 */
                 class StringData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取string type response data.
-                     * @return Data string type response data.
+                     * 获取String response data. 
+                     * @return Data String response data. 
                      * 
                      */
                     std::string GetData() const;
 
                     /**
-                     * 设置string type response data.
-                     * @param _data string type response data.
+                     * 设置String response data. 
+                     * @param _data String response data. 
                      * 
                      */
                     void SetData(const std::string& _data);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * string type response data.
+                     * String response data. 
                      */
                     std::string m_data;
                     bool m_dataHasBeenSet;

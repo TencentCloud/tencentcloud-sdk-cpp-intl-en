@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取1: Set; 2: Cancel
-                     * @return ActionType 1: Set; 2: Cancel
+                     * 获取Action type. Valid values: 1: Set; 2: Cancel.
+                     * @return ActionType Action type. Valid values: 1: Set; 2: Cancel.
                      * 
                      */
                     int64_t GetActionType() const;
 
                     /**
-                     * 设置1: Set; 2: Cancel
-                     * @param _actionType 1: Set; 2: Cancel
+                     * 设置Action type. Valid values: 1: Set; 2: Cancel.
+                     * @param _actionType Action type. Valid values: 1: Set; 2: Cancel.
                      * 
                      */
                     void SetActionType(const int64_t& _actionType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version ID
-                     * @return MNPVersionId Mini program version ID
+                     * 获取Mini program version ID.
+                     * @return MNPVersionId Mini program version ID.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-                     * @param _mNPVersionId Mini program version ID
+                     * 设置Mini program version ID.
+                     * @param _mNPVersionId Mini program version ID.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Path to the preview page
-                     * @return PreivewEntrancePath Path to the preview page
+                     * 获取Preview path.
+                     * @return PreivewEntrancePath Preview path.
                      * 
                      */
                     std::string GetPreivewEntrancePath() const;
 
                     /**
-                     * 设置Path to the preview page
-                     * @param _preivewEntrancePath Path to the preview page
+                     * 设置Preview path.
+                     * @param _preivewEntrancePath Preview path.
                      * 
                      */
                     void SetPreivewEntrancePath(const std::string& _preivewEntrancePath);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * 1: Set; 2: Cancel
+                     * Action type. Valid values: 1: Set; 2: Cancel.
                      */
                     int64_t m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Mini program version ID
+                     * Mini program version ID.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Path to the preview page
+                     * Preview path.
                      */
                     std::string m_preivewEntrancePath;
                     bool m_preivewEntrancePathHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Page offset
-                     * @return Offset Page offset
+                     * 获取Pagination offset. 
+                     * @return Offset Pagination offset. 
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page offset
-                     * @param _offset Page offset
+                     * 设置Pagination offset. 
+                     * @param _offset Pagination offset. 
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page
-                     * @return Limit Number of results per page
+                     * 获取Number of entries per page.
+                     * @return Limit Number of entries per page.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page
-                     * @param _limit Number of results per page
+                     * 设置Number of entries per page.
+                     * @param _limit Number of entries per page.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Keywords for search (username or account)
-                     * @return Keyword Keywords for search (username or account)
+                     * 获取Search keyword (username or account).
+                     * @return Keyword Search keyword (username or account).
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置Keywords for search (username or account)
-                     * @param _keyword Keywords for search (username or account)
+                     * 设置Search keyword (username or account).
+                     * @param _keyword Search keyword (username or account).
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取User account 1 - Super admin 2 - Platform admin 3 - Member
-                     * @return AccountType User account 1 - Super admin 2 - Platform admin 3 - Member
+                     * 获取User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+                     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
-                     * 设置User account 1 - Super admin 2 - Platform admin 3 - Member
-                     * @param _accountType User account 1 - Super admin 2 - Platform admin 3 - Member
+                     * 设置User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+                     * @param _accountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool AccountTypeHasBeenSet() const;
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID. If left empty, all teams are returned.
+                     * @return TeamId Team ID. If left empty, all teams are returned.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID. If left empty, all teams are returned.
+                     * @param _teamId Team ID. If left empty, all teams are returned.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Page offset
+                     * Pagination offset. 
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page
+                     * Number of entries per page.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Keywords for search (username or account)
+                     * Search keyword (username or account).
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * User account 1 - Super admin 2 - Platform admin 3 - Member
+                     * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
 
                     /**
-                     * Team ID
+                     * Team ID. If left empty, all teams are returned.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;

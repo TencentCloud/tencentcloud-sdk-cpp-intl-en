@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program version ID
-                     * @return MNPVersionId Mini program version ID
+                     * 获取Mini program version ID.
+                     * @return MNPVersionId Mini program version ID.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-                     * @param _mNPVersionId Mini program version ID
+                     * 设置Mini program version ID.
+                     * @param _mNPVersionId Mini program version ID.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program version ID
+                     * Mini program version ID.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

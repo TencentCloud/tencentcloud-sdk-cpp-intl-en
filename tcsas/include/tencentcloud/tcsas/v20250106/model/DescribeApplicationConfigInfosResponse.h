@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response data
-                     * @return Data Response data
+                     * 获取Response data.
+                     * @return Data Response data.
                      * 
                      */
                     DescribeApplicationConfigInfo GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response data
+                     * Response data.
                      */
                     DescribeApplicationConfigInfo m_data;
                     bool m_dataHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of database specifications
-                     * @return ClassInfoSet List of database specifications
+                     * 获取<p>Database specification list.</p>
+                     * @return ClassInfoSet <p>Database specification list.</p>
                      * 
                      */
                     std::vector<ClassInfo> GetClassInfoSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of database specifications
+                     * <p>Database specification list.</p>
                      */
                     std::vector<ClassInfo> m_classInfoSet;
                     bool m_classInfoSetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response data for creating a mini game version
+                * Response for creating a mini game version.
                 */
                 class CreateMNGVersionResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game version compilation task ID</p>
-                     * @return TaskId <p>Mini game version compilation task ID</p>
+                     * 获取<p>Mini game version compilation task ID.</p>
+                     * @return TaskId <p>Mini game version compilation task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置<p>Mini game version compilation task ID</p>
-                     * @param _taskId <p>Mini game version compilation task ID</p>
+                     * 设置<p>Mini game version compilation task ID.</p>
+                     * @param _taskId <p>Mini game version compilation task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game version compilation task ID</p>
+                     * <p>Mini game version compilation task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

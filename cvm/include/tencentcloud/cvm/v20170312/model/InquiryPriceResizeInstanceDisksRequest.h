@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cvm/v20170312/model/DataDisk.h>
+#include <tencentcloud/cvm/v20170312/model/SystemDisk.h>
 
 
 namespace TencentCloud
@@ -110,6 +111,48 @@ namespace TencentCloud
                      */
                     bool ForceStopHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+                     * @return SystemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+                     * 
+                     */
+                    SystemDisk GetSystemDisk() const;
+
+                    /**
+                     * 设置Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+                     * @param _systemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+                     * 
+                     */
+                    void SetSystemDisk(const SystemDisk& _systemDisk);
+
+                    /**
+                     * 判断参数 SystemDisk 是否已赋值
+                     * @return SystemDisk 是否已赋值
+                     * 
+                     */
+                    bool SystemDiskHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to perform online resizing.
+                     * @return ResizeOnline Whether to perform online resizing.
+                     * 
+                     */
+                    bool GetResizeOnline() const;
+
+                    /**
+                     * 设置Whether to perform online resizing.
+                     * @param _resizeOnline Whether to perform online resizing.
+                     * 
+                     */
+                    void SetResizeOnline(const bool& _resizeOnline);
+
+                    /**
+                     * 判断参数 ResizeOnline 是否已赋值
+                     * @return ResizeOnline 是否已赋值
+                     * 
+                     */
+                    bool ResizeOnlineHasBeenSet() const;
+
                 private:
 
                     /**
@@ -130,6 +173,18 @@ namespace TencentCloud
                      */
                     bool m_forceStop;
                     bool m_forceStopHasBeenSet;
+
+                    /**
+                     * Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+                     */
+                    SystemDisk m_systemDisk;
+                    bool m_systemDiskHasBeenSet;
+
+                    /**
+                     * Whether to perform online resizing.
+                     */
+                    bool m_resizeOnline;
+                    bool m_resizeOnlineHasBeenSet;
 
                 };
             }

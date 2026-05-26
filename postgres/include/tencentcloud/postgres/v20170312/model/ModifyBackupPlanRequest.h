@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BaseBackupRetentionPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
-                     * @return BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+                     * 获取Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
+                     * @return BackupPeriod Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
                      * 
                      */
                     std::vector<std::string> GetBackupPeriod() const;
 
                     /**
-                     * 设置Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
-                     * @param _backupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+                     * 设置Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
+                     * @param _backupPeriod Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
                      * 
                      */
                     void SetBackupPeriod(const std::vector<std::string>& _backupPeriod);
@@ -168,10 +168,52 @@ namespace TencentCloud
                      */
                     bool LogBackupRetentionPeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+                     * @return PlanId Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+                     * 
+                     */
+                    std::string GetPlanId() const;
+
+                    /**
+                     * 设置Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+                     * @param _planId Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+                     * 
+                     */
+                    void SetPlanId(const std::string& _planId);
+
+                    /**
+                     * 判断参数 PlanId 是否已赋值
+                     * @return PlanId 是否已赋值
+                     * 
+                     */
+                    bool PlanIdHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the name of the backup plan to modify.
+                     * @return PlanName Specifies the name of the backup plan to modify.
+                     * 
+                     */
+                    std::string GetPlanName() const;
+
+                    /**
+                     * 设置Specifies the name of the backup plan to modify.
+                     * @param _planName Specifies the name of the backup plan to modify.
+                     * 
+                     */
+                    void SetPlanName(const std::string& _planName);
+
+                    /**
+                     * 判断参数 PlanName 是否已赋值
+                     * @return PlanName 是否已赋值
+                     * 
+                     */
+                    bool PlanNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -195,7 +237,7 @@ namespace TencentCloud
                     bool m_baseBackupRetentionPeriodHasBeenSet;
 
                     /**
-                     * Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+                     * Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
                      */
                     std::vector<std::string> m_backupPeriod;
                     bool m_backupPeriodHasBeenSet;
@@ -205,6 +247,18 @@ namespace TencentCloud
                      */
                     uint64_t m_logBackupRetentionPeriod;
                     bool m_logBackupRetentionPeriodHasBeenSet;
+
+                    /**
+                     * Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+                     */
+                    std::string m_planId;
+                    bool m_planIdHasBeenSet;
+
+                    /**
+                     * Specifies the name of the backup plan to modify.
+                     */
+                    std::string m_planName;
+                    bool m_planNameHasBeenSet;
 
                 };
             }

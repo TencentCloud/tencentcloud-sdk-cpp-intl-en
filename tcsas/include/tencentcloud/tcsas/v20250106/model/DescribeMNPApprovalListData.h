@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of mini program approval requests of the application
+                * Mini program approval list information.
                 */
                 class DescribeMNPApprovalListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Approval ticket ID
-                     * @return ApprovalNo Approval ticket ID
+                     * 获取Approval number.
+                     * @return ApprovalNo Approval number.
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval ticket ID
-                     * @param _approvalNo Approval ticket ID
+                     * 设置Approval number.
+                     * @param _approvalNo Approval number.
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Application ID
-                     * @return ApplicationId Application ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _applicationId Application ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
-                     * @return ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+                     * 获取Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+                     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
-                     * @param _approvalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+                     * 设置Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+                     * @param _approvalStatus Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version ID
-                     * @return MNPVersionId Mini program version ID
+                     * 获取Mini program version ID.
+                     * @return MNPVersionId Mini program version ID.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-                     * @param _mNPVersionId Mini program version ID
+                     * 设置Mini program version ID.
+                     * @param _mNPVersionId Mini program version ID.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Applicant
-                     * @return ApplyUser Applicant
+                     * 获取Applicant.
+                     * @return ApplyUser Applicant.
                      * 
                      */
                     std::string GetApplyUser() const;
 
                     /**
-                     * 设置Applicant
-                     * @param _applyUser Applicant
+                     * 设置Applicant.
+                     * @param _applyUser Applicant.
                      * 
                      */
                     void SetApplyUser(const std::string& _applyUser);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ApplyUserHasBeenSet() const;
 
                     /**
-                     * 获取Application time
-                     * @return ApplyTime Application time
+                     * 获取Application time.
+                     * @return ApplyTime Application time.
                      * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
-                     * 设置Application time
-                     * @param _applyTime Application time
+                     * 设置Application time.
+                     * @param _applyTime Application time.
                      * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ApplyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program icon
-                     * @return MNPIcon Mini program icon
+                     * 获取Mini program icon.
+                     * @return MNPIcon Mini program icon.
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini program icon
-                     * @param _mNPIcon Mini program icon
+                     * 设置Mini program icon.
+                     * @param _mNPIcon Mini program icon.
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the application icon.
-                     * @return ApplicationLogo Specifies the application icon.
+                     * 获取Superapp icon.
+                     * @return ApplicationLogo Superapp icon.
                      * 
                      */
                     std::string GetApplicationLogo() const;
 
                     /**
-                     * 设置Specifies the application icon.
-                     * @param _applicationLogo Specifies the application icon.
+                     * 设置Superapp icon.
+                     * @param _applicationLogo Superapp icon.
                      * 
                      */
                     void SetApplicationLogo(const std::string& _applicationLogo);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ApplicationLogoHasBeenSet() const;
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program review qr code.
-                     * @return MNPQrCodeUrl Mini program review qr code.
+                     * 获取Mini program approval QR code URL.
+                     * @return MNPQrCodeUrl Mini program approval QR code URL.
                      * 
                      */
                     std::string GetMNPQrCodeUrl() const;
 
                     /**
-                     * 设置Mini program review qr code.
-                     * @param _mNPQrCodeUrl Mini program review qr code.
+                     * 设置Mini program approval QR code URL.
+                     * @param _mNPQrCodeUrl Mini program approval QR code URL.
                      * 
                      */
                     void SetMNPQrCodeUrl(const std::string& _mNPQrCodeUrl);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool MNPQrCodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取Mini program type
-                     * @return MNPType Mini program type
+                     * 获取Mini program category.
+                     * @return MNPType Mini program category.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置Mini program type
-                     * @param _mNPType Mini program type
+                     * 设置Mini program category.
+                     * @param _mNPType Mini program category.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the reviewer.
-                     * @return ApprovalUser Specifies the reviewer.
+                     * 获取Approver.
+                     * @return ApprovalUser Approver.
                      * 
                      */
                     std::string GetApprovalUser() const;
 
                     /**
-                     * 设置Specifies the reviewer.
-                     * @param _approvalUser Specifies the reviewer.
+                     * 设置Approver.
+                     * @param _approvalUser Approver.
                      * 
                      */
                     void SetApprovalUser(const std::string& _approvalUser);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool ApprovalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Approval notes
-                     * @return ApprovalNote Approval notes
+                     * 获取Approval note.
+                     * @return ApprovalNote Approval note.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
-                     * 设置Approval notes
-                     * @param _approvalNote Approval notes
+                     * 设置Approval note.
+                     * @param _approvalNote Approval note.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -448,25 +448,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Approval ticket ID
+                     * Approval number.
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+                     * Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
@@ -478,73 +478,73 @@ namespace TencentCloud
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * Mini program version ID
+                     * Mini program version ID.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * Applicant
+                     * Applicant.
                      */
                     std::string m_applyUser;
                     bool m_applyUserHasBeenSet;
 
                     /**
-                     * Application time
+                     * Application time.
                      */
                     std::string m_applyTime;
                     bool m_applyTimeHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program icon
+                     * Mini program icon.
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Specifies the application icon.
+                     * Superapp icon.
                      */
                     std::string m_applicationLogo;
                     bool m_applicationLogoHasBeenSet;
 
                     /**
-                     * Team ID
+                     * Team ID.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Mini program review qr code.
+                     * Mini program approval QR code URL.
                      */
                     std::string m_mNPQrCodeUrl;
                     bool m_mNPQrCodeUrlHasBeenSet;
 
                     /**
-                     * Mini program type
+                     * Mini program category.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Specifies the reviewer.
+                     * Approver.
                      */
                     std::string m_approvalUser;
                     bool m_approvalUserHasBeenSet;
@@ -556,7 +556,7 @@ namespace TencentCloud
                     bool m_approvalTimeHasBeenSet;
 
                     /**
-                     * Approval notes
+                     * Approval note.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;

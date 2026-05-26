@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Application configuration info
+                * Superapp configuration information.
                 */
                 class DownloadApplicationConfigResp : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration information in Base64 format
+                     * 获取Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return File Configuration information in Base64 format
+                     * @return File Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFile() const;
 
                     /**
-                     * 设置Configuration information in Base64 format
+                     * 设置Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _file Configuration information in Base64 format
+                     * @param _file Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Configuration information in Base64 format
+                     * Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_file;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response data
-                     * @return Data Response data
+                     * 获取Response data.
+                     * @return Data Response data.
                      * 
                      */
                     CreateMNPApprovalResp GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response data
+                     * Response data.
                      */
                     CreateMNPApprovalResp m_data;
                     bool m_dataHasBeenSet;

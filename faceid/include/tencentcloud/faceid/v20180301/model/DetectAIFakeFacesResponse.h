@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
-                     * @return AttackRiskLevel Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+                     * 获取<p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
+                     * @return AttackRiskLevel <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
                      * 
                      */
                     std::string GetAttackRiskLevel() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool AttackRiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
-                     * @return AttackRiskDetailList A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+                     * 获取<p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
+                     * @return AttackRiskDetailList <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
                      * 
                      */
                     std::vector<AttackRiskDetail> GetAttackRiskDetailList() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool AttackRiskDetailListHasBeenSet() const;
 
                     /**
-                     * 获取Additional Information
-                     * @return ExtraInfo Additional Information
+                     * 获取<p>Return additional information (including detailed information of cache hit templates).</p>
+                     * @return ExtraInfo <p>Return additional information (including detailed information of cache hit templates).</p>
                      * 
                      */
                     ExtraInfo GetExtraInfo() const;
@@ -90,19 +90,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+                     * <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
                      */
                     std::string m_attackRiskLevel;
                     bool m_attackRiskLevelHasBeenSet;
 
                     /**
-                     * A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+                     * <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
                      */
                     std::vector<AttackRiskDetail> m_attackRiskDetailList;
                     bool m_attackRiskDetailListHasBeenSet;
 
                     /**
-                     * Additional Information
+                     * <p>Return additional information (including detailed information of cache hit templates).</p>
                      */
                     ExtraInfo m_extraInfo;
                     bool m_extraInfoHasBeenSet;

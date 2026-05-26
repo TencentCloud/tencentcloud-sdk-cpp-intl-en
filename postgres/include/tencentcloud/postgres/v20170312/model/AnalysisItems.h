@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CallNumHasBeenSet() const;
 
                     /**
-                     * 获取The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
-                     * @return CallPercent The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+                     * 获取Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
+                     * @return CallPercent Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
                      * 
                      */
                     double GetCallPercent() const;
 
                     /**
-                     * 设置The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
-                     * @param _callPercent The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+                     * 设置Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
+                     * @param _callPercent Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
                      * 
                      */
                     void SetCallPercent(const double& _callPercent);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool AvgCostTimeHasBeenSet() const;
 
                     /**
-                     * 获取The timestamp when the slow query statement starts to execute for the first time during the specified period of time
-                     * @return FirstTime The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+                     * 获取Start execution time of the first slow SQL within the specified time range.
+                     * @return FirstTime Start execution time of the first slow SQL within the specified time range.
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
-                     * 设置The timestamp when the slow query statement starts to execute for the first time during the specified period of time
-                     * @param _firstTime The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+                     * 设置Start execution time of the first slow SQL within the specified time range.
+                     * @param _firstTime Start execution time of the first slow SQL within the specified time range.
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取The timestamp when the slow query statement starts to execute for the last time during the specified period of time
-                     * @return LastTime The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+                     * 获取Start execution time of the last slow SQL within the specified time range.
+                     * @return LastTime Start execution time of the last slow SQL within the specified time range.
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
-                     * 设置The timestamp when the slow query statement starts to execute for the last time during the specified period of time
-                     * @param _lastTime The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+                     * 设置Start execution time of the last slow SQL within the specified time range.
+                     * @param _lastTime Start execution time of the last slow SQL within the specified time range.
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -352,7 +352,7 @@ namespace TencentCloud
                     bool m_callNumHasBeenSet;
 
                     /**
-                     * The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+                     * Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
                      */
                     double m_callPercent;
                     bool m_callPercentHasBeenSet;
@@ -388,13 +388,13 @@ namespace TencentCloud
                     bool m_avgCostTimeHasBeenSet;
 
                     /**
-                     * The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+                     * Start execution time of the first slow SQL within the specified time range.
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+                     * Start execution time of the last slow SQL within the specified time range.
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;

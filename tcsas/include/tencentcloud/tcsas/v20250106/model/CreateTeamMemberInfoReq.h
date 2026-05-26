@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * New team member - Member information
+                * Member information for adding a team member.
                 */
                 class CreateTeamMemberInfoReq : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User ID
-                     * @return UserId User ID
+                     * 获取User ID.
+                     * @return UserId User ID.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _userId User ID
+                     * 设置User ID.
+                     * @param _userId User ID.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User role ID
-                     * @return UserRoleId User role ID
+                     * 获取User role ID.
+                     * @return UserRoleId User role ID.
                      * 
                      */
                     int64_t GetUserRoleId() const;
 
                     /**
-                     * 设置User role ID
-                     * @param _userRoleId User role ID
+                     * 设置User role ID.
+                     * @param _userRoleId User role ID.
                      * 
                      */
                     void SetUserRoleId(const int64_t& _userRoleId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User ID
+                     * User ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User role ID
+                     * User role ID.
                      */
                     int64_t m_userRoleId;
                     bool m_userRoleIdHasBeenSet;

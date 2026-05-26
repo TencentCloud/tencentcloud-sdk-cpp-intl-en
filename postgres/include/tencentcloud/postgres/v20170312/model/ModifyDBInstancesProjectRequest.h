@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
-                     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * 获取Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
+                     * @return DBInstanceIdSet Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
-                     * 设置List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
-                     * @param _dBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * 设置Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
+                     * @param _dBInstanceIdSet Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
                      * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取ID of the new project
-                     * @return ProjectId ID of the new project
+                     * 获取ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
+                     * @return ProjectId ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置ID of the new project
-                     * @param _projectId ID of the new project
+                     * 设置ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
+                     * @param _projectId ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
 
                     /**
-                     * ID of the new project
+                     * ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;

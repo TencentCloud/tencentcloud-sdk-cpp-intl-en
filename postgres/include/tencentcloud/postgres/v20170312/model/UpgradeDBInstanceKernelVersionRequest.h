@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -89,31 +89,31 @@ namespace TencentCloud
                     bool TargetDBKernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @return SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 获取Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+                     * @return SwitchTag Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-                     * @param _switchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * 设置Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+                     * @param _switchTag Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
@@ -168,26 +168,26 @@ Default value: `0`.
                     bool SwitchEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * 获取Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
-                     * @return DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * @return DryRun Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
                      * 
                      */
                     bool GetDryRun() const;
 
                     /**
-                     * 设置Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * 设置Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
-                     * @param _dryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * @param _dryRun Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
                      * 
                      */
@@ -203,7 +203,7 @@ Default value: `false`.
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -216,11 +216,11 @@ Default value: `false`.
                     bool m_targetDBKernelVersionHasBeenSet;
 
                     /**
-                     * Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+                     * Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
                      */
                     uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;
@@ -238,9 +238,9 @@ Default value: `0`.
                     bool m_switchEndTimeHasBeenSet;
 
                     /**
-                     * Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
                      */
                     bool m_dryRun;

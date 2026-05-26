@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Queries the details of a sensitive API permission request for a mini game
+                * Detail data for querying mini game sensitive API permission approval.
                 */
                 class DescribeMNGSensitiveAPIPermissionApprovalData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>API ID</p>
-                     * @return APIId <p>API ID</p>
+                     * 获取<p>API ID.</p>
+                     * @return APIId <p>API ID.</p>
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置<p>API ID</p>
-                     * @param _aPIId <p>API ID</p>
+                     * 设置<p>API ID.</p>
+                     * @param _aPIId <p>API ID.</p>
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>API method</p>
-                     * @return APIMethod <p>API method</p>
+                     * 获取<p>API method.</p>
+                     * @return APIMethod <p>API method.</p>
                      * 
                      */
                     std::string GetAPIMethod() const;
 
                     /**
-                     * 设置<p>API method</p>
-                     * @param _aPIMethod <p>API method</p>
+                     * 设置<p>API method.</p>
+                     * @param _aPIMethod <p>API method.</p>
                      * 
                      */
                     void SetAPIMethod(const std::string& _aPIMethod);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APIMethodHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reason for request</p>
-                     * @return ApplyReason <p>Reason for request</p>
+                     * 获取<p>Reason for request.</p>
+                     * @return ApplyReason <p>Reason for request.</p>
                      * 
                      */
                     std::string GetApplyReason() const;
 
                     /**
-                     * 设置<p>Reason for request</p>
-                     * @param _applyReason <p>Reason for request</p>
+                     * 设置<p>Reason for request.</p>
+                     * @param _applyReason <p>Reason for request.</p>
                      * 
                      */
                     void SetApplyReason(const std::string& _applyReason);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ApplyReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reason for rejection</p>
-                     * @return RejectReason <p>Reason for rejection</p>
+                     * 获取<p>Reason for rejection.</p>
+                     * @return RejectReason <p>Reason for rejection.</p>
                      * 
                      */
                     std::string GetRejectReason() const;
 
                     /**
-                     * 设置<p>Reason for rejection</p>
-                     * @param _rejectReason <p>Reason for rejection</p>
+                     * 设置<p>Reason for rejection.</p>
+                     * @param _rejectReason <p>Reason for rejection.</p>
                      * 
                      */
                     void SetRejectReason(const std::string& _rejectReason);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RejectReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Approval status. 20: Rejected; 30: Approved</p>
-                     * @return ApprovalStatus <p>Approval status. 20: Rejected; 30: Approved</p>
+                     * 获取<p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
+                     * @return ApprovalStatus <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置<p>Approval status. 20: Rejected; 30: Approved</p>
-                     * @param _approvalStatus <p>Approval status. 20: Rejected; 30: Approved</p>
+                     * 设置<p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
+                     * @param _approvalStatus <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>API feature description</p>
-                     * @return APIDesc <p>API feature description</p>
+                     * 获取<p>API feature description.</p>
+                     * @return APIDesc <p>API feature description.</p>
                      * 
                      */
                     std::string GetAPIDesc() const;
 
                     /**
-                     * 设置<p>API feature description</p>
-                     * @param _aPIDesc <p>API feature description</p>
+                     * 设置<p>API feature description.</p>
+                     * @param _aPIDesc <p>API feature description.</p>
                      * 
                      */
                     void SetAPIDesc(const std::string& _aPIDesc);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool APIDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>API type. Valid values: 1: System; 2: Custom</p>
-                     * @return APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * 获取<p>API type. Valid values: 1: System; 2: Custom.</p>
+                     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置<p>API type. Valid values: 1: System; 2: Custom</p>
-                     * @param _aPIType <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * 设置<p>API type. Valid values: 1: System; 2: Custom.</p>
+                     * @param _aPIType <p>API type. Valid values: 1: System; 2: Custom.</p>
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>API ID</p>
+                     * <p>API ID.</p>
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * <p>API method</p>
+                     * <p>API method.</p>
                      */
                     std::string m_aPIMethod;
                     bool m_aPIMethodHasBeenSet;
 
                     /**
-                     * <p>Reason for request</p>
+                     * <p>Reason for request.</p>
                      */
                     std::string m_applyReason;
                     bool m_applyReasonHasBeenSet;
 
                     /**
-                     * <p>Reason for rejection</p>
+                     * <p>Reason for rejection.</p>
                      */
                     std::string m_rejectReason;
                     bool m_rejectReasonHasBeenSet;
 
                     /**
-                     * <p>Approval status. 20: Rejected; 30: Approved</p>
+                     * <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * <p>API feature description</p>
+                     * <p>API feature description.</p>
                      */
                     std::string m_aPIDesc;
                     bool m_aPIDescHasBeenSet;
 
                     /**
-                     * <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * <p>API type. Valid values: 1: System; 2: Custom.</p>
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;

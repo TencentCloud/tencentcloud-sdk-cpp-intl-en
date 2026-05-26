@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ ID, which can be obtained through the `DescribeZones` API.
-                     * @return Zone AZ ID, which can be obtained through the `DescribeZones` API.
+                     * 获取<p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+                     * @return Zone <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ ID, which can be obtained through the `DescribeZones` API.
-                     * @param _zone AZ ID, which can be obtained through the `DescribeZones` API.
+                     * 设置<p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+                     * @param _zone <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-                     * @return DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+                     * 获取<p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+                     * @return DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
-                     * 设置Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-                     * @param _dBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+                     * 设置<p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+                     * @param _dBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
@@ -93,15 +85,15 @@ namespace TencentCloud
                     bool DBEngineHasBeenSet() const;
 
                     /**
-                     * 获取Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
-                     * @return DBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * 获取<p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
+                     * @return DBMajorVersion <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
-                     * @param _dBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * 设置<p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
+                     * @param _dBMajorVersion <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -113,27 +105,52 @@ namespace TencentCloud
                      */
                     bool DBMajorVersionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * @return StorageType <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置<p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * @param _storageType <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ ID, which can be obtained through the `DescribeZones` API.
+                     * <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+                     * <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
 
                     /**
-                     * Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
+
+                    /**
+                     * <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

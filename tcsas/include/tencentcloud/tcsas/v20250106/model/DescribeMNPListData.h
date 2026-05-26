@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program list
+                * Mini program list data.
                 */
                 class DescribeMNPListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program icon
-                     * @return MNPIcon Mini program icon
+                     * 获取Mini program icon.
+                     * @return MNPIcon Mini program icon.
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini program icon
-                     * @param _mNPIcon Mini program icon
+                     * 设置Mini program icon.
+                     * @param _mNPIcon Mini program icon.
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the associated team
-                     * @return TeamName Name of the associated team
+                     * 获取Team name. 
+                     * @return TeamName Team name. 
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Name of the associated team
-                     * @param _teamName Name of the associated team
+                     * 设置Team name. 
+                     * @param _teamName Team name. 
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program type
-                     * @return MNPType Mini program type
+                     * 获取Mini program category.
+                     * @return MNPType Mini program category.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置Mini program type
-                     * @param _mNPType Mini program type
+                     * 设置Mini program category.
+                     * @param _mNPType Mini program category.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
-                     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * 获取Mini program available status. Valid values: 1: Available; 2: Removed.
+                     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
-                     * @param _status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * 设置Mini program available status. Valid values: 1: Available; 2: Removed.
+                     * @param _status Mini program available status. Valid values: 1: Available; 2: Removed.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Mini program introduction
-                     * @return MNPIntro Mini program introduction
+                     * 获取Mini program introduction.
+                     * @return MNPIntro Mini program introduction.
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置Mini program introduction
-                     * @param _mNPIntro Mini program introduction
+                     * 设置Mini program introduction.
+                     * @param _mNPIntro Mini program introduction.
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取Creator
-                     * @return CreateUser Creator
+                     * 获取Creator.
+                     * @return CreateUser Creator.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator
-                     * @param _createUser Creator
+                     * 设置Creator.
+                     * @param _createUser Creator.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the updater.
-                     * @return UpdateUser Specifies the updater.
+                     * 获取Last modifier.
+                     * @return UpdateUser Last modifier.
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置Specifies the updater.
-                     * @param _updateUser Specifies the updater.
+                     * 设置Last modifier.
+                     * @param _updateUser Last modifier.
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool UpdateUserHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Last modified time.
+                     * @return UpdateTime Last modified time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Last modified time.
+                     * @param _updateTime Last modified time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
-                     * @return EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+                     * 获取Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+                     * @return EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
                      * 
                      */
                     int64_t GetEffectStatus() const;
 
                     /**
-                     * 设置Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
-                     * @param _effectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+                     * 设置Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+                     * @param _effectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
                      * 
                      */
                     void SetEffectStatus(const int64_t& _effectStatus);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool EffectStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ID of the application bound with the mini program.
-                     * @return EffectMNPVersionId Specifies the ID of the application bound with the mini program.
+                     * 获取Effective mini program version ID bound to the superapp. 
+                     * @return EffectMNPVersionId Effective mini program version ID bound to the superapp. 
                      * 
                      */
                     int64_t GetEffectMNPVersionId() const;
 
                     /**
-                     * 设置Specifies the ID of the application bound with the mini program.
-                     * @param _effectMNPVersionId Specifies the ID of the application bound with the mini program.
+                     * 设置Effective mini program version ID bound to the superapp. 
+                     * @param _effectMNPVersionId Effective mini program version ID bound to the superapp. 
                      * 
                      */
                     void SetEffectMNPVersionId(const int64_t& _effectMNPVersionId);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool EffectMNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the effective version number of the application bound to the mini program.
-                     * @return EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
+                     * 获取Effective mini program version number bound to the superapp. 
+                     * @return EffectMNPVersion Effective mini program version number bound to the superapp. 
                      * 
                      */
                     std::string GetEffectMNPVersion() const;
 
                     /**
-                     * 设置Specifies the effective version number of the application bound to the mini program.
-                     * @param _effectMNPVersion Specifies the effective version number of the application bound to the mini program.
+                     * 设置Effective mini program version number bound to the superapp. 
+                     * @param _effectMNPVersion Effective mini program version number bound to the superapp. 
                      * 
                      */
                     void SetEffectMNPVersion(const std::string& _effectMNPVersion);
@@ -364,91 +364,91 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program icon
+                     * Mini program icon.
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Name of the associated team
+                     * Team name. 
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Mini program type
+                     * Mini program category.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+                     * Mini program available status. Valid values: 1: Available; 2: Removed.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Mini program introduction
+                     * Mini program introduction.
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * Creator
+                     * Creator.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Specifies the updater.
+                     * Last modifier.
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last modified time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+                     * Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
                      */
                     int64_t m_effectStatus;
                     bool m_effectStatusHasBeenSet;
 
                     /**
-                     * Specifies the ID of the application bound with the mini program.
+                     * Effective mini program version ID bound to the superapp. 
                      */
                     int64_t m_effectMNPVersionId;
                     bool m_effectMNPVersionIdHasBeenSet;
 
                     /**
-                     * Specifies the effective version number of the application bound to the mini program.
+                     * Effective mini program version number bound to the superapp. 
                      */
                     std::string m_effectMNPVersion;
                     bool m_effectMNPVersionHasBeenSet;

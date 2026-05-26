@@ -90,6 +90,106 @@ CynosdbClient::ActivateInstanceOutcomeCallable CynosdbClient::ActivateInstanceCa
     return prom->get_future();
 }
 
+CynosdbClient::ActivateLibraDBClusterOutcome CynosdbClient::ActivateLibraDBCluster(const ActivateLibraDBClusterRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActivateLibraDBCluster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActivateLibraDBClusterResponse rsp = ActivateLibraDBClusterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActivateLibraDBClusterOutcome(rsp);
+        else
+            return ActivateLibraDBClusterOutcome(o.GetError());
+    }
+    else
+    {
+        return ActivateLibraDBClusterOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ActivateLibraDBClusterAsync(const ActivateLibraDBClusterRequest& request, const ActivateLibraDBClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ActivateLibraDBClusterRequest&;
+    using Resp = ActivateLibraDBClusterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ActivateLibraDBCluster", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::ActivateLibraDBClusterOutcomeCallable CynosdbClient::ActivateLibraDBClusterCallable(const ActivateLibraDBClusterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ActivateLibraDBClusterOutcome>>();
+    ActivateLibraDBClusterAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const ActivateLibraDBClusterRequest&,
+        ActivateLibraDBClusterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::ActivateLibraDBInstanceOutcome CynosdbClient::ActivateLibraDBInstance(const ActivateLibraDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActivateLibraDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActivateLibraDBInstanceResponse rsp = ActivateLibraDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActivateLibraDBInstanceOutcome(rsp);
+        else
+            return ActivateLibraDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ActivateLibraDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ActivateLibraDBInstanceAsync(const ActivateLibraDBInstanceRequest& request, const ActivateLibraDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ActivateLibraDBInstanceRequest&;
+    using Resp = ActivateLibraDBInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ActivateLibraDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::ActivateLibraDBInstanceOutcomeCallable CynosdbClient::ActivateLibraDBInstanceCallable(const ActivateLibraDBInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ActivateLibraDBInstanceOutcome>>();
+    ActivateLibraDBInstanceAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const ActivateLibraDBInstanceRequest&,
+        ActivateLibraDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::AddClusterSlaveZoneOutcome CynosdbClient::AddClusterSlaveZone(const AddClusterSlaveZoneRequest &request)
 {
     auto outcome = MakeRequest(request, "AddClusterSlaveZone");
@@ -190,6 +290,56 @@ CynosdbClient::AddInstancesOutcomeCallable CynosdbClient::AddInstancesCallable(c
     return prom->get_future();
 }
 
+CynosdbClient::AddLibraDBInstancesOutcome CynosdbClient::AddLibraDBInstances(const AddLibraDBInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddLibraDBInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddLibraDBInstancesResponse rsp = AddLibraDBInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddLibraDBInstancesOutcome(rsp);
+        else
+            return AddLibraDBInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return AddLibraDBInstancesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::AddLibraDBInstancesAsync(const AddLibraDBInstancesRequest& request, const AddLibraDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddLibraDBInstancesRequest&;
+    using Resp = AddLibraDBInstancesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddLibraDBInstances", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::AddLibraDBInstancesOutcomeCallable CynosdbClient::AddLibraDBInstancesCallable(const AddLibraDBInstancesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddLibraDBInstancesOutcome>>();
+    AddLibraDBInstancesAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const AddLibraDBInstancesRequest&,
+        AddLibraDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::BindClusterResourcePackagesOutcome CynosdbClient::BindClusterResourcePackages(const BindClusterResourcePackagesRequest &request)
 {
     auto outcome = MakeRequest(request, "BindClusterResourcePackages");
@@ -232,6 +382,56 @@ CynosdbClient::BindClusterResourcePackagesOutcomeCallable CynosdbClient::BindClu
         const CynosdbClient*,
         const BindClusterResourcePackagesRequest&,
         BindClusterResourcePackagesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::CheckCreateLibraDBInstanceOutcome CynosdbClient::CheckCreateLibraDBInstance(const CheckCreateLibraDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckCreateLibraDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckCreateLibraDBInstanceResponse rsp = CheckCreateLibraDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckCreateLibraDBInstanceOutcome(rsp);
+        else
+            return CheckCreateLibraDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckCreateLibraDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CheckCreateLibraDBInstanceAsync(const CheckCreateLibraDBInstanceRequest& request, const CheckCreateLibraDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckCreateLibraDBInstanceRequest&;
+    using Resp = CheckCreateLibraDBInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckCreateLibraDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::CheckCreateLibraDBInstanceOutcomeCallable CynosdbClient::CheckCreateLibraDBInstanceCallable(const CheckCreateLibraDBInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckCreateLibraDBInstanceOutcome>>();
+    CheckCreateLibraDBInstanceAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const CheckCreateLibraDBInstanceRequest&,
+        CheckCreateLibraDBInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -940,6 +1140,106 @@ CynosdbClient::CreateIntegrateClusterOutcomeCallable CynosdbClient::CreateIntegr
     return prom->get_future();
 }
 
+CynosdbClient::CreateLibraDBClusterAccountsOutcome CynosdbClient::CreateLibraDBClusterAccounts(const CreateLibraDBClusterAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLibraDBClusterAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLibraDBClusterAccountsResponse rsp = CreateLibraDBClusterAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLibraDBClusterAccountsOutcome(rsp);
+        else
+            return CreateLibraDBClusterAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLibraDBClusterAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateLibraDBClusterAccountsAsync(const CreateLibraDBClusterAccountsRequest& request, const CreateLibraDBClusterAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLibraDBClusterAccountsRequest&;
+    using Resp = CreateLibraDBClusterAccountsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLibraDBClusterAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::CreateLibraDBClusterAccountsOutcomeCallable CynosdbClient::CreateLibraDBClusterAccountsCallable(const CreateLibraDBClusterAccountsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLibraDBClusterAccountsOutcome>>();
+    CreateLibraDBClusterAccountsAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const CreateLibraDBClusterAccountsRequest&,
+        CreateLibraDBClusterAccountsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::CreateLibraDBClustersOutcome CynosdbClient::CreateLibraDBClusters(const CreateLibraDBClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLibraDBClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLibraDBClustersResponse rsp = CreateLibraDBClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLibraDBClustersOutcome(rsp);
+        else
+            return CreateLibraDBClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLibraDBClustersOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::CreateLibraDBClustersAsync(const CreateLibraDBClustersRequest& request, const CreateLibraDBClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLibraDBClustersRequest&;
+    using Resp = CreateLibraDBClustersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLibraDBClusters", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::CreateLibraDBClustersOutcomeCallable CynosdbClient::CreateLibraDBClustersCallable(const CreateLibraDBClustersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLibraDBClustersOutcome>>();
+    CreateLibraDBClustersAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const CreateLibraDBClustersRequest&,
+        CreateLibraDBClustersOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::CreateParamTemplateOutcome CynosdbClient::CreateParamTemplate(const CreateParamTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateParamTemplate");
@@ -1382,6 +1682,106 @@ CynosdbClient::DeleteClusterDatabaseOutcomeCallable CynosdbClient::DeleteCluster
         const CynosdbClient*,
         const DeleteClusterDatabaseRequest&,
         DeleteClusterDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::DeleteLibraDBClusterOutcome CynosdbClient::DeleteLibraDBCluster(const DeleteLibraDBClusterRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLibraDBCluster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLibraDBClusterResponse rsp = DeleteLibraDBClusterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLibraDBClusterOutcome(rsp);
+        else
+            return DeleteLibraDBClusterOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLibraDBClusterOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DeleteLibraDBClusterAsync(const DeleteLibraDBClusterRequest& request, const DeleteLibraDBClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLibraDBClusterRequest&;
+    using Resp = DeleteLibraDBClusterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLibraDBCluster", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DeleteLibraDBClusterOutcomeCallable CynosdbClient::DeleteLibraDBClusterCallable(const DeleteLibraDBClusterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLibraDBClusterOutcome>>();
+    DeleteLibraDBClusterAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DeleteLibraDBClusterRequest&,
+        DeleteLibraDBClusterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::DeleteLibraDBClusterAccountsOutcome CynosdbClient::DeleteLibraDBClusterAccounts(const DeleteLibraDBClusterAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteLibraDBClusterAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteLibraDBClusterAccountsResponse rsp = DeleteLibraDBClusterAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteLibraDBClusterAccountsOutcome(rsp);
+        else
+            return DeleteLibraDBClusterAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteLibraDBClusterAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DeleteLibraDBClusterAccountsAsync(const DeleteLibraDBClusterAccountsRequest& request, const DeleteLibraDBClusterAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteLibraDBClusterAccountsRequest&;
+    using Resp = DeleteLibraDBClusterAccountsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteLibraDBClusterAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DeleteLibraDBClusterAccountsOutcomeCallable CynosdbClient::DeleteLibraDBClusterAccountsCallable(const DeleteLibraDBClusterAccountsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteLibraDBClusterAccountsOutcome>>();
+    DeleteLibraDBClusterAccountsAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DeleteLibraDBClusterAccountsRequest&,
+        DeleteLibraDBClusterAccountsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3282,6 +3682,156 @@ CynosdbClient::DescribeIsolatedInstancesOutcomeCallable CynosdbClient::DescribeI
         const CynosdbClient*,
         const DescribeIsolatedInstancesRequest&,
         DescribeIsolatedInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountAllPrivilegesOutcome CynosdbClient::DescribeLibraDBClusterAccountAllPrivileges(const DescribeLibraDBClusterAccountAllPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLibraDBClusterAccountAllPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLibraDBClusterAccountAllPrivilegesResponse rsp = DescribeLibraDBClusterAccountAllPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLibraDBClusterAccountAllPrivilegesOutcome(rsp);
+        else
+            return DescribeLibraDBClusterAccountAllPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLibraDBClusterAccountAllPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeLibraDBClusterAccountAllPrivilegesAsync(const DescribeLibraDBClusterAccountAllPrivilegesRequest& request, const DescribeLibraDBClusterAccountAllPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLibraDBClusterAccountAllPrivilegesRequest&;
+    using Resp = DescribeLibraDBClusterAccountAllPrivilegesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLibraDBClusterAccountAllPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountAllPrivilegesOutcomeCallable CynosdbClient::DescribeLibraDBClusterAccountAllPrivilegesCallable(const DescribeLibraDBClusterAccountAllPrivilegesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLibraDBClusterAccountAllPrivilegesOutcome>>();
+    DescribeLibraDBClusterAccountAllPrivilegesAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeLibraDBClusterAccountAllPrivilegesRequest&,
+        DescribeLibraDBClusterAccountAllPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountPrivilegesOutcome CynosdbClient::DescribeLibraDBClusterAccountPrivileges(const DescribeLibraDBClusterAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLibraDBClusterAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLibraDBClusterAccountPrivilegesResponse rsp = DescribeLibraDBClusterAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLibraDBClusterAccountPrivilegesOutcome(rsp);
+        else
+            return DescribeLibraDBClusterAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLibraDBClusterAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeLibraDBClusterAccountPrivilegesAsync(const DescribeLibraDBClusterAccountPrivilegesRequest& request, const DescribeLibraDBClusterAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLibraDBClusterAccountPrivilegesRequest&;
+    using Resp = DescribeLibraDBClusterAccountPrivilegesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLibraDBClusterAccountPrivileges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountPrivilegesOutcomeCallable CynosdbClient::DescribeLibraDBClusterAccountPrivilegesCallable(const DescribeLibraDBClusterAccountPrivilegesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLibraDBClusterAccountPrivilegesOutcome>>();
+    DescribeLibraDBClusterAccountPrivilegesAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeLibraDBClusterAccountPrivilegesRequest&,
+        DescribeLibraDBClusterAccountPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountsOutcome CynosdbClient::DescribeLibraDBClusterAccounts(const DescribeLibraDBClusterAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLibraDBClusterAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLibraDBClusterAccountsResponse rsp = DescribeLibraDBClusterAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLibraDBClusterAccountsOutcome(rsp);
+        else
+            return DescribeLibraDBClusterAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLibraDBClusterAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeLibraDBClusterAccountsAsync(const DescribeLibraDBClusterAccountsRequest& request, const DescribeLibraDBClusterAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLibraDBClusterAccountsRequest&;
+    using Resp = DescribeLibraDBClusterAccountsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLibraDBClusterAccounts", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeLibraDBClusterAccountsOutcomeCallable CynosdbClient::DescribeLibraDBClusterAccountsCallable(const DescribeLibraDBClusterAccountsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLibraDBClusterAccountsOutcome>>();
+    DescribeLibraDBClusterAccountsAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeLibraDBClusterAccountsRequest&,
+        DescribeLibraDBClusterAccountsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

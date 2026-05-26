@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini game type definition
+                * Mini game category definition.
                 */
                 class MNGTypeDefine : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game category name</p>
-                     * @return TypeName <p>Mini game category name</p>
+                     * 获取<p>Mini game category name.</p>
+                     * @return TypeName <p>Mini game category name.</p>
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置<p>Mini game category name</p>
-                     * @param _typeName <p>Mini game category name</p>
+                     * 设置<p>Mini game category name.</p>
+                     * @param _typeName <p>Mini game category name.</p>
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game category</p>
-                     * @return TypeValue <p>Mini game category</p>
+                     * 获取<p>Mini game category.</p>
+                     * @return TypeValue <p>Mini game category.</p>
                      * 
                      */
                     std::vector<std::string> GetTypeValue() const;
 
                     /**
-                     * 设置<p>Mini game category</p>
-                     * @param _typeValue <p>Mini game category</p>
+                     * 设置<p>Mini game category.</p>
+                     * @param _typeValue <p>Mini game category.</p>
                      * 
                      */
                     void SetTypeValue(const std::vector<std::string>& _typeValue);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Category ID</p>
-                     * @return TypeId <p>Category ID</p>
+                     * 获取<p>Category ID.</p>
+                     * @return TypeId <p>Category ID.</p>
                      * 
                      */
                     int64_t GetTypeId() const;
 
                     /**
-                     * 设置<p>Category ID</p>
-                     * @param _typeId <p>Category ID</p>
+                     * 设置<p>Category ID.</p>
+                     * @param _typeId <p>Category ID.</p>
                      * 
                      */
                     void SetTypeId(const int64_t& _typeId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TypeIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creation time</p>
-                     * @return CreateTime <p>Creation time</p>
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
-                     * 设置<p>Creation time</p>
-                     * @param _createTime <p>Creation time</p>
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creator</p>
-                     * @return CreateUser <p>Creator</p>
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置<p>Creator</p>
-                     * @param _createUser <p>Creator</p>
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether this is a system category</p>
-                     * @return IsSystem <p>Whether this is a system category</p>
+                     * 获取<p>Whether it is a system category.</p>
+                     * @return IsSystem <p>Whether it is a system category.</p>
                      * 
                      */
                     bool GetIsSystem() const;
 
                     /**
-                     * 设置<p>Whether this is a system category</p>
-                     * @param _isSystem <p>Whether this is a system category</p>
+                     * 设置<p>Whether it is a system category.</p>
+                     * @param _isSystem <p>Whether it is a system category.</p>
                      * 
                      */
                     void SetIsSystem(const bool& _isSystem);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game category name</p>
+                     * <p>Mini game category name.</p>
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * <p>Mini game category</p>
+                     * <p>Mini game category.</p>
                      */
                     std::vector<std::string> m_typeValue;
                     bool m_typeValueHasBeenSet;
 
                     /**
-                     * <p>Category ID</p>
+                     * <p>Category ID.</p>
                      */
                     int64_t m_typeId;
                     bool m_typeIdHasBeenSet;
 
                     /**
-                     * <p>Creation time</p>
+                     * <p>Creation time.</p>
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Creator</p>
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * <p>Whether this is a system category</p>
+                     * <p>Whether it is a system category.</p>
                      */
                     bool m_isSystem;
                     bool m_isSystemHasBeenSet;

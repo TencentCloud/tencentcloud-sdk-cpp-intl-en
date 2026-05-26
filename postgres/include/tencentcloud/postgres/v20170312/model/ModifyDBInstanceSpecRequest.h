@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-6bwgamo3.
-                     * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 获取Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-6bwgamo3.
-                     * @param _dBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 设置Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GiB after modification.
-                     * @return Storage Instance disk size in GiB after modification.
+                     * 获取Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
+                     * @return Storage Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
                      * 
                      */
                     uint64_t GetStorage() const;
 
                     /**
-                     * 设置Instance disk size in GiB after modification.
-                     * @param _storage Instance disk size in GiB after modification.
+                     * 设置Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
+                     * @param _storage Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
                      * 
                      */
                     void SetStorage(const uint64_t& _storage);
@@ -260,15 +260,15 @@ Default value: 0
                     bool SwitchEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance CPU size in Cores after modification.
-                     * @return Cpu Instance CPU size in Cores after modification.
+                     * 获取Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
+                     * @return Cpu Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Instance CPU size in Cores after modification.
-                     * @param _cpu Instance CPU size in Cores after modification.
+                     * 设置Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
+                     * @param _cpu Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -283,7 +283,7 @@ Default value: 0
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-6bwgamo3.
+                     * Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -295,7 +295,7 @@ Default value: 0
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GiB after modification.
+                     * Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
                      */
                     uint64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -344,7 +344,7 @@ Default value: 0
                     bool m_switchEndTimeHasBeenSet;
 
                     /**
-                     * Instance CPU size in Cores after modification.
+                     * Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP address ID, such as `eipm-2uw6ujo6`.
-                     * @return AddressId IP address ID, such as `eipm-2uw6ujo6`.
+                     * 获取IP address ID, such as `eipm-2uw6ujo6`. 
+                     * @return AddressId IP address ID, such as `eipm-2uw6ujo6`. 
                      * 
                      */
                     std::string GetAddressId() const;
 
                     /**
-                     * 设置IP address ID, such as `eipm-2uw6ujo6`.
-                     * @param _addressId IP address ID, such as `eipm-2uw6ujo6`.
+                     * 设置IP address ID, such as `eipm-2uw6ujo6`. 
+                     * @param _addressId IP address ID, such as `eipm-2uw6ujo6`. 
                      * 
                      */
                     void SetAddressId(const std::string& _addressId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP address ID, such as `eipm-2uw6ujo6`.
+                     * IP address ID, such as `eipm-2uw6ujo6`. 
                      */
                     std::string m_addressId;
                     bool m_addressIdHasBeenSet;

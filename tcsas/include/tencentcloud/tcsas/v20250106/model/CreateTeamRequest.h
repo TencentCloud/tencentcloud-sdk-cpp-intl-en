@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Admin name
-                     * @return AdminUserId Admin name
+                     * 获取Admin name.
+                     * @return AdminUserId Admin name.
                      * 
                      */
                     std::string GetAdminUserId() const;
 
                     /**
-                     * 设置Admin name
-                     * @param _adminUserId Admin name
+                     * 设置Admin name.
+                     * @param _adminUserId Admin name.
                      * 
                      */
                     void SetAdminUserId(const std::string& _adminUserId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AdminUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
-                     * @return TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+                     * 获取Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+                     * @return TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
                      * 
                      */
                     std::vector<int64_t> GetTeamRoleTypeList() const;
 
                     /**
-                     * 设置Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
-                     * @param _teamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+                     * 设置Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+                     * @param _teamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
                      * 
                      */
                     void SetTeamRoleTypeList(const std::vector<int64_t>& _teamRoleTypeList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TeamRoleTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Remark Remarks
+                     * 获取Remark.
+                     * @return Remark Remark.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _remark Remarks
+                     * 设置Remark.
+                     * @param _remark Remark.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID, required for API call
-                     * @return PlatformId Platform ID, required for API call
+                     * 获取Platform ID, required for API call.
+                     * @return PlatformId Platform ID, required for API call.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID, required for API call
-                     * @param _platformId Platform ID, required for API call
+                     * 设置Platform ID, required for API call.
+                     * @param _platformId Platform ID, required for API call.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Associated team ID
-                     * @return RelatedTeamId Associated team ID
+                     * 获取Associated team ID.
+                     * @return RelatedTeamId Associated team ID.
                      * 
                      */
                     std::string GetRelatedTeamId() const;
 
                     /**
-                     * 设置Associated team ID
-                     * @param _relatedTeamId Associated team ID
+                     * 设置Associated team ID.
+                     * @param _relatedTeamId Associated team ID.
                      * 
                      */
                     void SetRelatedTeamId(const std::string& _relatedTeamId);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Admin name
+                     * Admin name.
                      */
                     std::string m_adminUserId;
                     bool m_adminUserIdHasBeenSet;
 
                     /**
-                     * Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+                     * Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
                      */
                     std::vector<int64_t> m_teamRoleTypeList;
                     bool m_teamRoleTypeListHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remark.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Platform ID, required for API call
+                     * Platform ID, required for API call.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Associated team ID
+                     * Associated team ID.
                      */
                     std::string m_relatedTeamId;
                     bool m_relatedTeamIdHasBeenSet;

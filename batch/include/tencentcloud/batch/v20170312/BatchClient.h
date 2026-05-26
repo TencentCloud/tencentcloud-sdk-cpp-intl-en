@@ -53,6 +53,8 @@
 #include <tencentcloud/batch/v20170312/model/DescribeInstanceCategoriesResponse.h>
 #include <tencentcloud/batch/v20170312/model/DescribeJobRequest.h>
 #include <tencentcloud/batch/v20170312/model/DescribeJobResponse.h>
+#include <tencentcloud/batch/v20170312/model/DescribeJobMonitorDataRequest.h>
+#include <tencentcloud/batch/v20170312/model/DescribeJobMonitorDataResponse.h>
 #include <tencentcloud/batch/v20170312/model/DescribeJobSubmitInfoRequest.h>
 #include <tencentcloud/batch/v20170312/model/DescribeJobSubmitInfoResponse.h>
 #include <tencentcloud/batch/v20170312/model/DescribeJobsRequest.h>
@@ -138,6 +140,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeJobResponse> DescribeJobOutcome;
                 typedef std::future<DescribeJobOutcome> DescribeJobOutcomeCallable;
                 typedef std::function<void(const BatchClient*, const Model::DescribeJobRequest&, DescribeJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeJobMonitorDataResponse> DescribeJobMonitorDataOutcome;
+                typedef std::future<DescribeJobMonitorDataOutcome> DescribeJobMonitorDataOutcomeCallable;
+                typedef std::function<void(const BatchClient*, const Model::DescribeJobMonitorDataRequest&, DescribeJobMonitorDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeJobMonitorDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeJobSubmitInfoResponse> DescribeJobSubmitInfoOutcome;
                 typedef std::future<DescribeJobSubmitInfoOutcome> DescribeJobSubmitInfoOutcomeCallable;
                 typedef std::function<void(const BatchClient*, const Model::DescribeJobSubmitInfoRequest&, DescribeJobSubmitInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeJobSubmitInfoAsyncHandler;
@@ -322,6 +327,15 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
                 DescribeJobOutcome DescribeJob(const Model::DescribeJobRequest &request);
                 void DescribeJobAsync(const Model::DescribeJobRequest& request, const DescribeJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeJobOutcomeCallable DescribeJobCallable(const Model::DescribeJobRequest& request);
+
+                /**
+                 *Query the resource usage monitoring information of Job task instances. This API only supports querying elastic node tasks and undeleted jobs. Computing environment tasks are not currently supported. This interface only supports querying the resource utilization of Job instances within a time range.
+                 * @param req DescribeJobMonitorDataRequest
+                 * @return DescribeJobMonitorDataOutcome
+                 */
+                DescribeJobMonitorDataOutcome DescribeJobMonitorData(const Model::DescribeJobMonitorDataRequest &request);
+                void DescribeJobMonitorDataAsync(const Model::DescribeJobMonitorDataRequest& request, const DescribeJobMonitorDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeJobMonitorDataOutcomeCallable DescribeJobMonitorDataCallable(const Model::DescribeJobMonitorDataRequest& request);
 
                 /**
                  *This API is used to query the submission information of the specified job, with the return including the job submission information used as input parameters in the JobId and SubmitJob APIs.

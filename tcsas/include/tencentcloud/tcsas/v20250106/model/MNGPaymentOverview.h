@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Payment overview data
+                * Payment overview data.
                 */
                 class MNGPaymentOverview : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Paid revenue / Number of paying users * 100%
-                     * @return ARPPu Paid revenue / Number of paying users * 100%
+                     * 获取ARPPU. Calculated as: paying revenue / paying users * 100%.
+                     * @return ARPPu ARPPU. Calculated as: paying revenue / paying users * 100%.
                      * 
                      */
                     std::string GetARPPu() const;
 
                     /**
-                     * 设置Paid revenue / Number of paying users * 100%
-                     * @param _aRPPu Paid revenue / Number of paying users * 100%
+                     * 设置ARPPU. Calculated as: paying revenue / paying users * 100%.
+                     * @param _aRPPu ARPPU. Calculated as: paying revenue / paying users * 100%.
                      * 
                      */
                     void SetARPPu(const std::string& _aRPPu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ARPPuHasBeenSet() const;
 
                     /**
-                     * 获取Data time in YYYYMMDD format
-                     * @return DataTime Data time in YYYYMMDD format
+                     * 获取Data time in YYYYMMDD format.
+                     * @return DataTime Data time in YYYYMMDD format.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Data time in YYYYMMDD format
-                     * @param _dataTime Data time in YYYYMMDD format
+                     * 设置Data time in YYYYMMDD format.
+                     * @param _dataTime Data time in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取New paying user ratio = NewUserNum / OrderUserNum * 100%
-                     * @return NewPaidUseRatio New paying user ratio = NewUserNum / OrderUserNum * 100%
+                     * 获取New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
+                     * @return NewPaidUseRatio New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
                      * 
                      */
                     std::string GetNewPaidUseRatio() const;
 
                     /**
-                     * 设置New paying user ratio = NewUserNum / OrderUserNum * 100%
-                     * @param _newPaidUseRatio New paying user ratio = NewUserNum / OrderUserNum * 100%
+                     * 设置New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
+                     * @param _newPaidUseRatio New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
                      * 
                      */
                     void SetNewPaidUseRatio(const std::string& _newPaidUseRatio);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NewPaidUseRatioHasBeenSet() const;
 
                     /**
-                     * 获取Number of new paying users
-                     * @return NewPaidUserNum Number of new paying users
+                     * 获取Number of new paying users.
+                     * @return NewPaidUserNum Number of new paying users.
                      * 
                      */
                     int64_t GetNewPaidUserNum() const;
 
                     /**
-                     * 设置Number of new paying users
-                     * @param _newPaidUserNum Number of new paying users
+                     * 设置Number of new paying users.
+                     * @param _newPaidUserNum Number of new paying users.
                      * 
                      */
                     void SetNewPaidUserNum(const int64_t& _newPaidUserNum);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool NewPaidUserNumHasBeenSet() const;
 
                     /**
-                     * 获取Total payment amount from new users
-                     * @return NewUserPaidAmount Total payment amount from new users
+                     * 获取Total payment amount from new users.
+                     * @return NewUserPaidAmount Total payment amount from new users.
                      * 
                      */
                     std::string GetNewUserPaidAmount() const;
 
                     /**
-                     * 设置Total payment amount from new users
-                     * @param _newUserPaidAmount Total payment amount from new users
+                     * 设置Total payment amount from new users.
+                     * @param _newUserPaidAmount Total payment amount from new users.
                      * 
                      */
                     void SetNewUserPaidAmount(const std::string& _newUserPaidAmount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool NewUserPaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Total payment amount
-                     * @return PaidAmount Total payment amount
+                     * 获取Total payment amount.
+                     * @return PaidAmount Total payment amount.
                      * 
                      */
                     std::string GetPaidAmount() const;
 
                     /**
-                     * 设置Total payment amount
-                     * @param _paidAmount Total payment amount
+                     * 设置Total payment amount.
+                     * @param _paidAmount Total payment amount.
                      * 
                      */
                     void SetPaidAmount(const std::string& _paidAmount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool PaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Number of paying users
-                     * @return PaidUserNum Number of paying users
+                     * 获取Number of paying users.
+                     * @return PaidUserNum Number of paying users.
                      * 
                      */
                     int64_t GetPaidUserNum() const;
 
                     /**
-                     * 设置Number of paying users
-                     * @param _paidUserNum Number of paying users
+                     * 设置Number of paying users.
+                     * @param _paidUserNum Number of paying users.
                      * 
                      */
                     void SetPaidUserNum(const int64_t& _paidUserNum);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PaidUserNumHasBeenSet() const;
 
                     /**
-                     * 获取Refund amount
-                     * @return RefundAmount Refund amount
+                     * 获取Refund amount.
+                     * @return RefundAmount Refund amount.
                      * 
                      */
                     std::string GetRefundAmount() const;
 
                     /**
-                     * 设置Refund amount
-                     * @param _refundAmount Refund amount
+                     * 设置Refund amount.
+                     * @param _refundAmount Refund amount.
                      * 
                      */
                     void SetRefundAmount(const std::string& _refundAmount);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RefundAmountHasBeenSet() const;
 
                     /**
-                     * 获取Number of refund orders
-                     * @return RefundNum Number of refund orders
+                     * 获取Number of refund orders.
+                     * @return RefundNum Number of refund orders.
                      * 
                      */
                     int64_t GetRefundNum() const;
 
                     /**
-                     * 设置Number of refund orders
-                     * @param _refundNum Number of refund orders
+                     * 设置Number of refund orders.
+                     * @param _refundNum Number of refund orders.
                      * 
                      */
                     void SetRefundNum(const int64_t& _refundNum);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RefundNumHasBeenSet() const;
 
                     /**
-                     * 获取Update time (timestamp in seconds)
-                     * @return UpdateTime Update time (timestamp in seconds)
+                     * 获取Last modified time (timestamp in seconds).
+                     * @return UpdateTime Last modified time (timestamp in seconds).
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Update time (timestamp in seconds)
-                     * @param _updateTime Update time (timestamp in seconds)
+                     * 设置Last modified time (timestamp in seconds).
+                     * @param _updateTime Last modified time (timestamp in seconds).
                      * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Paid revenue / Number of paying users * 100%
+                     * ARPPU. Calculated as: paying revenue / paying users * 100%.
                      */
                     std::string m_aRPPu;
                     bool m_aRPPuHasBeenSet;
 
                     /**
-                     * Data time in YYYYMMDD format
+                     * Data time in YYYYMMDD format.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * New paying user ratio = NewUserNum / OrderUserNum * 100%
+                     * New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
                      */
                     std::string m_newPaidUseRatio;
                     bool m_newPaidUseRatioHasBeenSet;
 
                     /**
-                     * Number of new paying users
+                     * Number of new paying users.
                      */
                     int64_t m_newPaidUserNum;
                     bool m_newPaidUserNumHasBeenSet;
 
                     /**
-                     * Total payment amount from new users
+                     * Total payment amount from new users.
                      */
                     std::string m_newUserPaidAmount;
                     bool m_newUserPaidAmountHasBeenSet;
 
                     /**
-                     * Total payment amount
+                     * Total payment amount.
                      */
                     std::string m_paidAmount;
                     bool m_paidAmountHasBeenSet;
 
                     /**
-                     * Number of paying users
+                     * Number of paying users.
                      */
                     int64_t m_paidUserNum;
                     bool m_paidUserNumHasBeenSet;
 
                     /**
-                     * Refund amount
+                     * Refund amount.
                      */
                     std::string m_refundAmount;
                     bool m_refundAmountHasBeenSet;
 
                     /**
-                     * Number of refund orders
+                     * Number of refund orders.
                      */
                     int64_t m_refundNum;
                     bool m_refundNumHasBeenSet;
 
                     /**
-                     * Update time (timestamp in seconds)
+                     * Last modified time (timestamp in seconds).
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

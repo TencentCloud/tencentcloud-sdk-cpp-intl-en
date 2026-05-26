@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Pagination offset</p>
-                     * @return Offset <p>Pagination offset</p>
+                     * 获取<p>Pagination offset.</p>
+                     * @return Offset <p>Pagination offset.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Pagination offset</p>
-                     * @param _offset <p>Pagination offset</p>
+                     * 设置<p>Pagination offset.</p>
+                     * @param _offset <p>Pagination offset.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Pagination count</p>
-                     * @return Limit <p>Pagination count</p>
+                     * 获取<p>Number of entries per page.</p>
+                     * @return Limit <p>Number of entries per page.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Pagination count</p>
-                     * @param _limit <p>Pagination count</p>
+                     * 设置<p>Number of entries per page.</p>
+                     * @param _limit <p>Number of entries per page.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Keywords for search (mini game name)</p>
-                     * @return Keyword <p>Keywords for search (mini game name)</p>
+                     * 获取<p>The search keyword (mini game name).</p>
+                     * @return Keyword <p>The search keyword (mini game name).</p>
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置<p>Keywords for search (mini game name)</p>
-                     * @param _keyword <p>Keywords for search (mini game name)</p>
+                     * 设置<p>The search keyword (mini game name).</p>
+                     * @param _keyword <p>The search keyword (mini game name).</p>
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取<p>Team ID</p>
-                     * @return TeamId <p>Team ID</p>
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置<p>Team ID</p>
-                     * @param _teamId <p>Team ID</p>
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Superapp ID</p>
-                     * @return ApplicationId <p>Superapp ID</p>
+                     * 获取<p>Superapp ID.</p>
+                     * @return ApplicationId <p>Superapp ID.</p>
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置<p>Superapp ID</p>
-                     * @param _applicationId <p>Superapp ID</p>
+                     * 设置<p>Superapp ID.</p>
+                     * @param _applicationId <p>Superapp ID.</p>
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Pagination offset</p>
+                     * <p>Pagination offset.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Pagination count</p>
+                     * <p>Number of entries per page.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Keywords for search (mini game name)</p>
+                     * <p>The search keyword (mini game name).</p>
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * <p>Team ID</p>
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * <p>Superapp ID</p>
+                     * <p>Superapp ID.</p>
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;

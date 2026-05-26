@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User ID
-                     * @return UserId User ID
+                     * 获取User ID.
+                     * @return UserId User ID.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _userId User ID
+                     * 设置User ID.
+                     * @param _userId User ID.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return UserName User name
+                     * 获取User name.
+                     * @return UserName User name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name
-                     * @param _userName User name
+                     * 设置User name.
+                     * @param _userName User name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Account type 2 - Platform admin 3 - Member
-                     * @return AccountType Account type 2 - Platform admin 3 - Member
+                     * 获取User account type. Valid values: 2: Platform administrator; 3: Regular member.
+                     * @return AccountType User account type. Valid values: 2: Platform administrator; 3: Regular member.
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
-                     * 设置Account type 2 - Platform admin 3 - Member
-                     * @param _accountType Account type 2 - Platform admin 3 - Member
+                     * 设置User account type. Valid values: 2: Platform administrator; 3: Regular member.
+                     * @param _accountType User account type. Valid values: 2: Platform administrator; 3: Regular member.
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AccountTypeHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User ID
+                     * User ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User name
+                     * User name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Account type 2 - Platform admin 3 - Member
+                     * User account type. Valid values: 2: Platform administrator; 3: Regular member.
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data display
+                     * 获取Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Data display
+                     * @return Data Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data display
+                     * Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MNGPaymentOverview> m_data;

@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool RegionStateHasBeenSet() const;
 
                     /**
-                     * 获取Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
+                     * @return SupportInternational Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
                      * 
                      */
                     uint64_t GetSupportInternational() const;
 
                     /**
-                     * 设置Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _supportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
+                     * @param _supportInternational Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
                      * 
                      */
                     void SetSupportInternational(const uint64_t& _supportInternational);
@@ -182,8 +178,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_regionStateHasBeenSet;
 
                     /**
-                     * Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
                      */
                     uint64_t m_supportInternational;
                     bool m_supportInternationalHasBeenSet;

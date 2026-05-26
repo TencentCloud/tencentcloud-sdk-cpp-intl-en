@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of `postgres-6fego161`
-                     * @return DBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 获取Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
+                     * @return DBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of `postgres-6fego161`
-                     * @param _dBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 设置Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
+                     * @param _dBInstanceId Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Renewal duration in months
-                     * @return Period Renewal duration in months
+                     * 获取Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+                     * @return Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Renewal duration in months
-                     * @param _period Renewal duration in months
+                     * 设置Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+                     * @param _period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -85,15 +89,27 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
-                     * @return AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * 获取Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+                     * @return AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
-                     * @param _autoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * 设置Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+                     * @param _autoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -129,19 +145,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of `postgres-6fego161`
+                     * Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Renewal duration in months
+                     * Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;

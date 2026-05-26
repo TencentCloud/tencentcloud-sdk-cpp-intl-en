@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of the mini program approval requests
+                * Mini program approval processing details.
                 */
                 class ApprovalItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
-                     * @return AppId Application ID
+                     * 获取Superapp ID.
+                     * @return AppId Superapp ID.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _appId Application ID
+                     * 设置Superapp ID.
+                     * @param _appId Superapp ID.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Approval result. 2: Rejected;
-3: Approved
-                     * @return ApprovalResult Approval result. 2: Rejected;
-3: Approved
+                     * 获取Approval result. Valid value: 2: Rejected; 3: Approved.
+                     * @return ApprovalResult Approval result. Valid value: 2: Rejected; 3: Approved.
                      * 
                      */
                     int64_t GetApprovalResult() const;
 
                     /**
-                     * 设置Approval result. 2: Rejected;
-3: Approved
-                     * @param _approvalResult Approval result. 2: Rejected;
-3: Approved
+                     * 设置Approval result. Valid value: 2: Rejected; 3: Approved.
+                     * @param _approvalResult Approval result. Valid value: 2: Rejected; 3: Approved.
                      * 
                      */
                     void SetApprovalResult(const int64_t& _approvalResult);
@@ -93,15 +89,15 @@ namespace TencentCloud
                     bool ApprovalResultHasBeenSet() const;
 
                     /**
-                     * 获取Approval notes. It’s required when the request is rejected.
-                     * @return ApprovalNote Approval notes. It’s required when the request is rejected.
+                     * 获取Approval notes. It is required when the request is rejected.
+                     * @return ApprovalNote Approval notes. It is required when the request is rejected.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
-                     * 设置Approval notes. It’s required when the request is rejected.
-                     * @param _approvalNote Approval notes. It’s required when the request is rejected.
+                     * 设置Approval notes. It is required when the request is rejected.
+                     * @param _approvalNote Approval notes. It is required when the request is rejected.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -116,20 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Approval result. 2: Rejected;
-3: Approved
+                     * Approval result. Valid value: 2: Rejected; 3: Approved.
                      */
                     int64_t m_approvalResult;
                     bool m_approvalResultHasBeenSet;
 
                     /**
-                     * Approval notes. It’s required when the request is rejected.
+                     * Approval notes. It is required when the request is rejected.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;

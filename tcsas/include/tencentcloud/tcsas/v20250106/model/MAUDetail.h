@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program MAU details
+                * Mini program MAU details.
                 */
                 class MAUDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取MAU details
-                     * @return DataList MAU details
+                     * 获取MAU details.
+                     * @return DataList MAU details.
                      * 
                      */
                     std::vector<MAULineChartData> GetDataList() const;
 
                     /**
-                     * 设置MAU details
-                     * @param _dataList MAU details
+                     * 设置MAU details.
+                     * @param _dataList MAU details.
                      * 
                      */
                     void SetDataList(const std::vector<MAULineChartData>& _dataList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * MAU details
+                     * MAU details.
                      */
                     std::vector<MAULineChartData> m_dataList;
                     bool m_dataListHasBeenSet;

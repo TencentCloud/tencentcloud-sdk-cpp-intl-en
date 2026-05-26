@@ -173,6 +173,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGRetentionDataResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfo.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/MNPI18NSyncDto.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLResponse.h
   include/tencentcloud/tcsas/v20250106/model/RollbackMNPVersionRequest.h
@@ -202,6 +203,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.h
   include/tencentcloud/tcsas/v20250106/model/AddTeamMemberResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPMAUMetricCardRequest.h
+  include/tencentcloud/tcsas/v20250106/model/MNPDetailI18nVO.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateTeamResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h
@@ -516,6 +518,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGRetentionDataResponse.cpp
   src/v20250106/model/DescribeApplicationConfigInfo.cpp
   src/v20250106/model/DescribeMNPRequest.cpp
+  src/v20250106/model/MNPI18NSyncDto.cpp
   src/v20250106/model/DescribeMNPPreviewResp.cpp
   src/v20250106/model/CreateGlobalDomainACLResponse.cpp
   src/v20250106/model/RollbackMNPVersionRequest.cpp
@@ -545,6 +548,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.cpp
   src/v20250106/model/AddTeamMemberResponse.cpp
   src/v20250106/model/DescribeMNPMAUMetricCardRequest.cpp
+  src/v20250106/model/MNPDetailI18nVO.cpp
   src/v20250106/model/DescribeMNPResponse.cpp
   src/v20250106/model/CreateTeamResponse.cpp
   src/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.cpp

@@ -44,15 +44,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
-                     * @return Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+                     * 获取Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+                     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
-                     * @param _filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+                     * 设置Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+                     * @param _filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -65,15 +77,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The number of results per page. Default value: 10.
-                     * @return PageSize The number of results per page. Default value: 10.
+                     * 获取Specifies the number of items per page. default value: 10. maximum value: 99.
+                     * @return PageSize Specifies the number of items per page. default value: 10. maximum value: 99.
                      * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
-                     * 设置The number of results per page. Default value: 10.
-                     * @param _pageSize The number of results per page. Default value: 10.
+                     * 设置Specifies the number of items per page. default value: 10. maximum value: 99.
+                     * @param _pageSize Specifies the number of items per page. default value: 10. maximum value: 99.
                      * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
@@ -107,15 +119,15 @@ namespace TencentCloud
                     bool PageNumberHasBeenSet() const;
 
                     /**
-                     * 获取Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
-                     * @return OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * 获取Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+                     * @return OrderBy Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
-                     * @param _orderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * 设置Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+                     * @param _orderBy Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -128,15 +140,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `desc`, `asc`.
-                     * @return OrderByType Sorting order. Valid values: `desc`, `asc`.
+                     * 获取Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
+                     * @return OrderByType Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `desc`, `asc`.
-                     * @param _orderByType Sorting order. Valid values: `desc`, `asc`.
+                     * 设置Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
+                     * @param _orderByType Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -151,13 +163,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+                     * Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The number of results per page. Default value: 10.
+                     * Specifies the number of items per page. default value: 10. maximum value: 99.
                      */
                     int64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
@@ -169,13 +184,13 @@ namespace TencentCloud
                     bool m_pageNumberHasBeenSet;
 
                     /**
-                     * Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `desc`, `asc`.
+                     * Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

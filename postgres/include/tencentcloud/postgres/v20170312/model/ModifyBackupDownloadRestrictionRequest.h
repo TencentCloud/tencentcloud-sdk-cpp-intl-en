@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
-                     * @return RestrictionType Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+                     * 获取Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
+                     * @return RestrictionType Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
                      * 
                      */
                     std::string GetRestrictionType() const;
 
                     /**
-                     * 设置Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
-                     * @param _restrictionType Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+                     * 设置Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
+                     * @param _restrictionType Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
                      * 
                      */
                     void SetRestrictionType(const std::string& _restrictionType);
@@ -85,15 +85,19 @@ namespace TencentCloud
                     bool VpcRestrictionEffectHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is allowed to download the VPC ID list of the backup files.
-                     * @return VpcIdSet Whether it is allowed to download the VPC ID list of the backup files.
+                     * 获取Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @return VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     std::vector<std::string> GetVpcIdSet() const;
 
                     /**
-                     * 设置Whether it is allowed to download the VPC ID list of the backup files.
-                     * @param _vpcIdSet Whether it is allowed to download the VPC ID list of the backup files.
+                     * 设置Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @param _vpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     void SetVpcIdSet(const std::vector<std::string>& _vpcIdSet);
@@ -127,15 +131,19 @@ namespace TencentCloud
                     bool IpRestrictionEffectHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is allowed to download the IP list of the backup files.
-                     * @return IpSet Whether it is allowed to download the IP list of the backup files.
+                     * 获取Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @return IpSet Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     std::vector<std::string> GetIpSet() const;
 
                     /**
-                     * 设置Whether it is allowed to download the IP list of the backup files.
-                     * @param _ipSet Whether it is allowed to download the IP list of the backup files.
+                     * 设置Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+                     * @param _ipSet Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      * 
                      */
                     void SetIpSet(const std::vector<std::string>& _ipSet);
@@ -150,7 +158,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+                     * Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
                      */
                     std::string m_restrictionType;
                     bool m_restrictionTypeHasBeenSet;
@@ -162,7 +170,8 @@ namespace TencentCloud
                     bool m_vpcRestrictionEffectHasBeenSet;
 
                     /**
-                     * Whether it is allowed to download the VPC ID list of the backup files.
+                     * Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      */
                     std::vector<std::string> m_vpcIdSet;
                     bool m_vpcIdSetHasBeenSet;
@@ -174,7 +183,8 @@ namespace TencentCloud
                     bool m_ipRestrictionEffectHasBeenSet;
 
                     /**
-                     * Whether it is allowed to download the IP list of the backup files.
+                     * Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
                      */
                     std::vector<std::string> m_ipSet;
                     bool m_ipSetHasBeenSet;

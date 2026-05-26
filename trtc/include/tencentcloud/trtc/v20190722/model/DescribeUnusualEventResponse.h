@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of records returned.
-Value range: 0-20.
-                     * @return Total The number of records returned.
-Value range: 0-20.
+                     * 获取Total number of returned data entries.
+Value range: [0, 20].
+                     * @return Total Total number of returned data entries.
+Value range: [0, 20].
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -61,8 +61,8 @@ Value range: 0-20.
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取The information of the abnormal user experiences.
-                     * @return AbnormalExperienceList The information of the abnormal user experiences.
+                     * 获取Abnormal experience list.
+                     * @return AbnormalExperienceList Abnormal experience list.
                      * 
                      */
                     std::vector<AbnormalExperience> GetAbnormalExperienceList() const;
@@ -77,14 +77,14 @@ Value range: 0-20.
                 private:
 
                     /**
-                     * The number of records returned.
-Value range: 0-20.
+                     * Total number of returned data entries.
+Value range: [0, 20].
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * The information of the abnormal user experiences.
+                     * Abnormal experience list.
                      */
                     std::vector<AbnormalExperience> m_abnormalExperienceList;
                     bool m_abnormalExperienceListHasBeenSet;

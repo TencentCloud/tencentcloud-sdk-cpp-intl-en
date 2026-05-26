@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return DBInstanceId Instance ID.
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _dBInstanceId Instance ID.
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
-                     * @return RestoreObjects List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+                     * 获取List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
+                     * @return RestoreObjects List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
                      * 
                      */
                     std::vector<std::string> GetRestoreObjects() const;
 
                     /**
-                     * 设置List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
-                     * @param _restoreObjects List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+                     * 设置List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
+                     * @param _restoreObjects List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
                      * 
                      */
                     void SetRestoreObjects(const std::vector<std::string>& _restoreObjects);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RestoreObjectsHasBeenSet() const;
 
                     /**
-                     * 获取Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
-                     * @return BackupSetId Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+                     * 获取Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
+                     * @return BackupSetId Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
                      * 
                      */
                     std::string GetBackupSetId() const;
 
                     /**
-                     * 设置Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
-                     * @param _backupSetId Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+                     * 设置Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
+                     * @param _backupSetId Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
                      * 
                      */
                     void SetBackupSetId(const std::string& _backupSetId);
@@ -129,19 +129,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+                     * List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
                      */
                     std::vector<std::string> m_restoreObjects;
                     bool m_restoreObjectsHasBeenSet;
 
                     /**
-                     * Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+                     * Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
                      */
                     std::string m_backupSetId;
                     bool m_backupSetIdHasBeenSet;

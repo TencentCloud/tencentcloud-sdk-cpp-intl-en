@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
-                     * @return PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+                     * 获取Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
+                     * @return PayModes Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
                      * 
                      */
                     std::string GetPayModes() const;
 
                     /**
-                     * 设置Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
-                     * @param _payModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+                     * 设置Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
+                     * @param _payModes Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
                      * 
                      */
                     void SetPayModes(const std::string& _payModes);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ActionTypesHasBeenSet() const;
 
                     /**
-                     * 获取Cost allocation tag key
-                     * @return Tags Cost allocation tag key
+                     * 获取Cost allocation tag key and value
+                     * @return Tags Cost allocation tag key and value
                      * 
                      */
                     std::string GetTags() const;
 
                     /**
-                     * 设置Cost allocation tag key
-                     * @param _tags Cost allocation tag key
+                     * 设置Cost allocation tag key and value
+                     * @param _tags Cost allocation tag key and value
                      * 
                      */
                     void SetTags(const std::string& _tags);
@@ -378,7 +378,7 @@ costBeforeTax: pre-tax price
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+                     * Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
                      */
                     std::string m_payModes;
                     bool m_payModesHasBeenSet;
@@ -390,7 +390,7 @@ costBeforeTax: pre-tax price
                     bool m_actionTypesHasBeenSet;
 
                     /**
-                     * Cost allocation tag key
+                     * Cost allocation tag key and value
                      */
                     std::string m_tags;
                     bool m_tagsHasBeenSet;

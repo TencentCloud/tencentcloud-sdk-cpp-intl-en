@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>1 Set 2 Cancel</p>
-                     * @return ActionType <p>1 Set 2 Cancel</p>
+                     * 获取<p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+                     * @return ActionType <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
                      * 
                      */
                     int64_t GetActionType() const;
 
                     /**
-                     * 设置<p>1 Set 2 Cancel</p>
-                     * @param _actionType <p>1 Set 2 Cancel</p>
+                     * 设置<p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+                     * @param _actionType <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
                      * 
                      */
                     void SetActionType(const int64_t& _actionType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version ID</p>
-                     * @return MNPVersionId <p>Mini game version ID</p>
+                     * 获取<p>Mini game version ID.</p>
+                     * @return MNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置<p>Mini game version ID</p>
-                     * @param _mNPVersionId <p>Mini game version ID</p>
+                     * 设置<p>Mini game version ID.</p>
+                     * @param _mNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Preview path</p>
-                     * @return PreviewEntrancePath <p>Preview path</p>
+                     * 获取<p>Preview path.</p>
+                     * @return PreviewEntrancePath <p>Preview path.</p>
                      * 
                      */
                     std::string GetPreviewEntrancePath() const;
 
                     /**
-                     * 设置<p>Preview path</p>
-                     * @param _previewEntrancePath <p>Preview path</p>
+                     * 设置<p>Preview path.</p>
+                     * @param _previewEntrancePath <p>Preview path.</p>
                      * 
                      */
                     void SetPreviewEntrancePath(const std::string& _previewEntrancePath);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>1 Set 2 Cancel</p>
+                     * <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
                      */
                     int64_t m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * <p>Mini game version ID</p>
+                     * <p>Mini game version ID.</p>
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Preview path</p>
+                     * <p>Preview path.</p>
                      */
                     std::string m_previewEntrancePath;
                     bool m_previewEntrancePathHasBeenSet;

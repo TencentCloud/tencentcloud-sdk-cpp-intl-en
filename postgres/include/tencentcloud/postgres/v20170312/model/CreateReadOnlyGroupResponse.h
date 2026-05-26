@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return FlowId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Process ID. FlowId is equivalent to TaskId.
+                     * @return FlowId Process ID. FlowId is equivalent to TaskId.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -73,6 +71,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool FlowIdHasBeenSet() const;
 
+                    /**
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
+                     * 
+                     */
+                    int64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -82,11 +94,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Process ID. FlowId is equivalent to TaskId.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * Task ID.
+                     */
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

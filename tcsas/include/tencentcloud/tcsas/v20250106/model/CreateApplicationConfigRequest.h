@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Superapp ID
-                     * @return ApplicationId Superapp ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Superapp ID
-                     * @param _applicationId Superapp ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Superapp type. 1: Test; 2: Formal
-                     * @return ApplicationType Superapp type. 1: Test; 2: Formal
+                     * 获取Superapp type. Valid values: 1: Test; 2: Production.
+                     * @return ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
                      * 
                      */
                     int64_t GetApplicationType() const;
 
                     /**
-                     * 设置Superapp type. 1: Test; 2: Formal
-                     * @param _applicationType Superapp type. 1: Test; 2: Formal
+                     * 设置Superapp type. Valid values: 1: Test; 2: Production.
+                     * @param _applicationType Superapp type. Valid values: 1: Test; 2: Production.
                      * 
                      */
                     void SetApplicationType(const int64_t& _applicationType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Superapp operating system. 2 Android 3 iOS
-                     * @return ApplicationPlatformType Superapp operating system. 2 Android 3 iOS
+                     * 获取Superapp operating system type. Valid values: 2: Android; 3: iOS.
+                     * @return ApplicationPlatformType Superapp operating system type. Valid values: 2: Android; 3: iOS.
                      * 
                      */
                     int64_t GetApplicationPlatformType() const;
 
                     /**
-                     * 设置Superapp operating system. 2 Android 3 iOS
-                     * @param _applicationPlatformType Superapp operating system. 2 Android 3 iOS
+                     * 设置Superapp operating system type. Valid values: 2: Android; 3: iOS.
+                     * @param _applicationPlatformType Superapp operating system type. Valid values: 2: Android; 3: iOS.
                      * 
                      */
                     void SetApplicationPlatformType(const int64_t& _applicationPlatformType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ApplicationPlatformTypeHasBeenSet() const;
 
                     /**
-                     * 获取Package name: corresponds to packageName on Android and bundleId on iOS
-                     * @return AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+                     * 获取Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+                     * @return AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      * 
                      */
                     std::string GetAppKey() const;
 
                     /**
-                     * 设置Package name: corresponds to packageName on Android and bundleId on iOS
-                     * @param _appKey Package name: corresponds to packageName on Android and bundleId on iOS
+                     * 设置Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+                     * @param _appKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      * 
                      */
                     void SetAppKey(const std::string& _appKey);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool AppKeyHasBeenSet() const;
 
                     /**
-                     * 获取Superapp URL
-                     * @return AppURL Superapp URL
+                     * 获取Superapp URL.
+                     * @return AppURL Superapp URL.
                      * 
                      */
                     std::string GetAppURL() const;
 
                     /**
-                     * 设置Superapp URL
-                     * @param _appURL Superapp URL
+                     * 设置Superapp URL.
+                     * @param _appURL Superapp URL.
                      * 
                      */
                     void SetAppURL(const std::string& _appURL);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Superapp ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Superapp type. 1: Test; 2: Formal
+                     * Superapp type. Valid values: 1: Test; 2: Production.
                      */
                     int64_t m_applicationType;
                     bool m_applicationTypeHasBeenSet;
 
                     /**
-                     * Superapp operating system. 2 Android 3 iOS
+                     * Superapp operating system type. Valid values: 2: Android; 3: iOS.
                      */
                     int64_t m_applicationPlatformType;
                     bool m_applicationPlatformTypeHasBeenSet;
 
                     /**
-                     * Package name: corresponds to packageName on Android and bundleId on iOS
+                     * Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      */
                     std::string m_appKey;
                     bool m_appKeyHasBeenSet;
 
                     /**
-                     * Superapp URL
+                     * Superapp URL.
                      */
                     std::string m_appURL;
                     bool m_appURLHasBeenSet;

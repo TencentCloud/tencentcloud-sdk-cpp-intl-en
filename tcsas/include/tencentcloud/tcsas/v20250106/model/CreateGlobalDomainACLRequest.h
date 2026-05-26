@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name list
-                     * @return DomainUrlList Domain name list
+                     * 获取Domain list.
+                     * @return DomainUrlList Domain list.
                      * 
                      */
                     std::vector<std::string> GetDomainUrlList() const;
 
                     /**
-                     * 设置Domain name list
-                     * @param _domainUrlList Domain name list
+                     * 设置Domain list.
+                     * @param _domainUrlList Domain list.
                      * 
                      */
                     void SetDomainUrlList(const std::vector<std::string>& _domainUrlList);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainUrlListHasBeenSet() const;
 
                     /**
-                     * 获取Domain type. 1: Allowed; 2: Blocked
-                     * @return DomainType Domain type. 1: Allowed; 2: Blocked
+                     * 获取Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @return DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     int64_t GetDomainType() const;
 
                     /**
-                     * 设置Domain type. 1: Allowed; 2: Blocked
-                     * @param _domainType Domain type. 1: Allowed; 2: Blocked
+                     * 设置Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @param _domainType Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     void SetDomainType(const int64_t& _domainType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DomainTypeHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name list
+                     * Domain list.
                      */
                     std::vector<std::string> m_domainUrlList;
                     bool m_domainUrlListHasBeenSet;
 
                     /**
-                     * Domain type. 1: Allowed; 2: Blocked
+                     * Domain type. Valid value: 1: Allowed; 2: Blocked.
                      */
                     int64_t m_domainType;
                     bool m_domainTypeHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

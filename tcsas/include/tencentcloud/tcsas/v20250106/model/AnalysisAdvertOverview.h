@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advertising analysis data overview
+                * Ad analysis data overview.
                 */
                 class AnalysisAdvertOverview : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Advertising overview
+                     * 获取Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OverviewData Advertising overview
+                     * @return OverviewData Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AdvertDataOverview GetOverviewData() const;
 
                     /**
-                     * 设置Advertising overview
+                     * 设置Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _overviewData Advertising overview
+                     * @param _overviewData Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Advertising overview
+                     * Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AdvertDataOverview m_overviewData;

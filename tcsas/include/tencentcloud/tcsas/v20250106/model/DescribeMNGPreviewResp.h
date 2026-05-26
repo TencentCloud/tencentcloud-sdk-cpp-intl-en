@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response object for querying the preview
+                * Response for querying the preview.
                 */
                 class DescribeMNGPreviewResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game name</p>
-                     * @return MNPName <p>Mini game name</p>
+                     * 获取<p>Mini game name.</p>
+                     * @return MNPName <p>Mini game name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置<p>Mini game name</p>
-                     * @param _mNPName <p>Mini game name</p>
+                     * 设置<p>Mini game name.</p>
+                     * @param _mNPName <p>Mini game name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game description</p>
-                     * @return MNPDesc <p>Mini game description</p>
+                     * 获取<p>Mini game description.</p>
+                     * @return MNPDesc <p>Mini game description.</p>
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置<p>Mini game description</p>
-                     * @param _mNPDesc <p>Mini game description</p>
+                     * 设置<p>Mini game description.</p>
+                     * @param _mNPDesc <p>Mini game description.</p>
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version</p>
-                     * @return MNPVersion <p>Mini game version</p>
+                     * 获取<p>Mini game version.</p>
+                     * @return MNPVersion <p>Mini game version.</p>
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置<p>Mini game version</p>
-                     * @param _mNPVersion <p>Mini game version</p>
+                     * 设置<p>Mini game version.</p>
+                     * @param _mNPVersion <p>Mini game version.</p>
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version description</p>
-                     * @return MNPVersionIntro <p>Mini game version description</p>
+                     * 获取<p>Mini game version description.</p>
+                     * @return MNPVersionIntro <p>Mini game version description.</p>
                      * 
                      */
                     std::string GetMNPVersionIntro() const;
 
                     /**
-                     * 设置<p>Mini game version description</p>
-                     * @param _mNPVersionIntro <p>Mini game version description</p>
+                     * 设置<p>Mini game version description.</p>
+                     * @param _mNPVersionIntro <p>Mini game version description.</p>
                      * 
                      */
                     void SetMNPVersionIntro(const std::string& _mNPVersionIntro);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version QR code</p>
-                     * @return QRCodeUrl <p>Mini game version QR code</p>
+                     * 获取<p>Mini game version QR code URL.</p>
+                     * @return QRCodeUrl <p>Mini game version QR code URL.</p>
                      * 
                      */
                     std::string GetQRCodeUrl() const;
 
                     /**
-                     * 设置<p>Mini game version QR code</p>
-                     * @param _qRCodeUrl <p>Mini game version QR code</p>
+                     * 设置<p>Mini game version QR code URL.</p>
+                     * @param _qRCodeUrl <p>Mini game version QR code URL.</p>
                      * 
                      */
                     void SetQRCodeUrl(const std::string& _qRCodeUrl);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool QRCodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Preview path</p>
-                     * @return PreviewEntrancePath <p>Preview path</p>
+                     * 获取<p>Preview path.</p>
+                     * @return PreviewEntrancePath <p>Preview path.</p>
                      * 
                      */
                     std::string GetPreviewEntrancePath() const;
 
                     /**
-                     * 设置<p>Preview path</p>
-                     * @param _previewEntrancePath <p>Preview path</p>
+                     * 设置<p>Preview path.</p>
+                     * @param _previewEntrancePath <p>Preview path.</p>
                      * 
                      */
                     void SetPreviewEntrancePath(const std::string& _previewEntrancePath);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PreviewEntrancePathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Information encoded in the QR code</p>
-                     * @return QRCodeContent <p>Information encoded in the QR code</p>
+                     * 获取<p>Information encoded in the QR code.</p>
+                     * @return QRCodeContent <p>Information encoded in the QR code.</p>
                      * 
                      */
                     std::string GetQRCodeContent() const;
 
                     /**
-                     * 设置<p>Information encoded in the QR code</p>
-                     * @param _qRCodeContent <p>Information encoded in the QR code</p>
+                     * 设置<p>Information encoded in the QR code.</p>
+                     * @param _qRCodeContent <p>Information encoded in the QR code.</p>
                      * 
                      */
                     void SetQRCodeContent(const std::string& _qRCodeContent);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Mini game name</p>
+                     * <p>Mini game name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * <p>Mini game description</p>
+                     * <p>Mini game description.</p>
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * <p>Mini game version</p>
+                     * <p>Mini game version.</p>
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * <p>Mini game version description</p>
+                     * <p>Mini game version description.</p>
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * <p>Mini game version QR code</p>
+                     * <p>Mini game version QR code URL.</p>
                      */
                     std::string m_qRCodeUrl;
                     bool m_qRCodeUrlHasBeenSet;
 
                     /**
-                     * <p>Preview path</p>
+                     * <p>Preview path.</p>
                      */
                     std::string m_previewEntrancePath;
                     bool m_previewEntrancePathHasBeenSet;
 
                     /**
-                     * <p>Information encoded in the QR code</p>
+                     * <p>Information encoded in the QR code.</p>
                      */
                     std::string m_qRCodeContent;
                     bool m_qRCodeContentHasBeenSet;

@@ -990,6 +990,56 @@ CbsClient::DescribeDiskConfigQuotaOutcomeCallable CbsClient::DescribeDiskConfigQ
     return prom->get_future();
 }
 
+CbsClient::DescribeDiskStoragePoolOutcome CbsClient::DescribeDiskStoragePool(const DescribeDiskStoragePoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDiskStoragePool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDiskStoragePoolResponse rsp = DescribeDiskStoragePoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDiskStoragePoolOutcome(rsp);
+        else
+            return DescribeDiskStoragePoolOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDiskStoragePoolOutcome(outcome.GetError());
+    }
+}
+
+void CbsClient::DescribeDiskStoragePoolAsync(const DescribeDiskStoragePoolRequest& request, const DescribeDiskStoragePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDiskStoragePoolRequest&;
+    using Resp = DescribeDiskStoragePoolResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDiskStoragePool", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CbsClient::DescribeDiskStoragePoolOutcomeCallable CbsClient::DescribeDiskStoragePoolCallable(const DescribeDiskStoragePoolRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDiskStoragePoolOutcome>>();
+    DescribeDiskStoragePoolAsync(
+    request,
+    [prom](
+        const CbsClient*,
+        const DescribeDiskStoragePoolRequest&,
+        DescribeDiskStoragePoolOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CbsClient::DescribeDisksOutcome CbsClient::DescribeDisks(const DescribeDisksRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDisks");

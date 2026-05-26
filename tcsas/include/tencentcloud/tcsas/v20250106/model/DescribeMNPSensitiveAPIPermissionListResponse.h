@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response parameters.
-                     * @return Data Response parameters.
+                     * 获取Response data.
+                     * @return Data Response data.
                      * 
                      */
                     DescribeMNPSensitiveAPIPermissionListResp GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response parameters.
+                     * Response data.
                      */
                     DescribeMNPSensitiveAPIPermissionListResp m_data;
                     bool m_dataHasBeenSet;

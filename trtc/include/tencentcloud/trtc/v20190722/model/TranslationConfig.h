@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Translation config
+                * Translate configuration.
                 */
                 class TranslationConfig : public AbstractModel
                 {
@@ -49,15 +49,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target language, target language list (ISO 639-1).
-                     * @return TargetLanguages Target language, target language list (ISO 639-1).
+                     * 获取Target language for translation, target language list (ISO 639-1).
+
+                     * @return TargetLanguages Target language for translation, target language list (ISO 639-1).
+
                      * 
                      */
                     std::vector<std::string> GetTargetLanguages() const;
 
                     /**
-                     * 设置Target language, target language list (ISO 639-1).
-                     * @param _targetLanguages Target language, target language list (ISO 639-1).
+                     * 设置Target language for translation, target language list (ISO 639-1).
+
+                     * @param _targetLanguages Target language for translation, target language list (ISO 639-1).
+
                      * 
                      */
                     void SetTargetLanguages(const std::vector<std::string>& _targetLanguages);
@@ -70,15 +74,19 @@ namespace TencentCloud
                     bool TargetLanguagesHasBeenSet() const;
 
                     /**
-                     * 获取1: Only text translation, 2: Voice simultaneous interpretation.
-                     * @return Mode 1: Only text translation, 2: Voice simultaneous interpretation.
+                     * 获取1: text translation only 2: speech simultaneous interpretation.
+
+                     * @return Mode 1: text translation only 2: speech simultaneous interpretation.
+
                      * 
                      */
                     uint64_t GetMode() const;
 
                     /**
-                     * 设置1: Only text translation, 2: Voice simultaneous interpretation.
-                     * @param _mode 1: Only text translation, 2: Voice simultaneous interpretation.
+                     * 设置1: text translation only 2: speech simultaneous interpretation.
+
+                     * @param _mode 1: text translation only 2: speech simultaneous interpretation.
+
                      * 
                      */
                     void SetMode(const uint64_t& _mode);
@@ -91,15 +99,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
-                     * @return TTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+                     * 获取Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+                     * @return TTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
                      * 
                      */
                     TTSConfig GetTTSConfig() const;
 
                     /**
-                     * 设置Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
-                     * @param _tTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+                     * 设置Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+                     * @param _tTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
                      * 
                      */
                     void SetTTSConfig(const TTSConfig& _tTSConfig);
@@ -112,15 +120,15 @@ namespace TencentCloud
                     bool TTSConfigHasBeenSet() const;
 
                     /**
-                     * 获取Translation terminology.
-                     * @return Terminology Translation terminology.
+                     * 获取Translation terminology collection.
+                     * @return Terminology Translation terminology collection.
                      * 
                      */
                     std::vector<Terminology> GetTerminology() const;
 
                     /**
-                     * 设置Translation terminology.
-                     * @param _terminology Translation terminology.
+                     * 设置Translation terminology collection.
+                     * @param _terminology Translation terminology collection.
                      * 
                      */
                     void SetTerminology(const std::vector<Terminology>& _terminology);
@@ -135,25 +143,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target language, target language list (ISO 639-1).
+                     * Target language for translation, target language list (ISO 639-1).
+
                      */
                     std::vector<std::string> m_targetLanguages;
                     bool m_targetLanguagesHasBeenSet;
 
                     /**
-                     * 1: Only text translation, 2: Voice simultaneous interpretation.
+                     * 1: text translation only 2: speech simultaneous interpretation.
+
                      */
                     uint64_t m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+                     * Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
                      */
                     TTSConfig m_tTSConfig;
                     bool m_tTSConfigHasBeenSet;
 
                     /**
-                     * Translation terminology.
+                     * Translation terminology collection.
                      */
                     std::vector<Terminology> m_terminology;
                     bool m_terminologyHasBeenSet;

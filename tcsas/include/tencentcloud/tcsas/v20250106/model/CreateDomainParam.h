@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters to create a domain name
+                * Request parameters for creating a domain.
                 */
                 class CreateDomainParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of domain name URLs
-                     * @return DomainUrlList Array of domain name URLs
+                     * 获取Array of domain URLs.
+                     * @return DomainUrlList Array of domain URLs.
                      * 
                      */
                     std::vector<std::string> GetDomainUrlList() const;
 
                     /**
-                     * 设置Array of domain name URLs
-                     * @param _domainUrlList Array of domain name URLs
+                     * 设置Array of domain URLs.
+                     * @param _domainUrlList Array of domain URLs.
                      * 
                      */
                     void SetDomainUrlList(const std::vector<std::string>& _domainUrlList);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainUrlListHasBeenSet() const;
 
                     /**
-                     * 获取Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
-                     * @return DomainType Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+                     * 获取Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
+                     * @return DomainType Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
                      * 
                      */
                     int64_t GetDomainType() const;
 
                     /**
-                     * 设置Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
-                     * @param _domainType Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+                     * 设置Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
+                     * @param _domainType Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
                      * 
                      */
                     void SetDomainType(const int64_t& _domainType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of domain name URLs
+                     * Array of domain URLs.
                      */
                     std::vector<std::string> m_domainUrlList;
                     bool m_domainUrlListHasBeenSet;
 
                     /**
-                     * Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+                     * Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
                      */
                     int64_t m_domainType;
                     bool m_domainTypeHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Approval ID
-                     * @return ApprovalNo Approval ID
+                     * 获取Approval number.
+                     * @return ApprovalNo Approval number.
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval ID
-                     * @param _approvalNo Approval ID
+                     * 设置Approval number.
+                     * @param _approvalNo Approval number.
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Approval details
-                     * @return ApprovalItems Approval details
+                     * 获取Approval details.
+                     * @return ApprovalItems Approval details.
                      * 
                      */
                     std::vector<ApprovalItem> GetApprovalItems() const;
 
                     /**
-                     * 设置Approval details
-                     * @param _approvalItems Approval details
+                     * 设置Approval details.
+                     * @param _approvalItems Approval details.
                      * 
                      */
                     void SetApprovalItems(const std::vector<ApprovalItem>& _approvalItems);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Approval ID
+                     * Approval number.
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Approval details
+                     * Approval details.
                      */
                     std::vector<ApprovalItem> m_approvalItems;
                     bool m_approvalItemsHasBeenSet;

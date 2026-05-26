@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed visit analysis data
+                * Access analysis detail data.
                 */
                 class AccessAnalysisDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of new devices
-                     * @return ActiveCount Number of new devices
+                     * 获取Number of new devices.
+                     * @return ActiveCount Number of new devices.
                      * 
                      */
                     int64_t GetActiveCount() const;
 
                     /**
-                     * 设置Number of new devices
-                     * @param _activeCount Number of new devices
+                     * 设置Number of new devices.
+                     * @param _activeCount Number of new devices.
                      * 
                      */
                     void SetActiveCount(const int64_t& _activeCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActiveCountHasBeenSet() const;
 
                     /**
-                     * 获取Average visit duration per user
-                     * @return AvgDevice Average visit duration per user
+                     * 获取Average visit duration per user.
+                     * @return AvgDevice Average visit duration per user.
                      * 
                      */
                     std::string GetAvgDevice() const;
 
                     /**
-                     * 设置Average visit duration per user
-                     * @param _avgDevice Average visit duration per user
+                     * 设置Average visit duration per user.
+                     * @param _avgDevice Average visit duration per user.
                      * 
                      */
                     void SetAvgDevice(const std::string& _avgDevice);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AvgDeviceHasBeenSet() const;
 
                     /**
-                     * 获取Average visit duration per session
-                     * @return AvgOnce Average visit duration per session
+                     * 获取Average visit duration per session.
+                     * @return AvgOnce Average visit duration per session.
                      * 
                      */
                     std::string GetAvgOnce() const;
 
                     /**
-                     * 设置Average visit duration per session
-                     * @param _avgOnce Average visit duration per session
+                     * 设置Average visit duration per session.
+                     * @param _avgOnce Average visit duration per session.
                      * 
                      */
                     void SetAvgOnce(const std::string& _avgOnce);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AvgOnceHasBeenSet() const;
 
                     /**
-                     * 获取Average opens per user
-                     * @return AvgOpenCount Average opens per user
+                     * 获取Average opens per user.
+                     * @return AvgOpenCount Average opens per user.
                      * 
                      */
                     std::string GetAvgOpenCount() const;
 
                     /**
-                     * 设置Average opens per user
-                     * @param _avgOpenCount Average opens per user
+                     * 设置Average opens per user.
+                     * @param _avgOpenCount Average opens per user.
                      * 
                      */
                     void SetAvgOpenCount(const std::string& _avgOpenCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AvgOpenCountHasBeenSet() const;
 
                     /**
-                     * 获取Date
-                     * @return DataTime Date
+                     * 获取Date.
+                     * @return DataTime Date.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Date
-                     * @param _dataTime Date
+                     * 设置Date.
+                     * @param _dataTime Date.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Data time
-                     * @return FlushTime Data time
+                     * 获取Data refresh time.
+                     * @return FlushTime Data refresh time.
                      * 
                      */
                     std::string GetFlushTime() const;
 
                     /**
-                     * 设置Data time
-                     * @param _flushTime Data time
+                     * 设置Data refresh time.
+                     * @param _flushTime Data refresh time.
                      * 
                      */
                     void SetFlushTime(const std::string& _flushTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FlushTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of active devices
-                     * @return NewCount Number of active devices
+                     * 获取Number of active devices.
+                     * @return NewCount Number of active devices.
                      * 
                      */
                     int64_t GetNewCount() const;
 
                     /**
-                     * 设置Number of active devices
-                     * @param _newCount Number of active devices
+                     * 设置Number of active devices.
+                     * @param _newCount Number of active devices.
                      * 
                      */
                     void SetNewCount(const int64_t& _newCount);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool NewCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of opens
-                     * @return OpenCount Number of opens
+                     * 获取Number of opens.
+                     * @return OpenCount Number of opens.
                      * 
                      */
                     int64_t GetOpenCount() const;
 
                     /**
-                     * 设置Number of opens
-                     * @param _openCount Number of opens
+                     * 设置Number of opens.
+                     * @param _openCount Number of opens.
                      * 
                      */
                     void SetOpenCount(const int64_t& _openCount);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool OpenCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of shares
-                     * @return TotalShareNum Number of shares
+                     * 获取Number of shares.
+                     * @return TotalShareNum Number of shares.
                      * 
                      */
                     int64_t GetTotalShareNum() const;
 
                     /**
-                     * 设置Number of shares
-                     * @param _totalShareNum Number of shares
+                     * 设置Number of shares.
+                     * @param _totalShareNum Number of shares.
                      * 
                      */
                     void SetTotalShareNum(const int64_t& _totalShareNum);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool TotalShareNumHasBeenSet() const;
 
                     /**
-                     * 获取Cumulative users
-                     * @return TotalUserNum Cumulative users
+                     * 获取Cumulative users.
+                     * @return TotalUserNum Cumulative users.
                      * 
                      */
                     int64_t GetTotalUserNum() const;
 
                     /**
-                     * 设置Cumulative users
-                     * @param _totalUserNum Cumulative users
+                     * 设置Cumulative users.
+                     * @param _totalUserNum Cumulative users.
                      * 
                      */
                     void SetTotalUserNum(const int64_t& _totalUserNum);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of new devices
+                     * Number of new devices.
                      */
                     int64_t m_activeCount;
                     bool m_activeCountHasBeenSet;
 
                     /**
-                     * Average visit duration per user
+                     * Average visit duration per user.
                      */
                     std::string m_avgDevice;
                     bool m_avgDeviceHasBeenSet;
 
                     /**
-                     * Average visit duration per session
+                     * Average visit duration per session.
                      */
                     std::string m_avgOnce;
                     bool m_avgOnceHasBeenSet;
 
                     /**
-                     * Average opens per user
+                     * Average opens per user.
                      */
                     std::string m_avgOpenCount;
                     bool m_avgOpenCountHasBeenSet;
 
                     /**
-                     * Date
+                     * Date.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Data time
+                     * Data refresh time.
                      */
                     std::string m_flushTime;
                     bool m_flushTimeHasBeenSet;
 
                     /**
-                     * Number of active devices
+                     * Number of active devices.
                      */
                     int64_t m_newCount;
                     bool m_newCountHasBeenSet;
 
                     /**
-                     * Number of opens
+                     * Number of opens.
                      */
                     int64_t m_openCount;
                     bool m_openCountHasBeenSet;
 
                     /**
-                     * Number of shares
+                     * Number of shares.
                      */
                     int64_t m_totalShareNum;
                     bool m_totalShareNumHasBeenSet;
 
                     /**
-                     * Cumulative users
+                     * Cumulative users.
                      */
                     int64_t m_totalUserNum;
                     bool m_totalUserNumHasBeenSet;

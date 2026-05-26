@@ -72,6 +72,20 @@ namespace TencentCloud
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取File download link path prefix
+                     * @return UrlPrefix File download link path prefix
+                     * 
+                     */
+                    std::string GetUrlPrefix() const;
+
+                    /**
+                     * 判断参数 UrlPrefix 是否已赋值
+                     * @return UrlPrefix 是否已赋值
+                     * 
+                     */
+                    bool UrlPrefixHasBeenSet() const;
+
                 private:
 
                     /**
@@ -85,6 +99,12 @@ namespace TencentCloud
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * File download link path prefix
+                     */
+                    std::string m_urlPrefix;
+                    bool m_urlPrefixHasBeenSet;
 
                 };
             }

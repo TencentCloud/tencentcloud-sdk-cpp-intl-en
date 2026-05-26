@@ -35,7 +35,8 @@ DescribeApplicationSensitiveAPIListData::DescribeApplicationSensitiveAPIListData
     m_teamNameHasBeenSet(false),
     m_applicationLogoHasBeenSet(false),
     m_aPITypeHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_useScopeHasBeenSet(false)
 {
 }
 
@@ -194,6 +195,16 @@ CoreInternalOutcome DescribeApplicationSensitiveAPIListData::Deserialize(const r
         m_statusHasBeenSet = true;
     }
 
+    if (value.HasMember("UseScope") && !value["UseScope"].IsNull())
+    {
+        if (!value["UseScope"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeApplicationSensitiveAPIListData.UseScope` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_useScope = value["UseScope"].GetInt64();
+        m_useScopeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -319,6 +330,14 @@ void DescribeApplicationSensitiveAPIListData::ToJsonObject(rapidjson::Value &val
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_useScopeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UseScope";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_useScope, allocator);
     }
 
 }
@@ -562,5 +581,21 @@ void DescribeApplicationSensitiveAPIListData::SetStatus(const int64_t& _status)
 bool DescribeApplicationSensitiveAPIListData::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+int64_t DescribeApplicationSensitiveAPIListData::GetUseScope() const
+{
+    return m_useScope;
+}
+
+void DescribeApplicationSensitiveAPIListData::SetUseScope(const int64_t& _useScope)
+{
+    m_useScope = _useScope;
+    m_useScopeHasBeenSet = true;
+}
+
+bool DescribeApplicationSensitiveAPIListData::UseScopeHasBeenSet() const
+{
+    return m_useScopeHasBeenSet;
 }
 

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of date entries returned this time.
-                     * @return TotalCount Number of date entries returned this time.
+                     * 获取Indicates how many data entries are returned.
+                     * @return TotalCount Indicates how many data entries are returned.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Xlog list
-                     * @return XlogList Xlog list
+                     * 获取Xlog list.
+                     * @return XlogList Xlog list.
                      * 
                      */
                     std::vector<Xlog> GetXlogList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of date entries returned this time.
+                     * Indicates how many data entries are returned.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Xlog list
+                     * Xlog list.
                      */
                     std::vector<Xlog> m_xlogList;
                     bool m_xlogListHasBeenSet;

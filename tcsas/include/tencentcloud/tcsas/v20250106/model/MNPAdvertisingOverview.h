@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program advertising revenue
+                * Mini program advertising revenue.
                 */
                 class MNPAdvertisingOverview : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data
+                     * 获取Data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OverviewData Data
+                     * @return OverviewData Data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MNPAdOverview GetOverviewData() const;
 
                     /**
-                     * 设置Data
+                     * 设置Data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _overviewData Data
+                     * @param _overviewData Data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data
+                     * Data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MNPAdOverview m_overviewData;

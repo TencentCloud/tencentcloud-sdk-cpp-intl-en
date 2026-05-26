@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Device ID
-                     * @return DeviceId Device ID
+                     * 获取<p>device id</p>
+                     * @return DeviceId <p>device id</p>
                      * 
                      */
                     std::string GetDeviceId() const;
 
                     /**
-                     * 设置Device ID
-                     * @param _deviceId Device ID
+                     * 设置<p>device id</p>
+                     * @param _deviceId <p>device id</p>
                      * 
                      */
                     void SetDeviceId(const std::string& _deviceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DeviceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time.
-                     * @return BeginTime Start time.
+                     * 获取<p>Start time.</p>
+                     * @return BeginTime <p>Start time.</p>
                      * 
                      */
                     int64_t GetBeginTime() const;
 
                     /**
-                     * 设置Start time.
-                     * @param _beginTime Start time.
+                     * 设置<p>Start time.</p>
+                     * @param _beginTime <p>Start time.</p>
                      * 
                      */
                     void SetBeginTime(const int64_t& _beginTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time.
-                     * @return EndTime End time.
+                     * 获取<p>End time.</p>
+                     * @return EndTime <p>End time.</p>
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time.
-                     * @param _endTime End time.
+                     * 设置<p>End time.</p>
+                     * @param _endTime <p>End time.</p>
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
-                     * @return Metrics Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+                     * 获取<p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+                     * @return Metrics <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
                      * 
                      */
                     std::string GetMetrics() const;
 
                     /**
-                     * 设置Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
-                     * @param _metrics Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+                     * 设置<p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+                     * @param _metrics <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
                      * 
                      */
                     void SetMetrics(const std::string& _metrics);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MetricsHasBeenSet() const;
 
                     /**
-                     * 获取Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-                     * @return GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * 获取<p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
+                     * @return GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
                      * 
                      */
                     int64_t GetGatewayType() const;
 
                     /**
-                     * 设置Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-                     * @param _gatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * 设置<p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
+                     * @param _gatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
                      * 
                      */
                     void SetGatewayType(const int64_t& _gatewayType);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Device ID
+                     * <p>device id</p>
                      */
                     std::string m_deviceId;
                     bool m_deviceIdHasBeenSet;
 
                     /**
-                     * Start time.
+                     * <p>Start time.</p>
                      */
                     int64_t m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time.
+                     * <p>End time.</p>
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+                     * <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
                      */
                     std::string m_metrics;
                     bool m_metricsHasBeenSet;
 
                     /**
-                     * Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+                     * <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
                      */
                     int64_t m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;

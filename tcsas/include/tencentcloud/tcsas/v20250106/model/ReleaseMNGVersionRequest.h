@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game version ID</p>
-                     * @return MNPVersionId <p>Mini game version ID</p>
+                     * 获取<p>Mini game version ID.</p>
+                     * @return MNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置<p>Mini game version ID</p>
-                     * @param _mNPVersionId <p>Mini game version ID</p>
+                     * 设置<p>Mini game version ID.</p>
+                     * @param _mNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game version ID</p>
+                     * <p>Mini game version ID.</p>
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

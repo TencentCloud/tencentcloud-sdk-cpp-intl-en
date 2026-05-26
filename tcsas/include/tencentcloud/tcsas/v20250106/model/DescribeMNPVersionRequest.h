@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool BusinessIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_businessIdHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

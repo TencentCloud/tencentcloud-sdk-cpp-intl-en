@@ -60,10 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DurationAnalysis Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Describes the segmented analysis results of the duration of the queried slow logs.
+                     * @return DurationAnalysis Describes the segmented analysis results of the duration of the queried slow logs.
                      * 
                      */
                     std::vector<DurationAnalysis> GetDurationAnalysis() const;
@@ -77,9 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RawSlowQueryList Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RawSlowQuery> GetRawSlowQueryList() const;
@@ -100,15 +96,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Describes the segmented analysis results of the duration of the queried slow logs.
                      */
                     std::vector<DurationAnalysis> m_durationAnalysis;
                     bool m_durationAnalysisHasBeenSet;
 
                     /**
                      * Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RawSlowQuery> m_rawSlowQueryList;
                     bool m_rawSlowQueryListHasBeenSet;

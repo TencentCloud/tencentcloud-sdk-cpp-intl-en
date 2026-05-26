@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Team member information
+                * Team member information.
                 */
                 class DescribeTeamMemberInfoResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User ID
-                     * @return UserId User ID
+                     * 获取User ID.
+                     * @return UserId User ID.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _userId User ID
+                     * 设置User ID.
+                     * @param _userId User ID.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User account
-                     * @return UserAccount User account
+                     * 获取User account.
+                     * @return UserAccount User account.
                      * 
                      */
                     std::string GetUserAccount() const;
 
                     /**
-                     * 设置User account
-                     * @param _userAccount User account
+                     * 设置User account.
+                     * @param _userAccount User account.
                      * 
                      */
                     void SetUserAccount(const std::string& _userAccount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserAccountHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return UserName User name
+                     * 获取User name.
+                     * @return UserName User name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name
-                     * @param _userName User name
+                     * 设置User name.
+                     * @param _userName User name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the team role name.
-                     * @return TeamRoleName Specifies the team role name.
+                     * 获取Team role name.
+                     * @return TeamRoleName Team role name.
                      * 
                      */
                     std::string GetTeamRoleName() const;
 
                     /**
-                     * 设置Specifies the team role name.
-                     * @param _teamRoleName Specifies the team role name.
+                     * 设置Team role name.
+                     * @param _teamRoleName Team role name.
                      * 
                      */
                     void SetTeamRoleName(const std::string& _teamRoleName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TeamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the team role ID.
-                     * @return TeamRoleId Specifies the team role ID.
+                     * 获取Team role ID.
+                     * @return TeamRoleId Team role ID.
                      * 
                      */
                     int64_t GetTeamRoleId() const;
 
                     /**
-                     * 设置Specifies the team role ID.
-                     * @param _teamRoleId Specifies the team role ID.
+                     * 设置Team role ID.
+                     * @param _teamRoleId Team role ID.
                      * 
                      */
                     void SetTeamRoleId(const int64_t& _teamRoleId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TeamRoleIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is editable
-                     * @return CanEdit Whether it is editable
+                     * 获取Whether it can be edited.
+                     * @return CanEdit Whether it can be edited.
                      * 
                      */
                     bool GetCanEdit() const;
 
                     /**
-                     * 设置Whether it is editable
-                     * @param _canEdit Whether it is editable
+                     * 设置Whether it can be edited.
+                     * @param _canEdit Whether it can be edited.
                      * 
                      */
                     void SetCanEdit(const bool& _canEdit);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User ID
+                     * User ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User account
+                     * User account.
                      */
                     std::string m_userAccount;
                     bool m_userAccountHasBeenSet;
 
                     /**
-                     * User name
+                     * User name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Team ID
+                     * Team ID.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Specifies the team role name.
+                     * Team role name.
                      */
                     std::string m_teamRoleName;
                     bool m_teamRoleNameHasBeenSet;
 
                     /**
-                     * Specifies the team role ID.
+                     * Team role ID.
                      */
                     int64_t m_teamRoleId;
                     bool m_teamRoleIdHasBeenSet;
 
                     /**
-                     * Whether it is editable
+                     * Whether it can be edited.
                      */
                     bool m_canEdit;
                     bool m_canEditHasBeenSet;

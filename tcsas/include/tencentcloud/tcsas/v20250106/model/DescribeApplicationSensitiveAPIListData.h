@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of sensitive APIs of an application
+                * Superapp sensitive API list data.
                 */
                 class DescribeApplicationSensitiveAPIListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取APIID
-                     * @return APIId APIID
+                     * 获取API ID.
+                     * @return APIId API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置APIID
-                     * @param _aPIId APIID
+                     * 设置API ID.
+                     * @param _aPIId API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取API name
-                     * @return APIName API name
+                     * 获取API name.
+                     * @return APIName API name.
                      * 
                      */
                     std::string GetAPIName() const;
 
                     /**
-                     * 设置API name
-                     * @param _aPIName API name
+                     * 设置API name.
+                     * @param _aPIName API name.
                      * 
                      */
                     void SetAPIName(const std::string& _aPIName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APINameHasBeenSet() const;
 
                     /**
-                     * 获取API request method
-                     * @return APIMethod API request method
+                     * 获取API request method.
+                     * @return APIMethod API request method.
                      * 
                      */
                     std::string GetAPIMethod() const;
 
                     /**
-                     * 设置API request method
-                     * @param _aPIMethod API request method
+                     * 设置API request method.
+                     * @param _aPIMethod API request method.
                      * 
                      */
                     void SetAPIMethod(const std::string& _aPIMethod);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool APIMethodHasBeenSet() const;
 
                     /**
-                     * 获取API description
-                     * @return APIDesc API description
+                     * 获取API description.
+                     * @return APIDesc API description.
                      * 
                      */
                     std::string GetAPIDesc() const;
 
                     /**
-                     * 设置API description
-                     * @param _aPIDesc API description
+                     * 设置API description.
+                     * @param _aPIDesc API description.
                      * 
                      */
                     void SetAPIDesc(const std::string& _aPIDesc);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool APIDescHasBeenSet() const;
 
                     /**
-                     * 获取Creator
-                     * @return CreateUser Creator
+                     * 获取Creator.
+                     * @return CreateUser Creator.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator
-                     * @param _createUser Creator
+                     * 设置Creator.
+                     * @param _createUser Creator.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Updater
-                     * @return UpdateUser Updater
+                     * 获取Last modifier.
+                     * @return UpdateUser Last modifier.
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置Updater
-                     * @param _updateUser Updater
+                     * 设置Last modifier.
+                     * @param _updateUser Last modifier.
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool UpdateUserHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Last modified time.
+                     * @return UpdateTime Last modified time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Last modified time.
+                     * @param _updateTime Last modified time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Application ID
-                     * @return ApplicationId Application ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _applicationId Application ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the application icon.
-                     * @return ApplicationLogo Specifies the application icon.
+                     * 获取Superapp icon.
+                     * @return ApplicationLogo Superapp icon.
                      * 
                      */
                     std::string GetApplicationLogo() const;
 
                     /**
-                     * 设置Specifies the application icon.
-                     * @param _applicationLogo Specifies the application icon.
+                     * 设置Superapp icon.
+                     * @param _applicationLogo Superapp icon.
                      * 
                      */
                     void SetApplicationLogo(const std::string& _applicationLogo);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool ApplicationLogoHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: system; 2: custom.
-                     * @return APIType API type. 1: system; 2: custom.
+                     * 获取API type. Valid values: 1: System; 2: Custom.
+                     * @return APIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: system; 2: custom.
-                     * @param _aPIType API type. 1: system; 2: custom.
+                     * 设置API type. Valid values: 1: System; 2: Custom.
+                     * @param _aPIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool APITypeHasBeenSet() const;
 
                     /**
-                     * 获取API status. 0: public; 1: restricted.
-                     * @return Status API status. 0: public; 1: restricted.
+                     * 获取API status. Valid values: 0: Public; 1: Restricted.
+                     * @return Status API status. Valid values: 0: Public; 1: Restricted.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置API status. 0: public; 1: restricted.
-                     * @param _status API status. 0: public; 1: restricted.
+                     * 设置API status. Valid values: 0: Public; 1: Restricted.
+                     * @param _status API status. Valid values: 0: Public; 1: Restricted.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -361,97 +361,124 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+                     * @return UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+                     * 
+                     */
+                    int64_t GetUseScope() const;
+
+                    /**
+                     * 设置Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+                     * @param _useScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+                     * 
+                     */
+                    void SetUseScope(const int64_t& _useScope);
+
+                    /**
+                     * 判断参数 UseScope 是否已赋值
+                     * @return UseScope 是否已赋值
+                     * 
+                     */
+                    bool UseScopeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * APIID
+                     * API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * API name
+                     * API name.
                      */
                     std::string m_aPIName;
                     bool m_aPINameHasBeenSet;
 
                     /**
-                     * API request method
+                     * API request method.
                      */
                     std::string m_aPIMethod;
                     bool m_aPIMethodHasBeenSet;
 
                     /**
-                     * API description
+                     * API description.
                      */
                     std::string m_aPIDesc;
                     bool m_aPIDescHasBeenSet;
 
                     /**
-                     * Creator
+                     * Creator.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Updater
+                     * Last modifier.
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last modified time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Team ID
+                     * Team ID.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Specifies the application icon.
+                     * Superapp icon.
                      */
                     std::string m_applicationLogo;
                     bool m_applicationLogoHasBeenSet;
 
                     /**
-                     * API type. 1: system; 2: custom.
+                     * API type. Valid values: 1: System; 2: Custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;
 
                     /**
-                     * API status. 0: public; 1: restricted.
+                     * API status. Valid values: 0: Public; 1: Restricted.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+                     */
+                    int64_t m_useScope;
+                    bool m_useScopeHasBeenSet;
 
                 };
             }

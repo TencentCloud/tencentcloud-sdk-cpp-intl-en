@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of sensitive APIs that can be called by a mini program
+                * Response for querying the list of callable sensitive APIs of a mini program.
                 */
                 class DescribeMNPSensitiveAPIPermissionListResp : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of entries
-                     * @param _totalCount Total number of entries
+                     * 设置Total number of entries.
+                     * @param _totalCount Total number of entries.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,18 +69,18 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List data
+                     * 获取List data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataList List data
+                     * @return DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeMNPSensitiveAPIPermissionListData> GetDataList() const;
 
                     /**
-                     * 设置List data
+                     * 设置List data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataList List data
+                     * @param _dataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -96,13 +96,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List data
+                     * List data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeMNPSensitiveAPIPermissionListData> m_dataList;

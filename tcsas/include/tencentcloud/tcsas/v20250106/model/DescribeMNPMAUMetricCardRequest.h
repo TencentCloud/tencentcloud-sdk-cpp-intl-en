@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time in YYYYMMDD format
-                     * @return SourceMonth Start time in YYYYMMDD format
+                     * 获取Start time in YYYYMMDD format.
+                     * @return SourceMonth Start time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetSourceMonth() const;
 
                     /**
-                     * 设置Start time in YYYYMMDD format
-                     * @param _sourceMonth Start time in YYYYMMDD format
+                     * 设置Start time in YYYYMMDD format.
+                     * @param _sourceMonth Start time in YYYYMMDD format.
                      * 
                      */
                     void SetSourceMonth(const int64_t& _sourceMonth);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SourceMonthHasBeenSet() const;
 
                     /**
-                     * 获取Type: 0 Non-production data, 1 Production data 
-                     * @return DataType Type: 0 Non-production data, 1 Production data 
+                     * 获取Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @return DataType Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     int64_t GetDataType() const;
 
                     /**
-                     * 设置Type: 0 Non-production data, 1 Production data 
-                     * @param _dataType Type: 0 Non-production data, 1 Production data 
+                     * 设置Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @param _dataType Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     void SetDataType(const int64_t& _dataType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DataTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取End time in YYYYMMDD format
-                     * @return TargetMonth End time in YYYYMMDD format
+                     * 获取End time in YYYYMMDD format.
+                     * @return TargetMonth End time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetTargetMonth() const;
 
                     /**
-                     * 设置End time in YYYYMMDD format
-                     * @param _targetMonth End time in YYYYMMDD format
+                     * 设置End time in YYYYMMDD format.
+                     * @param _targetMonth End time in YYYYMMDD format.
                      * 
                      */
                     void SetTargetMonth(const int64_t& _targetMonth);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TargetMonthHasBeenSet() const;
 
                     /**
-                     * 获取Superapp ID starting with App
-                     * @return ApplicationId Superapp ID starting with App
+                     * 获取Superapp ID prefixed with "app".
+                     * @return ApplicationId Superapp ID prefixed with "app".
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Superapp ID starting with App
-                     * @param _applicationId Superapp ID starting with App
+                     * 设置Superapp ID prefixed with "app".
+                     * @param _applicationId Superapp ID prefixed with "app".
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program appid, required. When provided, the query is performed based on the mini program.
-                     * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * 获取Mini program appid. If not empty, results are filtered by mini program appid.
+                     * @return MNPId Mini program appid. If not empty, results are filtered by mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid, required. When provided, the query is performed based on the mini program.
-                     * @param _mNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * 设置Mini program appid. If not empty, results are filtered by mini program appid.
+                     * @param _mNPId Mini program appid. If not empty, results are filtered by mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program team ID, required. When provided, the query is performed based on the mini program team.
-                     * @return MNPTeamId Mini program team ID, required. When provided, the query is performed based on the mini program team.
+                     * 获取Mini program team ID. If not empty, results are filtered by mini program team ID.
+                     * @return MNPTeamId Mini program team ID. If not empty, results are filtered by mini program team ID.
                      * 
                      */
                     int64_t GetMNPTeamId() const;
 
                     /**
-                     * 设置Mini program team ID, required. When provided, the query is performed based on the mini program team.
-                     * @param _mNPTeamId Mini program team ID, required. When provided, the query is performed based on the mini program team.
+                     * 设置Mini program team ID. If not empty, results are filtered by mini program team ID.
+                     * @param _mNPTeamId Mini program team ID. If not empty, results are filtered by mini program team ID.
                      * 
                      */
                     void SetMNPTeamId(const int64_t& _mNPTeamId);
@@ -192,43 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time in YYYYMMDD format
+                     * Start time in YYYYMMDD format.
                      */
                     int64_t m_sourceMonth;
                     bool m_sourceMonthHasBeenSet;
 
                     /**
-                     * Type: 0 Non-production data, 1 Production data 
+                     * Data type. Valid values: 0: Non-production data; 1: Production data.
                      */
                     int64_t m_dataType;
                     bool m_dataTypeHasBeenSet;
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * End time in YYYYMMDD format
+                     * End time in YYYYMMDD format.
                      */
                     int64_t m_targetMonth;
                     bool m_targetMonthHasBeenSet;
 
                     /**
-                     * Superapp ID starting with App
+                     * Superapp ID prefixed with "app".
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Mini program appid, required. When provided, the query is performed based on the mini program.
+                     * Mini program appid. If not empty, results are filtered by mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program team ID, required. When provided, the query is performed based on the mini program team.
+                     * Mini program team ID. If not empty, results are filtered by mini program team ID.
                      */
                     int64_t m_mNPTeamId;
                     bool m_mNPTeamIdHasBeenSet;

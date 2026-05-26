@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Page offset
-                     * @return Offset Page offset
+                     * 获取Pagination offset. 
+                     * @return Offset Pagination offset. 
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page offset
-                     * @param _offset Page offset
+                     * 设置Pagination offset. 
+                     * @param _offset Pagination offset. 
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page
-                     * @return Limit Number of results per page
+                     * 获取Number of entries per page.
+                     * @return Limit Number of entries per page.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page
-                     * @param _limit Number of results per page
+                     * 设置Number of entries per page.
+                     * @param _limit Number of entries per page.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain type. 1: Allowed; 2: Blocked
-                     * @return DomainTypes Domain type. 1: Allowed; 2: Blocked
+                     * 获取Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @return DomainTypes Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     std::vector<int64_t> GetDomainTypes() const;
 
                     /**
-                     * 设置Domain type. 1: Allowed; 2: Blocked
-                     * @param _domainTypes Domain type. 1: Allowed; 2: Blocked
+                     * 设置Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @param _domainTypes Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     void SetDomainTypes(const std::vector<int64_t>& _domainTypes);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DomainTypesHasBeenSet() const;
 
                     /**
-                     * 获取Domain names to be queried
-                     * @return Keyword Domain names to be queried
+                     * 获取Search keyword (domain).
+                     * @return Keyword Search keyword (domain).
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置Domain names to be queried
-                     * @param _keyword Domain names to be queried
+                     * 设置Search keyword (domain).
+                     * @param _keyword Search keyword (domain).
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Page offset
+                     * Pagination offset. 
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page
+                     * Number of entries per page.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Domain type. 1: Allowed; 2: Blocked
+                     * Domain type. Valid value: 1: Allowed; 2: Blocked.
                      */
                     std::vector<int64_t> m_domainTypes;
                     bool m_domainTypesHasBeenSet;
 
                     /**
-                     * Domain names to be queried
+                     * Search keyword (domain).
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;

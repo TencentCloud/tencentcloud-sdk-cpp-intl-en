@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of sensitive APIs that can be called by a mini program
+                * List data for querying callable sensitive APIs of a mini program.
                 */
                 class DescribeMNPSensitiveAPIPermissionListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API ID
-                     * @return APIId API ID
+                     * 获取API ID.
+                     * @return APIId API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置API ID
-                     * @param _aPIId API ID
+                     * 设置API ID.
+                     * @param _aPIId API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APINameHasBeenSet() const;
 
                     /**
-                     * 获取API request method
-                     * @return APIMethod API request method
+                     * 获取API method.
+                     * @return APIMethod API method.
                      * 
                      */
                     std::string GetAPIMethod() const;
 
                     /**
-                     * 设置API request method
-                     * @param _aPIMethod API request method
+                     * 设置API method.
+                     * @param _aPIMethod API method.
                      * 
                      */
                     void SetAPIMethod(const std::string& _aPIMethod);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RejectReasonHasBeenSet() const;
 
                     /**
-                     * 获取Approval ID
-                     * @return ApprovalNo Approval ID
+                     * 获取Approval number.
+                     * @return ApprovalNo Approval number.
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval ID
-                     * @param _approvalNo Approval ID
+                     * 设置Approval number.
+                     * @param _approvalNo Approval number.
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Application ID
-                     * @return ApplicationId Application ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _applicationId Application ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the application icon.
-                     * @return ApplicationIcon Specifies the application icon.
+                     * 获取Superapp icon.
+                     * @return ApplicationIcon Superapp icon.
                      * 
                      */
                     std::string GetApplicationIcon() const;
 
                     /**
-                     * 设置Specifies the application icon.
-                     * @param _applicationIcon Specifies the application icon.
+                     * 设置Superapp icon.
+                     * @param _applicationIcon Superapp icon.
                      * 
                      */
                     void SetApplicationIcon(const std::string& _applicationIcon);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ApplicationIconHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: system; 2: custom.
-                     * @return APIType API type. 1: system; 2: custom.
+                     * 获取API type. Valid values: 1: System; 2: Custom.
+                     * @return APIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: system; 2: custom.
-                     * @param _aPIType API type. 1: system; 2: custom.
+                     * 设置API type. Valid values: 1: System; 2: Custom.
+                     * @param _aPIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -301,7 +301,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API ID
+                     * API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
@@ -313,7 +313,7 @@ namespace TencentCloud
                     bool m_aPINameHasBeenSet;
 
                     /**
-                     * API request method
+                     * API method.
                      */
                     std::string m_aPIMethod;
                     bool m_aPIMethodHasBeenSet;
@@ -337,31 +337,31 @@ namespace TencentCloud
                     bool m_rejectReasonHasBeenSet;
 
                     /**
-                     * Approval ID
+                     * Approval number.
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Specifies the application icon.
+                     * Superapp icon.
                      */
                     std::string m_applicationIcon;
                     bool m_applicationIconHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * API type. 1: system; 2: custom.
+                     * API type. Valid values: 1: System; 2: Custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;

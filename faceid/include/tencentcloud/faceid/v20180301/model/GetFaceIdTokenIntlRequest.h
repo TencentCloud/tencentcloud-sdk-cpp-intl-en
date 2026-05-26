@@ -43,27 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
-                     * @return CheckMode The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
+                     * 获取<p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
+                     * @return CheckMode <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
                      * 
                      */
                     std::string GetCheckMode() const;
 
                     /**
-                     * 设置The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
-                     * @param _checkMode The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
+                     * 设置<p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
+                     * @param _checkMode <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
                      * 
                      */
                     void SetCheckMode(const std::string& _checkMode);
@@ -76,35 +64,19 @@ Default value: `liveness`.
                     bool CheckModeHasBeenSet() const;
 
                     /**
-                     * 获取The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
-                     * @return SecureLevel The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
+                     * 获取<p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
+                     * @return SecureLevel <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
                      * 
                      */
                     std::string GetSecureLevel() const;
 
                     /**
-                     * 设置The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
-                     * @param _secureLevel The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
+                     * 设置<p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
+                     * @param _secureLevel <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
                      * 
                      */
                     void SetSecureLevel(const std::string& _secureLevel);
@@ -117,15 +89,15 @@ Default value: `4`.
                     bool SecureLevelHasBeenSet() const;
 
                     /**
-                     * 获取The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
-                     * @return Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 获取<p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
+                     * @return Image <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
                      * 
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
-                     * @param _image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 设置<p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
+                     * @param _image <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
                      * 
                      */
                     void SetImage(const std::string& _image);
@@ -138,15 +110,15 @@ Default value: `4`.
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取The pass-through parameter, which can be omitted if there are no special requirements.
-                     * @return Extra The pass-through parameter, which can be omitted if there are no special requirements.
+                     * 获取<p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
+                     * @return Extra <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
                      * 
                      */
                     std::string GetExtra() const;
 
                     /**
-                     * 设置The pass-through parameter, which can be omitted if there are no special requirements.
-                     * @param _extra The pass-through parameter, which can be omitted if there are no special requirements.
+                     * 设置<p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
+                     * @param _extra <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
                      * 
                      */
                     void SetExtra(const std::string& _extra);
@@ -159,51 +131,15 @@ Default value: `4`.
                     bool ExtraHasBeenSet() const;
 
                     /**
-                     * 获取This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
-                     * @return ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+                     * 获取<p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
+                     * @return ActionList <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
                      * 
                      */
                     std::string GetActionList() const;
 
                     /**
-                     * 设置This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
-                     * @param _actionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+                     * 设置<p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
+                     * @param _actionList <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
                      * 
                      */
                     void SetActionList(const std::string& _actionList);
@@ -216,31 +152,15 @@ The default value is blink. The different action types passed in this parameter 
                     bool ActionListHasBeenSet() const;
 
                     /**
-                     * 获取BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
-                     * @return SdkVersion BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+                     * 获取<p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+                     * @return SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
-                     * @param _sdkVersion BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+                     * 设置<p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+                     * @param _sdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -252,64 +172,71 @@ Please contact us to access enhance version & plus version.
                      */
                     bool SdkVersionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+                     * @return RetryLimit <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+                     * 
+                     */
+                    int64_t GetRetryLimit() const;
+
+                    /**
+                     * 设置<p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+                     * @param _retryLimit <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+                     * 
+                     */
+                    void SetRetryLimit(const int64_t& _retryLimit);
+
+                    /**
+                     * 判断参数 RetryLimit 是否已赋值
+                     * @return RetryLimit 是否已赋值
+                     * 
+                     */
+                    bool RetryLimitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The detection mode. Valid values:
-`liveness`: Liveness detection only.
-`compare`: Selfie Verification(liveness detection and face comparison).
-Default value: `liveness`.
+                     * <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
                      */
                     std::string m_checkMode;
                     bool m_checkModeHasBeenSet;
 
                     /**
-                     * The verification security level. Valid values:
-`1`: Video-based liveness detection.
-`2`: Motion-based liveness detection.
-`3`: Reflection-based liveness detection.
-`4`: Motion- and reflection-based liveness detection.
-Default value: `4`.
+                     * <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+**Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
                      */
                     std::string m_secureLevel;
                     bool m_secureLevelHasBeenSet;
 
                     /**
-                     * The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * The pass-through parameter, which can be omitted if there are no special requirements.
+                     * <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
 
                     /**
-                     * This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+                     * <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
                      */
                     std::string m_actionList;
                     bool m_actionListHasBeenSet;
 
                     /**
-                     * BASIC: Basic version (Default).
-ENHANCE: Enhance version, enable additional output of device risk level field.
-PRO: Pro version, enable additional output of attack type fields.
-PLUS: Plus version, enable additional output of device risk level and attack type fields.
-Please contact us to access enhance version & plus version.	
+                     * <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;
+
+                    /**
+                     * <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+                     */
+                    int64_t m_retryLimit;
+                    bool m_retryLimitHasBeenSet;
 
                 };
             }

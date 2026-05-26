@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini-program appid</p>
-                     * @return MNPId <p>Mini-program appid</p>
+                     * 获取<p>Mini-program appid.</p>
+                     * @return MNPId <p>Mini-program appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini-program appid</p>
-                     * @param _mNPId <p>Mini-program appid</p>
+                     * 设置<p>Mini-program appid.</p>
+                     * @param _mNPId <p>Mini-program appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version number</p>
-                     * @return MNPVersion <p>Version number</p>
+                     * 获取<p>Version number.</p>
+                     * @return MNPVersion <p>Version number.</p>
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置<p>Version number</p>
-                     * @param _mNPVersion <p>Version number</p>
+                     * 设置<p>Version number.</p>
+                     * @param _mNPVersion <p>Version number.</p>
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version description</p>
-                     * @return MNPVersionIntro <p>Version description</p>
+                     * 获取<p>Version description.</p>
+                     * @return MNPVersionIntro <p>Version description.</p>
                      * 
                      */
                     std::string GetMNPVersionIntro() const;
 
                     /**
-                     * 设置<p>Version description</p>
-                     * @param _mNPVersionIntro <p>Version description</p>
+                     * 设置<p>Version description.</p>
+                     * @param _mNPVersionIntro <p>Version description.</p>
                      * 
                      */
                     void SetMNPVersionIntro(const std::string& _mNPVersionIntro);
@@ -150,13 +150,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini-program appid</p>
+                     * <p>Mini-program appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Version number</p>
+                     * <p>Version number.</p>
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
@@ -168,13 +168,13 @@ namespace TencentCloud
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Version description</p>
+                     * <p>Version description.</p>
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;

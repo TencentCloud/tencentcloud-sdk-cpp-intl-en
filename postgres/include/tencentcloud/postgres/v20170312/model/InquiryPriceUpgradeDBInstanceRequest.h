@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID in the format of postgres-hez4fh0v
-                     * @return DBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 获取Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-hez4fh0v
-                     * @param _dBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 设置Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -108,34 +108,38 @@ namespace TencentCloud
                     /**
                      * 获取Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
                      * @return InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
-                     * 
+                     * @deprecated
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
                      * @param _instanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
-                     * 
+                     * @deprecated
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance CPU size, unit: Core
-                     * @return Cpu Instance CPU size, unit: Core
+                     * 获取Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
+                     * @return Cpu Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Instance CPU size, unit: Core
-                     * @param _cpu Instance CPU size, unit: Core
+                     * 设置Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
+                     * @param _cpu Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -162,7 +166,7 @@ namespace TencentCloud
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance ID in the format of postgres-hez4fh0v
+                     * Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -174,7 +178,8 @@ namespace TencentCloud
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Instance CPU size, unit: Core
+                     * Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;

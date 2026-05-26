@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Superapp overview data details
+                * Superapp overview data details.
                 */
                 class APPOverviewData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Superapp active device count
-                     * @return AllActiveDeviceNum Superapp active device count
+                     * 获取Superapp active device count.
+                     * @return AllActiveDeviceNum Superapp active device count.
                      * 
                      */
                     int64_t GetAllActiveDeviceNum() const;
 
                     /**
-                     * 设置Superapp active device count
-                     * @param _allActiveDeviceNum Superapp active device count
+                     * 设置Superapp active device count.
+                     * @param _allActiveDeviceNum Superapp active device count.
                      * 
                      */
                     void SetAllActiveDeviceNum(const int64_t& _allActiveDeviceNum);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AllActiveDeviceNumHasBeenSet() const;
 
                     /**
-                     * 获取Superapp new device count
-                     * @return AllNewDeviceNum Superapp new device count
+                     * 获取Superapp new device count.
+                     * @return AllNewDeviceNum Superapp new device count.
                      * 
                      */
                     int64_t GetAllNewDeviceNum() const;
 
                     /**
-                     * 设置Superapp new device count
-                     * @param _allNewDeviceNum Superapp new device count
+                     * 设置Superapp new device count.
+                     * @param _allNewDeviceNum Superapp new device count.
                      * 
                      */
                     void SetAllNewDeviceNum(const int64_t& _allNewDeviceNum);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AllNewDeviceNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini program team count
-                     * @return CorpNum Mini program team count
+                     * 获取Mini program team count.
+                     * @return CorpNum Mini program team count.
                      * 
                      */
                     int64_t GetCorpNum() const;
 
                     /**
-                     * 设置Mini program team count
-                     * @param _corpNum Mini program team count
+                     * 设置Mini program team count.
+                     * @param _corpNum Mini program team count.
                      * 
                      */
                     void SetCorpNum(const int64_t& _corpNum);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CorpNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini game active device count
-                     * @return GameActiveDeviceNum Mini game active device count
+                     * 获取Mini game active device count.
+                     * @return GameActiveDeviceNum Mini game active device count.
                      * 
                      */
                     int64_t GetGameActiveDeviceNum() const;
 
                     /**
-                     * 设置Mini game active device count
-                     * @param _gameActiveDeviceNum Mini game active device count
+                     * 设置Mini game active device count.
+                     * @param _gameActiveDeviceNum Mini game active device count.
                      * 
                      */
                     void SetGameActiveDeviceNum(const int64_t& _gameActiveDeviceNum);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool GameActiveDeviceNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini game new device count
-                     * @return GameNewDeviceNum Mini game new device count
+                     * 获取Mini game new device count.
+                     * @return GameNewDeviceNum Mini game new device count.
                      * 
                      */
                     int64_t GetGameNewDeviceNum() const;
 
                     /**
-                     * 设置Mini game new device count
-                     * @param _gameNewDeviceNum Mini game new device count
+                     * 设置Mini game new device count.
+                     * @param _gameNewDeviceNum Mini game new device count.
                      * 
                      */
                     void SetGameNewDeviceNum(const int64_t& _gameNewDeviceNum);
@@ -152,18 +152,18 @@ namespace TencentCloud
                     bool GameNewDeviceNumHasBeenSet() const;
 
                     /**
-                     * 获取Created mini program count
+                     * 获取Created mini program count.
 
-                     * @return MiniAppNum Created mini program count
+                     * @return MiniAppNum Created mini program count.
 
                      * 
                      */
                     int64_t GetMiniAppNum() const;
 
                     /**
-                     * 设置Created mini program count
+                     * 设置Created mini program count.
 
-                     * @param _miniAppNum Created mini program count
+                     * @param _miniAppNum Created mini program count.
 
                      * 
                      */
@@ -177,18 +177,18 @@ namespace TencentCloud
                     bool MiniAppNumHasBeenSet() const;
 
                     /**
-                     * 获取Created mini game count
+                     * 获取Created mini game count.
 
-                     * @return MngNum Created mini game count
+                     * @return MngNum Created mini game count.
 
                      * 
                      */
                     int64_t GetMngNum() const;
 
                     /**
-                     * 设置Created mini game count
+                     * 设置Created mini game count.
 
-                     * @param _mngNum Created mini game count
+                     * @param _mngNum Created mini game count.
 
                      * 
                      */
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool MngNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini program new device count
-                     * @return NewDeviceNum Mini program new device count
+                     * 获取Mini program new device count.
+                     * @return NewDeviceNum Mini program new device count.
                      * 
                      */
                     int64_t GetNewDeviceNum() const;
 
                     /**
-                     * 设置Mini program new device count
-                     * @param _newDeviceNum Mini program new device count
+                     * 设置Mini program new device count.
+                     * @param _newDeviceNum Mini program new device count.
                      * 
                      */
                     void SetNewDeviceNum(const int64_t& _newDeviceNum);
@@ -223,18 +223,18 @@ namespace TencentCloud
                     bool NewDeviceNumHasBeenSet() const;
 
                     /**
-                     * 获取Released mini program count
+                     * 获取Released mini program count.
 
-                     * @return OnlineMiniAppNum Released mini program count
+                     * @return OnlineMiniAppNum Released mini program count.
 
                      * 
                      */
                     int64_t GetOnlineMiniAppNum() const;
 
                     /**
-                     * 设置Released mini program count
+                     * 设置Released mini program count.
 
-                     * @param _onlineMiniAppNum Released mini program count
+                     * @param _onlineMiniAppNum Released mini program count.
 
                      * 
                      */
@@ -248,18 +248,18 @@ namespace TencentCloud
                     bool OnlineMiniAppNumHasBeenSet() const;
 
                     /**
-                     * 获取Released mini game count
+                     * 获取Released mini game count.
 
-                     * @return OnlineMngNum Released mini game count
+                     * @return OnlineMngNum Released mini game count.
 
                      * 
                      */
                     int64_t GetOnlineMngNum() const;
 
                     /**
-                     * 设置Released mini game count
+                     * 设置Released mini game count.
 
-                     * @param _onlineMngNum Released mini game count
+                     * @param _onlineMngNum Released mini game count.
 
                      * 
                      */
@@ -273,15 +273,15 @@ namespace TencentCloud
                     bool OnlineMngNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini program active device count
-                     * @return VisitNum Mini program active device count
+                     * 获取Mini program active device count.
+                     * @return VisitNum Mini program active device count.
                      * 
                      */
                     int64_t GetVisitNum() const;
 
                     /**
-                     * 设置Mini program active device count
-                     * @param _visitNum Mini program active device count
+                     * 设置Mini program active device count.
+                     * @param _visitNum Mini program active device count.
                      * 
                      */
                     void SetVisitNum(const int64_t& _visitNum);
@@ -294,15 +294,15 @@ namespace TencentCloud
                     bool VisitNumHasBeenSet() const;
 
                     /**
-                     * 获取Data refresh timestamp
-                     * @return FlushTime Data refresh timestamp
+                     * 获取Data refresh timestamp.
+                     * @return FlushTime Data refresh timestamp.
                      * 
                      */
                     std::string GetFlushTime() const;
 
                     /**
-                     * 设置Data refresh timestamp
-                     * @param _flushTime Data refresh timestamp
+                     * 设置Data refresh timestamp.
+                     * @param _flushTime Data refresh timestamp.
                      * 
                      */
                     void SetFlushTime(const std::string& _flushTime);
@@ -317,77 +317,77 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Superapp active device count
+                     * Superapp active device count.
                      */
                     int64_t m_allActiveDeviceNum;
                     bool m_allActiveDeviceNumHasBeenSet;
 
                     /**
-                     * Superapp new device count
+                     * Superapp new device count.
                      */
                     int64_t m_allNewDeviceNum;
                     bool m_allNewDeviceNumHasBeenSet;
 
                     /**
-                     * Mini program team count
+                     * Mini program team count.
                      */
                     int64_t m_corpNum;
                     bool m_corpNumHasBeenSet;
 
                     /**
-                     * Mini game active device count
+                     * Mini game active device count.
                      */
                     int64_t m_gameActiveDeviceNum;
                     bool m_gameActiveDeviceNumHasBeenSet;
 
                     /**
-                     * Mini game new device count
+                     * Mini game new device count.
                      */
                     int64_t m_gameNewDeviceNum;
                     bool m_gameNewDeviceNumHasBeenSet;
 
                     /**
-                     * Created mini program count
+                     * Created mini program count.
 
                      */
                     int64_t m_miniAppNum;
                     bool m_miniAppNumHasBeenSet;
 
                     /**
-                     * Created mini game count
+                     * Created mini game count.
 
                      */
                     int64_t m_mngNum;
                     bool m_mngNumHasBeenSet;
 
                     /**
-                     * Mini program new device count
+                     * Mini program new device count.
                      */
                     int64_t m_newDeviceNum;
                     bool m_newDeviceNumHasBeenSet;
 
                     /**
-                     * Released mini program count
+                     * Released mini program count.
 
                      */
                     int64_t m_onlineMiniAppNum;
                     bool m_onlineMiniAppNumHasBeenSet;
 
                     /**
-                     * Released mini game count
+                     * Released mini game count.
 
                      */
                     int64_t m_onlineMngNum;
                     bool m_onlineMngNumHasBeenSet;
 
                     /**
-                     * Mini program active device count
+                     * Mini program active device count.
                      */
                     int64_t m_visitNum;
                     bool m_visitNumHasBeenSet;
 
                     /**
-                     * Data refresh timestamp
+                     * Data refresh timestamp.
                      */
                     std::string m_flushTime;
                     bool m_flushTimeHasBeenSet;

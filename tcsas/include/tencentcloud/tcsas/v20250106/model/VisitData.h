@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Page visit data
+                * Page visit data.
                 */
                 class VisitData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of visits
-                     * @return VisitCount Number of visits
+                     * 获取Number of visits.
+                     * @return VisitCount Number of visits.
                      * 
                      */
                     int64_t GetVisitCount() const;
 
                     /**
-                     * 设置Number of visits
-                     * @param _visitCount Number of visits
+                     * 设置Number of visits.
+                     * @param _visitCount Number of visits.
                      * 
                      */
                     void SetVisitCount(const int64_t& _visitCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VisitCountHasBeenSet() const;
 
                     /**
-                     * 获取Average pages per device - visit_page_count / active_device_num
-                     * @return AvgDeviceVisitDeep Average pages per device - visit_page_count / active_device_num
+                     * 获取Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+                     * @return AvgDeviceVisitDeep Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
                      * 
                      */
                     std::string GetAvgDeviceVisitDeep() const;
 
                     /**
-                     * 设置Average pages per device - visit_page_count / active_device_num
-                     * @param _avgDeviceVisitDeep Average pages per device - visit_page_count / active_device_num
+                     * 设置Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+                     * @param _avgDeviceVisitDeep Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
                      * 
                      */
                     void SetAvgDeviceVisitDeep(const std::string& _avgDeviceVisitDeep);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AvgDeviceVisitDeepHasBeenSet() const;
 
                     /**
-                     * 获取Pages per visit - visit_page_count / miniapp_open_num
-                     * @return AvgCountVisitDeep Pages per visit - visit_page_count / miniapp_open_num
+                     * 获取Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+                     * @return AvgCountVisitDeep Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
                      * 
                      */
                     std::string GetAvgCountVisitDeep() const;
 
                     /**
-                     * 设置Pages per visit - visit_page_count / miniapp_open_num
-                     * @param _avgCountVisitDeep Pages per visit - visit_page_count / miniapp_open_num
+                     * 设置Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+                     * @param _avgCountVisitDeep Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
                      * 
                      */
                     void SetAvgCountVisitDeep(const std::string& _avgCountVisitDeep);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AvgCountVisitDeepHasBeenSet() const;
 
                     /**
-                     * 获取Average visit duration - miniapp_total_duration / visit_page_count
-                     * @return AvgPageVisitDuration Average visit duration - miniapp_total_duration / visit_page_count
+                     * 获取Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+                     * @return AvgPageVisitDuration Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
                      * 
                      */
                     std::string GetAvgPageVisitDuration() const;
 
                     /**
-                     * 设置Average visit duration - miniapp_total_duration / visit_page_count
-                     * @param _avgPageVisitDuration Average visit duration - miniapp_total_duration / visit_page_count
+                     * 设置Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+                     * @param _avgPageVisitDuration Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
                      * 
                      */
                     void SetAvgPageVisitDuration(const std::string& _avgPageVisitDuration);
@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool AvgPageVisitDurationHasBeenSet() const;
 
                     /**
-                     * 获取Average visit duration per session
-miniapp_total_duration/miniapp_open_num
-                     * @return AvgCountVisitDuration Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+                     * 获取Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+                     * @return AvgCountVisitDuration Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
                      * 
                      */
                     std::string GetAvgCountVisitDuration() const;
 
                     /**
-                     * 设置Average visit duration per session
-miniapp_total_duration/miniapp_open_num
-                     * @param _avgCountVisitDuration Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+                     * 设置Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+                     * @param _avgCountVisitDuration Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
                      * 
                      */
                     void SetAvgCountVisitDuration(const std::string& _avgCountVisitDuration);
@@ -156,15 +152,15 @@ miniapp_total_duration/miniapp_open_num
                     bool AvgCountVisitDurationHasBeenSet() const;
 
                     /**
-                     * 获取Refresh time in YYYYMMDD format
-                     * @return DataTime Refresh time in YYYYMMDD format
+                     * 获取Refresh time in YYYYMMDD format.
+                     * @return DataTime Refresh time in YYYYMMDD format.
                      * 
                      */
                     int64_t GetDataTime() const;
 
                     /**
-                     * 设置Refresh time in YYYYMMDD format
-                     * @param _dataTime Refresh time in YYYYMMDD format
+                     * 设置Refresh time in YYYYMMDD format.
+                     * @param _dataTime Refresh time in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const int64_t& _dataTime);
@@ -179,38 +175,37 @@ miniapp_total_duration/miniapp_open_num
                 private:
 
                     /**
-                     * Number of visits
+                     * Number of visits.
                      */
                     int64_t m_visitCount;
                     bool m_visitCountHasBeenSet;
 
                     /**
-                     * Average pages per device - visit_page_count / active_device_num
+                     * Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
                      */
                     std::string m_avgDeviceVisitDeep;
                     bool m_avgDeviceVisitDeepHasBeenSet;
 
                     /**
-                     * Pages per visit - visit_page_count / miniapp_open_num
+                     * Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
                      */
                     std::string m_avgCountVisitDeep;
                     bool m_avgCountVisitDeepHasBeenSet;
 
                     /**
-                     * Average visit duration - miniapp_total_duration / visit_page_count
+                     * Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
                      */
                     std::string m_avgPageVisitDuration;
                     bool m_avgPageVisitDurationHasBeenSet;
 
                     /**
-                     * Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+                     * Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
                      */
                     std::string m_avgCountVisitDuration;
                     bool m_avgCountVisitDurationHasBeenSet;
 
                     /**
-                     * Refresh time in YYYYMMDD format
+                     * Refresh time in YYYYMMDD format.
                      */
                     int64_t m_dataTime;
                     bool m_dataTimeHasBeenSet;

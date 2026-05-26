@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID
-                     * @return ApplicationId Application ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _applicationId Application ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Application introduction
-                     * @return Intro Application introduction
+                     * 获取Superapp introduction.
+                     * @return Intro Superapp introduction.
                      * 
                      */
                     std::string GetIntro() const;
 
                     /**
-                     * 设置Application introduction
-                     * @param _intro Application introduction
+                     * 设置Superapp introduction.
+                     * @param _intro Superapp introduction.
                      * 
                      */
                     void SetIntro(const std::string& _intro);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IntroHasBeenSet() const;
 
                     /**
-                     * 获取Icon
-                     * @return Logo Icon
+                     * 获取Superapp icon.
+                     * @return Logo Superapp icon.
                      * 
                      */
                     std::string GetLogo() const;
 
                     /**
-                     * 设置Icon
-                     * @param _logo Icon
+                     * 设置Superapp icon.
+                     * @param _logo Superapp icon.
                      * 
                      */
                     void SetLogo(const std::string& _logo);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LogoHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Android app package name
-                     * @return AndroidAppKey Android app package name
+                     * 获取Android app package name.
+                     * @return AndroidAppKey Android app package name.
                      * @deprecated
                      */
                     std::string GetAndroidAppKey() const;
 
                     /**
-                     * 设置Android app package name
-                     * @param _androidAppKey Android app package name
+                     * 设置Android app package name.
+                     * @param _androidAppKey Android app package name.
                      * @deprecated
                      */
                     void SetAndroidAppKey(const std::string& _androidAppKey);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AndroidAppKeyHasBeenSet() const;
 
                     /**
-                     * 获取iOS App bundleId
-                     * @return IosAppKey iOS App bundleId
+                     * 获取iOS app bundle ID.
+                     * @return IosAppKey iOS app bundle ID.
                      * @deprecated
                      */
                     std::string GetIosAppKey() const;
 
                     /**
-                     * 设置iOS App bundleId
-                     * @param _iosAppKey iOS App bundleId
+                     * 设置iOS app bundle ID.
+                     * @param _iosAppKey iOS app bundle ID.
                      * @deprecated
                      */
                     void SetIosAppKey(const std::string& _iosAppKey);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool IosAppKeyHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Remark Remarks
+                     * 获取Remarks.
+                     * @return Remark Remarks.
                      * @deprecated
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _remark Remarks
+                     * 设置Remarks.
+                     * @param _remark Remarks.
                      * @deprecated
                      */
                     void SetRemark(const std::string& _remark);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Scheme
-                     * @return Scheme Scheme
+                     * 获取Scheme.
+                     * @return Scheme Scheme.
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Scheme
-                     * @param _scheme Scheme
+                     * 设置Scheme.
+                     * @param _scheme Scheme.
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -234,55 +234,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Application introduction
+                     * Superapp introduction.
                      */
                     std::string m_intro;
                     bool m_introHasBeenSet;
 
                     /**
-                     * Icon
+                     * Superapp icon.
                      */
                     std::string m_logo;
                     bool m_logoHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Android app package name
+                     * Android app package name.
                      */
                     std::string m_androidAppKey;
                     bool m_androidAppKeyHasBeenSet;
 
                     /**
-                     * iOS App bundleId
+                     * iOS app bundle ID.
                      */
                     std::string m_iosAppKey;
                     bool m_iosAppKeyHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remarks.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Scheme
+                     * Scheme.
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;

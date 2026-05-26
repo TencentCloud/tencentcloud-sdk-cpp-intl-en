@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response object for querying the list of sensitive APIs available to the mini game
+                * Response for querying the list of callable sensitive APIs of a mini game.
                 */
                 class DescribeMNGSensitiveAPIPermissionListResp : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of entries</p>
-                     * @return TotalCount <p>Total number of entries</p>
+                     * 获取<p>Total number of entries.</p>
+                     * @return TotalCount <p>Total number of entries.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置<p>Total number of entries</p>
-                     * @param _totalCount <p>Total number of entries</p>
+                     * 设置<p>Total number of entries.</p>
+                     * @param _totalCount <p>Total number of entries.</p>
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,18 +69,18 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>List data</p>
+                     * 获取<p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataList <p>List data</p>
+                     * @return DataList <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DescribeMNGSensitiveAPIPermissionListData> GetDataList() const;
 
                     /**
-                     * 设置<p>List data</p>
+                     * 设置<p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataList <p>List data</p>
+                     * @param _dataList <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -96,13 +96,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Total number of entries</p>
+                     * <p>Total number of entries.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>List data</p>
+                     * <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DescribeMNGSensitiveAPIPermissionListData> m_dataList;

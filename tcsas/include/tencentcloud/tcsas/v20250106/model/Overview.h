@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Global overview data
+                * Global overview data.
                 */
                 class Overview : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Superapps
-                     * @return AppNum Superapps
+                     * 获取Number of superapps.
+                     * @return AppNum Number of superapps.
                      * 
                      */
                     int64_t GetAppNum() const;
 
                     /**
-                     * 设置Superapps
-                     * @param _appNum Superapps
+                     * 设置Number of superapps.
+                     * @param _appNum Number of superapps.
                      * 
                      */
                     void SetAppNum(const int64_t& _appNum);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AppNumHasBeenSet() const;
 
                     /**
-                     * 获取Teams
-                     * @return CorpNum Teams
+                     * 获取Number of teams.
+                     * @return CorpNum Number of teams.
                      * 
                      */
                     int64_t GetCorpNum() const;
 
                     /**
-                     * 设置Teams
-                     * @param _corpNum Teams
+                     * 设置Number of teams.
+                     * @param _corpNum Number of teams.
                      * 
                      */
                     void SetCorpNum(const int64_t& _corpNum);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CorpNumHasBeenSet() const;
 
                     /**
-                     * 获取Refresh time
-                     * @return FlushTime Refresh time
+                     * 获取Refresh timestamp.
+                     * @return FlushTime Refresh timestamp.
                      * 
                      */
                     std::string GetFlushTime() const;
 
                     /**
-                     * 设置Refresh time
-                     * @param _flushTime Refresh time
+                     * 设置Refresh timestamp.
+                     * @param _flushTime Refresh timestamp.
                      * 
                      */
                     void SetFlushTime(const std::string& _flushTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FlushTimeHasBeenSet() const;
 
                     /**
-                     * 获取Mini programs
-                     * @return MiniAppNum Mini programs
+                     * 获取Number of mini programs.
+                     * @return MiniAppNum Number of mini programs.
                      * 
                      */
                     int64_t GetMiniAppNum() const;
 
                     /**
-                     * 设置Mini programs
-                     * @param _miniAppNum Mini programs
+                     * 设置Number of mini programs.
+                     * @param _miniAppNum Number of mini programs.
                      * 
                      */
                     void SetMiniAppNum(const int64_t& _miniAppNum);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MiniAppNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini games
-                     * @return MiniGameNum Mini games
+                     * 获取Number of mini games.
+                     * @return MiniGameNum Number of mini games.
                      * 
                      */
                     int64_t GetMiniGameNum() const;
 
                     /**
-                     * 设置Mini games
-                     * @param _miniGameNum Mini games
+                     * 设置Number of mini games.
+                     * @param _miniGameNum Number of mini games.
                      * 
                      */
                     void SetMiniGameNum(const int64_t& _miniGameNum);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MiniGameNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini game visits
-                     * @return MiniGameVisitNum Mini game visits
+                     * 获取Number of mini game visits.
+                     * @return MiniGameVisitNum Number of mini game visits.
                      * 
                      */
                     int64_t GetMiniGameVisitNum() const;
 
                     /**
-                     * 设置Mini game visits
-                     * @param _miniGameVisitNum Mini game visits
+                     * 设置Number of mini game visits.
+                     * @param _miniGameVisitNum Number of mini game visits.
                      * 
                      */
                     void SetMiniGameVisitNum(const int64_t& _miniGameVisitNum);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MiniGameVisitNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini program updates
-                     * @return UpdateNum Mini program updates
+                     * 获取Number of mini program updates.
+                     * @return UpdateNum Number of mini program updates.
                      * 
                      */
                     int64_t GetUpdateNum() const;
 
                     /**
-                     * 设置Mini program updates
-                     * @param _updateNum Mini program updates
+                     * 设置Number of mini program updates.
+                     * @param _updateNum Number of mini program updates.
                      * 
                      */
                     void SetUpdateNum(const int64_t& _updateNum);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool UpdateNumHasBeenSet() const;
 
                     /**
-                     * 获取Mini program visits
-                     * @return VisitNum Mini program visits
+                     * 获取Number of mini program visits.
+                     * @return VisitNum Number of mini program visits.
                      * 
                      */
                     int64_t GetVisitNum() const;
 
                     /**
-                     * 设置Mini program visits
-                     * @param _visitNum Mini program visits
+                     * 设置Number of mini program visits.
+                     * @param _visitNum Number of mini program visits.
                      * 
                      */
                     void SetVisitNum(const int64_t& _visitNum);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Superapps
+                     * Number of superapps.
                      */
                     int64_t m_appNum;
                     bool m_appNumHasBeenSet;
 
                     /**
-                     * Teams
+                     * Number of teams.
                      */
                     int64_t m_corpNum;
                     bool m_corpNumHasBeenSet;
 
                     /**
-                     * Refresh time
+                     * Refresh timestamp.
                      */
                     std::string m_flushTime;
                     bool m_flushTimeHasBeenSet;
 
                     /**
-                     * Mini programs
+                     * Number of mini programs.
                      */
                     int64_t m_miniAppNum;
                     bool m_miniAppNumHasBeenSet;
 
                     /**
-                     * Mini games
+                     * Number of mini games.
                      */
                     int64_t m_miniGameNum;
                     bool m_miniGameNumHasBeenSet;
 
                     /**
-                     * Mini game visits
+                     * Number of mini game visits.
                      */
                     int64_t m_miniGameVisitNum;
                     bool m_miniGameVisitNumHasBeenSet;
 
                     /**
-                     * Mini program updates
+                     * Number of mini program updates.
                      */
                     int64_t m_updateNum;
                     bool m_updateNumHasBeenSet;
 
                     /**
-                     * Mini program visits
+                     * Number of mini program visits.
                      */
                     int64_t m_visitNum;
                     bool m_visitNumHasBeenSet;

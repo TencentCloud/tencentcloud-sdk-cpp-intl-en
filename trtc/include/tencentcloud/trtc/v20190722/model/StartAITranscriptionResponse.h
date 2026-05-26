@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Used to uniquely identify a transcription task.
-                     * @return TaskId Used to uniquely identify a transcription task.
+                     * 获取For unique identification of transcription task.
+                     * @return TaskId For unique identification of transcription task.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Used to uniquely identify a transcription task.
+                     * For unique identification of transcription task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

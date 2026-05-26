@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The general parameter for resource ID returned for successful operations
+                * Unified ID data returned on successful operation.
                 */
                 class ResourceIdStringInfo : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the resource returned
+                     * 获取Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceId The ID of the resource returned
+                     * @return ResourceId Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置The ID of the resource returned
+                     * 设置Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceId The ID of the resource returned
+                     * @param _resourceId Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The ID of the resource returned
+                     * Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceId;

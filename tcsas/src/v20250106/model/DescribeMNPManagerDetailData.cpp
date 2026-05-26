@@ -32,7 +32,8 @@ DescribeMNPManagerDetailData::DescribeMNPManagerDetailData() :
     m_accessStatusHasBeenSet(false),
     m_teamNameHasBeenSet(false),
     m_teamIdHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_i18nListHasBeenSet(false)
 {
 }
 
@@ -161,6 +162,26 @@ CoreInternalOutcome DescribeMNPManagerDetailData::Deserialize(const rapidjson::V
         m_statusHasBeenSet = true;
     }
 
+    if (value.HasMember("I18nList") && !value["I18nList"].IsNull())
+    {
+        if (!value["I18nList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPManagerDetailData.I18nList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["I18nList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            MNPDetailI18nVO item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_i18nList.push_back(item);
+        }
+        m_i18nListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -262,6 +283,21 @@ void DescribeMNPManagerDetailData::ToJsonObject(rapidjson::Value &value, rapidjs
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_i18nListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "I18nList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_i18nList.begin(); itr != m_i18nList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -457,5 +493,21 @@ void DescribeMNPManagerDetailData::SetStatus(const int64_t& _status)
 bool DescribeMNPManagerDetailData::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+vector<MNPDetailI18nVO> DescribeMNPManagerDetailData::GetI18nList() const
+{
+    return m_i18nList;
+}
+
+void DescribeMNPManagerDetailData::SetI18nList(const vector<MNPDetailI18nVO>& _i18nList)
+{
+    m_i18nList = _i18nList;
+    m_i18nListHasBeenSet = true;
+}
+
+bool DescribeMNPManagerDetailData::I18nListHasBeenSet() const
+{
+    return m_i18nListHasBeenSet;
 }
 

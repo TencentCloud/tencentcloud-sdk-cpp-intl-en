@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response of querying the preview
+                * Response for querying the preview.
                 */
                 class DescribeMNPPreviewResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid. 
+                     * @return MNPId Mini program appid. 
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid. 
+                     * @param _mNPId Mini program appid. 
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program description
-                     * @return MNPDesc Mini program description
+                     * 获取Mini program description.
+                     * @return MNPDesc Mini program description.
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置Mini program description
-                     * @param _mNPDesc Mini program description
+                     * 设置Mini program description.
+                     * @param _mNPDesc Mini program description.
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MNPVersionHasBeenSet() const;
 
                     /**
-                     * 获取Describes the mini program version.
-                     * @return MNPVersionIntro Describes the mini program version.
+                     * 获取Mini program version introduction.
+                     * @return MNPVersionIntro Mini program version introduction.
                      * 
                      */
                     std::string GetMNPVersionIntro() const;
 
                     /**
-                     * 设置Describes the mini program version.
-                     * @param _mNPVersionIntro Describes the mini program version.
+                     * 设置Mini program version introduction.
+                     * @param _mNPVersionIntro Mini program version introduction.
                      * 
                      */
                     void SetMNPVersionIntro(const std::string& _mNPVersionIntro);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the mini program qr code.
-                     * @return QRCodeUrl Specifies the mini program qr code.
+                     * 获取Mini program QR code URL.
+                     * @return QRCodeUrl Mini program QR code URL.
                      * 
                      */
                     std::string GetQRCodeUrl() const;
 
                     /**
-                     * 设置Specifies the mini program qr code.
-                     * @param _qRCodeUrl Specifies the mini program qr code.
+                     * 设置Mini program QR code URL.
+                     * @param _qRCodeUrl Mini program QR code URL.
                      * 
                      */
                     void SetQRCodeUrl(const std::string& _qRCodeUrl);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool QRCodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the path to the preview version.
-                     * @return PreviewEntrancePath Specifies the path to the preview version.
+                     * 获取Preview path.
+                     * @return PreviewEntrancePath Preview path.
                      * 
                      */
                     std::string GetPreviewEntrancePath() const;
 
                     /**
-                     * 设置Specifies the path to the preview version.
-                     * @param _previewEntrancePath Specifies the path to the preview version.
+                     * 设置Preview path.
+                     * @param _previewEntrancePath Preview path.
                      * 
                      */
                     void SetPreviewEntrancePath(const std::string& _previewEntrancePath);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PreviewEntrancePathHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the qr code content.
-                     * @return QRCodeContent Specifies the qr code content.
+                     * 获取Information encoded in the QR code.
+                     * @return QRCodeContent Information encoded in the QR code.
                      * 
                      */
                     std::string GetQRCodeContent() const;
 
                     /**
-                     * 设置Specifies the qr code content.
-                     * @param _qRCodeContent Specifies the qr code content.
+                     * 设置Information encoded in the QR code.
+                     * @param _qRCodeContent Information encoded in the QR code.
                      * 
                      */
                     void SetQRCodeContent(const std::string& _qRCodeContent);
@@ -217,19 +217,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program ID
+                     * Mini program appid. 
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program description
+                     * Mini program description.
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
@@ -241,25 +241,25 @@ namespace TencentCloud
                     bool m_mNPVersionHasBeenSet;
 
                     /**
-                     * Describes the mini program version.
+                     * Mini program version introduction.
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * Specifies the mini program qr code.
+                     * Mini program QR code URL.
                      */
                     std::string m_qRCodeUrl;
                     bool m_qRCodeUrlHasBeenSet;
 
                     /**
-                     * Specifies the path to the preview version.
+                     * Preview path.
                      */
                     std::string m_previewEntrancePath;
                     bool m_previewEntrancePathHasBeenSet;
 
                     /**
-                     * Specifies the qr code content.
+                     * Information encoded in the QR code.
                      */
                     std::string m_qRCodeContent;
                     bool m_qRCodeContentHasBeenSet;

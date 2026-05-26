@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Fixed value: payment_data_analysis
-                     * @return ReportId Fixed value: payment_data_analysis
+                     * 获取Fixed value: payment_data_analysis.
+                     * @return ReportId Fixed value: payment_data_analysis.
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置Fixed value: payment_data_analysis
-                     * @param _reportId Fixed value: payment_data_analysis
+                     * 设置Fixed value: payment_data_analysis.
+                     * @param _reportId Fixed value: payment_data_analysis.
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -93,7 +93,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
                      * @return IndexId Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -102,7 +102,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
                      * 
                      */
                     std::string GetIndexId() const;
@@ -116,7 +116,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
                      * @param _indexId Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -125,7 +125,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
                      * 
                      */
                     void SetIndexId(const std::string& _indexId);
@@ -138,15 +138,15 @@ mng_refund_amount: Refund amount
                     bool IndexIdHasBeenSet() const;
 
                     /**
-                     * 获取Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
-                     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+                     * 获取Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
+                     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
                      * 
                      */
                     std::string GetQueryData() const;
 
                     /**
-                     * 设置Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
-                     * @param _queryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+                     * 设置Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
+                     * @param _queryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
                      * 
                      */
                     void SetQueryData(const std::string& _queryData);
@@ -161,13 +161,13 @@ mng_refund_amount: Refund amount
                 private:
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Fixed value: payment_data_analysis
+                     * Fixed value: payment_data_analysis.
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
@@ -181,13 +181,13 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
                      */
                     std::string m_indexId;
                     bool m_indexIdHasBeenSet;
 
                     /**
-                     * Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+                     * Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
                      */
                     std::string m_queryData;
                     bool m_queryDataHasBeenSet;

@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response data
+                     * 获取Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Response data
+                     * @return Data Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Response data
+                     * Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeRoleListResp m_data;

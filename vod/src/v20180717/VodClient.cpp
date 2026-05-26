@@ -3090,6 +3090,56 @@ VodClient::DeleteCDNDomainOutcomeCallable VodClient::DeleteCDNDomainCallable(con
     return prom->get_future();
 }
 
+VodClient::DeleteCLSTopicOutcome VodClient::DeleteCLSTopic(const DeleteCLSTopicRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCLSTopic");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCLSTopicResponse rsp = DeleteCLSTopicResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCLSTopicOutcome(rsp);
+        else
+            return DeleteCLSTopicOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCLSTopicOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteCLSTopicAsync(const DeleteCLSTopicRequest& request, const DeleteCLSTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCLSTopicRequest&;
+    using Resp = DeleteCLSTopicResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCLSTopic", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DeleteCLSTopicOutcomeCallable VodClient::DeleteCLSTopicCallable(const DeleteCLSTopicRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCLSTopicOutcome>>();
+    DeleteCLSTopicAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DeleteCLSTopicRequest&,
+        DeleteCLSTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DeleteClassOutcome VodClient::DeleteClass(const DeleteClassRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteClass");
@@ -4932,6 +4982,106 @@ VodClient::DescribeCDNUsageDataOutcomeCallable VodClient::DescribeCDNUsageDataCa
         const VodClient*,
         const DescribeCDNUsageDataRequest&,
         DescribeCDNUsageDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeCLSLogsetsOutcome VodClient::DescribeCLSLogsets(const DescribeCLSLogsetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCLSLogsets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCLSLogsetsResponse rsp = DescribeCLSLogsetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCLSLogsetsOutcome(rsp);
+        else
+            return DescribeCLSLogsetsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCLSLogsetsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCLSLogsetsAsync(const DescribeCLSLogsetsRequest& request, const DescribeCLSLogsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCLSLogsetsRequest&;
+    using Resp = DescribeCLSLogsetsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCLSLogsets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeCLSLogsetsOutcomeCallable VodClient::DescribeCLSLogsetsCallable(const DescribeCLSLogsetsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCLSLogsetsOutcome>>();
+    DescribeCLSLogsetsAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeCLSLogsetsRequest&,
+        DescribeCLSLogsetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeCLSTopicsOutcome VodClient::DescribeCLSTopics(const DescribeCLSTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCLSTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCLSTopicsResponse rsp = DescribeCLSTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCLSTopicsOutcome(rsp);
+        else
+            return DescribeCLSTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCLSTopicsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCLSTopicsAsync(const DescribeCLSTopicsRequest& request, const DescribeCLSTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCLSTopicsRequest&;
+    using Resp = DescribeCLSTopicsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCLSTopics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeCLSTopicsOutcomeCallable VodClient::DescribeCLSTopicsCallable(const DescribeCLSTopicsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCLSTopicsOutcome>>();
+    DescribeCLSTopicsAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeCLSTopicsRequest&,
+        DescribeCLSTopicsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

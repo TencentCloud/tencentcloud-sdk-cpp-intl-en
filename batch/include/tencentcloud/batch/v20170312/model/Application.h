@@ -48,27 +48,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task execution command
-                     * @return Command Task execution command
-                     * 
-                     */
-                    std::string GetCommand() const;
-
-                    /**
-                     * 设置Task execution command
-                     * @param _command Task execution command
-                     * 
-                     */
-                    void SetCommand(const std::string& _command);
-
-                    /**
-                     * 判断参数 Command 是否已赋值
-                     * @return Command 是否已赋值
-                     * 
-                     */
-                    bool CommandHasBeenSet() const;
-
-                    /**
                      * 获取Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
                      * @return DeliveryForm Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
                      * 
@@ -88,6 +67,27 @@ namespace TencentCloud
                      * 
                      */
                     bool DeliveryFormHasBeenSet() const;
+
+                    /**
+                     * 获取Task execution command
+                     * @return Command Task execution command
+                     * 
+                     */
+                    std::string GetCommand() const;
+
+                    /**
+                     * 设置Task execution command
+                     * @param _command Task execution command
+                     * 
+                     */
+                    void SetCommand(const std::string& _command);
+
+                    /**
+                     * 判断参数 Command 是否已赋值
+                     * @return Command 是否已赋值
+                     * 
+                     */
+                    bool CommandHasBeenSet() const;
 
                     /**
                      * 获取Remote storage path of the application package
@@ -134,16 +134,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task execution command
-                     */
-                    std::string m_command;
-                    bool m_commandHasBeenSet;
-
-                    /**
                      * Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
                      */
                     std::string m_deliveryForm;
                     bool m_deliveryFormHasBeenSet;
+
+                    /**
+                     * Task execution command
+                     */
+                    std::string m_command;
+                    bool m_commandHasBeenSet;
 
                     /**
                      * Remote storage path of the application package

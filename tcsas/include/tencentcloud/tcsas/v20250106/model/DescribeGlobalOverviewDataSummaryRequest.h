@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取string: Overview
-                     * @return DataType string: Overview
+                     * 获取string: Overview.
+                     * @return DataType string: Overview.
                      * 
                      */
                     std::string GetDataType() const;
 
                     /**
-                     * 设置string: Overview
-                     * @param _dataType string: Overview
+                     * 设置string: Overview.
+                     * @param _dataType string: Overview.
                      * 
                      */
                     void SetDataType(const std::string& _dataType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DataTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Date in YYYYMMDD format
-                     * @return DataTime Date in YYYYMMDD format
+                     * 获取Date in YYYYMMDD format.
+                     * @return DataTime Date in YYYYMMDD format.
                      * 
                      */
                     int64_t GetDataTime() const;
 
                     /**
-                     * 设置Date in YYYYMMDD format
-                     * @param _dataTime Date in YYYYMMDD format
+                     * 设置Date in YYYYMMDD format.
+                     * @param _dataTime Date in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const int64_t& _dataTime);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * string: Overview
+                     * string: Overview.
                      */
                     std::string m_dataType;
                     bool m_dataTypeHasBeenSet;
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Date in YYYYMMDD format
+                     * Date in YYYYMMDD format.
                      */
                     int64_t m_dataTime;
                     bool m_dataTimeHasBeenSet;

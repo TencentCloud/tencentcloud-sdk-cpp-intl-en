@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User account
-                     * @return UserAccount User account
+                     * 获取User account.
+                     * @return UserAccount User account.
                      * 
                      */
                     std::string GetUserAccount() const;
 
                     /**
-                     * 设置User account
-                     * @param _userAccount User account
+                     * 设置User account.
+                     * @param _userAccount User account.
                      * 
                      */
                     void SetUserAccount(const std::string& _userAccount);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UserAccountHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return UserName User name
+                     * 获取User name.
+                     * @return UserName User name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name
-                     * @param _userName User name
+                     * 设置User name.
+                     * @param _userName User name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取User account type. 2: Platform admin; 3: Member.
-                     * @return AccountType User account type. 2: Platform admin; 3: Member.
+                     * 获取User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+                     * @return AccountType User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
-                     * 设置User account type. 2: Platform admin; 3: Member.
-                     * @param _accountType User account type. 2: Platform admin; 3: Member.
+                     * 设置User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+                     * @param _accountType User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Call CreatePresetKey to get the keyID from RequestId
-                     * @return KeyId Call CreatePresetKey to get the keyID from RequestId
+                     * 获取Call CreatePresetKey to get the keyID from RequestId.
+                     * @return KeyId Call CreatePresetKey to get the keyID from RequestId.
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Call CreatePresetKey to get the keyID from RequestId
-                     * @param _keyId Call CreatePresetKey to get the keyID from RequestId
+                     * 设置Call CreatePresetKey to get the keyID from RequestId.
+                     * @param _keyId Call CreatePresetKey to get the keyID from RequestId.
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -171,19 +171,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User account
+                     * User account.
                      */
                     std::string m_userAccount;
                     bool m_userAccountHasBeenSet;
 
                     /**
-                     * User name
+                     * User name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * User account type. 2: Platform admin; 3: Member.
+                     * User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
@@ -195,13 +195,13 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Call CreatePresetKey to get the keyID from RequestId
+                     * Call CreatePresetKey to get the keyID from RequestId.
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

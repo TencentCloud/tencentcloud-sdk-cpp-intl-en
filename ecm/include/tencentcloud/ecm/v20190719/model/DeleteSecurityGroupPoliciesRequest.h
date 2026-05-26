@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
-                     * @return SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * 获取Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API. 
+                     * @return SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API. 
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
-                     * @param _securityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * 设置Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API. 
+                     * @param _securityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API. 
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API. 
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;

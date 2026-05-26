@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TTS-related configurations
+                * TTS configuration.
                 */
                 class TTSConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice ID
-                     * @return VoiceId Voice ID
+                     * 获取Voice type ID.
+                     * @return VoiceId Voice type ID.
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置Voice ID
-                     * @param _voiceId Voice ID
+                     * 设置Voice type ID.
+                     * @param _voiceId Voice type ID.
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -67,13 +67,94 @@ namespace TencentCloud
                      */
                     bool VoiceIdHasBeenSet() const;
 
+                    /**
+                     * 获取TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+                     * @return Model TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+                     * 
+                     */
+                    std::string GetModel() const;
+
+                    /**
+                     * 设置TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+                     * @param _model TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+                     * 
+                     */
+                    void SetModel(const std::string& _model);
+
+                    /**
+                     * 判断参数 Model 是否已赋值
+                     * @return Model 是否已赋值
+                     * 
+                     */
+                    bool ModelHasBeenSet() const;
+
+                    /**
+                     * 获取Speaking rate. value range: 0.5-2.0. default: 1.0.
+                     * @return Speed Speaking rate. value range: 0.5-2.0. default: 1.0.
+                     * 
+                     */
+                    double GetSpeed() const;
+
+                    /**
+                     * 设置Speaking rate. value range: 0.5-2.0. default: 1.0.
+                     * @param _speed Speaking rate. value range: 0.5-2.0. default: 1.0.
+                     * 
+                     */
+                    void SetSpeed(const double& _speed);
+
+                    /**
+                     * 判断参数 Speed 是否已赋值
+                     * @return Speed 是否已赋值
+                     * 
+                     */
+                    bool SpeedHasBeenSet() const;
+
+                    /**
+                     * 获取Value range: (0, 10]. default value: 1.0.
+                     * @return Volume Value range: (0, 10]. default value: 1.0.
+                     * 
+                     */
+                    double GetVolume() const;
+
+                    /**
+                     * 设置Value range: (0, 10]. default value: 1.0.
+                     * @param _volume Value range: (0, 10]. default value: 1.0.
+                     * 
+                     */
+                    void SetVolume(const double& _volume);
+
+                    /**
+                     * 判断参数 Volume 是否已赋值
+                     * @return Volume 是否已赋值
+                     * 
+                     */
+                    bool VolumeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Voice ID
+                     * Voice type ID.
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
+
+                    /**
+                     * TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+                     */
+                    std::string m_model;
+                    bool m_modelHasBeenSet;
+
+                    /**
+                     * Speaking rate. value range: 0.5-2.0. default: 1.0.
+                     */
+                    double m_speed;
+                    bool m_speedHasBeenSet;
+
+                    /**
+                     * Value range: (0, 10]. default value: 1.0.
+                     */
+                    double m_volume;
+                    bool m_volumeHasBeenSet;
 
                 };
             }

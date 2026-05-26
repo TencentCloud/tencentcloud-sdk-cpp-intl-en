@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcsas/v20250106/model/MNPI18NSyncDto.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program type
-                     * @return MNPType Mini program type
+                     * 获取<p>Mini program category.</p>
+                     * @return MNPType <p>Mini program category.</p>
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置Mini program type
-                     * @param _mNPType Mini program type
+                     * 设置<p>Mini program category.</p>
+                     * @param _mNPType <p>Mini program category.</p>
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取<p>Mini program name.</p>
+                     * @return MNPName <p>Mini program name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置<p>Mini program name.</p>
+                     * @param _mNPName <p>Mini program name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini app icon
-                     * @return MNPIcon Mini app icon
+                     * 获取<p>Mini program icon.</p>
+                     * @return MNPIcon <p>Mini program icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini app icon
-                     * @param _mNPIcon Mini app icon
+                     * 设置<p>Mini program icon.</p>
+                     * @param _mNPIcon <p>Mini program icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取Mini program introduction
-                     * @return MNPIntro Mini program introduction
+                     * 获取<p>Mini program introduction.</p>
+                     * @return MNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置Mini program introduction
-                     * @param _mNPIntro Mini program introduction
+                     * 设置<p>Mini program introduction.</p>
+                     * @param _mNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取Mini program description
-                     * @return MNPDesc Mini program description
+                     * 获取<p>Mini program description.</p>
+                     * @return MNPDesc <p>Mini program description.</p>
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置Mini program description
-                     * @param _mNPDesc Mini program description
+                     * 设置<p>Mini program description.</p>
+                     * @param _mNPDesc <p>Mini program description.</p>
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -189,49 +190,76 @@ namespace TencentCloud
                      */
                     bool TeamIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>The mini program name and description in multiple languages.</p>
+                     * @return I18nList <p>The mini program name and description in multiple languages.</p>
+                     * 
+                     */
+                    std::vector<MNPI18NSyncDto> GetI18nList() const;
+
+                    /**
+                     * 设置<p>The mini program name and description in multiple languages.</p>
+                     * @param _i18nList <p>The mini program name and description in multiple languages.</p>
+                     * 
+                     */
+                    void SetI18nList(const std::vector<MNPI18NSyncDto>& _i18nList);
+
+                    /**
+                     * 判断参数 I18nList 是否已赋值
+                     * @return I18nList 是否已赋值
+                     * 
+                     */
+                    bool I18nListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Mini program type
+                     * <p>Mini program category.</p>
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * <p>Mini program name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini app icon
+                     * <p>Mini program icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * Mini program introduction
+                     * <p>Mini program introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * Mini program description
+                     * <p>Mini program description.</p>
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Team ID
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
+
+                    /**
+                     * <p>The mini program name and description in multiple languages.</p>
+                     */
+                    std::vector<MNPI18NSyncDto> m_i18nList;
+                    bool m_i18nListHasBeenSet;
 
                 };
             }

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Overview of mini game visit analysis data
+                * Access analysis overview.
                 */
                 class AccessAnalysisOverview : public AbstractModel
                 {
@@ -49,18 +49,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Overview of visit analysis data
+                     * 获取Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BaseData Overview of visit analysis data
+                     * @return BaseData Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AccessAnalysisDetail GetBaseData() const;
 
                     /**
-                     * 设置Overview of visit analysis data
+                     * 设置Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _baseData Overview of visit analysis data
+                     * @param _baseData Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,18 +74,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BaseDataHasBeenSet() const;
 
                     /**
-                     * 获取This API does not respond.
+                     * 获取Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Overview This API does not respond.
+                     * @return Overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Overview GetOverview() const;
 
                     /**
-                     * 设置This API does not respond.
+                     * 设置Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _overview This API does not respond.
+                     * @param _overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -99,18 +99,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OverviewHasBeenSet() const;
 
                     /**
-                     * 获取This API does not respond.
+                     * 获取Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PageData This API does not respond.
+                     * @return PageData Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AccessAnalysisDetail GetPageData() const;
 
                     /**
-                     * 设置This API does not respond.
+                     * 设置Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pageData This API does not respond.
+                     * @param _pageData Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -124,18 +124,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PageDataHasBeenSet() const;
 
                     /**
-                     * 获取This API does not respond.
+                     * 获取Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Payment This API does not respond.
+                     * @return Payment Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AccessAnalysisDetail GetPayment() const;
 
                     /**
-                     * 设置This API does not respond.
+                     * 设置Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payment This API does not respond.
+                     * @param _payment Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -151,28 +151,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Overview of visit analysis data
+                     * Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AccessAnalysisDetail m_baseData;
                     bool m_baseDataHasBeenSet;
 
                     /**
-                     * This API does not respond.
+                     * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Overview m_overview;
                     bool m_overviewHasBeenSet;
 
                     /**
-                     * This API does not respond.
+                     * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AccessAnalysisDetail m_pageData;
                     bool m_pageDataHasBeenSet;
 
                     /**
-                     * This API does not respond.
+                     * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AccessAnalysisDetail m_payment;

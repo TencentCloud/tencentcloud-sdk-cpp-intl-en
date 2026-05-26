@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +68,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Renewal duration in months. Maximum value: 48
-                     * @return Period Renewal duration in months. Maximum value: 48
+                     * 获取Renewal period, calculated on a monthly basis.
+                     * @return Period Renewal period, calculated on a monthly basis.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Renewal duration in months. Maximum value: 48
-                     * @param _period Renewal duration in months. Maximum value: 48
+                     * 设置Renewal period, calculated on a monthly basis.
+                     * @param _period Renewal period, calculated on a monthly basis.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -87,13 +91,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Renewal duration in months. Maximum value: 48
+                     * Renewal period, calculated on a monthly basis.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;

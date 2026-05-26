@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program payment detailed data
+                * Mini program payment detailed data.
                 */
                 class PaymentDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Date in YYYYMMDD format
-                     * @return DataTime Date in YYYYMMDD format
+                     * 获取Date in YYYYMMDD format.
+                     * @return DataTime Date in YYYYMMDD format.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Date in YYYYMMDD format
-                     * @param _dataTime Date in YYYYMMDD format
+                     * 设置Date in YYYYMMDD format.
+                     * @param _dataTime Date in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of mini programs involved in the order
-                     * @return OrderMNPNum Number of mini programs involved in the order
+                     * 获取Mini program count with orders.
+                     * @return OrderMNPNum Mini program count with orders.
                      * 
                      */
                     int64_t GetOrderMNPNum() const;
 
                     /**
-                     * 设置Number of mini programs involved in the order
-                     * @param _orderMNPNum Number of mini programs involved in the order
+                     * 设置Mini program count with orders.
+                     * @param _orderMNPNum Mini program count with orders.
                      * 
                      */
                     void SetOrderMNPNum(const int64_t& _orderMNPNum);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OrderMNPNumHasBeenSet() const;
 
                     /**
-                     * 获取Total orders
-                     * @return OrderNum Total orders
+                     * 获取Total orders.
+                     * @return OrderNum Total orders.
                      * 
                      */
                     int64_t GetOrderNum() const;
 
                     /**
-                     * 设置Total orders
-                     * @param _orderNum Total orders
+                     * 设置Total orders.
+                     * @param _orderNum Total orders.
                      * 
                      */
                     void SetOrderNum(const int64_t& _orderNum);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OrderNumHasBeenSet() const;
 
                     /**
-                     * 获取Paid orders
-                     * @return OrderPaidNum Paid orders
+                     * 获取Paid orders.
+                     * @return OrderPaidNum Paid orders.
                      * 
                      */
                     int64_t GetOrderPaidNum() const;
 
                     /**
-                     * 设置Paid orders
-                     * @param _orderPaidNum Paid orders
+                     * 设置Paid orders.
+                     * @param _orderPaidNum Paid orders.
                      * 
                      */
                     void SetOrderPaidNum(const int64_t& _orderPaidNum);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OrderPaidNumHasBeenSet() const;
 
                     /**
-                     * 获取Total refunded orders
-                     * @return OrderRefundNum Total refunded orders
+                     * 获取Number of refund orders.
+                     * @return OrderRefundNum Number of refund orders.
                      * 
                      */
                     int64_t GetOrderRefundNum() const;
 
                     /**
-                     * 设置Total refunded orders
-                     * @param _orderRefundNum Total refunded orders
+                     * 设置Number of refund orders.
+                     * @param _orderRefundNum Number of refund orders.
                      * 
                      */
                     void SetOrderRefundNum(const int64_t& _orderRefundNum);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OrderRefundNumHasBeenSet() const;
 
                     /**
-                     * 获取Unpaid orders
-                     * @return OrderUnpaidNum Unpaid orders
+                     * 获取Total unpaid orders.
+                     * @return OrderUnpaidNum Total unpaid orders.
                      * 
                      */
                     int64_t GetOrderUnpaidNum() const;
 
                     /**
-                     * 设置Unpaid orders
-                     * @param _orderUnpaidNum Unpaid orders
+                     * 设置Total unpaid orders.
+                     * @param _orderUnpaidNum Total unpaid orders.
                      * 
                      */
                     void SetOrderUnpaidNum(const int64_t& _orderUnpaidNum);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool OrderUnpaidNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of users placing orders (openid)
-                     * @return OrderUserNum Number of users placing orders (openid)
+                     * 获取Number of ordering users (by OpenID).
+                     * @return OrderUserNum Number of ordering users (by OpenID).
                      * 
                      */
                     int64_t GetOrderUserNum() const;
 
                     /**
-                     * 设置Number of users placing orders (openid)
-                     * @param _orderUserNum Number of users placing orders (openid)
+                     * 设置Number of ordering users (by OpenID).
+                     * @param _orderUserNum Number of ordering users (by OpenID).
                      * 
                      */
                     void SetOrderUserNum(const int64_t& _orderUserNum);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool OrderUserNumHasBeenSet() const;
 
                     /**
-                     * 获取Amount paid
-                     * @return PaidAmount Amount paid
+                     * 获取Amount paid.
+                     * @return PaidAmount Amount paid.
                      * 
                      */
                     std::string GetPaidAmount() const;
 
                     /**
-                     * 设置Amount paid
-                     * @param _paidAmount Amount paid
+                     * 设置Amount paid.
+                     * @param _paidAmount Amount paid.
                      * 
                      */
                     void SetPaidAmount(const std::string& _paidAmount);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool PaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Amount refunded
-                     * @return RefundAmount Amount refunded
+                     * 获取Amount refunded.
+                     * @return RefundAmount Amount refunded.
                      * 
                      */
                     std::string GetRefundAmount() const;
 
                     /**
-                     * 设置Amount refunded
-                     * @param _refundAmount Amount refunded
+                     * 设置Amount refunded.
+                     * @param _refundAmount Amount refunded.
                      * 
                      */
                     void SetRefundAmount(const std::string& _refundAmount);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RefundAmountHasBeenSet() const;
 
                     /**
-                     * 获取Total order amount
-                     * @return TotalAmount Total order amount
+                     * 获取Total amount.
+                     * @return TotalAmount Total amount.
                      * 
                      */
                     std::string GetTotalAmount() const;
 
                     /**
-                     * 设置Total order amount
-                     * @param _totalAmount Total order amount
+                     * 设置Total amount.
+                     * @param _totalAmount Total amount.
                      * 
                      */
                     void SetTotalAmount(const std::string& _totalAmount);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool TotalAmountHasBeenSet() const;
 
                     /**
-                     * 获取Unpaid amount
-                     * @return UnpaidAmount Unpaid amount
+                     * 获取Unpaid amount.
+                     * @return UnpaidAmount Unpaid amount.
                      * 
                      */
                     std::string GetUnpaidAmount() const;
 
                     /**
-                     * 设置Unpaid amount
-                     * @param _unpaidAmount Unpaid amount
+                     * 设置Unpaid amount.
+                     * @param _unpaidAmount Unpaid amount.
                      * 
                      */
                     void SetUnpaidAmount(const std::string& _unpaidAmount);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool UnpaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Data update timestamp
-                     * @return UpdateTime Data update timestamp
+                     * 获取Data update timestamp.
+                     * @return UpdateTime Data update timestamp.
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Data update timestamp
-                     * @param _updateTime Data update timestamp
+                     * 设置Data update timestamp.
+                     * @param _updateTime Data update timestamp.
                      * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
@@ -301,73 +301,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Date in YYYYMMDD format
+                     * Date in YYYYMMDD format.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Number of mini programs involved in the order
+                     * Mini program count with orders.
                      */
                     int64_t m_orderMNPNum;
                     bool m_orderMNPNumHasBeenSet;
 
                     /**
-                     * Total orders
+                     * Total orders.
                      */
                     int64_t m_orderNum;
                     bool m_orderNumHasBeenSet;
 
                     /**
-                     * Paid orders
+                     * Paid orders.
                      */
                     int64_t m_orderPaidNum;
                     bool m_orderPaidNumHasBeenSet;
 
                     /**
-                     * Total refunded orders
+                     * Number of refund orders.
                      */
                     int64_t m_orderRefundNum;
                     bool m_orderRefundNumHasBeenSet;
 
                     /**
-                     * Unpaid orders
+                     * Total unpaid orders.
                      */
                     int64_t m_orderUnpaidNum;
                     bool m_orderUnpaidNumHasBeenSet;
 
                     /**
-                     * Number of users placing orders (openid)
+                     * Number of ordering users (by OpenID).
                      */
                     int64_t m_orderUserNum;
                     bool m_orderUserNumHasBeenSet;
 
                     /**
-                     * Amount paid
+                     * Amount paid.
                      */
                     std::string m_paidAmount;
                     bool m_paidAmountHasBeenSet;
 
                     /**
-                     * Amount refunded
+                     * Amount refunded.
                      */
                     std::string m_refundAmount;
                     bool m_refundAmountHasBeenSet;
 
                     /**
-                     * Total order amount
+                     * Total amount.
                      */
                     std::string m_totalAmount;
                     bool m_totalAmountHasBeenSet;
 
                     /**
-                     * Unpaid amount
+                     * Unpaid amount.
                      */
                     std::string m_unpaidAmount;
                     bool m_unpaidAmountHasBeenSet;
 
                     /**
-                     * Data update timestamp
+                     * Data update timestamp.
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

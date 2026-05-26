@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Fixed value: payment_data_analysis
-                     * @return ReportId Fixed value: payment_data_analysis
+                     * 获取Fixed value: payment_data_analysis.
+                     * @return ReportId Fixed value: payment_data_analysis.
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置Fixed value: payment_data_analysis
-                     * @param _reportId Fixed value: payment_data_analysis
+                     * 设置Fixed value: payment_data_analysis.
+                     * @param _reportId Fixed value: payment_data_analysis.
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -85,7 +85,7 @@ namespace TencentCloud
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取IndexId (optional):
+                     * 获取Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -94,8 +94,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
-                     * @return IndexId IndexId (optional):
+refund_amount: Total amount refunded.
+                     * @return IndexId Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -104,13 +104,13 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
                      * 
                      */
                     std::string GetIndexId() const;
 
                     /**
-                     * 设置IndexId (optional):
+                     * 设置Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -119,8 +119,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
-                     * @param _indexId IndexId (optional):
+refund_amount: Total amount refunded.
+                     * @param _indexId Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -129,7 +129,7 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
                      * 
                      */
                     void SetIndexId(const std::string& _indexId);
@@ -142,15 +142,15 @@ refund_amount: Total amount refunded
                     bool IndexIdHasBeenSet() const;
 
                     /**
-                     * 获取Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
-                     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+                     * 获取Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
+                     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
                      * 
                      */
                     std::string GetQueryData() const;
 
                     /**
-                     * 设置Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
-                     * @param _queryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+                     * 设置Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
+                     * @param _queryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
                      * 
                      */
                     void SetQueryData(const std::string& _queryData);
@@ -165,19 +165,19 @@ refund_amount: Total amount refunded
                 private:
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Fixed value: payment_data_analysis
+                     * Fixed value: payment_data_analysis.
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * IndexId (optional):
+                     * Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -186,13 +186,13 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
                      */
                     std::string m_indexId;
                     bool m_indexIdHasBeenSet;
 
                     /**
-                     * Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+                     * Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
                      */
                     std::string m_queryData;
                     bool m_queryDataHasBeenSet;

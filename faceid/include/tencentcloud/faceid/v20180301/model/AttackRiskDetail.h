@@ -47,43 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
-                     * @return Type Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+                     * 获取<p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Type <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
-                     * @param _type Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+                     * 设置<p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _type <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,14 +74,8 @@ SuspectedWatermark: Suspected watermark
                 private:
 
                     /**
-                     * Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+                     * <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

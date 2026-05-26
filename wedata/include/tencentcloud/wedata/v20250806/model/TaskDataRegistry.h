@@ -242,6 +242,81 @@ Output stream:
                      */
                     bool TableGuidHasBeenSet() const;
 
+                    /**
+                     * 获取Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CatalogName Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCatalogName() const;
+
+                    /**
+                     * 设置Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _catalogName Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCatalogName(const std::string& _catalogName);
+
+                    /**
+                     * 判断参数 CatalogName 是否已赋值
+                     * @return CatalogName 是否已赋值
+                     * 
+                     */
+                    bool CatalogNameHasBeenSet() const;
+
+                    /**
+                     * 获取Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DatasourceName Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDatasourceName() const;
+
+                    /**
+                     * 设置Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _datasourceName Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDatasourceName(const std::string& _datasourceName);
+
+                    /**
+                     * 判断参数 DatasourceName 是否已赋值
+                     * @return DatasourceName 是否已赋值
+                     * 
+                     */
+                    bool DatasourceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QualifiedName Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetQualifiedName() const;
+
+                    /**
+                     * 设置Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _qualifiedName Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetQualifiedName(const std::string& _qualifiedName);
+
+                    /**
+                     * 判断参数 QualifiedName 是否已赋值
+                     * @return QualifiedName 是否已赋值
+                     * 
+                     */
+                    bool QualifiedNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -298,6 +373,27 @@ Output stream:
                      */
                     std::string m_tableGuid;
                     bool m_tableGuidHasBeenSet;
+
+                    /**
+                     * Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_catalogName;
+                    bool m_catalogNameHasBeenSet;
+
+                    /**
+                     * Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_datasourceName;
+                    bool m_datasourceNameHasBeenSet;
+
+                    /**
+                     * Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_qualifiedName;
+                    bool m_qualifiedNameHasBeenSet;
 
                 };
             }

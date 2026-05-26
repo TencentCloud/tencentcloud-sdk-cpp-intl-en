@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
-                     * @return IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * 获取Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
+                     * @return IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
                      * 
                      */
                     std::string GetIndexId() const;
 
                     /**
-                     * 设置Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
-                     * @param _indexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * 设置Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
+                     * @param _indexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
                      * 
                      */
                     void SetIndexId(const std::string& _indexId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IndexIdHasBeenSet() const;
 
                     /**
-                     * 获取Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
-                     * @return QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * 获取Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
+                     * @return QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
                      * 
                      */
                     std::string GetQueryData() const;
 
                     /**
-                     * 设置Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
-                     * @param _queryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * 设置Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
+                     * @param _queryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
                      * 
                      */
                     void SetQueryData(const std::string& _queryData);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+                     * Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
                      */
                     std::string m_indexId;
                     bool m_indexIdHasBeenSet;
 
                     /**
-                     * Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+                     * Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
                      */
                     std::string m_queryData;
                     bool m_queryDataHasBeenSet;

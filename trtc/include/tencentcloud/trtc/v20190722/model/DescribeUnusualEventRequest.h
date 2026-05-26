@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The application ID, such as `1400xxxxxx`.
-                     * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 获取User SdkAppId (for example: 1400xxxxxx).
+                     * @return SdkAppId User SdkAppId (for example: 1400xxxxxx).
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The application ID, such as `1400xxxxxx`.
-                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 设置User SdkAppId (for example: 1400xxxxxx).
+                     * @param _sdkAppId User SdkAppId (for example: 1400xxxxxx).
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -64,19 +64,19 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
-                     * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+                     * 获取Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+                     * @return StartTime Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
-                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+                     * 设置Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+                     * @param _startTime Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -89,15 +89,15 @@ Note: Only data in the last 14 days can be queried.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
-                     * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * 获取Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+                     * @return EndTime Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
-                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * 设置Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+                     * @param _endTime Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -110,15 +110,15 @@ Note: Only data in the last 14 days can be queried.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
-                     * @return RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * 获取Room number. query up to 20 abnormal experience events in the room.
+                     * @return RoomId Room number. query up to 20 abnormal experience events in the room.
                      * 
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
-                     * @param _roomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * 设置Room number. query up to 20 abnormal experience events in the room.
+                     * @param _roomId Room number. query up to 20 abnormal experience events in the room.
                      * 
                      */
                     void SetRoomId(const std::string& _roomId);
@@ -133,26 +133,26 @@ Note: Only data in the last 14 days can be queried.
                 private:
 
                     /**
-                     * The application ID, such as `1400xxxxxx`.
+                     * User SdkAppId (for example: 1400xxxxxx).
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+                     * Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * Room number. query up to 20 abnormal experience events in the room.
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total number of logs
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Total Total number of logs
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotal() const;
@@ -62,9 +60,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of entries per page.
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Limit Number of entries per page.
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLimit() const;
@@ -78,9 +74,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Page number
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Page Page number
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPage() const;
@@ -94,9 +88,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Log searching results
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Results Log searching results
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SearchLogResult> GetResults() const;
@@ -112,28 +104,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * Total number of logs
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
                      * Number of entries per page.
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Page number
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_page;
                     bool m_pageHasBeenSet;
 
                     /**
                      * Log searching results
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<SearchLogResult> m_results;
                     bool m_resultsHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time
-                     * @return TimeBegin Start time
+                     * 获取Start time.
+                     * @return TimeBegin Start time.
                      * 
                      */
                     int64_t GetTimeBegin() const;
 
                     /**
-                     * 设置Start time
-                     * @param _timeBegin Start time
+                     * 设置Start time.
+                     * @param _timeBegin Start time.
                      * 
                      */
                     void SetTimeBegin(const int64_t& _timeBegin);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TimeBeginHasBeenSet() const;
 
                     /**
-                     * 获取Mini program appid
-                     * @return MNPId Mini program appid
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid
-                     * @param _mNPId Mini program appid
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return TimeEnd End time
+                     * 获取End time.
+                     * @return TimeEnd End time.
                      * 
                      */
                     uint64_t GetTimeEnd() const;
 
                     /**
-                     * 设置End time
-                     * @param _timeEnd End time
+                     * 设置End time.
+                     * @param _timeEnd End time.
                      * 
                      */
                     void SetTimeEnd(const uint64_t& _timeEnd);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TimeEndHasBeenSet() const;
 
                     /**
-                     * 获取1 Production data, 0 Non-production data
-                     * @return ProdData 1 Production data, 0 Non-production data
+                     * 获取Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @return ProdData Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     int64_t GetProdData() const;
 
                     /**
-                     * 设置1 Production data, 0 Non-production data
-                     * @param _prodData 1 Production data, 0 Non-production data
+                     * 设置Data type. Valid values: 0: Non-production data; 1: Production data.
+                     * @param _prodData Data type. Valid values: 0: Non-production data; 1: Production data.
                      * 
                      */
                     void SetProdData(const int64_t& _prodData);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ProdDataHasBeenSet() const;
 
                     /**
-                     * 获取Operating system: 0 All, 2-Android, 3 iOS
-                     * @return Platform Operating system: 0 All, 2-Android, 3 iOS
+                     * 获取Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+                     * @return Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
                      * 
                      */
                     int64_t GetPlatform() const;
 
                     /**
-                     * 设置Operating system: 0 All, 2-Android, 3 iOS
-                     * @param _platform Operating system: 0 All, 2-Android, 3 iOS
+                     * 设置Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+                     * @param _platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
                      * 
                      */
                     void SetPlatform(const int64_t& _platform);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time
+                     * Start time.
                      */
                     int64_t m_timeBegin;
                     bool m_timeBeginHasBeenSet;
 
                     /**
-                     * Mini program appid
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * End time
+                     * End time.
                      */
                     uint64_t m_timeEnd;
                     bool m_timeEndHasBeenSet;
 
                     /**
-                     * 1 Production data, 0 Non-production data
+                     * Data type. Valid values: 0: Non-production data; 1: Production data.
                      */
                     int64_t m_prodData;
                     bool m_prodDataHasBeenSet;
 
                     /**
-                     * Operating system: 0 All, 2-Android, 3 iOS
+                     * Operating system. Valid values: 0: All; 2: Android; 3: iOS.
                      */
                     int64_t m_platform;
                     bool m_platformHasBeenSet;

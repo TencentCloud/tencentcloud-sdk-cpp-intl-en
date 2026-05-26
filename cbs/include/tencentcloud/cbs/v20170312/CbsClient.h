@@ -61,6 +61,8 @@
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskBackupsResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskConfigQuotaRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskConfigQuotaResponse.h>
+#include <tencentcloud/cbs/v20170312/model/DescribeDiskStoragePoolRequest.h>
+#include <tencentcloud/cbs/v20170312/model/DescribeDiskStoragePoolResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDisksRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDisksResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeInstancesDiskNumRequest.h>
@@ -180,6 +182,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDiskConfigQuotaResponse> DescribeDiskConfigQuotaOutcome;
                 typedef std::future<DescribeDiskConfigQuotaOutcome> DescribeDiskConfigQuotaOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskConfigQuotaRequest&, DescribeDiskConfigQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskConfigQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDiskStoragePoolResponse> DescribeDiskStoragePoolOutcome;
+                typedef std::future<DescribeDiskStoragePoolOutcome> DescribeDiskStoragePoolOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::DescribeDiskStoragePoolRequest&, DescribeDiskStoragePoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskStoragePoolAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDisksResponse> DescribeDisksOutcome;
                 typedef std::future<DescribeDisksOutcome> DescribeDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDisksRequest&, DescribeDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDisksAsyncHandler;
@@ -470,6 +475,18 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
                 DescribeDiskConfigQuotaOutcome DescribeDiskConfigQuota(const Model::DescribeDiskConfigQuotaRequest &request);
                 void DescribeDiskConfigQuotaAsync(const Model::DescribeDiskConfigQuotaRequest& request, const DescribeDiskConfigQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDiskConfigQuotaOutcomeCallable DescribeDiskConfigQuotaCallable(const Model::DescribeDiskConfigQuotaRequest& request);
+
+                /**
+                 *This API is used to query the list of dedicated cloud disk clusters under the current user account.
+
+* You can query by the dedicated cloud disk cluster ID (`CdcId`) and availability zone (`zone`). Multiple filters are combined with AND. For details about filtering, please see `Filter`.
+* If the parameter is empty, a number (as specified by `Limit`; the default is 20) of dedicated cloud disk clusters are returned.
+                 * @param req DescribeDiskStoragePoolRequest
+                 * @return DescribeDiskStoragePoolOutcome
+                 */
+                DescribeDiskStoragePoolOutcome DescribeDiskStoragePool(const Model::DescribeDiskStoragePoolRequest &request);
+                void DescribeDiskStoragePoolAsync(const Model::DescribeDiskStoragePoolRequest& request, const DescribeDiskStoragePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDiskStoragePoolOutcomeCallable DescribeDiskStoragePoolCallable(const Model::DescribeDiskStoragePoolRequest& request);
 
                 /**
                  *This API (DescribeDisks) is used to query the list of cloud disks.

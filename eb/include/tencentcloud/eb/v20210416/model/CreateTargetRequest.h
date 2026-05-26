@@ -127,6 +127,69 @@ namespace TencentCloud
                      */
                     bool RuleIdHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BatchTimeout 
+                     * 
+                     */
+                    int64_t GetBatchTimeout() const;
+
+                    /**
+                     * 设置
+                     * @param _batchTimeout 
+                     * 
+                     */
+                    void SetBatchTimeout(const int64_t& _batchTimeout);
+
+                    /**
+                     * 判断参数 BatchTimeout 是否已赋值
+                     * @return BatchTimeout 是否已赋值
+                     * 
+                     */
+                    bool BatchTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BatchEventCount 
+                     * 
+                     */
+                    int64_t GetBatchEventCount() const;
+
+                    /**
+                     * 设置
+                     * @param _batchEventCount 
+                     * 
+                     */
+                    void SetBatchEventCount(const int64_t& _batchEventCount);
+
+                    /**
+                     * 判断参数 BatchEventCount 是否已赋值
+                     * @return BatchEventCount 是否已赋值
+                     * 
+                     */
+                    bool BatchEventCountHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EnableBatchDelivery 
+                     * 
+                     */
+                    bool GetEnableBatchDelivery() const;
+
+                    /**
+                     * 设置
+                     * @param _enableBatchDelivery 
+                     * 
+                     */
+                    void SetEnableBatchDelivery(const bool& _enableBatchDelivery);
+
+                    /**
+                     * 判断参数 EnableBatchDelivery 是否已赋值
+                     * @return EnableBatchDelivery 是否已赋值
+                     * 
+                     */
+                    bool EnableBatchDeliveryHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +215,24 @@ namespace TencentCloud
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_batchTimeout;
+                    bool m_batchTimeoutHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_batchEventCount;
+                    bool m_batchEventCountHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_enableBatchDelivery;
+                    bool m_enableBatchDeliveryHasBeenSet;
 
                 };
             }

@@ -351,7 +351,7 @@ namespace TencentCloud
                 ListTargetsOutcomeCallable ListTargetsCallable(const Model::ListTargetsRequest& request);
 
                 /**
-                 *This API is used to query logs. 
+                 *This API is used to query logs.
                  * @param req SearchLogRequest
                  * @return SearchLogOutcome
                  */

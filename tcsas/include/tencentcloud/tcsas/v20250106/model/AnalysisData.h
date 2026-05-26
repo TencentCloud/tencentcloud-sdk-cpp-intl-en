@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Line chart data values
+                * Trend data value.
                 */
                 class AnalysisData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time
-                     * @return DataTime Time
+                     * 获取Data time.
+                     * @return DataTime Data time.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Time
-                     * @param _dataTime Time
+                     * 设置Data time.
+                     * @param _dataTime Data time.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Value
-                     * @return Number Value
+                     * 获取Data value.
+                     * @return Number Data value.
                      * 
                      */
                     std::string GetNumber() const;
 
                     /**
-                     * 设置Value
-                     * @param _number Value
+                     * 设置Data value.
+                     * @param _number Data value.
                      * 
                      */
                     void SetNumber(const std::string& _number);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time
+                     * Data time.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Value
+                     * Data value.
                      */
                     std::string m_number;
                     bool m_numberHasBeenSet;

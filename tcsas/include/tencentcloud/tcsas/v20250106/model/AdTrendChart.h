@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advertising line chart data
+                * Ad trend data.
                 */
                 class AdTrendChart : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Estimated revenue
+                     * 获取Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EstimatedEarnings Estimated revenue
+                     * @return EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AnalysisData> GetEstimatedEarnings() const;
 
                     /**
-                     * 设置Estimated revenue
+                     * 设置Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _estimatedEarnings Estimated revenue
+                     * @param _estimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +73,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EstimatedEarningsHasBeenSet() const;
 
                     /**
-                     * 获取Requests
+                     * 获取Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RequestsNumber Requests
+                     * @return RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AnalysisData> GetRequestsNumber() const;
 
                     /**
-                     * 设置Requests
+                     * 设置Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _requestsNumber Requests
+                     * @param _requestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,18 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RequestsNumberHasBeenSet() const;
 
                     /**
-                     * 获取Impressions
+                     * 获取Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Impressions Impressions
+                     * @return Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AnalysisData> GetImpressions() const;
 
                     /**
-                     * 设置Impressions
+                     * 设置Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _impressions Impressions
+                     * @param _impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -123,18 +123,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImpressionsHasBeenSet() const;
 
                     /**
-                     * 获取Effective Cost Per Mille
+                     * 获取eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ECPM Effective Cost Per Mille
+                     * @return ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AnalysisData> GetECPM() const;
 
                     /**
-                     * 设置Effective Cost Per Mille
+                     * 设置eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eCPM Effective Cost Per Mille
+                     * @param _eCPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -148,18 +148,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ECPMHasBeenSet() const;
 
                     /**
-                     * 获取Taps
+                     * 获取Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClicksNumber Taps
+                     * @return ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AnalysisData> GetClicksNumber() const;
 
                     /**
-                     * 设置Taps
+                     * 设置Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clicksNumber Taps
+                     * @param _clicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -175,35 +175,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Estimated revenue
+                     * Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AnalysisData> m_estimatedEarnings;
                     bool m_estimatedEarningsHasBeenSet;
 
                     /**
-                     * Requests
+                     * Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AnalysisData> m_requestsNumber;
                     bool m_requestsNumberHasBeenSet;
 
                     /**
-                     * Impressions
+                     * Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AnalysisData> m_impressions;
                     bool m_impressionsHasBeenSet;
 
                     /**
-                     * Effective Cost Per Mille
+                     * eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AnalysisData> m_eCPM;
                     bool m_eCPMHasBeenSet;
 
                     /**
-                     * Taps
+                     * Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AnalysisData> m_clicksNumber;

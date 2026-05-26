@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Global domain name page list
+                * Paginated global domain list.
                 */
                 class DescribeGlobalDomainsResp : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number
-                     * @return TotalCount Total number
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number
-                     * @param _totalCount Total number
+                     * 设置Total number of entries.
+                     * @param _totalCount Total number of entries.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Describes the domain information.
-                     * @return DataList Describes the domain information.
+                     * 获取Domain information.
+                     * @return DataList Domain information.
                      * 
                      */
                     std::vector<DescribeGlobalDomainsListData> GetDataList() const;
 
                     /**
-                     * 设置Describes the domain information.
-                     * @param _dataList Describes the domain information.
+                     * 设置Domain information.
+                     * @param _dataList Domain information.
                      * 
                      */
                     void SetDataList(const std::vector<DescribeGlobalDomainsListData>& _dataList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Describes the domain information.
+                     * Domain information.
                      */
                     std::vector<DescribeGlobalDomainsListData> m_dataList;
                     bool m_dataListHasBeenSet;

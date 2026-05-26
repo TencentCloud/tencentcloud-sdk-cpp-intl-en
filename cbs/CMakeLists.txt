@@ -36,6 +36,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/ModifySnapshotsSharePermissionResponse.h
   include/tencentcloud/cbs/v20170312/model/DeleteDiskBackupsRequest.h
   include/tencentcloud/cbs/v20170312/model/InitializeDisksResponse.h
+  include/tencentcloud/cbs/v20170312/model/DescribeDiskStoragePoolRequest.h
   include/tencentcloud/cbs/v20170312/model/DescribeDiskBackupsResponse.h
   include/tencentcloud/cbs/v20170312/model/SnapshotCopyResult.h
   include/tencentcloud/cbs/v20170312/model/RenewDiskRequest.h
@@ -76,12 +77,14 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/Image.h
   include/tencentcloud/cbs/v20170312/model/ModifyAutoSnapshotPolicyAttributeResponse.h
   include/tencentcloud/cbs/v20170312/model/TerminateDisksRequest.h
+  include/tencentcloud/cbs/v20170312/model/CdcSize.h
   include/tencentcloud/cbs/v20170312/model/DescribeInstancesDiskNumResponse.h
   include/tencentcloud/cbs/v20170312/model/ResizeDiskRequest.h
   include/tencentcloud/cbs/v20170312/model/ApplyDiskBackupRequest.h
   include/tencentcloud/cbs/v20170312/model/InitializeDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/CreateAutoSnapshotPolicyResponse.h
   include/tencentcloud/cbs/v20170312/model/ModifySnapshotAttributeRequest.h
+  include/tencentcloud/cbs/v20170312/model/UnbindAutoSnapshotPolicyRequest.h
   include/tencentcloud/cbs/v20170312/model/DiskConfig.h
   include/tencentcloud/cbs/v20170312/model/CreateDiskBackupResponse.h
   include/tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskBackupQuotaResponse.h
@@ -105,6 +108,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/DetachDisksResponse.h
   include/tencentcloud/cbs/v20170312/model/InquiryPriceRenewDisksResponse.h
   include/tencentcloud/cbs/v20170312/model/SharePermission.h
+  include/tencentcloud/cbs/v20170312/model/DescribeDiskStoragePoolResponse.h
   include/tencentcloud/cbs/v20170312/model/Policy.h
   include/tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceResponse.h
   include/tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceRequest.h
@@ -118,7 +122,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/PrepayPrice.h
   include/tencentcloud/cbs/v20170312/model/RenewDiskResponse.h
   include/tencentcloud/cbs/v20170312/model/DescribeAutoSnapshotPoliciesResponse.h
-  include/tencentcloud/cbs/v20170312/model/UnbindAutoSnapshotPolicyRequest.h
+  include/tencentcloud/cbs/v20170312/model/Cdc.h
   include/tencentcloud/cbs/v20170312/model/ApplyDisk.h
   include/tencentcloud/cbs/v20170312/model/UnbindAutoSnapshotPolicyResponse.h
   include/tencentcloud/cbs/v20170312/model/AttachDetail.h
@@ -147,6 +151,7 @@ set(cbs_src
   src/v20170312/model/ModifySnapshotsSharePermissionResponse.cpp
   src/v20170312/model/DeleteDiskBackupsRequest.cpp
   src/v20170312/model/InitializeDisksResponse.cpp
+  src/v20170312/model/DescribeDiskStoragePoolRequest.cpp
   src/v20170312/model/DescribeDiskBackupsResponse.cpp
   src/v20170312/model/SnapshotCopyResult.cpp
   src/v20170312/model/RenewDiskRequest.cpp
@@ -187,12 +192,14 @@ set(cbs_src
   src/v20170312/model/Image.cpp
   src/v20170312/model/ModifyAutoSnapshotPolicyAttributeResponse.cpp
   src/v20170312/model/TerminateDisksRequest.cpp
+  src/v20170312/model/CdcSize.cpp
   src/v20170312/model/DescribeInstancesDiskNumResponse.cpp
   src/v20170312/model/ResizeDiskRequest.cpp
   src/v20170312/model/ApplyDiskBackupRequest.cpp
   src/v20170312/model/InitializeDisksRequest.cpp
   src/v20170312/model/CreateAutoSnapshotPolicyResponse.cpp
   src/v20170312/model/ModifySnapshotAttributeRequest.cpp
+  src/v20170312/model/UnbindAutoSnapshotPolicyRequest.cpp
   src/v20170312/model/DiskConfig.cpp
   src/v20170312/model/CreateDiskBackupResponse.cpp
   src/v20170312/model/InquirePriceModifyDiskBackupQuotaResponse.cpp
@@ -216,6 +223,7 @@ set(cbs_src
   src/v20170312/model/DetachDisksResponse.cpp
   src/v20170312/model/InquiryPriceRenewDisksResponse.cpp
   src/v20170312/model/SharePermission.cpp
+  src/v20170312/model/DescribeDiskStoragePoolResponse.cpp
   src/v20170312/model/Policy.cpp
   src/v20170312/model/ModifyDiskExtraPerformanceResponse.cpp
   src/v20170312/model/InquirePriceModifyDiskExtraPerformanceRequest.cpp
@@ -229,7 +237,7 @@ set(cbs_src
   src/v20170312/model/PrepayPrice.cpp
   src/v20170312/model/RenewDiskResponse.cpp
   src/v20170312/model/DescribeAutoSnapshotPoliciesResponse.cpp
-  src/v20170312/model/UnbindAutoSnapshotPolicyRequest.cpp
+  src/v20170312/model/Cdc.cpp
   src/v20170312/model/ApplyDisk.cpp
   src/v20170312/model/UnbindAutoSnapshotPolicyResponse.cpp
   src/v20170312/model/AttachDetail.cpp

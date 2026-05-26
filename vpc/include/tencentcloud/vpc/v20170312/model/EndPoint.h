@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EndPointIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
-                     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * 获取The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+                     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
-                     * @param _vpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * 设置The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+                     * @param _vpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -371,7 +371,7 @@ namespace TencentCloud
                     bool m_endPointIdHasBeenSet;
 
                     /**
-                     * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+                     * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

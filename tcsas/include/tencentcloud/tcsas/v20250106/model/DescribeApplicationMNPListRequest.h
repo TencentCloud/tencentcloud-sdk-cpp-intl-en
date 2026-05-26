@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Page offset
-                     * @return Offset Page offset
+                     * 获取Pagination offset.
+                     * @return Offset Pagination offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page offset
-                     * @param _offset Page offset
+                     * 设置Pagination offset.
+                     * @param _offset Pagination offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page
-                     * @return Limit Number of results per page
+                     * 获取Number of entries per page.
+                     * @return Limit Number of entries per page.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page
-                     * @param _limit Number of results per page
+                     * 设置Number of entries per page.
+                     * @param _limit Number of entries per page.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Superapp ID
-                     * @return ApplicationId Superapp ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Superapp ID
-                     * @param _applicationId Superapp ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Online status. 0 All (default); 1 Available; 2 In canary release
-                     * @return OnlineStatus Online status. 0 All (default); 1 Available; 2 In canary release
+                     * 获取Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+                     * @return OnlineStatus Available status. Valid value: 0: All; 1 Available; 2: In canary release.
                      * 
                      */
                     int64_t GetOnlineStatus() const;
 
                     /**
-                     * 设置Online status. 0 All (default); 1 Available; 2 In canary release
-                     * @param _onlineStatus Online status. 0 All (default); 1 Available; 2 In canary release
+                     * 设置Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+                     * @param _onlineStatus Available status. Valid value: 0: All; 1 Available; 2: In canary release.
                      * 
                      */
                     void SetOnlineStatus(const int64_t& _onlineStatus);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OnlineStatusHasBeenSet() const;
 
                     /**
-                     * 获取Engine type. 0 Mini program; 1 Mini game
-                     * @return EngineTypeList Engine type. 0 Mini program; 1 Mini game
+                     * 获取Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+                     * @return EngineTypeList Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
                      * 
                      */
                     std::vector<int64_t> GetEngineTypeList() const;
 
                     /**
-                     * 设置Engine type. 0 Mini program; 1 Mini game
-                     * @param _engineTypeList Engine type. 0 Mini program; 1 Mini game
+                     * 设置Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+                     * @param _engineTypeList Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
                      * 
                      */
                     void SetEngineTypeList(const std::vector<int64_t>& _engineTypeList);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool EngineTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Secondary category name
-                     * @return SubCategory Secondary category name
+                     * 获取Secondary category name.
+                     * @return SubCategory Secondary category name.
                      * 
                      */
                     std::string GetSubCategory() const;
 
                     /**
-                     * 设置Secondary category name
-                     * @param _subCategory Secondary category name
+                     * 设置Secondary category name.
+                     * @param _subCategory Secondary category name.
                      * 
                      */
                     void SetSubCategory(const std::string& _subCategory);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SubCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Primary category name
-                     * @return PrimaryCategory Primary category name
+                     * 获取Primary category name.
+                     * @return PrimaryCategory Primary category name.
                      * 
                      */
                     std::string GetPrimaryCategory() const;
 
                     /**
-                     * 设置Primary category name
-                     * @param _primaryCategory Primary category name
+                     * 设置Primary category name.
+                     * @param _primaryCategory Primary category name.
                      * 
                      */
                     void SetPrimaryCategory(const std::string& _primaryCategory);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool PrimaryCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Keywords
-                     * @return Keyword Keywords
+                     * 获取Keyword.
+                     * @return Keyword Keyword.
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置Keywords
-                     * @param _keyword Keywords
+                     * 设置Keyword.
+                     * @param _keyword Keyword.
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -234,55 +234,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Page offset
+                     * Pagination offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page
+                     * Number of entries per page.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Superapp ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Online status. 0 All (default); 1 Available; 2 In canary release
+                     * Available status. Valid value: 0: All; 1 Available; 2: In canary release.
                      */
                     int64_t m_onlineStatus;
                     bool m_onlineStatusHasBeenSet;
 
                     /**
-                     * Engine type. 0 Mini program; 1 Mini game
+                     * Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
                      */
                     std::vector<int64_t> m_engineTypeList;
                     bool m_engineTypeListHasBeenSet;
 
                     /**
-                     * Secondary category name
+                     * Secondary category name.
                      */
                     std::string m_subCategory;
                     bool m_subCategoryHasBeenSet;
 
                     /**
-                     * Primary category name
+                     * Primary category name.
                      */
                     std::string m_primaryCategory;
                     bool m_primaryCategoryHasBeenSet;
 
                     /**
-                     * Keywords
+                     * Keyword.
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;

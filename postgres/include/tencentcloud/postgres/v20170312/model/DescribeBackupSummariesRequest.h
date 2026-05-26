@@ -86,27 +86,27 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 获取Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+                     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @param _filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 设置Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+                     * @param _filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -119,15 +119,15 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
-                     * @return OrderBy Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
+                     * 获取Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
+                     * @return OrderBy Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
-                     * @param _orderBy Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
+                     * 设置Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
+                     * @param _orderBy Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -140,15 +140,15 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-                     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 获取Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+                     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 设置Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+                     * @param _orderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -175,22 +175,22 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
+                     * Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

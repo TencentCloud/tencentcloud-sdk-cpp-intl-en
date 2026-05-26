@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of permission requests to allow a mini program to call sensitive APIs
+                * List data for querying mini program sensitive API permission approvals.
                 */
                 class DescribeMNPSensitiveAPIPermissionApprovalListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Approval ID
-                     * @return ApprovalNo Approval ID
+                     * 获取Approval number.
+                     * @return ApprovalNo Approval number.
                      * 
                      */
                     std::string GetApprovalNo() const;
 
                     /**
-                     * 设置Approval ID
-                     * @param _approvalNo Approval ID
+                     * 设置Approval number.
+                     * @param _approvalNo Approval number.
                      * 
                      */
                     void SetApprovalNo(const std::string& _approvalNo);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ApprovalNoHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive API ID
-                     * @return APIId Sensitive API ID
+                     * 获取Sensitive API ID.
+                     * @return APIId Sensitive API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置Sensitive API ID
-                     * @param _aPIId Sensitive API ID
+                     * 设置Sensitive API ID.
+                     * @param _aPIId Sensitive API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取API name
-                     * @return APIName API name
+                     * 获取API name.
+                     * @return APIName API name.
                      * 
                      */
                     std::string GetAPIName() const;
 
                     /**
-                     * 设置API name
-                     * @param _aPIName API name
+                     * 设置API name.
+                     * @param _aPIName API name.
                      * 
                      */
                     void SetAPIName(const std::string& _aPIName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool APINameHasBeenSet() const;
 
                     /**
-                     * 获取API request method
-                     * @return APIMethod API request method
+                     * 获取API method.
+                     * @return APIMethod API method.
                      * 
                      */
                     std::string GetAPIMethod() const;
 
                     /**
-                     * 设置API request method
-                     * @param _aPIMethod API request method
+                     * 设置API method.
+                     * @param _aPIMethod API method.
                      * 
                      */
                     void SetAPIMethod(const std::string& _aPIMethod);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool APIMethodHasBeenSet() const;
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Applicant
-                     * @return ApplyUser Applicant
+                     * 获取Applicant.
+                     * @return ApplyUser Applicant.
                      * 
                      */
                     std::string GetApplyUser() const;
 
                     /**
-                     * 设置Applicant
-                     * @param _applyUser Applicant
+                     * 设置Applicant.
+                     * @param _applyUser Applicant.
                      * 
                      */
                     void SetApplyUser(const std::string& _applyUser);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ApplyUserHasBeenSet() const;
 
                     /**
-                     * 获取Application time
-                     * @return ApplyTime Application time
+                     * 获取Application time.
+                     * @return ApplyTime Application time.
                      * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
-                     * 设置Application time
-                     * @param _applyTime Application time
+                     * 设置Application time.
+                     * @param _applyTime Application time.
                      * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool ApplyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Application notes
-                     * @return ApplyNote Application notes
+                     * 获取Application note.
+                     * @return ApplyNote Application note.
                      * 
                      */
                     std::string GetApplyNote() const;
 
                     /**
-                     * 设置Application notes
-                     * @param _applyNote Application notes
+                     * 设置Application note.
+                     * @param _applyNote Application note.
                      * 
                      */
                     void SetApplyNote(const std::string& _applyNote);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ApplyNoteHasBeenSet() const;
 
                     /**
-                     * 获取Approval status. 1: Processing; 20: Rejected; 30: Approved
-                     * @return ApprovalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
+                     * 获取Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+                     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置Approval status. 1: Processing; 20: Rejected; 30: Approved
-                     * @param _approvalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
+                     * 设置Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+                     * @param _approvalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ApprovalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the review user.
-                     * @return ApprovalUser Specifies the review user.
+                     * 获取Approver.
+                     * @return ApprovalUser Approver.
                      * 
                      */
                     std::string GetApprovalUser() const;
 
                     /**
-                     * 设置Specifies the review user.
-                     * @param _approvalUser Specifies the review user.
+                     * 设置Approver.
+                     * @param _approvalUser Approver.
                      * 
                      */
                     void SetApprovalUser(const std::string& _approvalUser);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ApprovalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Approval notes
-                     * @return ApprovalNote Approval notes
+                     * 获取Approval note.
+                     * @return ApprovalNote Approval note.
                      * 
                      */
                     std::string GetApprovalNote() const;
 
                     /**
-                     * 设置Approval notes
-                     * @param _approvalNote Approval notes
+                     * 设置Approval note.
+                     * @param _approvalNote Approval note.
                      * 
                      */
                     void SetApprovalNote(const std::string& _approvalNote);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool ApprovalNoteHasBeenSet() const;
 
                     /**
-                     * 获取Application ID
-                     * @return ApplicationId Application ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _applicationId Application ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Application name
-                     * @return ApplicationName Application name
+                     * 获取Superapp name.
+                     * @return ApplicationName Superapp name.
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name
-                     * @param _applicationName Application name
+                     * 设置Superapp name.
+                     * @param _applicationName Superapp name.
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the application icon.
-                     * @return ApplicationLogo Specifies the application icon.
+                     * 获取Superapp icon.
+                     * @return ApplicationLogo Superapp icon.
                      * 
                      */
                     std::string GetApplicationLogo() const;
 
                     /**
-                     * 设置Specifies the application icon.
-                     * @param _applicationLogo Specifies the application icon.
+                     * 设置Superapp icon.
+                     * @param _applicationLogo Superapp icon.
                      * 
                      */
                     void SetApplicationLogo(const std::string& _applicationLogo);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool ApplicationLogoHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: system; 2: custom.
-                     * @return APIType API type. 1: system; 2: custom.
+                     * 获取API type. Valid values: 1: System; 2: Custom.
+                     * @return APIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: system; 2: custom.
-                     * @param _aPIType API type. 1: system; 2: custom.
+                     * 设置API type. Valid values: 1: System; 2: Custom.
+                     * @param _aPIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -427,67 +427,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Approval ID
+                     * Approval number.
                      */
                     std::string m_approvalNo;
                     bool m_approvalNoHasBeenSet;
 
                     /**
-                     * Sensitive API ID
+                     * Sensitive API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * API name
+                     * API name.
                      */
                     std::string m_aPIName;
                     bool m_aPINameHasBeenSet;
 
                     /**
-                     * API request method
+                     * API method.
                      */
                     std::string m_aPIMethod;
                     bool m_aPIMethodHasBeenSet;
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Applicant
+                     * Applicant.
                      */
                     std::string m_applyUser;
                     bool m_applyUserHasBeenSet;
 
                     /**
-                     * Application time
+                     * Application time.
                      */
                     std::string m_applyTime;
                     bool m_applyTimeHasBeenSet;
 
                     /**
-                     * Application notes
+                     * Application note.
                      */
                     std::string m_applyNote;
                     bool m_applyNoteHasBeenSet;
 
                     /**
-                     * Approval status. 1: Processing; 20: Rejected; 30: Approved
+                     * Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
 
                     /**
-                     * Specifies the review user.
+                     * Approver.
                      */
                     std::string m_approvalUser;
                     bool m_approvalUserHasBeenSet;
@@ -499,31 +499,31 @@ namespace TencentCloud
                     bool m_approvalTimeHasBeenSet;
 
                     /**
-                     * Approval notes
+                     * Approval note.
                      */
                     std::string m_approvalNote;
                     bool m_approvalNoteHasBeenSet;
 
                     /**
-                     * Application ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Application name
+                     * Superapp name.
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Specifies the application icon.
+                     * Superapp icon.
                      */
                     std::string m_applicationLogo;
                     bool m_applicationLogoHasBeenSet;
 
                     /**
-                     * API type. 1: system; 2: custom.
+                     * API type. Valid values: 1: System; 2: Custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification ID
-                     * @return SpecCode Specification ID
+                     * 获取<p>Specification ID.</p>
+                     * @return SpecCode <p>Specification ID.</p>
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Specification ID
-                     * @param _specCode Specification ID
+                     * 设置<p>Specification ID.</p>
+                     * @param _specCode <p>Specification ID.</p>
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return CPU Number of CPU cores
+                     * 获取<p>CPU cores.</p>
+                     * @return CPU <p>CPU cores.</p>
                      * 
                      */
                     uint64_t GetCPU() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cPU Number of CPU cores
+                     * 设置<p>CPU cores.</p>
+                     * @param _cPU <p>CPU cores.</p>
                      * 
                      */
                     void SetCPU(const uint64_t& _cPU);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Memory size in MB
-                     * @return Memory Memory size in MB
+                     * 获取<p>Memory size, in MB.</p>
+                     * @return Memory <p>Memory size, in MB.</p>
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Memory size in MB
-                     * @param _memory Memory size in MB
+                     * 设置<p>Memory size, in MB.</p>
+                     * @param _memory <p>Memory size, in MB.</p>
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Maximum storage capacity in GB supported by this specification
-                     * @return MaxStorage Maximum storage capacity in GB supported by this specification
+                     * 获取<p>Maximum storage capacity supported by this specification, in GB.</p>
+                     * @return MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
-                     * 设置Maximum storage capacity in GB supported by this specification
-                     * @param _maxStorage Maximum storage capacity in GB supported by this specification
+                     * 设置<p>Maximum storage capacity supported by this specification, in GB.</p>
+                     * @param _maxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MaxStorageHasBeenSet() const;
 
                     /**
-                     * 获取Minimum storage capacity in GB supported by this specification
-                     * @return MinStorage Minimum storage capacity in GB supported by this specification
+                     * 获取<p>Minimum storage capacity supported by this specification, in GB.</p>
+                     * @return MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     uint64_t GetMinStorage() const;
 
                     /**
-                     * 设置Minimum storage capacity in GB supported by this specification
-                     * @param _minStorage Minimum storage capacity in GB supported by this specification
+                     * 设置<p>Minimum storage capacity supported by this specification, in GB.</p>
+                     * @param _minStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     void SetMinStorage(const uint64_t& _minStorage);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MinStorageHasBeenSet() const;
 
                     /**
-                     * 获取Estimated QPS for this specification
-                     * @return QPS Estimated QPS for this specification
+                     * 获取<p>Estimated QPS of the specification.</p>
+                     * @return QPS <p>Estimated QPS of the specification.</p>
                      * 
                      */
                     uint64_t GetQPS() const;
 
                     /**
-                     * 设置Estimated QPS for this specification
-                     * @param _qPS Estimated QPS for this specification
+                     * 设置<p>Estimated QPS of the specification.</p>
+                     * @param _qPS <p>Estimated QPS of the specification.</p>
                      * 
                      */
                     void SetQPS(const uint64_t& _qPS);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specification ID
+                     * <p>Specification ID.</p>
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>CPU cores.</p>
                      */
                     uint64_t m_cPU;
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Memory size in MB
+                     * <p>Memory size, in MB.</p>
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Maximum storage capacity in GB supported by this specification
+                     * <p>Maximum storage capacity supported by this specification, in GB.</p>
                      */
                     uint64_t m_maxStorage;
                     bool m_maxStorageHasBeenSet;
 
                     /**
-                     * Minimum storage capacity in GB supported by this specification
+                     * <p>Minimum storage capacity supported by this specification, in GB.</p>
                      */
                     uint64_t m_minStorage;
                     bool m_minStorageHasBeenSet;
 
                     /**
-                     * Estimated QPS for this specification
+                     * <p>Estimated QPS of the specification.</p>
                      */
                     uint64_t m_qPS;
                     bool m_qPSHasBeenSet;

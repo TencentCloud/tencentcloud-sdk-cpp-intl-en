@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of global domain names
+                * Global domain list information.
                 */
                 class DescribeGlobalDomainsListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain ID
-                     * @return DomainId Domain ID
+                     * 获取Domain ID.
+                     * @return DomainId Domain ID.
                      * 
                      */
                     int64_t GetDomainId() const;
 
                     /**
-                     * 设置Domain ID
-                     * @param _domainId Domain ID
+                     * 设置Domain ID.
+                     * @param _domainId Domain ID.
                      * 
                      */
                     void SetDomainId(const int64_t& _domainId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
-                     * @return DomainUrl Domain name
+                     * 获取Domain name.
+                     * @return DomainUrl Domain name.
                      * 
                      */
                     std::string GetDomainUrl() const;
 
                     /**
-                     * 设置Domain name
-                     * @param _domainUrl Domain name
+                     * 设置Domain name.
+                     * @param _domainUrl Domain name.
                      * 
                      */
                     void SetDomainUrl(const std::string& _domainUrl);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DomainUrlHasBeenSet() const;
 
                     /**
-                     * 获取Type. 1: allowlist; 2: blocklist.
-                     * @return DomainType Type. 1: allowlist; 2: blocklist.
+                     * 获取Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @return DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     int64_t GetDomainType() const;
 
                     /**
-                     * 设置Type. 1: allowlist; 2: blocklist.
-                     * @param _domainType Type. 1: allowlist; 2: blocklist.
+                     * 设置Domain type. Valid value: 1: Allowed; 2: Blocked.
+                     * @param _domainType Domain type. Valid value: 1: Allowed; 2: Blocked.
                      * 
                      */
                     void SetDomainType(const int64_t& _domainType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DomainTypeHasBeenSet() const;
 
                     /**
-                     * 获取Creator
-                     * @return CreateUser Creator
+                     * 获取Creator.
+                     * @return CreateUser Creator.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator
-                     * @param _createUser Creator
+                     * 设置Creator.
+                     * @param _createUser Creator.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the updater.
-                     * @return UpdateUser Specifies the updater.
+                     * 获取Last modifier.
+                     * @return UpdateUser Last modifier.
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置Specifies the updater.
-                     * @param _updateUser Specifies the updater.
+                     * 设置Last modifier.
+                     * @param _updateUser Last modifier.
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool UpdateUserHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Last modified time.
+                     * @return UpdateTime Last modified time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Last modified time.
+                     * @param _updateTime Last modified time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain ID
+                     * Domain ID.
                      */
                     int64_t m_domainId;
                     bool m_domainIdHasBeenSet;
 
                     /**
-                     * Domain name
+                     * Domain name.
                      */
                     std::string m_domainUrl;
                     bool m_domainUrlHasBeenSet;
 
                     /**
-                     * Type. 1: allowlist; 2: blocklist.
+                     * Domain type. Valid value: 1: Allowed; 2: Blocked.
                      */
                     int64_t m_domainType;
                     bool m_domainTypeHasBeenSet;
 
                     /**
-                     * Creator
+                     * Creator.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Specifies the updater.
+                     * Last modifier.
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last modified time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

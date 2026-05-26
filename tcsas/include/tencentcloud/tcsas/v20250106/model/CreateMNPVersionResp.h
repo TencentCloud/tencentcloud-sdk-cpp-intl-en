@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response of creating a mini program version
+                * Response for creating a mini program version.
                 */
                 class CreateMNPVersionResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the ID of the task to create a mini program version.
-                     * @return TaskId Specifies the ID of the task to create a mini program version.
+                     * 获取Mini program version compilation task ID.
+                     * @return TaskId Mini program version compilation task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Specifies the ID of the task to create a mini program version.
-                     * @param _taskId Specifies the ID of the task to create a mini program version.
+                     * 设置Mini program version compilation task ID.
+                     * @param _taskId Mini program version compilation task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the ID of the task to create a mini program version.
+                     * Mini program version compilation task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

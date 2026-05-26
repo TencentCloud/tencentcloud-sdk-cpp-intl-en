@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MAU metric comparison response data
+                * MAU metric comparison response data.
                 */
                 class MAUIndicatorCard : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
-                     * @return ComparisonRatio Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+                     * 获取Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+                     * @return ComparisonRatio Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
                      * 
                      */
                     std::string GetComparisonRatio() const;
 
                     /**
-                     * 设置Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
-                     * @param _comparisonRatio Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+                     * 设置Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+                     * @param _comparisonRatio Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
                      * 
                      */
                     void SetComparisonRatio(const std::string& _comparisonRatio);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool ComparisonRatioHasBeenSet() const;
 
                     /**
-                     * 获取1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
-                     * @return ComparisonResult 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+                     * 获取Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+                     * @return ComparisonResult Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
                      * 
                      */
                     int64_t GetComparisonResult() const;
 
                     /**
-                     * 设置1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
-                     * @param _comparisonResult 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+                     * 设置Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+                     * @param _comparisonResult Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
                      * 
                      */
                     void SetComparisonResult(const int64_t& _comparisonResult);
@@ -97,15 +89,15 @@ Returns 0 when SourceMAUNum is 0
                     bool ComparisonResultHasBeenSet() const;
 
                     /**
-                     * 获取Last month's MAU data
-                     * @return SourceMAUNum Last month's MAU data
+                     * 获取Previous month MAU. 
+                     * @return SourceMAUNum Previous month MAU. 
                      * 
                      */
                     int64_t GetSourceMAUNum() const;
 
                     /**
-                     * 设置Last month's MAU data
-                     * @param _sourceMAUNum Last month's MAU data
+                     * 设置Previous month MAU. 
+                     * @param _sourceMAUNum Previous month MAU. 
                      * 
                      */
                     void SetSourceMAUNum(const int64_t& _sourceMAUNum);
@@ -118,15 +110,15 @@ Returns 0 when SourceMAUNum is 0
                     bool SourceMAUNumHasBeenSet() const;
 
                     /**
-                     * 获取This month's MAU data
-                     * @return TargetMAUNum This month's MAU data
+                     * 获取Current month MAU.
+                     * @return TargetMAUNum Current month MAU.
                      * 
                      */
                     int64_t GetTargetMAUNum() const;
 
                     /**
-                     * 设置This month's MAU data
-                     * @param _targetMAUNum This month's MAU data
+                     * 设置Current month MAU.
+                     * @param _targetMAUNum Current month MAU.
                      * 
                      */
                     void SetTargetMAUNum(const int64_t& _targetMAUNum);
@@ -139,15 +131,15 @@ Returns 0 when SourceMAUNum is 0
                     bool TargetMAUNumHasBeenSet() const;
 
                     /**
-                     * 获取Data timestamp
-                     * @return FlushTime Data timestamp
+                     * 获取Data timestamp.
+                     * @return FlushTime Data timestamp.
                      * 
                      */
                     int64_t GetFlushTime() const;
 
                     /**
-                     * 设置Data timestamp
-                     * @param _flushTime Data timestamp
+                     * 设置Data timestamp.
+                     * @param _flushTime Data timestamp.
                      * 
                      */
                     void SetFlushTime(const int64_t& _flushTime);
@@ -162,33 +154,31 @@ Returns 0 when SourceMAUNum is 0
                 private:
 
                     /**
-                     * Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+                     * Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
                      */
                     std::string m_comparisonRatio;
                     bool m_comparisonRatioHasBeenSet;
 
                     /**
-                     * 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+                     * Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
                      */
                     int64_t m_comparisonResult;
                     bool m_comparisonResultHasBeenSet;
 
                     /**
-                     * Last month's MAU data
+                     * Previous month MAU. 
                      */
                     int64_t m_sourceMAUNum;
                     bool m_sourceMAUNumHasBeenSet;
 
                     /**
-                     * This month's MAU data
+                     * Current month MAU.
                      */
                     int64_t m_targetMAUNum;
                     bool m_targetMAUNumHasBeenSet;
 
                     /**
-                     * Data timestamp
+                     * Data timestamp.
                      */
                     int64_t m_flushTime;
                     bool m_flushTimeHasBeenSet;

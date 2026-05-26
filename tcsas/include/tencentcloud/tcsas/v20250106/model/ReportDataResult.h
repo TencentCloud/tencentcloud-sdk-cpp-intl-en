@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * General response for data query reports
+                * General response for data query reports.
                 */
                 class ReportDataResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded result data
-                     * @return DataResult Base64-encoded result data
+                     * 获取Result data in Base64 encoding.
+                     * @return DataResult Result data in Base64 encoding.
                      * 
                      */
                     std::string GetDataResult() const;
 
                     /**
-                     * 设置Base64-encoded result data
-                     * @param _dataResult Base64-encoded result data
+                     * 设置Result data in Base64 encoding.
+                     * @param _dataResult Result data in Base64 encoding.
                      * 
                      */
                     void SetDataResult(const std::string& _dataResult);
@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool DataResultHasBeenSet() const;
 
                     /**
-                     * 获取Executed SQL
+                     * 获取Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecSql Executed SQL
+                     * @return ExecSql Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExecSql() const;
 
                     /**
-                     * 设置Executed SQL
+                     * 设置Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _execSql Executed SQL
+                     * @param _execSql Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -93,18 +93,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecSqlHasBeenSet() const;
 
                     /**
-                     * 获取Execution time
+                     * 获取Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExecTime Execution time
+                     * @return ExecTime Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetExecTime() const;
 
                     /**
-                     * 设置Execution time
+                     * 设置Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _execTime Execution time
+                     * @param _execTime Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -118,18 +118,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExecTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query index ID
+                     * 获取Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndexId Query index ID
+                     * @return IndexId Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIndexId() const;
 
                     /**
-                     * 设置Query index ID
+                     * 设置Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _indexId Query index ID
+                     * @param _indexId Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -145,27 +145,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Base64-encoded result data
+                     * Result data in Base64 encoding.
                      */
                     std::string m_dataResult;
                     bool m_dataResultHasBeenSet;
 
                     /**
-                     * Executed SQL
+                     * Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_execSql;
                     bool m_execSqlHasBeenSet;
 
                     /**
-                     * Execution time
+                     * Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_execTime;
                     bool m_execTimeHasBeenSet;
 
                     /**
-                     * Query index ID
+                     * Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_indexId;

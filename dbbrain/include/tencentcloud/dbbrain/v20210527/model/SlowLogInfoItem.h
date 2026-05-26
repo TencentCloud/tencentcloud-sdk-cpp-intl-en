@@ -164,14 +164,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return QueryTime Execution time in seconds
                      * 
                      */
-                    int64_t GetQueryTime() const;
+                    double GetQueryTime() const;
 
                     /**
                      * 设置Execution time in seconds
                      * @param _queryTime Execution time in seconds
                      * 
                      */
-                    void SetQueryTime(const int64_t& _queryTime);
+                    void SetQueryTime(const double& _queryTime);
 
                     /**
                      * 判断参数 QueryTime 是否已赋值
@@ -187,7 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    int64_t GetLockTime() const;
+                    double GetLockTime() const;
 
                     /**
                      * 设置Lock time in seconds
@@ -196,7 +196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetLockTime(const int64_t& _lockTime);
+                    void SetLockTime(const double& _lockTime);
 
                     /**
                      * 判断参数 LockTime 是否已赋值
@@ -292,14 +292,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Execution time in seconds
                      */
-                    int64_t m_queryTime;
+                    double m_queryTime;
                     bool m_queryTimeHasBeenSet;
 
                     /**
                      * Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    int64_t m_lockTime;
+                    double m_lockTime;
                     bool m_lockTimeHasBeenSet;
 
                     /**

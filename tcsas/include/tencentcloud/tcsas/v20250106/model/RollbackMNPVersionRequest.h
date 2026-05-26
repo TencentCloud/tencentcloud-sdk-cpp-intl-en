@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version ID
-                     * @return MNPVersionId Mini program version ID
+                     * 获取Mini program version ID.
+                     * @return MNPVersionId Mini program version ID.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-                     * @param _mNPVersionId Mini program version ID
+                     * 设置Mini program version ID.
+                     * @param _mNPVersionId Mini program version ID.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program version number
-                     * @return MNPVersion Mini program version number
+                     * 获取Mini program version number.
+                     * @return MNPVersion Mini program version number.
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置Mini program version number
-                     * @param _mNPVersion Mini program version number
+                     * 设置Mini program version number.
+                     * @param _mNPVersion Mini program version number.
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program version ID
+                     * Mini program version ID.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Mini program version number
+                     * Mini program version number.
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;

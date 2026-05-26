@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Application configuration info
+                * Superapp configuration infomation.
                 */
                 class ApplicationConfigInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Superapp configuration type: 1 Non-production, 2 Production
-                     * @return ApplicationType Superapp configuration type: 1 Non-production, 2 Production
+                     * 获取Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+                     * @return ApplicationType Superapp configuration type. Valid values: 1 Non-production; 2 Production.
                      * 
                      */
                     int64_t GetApplicationType() const;
 
                     /**
-                     * 设置Superapp configuration type: 1 Non-production, 2 Production
-                     * @param _applicationType Superapp configuration type: 1 Non-production, 2 Production
+                     * 设置Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+                     * @param _applicationType Superapp configuration type. Valid values: 1 Non-production; 2 Production.
                      * 
                      */
                     void SetApplicationType(const int64_t& _applicationType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Superapp package name
-                     * @return AppKey Superapp package name
+                     * 获取Superapp package name.
+                     * @return AppKey Superapp package name.
                      * 
                      */
                     std::string GetAppKey() const;
 
                     /**
-                     * 设置Superapp package name
-                     * @param _appKey Superapp package name
+                     * 设置Superapp package name.
+                     * @param _appKey Superapp package name.
                      * 
                      */
                     void SetAppKey(const std::string& _appKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AppKeyHasBeenSet() const;
 
                     /**
-                     * 获取Superapp URL
-                     * @return AppURL Superapp URL
+                     * 获取Superapp URL.
+                     * @return AppURL Superapp URL.
                      * 
                      */
                     std::string GetAppURL() const;
 
                     /**
-                     * 设置Superapp URL
-                     * @param _appURL Superapp URL
+                     * 设置Superapp URL.
+                     * @param _appURL Superapp URL.
                      * 
                      */
                     void SetAppURL(const std::string& _appURL);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AppURLHasBeenSet() const;
 
                     /**
-                     * 获取Superapp configuration ID
-                     * @return Id Superapp configuration ID
+                     * 获取Superapp configuration ID.
+                     * @return Id Superapp configuration ID.
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Superapp configuration ID
-                     * @param _id Superapp configuration ID
+                     * 设置Superapp configuration ID.
+                     * @param _id Superapp configuration ID.
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Superapp configuration type: 1 Non-production, 2 Production
+                     * Superapp configuration type. Valid values: 1 Non-production; 2 Production.
                      */
                     int64_t m_applicationType;
                     bool m_applicationTypeHasBeenSet;
 
                     /**
-                     * Superapp package name
+                     * Superapp package name.
                      */
                     std::string m_appKey;
                     bool m_appKeyHasBeenSet;
 
                     /**
-                     * Superapp URL
+                     * Superapp URL.
                      */
                     std::string m_appURL;
                     bool m_appURLHasBeenSet;
 
                     /**
-                     * Superapp configuration ID
+                     * Superapp configuration ID.
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;

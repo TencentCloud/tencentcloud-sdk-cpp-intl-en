@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取The major database version number, such as 11, 12, 13.
-                     * @return DBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 获取Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+                     * @return DBMajorVersion Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置The major database version number, such as 11, 12, 13.
-                     * @param _dBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 设置Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+                     * @param _dBMajorVersion Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * The major database version number, such as 11, 12, 13.
+                     * Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;

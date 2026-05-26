@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response object of querying the rollback version list
+                * Response of querying the rollback version list.
                 */
                 class DescribeMNGRevertOnlineVersionPageResp : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of entries</p>
-                     * @return TotalCount <p>Total number of entries</p>
+                     * 获取<p>Total number of entries.</p>
+                     * @return TotalCount <p>Total number of entries.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置<p>Total number of entries</p>
-                     * @param _totalCount <p>Total number of entries</p>
+                     * 设置<p>Total number of entries.</p>
+                     * @param _totalCount <p>Total number of entries.</p>
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>List information</p>
-                     * @return DataList <p>List information</p>
+                     * 获取<p>List data.</p>
+                     * @return DataList <p>List data.</p>
                      * 
                      */
                     std::vector<QueryMNGOnlineVersionResp> GetDataList() const;
 
                     /**
-                     * 设置<p>List information</p>
-                     * @param _dataList <p>List information</p>
+                     * 设置<p>List data.</p>
+                     * @param _dataList <p>List data.</p>
                      * 
                      */
                     void SetDataList(const std::vector<QueryMNGOnlineVersionResp>& _dataList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of entries</p>
+                     * <p>Total number of entries.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>List information</p>
+                     * <p>List data.</p>
                      */
                     std::vector<QueryMNGOnlineVersionResp> m_dataList;
                     bool m_dataListHasBeenSet;

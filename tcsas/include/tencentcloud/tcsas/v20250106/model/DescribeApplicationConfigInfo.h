@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response data for retrieving superapp configuration information
+                * Response for querying superapp configuration information.
                 */
                 class DescribeApplicationConfigInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Android configuration list
-                     * @return AndroidConfig Android configuration list
+                     * 获取Android configuration list.
+                     * @return AndroidConfig Android configuration list.
                      * 
                      */
                     std::vector<ApplicationConfigInfo> GetAndroidConfig() const;
 
                     /**
-                     * 设置Android configuration list
-                     * @param _androidConfig Android configuration list
+                     * 设置Android configuration list.
+                     * @param _androidConfig Android configuration list.
                      * 
                      */
                     void SetAndroidConfig(const std::vector<ApplicationConfigInfo>& _androidConfig);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AndroidConfigHasBeenSet() const;
 
                     /**
-                     * 获取iOS configuration list
-                     * @return IosConfig iOS configuration list
+                     * 获取iOS configuration list.
+                     * @return IosConfig iOS configuration list.
                      * 
                      */
                     std::vector<ApplicationConfigInfo> GetIosConfig() const;
 
                     /**
-                     * 设置iOS configuration list
-                     * @param _iosConfig iOS configuration list
+                     * 设置iOS configuration list.
+                     * @param _iosConfig iOS configuration list.
                      * 
                      */
                     void SetIosConfig(const std::vector<ApplicationConfigInfo>& _iosConfig);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Android configuration list
+                     * Android configuration list.
                      */
                     std::vector<ApplicationConfigInfo> m_androidConfig;
                     bool m_androidConfigHasBeenSet;
 
                     /**
-                     * iOS configuration list
+                     * iOS configuration list.
                      */
                     std::vector<ApplicationConfigInfo> m_iosConfig;
                     bool m_iosConfigHasBeenSet;

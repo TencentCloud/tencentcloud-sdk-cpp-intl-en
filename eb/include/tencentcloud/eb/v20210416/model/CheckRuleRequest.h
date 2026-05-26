@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event Information
-                     * @return Event Event Information
+                     * 获取
+                     * @return Event 
                      * 
                      */
                     std::string GetEvent() const;
 
                     /**
-                     * 设置Event Information
-                     * @param _event Event Information
+                     * 设置
+                     * @param _event 
                      * 
                      */
                     void SetEvent(const std::string& _event);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EventHasBeenSet() const;
 
                     /**
-                     * 获取EventPattern Information
-                     * @return EventPattern EventPattern Information
+                     * 获取
+                     * @return EventPattern 
                      * 
                      */
                     std::string GetEventPattern() const;
 
                     /**
-                     * 设置EventPattern Information
-                     * @param _eventPattern EventPattern Information
+                     * 设置
+                     * @param _eventPattern 
                      * 
                      */
                     void SetEventPattern(const std::string& _eventPattern);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Event Information
+                     * 
                      */
                     std::string m_event;
                     bool m_eventHasBeenSet;
 
                     /**
-                     * EventPattern Information
+                     * 
                      */
                     std::string m_eventPattern;
                     bool m_eventPatternHasBeenSet;

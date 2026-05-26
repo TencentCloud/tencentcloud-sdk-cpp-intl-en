@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool RestrictionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return VpcRestrictionEffect Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
+                     * @return VpcRestrictionEffect Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
                      * 
                      */
                     std::string GetVpcRestrictionEffect() const;
@@ -74,10 +72,8 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool VpcRestrictionEffectHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return VpcIdSet Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the vpc id list to allow or deny downloading backup files.
+                     * @return VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
                      * 
                      */
                     std::vector<std::string> GetVpcIdSet() const;
@@ -90,10 +86,8 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool VpcIdSetHasBeenSet() const;
 
                     /**
-                     * 获取Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IpRestrictionEffect Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
+                     * @return IpRestrictionEffect ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
                      * 
                      */
                     std::string GetIpRestrictionEffect() const;
@@ -106,10 +100,8 @@ Note: Note: This field may return null, indicating that no valid values can be o
                     bool IpRestrictionEffectHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return IpSet Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the ip list to allow or deny downloading the backup file.
+                     * @return IpSet Specifies the ip list to allow or deny downloading the backup file.
                      * 
                      */
                     std::vector<std::string> GetIpSet() const;
@@ -130,29 +122,25 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_restrictionTypeHasBeenSet;
 
                     /**
-                     * Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
                      */
                     std::string m_vpcRestrictionEffect;
                     bool m_vpcRestrictionEffectHasBeenSet;
 
                     /**
-                     * Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the vpc id list to allow or deny downloading backup files.
                      */
                     std::vector<std::string> m_vpcIdSet;
                     bool m_vpcIdSetHasBeenSet;
 
                     /**
-                     * Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
+                     * ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
                      */
                     std::string m_ipRestrictionEffect;
                     bool m_ipRestrictionEffectHasBeenSet;
 
                     /**
-                     * Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the ip list to allow or deny downloading the backup file.
                      */
                     std::vector<std::string> m_ipSet;
                     bool m_ipSetHasBeenSet;

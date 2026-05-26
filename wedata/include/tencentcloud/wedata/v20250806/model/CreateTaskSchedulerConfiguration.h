@@ -52,59 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
-                     * @return CycleType Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+                     * 获取<p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+                     * @return CycleType <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
                      * 
                      */
                     std::string GetCycleType() const;
 
                     /**
-                     * 设置Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
-                     * @param _cycleType Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+                     * 设置<p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+                     * @param _cycleType <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
                      * 
                      */
                     void SetCycleType(const std::string& _cycleType);
@@ -117,15 +73,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool CycleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Time zone, defaults to UTC+8.
-                     * @return ScheduleTimeZone Time zone, defaults to UTC+8.
+                     * 获取<p>Time zone, defaults to UTC+8</p>
+                     * @return ScheduleTimeZone <p>Time zone, defaults to UTC+8</p>
                      * 
                      */
                     std::string GetScheduleTimeZone() const;
 
                     /**
-                     * 设置Time zone, defaults to UTC+8.
-                     * @param _scheduleTimeZone Time zone, defaults to UTC+8.
+                     * 设置<p>Time zone, defaults to UTC+8</p>
+                     * @param _scheduleTimeZone <p>Time zone, defaults to UTC+8</p>
                      * 
                      */
                     void SetScheduleTimeZone(const std::string& _scheduleTimeZone);
@@ -138,15 +94,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool ScheduleTimeZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cron expression, defaults to 0 0 0 * * ? *.
-                     * @return CrontabExpression Cron expression, defaults to 0 0 0 * * ? *.
+                     * 获取<p>Cron expression, defaults to 0 0 0 * * ? *</p>
+                     * @return CrontabExpression <p>Cron expression, defaults to 0 0 0 * * ? *</p>
                      * 
                      */
                     std::string GetCrontabExpression() const;
 
                     /**
-                     * 设置Cron expression, defaults to 0 0 0 * * ? *.
-                     * @param _crontabExpression Cron expression, defaults to 0 0 0 * * ? *.
+                     * 设置<p>Cron expression, defaults to 0 0 0 * * ? *</p>
+                     * @param _crontabExpression <p>Cron expression, defaults to 0 0 0 * * ? *</p>
                      * 
                      */
                     void SetCrontabExpression(const std::string& _crontabExpression);
@@ -159,15 +115,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool CrontabExpressionHasBeenSet() const;
 
                     /**
-                     * 获取Effective date, defaults to 00:00:00 of the current date.
-                     * @return StartTime Effective date, defaults to 00:00:00 of the current date.
+                     * 获取<p>Effective date, defaults to 00:00:00 of the current date</p>
+                     * @return StartTime <p>Effective date, defaults to 00:00:00 of the current date</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Effective date, defaults to 00:00:00 of the current date.
-                     * @param _startTime Effective date, defaults to 00:00:00 of the current date.
+                     * 设置<p>Effective date, defaults to 00:00:00 of the current date</p>
+                     * @param _startTime <p>Effective date, defaults to 00:00:00 of the current date</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -180,15 +136,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End date, defaults to 2099-12-31 23:59:59.
-                     * @return EndTime End date, defaults to 2099-12-31 23:59:59.
+                     * 获取<p>End date, defaults to 2099-12-31 23:59:59</p>
+                     * @return EndTime <p>End date, defaults to 2099-12-31 23:59:59</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End date, defaults to 2099-12-31 23:59:59.
-                     * @param _endTime End date, defaults to 2099-12-31 23:59:59.
+                     * 设置<p>End date, defaults to 2099-12-31 23:59:59</p>
+                     * @param _endTime <p>End date, defaults to 2099-12-31 23:59:59</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -201,15 +157,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Execution time: the left-closed interval. Default: 00:00.
-                     * @return ExecutionStartTime Execution time: the left-closed interval. Default: 00:00.
+                     * 获取<p>Execution time left-closed interval, default 00:00</p>
+                     * @return ExecutionStartTime <p>Execution time left-closed interval, default 00:00</p>
                      * 
                      */
                     std::string GetExecutionStartTime() const;
 
                     /**
-                     * 设置Execution time: the left-closed interval. Default: 00:00.
-                     * @param _executionStartTime Execution time: the left-closed interval. Default: 00:00.
+                     * 设置<p>Execution time left-closed interval, default 00:00</p>
+                     * @param _executionStartTime <p>Execution time left-closed interval, default 00:00</p>
                      * 
                      */
                     void SetExecutionStartTime(const std::string& _executionStartTime);
@@ -222,15 +178,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool ExecutionStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Execution time: the right closed interval. Default: 23:59.
-                     * @return ExecutionEndTime Execution time: the right closed interval. Default: 23:59.
+                     * 获取<p>Execution time right closed interval, default 23:59</p>
+                     * @return ExecutionEndTime <p>Execution time right closed interval, default 23:59</p>
                      * 
                      */
                     std::string GetExecutionEndTime() const;
 
                     /**
-                     * 设置Execution time: the right closed interval. Default: 23:59.
-                     * @param _executionEndTime Execution time: the right closed interval. Default: 23:59.
+                     * 设置<p>Execution time right closed interval, default 23:59</p>
+                     * @param _executionEndTime <p>Execution time right closed interval, default 23:59</p>
                      * 
                      */
                     void SetExecutionEndTime(const std::string& _executionEndTime);
@@ -243,15 +199,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool ExecutionEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
-                     * @return CalendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+                     * 获取<p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+                     * @return CalendarOpen <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
                      * 
                      */
                     std::string GetCalendarOpen() const;
 
                     /**
-                     * 设置Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
-                     * @param _calendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+                     * 设置<p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+                     * @param _calendarOpen <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
                      * 
                      */
                     void SetCalendarOpen(const std::string& _calendarOpen);
@@ -264,15 +220,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool CalendarOpenHasBeenSet() const;
 
                     /**
-                     * 获取Calendar scheduling:  the calendar ID.
-                     * @return CalendarId Calendar scheduling:  the calendar ID.
+                     * 获取<p>Calendar scheduling Calendar ID</p>
+                     * @return CalendarId <p>Calendar scheduling Calendar ID</p>
                      * 
                      */
                     std::string GetCalendarId() const;
 
                     /**
-                     * 设置Calendar scheduling:  the calendar ID.
-                     * @param _calendarId Calendar scheduling:  the calendar ID.
+                     * 设置<p>Calendar scheduling Calendar ID</p>
+                     * @param _calendarId <p>Calendar scheduling Calendar ID</p>
                      * 
                      */
                     void SetCalendarId(const std::string& _calendarId);
@@ -285,15 +241,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool CalendarIdHasBeenSet() const;
 
                     /**
-                     * 获取Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
-                     * @return SelfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+                     * 获取<p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+                     * @return SelfDepend <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
                      * 
                      */
                     std::string GetSelfDepend() const;
 
                     /**
-                     * 设置Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
-                     * @param _selfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+                     * 设置<p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+                     * @param _selfDepend <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
                      * 
                      */
                     void SetSelfDepend(const std::string& _selfDepend);
@@ -306,15 +262,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool SelfDependHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the upstream dependency list.
-                     * @return UpstreamDependencyConfigList Specifies the upstream dependency list.
+                     * 获取<p>Upstream dependency array</p>
+                     * @return UpstreamDependencyConfigList <p>Upstream dependency array</p>
                      * 
                      */
                     std::vector<DependencyTaskBrief> GetUpstreamDependencyConfigList() const;
 
                     /**
-                     * 设置Specifies the upstream dependency list.
-                     * @param _upstreamDependencyConfigList Specifies the upstream dependency list.
+                     * 设置<p>Upstream dependency array</p>
+                     * @param _upstreamDependencyConfigList <p>Upstream dependency array</p>
                      * 
                      */
                     void SetUpstreamDependencyConfigList(const std::vector<DependencyTaskBrief>& _upstreamDependencyConfigList);
@@ -327,15 +283,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool UpstreamDependencyConfigListHasBeenSet() const;
 
                     /**
-                     * 获取List of Events
-                     * @return EventListenerList List of Events
+                     * 获取<p>Event array</p>
+                     * @return EventListenerList <p>Event array</p>
                      * 
                      */
                     std::vector<EventListener> GetEventListenerList() const;
 
                     /**
-                     * 设置List of Events
-                     * @param _eventListenerList List of Events
+                     * 设置<p>Event array</p>
+                     * @param _eventListenerList <p>Event array</p>
                      * 
                      */
                     void SetEventListenerList(const std::vector<EventListener>& _eventListenerList);
@@ -348,39 +304,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool EventListenerListHasBeenSet() const;
 
                     /**
-                     * 获取Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
-                     * @return AllowRedoType Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+                     * 获取<p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+                     * @return AllowRedoType <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
                      * 
                      */
                     std::string GetAllowRedoType() const;
 
                     /**
-                     * 设置Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
-                     * @param _allowRedoType Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+                     * 设置<p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+                     * @param _allowRedoType <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
                      * 
                      */
                     void SetAllowRedoType(const std::string& _allowRedoType);
@@ -393,15 +325,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool AllowRedoTypeHasBeenSet() const;
 
                     /**
-                     * 获取Output parameter list.
-                     * @return ParamTaskOutList Output parameter list.
+                     * 获取<p>Output parameter array</p>
+                     * @return ParamTaskOutList <p>Output parameter array</p>
                      * 
                      */
                     std::vector<OutTaskParameter> GetParamTaskOutList() const;
 
                     /**
-                     * 设置Output parameter list.
-                     * @param _paramTaskOutList Output parameter list.
+                     * 设置<p>Output parameter array</p>
+                     * @param _paramTaskOutList <p>Output parameter array</p>
                      * 
                      */
                     void SetParamTaskOutList(const std::vector<OutTaskParameter>& _paramTaskOutList);
@@ -414,15 +346,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool ParamTaskOutListHasBeenSet() const;
 
                     /**
-                     * 获取Input parameter list.
-                     * @return ParamTaskInList Input parameter list.
+                     * 获取<p>Input parameter array</p>
+                     * @return ParamTaskInList <p>Input parameter array</p>
                      * 
                      */
                     std::vector<InTaskParameter> GetParamTaskInList() const;
 
                     /**
-                     * 设置Input parameter list.
-                     * @param _paramTaskInList Input parameter list.
+                     * 设置<p>Input parameter array</p>
+                     * @param _paramTaskInList <p>Input parameter array</p>
                      * 
                      */
                     void SetParamTaskInList(const std::vector<InTaskParameter>& _paramTaskInList);
@@ -435,15 +367,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool ParamTaskInListHasBeenSet() const;
 
                     /**
-                     * 获取Output registration.
-                     * @return TaskOutputRegistryList Output registration.
+                     * 获取<p>Output registration</p>
+                     * @return TaskOutputRegistryList <p>Output registration</p>
                      * 
                      */
                     std::vector<TaskDataRegistry> GetTaskOutputRegistryList() const;
 
                     /**
-                     * 设置Output registration.
-                     * @param _taskOutputRegistryList Output registration.
+                     * 设置<p>Output registration</p>
+                     * @param _taskOutputRegistryList <p>Output registration</p>
                      * 
                      */
                     void SetTaskOutputRegistryList(const std::vector<TaskDataRegistry>& _taskOutputRegistryList);
@@ -456,23 +388,15 @@ CRONTAB_CYCLE: specifies the crontab expression type.
                     bool TaskOutputRegistryListHasBeenSet() const;
 
                     /**
-                     * 获取**Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
-                     * @return InitStrategy **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+                     * 获取<p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+                     * @return InitStrategy <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
                      * 
                      */
                     std::string GetInitStrategy() const;
 
                     /**
-                     * 设置**Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
-                     * @param _initStrategy **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+                     * 设置<p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+                     * @param _initStrategy <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
                      * 
                      */
                     void SetInitStrategy(const std::string& _initStrategy);
@@ -485,15 +409,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool InitStrategyHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-                     * @return ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+                     * 获取<p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+                     * @return ScheduleRunType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      * @deprecated
                      */
                     std::string GetScheduleRunType() const;
 
                     /**
-                     * 设置Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-                     * @param _scheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+                     * 设置<p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+                     * @param _scheduleRunType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      * @deprecated
                      */
                     void SetScheduleRunType(const std::string& _scheduleRunType);
@@ -506,15 +430,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool ScheduleRunTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-                     * @return RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+                     * 获取<p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+                     * @return RunPriority <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      * @deprecated
                      */
                     std::string GetRunPriority() const;
 
                     /**
-                     * 设置Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-                     * @param _runPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+                     * 设置<p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+                     * @param _runPriority <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      * @deprecated
                      */
                     void SetRunPriority(const std::string& _runPriority);
@@ -527,15 +451,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool RunPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Retry Policy: Retry Wait Time (in minutes): Default 5
-                     * @return RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+                     * 获取<p>Retry policy Retry wait time, in minutes: Default: 5</p>
+                     * @return RetryWait <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      * @deprecated
                      */
                     std::string GetRetryWait() const;
 
                     /**
-                     * 设置Retry Policy: Retry Wait Time (in minutes): Default 5
-                     * @param _retryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+                     * 设置<p>Retry policy Retry wait time, in minutes: Default: 5</p>
+                     * @param _retryWait <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      * @deprecated
                      */
                     void SetRetryWait(const std::string& _retryWait);
@@ -548,15 +472,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool RetryWaitHasBeenSet() const;
 
                     /**
-                     * 获取Retry Policy: maximum attempts. Default: 4.
-                     * @return MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+                     * 获取<p>Retry policy Maximum attempts, Default: 4</p>
+                     * @return MaxRetryAttempts <p>Retry policy Maximum attempts, Default: 4</p>
                      * @deprecated
                      */
                     std::string GetMaxRetryAttempts() const;
 
                     /**
-                     * 设置Retry Policy: maximum attempts. Default: 4.
-                     * @param _maxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+                     * 设置<p>Retry policy Maximum attempts, Default: 4</p>
+                     * @param _maxRetryAttempts <p>Retry policy Maximum attempts, Default: 4</p>
                      * @deprecated
                      */
                     void SetMaxRetryAttempts(const std::string& _maxRetryAttempts);
@@ -569,15 +493,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool MaxRetryAttemptsHasBeenSet() const;
 
                     /**
-                     * 获取Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-                     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+                     * 获取<p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+                     * @return ExecutionTTL <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      * @deprecated
                      */
                     std::string GetExecutionTTL() const;
 
                     /**
-                     * 设置Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-                     * @param _executionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+                     * 设置<p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+                     * @param _executionTTL <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      * @deprecated
                      */
                     void SetExecutionTTL(const std::string& _executionTTL);
@@ -590,15 +514,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool ExecutionTTLHasBeenSet() const;
 
                     /**
-                     * 获取Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * 获取<p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+                     * @return WaitExecutionTotalTTL <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      * @deprecated
                      */
                     std::string GetWaitExecutionTotalTTL() const;
 
                     /**
-                     * 设置Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-                     * @param _waitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * 设置<p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+                     * @param _waitExecutionTotalTTL <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      * @deprecated
                      */
                     void SetWaitExecutionTotalTTL(const std::string& _waitExecutionTotalTTL);
@@ -611,15 +535,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool WaitExecutionTotalTTLHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
-                     * @return ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+                     * 获取<p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+                     * @return ScheduleType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      * 
                      */
                     int64_t GetScheduleType() const;
 
                     /**
-                     * 设置Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
-                     * @param _scheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+                     * 设置<p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+                     * @param _scheduleType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      * 
                      */
                     void SetScheduleType(const int64_t& _scheduleType);
@@ -632,15 +556,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool ScheduleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-                     * @return RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+                     * 获取<p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+                     * @return RunPriorityType <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      * 
                      */
                     int64_t GetRunPriorityType() const;
 
                     /**
-                     * 设置Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-                     * @param _runPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+                     * 设置<p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+                     * @param _runPriorityType <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      * 
                      */
                     void SetRunPriorityType(const int64_t& _runPriorityType);
@@ -653,15 +577,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool RunPriorityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Retry policy retry wait time, in minutes: default: 5.
-                     * @return RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+                     * 获取<p>Retry policy Retry wait time, in minutes: Default: 5</p>
+                     * @return RetryWaitMinute <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      * 
                      */
                     int64_t GetRetryWaitMinute() const;
 
                     /**
-                     * 设置Retry policy retry wait time, in minutes: default: 5.
-                     * @param _retryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+                     * 设置<p>Retry policy Retry wait time, in minutes: Default: 5</p>
+                     * @param _retryWaitMinute <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      * 
                      */
                     void SetRetryWaitMinute(const int64_t& _retryWaitMinute);
@@ -674,15 +598,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool RetryWaitMinuteHasBeenSet() const;
 
                     /**
-                     * 获取Maximum attempts of the retry policy. default: 4.
-                     * @return MaxRetryNumber Maximum attempts of the retry policy. default: 4.
+                     * 获取<p>Retry policy Maximum attempts, Default: 4</p>
+                     * @return MaxRetryNumber <p>Retry policy Maximum attempts, Default: 4</p>
                      * 
                      */
                     int64_t GetMaxRetryNumber() const;
 
                     /**
-                     * 设置Maximum attempts of the retry policy. default: 4.
-                     * @param _maxRetryNumber Maximum attempts of the retry policy. default: 4.
+                     * 设置<p>Retry policy Maximum attempts, Default: 4</p>
+                     * @param _maxRetryNumber <p>Retry policy Maximum attempts, Default: 4</p>
                      * 
                      */
                     void SetMaxRetryNumber(const int64_t& _maxRetryNumber);
@@ -695,15 +619,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool MaxRetryNumberHasBeenSet() const;
 
                     /**
-                     * 获取Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
-                     * @return ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+                     * 获取<p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+                     * @return ExecutionTTLMinute <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      * 
                      */
                     int64_t GetExecutionTTLMinute() const;
 
                     /**
-                     * 设置Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
-                     * @param _executionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+                     * 设置<p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+                     * @param _executionTTLMinute <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      * 
                      */
                     void SetExecutionTTLMinute(const int64_t& _executionTTLMinute);
@@ -716,15 +640,15 @@ T_PLUS_1: specifies t+1 generation.
                     bool ExecutionTTLMinuteHasBeenSet() const;
 
                     /**
-                     * 获取Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
-                     * @return WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+                     * 获取<p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+                     * @return WaitExecutionTotalTTLMinute <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      * 
                      */
                     int64_t GetWaitExecutionTotalTTLMinute() const;
 
                     /**
-                     * 设置Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
-                     * @param _waitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+                     * 设置<p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+                     * @param _waitExecutionTotalTTLMinute <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      * 
                      */
                     void SetWaitExecutionTotalTTLMinute(const int64_t& _waitExecutionTotalTTLMinute);
@@ -736,200 +660,235 @@ T_PLUS_1: specifies t+1 generation.
                      */
                     bool WaitExecutionTotalTTLMinuteHasBeenSet() const;
 
+                    /**
+                     * 获取<ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+                     * @return DependencyTriggerPolicy <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+                     * 
+                     */
+                    std::string GetDependencyTriggerPolicy() const;
+
+                    /**
+                     * 设置<ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+                     * @param _dependencyTriggerPolicy <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+                     * 
+                     */
+                    void SetDependencyTriggerPolicy(const std::string& _dependencyTriggerPolicy);
+
+                    /**
+                     * 判断参数 DependencyTriggerPolicy 是否已赋值
+                     * @return DependencyTriggerPolicy 是否已赋值
+                     * 
+                     */
+                    bool DependencyTriggerPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+                     * @return AllowDownstreamDependency <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+                     * @deprecated
+                     */
+                    int64_t GetAllowDownstreamDependency() const;
+
+                    /**
+                     * 设置<p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+                     * @param _allowDownstreamDependency <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+                     * @deprecated
+                     */
+                    void SetAllowDownstreamDependency(const int64_t& _allowDownstreamDependency);
+
+                    /**
+                     * 判断参数 AllowDownstreamDependency 是否已赋值
+                     * @return AllowDownstreamDependency 是否已赋值
+                     * @deprecated
+                     */
+                    bool AllowDownstreamDependencyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+                     * <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
                      */
                     std::string m_cycleType;
                     bool m_cycleTypeHasBeenSet;
 
                     /**
-                     * Time zone, defaults to UTC+8.
+                     * <p>Time zone, defaults to UTC+8</p>
                      */
                     std::string m_scheduleTimeZone;
                     bool m_scheduleTimeZoneHasBeenSet;
 
                     /**
-                     * Cron expression, defaults to 0 0 0 * * ? *.
+                     * <p>Cron expression, defaults to 0 0 0 * * ? *</p>
                      */
                     std::string m_crontabExpression;
                     bool m_crontabExpressionHasBeenSet;
 
                     /**
-                     * Effective date, defaults to 00:00:00 of the current date.
+                     * <p>Effective date, defaults to 00:00:00 of the current date</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End date, defaults to 2099-12-31 23:59:59.
+                     * <p>End date, defaults to 2099-12-31 23:59:59</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Execution time: the left-closed interval. Default: 00:00.
+                     * <p>Execution time left-closed interval, default 00:00</p>
                      */
                     std::string m_executionStartTime;
                     bool m_executionStartTimeHasBeenSet;
 
                     /**
-                     * Execution time: the right closed interval. Default: 23:59.
+                     * <p>Execution time right closed interval, default 23:59</p>
                      */
                     std::string m_executionEndTime;
                     bool m_executionEndTimeHasBeenSet;
 
                     /**
-                     * Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+                     * <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
                      */
                     std::string m_calendarOpen;
                     bool m_calendarOpenHasBeenSet;
 
                     /**
-                     * Calendar scheduling:  the calendar ID.
+                     * <p>Calendar scheduling Calendar ID</p>
                      */
                     std::string m_calendarId;
                     bool m_calendarIdHasBeenSet;
 
                     /**
-                     * Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+                     * <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
                      */
                     std::string m_selfDepend;
                     bool m_selfDependHasBeenSet;
 
                     /**
-                     * Specifies the upstream dependency list.
+                     * <p>Upstream dependency array</p>
                      */
                     std::vector<DependencyTaskBrief> m_upstreamDependencyConfigList;
                     bool m_upstreamDependencyConfigListHasBeenSet;
 
                     /**
-                     * List of Events
+                     * <p>Event array</p>
                      */
                     std::vector<EventListener> m_eventListenerList;
                     bool m_eventListenerListHasBeenSet;
 
                     /**
-                     * Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+                     * <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
                      */
                     std::string m_allowRedoType;
                     bool m_allowRedoTypeHasBeenSet;
 
                     /**
-                     * Output parameter list.
+                     * <p>Output parameter array</p>
                      */
                     std::vector<OutTaskParameter> m_paramTaskOutList;
                     bool m_paramTaskOutListHasBeenSet;
 
                     /**
-                     * Input parameter list.
+                     * <p>Input parameter array</p>
                      */
                     std::vector<InTaskParameter> m_paramTaskInList;
                     bool m_paramTaskInListHasBeenSet;
 
                     /**
-                     * Output registration.
+                     * <p>Output registration</p>
                      */
                     std::vector<TaskDataRegistry> m_taskOutputRegistryList;
                     bool m_taskOutputRegistryListHasBeenSet;
 
                     /**
-                     * **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+                     * <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
                      */
                     std::string m_initStrategy;
                     bool m_initStrategyHasBeenSet;
 
                     /**
-                     * Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+                     * <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      */
                     std::string m_scheduleRunType;
                     bool m_scheduleRunTypeHasBeenSet;
 
                     /**
-                     * Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+                     * <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      */
                     std::string m_runPriority;
                     bool m_runPriorityHasBeenSet;
 
                     /**
-                     * Retry Policy: Retry Wait Time (in minutes): Default 5
+                     * <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      */
                     std::string m_retryWait;
                     bool m_retryWaitHasBeenSet;
 
                     /**
-                     * Retry Policy: maximum attempts. Default: 4.
+                     * <p>Retry policy Maximum attempts, Default: 4</p>
                      */
                     std::string m_maxRetryAttempts;
                     bool m_maxRetryAttemptsHasBeenSet;
 
                     /**
-                     * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+                     * <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      */
                     std::string m_executionTTL;
                     bool m_executionTTLHasBeenSet;
 
                     /**
-                     * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+                     * <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      */
                     std::string m_waitExecutionTotalTTL;
                     bool m_waitExecutionTotalTTLHasBeenSet;
 
                     /**
-                     * Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+                     * <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
                      */
                     int64_t m_scheduleType;
                     bool m_scheduleTypeHasBeenSet;
 
                     /**
-                     * Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+                     * <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
                      */
                     int64_t m_runPriorityType;
                     bool m_runPriorityTypeHasBeenSet;
 
                     /**
-                     * Retry policy retry wait time, in minutes: default: 5.
+                     * <p>Retry policy Retry wait time, in minutes: Default: 5</p>
                      */
                     int64_t m_retryWaitMinute;
                     bool m_retryWaitMinuteHasBeenSet;
 
                     /**
-                     * Maximum attempts of the retry policy. default: 4.
+                     * <p>Retry policy Maximum attempts, Default: 4</p>
                      */
                     int64_t m_maxRetryNumber;
                     bool m_maxRetryNumberHasBeenSet;
 
                     /**
-                     * Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+                     * <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
                      */
                     int64_t m_executionTTLMinute;
                     bool m_executionTTLMinuteHasBeenSet;
 
                     /**
-                     * Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+                     * <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
                      */
                     int64_t m_waitExecutionTotalTTLMinute;
                     bool m_waitExecutionTotalTTLMinuteHasBeenSet;
+
+                    /**
+                     * <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+                     */
+                    std::string m_dependencyTriggerPolicy;
+                    bool m_dependencyTriggerPolicyHasBeenSet;
+
+                    /**
+                     * <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+                     */
+                    int64_t m_allowDownstreamDependency;
+                    bool m_allowDownstreamDependencyHasBeenSet;
 
                 };
             }

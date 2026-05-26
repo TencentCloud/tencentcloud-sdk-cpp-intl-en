@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>API ID</p>
-                     * @return APIId <p>API ID</p>
+                     * 获取<p>API ID.</p>
+                     * @return APIId <p>API ID.</p>
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置<p>API ID</p>
-                     * @param _aPIId <p>API ID</p>
+                     * 设置<p>API ID.</p>
+                     * @param _aPIId <p>API ID.</p>
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool APIIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reason for request</p>
-                     * @return ApplyReason <p>Reason for request</p>
+                     * 获取<p>Reason for request.</p>
+                     * @return ApplyReason <p>Reason for request.</p>
                      * 
                      */
                     std::string GetApplyReason() const;
 
                     /**
-                     * 设置<p>Reason for request</p>
-                     * @param _applyReason <p>Reason for request</p>
+                     * 设置<p>Reason for request.</p>
+                     * @param _applyReason <p>Reason for request.</p>
                      * 
                      */
                     void SetApplyReason(const std::string& _applyReason);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApplyReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>API ID</p>
+                     * <p>API ID.</p>
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
 
                     /**
-                     * <p>Reason for request</p>
+                     * <p>Reason for request.</p>
                      */
                     std::string m_applyReason;
                     bool m_applyReasonHasBeenSet;
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

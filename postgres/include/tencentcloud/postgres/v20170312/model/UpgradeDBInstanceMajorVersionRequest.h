@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return DBInstanceId Instance ID.
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _dBInstanceId Instance ID.
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
-                     * @return TargetDBKernelVersion Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+                     * 获取Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
+                     * @return TargetDBKernelVersion Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTargetDBKernelVersion() const;
 
                     /**
-                     * 设置Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
-                     * @param _targetDBKernelVersion Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+                     * 设置Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
+                     * @param _targetDBKernelVersion Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
                      * 
                      */
                     void SetTargetDBKernelVersion(const std::string& _targetDBKernelVersion);
@@ -290,13 +290,13 @@ This parameter is invalid when UpgradeCheck is True.
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+                     * Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
                      */
                     std::string m_targetDBKernelVersion;
                     bool m_targetDBKernelVersionHasBeenSet;

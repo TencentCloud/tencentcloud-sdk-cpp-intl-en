@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response of global domain name modification
+                * Response for modifying a global domain.
                 */
                 class GlobalDomainModifyRespResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0: success; 1: allowed domains exist; 2: blocked domains exist.
-                     * @return Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
+                     * 获取Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
+                     * @return Result Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
                      * 
                      */
                     int64_t GetResult() const;
 
                     /**
-                     * 设置0: success; 1: allowed domains exist; 2: blocked domains exist.
-                     * @param _result 0: success; 1: allowed domains exist; 2: blocked domains exist.
+                     * 设置Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
+                     * @param _result Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
                      * 
                      */
                     void SetResult(const int64_t& _result);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0: success; 1: allowed domains exist; 2: blocked domains exist.
+                     * Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
                      */
                     int64_t m_result;
                     bool m_resultHasBeenSet;

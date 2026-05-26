@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the instance waiting for a switch
-                     * @return DBInstanceId The ID of the instance waiting for a switch
+                     * 获取<p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @return DBInstanceId <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置The ID of the instance waiting for a switch
-                     * @param _dBInstanceId The ID of the instance waiting for a switch
+                     * 设置<p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @param _dBInstanceId <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Valid value: `0` (switch immediately)
-                     * @return SwitchTag Valid value: `0` (switch immediately)
+                     * 获取<p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
+                     * @return SwitchTag <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
                      * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Valid value: `0` (switch immediately)
-                     * @param _switchTag Valid value: `0` (switch immediately)
+                     * 设置<p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
+                     * @param _switchTag <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
                      * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the instance waiting for a switch
+                     * <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Valid value: `0` (switch immediately)
+                     * <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
                      */
                     uint64_t m_switchTag;
                     bool m_switchTagHasBeenSet;

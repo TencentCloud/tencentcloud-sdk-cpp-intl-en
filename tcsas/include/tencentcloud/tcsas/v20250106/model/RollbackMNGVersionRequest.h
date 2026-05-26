@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version ID</p>
-                     * @return MNPVersionId <p>Mini game version ID</p>
+                     * 获取<p>Mini game version ID.</p>
+                     * @return MNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置<p>Mini game version ID</p>
-                     * @param _mNPVersionId <p>Mini game version ID</p>
+                     * 设置<p>Mini game version ID.</p>
+                     * @param _mNPVersionId <p>Mini game version ID.</p>
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version number</p>
-                     * @return MNPVersion <p>Mini game version number</p>
+                     * 获取<p>Mini game version number.</p>
+                     * @return MNPVersion <p>Mini game version number.</p>
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置<p>Mini game version number</p>
-                     * @param _mNPVersion <p>Mini game version number</p>
+                     * 设置<p>Mini game version number.</p>
+                     * @param _mNPVersion <p>Mini game version number.</p>
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Mini game version ID</p>
+                     * <p>Mini game version ID.</p>
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Mini game version number</p>
+                     * <p>Mini game version number.</p>
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary instance ID
-                     * @return MasterDBInstanceId Primary instance ID
+                     * 获取Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return MasterDBInstanceId Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetMasterDBInstanceId() const;
 
                     /**
-                     * 设置Primary instance ID
-                     * @param _masterDBInstanceId Primary instance ID
+                     * 设置Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _masterDBInstanceId Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetMasterDBInstanceId(const std::string& _masterDBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MasterDBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取RO group name
-                     * @return Name RO group name
+                     * 获取Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+                     * @return Name Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置RO group name
-                     * @param _name RO group name
+                     * 设置Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+                     * @param _name Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID. default value is 0, means it belongs to the default project.
+                     * @return ProjectId Project ID. default value is 0, means it belongs to the default project.
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID. default value is 0, means it belongs to the default project.
+                     * @param _projectId Project ID. default value is 0, means it belongs to the default project.
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+                     * @return VpcId VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+                     * @param _vpcId VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+                     * @return SubnetId Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+                     * @param _subnetId Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @return ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 获取Delay time size switch: 0 for off, 1 for on. this parameter is required.
+                     * @return ReplayLagEliminate Delay time size switch: 0 for off, 1 for on. this parameter is required.
                      * 
                      */
                     uint64_t GetReplayLagEliminate() const;
 
                     /**
-                     * 设置Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @param _replayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 设置Delay time size switch: 0 for off, 1 for on. this parameter is required.
+                     * @param _replayLagEliminate Delay time size switch: 0 for off, 1 for on. this parameter is required.
                      * 
                      */
                     void SetReplayLagEliminate(const uint64_t& _replayLagEliminate);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ReplayLagEliminateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @return ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 获取Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+                     * @return ReplayLatencyEliminate Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
                      * 
                      */
                     uint64_t GetReplayLatencyEliminate() const;
 
                     /**
-                     * 设置Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-                     * @param _replayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * 设置Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+                     * @param _replayLatencyEliminate Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
                      * 
                      */
                     void SetReplayLatencyEliminate(const uint64_t& _replayLatencyEliminate);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool ReplayLatencyEliminateHasBeenSet() const;
 
                     /**
-                     * 获取Delay threshold in ms
-                     * @return MaxReplayLag Delay threshold in ms
+                     * 获取The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+                     * @return MaxReplayLag The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
                      * 
                      */
                     uint64_t GetMaxReplayLag() const;
 
                     /**
-                     * 设置Delay threshold in ms
-                     * @param _maxReplayLag Delay threshold in ms
+                     * 设置The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+                     * @param _maxReplayLag The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
                      * 
                      */
                     void SetMaxReplayLag(const uint64_t& _maxReplayLag);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool MaxReplayLagHasBeenSet() const;
 
                     /**
-                     * 获取Delayed log size threshold in MB
-                     * @return MaxReplayLatency Delayed log size threshold in MB
+                     * 获取Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+                     * @return MaxReplayLatency Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
                      * 
                      */
                     uint64_t GetMaxReplayLatency() const;
 
                     /**
-                     * 设置Delayed log size threshold in MB
-                     * @param _maxReplayLatency Delayed log size threshold in MB
+                     * 设置Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+                     * @param _maxReplayLatency Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
                      * 
                      */
                     void SetMaxReplayLatency(const uint64_t& _maxReplayLatency);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool MaxReplayLatencyHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of read-only replicas that must be retained in an RO group
-                     * @return MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+                     * 获取Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
+                     * @return MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
                      * 
                      */
                     uint64_t GetMinDelayEliminateReserve() const;
 
                     /**
-                     * 设置The minimum number of read-only replicas that must be retained in an RO group
-                     * @param _minDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+                     * 设置Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
+                     * @param _minDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
                      * 
                      */
                     void SetMinDelayEliminateReserve(const uint64_t& _minDelayEliminateReserve);
@@ -276,61 +276,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Primary instance ID
+                     * Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_masterDBInstanceId;
                     bool m_masterDBInstanceIdHasBeenSet;
 
                     /**
-                     * RO group name
+                     * Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID. default value is 0, means it belongs to the default project.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * Delay time size switch: 0 for off, 1 for on. this parameter is required.
                      */
                     uint64_t m_replayLagEliminate;
                     bool m_replayLagEliminateHasBeenSet;
 
                     /**
-                     * Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+                     * Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
                      */
                     uint64_t m_replayLatencyEliminate;
                     bool m_replayLatencyEliminateHasBeenSet;
 
                     /**
-                     * Delay threshold in ms
+                     * The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
                      */
                     uint64_t m_maxReplayLag;
                     bool m_maxReplayLagHasBeenSet;
 
                     /**
-                     * Delayed log size threshold in MB
+                     * Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
                      */
                     uint64_t m_maxReplayLatency;
                     bool m_maxReplayLatencyHasBeenSet;
 
                     /**
-                     * The minimum number of read-only replicas that must be retained in an RO group
+                     * Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
                      */
                     uint64_t m_minDelayEliminateReserve;
                     bool m_minDelayEliminateReserveHasBeenSet;

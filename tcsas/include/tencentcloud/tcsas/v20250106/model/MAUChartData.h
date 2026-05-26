@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MAU line chart data
+                * MAU line chart data.
                 */
                 class MAUChartData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Year and month: 2024-12
-                     * @return DataTime Year and month: 2024-12
+                     * 获取Date in YYYYMM format.
+                     * @return DataTime Date in YYYYMM format.
                      * 
                      */
                     int64_t GetDataTime() const;
 
                     /**
-                     * 设置Year and month: 2024-12
-                     * @param _dataTime Year and month: 2024-12
+                     * 设置Date in YYYYMM format.
+                     * @param _dataTime Date in YYYYMM format.
                      * 
                      */
                     void SetDataTime(const int64_t& _dataTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Value
-                     * @return MAUCount Value
+                     * 获取MAU count.
+                     * @return MAUCount MAU count.
                      * 
                      */
                     int64_t GetMAUCount() const;
 
                     /**
-                     * 设置Value
-                     * @param _mAUCount Value
+                     * 设置MAU count.
+                     * @param _mAUCount MAU count.
                      * 
                      */
                     void SetMAUCount(const int64_t& _mAUCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MAUCountHasBeenSet() const;
 
                     /**
-                     * 获取Data update time, only available when MAUCount is greater than 0.
-                     * @return UpdateTime Data update time, only available when MAUCount is greater than 0.
+                     * 获取Data update time. Only has a value when MAUCount is greater than 0.
+                     * @return UpdateTime Data update time. Only has a value when MAUCount is greater than 0.
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Data update time, only available when MAUCount is greater than 0.
-                     * @param _updateTime Data update time, only available when MAUCount is greater than 0.
+                     * 设置Data update time. Only has a value when MAUCount is greater than 0.
+                     * @param _updateTime Data update time. Only has a value when MAUCount is greater than 0.
                      * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Year and month: 2024-12
+                     * Date in YYYYMM format.
                      */
                     int64_t m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Value
+                     * MAU count.
                      */
                     int64_t m_mAUCount;
                     bool m_mAUCountHasBeenSet;
 
                     /**
-                     * Data update time, only available when MAUCount is greater than 0.
+                     * Data update time. Only has a value when MAUCount is greater than 0.
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

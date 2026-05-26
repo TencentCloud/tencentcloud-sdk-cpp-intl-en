@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log backup ID
-                     * @return LogBackupId Log backup ID
+                     * 获取Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
+                     * @return LogBackupId Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
                      * 
                      */
                     std::string GetLogBackupId() const;
 
                     /**
-                     * 设置Log backup ID
-                     * @param _logBackupId Log backup ID
+                     * 设置Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
+                     * @param _logBackupId Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
                      * 
                      */
                     void SetLogBackupId(const std::string& _logBackupId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Log backup ID
+                     * Log backup ID. obtain through the api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1). note: automatic backup sets cannot be deleted within 7 days.
                      */
                     std::string m_logBackupId;
                     bool m_logBackupIdHasBeenSet;

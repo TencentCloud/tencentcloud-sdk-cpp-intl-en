@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取<p>Project ID</p>
+                     * @return ProjectId <p>Project ID</p>
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param _projectId Project ID.
+                     * 设置<p>Project ID</p>
+                     * @param _projectId <p>Project ID</p>
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -67,15 +67,19 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取The basic attributes of the task.
-                     * @return TaskBaseAttribute The basic attributes of the task.
+                     * 获取<p>The
+basic attributes of the task.</p>
+                     * @return TaskBaseAttribute <p>The
+basic attributes of the task.</p>
                      * 
                      */
                     CreateTaskBaseAttribute GetTaskBaseAttribute() const;
 
                     /**
-                     * 设置The basic attributes of the task.
-                     * @param _taskBaseAttribute The basic attributes of the task.
+                     * 设置<p>The
+basic attributes of the task.</p>
+                     * @param _taskBaseAttribute <p>The
+basic attributes of the task.</p>
                      * 
                      */
                     void SetTaskBaseAttribute(const CreateTaskBaseAttribute& _taskBaseAttribute);
@@ -88,15 +92,15 @@ namespace TencentCloud
                     bool TaskBaseAttributeHasBeenSet() const;
 
                     /**
-                     * 获取Task configurations.
-                     * @return TaskConfiguration Task configurations.
+                     * 获取<p>Task configurations.</p>
+                     * @return TaskConfiguration <p>Task configurations.</p>
                      * 
                      */
                     CreateTaskConfiguration GetTaskConfiguration() const;
 
                     /**
-                     * 设置Task configurations.
-                     * @param _taskConfiguration Task configurations.
+                     * 设置<p>Task configurations.</p>
+                     * @param _taskConfiguration <p>Task configurations.</p>
                      * 
                      */
                     void SetTaskConfiguration(const CreateTaskConfiguration& _taskConfiguration);
@@ -109,15 +113,15 @@ namespace TencentCloud
                     bool TaskConfigurationHasBeenSet() const;
 
                     /**
-                     * 获取Task scheduling configuration.
-                     * @return TaskSchedulerConfiguration Task scheduling configuration.
+                     * 获取<p>Task scheduling configuration</p>
+                     * @return TaskSchedulerConfiguration <p>Task scheduling configuration</p>
                      * 
                      */
                     CreateTaskSchedulerConfiguration GetTaskSchedulerConfiguration() const;
 
                     /**
-                     * 设置Task scheduling configuration.
-                     * @param _taskSchedulerConfiguration Task scheduling configuration.
+                     * 设置<p>Task scheduling configuration</p>
+                     * @param _taskSchedulerConfiguration <p>Task scheduling configuration</p>
                      * 
                      */
                     void SetTaskSchedulerConfiguration(const CreateTaskSchedulerConfiguration& _taskSchedulerConfiguration);
@@ -132,25 +136,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Project ID.
+                     * <p>Project ID</p>
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * The basic attributes of the task.
+                     * <p>The
+basic attributes of the task.</p>
                      */
                     CreateTaskBaseAttribute m_taskBaseAttribute;
                     bool m_taskBaseAttributeHasBeenSet;
 
                     /**
-                     * Task configurations.
+                     * <p>Task configurations.</p>
                      */
                     CreateTaskConfiguration m_taskConfiguration;
                     bool m_taskConfigurationHasBeenSet;
 
                     /**
-                     * Task scheduling configuration.
+                     * <p>Task scheduling configuration</p>
                      */
                     CreateTaskSchedulerConfiguration m_taskSchedulerConfiguration;
                     bool m_taskSchedulerConfigurationHasBeenSet;

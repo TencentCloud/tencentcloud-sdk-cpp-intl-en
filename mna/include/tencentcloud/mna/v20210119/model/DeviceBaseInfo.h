@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Device unique ID
-                     * @return DeviceId Device unique ID
+                     * 获取<p>Unique ID of the device</p>
+                     * @return DeviceId <p>Unique ID of the device</p>
                      * 
                      */
                     std::string GetDeviceId() const;
 
                     /**
-                     * 设置Device unique ID
-                     * @param _deviceId Device unique ID
+                     * 设置<p>Unique ID of the device</p>
+                     * @param _deviceId <p>Unique ID of the device</p>
                      * 
                      */
                     void SetDeviceId(const std::string& _deviceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DeviceIdHasBeenSet() const;
 
                     /**
-                     * 获取Device name.
-                     * @return DeviceName Device name.
+                     * 获取<p>Device name</p>
+                     * @return DeviceName <p>Device name</p>
                      * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
-                     * 设置Device name.
-                     * @param _deviceName Device name.
+                     * 设置<p>Device name</p>
+                     * @param _deviceName <p>Device name</p>
                      * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DeviceNameHasBeenSet() const;
 
                     /**
-                     * 获取The time when the device is created, in ms.
-                     * @return CreateTime The time when the device is created, in ms.
+                     * 获取<p>The time when the device is created, in ms</p>
+                     * @return CreateTime <p>The time when the device is created, in ms</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The time when the device is created, in ms.
-                     * @param _createTime The time when the device is created, in ms.
+                     * 设置<p>The time when the device is created, in ms</p>
+                     * @param _createTime <p>The time when the device is created, in ms</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last online time of the device, in ms.
-                     * @return LastTime Last online time of the device, in ms.
+                     * 获取<p>Last online time of the device, in ms</p>
+                     * @return LastTime <p>Last online time of the device, in ms</p>
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
-                     * 设置Last online time of the device, in ms.
-                     * @param _lastTime Last online time of the device, in ms.
+                     * 设置<p>Last online time of the device, in ms</p>
+                     * @param _lastTime <p>Last online time of the device, in ms</p>
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool LastTimeHasBeenSet() const;
 
                     /**
-                     * 获取Device remark
-                     * @return Remark Device remark
+                     * 获取<p>Remark of the device</p>
+                     * @return Remark <p>Remark of the device</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Device remark
-                     * @param _remark Device remark
+                     * 设置<p>Remark of the device</p>
+                     * @param _remark <p>Remark of the device</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
-                     * @return AccessScope Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+                     * 获取<p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+                     * @return AccessScope <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
                      * 
                      */
                     int64_t GetAccessScope() const;
 
                     /**
-                     * 设置Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
-                     * @param _accessScope Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+                     * 设置<p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+                     * @param _accessScope <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
                      * 
                      */
                     void SetAccessScope(const int64_t& _accessScope);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AccessScopeHasBeenSet() const;
 
                     /**
-                     * 获取Authorization validity period of license 0: Monthly authorization 1: Permanent license
-                     * @return LicensePayMode Authorization validity period of license 0: Monthly authorization 1: Permanent license
+                     * 获取<p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+                     * @return LicensePayMode <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
                      * 
                      */
                     int64_t GetLicensePayMode() const;
 
                     /**
-                     * 设置Authorization validity period of license 0: Monthly authorization 1: Permanent license
-                     * @param _licensePayMode Authorization validity period of license 0: Monthly authorization 1: Permanent license
+                     * 设置<p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+                     * @param _licensePayMode <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
                      * 
                      */
                     void SetLicensePayMode(const int64_t& _licensePayMode);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool LicensePayModeHasBeenSet() const;
 
                     /**
-                     * 获取Payer 0: Manufacturer payment 1: Customer payment
-                     * @return Payer Payer 0: Manufacturer payment 1: Customer payment
+                     * 获取<p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+                     * @return Payer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
                      * 
                      */
                     int64_t GetPayer() const;
 
                     /**
-                     * 设置Payer 0: Manufacturer payment 1: Customer payment
-                     * @param _payer Payer 0: Manufacturer payment 1: Customer payment
+                     * 设置<p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+                     * @param _payer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
                      * 
                      */
                     void SetPayer(const int64_t& _payer);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool PayerHasBeenSet() const;
 
                     /**
-                     * 获取device group ID
-                     * @return GroupId device group ID
+                     * 获取<p>device group ID</p>
+                     * @return GroupId <p>device group ID</p>
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置device group ID
-                     * @param _groupId device group ID
+                     * 设置<p>device group ID</p>
+                     * @param _groupId <p>device group ID</p>
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Device group name
-                     * @return GroupName Device group name
+                     * 获取<p>Device group name</p>
+                     * @return GroupName <p>Device group name</p>
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Device group name
-                     * @param _groupName Device group name
+                     * 设置<p>Device group name</p>
+                     * @param _groupName <p>Device group name</p>
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
-                     * @return FlowTrunc No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+                     * 获取<p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+                     * @return FlowTrunc <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
                      * 
                      */
                     int64_t GetFlowTrunc() const;
 
                     /**
-                     * 设置No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
-                     * @param _flowTrunc No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+                     * 设置<p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+                     * @param _flowTrunc <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
                      * 
                      */
                     void SetFlowTrunc(const int64_t& _flowTrunc);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool FlowTruncHasBeenSet() const;
 
                     /**
-                     * 获取Device sn
-                     * @return Sn Device sn
+                     * 获取<p>Device sn</p>
+                     * @return Sn <p>Device sn</p>
                      * 
                      */
                     std::string GetSn() const;
 
                     /**
-                     * 设置Device sn
-                     * @param _sn Device sn
+                     * 设置<p>Device sn</p>
+                     * @param _sn <p>Device sn</p>
                      * 
                      */
                     void SetSn(const std::string& _sn);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool SnHasBeenSet() const;
 
                     /**
-                     * 获取manufacturer
-                     * @return Vendor manufacturer
+                     * 获取<p>Manufacturer</p>
+                     * @return Vendor <p>Manufacturer</p>
                      * 
                      */
                     std::string GetVendor() const;
 
                     /**
-                     * 设置manufacturer
-                     * @param _vendor manufacturer
+                     * 设置<p>Manufacturer</p>
+                     * @param _vendor <p>Manufacturer</p>
                      * 
                      */
                     void SetVendor(const std::string& _vendor);
@@ -319,85 +319,112 @@ namespace TencentCloud
                      */
                     bool VendorHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Access region list.</p>
+                     * @return AllowedRegions <p>Access region list.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAllowedRegions() const;
+
+                    /**
+                     * 设置<p>Access region list.</p>
+                     * @param _allowedRegions <p>Access region list.</p>
+                     * 
+                     */
+                    void SetAllowedRegions(const std::vector<std::string>& _allowedRegions);
+
+                    /**
+                     * 判断参数 AllowedRegions 是否已赋值
+                     * @return AllowedRegions 是否已赋值
+                     * 
+                     */
+                    bool AllowedRegionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Device unique ID
+                     * <p>Unique ID of the device</p>
                      */
                     std::string m_deviceId;
                     bool m_deviceIdHasBeenSet;
 
                     /**
-                     * Device name.
+                     * <p>Device name</p>
                      */
                     std::string m_deviceName;
                     bool m_deviceNameHasBeenSet;
 
                     /**
-                     * The time when the device is created, in ms.
+                     * <p>The time when the device is created, in ms</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last online time of the device, in ms.
+                     * <p>Last online time of the device, in ms</p>
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;
 
                     /**
-                     * Device remark
+                     * <p>Remark of the device</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+                     * <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
                      */
                     int64_t m_accessScope;
                     bool m_accessScopeHasBeenSet;
 
                     /**
-                     * Authorization validity period of license 0: Monthly authorization 1: Permanent license
+                     * <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
                      */
                     int64_t m_licensePayMode;
                     bool m_licensePayModeHasBeenSet;
 
                     /**
-                     * Payer 0: Manufacturer payment 1: Customer payment
+                     * <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
                      */
                     int64_t m_payer;
                     bool m_payerHasBeenSet;
 
                     /**
-                     * device group ID
+                     * <p>device group ID</p>
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Device group name
+                     * <p>Device group name</p>
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+                     * <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
                      */
                     int64_t m_flowTrunc;
                     bool m_flowTruncHasBeenSet;
 
                     /**
-                     * Device sn
+                     * <p>Device sn</p>
                      */
                     std::string m_sn;
                     bool m_snHasBeenSet;
 
                     /**
-                     * manufacturer
+                     * <p>Manufacturer</p>
                      */
                     std::string m_vendor;
                     bool m_vendorHasBeenSet;
+
+                    /**
+                     * <p>Access region list.</p>
+                     */
+                    std::vector<std::string> m_allowedRegions;
+                    bool m_allowedRegionsHasBeenSet;
 
                 };
             }

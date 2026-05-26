@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Creates secret key response.
+                * Response for creating a mini program secret key.
                 */
                 class CreateMNPSecretKeyResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Secret ID</p>
-                     * @return KeyId <p>Secret ID</p>
+                     * 获取<p>Key ID.</p>
+                     * @return KeyId <p>Key ID.</p>
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置<p>Secret ID</p>
-                     * @param _keyId <p>Secret ID</p>
+                     * 设置<p>Key ID.</p>
+                     * @param _keyId <p>Key ID.</p>
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Secret key</p>
-                     * @return SecretKey <p>Secret key</p>
+                     * 获取<p>Secret key.</p>
+                     * @return SecretKey <p>Secret key.</p>
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置<p>Secret key</p>
-                     * @param _secretKey <p>Secret key</p>
+                     * 设置<p>Secret key.</p>
+                     * @param _secretKey <p>Secret key.</p>
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Secret ID</p>
+                     * <p>Key ID.</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * <p>Secret key</p>
+                     * <p>Secret key.</p>
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

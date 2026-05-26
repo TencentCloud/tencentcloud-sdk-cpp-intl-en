@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Team list information
+                * Team list information.
                 */
                 class DescribeTeamListInfoResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Administrator user ID
-                     * @return AdminUserId Administrator user ID
+                     * 获取Admin user ID.
+                     * @return AdminUserId Admin user ID.
                      * 
                      */
                     std::string GetAdminUserId() const;
 
                     /**
-                     * 设置Administrator user ID
-                     * @param _adminUserId Administrator user ID
+                     * 设置Admin user ID.
+                     * @param _adminUserId Admin user ID.
                      * 
                      */
                     void SetAdminUserId(const std::string& _adminUserId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AdminUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Administrator account
-                     * @return AdminUserAccount Administrator account
+                     * 获取Admin account.
+                     * @return AdminUserAccount Admin account.
                      * 
                      */
                     std::string GetAdminUserAccount() const;
 
                     /**
-                     * 设置Administrator account
-                     * @param _adminUserAccount Administrator account
+                     * 设置Admin account.
+                     * @param _adminUserAccount Admin account.
                      * 
                      */
                     void SetAdminUserAccount(const std::string& _adminUserAccount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AdminUserAccountHasBeenSet() const;
 
                     /**
-                     * 获取Administrator username
-                     * @return AdminUserName Administrator username
+                     * 获取Admin username.
+                     * @return AdminUserName Admin username.
                      * 
                      */
                     std::string GetAdminUserName() const;
 
                     /**
-                     * 设置Administrator username
-                     * @param _adminUserName Administrator username
+                     * 设置Admin username.
+                     * @param _adminUserName Admin username.
                      * 
                      */
                     void SetAdminUserName(const std::string& _adminUserName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AdminUserNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of team members
-                     * @return MemberCount Number of team members
+                     * 获取Number of team members.
+                     * @return MemberCount Number of team members.
                      * 
                      */
                     int64_t GetMemberCount() const;
 
                     /**
-                     * 设置Number of team members
-                     * @param _memberCount Number of team members
+                     * 设置Number of team members.
+                     * @param _memberCount Number of team members.
                      * 
                      */
                     void SetMemberCount(const int64_t& _memberCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MemberCountHasBeenSet() const;
 
                     /**
-                     * 获取Team registration link
-                     * @return RegisterLink Team registration link
+                     * 获取Team registration link.
+                     * @return RegisterLink Team registration link.
                      * 
                      */
                     std::string GetRegisterLink() const;
 
                     /**
-                     * 设置Team registration link
-                     * @param _registerLink Team registration link
+                     * 设置Team registration link.
+                     * @param _registerLink Team registration link.
                      * 
                      */
                     void SetRegisterLink(const std::string& _registerLink);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool RegisterLinkHasBeenSet() const;
 
                     /**
-                     * 获取Team permission type
-                     * @return TeamRoleTypeList Team permission type
+                     * 获取Team role types. 
+                     * @return TeamRoleTypeList Team role types. 
                      * 
                      */
                     std::vector<int64_t> GetTeamRoleTypeList() const;
 
                     /**
-                     * 设置Team permission type
-                     * @param _teamRoleTypeList Team permission type
+                     * 设置Team role types. 
+                     * @param _teamRoleTypeList Team role types. 
                      * 
                      */
                     void SetTeamRoleTypeList(const std::vector<int64_t>& _teamRoleTypeList);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool TeamRoleTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Associated team ID
-                     * @return RelatedTeamId Associated team ID
+                     * 获取Associated team ID.
+                     * @return RelatedTeamId Associated team ID.
                      * 
                      */
                     int64_t GetRelatedTeamId() const;
 
                     /**
-                     * 设置Associated team ID
-                     * @param _relatedTeamId Associated team ID
+                     * 设置Associated team ID.
+                     * @param _relatedTeamId Associated team ID.
                      * 
                      */
                     void SetRelatedTeamId(const int64_t& _relatedTeamId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RelatedTeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team expiration time. 0 means never expire.
-                     * @return ExpireTime Team expiration time. 0 means never expire.
+                     * 获取Team expiration time. 0 indicates no expiration.
+                     * @return ExpireTime Team expiration time. 0 indicates no expiration.
                      * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
-                     * 设置Team expiration time. 0 means never expire.
-                     * @param _expireTime Team expiration time. 0 means never expire.
+                     * 设置Team expiration time. 0 indicates no expiration.
+                     * @param _expireTime Team expiration time. 0 indicates no expiration.
                      * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Team status. valid values: 1: normal; 2: disabled; 3: expired.
-                     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 获取Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+                     * @return Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Team status. valid values: 1: normal; 2: disabled; 3: expired.
-                     * @param _status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * 设置Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+                     * @param _status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -280,67 +280,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Team ID
+                     * Team ID.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Administrator user ID
+                     * Admin user ID.
                      */
                     std::string m_adminUserId;
                     bool m_adminUserIdHasBeenSet;
 
                     /**
-                     * Administrator account
+                     * Admin account.
                      */
                     std::string m_adminUserAccount;
                     bool m_adminUserAccountHasBeenSet;
 
                     /**
-                     * Administrator username
+                     * Admin username.
                      */
                     std::string m_adminUserName;
                     bool m_adminUserNameHasBeenSet;
 
                     /**
-                     * Number of team members
+                     * Number of team members.
                      */
                     int64_t m_memberCount;
                     bool m_memberCountHasBeenSet;
 
                     /**
-                     * Team registration link
+                     * Team registration link.
                      */
                     std::string m_registerLink;
                     bool m_registerLinkHasBeenSet;
 
                     /**
-                     * Team permission type
+                     * Team role types. 
                      */
                     std::vector<int64_t> m_teamRoleTypeList;
                     bool m_teamRoleTypeListHasBeenSet;
 
                     /**
-                     * Associated team ID
+                     * Associated team ID.
                      */
                     int64_t m_relatedTeamId;
                     bool m_relatedTeamIdHasBeenSet;
 
                     /**
-                     * Team expiration time. 0 means never expire.
+                     * Team expiration time. 0 indicates no expiration.
                      */
                     int64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+                     * Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
-                     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+                     * 获取VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+                     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
-                     * @param _vpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+                     * 设置VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+                     * @param _vpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
-                     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * 获取Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
+                     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
-                     * @param _subnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * 设置Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
+                     * @param _subnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool EndPointNameHasBeenSet() const;
 
                     /**
-                     * 获取Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
-                     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+                     * 获取Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
+                     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetEndPointServiceId() const;
 
                     /**
-                     * 设置Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
-                     * @param _endPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+                     * 设置Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
+                     * @param _endPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
                      * 
                      */
                     void SetEndPointServiceId(const std::string& _endPointServiceId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool EndPointVipHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
-                     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * 获取Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+                     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
-                     * @param _securityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * 设置Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+                     * @param _securityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -214,13 +214,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+                     * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+                     * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_endPointNameHasBeenSet;
 
                     /**
-                     * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+                     * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
                      */
                     std::string m_endPointServiceId;
                     bool m_endPointServiceIdHasBeenSet;
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_endPointVipHasBeenSet;
 
                     /**
-                     * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+                     * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;

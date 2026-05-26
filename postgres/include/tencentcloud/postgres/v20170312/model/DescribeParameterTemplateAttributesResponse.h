@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TemplateId Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the parameter template ID.
+                     * @return TemplateId Specifies the parameter template ID.
                      * 
                      */
                     std::string GetTemplateId() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the number of parameters in the parameter template.
+                     * @return TotalCount Specifies the number of parameters in the parameter template.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -94,9 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateName Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTemplateName() const;
@@ -109,10 +103,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBMajorVersion Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the database version the parameter template applies to.
+                     * @return DBMajorVersion Specifies the database version the parameter template applies to.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
@@ -125,10 +117,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DBEngine Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specifies the database engine the parameter template applies to.
+                     * @return DBEngine Specifies the database engine the parameter template applies to.
                      * 
                      */
                     std::string GetDBEngine() const;
@@ -142,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateDescription Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTemplateDescription() const;
@@ -159,15 +147,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the parameter template ID.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the number of parameters in the parameter template.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -181,28 +167,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the database version the parameter template applies to.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specifies the database engine the parameter template applies to.
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
 
                     /**
                      * Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_templateDescription;
                     bool m_templateDescriptionHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of postgres-4wdeb0zv.
-                     * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+                     * 获取Instance ID. for example, postgres-4wdeb0zv.
+                     * @return DBInstanceId Instance ID. for example, postgres-4wdeb0zv.
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of postgres-4wdeb0zv.
-                     * @param _dBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+                     * 设置Instance ID. for example, postgres-4wdeb0zv.
+                     * @param _dBInstanceId Instance ID. for example, postgres-4wdeb0zv.
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
-                     * @return StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * 获取Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+                     * @return StartTime Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
-                     * @param _startTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * 设置Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+                     * @param _startTime Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time in the format of 2018-06-10 17:06:38
-                     * @return EndTime Query end time in the format of 2018-06-10 17:06:38
+                     * 获取Query end time, in the format of 2018-06-10 17:06:38.
+                     * @return EndTime Query end time, in the format of 2018-06-10 17:06:38.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time in the format of 2018-06-10 17:06:38
-                     * @param _endTime Query end time in the format of 2018-06-10 17:06:38
+                     * 设置Query end time, in the format of 2018-06-10 17:06:38.
+                     * @param _endTime Query end time, in the format of 2018-06-10 17:06:38.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Page number for data return in paged query. Pagination starts from 0
-                     * @return Offset Page number for data return in paged query. Pagination starts from 0
+                     * 获取Pagination return indicates which page of entries to return. counting begins from page 0.
+                     * @return Offset Pagination return indicates which page of entries to return. counting begins from page 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page number for data return in paged query. Pagination starts from 0
-                     * @param _offset Page number for data return in paged query. Pagination starts from 0
+                     * 设置Pagination return indicates which page of entries to return. counting begins from page 0.
+                     * @param _offset Pagination return indicates which page of entries to return. counting begins from page 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per page in paged query. Value range: 1-100.
-                     * @return Limit Number of entries returned per page in paged query. Value range: 1-100.
+                     * 获取Pagination return indicates how many items per page. value range: 1-100.
+                     * @return Limit Pagination return indicates how many items per page. value range: 1-100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per page in paged query. Value range: 1-100.
-                     * @param _limit Number of entries returned per page in paged query. Value range: 1-100.
+                     * 设置Pagination return indicates how many items per page. value range: 1-100.
+                     * @param _limit Pagination return indicates how many items per page. value range: 1-100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of postgres-4wdeb0zv.
+                     * Instance ID. for example, postgres-4wdeb0zv.
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time in the format of 2018-06-10 17:06:38
+                     * Query end time, in the format of 2018-06-10 17:06:38.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Page number for data return in paged query. Pagination starts from 0
+                     * Pagination return indicates which page of entries to return. counting begins from page 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries returned per page in paged query. Value range: 1-100.
+                     * Pagination return indicates how many items per page. value range: 1-100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

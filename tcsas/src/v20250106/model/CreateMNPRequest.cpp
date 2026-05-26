@@ -29,7 +29,8 @@ CreateMNPRequest::CreateMNPRequest() :
     m_mNPIntroHasBeenSet(false),
     m_mNPDescHasBeenSet(false),
     m_platformIdHasBeenSet(false),
-    m_teamIdHasBeenSet(false)
+    m_teamIdHasBeenSet(false),
+    m_i18nListHasBeenSet(false)
 {
 }
 
@@ -94,6 +95,21 @@ string CreateMNPRequest::ToJsonString() const
         string key = "TeamId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_i18nListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "I18nList";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_i18nList.begin(); itr != m_i18nList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -214,6 +230,22 @@ void CreateMNPRequest::SetTeamId(const string& _teamId)
 bool CreateMNPRequest::TeamIdHasBeenSet() const
 {
     return m_teamIdHasBeenSet;
+}
+
+vector<MNPI18NSyncDto> CreateMNPRequest::GetI18nList() const
+{
+    return m_i18nList;
+}
+
+void CreateMNPRequest::SetI18nList(const vector<MNPI18NSyncDto>& _i18nList)
+{
+    m_i18nList = _i18nList;
+    m_i18nListHasBeenSet = true;
+}
+
+bool CreateMNPRequest::I18nListHasBeenSet() const
+{
+    return m_i18nListHasBeenSet;
 }
 
 

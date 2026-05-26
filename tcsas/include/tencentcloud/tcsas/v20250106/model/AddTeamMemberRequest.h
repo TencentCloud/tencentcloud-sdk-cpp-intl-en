@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team ID
-                     * @return TeamId Team ID
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID
-                     * @param _teamId Team ID
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Members to be added
-                     * @return MemberList Members to be added
+                     * 获取List of new team members.
+                     * @return MemberList List of new team members.
                      * 
                      */
                     std::vector<CreateTeamMemberInfoReq> GetMemberList() const;
 
                     /**
-                     * 设置Members to be added
-                     * @param _memberList Members to be added
+                     * 设置List of new team members.
+                     * @param _memberList List of new team members.
                      * 
                      */
                     void SetMemberList(const std::vector<CreateTeamMemberInfoReq>& _memberList);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberListHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Team ID
+                     * Team ID.
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Members to be added
+                     * List of new team members.
                      */
                     std::vector<CreateTeamMemberInfoReq> m_memberList;
                     bool m_memberListHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

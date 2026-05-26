@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name.
-
-                     * @return ParamKey Parameter name.
-
+                     * 获取<p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParamKey <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetParamKey() const;
 
                     /**
-                     * 设置Parameter name.
-
-                     * @param _paramKey Parameter name.
-
+                     * 设置<p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _paramKey <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetParamKey(const std::string& _paramKey);
@@ -72,19 +72,19 @@ namespace TencentCloud
                     bool ParamKeyHasBeenSet() const;
 
                     /**
-                     * 获取Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
-                     * @return ParamDesc Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+                     * 获取<p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParamDesc <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetParamDesc() const;
 
                     /**
-                     * 设置Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
-                     * @param _paramDesc Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+                     * 设置<p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _paramDesc <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetParamDesc(const std::string& _paramDesc);
@@ -97,19 +97,19 @@ Example: project_wedata_1.sh_250820_104107.pp_out
                     bool ParamDescHasBeenSet() const;
 
                     /**
-                     * 获取Parent Task ID
-
-                     * @return FromTaskId Parent Task ID
-
+                     * 获取<p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FromTaskId <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFromTaskId() const;
 
                     /**
-                     * 设置Parent Task ID
-
-                     * @param _fromTaskId Parent Task ID
-
+                     * 设置<p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fromTaskId <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFromTaskId(const std::string& _fromTaskId);
@@ -122,19 +122,19 @@ Example: project_wedata_1.sh_250820_104107.pp_out
                     bool FromTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Parent task parameter key.
-
-                     * @return FromParamKey Parent task parameter key.
-
+                     * 获取<p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FromParamKey <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFromParamKey() const;
 
                     /**
-                     * 设置Parent task parameter key.
-
-                     * @param _fromParamKey Parent task parameter key.
-
+                     * 设置<p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fromParamKey <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFromParamKey(const std::string& _fromParamKey);
@@ -146,35 +146,67 @@ Example: project_wedata_1.sh_250820_104107.pp_out
                      */
                     bool FromParamKeyHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Type <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置<p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _type <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Parameter name.
-
+                     * <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_paramKey;
                     bool m_paramKeyHasBeenSet;
 
                     /**
-                     * Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+                     * <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_paramDesc;
                     bool m_paramDescHasBeenSet;
 
                     /**
-                     * Parent Task ID
-
+                     * <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fromTaskId;
                     bool m_fromTaskIdHasBeenSet;
 
                     /**
-                     * Parent task parameter key.
-
+                     * <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fromParamKey;
                     bool m_fromParamKeyHasBeenSet;
+
+                    /**
+                     * <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

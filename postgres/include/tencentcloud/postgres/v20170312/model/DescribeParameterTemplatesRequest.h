@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
-                     * @return Filters Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+                     * 获取Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
+                     * @return Filters Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
-                     * @param _filters Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+                     * 设置Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
+                     * @param _filters Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
-                     * @return OrderBy Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
+                     * 获取Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
+                     * @return OrderBy Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
-                     * @param _orderBy Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
+                     * 设置Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
+                     * @param _orderBy Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
-                     * @return OrderByType Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+                     * 获取Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
+                     * @return OrderByType Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
-                     * @param _orderByType Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+                     * 设置Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
+                     * @param _orderByType Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter conditions. Valid values: `TemplateName`, `TemplateId`, `DBMajorVersion`, `DBEngine`.
+                     * Filter criteria currently supported: TemplateName, TemplateId, DBMajorVersion, DBEngine. fuzzy matching is not supported for TemplateName.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -169,13 +169,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting metric. Valid values: `CreateTime`, `TemplateName`, `DBMajorVersion`.
+                     * Sorting metric, enumeration value, supports: CreateTime, TemplateName, DBMajorVersion. if this parameter is not set, it defaults to sorting by the parameter template number in reverse order, which means that newly added parameter templates appear at the top.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending order),`desc` (descending order).
+                     * Sorting method, enumeration value, supports: `asc` (ascending) and `desc` (descending). the default value is `asc`. when OrderBy is not specified, this parameter becomes invalid, at which point the sorting method follows the default sorting order provided in the OrderBy parameter description.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

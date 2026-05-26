@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return DBInstanceId Instance ID.
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _dBInstanceId Instance ID.
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -90,31 +90,31 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
-                     * @return SwitchTag Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+                     * 获取Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
+                     * @return SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
                      * 
                      */
                     int64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
-                     * @param _switchTag Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+                     * 设置Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
+                     * @param _switchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
                      * 
                      */
                     void SetSwitchTag(const int64_t& _switchTag);
@@ -171,7 +171,7 @@ Default value: 0
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
@@ -184,11 +184,11 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+                     * Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
                      */
                     int64_t m_switchTag;
                     bool m_switchTagHasBeenSet;

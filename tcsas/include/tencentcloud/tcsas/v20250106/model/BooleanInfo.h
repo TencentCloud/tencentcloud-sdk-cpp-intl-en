@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Used for Data object when no data is returned after the a successful action.
+                * Used for Data object when no data is returned after a successful action.
                 */
                 class BooleanInfo : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bool type response object
+                     * 获取The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Result Bool type response object
+                     * @return Result The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetResult() const;
 
                     /**
-                     * 设置Bool type response object
+                     * 设置The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _result Bool type response object
+                     * @param _result The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Bool type response object
+                     * The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_result;

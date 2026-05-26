@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Translation terminology
+                * Translate terminology.
                 */
                 class Terminology : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source terminology
-                     * @return Source Source terminology
+                     * 获取Source terminology.
+                     * @return Source Source terminology.
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Source terminology
-                     * @param _source Source terminology
+                     * 设置Source terminology.
+                     * @param _source Source terminology.
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取Target terminology
-                     * @return Target Target terminology
+                     * 获取Terminology translation result.
+                     * @return Target Terminology translation result.
                      * 
                      */
                     std::string GetTarget() const;
 
                     /**
-                     * 设置Target terminology
-                     * @param _target Target terminology
+                     * 设置Terminology translation result.
+                     * @param _target Terminology translation result.
                      * 
                      */
                     void SetTarget(const std::string& _target);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source terminology
+                     * Source terminology.
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * Target terminology
+                     * Terminology translation result.
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;

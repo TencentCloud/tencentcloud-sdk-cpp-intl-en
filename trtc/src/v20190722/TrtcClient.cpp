@@ -2590,6 +2590,106 @@ TrtcClient::StopWebRecordOutcomeCallable TrtcClient::StopWebRecordCallable(const
     return prom->get_future();
 }
 
+TrtcClient::TextToSpeechOutcome TrtcClient::TextToSpeech(const TextToSpeechRequest &request)
+{
+    auto outcome = MakeRequest(request, "TextToSpeech");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TextToSpeechResponse rsp = TextToSpeechResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TextToSpeechOutcome(rsp);
+        else
+            return TextToSpeechOutcome(o.GetError());
+    }
+    else
+    {
+        return TextToSpeechOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::TextToSpeechAsync(const TextToSpeechRequest& request, const TextToSpeechAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TextToSpeechRequest&;
+    using Resp = TextToSpeechResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TextToSpeech", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TrtcClient::TextToSpeechOutcomeCallable TrtcClient::TextToSpeechCallable(const TextToSpeechRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TextToSpeechOutcome>>();
+    TextToSpeechAsync(
+    request,
+    [prom](
+        const TrtcClient*,
+        const TextToSpeechRequest&,
+        TextToSpeechOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TrtcClient::TextToSpeechSSEOutcome TrtcClient::TextToSpeechSSE(const TextToSpeechSSERequest &request)
+{
+    auto outcome = MakeRequest(request, "TextToSpeechSSE");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TextToSpeechSSEResponse rsp = TextToSpeechSSEResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TextToSpeechSSEOutcome(rsp);
+        else
+            return TextToSpeechSSEOutcome(o.GetError());
+    }
+    else
+    {
+        return TextToSpeechSSEOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::TextToSpeechSSEAsync(const TextToSpeechSSERequest& request, const TextToSpeechSSEAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TextToSpeechSSERequest&;
+    using Resp = TextToSpeechSSEResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TextToSpeechSSE", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TrtcClient::TextToSpeechSSEOutcomeCallable TrtcClient::TextToSpeechSSECallable(const TextToSpeechSSERequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TextToSpeechSSEOutcome>>();
+    TextToSpeechSSEAsync(
+    request,
+    [prom](
+        const TrtcClient*,
+        const TextToSpeechSSERequest&,
+        TextToSpeechSSEOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TrtcClient::UpdateAIConversationOutcome TrtcClient::UpdateAIConversation(const UpdateAIConversationRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateAIConversation");
@@ -2732,6 +2832,56 @@ TrtcClient::UpdateStreamIngestOutcomeCallable TrtcClient::UpdateStreamIngestCall
         const TrtcClient*,
         const UpdateStreamIngestRequest&,
         UpdateStreamIngestOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TrtcClient::VoiceCloneOutcome TrtcClient::VoiceClone(const VoiceCloneRequest &request)
+{
+    auto outcome = MakeRequest(request, "VoiceClone");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        VoiceCloneResponse rsp = VoiceCloneResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return VoiceCloneOutcome(rsp);
+        else
+            return VoiceCloneOutcome(o.GetError());
+    }
+    else
+    {
+        return VoiceCloneOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::VoiceCloneAsync(const VoiceCloneRequest& request, const VoiceCloneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const VoiceCloneRequest&;
+    using Resp = VoiceCloneResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "VoiceClone", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TrtcClient::VoiceCloneOutcomeCallable TrtcClient::VoiceCloneCallable(const VoiceCloneRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<VoiceCloneOutcome>>();
+    VoiceCloneAsync(
+    request,
+    [prom](
+        const TrtcClient*,
+        const VoiceCloneRequest&,
+        VoiceCloneOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

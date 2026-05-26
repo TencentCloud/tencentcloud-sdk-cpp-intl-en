@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Category information
+                * Subcategory item information.
                 */
                 class CategoryItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Category ID
-                     * @return ID Category ID
+                     * 获取Category ID.
+                     * @return ID Category ID.
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置Category ID
-                     * @param _iD Category ID
+                     * 设置Category ID.
+                     * @param _iD Category ID.
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Category name
-                     * @return Name Category name
+                     * 获取Category name.
+                     * @return Name Category name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Category name
-                     * @param _name Category name
+                     * 设置Category name.
+                     * @param _name Category name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Category ID
+                     * Category ID.
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Category name
+                     * Category name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

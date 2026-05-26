@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of database versions
-                     * @return VersionSet List of database versions
+                     * 获取<p>Database version information list.</p>
+                     * @return VersionSet <p>Database version information list.</p>
                      * 
                      */
                     std::vector<Version> GetVersionSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of database versions
+                     * <p>Database version information list.</p>
                      */
                     std::vector<Version> m_versionSet;
                     bool m_versionSetHasBeenSet;

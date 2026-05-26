@@ -885,8 +885,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsPhysicalReplicationSupportedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsDcnStrongSyncSupported 
+                     * 获取<p>Whether strong-sync DCN is supported</p>
+                     * @return IsDcnStrongSyncSupported <p>Whether strong-sync DCN is supported</p>
                      * 
                      */
                     int64_t GetIsDcnStrongSyncSupported() const;
@@ -899,8 +899,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDcnStrongSyncSupportedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsDcnSwitchSupported 
+                     * 获取<p>Whether DCN switching is supported</p>
+                     * @return IsDcnSwitchSupported <p>Whether DCN switching is supported</p>
                      * 
                      */
                     int64_t GetIsDcnSwitchSupported() const;
@@ -913,8 +913,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDcnSwitchSupportedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProxyVersion 
+                     * 获取<p>Proxy version</p>
+                     * @return ProxyVersion <p>Proxy version</p>
                      * 
                      */
                     std::string GetProxyVersion() const;
@@ -927,8 +927,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CpuType 
+                     * 获取<p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
+                     * @return CpuType <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
                      * 
                      */
                     std::string GetCpuType() const;
@@ -941,8 +941,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProtectedProperty 
+                     * 获取<p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
+                     * @return ProtectedProperty <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
                      * 
                      */
                     int64_t GetProtectedProperty() const;
@@ -955,8 +955,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtectedPropertyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FlowId 
+                     * 获取<p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
+                     * @return FlowId <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -1332,37 +1332,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isPhysicalReplicationSupportedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether strong-sync DCN is supported</p>
                      */
                     int64_t m_isDcnStrongSyncSupported;
                     bool m_isDcnStrongSyncSupportedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether DCN switching is supported</p>
                      */
                     int64_t m_isDcnSwitchSupported;
                     bool m_isDcnSwitchSupportedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Proxy version</p>
                      */
                     std::string m_proxyVersion;
                     bool m_proxyVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
                      */
                     std::string m_cpuType;
                     bool m_cpuTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
                      */
                     int64_t m_protectedProperty;
                     bool m_protectedPropertyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program list data
+                * Mini game list data.
                 */
                 class DescribeMNGListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game icon</p>
-                     * @return MNPIcon <p>Mini game icon</p>
+                     * 获取<p>Mini game icon.</p>
+                     * @return MNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置<p>Mini game icon</p>
-                     * @param _mNPIcon <p>Mini game icon</p>
+                     * 设置<p>Mini game icon.</p>
+                     * @param _mNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game name</p>
-                     * @return MNPName <p>Mini game name</p>
+                     * 获取<p>Mini game name.</p>
+                     * @return MNPName <p>Mini game name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置<p>Mini game name</p>
-                     * @param _mNPName <p>Mini game name</p>
+                     * 设置<p>Mini game name.</p>
+                     * @param _mNPName <p>Mini game name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Team name</p>
-                     * @return TeamName <p>Team name</p>
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置<p>Team name</p>
-                     * @param _teamName <p>Team name</p>
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game category</p>
-                     * @return MNPType <p>Mini game category</p>
+                     * 获取<p>Mini game category.</p>
+                     * @return MNPType <p>Mini game category.</p>
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置<p>Mini game category</p>
-                     * @param _mNPType <p>Mini game category</p>
+                     * 设置<p>Mini game category.</p>
+                     * @param _mNPType <p>Mini game category.</p>
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-                     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * 获取<p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-                     * @param _status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * 设置<p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @param _status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game introduction</p>
-                     * @return MNPIntro <p>Mini game introduction</p>
+                     * 获取<p>Mini game introduction.</p>
+                     * @return MNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置<p>Mini game introduction</p>
-                     * @param _mNPIntro <p>Mini game introduction</p>
+                     * 设置<p>Mini game introduction.</p>
+                     * @param _mNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creator</p>
-                     * @return CreateUser <p>Creator</p>
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置<p>Creator</p>
-                     * @param _createUser <p>Creator</p>
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creation time</p>
-                     * @return CreateTime <p>Creation time</p>
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Creation time</p>
-                     * @param _createTime <p>Creation time</p>
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Updater</p>
-                     * @return UpdateUser <p>Updater</p>
+                     * 获取<p>Last modifier.</p>
+                     * @return UpdateUser <p>Last modifier.</p>
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置<p>Updater</p>
-                     * @param _updateUser <p>Updater</p>
+                     * 设置<p>Last modifier.</p>
+                     * @param _updateUser <p>Last modifier.</p>
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool UpdateUserHasBeenSet() const;
 
                     /**
-                     * 获取<p>Update time</p>
-                     * @return UpdateTime <p>Update time</p>
+                     * 获取<p>Last modified time.</p>
+                     * @return UpdateTime <p>Last modified time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置<p>Update time</p>
-                     * @param _updateTime <p>Update time</p>
+                     * 设置<p>Last modified time.</p>
+                     * @param _updateTime <p>Last modified time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Superapp name</p>
-                     * @return ApplicationName <p>Superapp name</p>
+                     * 获取<p>Superapp name.</p>
+                     * @return ApplicationName <p>Superapp name.</p>
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置<p>Superapp name</p>
-                     * @param _applicationName <p>Superapp name</p>
+                     * 设置<p>Superapp name.</p>
+                     * @param _applicationName <p>Superapp name.</p>
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
-                     * @return EffectStatus <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
+                     * 获取<p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+                     * @return EffectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
                      * 
                      */
                     int64_t GetEffectStatus() const;
 
                     /**
-                     * 设置<p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
-                     * @param _effectStatus <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
+                     * 设置<p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+                     * @param _effectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
                      * 
                      */
                     void SetEffectStatus(const int64_t& _effectStatus);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool EffectStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Effective version ID of the superapp bound to the mini game</p>
-                     * @return EffectMNPVersionId <p>Effective version ID of the superapp bound to the mini game</p>
+                     * 获取<p>Effective mini game version ID bound to the superapp.</p>
+                     * @return EffectMNPVersionId <p>Effective mini game version ID bound to the superapp.</p>
                      * 
                      */
                     int64_t GetEffectMNPVersionId() const;
 
                     /**
-                     * 设置<p>Effective version ID of the superapp bound to the mini game</p>
-                     * @param _effectMNPVersionId <p>Effective version ID of the superapp bound to the mini game</p>
+                     * 设置<p>Effective mini game version ID bound to the superapp.</p>
+                     * @param _effectMNPVersionId <p>Effective mini game version ID bound to the superapp.</p>
                      * 
                      */
                     void SetEffectMNPVersionId(const int64_t& _effectMNPVersionId);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool EffectMNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Effective version number of the superapp bound to the mini game</p>
-                     * @return EffectMNPVersion <p>Effective version number of the superapp bound to the mini game</p>
+                     * 获取<p>Effective mini game version number bound to the superapp. </p>
+                     * @return EffectMNPVersion <p>Effective mini game version number bound to the superapp. </p>
                      * 
                      */
                     std::string GetEffectMNPVersion() const;
 
                     /**
-                     * 设置<p>Effective version number of the superapp bound to the mini game</p>
-                     * @param _effectMNPVersion <p>Effective version number of the superapp bound to the mini game</p>
+                     * 设置<p>Effective mini game version number bound to the superapp. </p>
+                     * @param _effectMNPVersion <p>Effective mini game version number bound to the superapp. </p>
                      * 
                      */
                     void SetEffectMNPVersion(const std::string& _effectMNPVersion);
@@ -364,91 +364,91 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Mini game icon</p>
+                     * <p>Mini game icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * <p>Mini game name</p>
+                     * <p>Mini game name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * <p>Team name</p>
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * <p>Mini game category</p>
+                     * <p>Mini game category.</p>
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Mini game introduction</p>
+                     * <p>Mini game introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * <p>Creator</p>
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * <p>Creation time</p>
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Updater</p>
+                     * <p>Last modifier.</p>
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
-                     * <p>Update time</p>
+                     * <p>Last modified time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * <p>Superapp name</p>
+                     * <p>Superapp name.</p>
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
+                     * <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
                      */
                     int64_t m_effectStatus;
                     bool m_effectStatusHasBeenSet;
 
                     /**
-                     * <p>Effective version ID of the superapp bound to the mini game</p>
+                     * <p>Effective mini game version ID bound to the superapp.</p>
                      */
                     int64_t m_effectMNPVersionId;
                     bool m_effectMNPVersionIdHasBeenSet;
 
                     /**
-                     * <p>Effective version number of the superapp bound to the mini game</p>
+                     * <p>Effective mini game version number bound to the superapp. </p>
                      */
                     std::string m_effectMNPVersion;
                     bool m_effectMNPVersionHasBeenSet;

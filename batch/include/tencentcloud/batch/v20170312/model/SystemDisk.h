@@ -47,15 +47,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
-                     * @return DiskType System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+                     * 获取Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
+                     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
-                     * @param _diskType System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+                     * 设置Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
+                     * @param _diskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -68,19 +104,19 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-                     * @return DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * 获取System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
+                     * @return DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-                     * @param _diskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * 设置System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
+                     * @param _diskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -93,15 +129,15 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
                     bool DiskIdHasBeenSet() const;
 
                     /**
-                     * 获取System disk size; unit: GB; default value: 50 GB.
-                     * @return DiskSize System disk size; unit: GB; default value: 50 GB.
+                     * 获取System disk size; unit: GiB; default value: 50 GiB.
+                     * @return DiskSize System disk size; unit: GiB; default value: 50 GiB.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置System disk size; unit: GB; default value: 50 GB.
-                     * @param _diskSize System disk size; unit: GB; default value: 50 GB.
+                     * 设置System disk size; unit: GiB; default value: 50 GiB.
+                     * @param _diskSize System disk size; unit: GiB; default value: 50 GiB.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -114,15 +150,19 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the dedicated cluster to which the instance belongs.
-                     * @return CdcId ID of the dedicated cluster to which the instance belongs.
+                     * 获取Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+                     * @return CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     std::string GetCdcId() const;
 
                     /**
-                     * 设置ID of the dedicated cluster to which the instance belongs.
-                     * @param _cdcId ID of the dedicated cluster to which the instance belongs.
+                     * 设置Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+                     * @param _cdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      * 
                      */
                     void SetCdcId(const std::string& _cdcId);
@@ -134,32 +174,69 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
                      */
                     bool CdcIdHasBeenSet() const;
 
+                    /**
+                     * 获取Disk name, which specifies a length not exceeding 128 characters.
+                     * @return DiskName Disk name, which specifies a length not exceeding 128 characters.
+                     * 
+                     */
+                    std::string GetDiskName() const;
+
+                    /**
+                     * 设置Disk name, which specifies a length not exceeding 128 characters.
+                     * @param _diskName Disk name, which specifies a length not exceeding 128 characters.
+                     * 
+                     */
+                    void SetDiskName(const std::string& _diskName);
+
+                    /**
+                     * 判断参数 DiskName 是否已赋值
+                     * @return DiskName 是否已赋值
+                     * 
+                     */
+                    bool DiskNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+                     * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+                     * System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
 
                     /**
-                     * System disk size; unit: GB; default value: 50 GB.
+                     * System disk size; unit: GiB; default value: 50 GiB.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * ID of the dedicated cluster to which the instance belongs.
+                     * Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
                      */
                     std::string m_cdcId;
                     bool m_cdcIdHasBeenSet;
+
+                    /**
+                     * Disk name, which specifies a length not exceeding 128 characters.
+                     */
+                    std::string m_diskName;
+                    bool m_diskNameHasBeenSet;
 
                 };
             }

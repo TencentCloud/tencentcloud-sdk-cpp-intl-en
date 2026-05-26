@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Superapp ID
-                     * @return ApplicationId Superapp ID
+                     * 获取Superapp ID.
+                     * @return ApplicationId Superapp ID.
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Superapp ID
-                     * @param _applicationId Superapp ID
+                     * 设置Superapp ID.
+                     * @param _applicationId Superapp ID.
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Superapp configuration ID
-                     * @return Id Superapp configuration ID
+                     * 获取Superapp configuration ID.
+                     * @return Id Superapp configuration ID.
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Superapp configuration ID
-                     * @param _id Superapp configuration ID
+                     * 设置Superapp configuration ID.
+                     * @param _id Superapp configuration ID.
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Package name: corresponds to packageName on Android and bundleId on iOS
-                     * @return AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+                     * 获取Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+                     * @return AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      * 
                      */
                     std::string GetAppKey() const;
 
                     /**
-                     * 设置Package name: corresponds to packageName on Android and bundleId on iOS
-                     * @param _appKey Package name: corresponds to packageName on Android and bundleId on iOS
+                     * 设置Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+                     * @param _appKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      * 
                      */
                     void SetAppKey(const std::string& _appKey);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AppKeyHasBeenSet() const;
 
                     /**
-                     * 获取Superapp URL
-                     * @return AppURL Superapp URL
+                     * 获取Superapp URL.
+                     * @return AppURL Superapp URL.
                      * 
                      */
                     std::string GetAppURL() const;
 
                     /**
-                     * 设置Superapp URL
-                     * @param _appURL Superapp URL
+                     * 设置Superapp URL.
+                     * @param _appURL Superapp URL.
                      * 
                      */
                     void SetAppURL(const std::string& _appURL);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Superapp ID
+                     * Superapp ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Superapp configuration ID
+                     * Superapp configuration ID.
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Package name: corresponds to packageName on Android and bundleId on iOS
+                     * Package name. Corresponds to the package name on Android and the bundle ID on iOS.
                      */
                     std::string m_appKey;
                     bool m_appKeyHasBeenSet;
 
                     /**
-                     * Superapp URL
+                     * Superapp URL.
                      */
                     std::string m_appURL;
                     bool m_appURLHasBeenSet;

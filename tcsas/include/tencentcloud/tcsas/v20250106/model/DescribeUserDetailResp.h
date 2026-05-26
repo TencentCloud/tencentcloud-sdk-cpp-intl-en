@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User details
+                * Response for querying user details.
                 */
                 class DescribeUserDetailResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User iD.
-                     * @return UserId User iD.
+                     * 获取User ID.
+                     * @return UserId User ID.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User iD.
-                     * @param _userId User iD.
+                     * 设置User ID.
+                     * @param _userId User ID.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User account
-                     * @return UserAccount User account
+                     * 获取User account.
+                     * @return UserAccount User account.
                      * 
                      */
                     std::string GetUserAccount() const;
 
                     /**
-                     * 设置User account
-                     * @param _userAccount User account
+                     * 设置User account.
+                     * @param _userAccount User account.
                      * 
                      */
                     void SetUserAccount(const std::string& _userAccount);
@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool UserAccountHasBeenSet() const;
 
                     /**
-                     * 获取User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
-                     * @return AccountType User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+                     * 获取User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+                     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
-                     * 设置User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
-                     * @param _accountType User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+                     * 设置User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+                     * @param _accountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -114,15 +110,15 @@ namespace TencentCloud
                     bool AccountTypeHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return UserName User name
+                     * 获取User name.
+                     * @return UserName User name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name
-                     * @param _userName User name
+                     * 设置User name.
+                     * @param _userName User name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -137,26 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User iD.
+                     * User ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User account
+                     * User account.
                      */
                     std::string m_userAccount;
                     bool m_userAccountHasBeenSet;
 
                     /**
-                     * User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+                     * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
 
                     /**
-                     * User name
+                     * User name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;

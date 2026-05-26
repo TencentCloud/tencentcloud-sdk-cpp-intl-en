@@ -113,6 +113,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool KeyDelimitersHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ShardNum 
+                     * 
+                     */
+                    std::string GetShardNum() const;
+
+                    /**
+                     * 设置
+                     * @param _shardNum 
+                     * 
+                     */
+                    void SetShardNum(const std::string& _shardNum);
+
+                    /**
+                     * 判断参数 ShardNum 是否已赋值
+                     * @return ShardNum 是否已赋值
+                     * 
+                     */
+                    bool ShardNumHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AnalysisTopKey 
+                     * 
+                     */
+                    std::string GetAnalysisTopKey() const;
+
+                    /**
+                     * 设置
+                     * @param _analysisTopKey 
+                     * 
+                     */
+                    void SetAnalysisTopKey(const std::string& _analysisTopKey);
+
+                    /**
+                     * 判断参数 AnalysisTopKey 是否已赋值
+                     * @return AnalysisTopKey 是否已赋值
+                     * 
+                     */
+                    bool AnalysisTopKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -133,6 +175,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_keyDelimiters;
                     bool m_keyDelimitersHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_shardNum;
+                    bool m_shardNumHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_analysisTopKey;
+                    bool m_analysisTopKeyHasBeenSet;
 
                 };
             }

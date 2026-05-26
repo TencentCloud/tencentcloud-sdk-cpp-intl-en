@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned list of mini programs or mini games
+                * Returned mini program or mini game list.
                 */
                 class DescribeApplicationMNPListResp : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total number of entries.
+                     * @return TotalCount Total number of entries.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of entries
-                     * @param _totalCount Total number of entries
+                     * 设置Total number of entries.
+                     * @param _totalCount Total number of entries.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List information
-                     * @return DataList List information
+                     * 获取List data.
+                     * @return DataList List data.
                      * 
                      */
                     std::vector<DescribeApplicationMNPInfoResp> GetDataList() const;
 
                     /**
-                     * 设置List information
-                     * @param _dataList List information
+                     * 设置List data.
+                     * @param _dataList List data.
                      * 
                      */
                     void SetDataList(const std::vector<DescribeApplicationMNPInfoResp>& _dataList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total number of entries.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List information
+                     * List data.
                      */
                     std::vector<DescribeApplicationMNPInfoResp> m_dataList;
                     bool m_dataListHasBeenSet;

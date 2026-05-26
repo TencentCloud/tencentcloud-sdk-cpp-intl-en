@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The major database version number, such as 11, 12, 13.
-                     * @return DBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 获取Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+                     * @return DBMajorVersion Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置The major database version number, such as 11, 12, 13.
-                     * @param _dBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 设置Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+                     * @param _dBMajorVersion Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The major database version number, such as 11, 12, 13.
+                     * Database version. specifies the major version number, such as 11, 12, 13. can be obtained from the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;

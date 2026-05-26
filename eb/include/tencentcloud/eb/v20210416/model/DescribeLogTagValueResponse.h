@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query searching metric value. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Results Query searching metric value. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Query searching metric value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Results Query searching metric value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetResults() const;
@@ -62,8 +62,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Query searching metric value. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Query searching metric value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_results;
                     bool m_resultsHasBeenSet;

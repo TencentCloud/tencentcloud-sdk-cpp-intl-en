@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool TotalCallNumHasBeenSet() const;
 
                     /**
-                     * 获取The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AnalysisItems The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取List of slow SQL statistical analysis.
+                     * @return AnalysisItems List of slow SQL statistical analysis.
                      * 
                      */
                     std::vector<AnalysisItems> GetAnalysisItems() const;
 
                     /**
-                     * 设置The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _analysisItems The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置List of slow SQL statistical analysis.
+                     * @param _analysisItems List of slow SQL statistical analysis.
                      * 
                      */
                     void SetAnalysisItems(const std::vector<AnalysisItems>& _analysisItems);
@@ -129,8 +125,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_totalCallNumHasBeenSet;
 
                     /**
-                     * The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * List of slow SQL statistical analysis.
                      */
                     std::vector<AnalysisItems> m_analysisItems;
                     bool m_analysisItemsHasBeenSet;

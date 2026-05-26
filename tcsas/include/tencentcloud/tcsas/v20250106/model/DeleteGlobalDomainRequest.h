@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain ID
-                     * @return DomainId Domain ID
+                     * 获取Domain ID.
+                     * @return DomainId Domain ID.
                      * 
                      */
                     int64_t GetDomainId() const;
 
                     /**
-                     * 设置Domain ID
-                     * @param _domainId Domain ID
+                     * 设置Domain ID.
+                     * @param _domainId Domain ID.
                      * 
                      */
                     void SetDomainId(const int64_t& _domainId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainIdHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain ID
+                     * Domain ID.
                      */
                     int64_t m_domainId;
                     bool m_domainIdHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

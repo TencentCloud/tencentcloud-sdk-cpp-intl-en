@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Unified operation success ID - integer
+                * Unified ID data returned on successful operation (Integer type).
                 */
                 class ResourceIdInfo : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
-                     * @return ResourceId Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+                     * 获取Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
+                     * @return ResourceId Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
                      * 
                      */
                     int64_t GetResourceId() const;
 
                     /**
-                     * 设置Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
-                     * @param _resourceId Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+                     * 设置Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
+                     * @param _resourceId Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
                      * 
                      */
                     void SetResourceId(const int64_t& _resourceId);
@@ -82,10 +70,7 @@ A trial version is currently available and uploaded by the current user.
                 private:
 
                     /**
-                     * Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+                     * Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
                      */
                     int64_t m_resourceId;
                     bool m_resourceIdHasBeenSet;

@@ -37,10 +37,14 @@
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceHourRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceHourResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceParamTplRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/CreateDBInstanceParamTplResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateLogDownloadTaskRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/CreateLogDownloadTaskResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteAccountUserRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteAccountUserResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DeleteDBBackupsRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DeleteDBBackupsResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DeleteLogDownloadTaskResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeAccountUsersRequest.h>
@@ -69,6 +73,10 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNamespaceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNodePropertyRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceNodePropertyResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceParamTplRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceParamTplResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceParamTplDetailRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribeDBInstanceParamTplDetailResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDBInstancesResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeDetailedSlowLogsRequest.h>
@@ -81,6 +89,8 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeLogDownloadTasksResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeMongodbLogsRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeMongodbLogsResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribePasswordRotationRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/DescribePasswordRotationResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSRVConnectionDomainRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSRVConnectionDomainResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DescribeSecurityGroupRequest.h>
@@ -93,6 +103,8 @@
 #include <tencentcloud/mongodb/v20190725/model/DescribeSpecInfoResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/DisableSRVConnectionUrlRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/DisableSRVConnectionUrlResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/EnablePasswordRotationRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/EnablePasswordRotationResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/EnableSRVConnectionUrlRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/EnableSRVConnectionUrlResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/EnableTransparentDataEncryptionRequest.h>
@@ -113,6 +125,8 @@
 #include <tencentcloud/mongodb/v20190725/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/KillOpsRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/KillOpsResponse.h>
+#include <tencentcloud/mongodb/v20190725/model/ModifyBackupExpireTimeRequest.h>
+#include <tencentcloud/mongodb/v20190725/model/ModifyBackupExpireTimeResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/ModifyDBInstanceNetworkAddressRequest.h>
 #include <tencentcloud/mongodb/v20190725/model/ModifyDBInstanceNetworkAddressResponse.h>
 #include <tencentcloud/mongodb/v20190725/model/ModifyDBInstanceSecurityGroupRequest.h>
@@ -182,12 +196,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
                 typedef std::future<CreateDBInstanceHourOutcome> CreateDBInstanceHourOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::CreateDBInstanceHourRequest&, CreateDBInstanceHourOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceHourAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDBInstanceParamTplResponse> CreateDBInstanceParamTplOutcome;
+                typedef std::future<CreateDBInstanceParamTplOutcome> CreateDBInstanceParamTplOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::CreateDBInstanceParamTplRequest&, CreateDBInstanceParamTplOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceParamTplAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLogDownloadTaskResponse> CreateLogDownloadTaskOutcome;
                 typedef std::future<CreateLogDownloadTaskOutcome> CreateLogDownloadTaskOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::CreateLogDownloadTaskRequest&, CreateLogDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLogDownloadTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountUserResponse> DeleteAccountUserOutcome;
                 typedef std::future<DeleteAccountUserOutcome> DeleteAccountUserOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DeleteAccountUserRequest&, DeleteAccountUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDBBackupsResponse> DeleteDBBackupsOutcome;
+                typedef std::future<DeleteDBBackupsOutcome> DeleteDBBackupsOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DeleteDBBackupsRequest&, DeleteDBBackupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDBBackupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLogDownloadTaskResponse> DeleteLogDownloadTaskOutcome;
                 typedef std::future<DeleteLogDownloadTaskOutcome> DeleteLogDownloadTaskOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DeleteLogDownloadTaskRequest&, DeleteLogDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogDownloadTaskAsyncHandler;
@@ -230,6 +250,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceNodePropertyResponse> DescribeDBInstanceNodePropertyOutcome;
                 typedef std::future<DescribeDBInstanceNodePropertyOutcome> DescribeDBInstanceNodePropertyOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstanceNodePropertyRequest&, DescribeDBInstanceNodePropertyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceNodePropertyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceParamTplResponse> DescribeDBInstanceParamTplOutcome;
+                typedef std::future<DescribeDBInstanceParamTplOutcome> DescribeDBInstanceParamTplOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstanceParamTplRequest&, DescribeDBInstanceParamTplOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceParamTplAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceParamTplDetailResponse> DescribeDBInstanceParamTplDetailOutcome;
+                typedef std::future<DescribeDBInstanceParamTplDetailOutcome> DescribeDBInstanceParamTplDetailOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstanceParamTplDetailRequest&, DescribeDBInstanceParamTplDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceParamTplDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
@@ -248,6 +274,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMongodbLogsResponse> DescribeMongodbLogsOutcome;
                 typedef std::future<DescribeMongodbLogsOutcome> DescribeMongodbLogsOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeMongodbLogsRequest&, DescribeMongodbLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMongodbLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePasswordRotationResponse> DescribePasswordRotationOutcome;
+                typedef std::future<DescribePasswordRotationOutcome> DescribePasswordRotationOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::DescribePasswordRotationRequest&, DescribePasswordRotationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePasswordRotationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSRVConnectionDomainResponse> DescribeSRVConnectionDomainOutcome;
                 typedef std::future<DescribeSRVConnectionDomainOutcome> DescribeSRVConnectionDomainOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DescribeSRVConnectionDomainRequest&, DescribeSRVConnectionDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSRVConnectionDomainAsyncHandler;
@@ -266,6 +295,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableSRVConnectionUrlResponse> DisableSRVConnectionUrlOutcome;
                 typedef std::future<DisableSRVConnectionUrlOutcome> DisableSRVConnectionUrlOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::DisableSRVConnectionUrlRequest&, DisableSRVConnectionUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableSRVConnectionUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnablePasswordRotationResponse> EnablePasswordRotationOutcome;
+                typedef std::future<EnablePasswordRotationOutcome> EnablePasswordRotationOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::EnablePasswordRotationRequest&, EnablePasswordRotationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnablePasswordRotationAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableSRVConnectionUrlResponse> EnableSRVConnectionUrlOutcome;
                 typedef std::future<EnableSRVConnectionUrlOutcome> EnableSRVConnectionUrlOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::EnableSRVConnectionUrlRequest&, EnableSRVConnectionUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableSRVConnectionUrlAsyncHandler;
@@ -296,6 +328,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::KillOpsResponse> KillOpsOutcome;
                 typedef std::future<KillOpsOutcome> KillOpsOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::KillOpsRequest&, KillOpsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillOpsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBackupExpireTimeResponse> ModifyBackupExpireTimeOutcome;
+                typedef std::future<ModifyBackupExpireTimeOutcome> ModifyBackupExpireTimeOutcomeCallable;
+                typedef std::function<void(const MongodbClient*, const Model::ModifyBackupExpireTimeRequest&, ModifyBackupExpireTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupExpireTimeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNetworkAddressResponse> ModifyDBInstanceNetworkAddressOutcome;
                 typedef std::future<ModifyDBInstanceNetworkAddressOutcome> ModifyDBInstanceNetworkAddressOutcomeCallable;
                 typedef std::function<void(const MongodbClient*, const Model::ModifyDBInstanceNetworkAddressRequest&, ModifyDBInstanceNetworkAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNetworkAddressAsyncHandler;
@@ -414,6 +449,16 @@ namespace TencentCloud
                 CreateDBInstanceHourOutcomeCallable CreateDBInstanceHourCallable(const Model::CreateDBInstanceHourRequest& request);
 
                 /**
+                 *This API is used to create a parameter template for TencentDB for MongoDB.
+**Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+                 * @param req CreateDBInstanceParamTplRequest
+                 * @return CreateDBInstanceParamTplOutcome
+                 */
+                CreateDBInstanceParamTplOutcome CreateDBInstanceParamTpl(const Model::CreateDBInstanceParamTplRequest &request);
+                void CreateDBInstanceParamTplAsync(const Model::CreateDBInstanceParamTplRequest& request, const CreateDBInstanceParamTplAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDBInstanceParamTplOutcomeCallable CreateDBInstanceParamTplCallable(const Model::CreateDBInstanceParamTplRequest& request);
+
+                /**
                  *This API is used to create a log download task.
                  * @param req CreateLogDownloadTaskRequest
                  * @return CreateLogDownloadTaskOutcome
@@ -430,6 +475,15 @@ namespace TencentCloud
                 DeleteAccountUserOutcome DeleteAccountUser(const Model::DeleteAccountUserRequest &request);
                 void DeleteAccountUserAsync(const Model::DeleteAccountUserRequest& request, const DeleteAccountUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAccountUserOutcomeCallable DeleteAccountUserCallable(const Model::DeleteAccountUserRequest& request);
+
+                /**
+                 *This API is used to delete full backups.
+                 * @param req DeleteDBBackupsRequest
+                 * @return DeleteDBBackupsOutcome
+                 */
+                DeleteDBBackupsOutcome DeleteDBBackups(const Model::DeleteDBBackupsRequest &request);
+                void DeleteDBBackupsAsync(const Model::DeleteDBBackupsRequest& request, const DeleteDBBackupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDBBackupsOutcomeCallable DeleteDBBackupsCallable(const Model::DeleteDBBackupsRequest& request);
 
                 /**
                  *This API is used to delete a log download task.
@@ -558,6 +612,26 @@ namespace TencentCloud
                 DescribeDBInstanceNodePropertyOutcomeCallable DescribeDBInstanceNodePropertyCallable(const Model::DescribeDBInstanceNodePropertyRequest& request);
 
                 /**
+                 *This API is used to query ALL MongoDB database parameter templates under the current account.
+**Description:** The DescribeDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+                 * @param req DescribeDBInstanceParamTplRequest
+                 * @return DescribeDBInstanceParamTplOutcome
+                 */
+                DescribeDBInstanceParamTplOutcome DescribeDBInstanceParamTpl(const Model::DescribeDBInstanceParamTplRequest &request);
+                void DescribeDBInstanceParamTplAsync(const Model::DescribeDBInstanceParamTplRequest& request, const DescribeDBInstanceParamTplAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceParamTplOutcomeCallable DescribeDBInstanceParamTplCallable(const Model::DescribeDBInstanceParamTplRequest& request);
+
+                /**
+                 *This API is used to query parameter template details of a cloud database instance for MongoDB.
+**Description:** The DescribeDBInstanceParamTplDetail API is in public beta. During this period, this interface is only applicable to beta test participants.
+                 * @param req DescribeDBInstanceParamTplDetailRequest
+                 * @return DescribeDBInstanceParamTplDetailOutcome
+                 */
+                DescribeDBInstanceParamTplDetailOutcome DescribeDBInstanceParamTplDetail(const Model::DescribeDBInstanceParamTplDetailRequest &request);
+                void DescribeDBInstanceParamTplDetailAsync(const Model::DescribeDBInstanceParamTplDetailRequest& request, const DescribeDBInstanceParamTplDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceParamTplDetailOutcomeCallable DescribeDBInstanceParamTplDetailCallable(const Model::DescribeDBInstanceParamTplDetailRequest& request);
+
+                /**
                  *This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
                  * @param req DescribeDBInstancesRequest
                  * @return DescribeDBInstancesOutcome
@@ -612,6 +686,15 @@ namespace TencentCloud
                 DescribeMongodbLogsOutcomeCallable DescribeMongodbLogsCallable(const Model::DescribeMongodbLogsRequest& request);
 
                 /**
+                 *Retrieve the rotation status info
+                 * @param req DescribePasswordRotationRequest
+                 * @return DescribePasswordRotationOutcome
+                 */
+                DescribePasswordRotationOutcome DescribePasswordRotation(const Model::DescribePasswordRotationRequest &request);
+                void DescribePasswordRotationAsync(const Model::DescribePasswordRotationRequest& request, const DescribePasswordRotationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePasswordRotationOutcomeCallable DescribePasswordRotationCallable(const Model::DescribePasswordRotationRequest& request);
+
+                /**
                  *This API is used to query the current domain information of the MongoDB database.
                  * @param req DescribeSRVConnectionDomainRequest
                  * @return DescribeSRVConnectionDomainOutcome
@@ -664,6 +747,15 @@ namespace TencentCloud
                 DisableSRVConnectionUrlOutcome DisableSRVConnectionUrl(const Model::DisableSRVConnectionUrlRequest &request);
                 void DisableSRVConnectionUrlAsync(const Model::DisableSRVConnectionUrlRequest& request, const DisableSRVConnectionUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DisableSRVConnectionUrlOutcomeCallable DisableSRVConnectionUrlCallable(const Model::DisableSRVConnectionUrlRequest& request);
+
+                /**
+                 *Enable password rotation
+                 * @param req EnablePasswordRotationRequest
+                 * @return EnablePasswordRotationOutcome
+                 */
+                EnablePasswordRotationOutcome EnablePasswordRotation(const Model::EnablePasswordRotationRequest &request);
+                void EnablePasswordRotationAsync(const Model::EnablePasswordRotationRequest& request, const EnablePasswordRotationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnablePasswordRotationOutcomeCallable EnablePasswordRotationCallable(const Model::EnablePasswordRotationRequest& request);
 
                 /**
                  *This API is used to enable the SRV Access Address for MongoDB database.
@@ -754,6 +846,15 @@ namespace TencentCloud
                 KillOpsOutcome KillOps(const Model::KillOpsRequest &request);
                 void KillOpsAsync(const Model::KillOpsRequest& request, const KillOpsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 KillOpsOutcomeCallable KillOpsCallable(const Model::KillOpsRequest& request);
+
+                /**
+                 *Modify backup expiration time
+                 * @param req ModifyBackupExpireTimeRequest
+                 * @return ModifyBackupExpireTimeOutcome
+                 */
+                ModifyBackupExpireTimeOutcome ModifyBackupExpireTime(const Model::ModifyBackupExpireTimeRequest &request);
+                void ModifyBackupExpireTimeAsync(const Model::ModifyBackupExpireTimeRequest& request, const ModifyBackupExpireTimeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBackupExpireTimeOutcomeCallable ModifyBackupExpireTimeCallable(const Model::ModifyBackupExpireTimeRequest& request);
 
                 /**
                  *This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.

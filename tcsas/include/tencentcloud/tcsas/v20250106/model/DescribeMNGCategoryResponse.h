@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Response data.</p>
+                     * @return Data <p>Response data.</p>
                      * 
                      */
                     std::vector<MNGTypeDefine> GetData() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Response data.</p>
                      */
                     std::vector<MNGTypeDefine> m_data;
                     bool m_dataHasBeenSet;

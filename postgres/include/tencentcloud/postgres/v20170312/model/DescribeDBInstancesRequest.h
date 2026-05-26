@@ -44,43 +44,47 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+                     * 获取Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
-                     * @return Filters Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+                     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+                     * 设置Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
-                     * @param _filters Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+                     * @param _filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -93,15 +97,15 @@ db-public-address: filter by instance public network address (in string format)
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`.
-                     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+                     * 获取Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
+                     * @return Limit Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`.
-                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+                     * 设置Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
+                     * @param _limit Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -135,15 +139,15 @@ db-public-address: filter by instance public network address (in string format)
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
-                     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+                     * 获取Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+                     * @return OrderBy Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
-                     * @param _orderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+                     * 设置Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+                     * @param _orderBy Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -156,15 +160,15 @@ db-public-address: filter by instance public network address (in string format)
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending)
-                     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * 获取Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+                     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending)
-                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * 设置Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+                     * @param _orderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -179,20 +183,21 @@ db-public-address: filter by instance public network address (in string format)
                 private:
 
                     /**
-                     * Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+                     * Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+                     * Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -204,13 +209,13 @@ db-public-address: filter by instance public network address (in string format)
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+                     * Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Retention data
+                * Retention data.
                 */
                 class RetentionData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of active users
-                     * @return ActiveUserCount Number of active users
+                     * 获取Number of active users.
+                     * @return ActiveUserCount Number of active users.
                      * 
                      */
                     int64_t GetActiveUserCount() const;
 
                     /**
-                     * 设置Number of active users
-                     * @param _activeUserCount Number of active users
+                     * 设置Number of active users.
+                     * @param _activeUserCount Number of active users.
                      * 
                      */
                     void SetActiveUserCount(const int64_t& _activeUserCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ActiveUserCountHasBeenSet() const;
 
                     /**
-                     * 获取Day 1 retention of active users
-                     * @return OneDayRetentionUsers Day 1 retention of active users
+                     * 获取Day 1 retention of active users.
+                     * @return OneDayRetentionUsers Day 1 retention of active users.
                      * 
                      */
                     int64_t GetOneDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 1 retention of active users
-                     * @param _oneDayRetentionUsers Day 1 retention of active users
+                     * 设置Day 1 retention of active users.
+                     * @param _oneDayRetentionUsers Day 1 retention of active users.
                      * 
                      */
                     void SetOneDayRetentionUsers(const int64_t& _oneDayRetentionUsers);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OneDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 2 retention of active users
-                     * @return TwoDayRetentionUsers Day 2 retention of active users
+                     * 获取Day 2 retention of active users.
+                     * @return TwoDayRetentionUsers Day 2 retention of active users.
                      * 
                      */
                     int64_t GetTwoDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 2 retention of active users
-                     * @param _twoDayRetentionUsers Day 2 retention of active users
+                     * 设置Day 2 retention of active users.
+                     * @param _twoDayRetentionUsers Day 2 retention of active users.
                      * 
                      */
                     void SetTwoDayRetentionUsers(const int64_t& _twoDayRetentionUsers);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TwoDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 3 retention of active users
-                     * @return ThreeDayRetentionUsers Day 3 retention of active users
+                     * 获取Day 3 retention of active users.
+                     * @return ThreeDayRetentionUsers Day 3 retention of active users.
                      * 
                      */
                     int64_t GetThreeDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 3 retention of active users
-                     * @param _threeDayRetentionUsers Day 3 retention of active users
+                     * 设置Day 3 retention of active users.
+                     * @param _threeDayRetentionUsers Day 3 retention of active users.
                      * 
                      */
                     void SetThreeDayRetentionUsers(const int64_t& _threeDayRetentionUsers);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ThreeDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 4 retention of active users
-                     * @return FourDayRetentionUsers Day 4 retention of active users
+                     * 获取Day 4 retention of active users.
+                     * @return FourDayRetentionUsers Day 4 retention of active users.
                      * 
                      */
                     int64_t GetFourDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 4 retention of active users
-                     * @param _fourDayRetentionUsers Day 4 retention of active users
+                     * 设置Day 4 retention of active users.
+                     * @param _fourDayRetentionUsers Day 4 retention of active users.
                      * 
                      */
                     void SetFourDayRetentionUsers(const int64_t& _fourDayRetentionUsers);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FourDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 5 retention of active users
-                     * @return FiveDayRetentionUsers Day 5 retention of active users
+                     * 获取Day 5 retention of active users.
+                     * @return FiveDayRetentionUsers Day 5 retention of active users.
                      * 
                      */
                     int64_t GetFiveDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 5 retention of active users
-                     * @param _fiveDayRetentionUsers Day 5 retention of active users
+                     * 设置Day 5 retention of active users.
+                     * @param _fiveDayRetentionUsers Day 5 retention of active users.
                      * 
                      */
                     void SetFiveDayRetentionUsers(const int64_t& _fiveDayRetentionUsers);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FiveDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 6 retention of active users
-                     * @return SixDayRetentionUsers Day 6 retention of active users
+                     * 获取Day 6 retention of active users.
+                     * @return SixDayRetentionUsers Day 6 retention of active users.
                      * 
                      */
                     int64_t GetSixDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 6 retention of active users
-                     * @param _sixDayRetentionUsers Day 6 retention of active users
+                     * 设置Day 6 retention of active users.
+                     * @param _sixDayRetentionUsers Day 6 retention of active users.
                      * 
                      */
                     void SetSixDayRetentionUsers(const int64_t& _sixDayRetentionUsers);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SixDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 7 retention of active users
-                     * @return SevenDayRetentionUsers Day 7 retention of active users
+                     * 获取Day 7 retention of active users.
+                     * @return SevenDayRetentionUsers Day 7 retention of active users.
                      * 
                      */
                     int64_t GetSevenDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 7 retention of active users
-                     * @param _sevenDayRetentionUsers Day 7 retention of active users
+                     * 设置Day 7 retention of active users.
+                     * @param _sevenDayRetentionUsers Day 7 retention of active users.
                      * 
                      */
                     void SetSevenDayRetentionUsers(const int64_t& _sevenDayRetentionUsers);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool SevenDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 14 retention of active users
-                     * @return FourteenDayRetentionUsers Day 14 retention of active users
+                     * 获取Day 14 retention of active users.
+                     * @return FourteenDayRetentionUsers Day 14 retention of active users.
                      * 
                      */
                     int64_t GetFourteenDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 14 retention of active users
-                     * @param _fourteenDayRetentionUsers Day 14 retention of active users
+                     * 设置Day 14 retention of active users.
+                     * @param _fourteenDayRetentionUsers Day 14 retention of active users.
                      * 
                      */
                     void SetFourteenDayRetentionUsers(const int64_t& _fourteenDayRetentionUsers);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool FourteenDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 30 retention of active users
-                     * @return ThirtyDayRetentionUsers Day 30 retention of active users
+                     * 获取Day 30 retention of active users.
+                     * @return ThirtyDayRetentionUsers Day 30 retention of active users.
                      * 
                      */
                     int64_t GetThirtyDayRetentionUsers() const;
 
                     /**
-                     * 设置Day 30 retention of active users
-                     * @param _thirtyDayRetentionUsers Day 30 retention of active users
+                     * 设置Day 30 retention of active users.
+                     * @param _thirtyDayRetentionUsers Day 30 retention of active users.
                      * 
                      */
                     void SetThirtyDayRetentionUsers(const int64_t& _thirtyDayRetentionUsers);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ThirtyDayRetentionUsersHasBeenSet() const;
 
                     /**
-                     * 获取Number of new users
-                     * @return NewUserCount Number of new users
+                     * 获取Number of new users.
+                     * @return NewUserCount Number of new users.
                      * 
                      */
                     int64_t GetNewUserCount() const;
 
                     /**
-                     * 设置Number of new users
-                     * @param _newUserCount Number of new users
+                     * 设置Number of new users.
+                     * @param _newUserCount Number of new users.
                      * 
                      */
                     void SetNewUserCount(const int64_t& _newUserCount);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool NewUserCountHasBeenSet() const;
 
                     /**
-                     * 获取Day 1 retention of new users
-                     * @return OneDayRetentionNewUsers Day 1 retention of new users
+                     * 获取Day 1 retention of new users.
+                     * @return OneDayRetentionNewUsers Day 1 retention of new users.
                      * 
                      */
                     int64_t GetOneDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 1 retention of new users
-                     * @param _oneDayRetentionNewUsers Day 1 retention of new users
+                     * 设置Day 1 retention of new users.
+                     * @param _oneDayRetentionNewUsers Day 1 retention of new users.
                      * 
                      */
                     void SetOneDayRetentionNewUsers(const int64_t& _oneDayRetentionNewUsers);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool OneDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 2 retention of new users
-                     * @return TwoDayRetentionNewUsers Day 2 retention of new users
+                     * 获取Day 2 retention of new users.
+                     * @return TwoDayRetentionNewUsers Day 2 retention of new users.
                      * 
                      */
                     int64_t GetTwoDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 2 retention of new users
-                     * @param _twoDayRetentionNewUsers Day 2 retention of new users
+                     * 设置Day 2 retention of new users.
+                     * @param _twoDayRetentionNewUsers Day 2 retention of new users.
                      * 
                      */
                     void SetTwoDayRetentionNewUsers(const int64_t& _twoDayRetentionNewUsers);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool TwoDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 3 retention of new users
-                     * @return ThreeDayRetentionNewUsers Day 3 retention of new users
+                     * 获取Day 3 retention of new users.
+                     * @return ThreeDayRetentionNewUsers Day 3 retention of new users.
                      * 
                      */
                     int64_t GetThreeDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 3 retention of new users
-                     * @param _threeDayRetentionNewUsers Day 3 retention of new users
+                     * 设置Day 3 retention of new users.
+                     * @param _threeDayRetentionNewUsers Day 3 retention of new users.
                      * 
                      */
                     void SetThreeDayRetentionNewUsers(const int64_t& _threeDayRetentionNewUsers);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool ThreeDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 4 retention of new users
-                     * @return FourDayRetentionNewUsers Day 4 retention of new users
+                     * 获取Day 4 retention of new users.
+                     * @return FourDayRetentionNewUsers Day 4 retention of new users.
                      * 
                      */
                     int64_t GetFourDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 4 retention of new users
-                     * @param _fourDayRetentionNewUsers Day 4 retention of new users
+                     * 设置Day 4 retention of new users.
+                     * @param _fourDayRetentionNewUsers Day 4 retention of new users.
                      * 
                      */
                     void SetFourDayRetentionNewUsers(const int64_t& _fourDayRetentionNewUsers);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool FourDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 5 retention of new users
-                     * @return FiveDayRetentionNewUsers Day 5 retention of new users
+                     * 获取Day 5 retention of new users.
+                     * @return FiveDayRetentionNewUsers Day 5 retention of new users.
                      * 
                      */
                     int64_t GetFiveDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 5 retention of new users
-                     * @param _fiveDayRetentionNewUsers Day 5 retention of new users
+                     * 设置Day 5 retention of new users.
+                     * @param _fiveDayRetentionNewUsers Day 5 retention of new users.
                      * 
                      */
                     void SetFiveDayRetentionNewUsers(const int64_t& _fiveDayRetentionNewUsers);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool FiveDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 6 retention of new users
-                     * @return SixDayRetentionNewUsers Day 6 retention of new users
+                     * 获取Day 6 retention of new users.
+                     * @return SixDayRetentionNewUsers Day 6 retention of new users.
                      * 
                      */
                     int64_t GetSixDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 6 retention of new users
-                     * @param _sixDayRetentionNewUsers Day 6 retention of new users
+                     * 设置Day 6 retention of new users.
+                     * @param _sixDayRetentionNewUsers Day 6 retention of new users.
                      * 
                      */
                     void SetSixDayRetentionNewUsers(const int64_t& _sixDayRetentionNewUsers);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool SixDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 7 retention of new users
-                     * @return SevenDayRetentionNewUsers Day 7 retention of new users
+                     * 获取Day 7 retention of new users.
+                     * @return SevenDayRetentionNewUsers Day 7 retention of new users.
                      * 
                      */
                     int64_t GetSevenDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 7 retention of new users
-                     * @param _sevenDayRetentionNewUsers Day 7 retention of new users
+                     * 设置Day 7 retention of new users.
+                     * @param _sevenDayRetentionNewUsers Day 7 retention of new users.
                      * 
                      */
                     void SetSevenDayRetentionNewUsers(const int64_t& _sevenDayRetentionNewUsers);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool SevenDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 14 retention of new users
-                     * @return FourteenDayRetentionNewUsers Day 14 retention of new users
+                     * 获取Day 14 retention of new users.
+                     * @return FourteenDayRetentionNewUsers Day 14 retention of new users.
                      * 
                      */
                     int64_t GetFourteenDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 14 retention of new users
-                     * @param _fourteenDayRetentionNewUsers Day 14 retention of new users
+                     * 设置Day 14 retention of new users.
+                     * @param _fourteenDayRetentionNewUsers Day 14 retention of new users.
                      * 
                      */
                     void SetFourteenDayRetentionNewUsers(const int64_t& _fourteenDayRetentionNewUsers);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool FourteenDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Day 30 retention of new users
-                     * @return ThirtyDayRetentionNewUsers Day 30 retention of new users
+                     * 获取Day 30 retention of new users.
+                     * @return ThirtyDayRetentionNewUsers Day 30 retention of new users.
                      * 
                      */
                     int64_t GetThirtyDayRetentionNewUsers() const;
 
                     /**
-                     * 设置Day 30 retention of new users
-                     * @param _thirtyDayRetentionNewUsers Day 30 retention of new users
+                     * 设置Day 30 retention of new users.
+                     * @param _thirtyDayRetentionNewUsers Day 30 retention of new users.
                      * 
                      */
                     void SetThirtyDayRetentionNewUsers(const int64_t& _thirtyDayRetentionNewUsers);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool ThirtyDayRetentionNewUsersHasBeenSet() const;
 
                     /**
-                     * 获取Data time in YYYYMMDD format
-                     * @return DataTime Data time in YYYYMMDD format
+                     * 获取Data time in YYYYMMDD format.
+                     * @return DataTime Data time in YYYYMMDD format.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Data time in YYYYMMDD format
-                     * @param _dataTime Data time in YYYYMMDD format
+                     * 设置Data time in YYYYMMDD format.
+                     * @param _dataTime Data time in YYYYMMDD format.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -490,127 +490,127 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of active users
+                     * Number of active users.
                      */
                     int64_t m_activeUserCount;
                     bool m_activeUserCountHasBeenSet;
 
                     /**
-                     * Day 1 retention of active users
+                     * Day 1 retention of active users.
                      */
                     int64_t m_oneDayRetentionUsers;
                     bool m_oneDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 2 retention of active users
+                     * Day 2 retention of active users.
                      */
                     int64_t m_twoDayRetentionUsers;
                     bool m_twoDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 3 retention of active users
+                     * Day 3 retention of active users.
                      */
                     int64_t m_threeDayRetentionUsers;
                     bool m_threeDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 4 retention of active users
+                     * Day 4 retention of active users.
                      */
                     int64_t m_fourDayRetentionUsers;
                     bool m_fourDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 5 retention of active users
+                     * Day 5 retention of active users.
                      */
                     int64_t m_fiveDayRetentionUsers;
                     bool m_fiveDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 6 retention of active users
+                     * Day 6 retention of active users.
                      */
                     int64_t m_sixDayRetentionUsers;
                     bool m_sixDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 7 retention of active users
+                     * Day 7 retention of active users.
                      */
                     int64_t m_sevenDayRetentionUsers;
                     bool m_sevenDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 14 retention of active users
+                     * Day 14 retention of active users.
                      */
                     int64_t m_fourteenDayRetentionUsers;
                     bool m_fourteenDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Day 30 retention of active users
+                     * Day 30 retention of active users.
                      */
                     int64_t m_thirtyDayRetentionUsers;
                     bool m_thirtyDayRetentionUsersHasBeenSet;
 
                     /**
-                     * Number of new users
+                     * Number of new users.
                      */
                     int64_t m_newUserCount;
                     bool m_newUserCountHasBeenSet;
 
                     /**
-                     * Day 1 retention of new users
+                     * Day 1 retention of new users.
                      */
                     int64_t m_oneDayRetentionNewUsers;
                     bool m_oneDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 2 retention of new users
+                     * Day 2 retention of new users.
                      */
                     int64_t m_twoDayRetentionNewUsers;
                     bool m_twoDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 3 retention of new users
+                     * Day 3 retention of new users.
                      */
                     int64_t m_threeDayRetentionNewUsers;
                     bool m_threeDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 4 retention of new users
+                     * Day 4 retention of new users.
                      */
                     int64_t m_fourDayRetentionNewUsers;
                     bool m_fourDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 5 retention of new users
+                     * Day 5 retention of new users.
                      */
                     int64_t m_fiveDayRetentionNewUsers;
                     bool m_fiveDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 6 retention of new users
+                     * Day 6 retention of new users.
                      */
                     int64_t m_sixDayRetentionNewUsers;
                     bool m_sixDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 7 retention of new users
+                     * Day 7 retention of new users.
                      */
                     int64_t m_sevenDayRetentionNewUsers;
                     bool m_sevenDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 14 retention of new users
+                     * Day 14 retention of new users.
                      */
                     int64_t m_fourteenDayRetentionNewUsers;
                     bool m_fourteenDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Day 30 retention of new users
+                     * Day 30 retention of new users.
                      */
                     int64_t m_thirtyDayRetentionNewUsers;
                     bool m_thirtyDayRetentionNewUsersHasBeenSet;
 
                     /**
-                     * Data time in YYYYMMDD format
+                     * Data time in YYYYMMDD format.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;

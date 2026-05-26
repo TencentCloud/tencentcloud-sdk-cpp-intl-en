@@ -164,23 +164,27 @@ TDE: Supports data encryption.
                     bool SupportedFeatureNamesHasBeenSet() const;
 
                     /**
-                     * 获取Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
-                     * @return Status Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+                     * 获取Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
+                     * @return Status Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
-                     * @param _status Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+                     * 设置Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
+                     * @param _status Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -249,9 +253,10 @@ TDE: Supports data encryption.
                     bool m_supportedFeatureNamesHasBeenSet;
 
                     /**
-                     * Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+                     * Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

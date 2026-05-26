@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program online version ID
+                * Response for querying mini program released version IDs.
                 */
                 class QueryOnlineVersionResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program ID
-                     * @return MNPId Mini program ID
+                     * 获取Mini program appid.
+                     * @return MNPId Mini program appid.
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program ID
-                     * @param _mNPId Mini program ID
+                     * 设置Mini program appid.
+                     * @param _mNPId Mini program appid.
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Version number
-                     * @return MNPVersion Version number
+                     * 获取Version number.
+                     * @return MNPVersion Version number.
                      * 
                      */
                     std::string GetMNPVersion() const;
 
                     /**
-                     * 设置Version number
-                     * @param _mNPVersion Version number
+                     * 设置Version number.
+                     * @param _mNPVersion Version number.
                      * 
                      */
                     void SetMNPVersion(const std::string& _mNPVersion);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Version remarks.
-                     * @return MNPVersionNote Version remarks.
+                     * 获取Version note.
+                     * @return MNPVersionNote Version note.
                      * 
                      */
                     std::string GetMNPVersionNote() const;
 
                     /**
-                     * 设置Version remarks.
-                     * @param _mNPVersionNote Version remarks.
+                     * 设置Version note.
+                     * @param _mNPVersionNote Version note.
                      * 
                      */
                     void SetMNPVersionNote(const std::string& _mNPVersionNote);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MNPVersionNoteHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Last modified time.
+                     * @return UpdateTime Last modified time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Last modified time.
+                     * @param _updateTime Last modified time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program ID
+                     * Mini program appid.
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Version number
+                     * Version number.
                      */
                     std::string m_mNPVersion;
                     bool m_mNPVersionHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * Version remarks.
+                     * Version note.
                      */
                     std::string m_mNPVersionNote;
                     bool m_mNPVersionNoteHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last modified time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

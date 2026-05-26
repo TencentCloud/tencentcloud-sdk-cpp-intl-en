@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification ID
-                     * @return SpecCode Specification ID
+                     * 获取<p>Specification ID.</p>
+                     * @return SpecCode <p>Specification ID.</p>
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Specification ID
-                     * @param _specCode Specification ID
+                     * 设置<p>Specification ID.</p>
+                     * @param _specCode <p>Specification ID.</p>
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取PostgerSQL version number
-                     * @return Version PostgerSQL version number
+                     * 获取<p>PostgreSQL version number.</p>
+                     * @return Version <p>PostgreSQL version number.</p>
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置PostgerSQL version number
-                     * @param _version PostgerSQL version number
+                     * 设置<p>PostgreSQL version number.</p>
+                     * @param _version <p>PostgreSQL version number.</p>
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Full version name corresponding to kernel number
-                     * @return VersionName Full version name corresponding to kernel number
+                     * 获取<p>Full version name of the kernel number.</p>
+                     * @return VersionName <p>Full version name of the kernel number.</p>
                      * 
                      */
                     std::string GetVersionName() const;
 
                     /**
-                     * 设置Full version name corresponding to kernel number
-                     * @param _versionName Full version name corresponding to kernel number
+                     * 设置<p>Full version name of the kernel number.</p>
+                     * @param _versionName <p>Full version name of the kernel number.</p>
                      * 
                      */
                     void SetVersionName(const std::string& _versionName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VersionNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return Cpu Number of CPU cores
+                     * 获取<p>CPU cores.</p>
+                     * @return Cpu <p>CPU cores.</p>
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cpu Number of CPU cores
+                     * 设置<p>CPU cores.</p>
+                     * @param _cpu <p>CPU cores.</p>
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory size in MB
-                     * @return Memory Memory size in MB
+                     * 获取<p>Memory size, in MB.</p>
+                     * @return Memory <p>Memory size, in MB.</p>
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Memory size in MB
-                     * @param _memory Memory size in MB
+                     * 设置<p>Memory size, in MB.</p>
+                     * @param _memory <p>Memory size, in MB.</p>
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Maximum storage capacity in GB supported by this specification
-                     * @return MaxStorage Maximum storage capacity in GB supported by this specification
+                     * 获取<p>Maximum storage capacity supported by this specification, in GB.</p>
+                     * @return MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
-                     * 设置Maximum storage capacity in GB supported by this specification
-                     * @param _maxStorage Maximum storage capacity in GB supported by this specification
+                     * 设置<p>Maximum storage capacity supported by this specification, in GB.</p>
+                     * @param _maxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MaxStorageHasBeenSet() const;
 
                     /**
-                     * 获取Minimum storage capacity in GB supported by this specification
-                     * @return MinStorage Minimum storage capacity in GB supported by this specification
+                     * 获取<p>Minimum storage capacity supported by this specification, in GB.</p>
+                     * @return MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     uint64_t GetMinStorage() const;
 
                     /**
-                     * 设置Minimum storage capacity in GB supported by this specification
-                     * @param _minStorage Minimum storage capacity in GB supported by this specification
+                     * 设置<p>Minimum storage capacity supported by this specification, in GB.</p>
+                     * @param _minStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
                      * 
                      */
                     void SetMinStorage(const uint64_t& _minStorage);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MinStorageHasBeenSet() const;
 
                     /**
-                     * 获取Estimated QPS for this specification
-                     * @return Qps Estimated QPS for this specification
+                     * 获取<p>Estimated QPS of the specification.</p>
+                     * @return Qps <p>Estimated QPS of the specification.</p>
                      * 
                      */
                     uint64_t GetQps() const;
 
                     /**
-                     * 设置Estimated QPS for this specification
-                     * @param _qps Estimated QPS for this specification
+                     * 设置<p>Estimated QPS of the specification.</p>
+                     * @param _qps <p>Estimated QPS of the specification.</p>
                      * 
                      */
                     void SetQps(const uint64_t& _qps);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取(Disused)
-                     * @return Pid (Disused)
+                     * 获取<p>[Deprecated field].</p>
+                     * @return Pid <p>[Deprecated field].</p>
                      * 
                      */
                     uint64_t GetPid() const;
 
                     /**
-                     * 设置(Disused)
-                     * @param _pid (Disused)
+                     * 设置<p>[Deprecated field].</p>
+                     * @param _pid <p>[Deprecated field].</p>
                      * 
                      */
                     void SetPid(const uint64_t& _pid);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取Machine type
-                     * @return Type Machine type
+                     * 获取<p>Machine type.</p>
+                     * @return Type <p>Machine type.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Machine type
-                     * @param _type Machine type
+                     * 设置<p>Machine type.</p>
+                     * @param _type <p>Machine type.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -257,19 +257,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MajorVersion PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>PostgreSQL major version number.</p>
+                     * @return MajorVersion <p>PostgreSQL major version number.</p>
                      * 
                      */
                     std::string GetMajorVersion() const;
 
                     /**
-                     * 设置PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _majorVersion PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>PostgreSQL major version number.</p>
+                     * @param _majorVersion <p>PostgreSQL major version number.</p>
                      * 
                      */
                     void SetMajorVersion(const std::string& _majorVersion);
@@ -282,19 +278,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return KernelVersion PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>PostgreSQL kernel version number.</p>
+                     * @return KernelVersion <p>PostgreSQL kernel version number.</p>
                      * 
                      */
                     std::string GetKernelVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _kernelVersion PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>PostgreSQL kernel version number.</p>
+                     * @param _kernelVersion <p>PostgreSQL kernel version number.</p>
                      * 
                      */
                     void SetKernelVersion(const std::string& _kernelVersion);
@@ -307,19 +299,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
+                     * @return IsSupportTDE <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
                      * 
                      */
                     int64_t GetIsSupportTDE() const;
 
                     /**
-                     * 设置Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _isSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
+                     * @param _isSupportTDE <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
                      * 
                      */
                     void SetIsSupportTDE(const int64_t& _isSupportTDE);
@@ -334,82 +322,79 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Specification ID
+                     * <p>Specification ID.</p>
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * PostgerSQL version number
+                     * <p>PostgreSQL version number.</p>
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Full version name corresponding to kernel number
+                     * <p>Full version name of the kernel number.</p>
                      */
                     std::string m_versionName;
                     bool m_versionNameHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>CPU cores.</p>
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory size in MB
+                     * <p>Memory size, in MB.</p>
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Maximum storage capacity in GB supported by this specification
+                     * <p>Maximum storage capacity supported by this specification, in GB.</p>
                      */
                     uint64_t m_maxStorage;
                     bool m_maxStorageHasBeenSet;
 
                     /**
-                     * Minimum storage capacity in GB supported by this specification
+                     * <p>Minimum storage capacity supported by this specification, in GB.</p>
                      */
                     uint64_t m_minStorage;
                     bool m_minStorageHasBeenSet;
 
                     /**
-                     * Estimated QPS for this specification
+                     * <p>Estimated QPS of the specification.</p>
                      */
                     uint64_t m_qps;
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * (Disused)
+                     * <p>[Deprecated field].</p>
                      */
                     uint64_t m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * Machine type
+                     * <p>Machine type.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>PostgreSQL major version number.</p>
                      */
                     std::string m_majorVersion;
                     bool m_majorVersionHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>PostgreSQL kernel version number.</p>
                      */
                     std::string m_kernelVersion;
                     bool m_kernelVersionHasBeenSet;
 
                     /**
-                     * Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
                      */
                     int64_t m_isSupportTDE;
                     bool m_isSupportTDEHasBeenSet;

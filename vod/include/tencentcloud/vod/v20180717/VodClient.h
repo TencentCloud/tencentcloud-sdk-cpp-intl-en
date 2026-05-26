@@ -145,6 +145,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteCDNDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteCLSTopicRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteCLSTopicResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteClassRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteContentReviewTemplateRequest.h>
@@ -219,6 +221,10 @@
 #include <tencentcloud/vod/v20180717/model/DescribeCDNStatDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCLSLogsetsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCLSLogsetsResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCLSTopicsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeCLSTopicsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCdnLogsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCdnLogsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeClientUploadAccelerationUsageDataRequest.h>
@@ -648,6 +654,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCDNDomainResponse> DeleteCDNDomainOutcome;
                 typedef std::future<DeleteCDNDomainOutcome> DeleteCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteCDNDomainRequest&, DeleteCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCDNDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCLSTopicResponse> DeleteCLSTopicOutcome;
+                typedef std::future<DeleteCLSTopicOutcome> DeleteCLSTopicOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteCLSTopicRequest&, DeleteCLSTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCLSTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteClassResponse> DeleteClassOutcome;
                 typedef std::future<DeleteClassOutcome> DeleteClassOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteClassRequest&, DeleteClassOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClassAsyncHandler;
@@ -759,6 +768,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCDNUsageDataResponse> DescribeCDNUsageDataOutcome;
                 typedef std::future<DescribeCDNUsageDataOutcome> DescribeCDNUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCDNUsageDataRequest&, DescribeCDNUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDNUsageDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCLSLogsetsResponse> DescribeCLSLogsetsOutcome;
+                typedef std::future<DescribeCLSLogsetsOutcome> DescribeCLSLogsetsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeCLSLogsetsRequest&, DescribeCLSLogsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCLSLogsetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCLSTopicsResponse> DescribeCLSTopicsOutcome;
+                typedef std::future<DescribeCLSTopicsOutcome> DescribeCLSTopicsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeCLSTopicsRequest&, DescribeCLSTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCLSTopicsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCdnLogsResponse> DescribeCdnLogsOutcome;
                 typedef std::future<DescribeCdnLogsOutcome> DescribeCdnLogsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCdnLogsRequest&, DescribeCdnLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnLogsAsyncHandler;
@@ -1224,7 +1239,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateAigcApiTokenOutcomeCallable CreateAigcApiTokenCallable(const Model::CreateAigcApiTokenRequest& request);
 
                 /**
-                 *This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+                 *This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the [billing documentation](https://intl.cloud.tencent.com/document/product/266/14666#87e472ca-9c95-4658-ab7b-8f2130608419).
                  * @param req CreateAigcAudioCloneRequest
                  * @return CreateAigcAudioCloneOutcome
                  */
@@ -1707,6 +1722,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteCDNDomainOutcomeCallable DeleteCDNDomainCallable(const Model::DeleteCDNDomainRequest& request);
 
                 /**
+                 *Delete the log topic enabled by VOD.
+                 * @param req DeleteCLSTopicRequest
+                 * @return DeleteCLSTopicOutcome
+                 */
+                DeleteCLSTopicOutcome DeleteCLSTopic(const Model::DeleteCLSTopicRequest &request);
+                void DeleteCLSTopicAsync(const Model::DeleteCLSTopicRequest& request, const DeleteCLSTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCLSTopicOutcomeCallable DeleteCLSTopicCallable(const Model::DeleteCLSTopicRequest& request);
+
+                /**
                  ** A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
                  * @param req DeleteClassRequest
@@ -2062,6 +2086,24 @@ Playback statistics only target VOD domains (EdgeOne domain name distribution is
                 DescribeCDNUsageDataOutcome DescribeCDNUsageData(const Model::DescribeCDNUsageDataRequest &request);
                 void DescribeCDNUsageDataAsync(const Model::DescribeCDNUsageDataRequest& request, const DescribeCDNUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCDNUsageDataOutcomeCallable DescribeCDNUsageDataCallable(const Model::DescribeCDNUsageDataRequest& request);
+
+                /**
+                 *Query the CLS log set created by VOD.
+                 * @param req DescribeCLSLogsetsRequest
+                 * @return DescribeCLSLogsetsOutcome
+                 */
+                DescribeCLSLogsetsOutcome DescribeCLSLogsets(const Model::DescribeCLSLogsetsRequest &request);
+                void DescribeCLSLogsetsAsync(const Model::DescribeCLSLogsetsRequest& request, const DescribeCLSLogsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCLSLogsetsOutcomeCallable DescribeCLSLogsetsCallable(const Model::DescribeCLSLogsetsRequest& request);
+
+                /**
+                 *Query the log topic list created by VOD.
+                 * @param req DescribeCLSTopicsRequest
+                 * @return DescribeCLSTopicsOutcome
+                 */
+                DescribeCLSTopicsOutcome DescribeCLSTopics(const Model::DescribeCLSTopicsRequest &request);
+                void DescribeCLSTopicsAsync(const Model::DescribeCLSTopicsRequest& request, const DescribeCLSTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCLSTopicsOutcomeCallable DescribeCLSTopicsCallable(const Model::DescribeCLSTopicsRequest& request);
 
                 /**
                  *Query the download URL of the access log for the CDN (exclude EdgeOne origin back to VOD domain) of the on-demand domain name.

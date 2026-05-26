@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Response data</p>
+                     * 获取<p>Response data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data <p>Response data</p>
+                     * @return Data <p>Response data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Response data</p>
+                     * <p>Response data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeMNGSensitiveAPIPermissionApprovalData m_data;

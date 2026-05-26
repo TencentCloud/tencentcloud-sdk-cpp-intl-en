@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
-                     * @return SdkAppId TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
+                     * 获取[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
+                     * @return SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
-                     * @param _sdkAppId TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
+                     * 设置[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
+                     * @param _sdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
-                     * @return RoomId TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
+                     * 获取[RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
+                     * @return RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
                      * 
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
-                     * @param _roomId TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
+                     * 设置[RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
+                     * @param _roomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
                      * 
                      */
                     void SetRoomId(const std::string& _roomId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameters of the transcription robot.
-                     * @return TranscriptionParams Parameters of the transcription robot.
+                     * 获取Transcription robot parameters.
+                     * @return TranscriptionParams Transcription robot parameters.
                      * 
                      */
                     TranscriptionParams GetTranscriptionParams() const;
 
                     /**
-                     * 设置Parameters of the transcription robot.
-                     * @param _transcriptionParams Parameters of the transcription robot.
+                     * 设置Transcription robot parameters.
+                     * @param _transcriptionParams Transcription robot parameters.
                      * 
                      */
                     void SetTranscriptionParams(const TranscriptionParams& _transcriptionParams);
@@ -109,23 +109,23 @@ namespace TencentCloud
                     bool TranscriptionParamsHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
-                     * @return SessionId The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
+                     * 获取Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
+                     * @return SessionId Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
-                     * @param _sessionId The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
+                     * 设置Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
+                     * @param _sessionId Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
-                     * @return RoomIdType The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+                     * 获取Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
+                     * @return RoomIdType Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
                      * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
-                     * 设置The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
-                     * @param _roomIdType The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+                     * 设置Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
+                     * @param _roomIdType Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
                      * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool RecognizeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Translation config.
-                     * @return TranslationConfig Translation config.
+                     * 获取Translate configuration details.
+                     * @return TranslationConfig Translate configuration details.
                      * 
                      */
                     TranslationConfig GetTranslationConfig() const;
 
                     /**
-                     * 设置Translation config.
-                     * @param _translationConfig Translation config.
+                     * 设置Translate configuration details.
+                     * @param _translationConfig Translate configuration details.
                      * 
                      */
                     void SetTranslationConfig(const TranslationConfig& _translationConfig);
@@ -203,33 +203,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
+                     * [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
+                     * [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * Parameters of the transcription robot.
+                     * Transcription robot parameters.
                      */
                     TranscriptionParams m_transcriptionParams;
                     bool m_transcriptionParamsHasBeenSet;
 
                     /**
-                     * The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-- If the TranscriptionMode field is 0, only one task can be opened in a room
-- If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
+                     * Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+Note:.
+When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+                     * Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
                      */
                     uint64_t m_roomIdType;
                     bool m_roomIdTypeHasBeenSet;
@@ -241,7 +241,7 @@ namespace TencentCloud
                     bool m_recognizeConfigHasBeenSet;
 
                     /**
-                     * Translation config.
+                     * Translate configuration details.
                      */
                     TranslationConfig m_translationConfig;
                     bool m_translationConfigHasBeenSet;

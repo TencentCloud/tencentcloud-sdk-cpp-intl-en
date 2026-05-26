@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trtc/v20190722/model/VoicePrint.h>
+#include <tencentcloud/trtc/v20190722/model/TurnDetection.h>
 
 
 namespace TencentCloud
@@ -35,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI Transcription Params
+                * AI transcribe parameters.
                 */
                 class TranscriptionParams : public AbstractModel
                 {
@@ -47,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-                     * @return UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * 获取The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+                     * @return UserId The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-                     * @param _userId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * 设置The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+                     * @param _userId The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +70,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-                     * @return UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * 获取Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+                     * @return UserSig Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
                      * 
                      */
                     std::string GetUserSig() const;
 
                     /**
-                     * 设置The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-                     * @param _userSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * 设置Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+                     * @param _userSig Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
                      * 
                      */
                     void SetUserSig(const std::string& _userSig);
@@ -89,15 +91,15 @@ namespace TencentCloud
                     bool UserSigHasBeenSet() const;
 
                     /**
-                     * 获取If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
-                     * @return MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+                     * 获取After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+                     * @return MaxIdleTime After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
                      * 
                      */
                     uint64_t GetMaxIdleTime() const;
 
                     /**
-                     * 设置If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
-                     * @param _maxIdleTime If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+                     * 设置After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+                     * @param _maxIdleTime After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
                      * 
                      */
                     void SetMaxIdleTime(const uint64_t& _maxIdleTime);
@@ -110,15 +112,15 @@ namespace TencentCloud
                     bool MaxIdleTimeHasBeenSet() const;
 
                     /**
-                     * 获取1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
-                     * @return TranscriptionMode 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+                     * 获取1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+                     * @return TranscriptionMode 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
                      * 
                      */
                     uint64_t GetTranscriptionMode() const;
 
                     /**
-                     * 设置1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
-                     * @param _transcriptionMode 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+                     * 设置1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+                     * @param _transcriptionMode 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
                      * 
                      */
                     void SetTranscriptionMode(const uint64_t& _transcriptionMode);
@@ -131,15 +133,15 @@ namespace TencentCloud
                     bool TranscriptionModeHasBeenSet() const;
 
                     /**
-                     * 获取Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
-                     * @return TargetUserId Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+                     * 获取Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+                     * @return TargetUserId Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
                      * 
                      */
                     std::string GetTargetUserId() const;
 
                     /**
-                     * 设置Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
-                     * @param _targetUserId Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+                     * 设置Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+                     * @param _targetUserId Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
                      * 
                      */
                     void SetTargetUserId(const std::string& _targetUserId);
@@ -151,37 +153,91 @@ namespace TencentCloud
                      */
                     bool TargetUserIdHasBeenSet() const;
 
+                    /**
+                     * 获取Voiceprint configuration.
+                     * @return VoicePrint Voiceprint configuration.
+                     * 
+                     */
+                    VoicePrint GetVoicePrint() const;
+
+                    /**
+                     * 设置Voiceprint configuration.
+                     * @param _voicePrint Voiceprint configuration.
+                     * 
+                     */
+                    void SetVoicePrint(const VoicePrint& _voicePrint);
+
+                    /**
+                     * 判断参数 VoicePrint 是否已赋值
+                     * @return VoicePrint 是否已赋值
+                     * 
+                     */
+                    bool VoicePrintHasBeenSet() const;
+
+                    /**
+                     * 获取Semantic sentence segmentation detection.
+                     * @return TurnDetection Semantic sentence segmentation detection.
+                     * 
+                     */
+                    TurnDetection GetTurnDetection() const;
+
+                    /**
+                     * 设置Semantic sentence segmentation detection.
+                     * @param _turnDetection Semantic sentence segmentation detection.
+                     * 
+                     */
+                    void SetTurnDetection(const TurnDetection& _turnDetection);
+
+                    /**
+                     * 判断参数 TurnDetection 是否已赋值
+                     * @return TurnDetection 是否已赋值
+                     * 
+                     */
+                    bool TurnDetectionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+                     * The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+                     * Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
                      */
                     std::string m_userSig;
                     bool m_userSigHasBeenSet;
 
                     /**
-                     * If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+                     * After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
                      */
                     uint64_t m_maxIdleTime;
                     bool m_maxIdleTimeHasBeenSet;
 
                     /**
-                     * 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+                     * 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
                      */
                     uint64_t m_transcriptionMode;
                     bool m_transcriptionModeHasBeenSet;
 
                     /**
-                     * Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+                     * Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
                      */
                     std::string m_targetUserId;
                     bool m_targetUserIdHasBeenSet;
+
+                    /**
+                     * Voiceprint configuration.
+                     */
+                    VoicePrint m_voicePrint;
+                    bool m_voicePrintHasBeenSet;
+
+                    /**
+                     * Semantic sentence segmentation detection.
+                     */
+                    TurnDetection m_turnDetection;
+                    bool m_turnDetectionHasBeenSet;
 
                 };
             }

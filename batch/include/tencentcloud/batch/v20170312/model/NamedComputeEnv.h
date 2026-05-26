@@ -328,26 +328,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
                      * @return NotificationTarget Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
                      * 
                      */
                     std::string GetNotificationTarget() const;
 
                     /**
                      * 设置Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
                      * @param _notificationTarget Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
                      * 
                      */
                     void SetNotificationTarget(const std::string& _notificationTarget);
@@ -441,9 +437,8 @@ Values: `CMQ`, `TDMQ_CMQ`
 
                     /**
                      * Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
                      */
                     std::string m_notificationTarget;
                     bool m_notificationTargetHasBeenSet;

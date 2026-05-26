@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The request to add a sensitive API
+                * Request object for creating a sensitive API.
                 */
                 class CreateApplicationSensitiveAPIReq : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>API name</p>
-                     * @return APIName <p>API name</p>
+                     * 获取<p>API name.</p>
+                     * @return APIName <p>API name.</p>
                      * 
                      */
                     std::string GetAPIName() const;
 
                     /**
-                     * 设置<p>API name</p>
-                     * @param _aPIName <p>API name</p>
+                     * 设置<p>API name.</p>
+                     * @param _aPIName <p>API name.</p>
                      * 
                      */
                     void SetAPIName(const std::string& _aPIName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool APINameHasBeenSet() const;
 
                     /**
-                     * 获取<p>API description</p>
-                     * @return APIDesc <p>API description</p>
+                     * 获取<p>API description.</p>
+                     * @return APIDesc <p>API description.</p>
                      * 
                      */
                     std::string GetAPIDesc() const;
 
                     /**
-                     * 设置<p>API description</p>
-                     * @param _aPIDesc <p>API description</p>
+                     * 设置<p>API description.</p>
+                     * @param _aPIDesc <p>API description.</p>
                      * 
                      */
                     void SetAPIDesc(const std::string& _aPIDesc);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APIDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>API type. Valid values: 1: System; 2: Custom</p>
-                     * @return APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * 获取<p>API type. Valid values: 1: System; 2: Custom.</p>
+                     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置<p>API type. Valid values: 1: System; 2: Custom</p>
-                     * @param _aPIType <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * 设置<p>API type. Valid values: 1: System; 2: Custom.</p>
+                     * @param _aPIType <p>API type. Valid values: 1: System; 2: Custom.</p>
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool APITypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
-                     * @return UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+                     * 获取<p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+                     * @return UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
                      * 
                      */
                     uint64_t GetUseScope() const;
 
                     /**
-                     * 设置<p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
-                     * @param _useScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+                     * 设置<p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+                     * @param _useScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
                      * 
                      */
                     void SetUseScope(const uint64_t& _useScope);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>API name</p>
+                     * <p>API name.</p>
                      */
                     std::string m_aPIName;
                     bool m_aPINameHasBeenSet;
 
                     /**
-                     * <p>API description</p>
+                     * <p>API description.</p>
                      */
                     std::string m_aPIDesc;
                     bool m_aPIDescHasBeenSet;
 
                     /**
-                     * <p>API type. Valid values: 1: System; 2: Custom</p>
+                     * <p>API type. Valid values: 1: System; 2: Custom.</p>
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;
 
                     /**
-                     * <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+                     * <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
                      */
                     uint64_t m_useScope;
                     bool m_useScopeHasBeenSet;

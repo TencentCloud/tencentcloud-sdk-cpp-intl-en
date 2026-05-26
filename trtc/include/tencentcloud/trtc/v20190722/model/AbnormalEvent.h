@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
-                     * @return AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+                     * 获取Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+                     * @return AbnormalEventId Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
                      * 
                      */
                     uint64_t GetAbnormalEventId() const;
 
                     /**
-                     * 设置The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
-                     * @param _abnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+                     * 设置Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+                     * @param _abnormalEventId Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
                      * 
                      */
                     void SetAbnormalEventId(const uint64_t& _abnormalEventId);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool AbnormalEventIdHasBeenSet() const;
 
                     /**
-                     * 获取The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remote user ID,"": indicates the exception event is not user-generated.
+                     * @return PeerId Remote user ID,"": indicates the exception event is not user-generated.
                      * 
                      */
                     std::string GetPeerId() const;
 
                     /**
-                     * 设置The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _peerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remote user ID,"": indicates the exception event is not user-generated.
+                     * @param _peerId Remote user ID,"": indicates the exception event is not user-generated.
                      * 
                      */
                     void SetPeerId(const std::string& _peerId);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+                     * Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
                      */
                     uint64_t m_abnormalEventId;
                     bool m_abnormalEventIdHasBeenSet;
 
                     /**
-                     * The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remote user ID,"": indicates the exception event is not user-generated.
                      */
                     std::string m_peerId;
                     bool m_peerIdHasBeenSet;

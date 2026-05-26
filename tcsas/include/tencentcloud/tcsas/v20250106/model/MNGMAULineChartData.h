@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini game MAU line chart data
+                * Mini game MAU line chart data.
                 */
                 class MNGMAULineChartData : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Year-month-date data
+                     * 获取Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataTime Year-month-date data
+                     * @return DataTime Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDataTime() const;
 
                     /**
-                     * 设置Year-month-date data
+                     * 设置Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataTime Year-month-date data
+                     * @param _dataTime Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取MAU data
+                     * 获取MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MAUCount MAU data
+                     * @return MAUCount MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMAUCount() const;
 
                     /**
-                     * 设置MAU data
+                     * 设置MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mAUCount MAU data
+                     * @param _mAUCount MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,15 +97,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MAUCountHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取Last modified time.
+                     * @return UpdateTime Last modified time.
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置Last modified time.
+                     * @param _updateTime Last modified time.
                      * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
@@ -120,21 +120,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Year-month-date data
+                     * Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * MAU data
+                     * MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_mAUCount;
                     bool m_mAUCountHasBeenSet;
 
                     /**
-                     * Update time
+                     * Last modified time.
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

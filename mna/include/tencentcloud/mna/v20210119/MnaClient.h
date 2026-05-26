@@ -45,6 +45,8 @@
 #include <tencentcloud/mna/v20210119/model/DeleteGroupResponse.h>
 #include <tencentcloud/mna/v20210119/model/DeleteL3ConnRequest.h>
 #include <tencentcloud/mna/v20210119/model/DeleteL3ConnResponse.h>
+#include <tencentcloud/mna/v20210119/model/DescribeAccessRegionsRequest.h>
+#include <tencentcloud/mna/v20210119/model/DescribeAccessRegionsResponse.h>
 #include <tencentcloud/mna/v20210119/model/DownloadActiveDeviceCountRequest.h>
 #include <tencentcloud/mna/v20210119/model/DownloadActiveDeviceCountResponse.h>
 #include <tencentcloud/mna/v20210119/model/GetActiveDeviceCountRequest.h>
@@ -101,6 +103,8 @@
 #include <tencentcloud/mna/v20210119/model/GroupAddDeviceResponse.h>
 #include <tencentcloud/mna/v20210119/model/GroupDeleteDeviceRequest.h>
 #include <tencentcloud/mna/v20210119/model/GroupDeleteDeviceResponse.h>
+#include <tencentcloud/mna/v20210119/model/ModifyDeviceAccessRegionsRequest.h>
+#include <tencentcloud/mna/v20210119/model/ModifyDeviceAccessRegionsResponse.h>
 #include <tencentcloud/mna/v20210119/model/ModifyPackageRenewFlagRequest.h>
 #include <tencentcloud/mna/v20210119/model/ModifyPackageRenewFlagResponse.h>
 #include <tencentcloud/mna/v20210119/model/OrderFlowPackageRequest.h>
@@ -174,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteL3ConnResponse> DeleteL3ConnOutcome;
                 typedef std::future<DeleteL3ConnOutcome> DeleteL3ConnOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::DeleteL3ConnRequest&, DeleteL3ConnOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteL3ConnAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessRegionsResponse> DescribeAccessRegionsOutcome;
+                typedef std::future<DescribeAccessRegionsOutcome> DescribeAccessRegionsOutcomeCallable;
+                typedef std::function<void(const MnaClient*, const Model::DescribeAccessRegionsRequest&, DescribeAccessRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessRegionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DownloadActiveDeviceCountResponse> DownloadActiveDeviceCountOutcome;
                 typedef std::future<DownloadActiveDeviceCountOutcome> DownloadActiveDeviceCountOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::DownloadActiveDeviceCountRequest&, DownloadActiveDeviceCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DownloadActiveDeviceCountAsyncHandler;
@@ -258,6 +265,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GroupDeleteDeviceResponse> GroupDeleteDeviceOutcome;
                 typedef std::future<GroupDeleteDeviceOutcome> GroupDeleteDeviceOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::GroupDeleteDeviceRequest&, GroupDeleteDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GroupDeleteDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDeviceAccessRegionsResponse> ModifyDeviceAccessRegionsOutcome;
+                typedef std::future<ModifyDeviceAccessRegionsOutcome> ModifyDeviceAccessRegionsOutcomeCallable;
+                typedef std::function<void(const MnaClient*, const Model::ModifyDeviceAccessRegionsRequest&, ModifyDeviceAccessRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDeviceAccessRegionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyPackageRenewFlagResponse> ModifyPackageRenewFlagOutcome;
                 typedef std::future<ModifyPackageRenewFlagOutcome> ModifyPackageRenewFlagOutcomeCallable;
                 typedef std::function<void(const MnaClient*, const Model::ModifyPackageRenewFlagRequest&, ModifyPackageRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPackageRenewFlagAsyncHandler;
@@ -398,6 +408,15 @@ namespace TencentCloud
                 DeleteL3ConnOutcome DeleteL3Conn(const Model::DeleteL3ConnRequest &request);
                 void DeleteL3ConnAsync(const Model::DeleteL3ConnRequest& request, const DeleteL3ConnAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteL3ConnOutcomeCallable DeleteL3ConnCallable(const Model::DeleteL3ConnRequest& request);
+
+                /**
+                 *Query the access region list.
+                 * @param req DescribeAccessRegionsRequest
+                 * @return DescribeAccessRegionsOutcome
+                 */
+                DescribeAccessRegionsOutcome DescribeAccessRegions(const Model::DescribeAccessRegionsRequest &request);
+                void DescribeAccessRegionsAsync(const Model::DescribeAccessRegionsRequest& request, const DescribeAccessRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessRegionsOutcomeCallable DescribeAccessRegionsCallable(const Model::DescribeAccessRegionsRequest& request);
 
                 /**
                  *Download the number of active devices statistics
@@ -650,6 +669,15 @@ namespace TencentCloud
                 GroupDeleteDeviceOutcome GroupDeleteDevice(const Model::GroupDeleteDeviceRequest &request);
                 void GroupDeleteDeviceAsync(const Model::GroupDeleteDeviceRequest& request, const GroupDeleteDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GroupDeleteDeviceOutcomeCallable GroupDeleteDeviceCallable(const Model::GroupDeleteDeviceRequest& request);
+
+                /**
+                 *This API is used to modify device connectivity regions.
+                 * @param req ModifyDeviceAccessRegionsRequest
+                 * @return ModifyDeviceAccessRegionsOutcome
+                 */
+                ModifyDeviceAccessRegionsOutcome ModifyDeviceAccessRegions(const Model::ModifyDeviceAccessRegionsRequest &request);
+                void ModifyDeviceAccessRegionsAsync(const Model::ModifyDeviceAccessRegionsRequest& request, const ModifyDeviceAccessRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDeviceAccessRegionsOutcomeCallable ModifyDeviceAccessRegionsCallable(const Model::ModifyDeviceAccessRegionsRequest& request);
 
                 /**
                  *Auto renewal of data transfer plans can be enabled or disabled, unaffected by ongoing effective plans in the current cycle.

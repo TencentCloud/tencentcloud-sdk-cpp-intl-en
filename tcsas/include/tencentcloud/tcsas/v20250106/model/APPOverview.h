@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Superapp data overview
+                * Superapp data overview.
                 */
                 class APPOverview : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取No data available
+                     * 获取No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BaseData No data available
+                     * @return BaseData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     APPOverviewData GetBaseData() const;
 
                     /**
-                     * 设置No data available
+                     * 设置No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _baseData No data available
+                     * @param _baseData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -73,18 +73,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BaseDataHasBeenSet() const;
 
                     /**
-                     * 获取Superapp overview summary data
+                     * 获取Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Overview Superapp overview summary data
+                     * @return Overview Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     APPOverviewData GetOverview() const;
 
                     /**
-                     * 设置Superapp overview summary data
+                     * 设置Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _overview Superapp overview summary data
+                     * @param _overview Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,18 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OverviewHasBeenSet() const;
 
                     /**
-                     * 获取No data available
+                     * 获取No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PageData No data available
+                     * @return PageData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     APPOverviewData GetPageData() const;
 
                     /**
-                     * 设置No data available
+                     * 设置No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pageData No data available
+                     * @param _pageData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -123,18 +123,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PageDataHasBeenSet() const;
 
                     /**
-                     * 获取No data available
+                     * 获取No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Payment No data available
+                     * @return Payment No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     APPOverviewData GetPayment() const;
 
                     /**
-                     * 设置No data available
+                     * 设置No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payment No data available
+                     * @param _payment No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -150,28 +150,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * No data available
+                     * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     APPOverviewData m_baseData;
                     bool m_baseDataHasBeenSet;
 
                     /**
-                     * Superapp overview summary data
+                     * Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     APPOverviewData m_overview;
                     bool m_overviewHasBeenSet;
 
                     /**
-                     * No data available
+                     * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     APPOverviewData m_pageData;
                     bool m_pageDataHasBeenSet;
 
                     /**
-                     * No data available
+                     * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     APPOverviewData m_payment;

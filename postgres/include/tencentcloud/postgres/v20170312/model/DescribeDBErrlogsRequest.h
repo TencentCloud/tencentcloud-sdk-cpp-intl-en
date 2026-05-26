@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/postgres/v20170312/model/LogFilter.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
-                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * 获取<p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @return DBInstanceId <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
-                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * 设置<p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @param _dBInstanceId <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
-                     * @return StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+                     * 获取<p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+                     * @return StartTime <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
-                     * @param _startTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+                     * 设置<p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+                     * @param _startTime <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
-                     * @return EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+                     * 获取<p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+                     * @return EndTime <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
-                     * @param _endTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+                     * 设置<p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+                     * @param _endTime <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Database name
-                     * @return DatabaseName Database name
+                     * 获取<p>Database name</p>
+                     * @return DatabaseName <p>Database name</p>
                      * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
-                     * 设置Database name
-                     * @param _databaseName Database name
+                     * 设置<p>Database name</p>
+                     * @param _databaseName <p>Database name</p>
                      * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取Keywords used for search
-                     * @return SearchKeys Keywords used for search
+                     * 获取<p>Search keywords.</p>
+                     * @return SearchKeys <p>Search keywords.</p>
                      * 
                      */
                     std::vector<std::string> GetSearchKeys() const;
 
                     /**
-                     * 设置Keywords used for search
-                     * @param _searchKeys Keywords used for search
+                     * 设置<p>Search keywords.</p>
+                     * @param _searchKeys <p>Search keywords.</p>
                      * 
                      */
                     void SetSearchKeys(const std::vector<std::string>& _searchKeys);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool SearchKeysHasBeenSet() const;
 
                     /**
-                     * 获取Number of results returned per page. Value range: 1-100. Default value: `50`.	
-                     * @return Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
+                     * 获取<p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+                     * @return Limit <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results returned per page. Value range: 1-100. Default value: `50`.	
-                     * @param _limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
+                     * 设置<p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+                     * @param _limit <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Data offset, which starts from 0. Default value: `0`.	
-                     * @return Offset Data offset, which starts from 0. Default value: `0`.	
+                     * 获取<p>Data offset, which starts from 0. The default value is 0.</p>
+                     * @return Offset <p>Data offset, which starts from 0. The default value is 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Data offset, which starts from 0. Default value: `0`.	
-                     * @param _offset Data offset, which starts from 0. Default value: `0`.	
+                     * 设置<p>Data offset, which starts from 0. The default value is 0.</p>
+                     * @param _offset <p>Data offset, which starts from 0. The default value is 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -189,49 +190,76 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+                     * @return LogFilters <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+                     * 
+                     */
+                    std::vector<LogFilter> GetLogFilters() const;
+
+                    /**
+                     * 设置<p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+                     * @param _logFilters <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+                     * 
+                     */
+                    void SetLogFilters(const std::vector<LogFilter>& _logFilters);
+
+                    /**
+                     * 判断参数 LogFilters 是否已赋值
+                     * @return LogFilters 是否已赋值
+                     * 
+                     */
+                    bool LogFiltersHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+                     * <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+                     * <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+                     * <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Database name
+                     * <p>Database name</p>
                      */
                     std::string m_databaseName;
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * Keywords used for search
+                     * <p>Search keywords.</p>
                      */
                     std::vector<std::string> m_searchKeys;
                     bool m_searchKeysHasBeenSet;
 
                     /**
-                     * Number of results returned per page. Value range: 1-100. Default value: `50`.	
+                     * <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Data offset, which starts from 0. Default value: `0`.	
+                     * <p>Data offset, which starts from 0. The default value is 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+                     */
+                    std::vector<LogFilter> m_logFilters;
+                    bool m_logFiltersHasBeenSet;
 
                 };
             }

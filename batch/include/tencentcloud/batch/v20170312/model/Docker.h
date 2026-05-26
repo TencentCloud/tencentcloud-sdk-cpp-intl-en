@@ -47,6 +47,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+                     * @return Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+                     * 
+                     */
+                    std::string GetImage() const;
+
+                    /**
+                     * 设置For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+                     * @param _image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+                     * 
+                     */
+                    void SetImage(const std::string& _image);
+
+                    /**
+                     * 判断参数 Image 是否已赋值
+                     * @return Image 是否已赋值
+                     * 
+                     */
+                    bool ImageHasBeenSet() const;
+
+                    /**
                      * 获取Docker Hub username or Tencent Registry username
                      * @return User Docker Hub username or Tencent Registry username
                      * 
@@ -87,27 +108,6 @@ namespace TencentCloud
                      * 
                      */
                     bool PasswordHasBeenSet() const;
-
-                    /**
-                     * 获取For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-                     * @return Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-                     * 
-                     */
-                    std::string GetImage() const;
-
-                    /**
-                     * 设置For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-                     * @param _image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-                     * 
-                     */
-                    void SetImage(const std::string& _image);
-
-                    /**
-                     * 判断参数 Image 是否已赋值
-                     * @return Image 是否已赋值
-                     * 
-                     */
-                    bool ImageHasBeenSet() const;
 
                     /**
                      * 获取For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
@@ -200,6 +200,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
+                     * For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+                     */
+                    std::string m_image;
+                    bool m_imageHasBeenSet;
+
+                    /**
                      * Docker Hub username or Tencent Registry username
                      */
                     std::string m_user;
@@ -210,12 +216,6 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
-
-                    /**
-                     * For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-                     */
-                    std::string m_image;
-                    bool m_imageHasBeenSet;
 
                     /**
                      * For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"

@@ -790,6 +790,56 @@ BatchClient::DescribeJobOutcomeCallable BatchClient::DescribeJobCallable(const D
     return prom->get_future();
 }
 
+BatchClient::DescribeJobMonitorDataOutcome BatchClient::DescribeJobMonitorData(const DescribeJobMonitorDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeJobMonitorData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeJobMonitorDataResponse rsp = DescribeJobMonitorDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeJobMonitorDataOutcome(rsp);
+        else
+            return DescribeJobMonitorDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeJobMonitorDataOutcome(outcome.GetError());
+    }
+}
+
+void BatchClient::DescribeJobMonitorDataAsync(const DescribeJobMonitorDataRequest& request, const DescribeJobMonitorDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeJobMonitorDataRequest&;
+    using Resp = DescribeJobMonitorDataResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeJobMonitorData", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BatchClient::DescribeJobMonitorDataOutcomeCallable BatchClient::DescribeJobMonitorDataCallable(const DescribeJobMonitorDataRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeJobMonitorDataOutcome>>();
+    DescribeJobMonitorDataAsync(
+    request,
+    [prom](
+        const BatchClient*,
+        const DescribeJobMonitorDataRequest&,
+        DescribeJobMonitorDataOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BatchClient::DescribeJobSubmitInfoOutcome BatchClient::DescribeJobSubmitInfo(const DescribeJobSubmitInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeJobSubmitInfo");

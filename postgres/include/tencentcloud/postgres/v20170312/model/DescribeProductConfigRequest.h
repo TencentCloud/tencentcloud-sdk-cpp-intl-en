@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ name
-                     * @return Zone AZ name
+                     * 获取<p>Availability zone name.</p>
+                     * @return Zone <p>Availability zone name.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ name
-                     * @param _zone AZ name
+                     * 设置<p>Availability zone name.</p>
+                     * @param _zone <p>Availability zone name.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -64,27 +64,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
-                     * @return DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+                     * 获取<p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+                     * @return DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
                      * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
-                     * 设置Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
-                     * @param _dBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+                     * 设置<p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+                     * @param _dBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
                      * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
@@ -96,22 +84,46 @@ Default value: `postgresql`
                      */
                     bool DBEngineHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * @return StorageType <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * 
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置<p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * @param _storageType <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     * 
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     * 
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ name
+                     * <p>Availability zone name.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+                     * <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
                      */
                     std::string m_dBEngine;
                     bool m_dBEngineHasBeenSet;
+
+                    /**
+                     * <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response parameters for querying domain information
+                * Response parameters for querying domain information.
                 */
                 class DescribeMNGDomainInfoResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Multiple domain names are concatenated with the separator ;</p>
-                     * @return DomainUrl <p>Multiple domain names are concatenated with the separator ;</p>
+                     * 获取<p>Multiple domains concatenated with semicolons (;).</p>
+                     * @return DomainUrl <p>Multiple domains concatenated with semicolons (;).</p>
                      * 
                      */
                     std::string GetDomainUrl() const;
 
                     /**
-                     * 设置<p>Multiple domain names are concatenated with the separator ;</p>
-                     * @param _domainUrl <p>Multiple domain names are concatenated with the separator ;</p>
+                     * 设置<p>Multiple domains concatenated with semicolons (;).</p>
+                     * @param _domainUrl <p>Multiple domains concatenated with semicolons (;).</p>
                      * 
                      */
                     void SetDomainUrl(const std::string& _domainUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
-                     * @return DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+                     * 获取<p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
+                     * @return DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
                      * 
                      */
                     int64_t GetDomainType() const;
 
                     /**
-                     * 设置<p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
-                     * @param _domainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+                     * 设置<p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
+                     * @param _domainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
                      * 
                      */
                     void SetDomainType(const int64_t& _domainType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Multiple domain names are concatenated with the separator ;</p>
+                     * <p>Multiple domains concatenated with semicolons (;).</p>
                      */
                     std::string m_domainUrl;
                     bool m_domainUrlHasBeenSet;
 
                     /**
-                     * <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+                     * <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
                      */
                     int64_t m_domainType;
                     bool m_domainTypeHasBeenSet;

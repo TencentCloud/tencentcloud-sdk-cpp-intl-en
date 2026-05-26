@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Temporary key for file upload
+                * Temporary credentials for file upload.
                 */
                 class UploadFileTempSecret : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bucket
+                     * 获取Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Bucket Bucket
+                     * @return Bucket Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Bucket
+                     * 设置Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bucket Bucket
+                     * @param _bucket Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,18 +72,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Region
+                     * 获取Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Region
+                     * @return Region Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
+                     * 设置Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Region
+                     * @param _region Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -97,18 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Destination of upload
+                     * 获取Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Path Destination of upload
+                     * @return Path Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Destination of upload
+                     * 设置Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _path Destination of upload
+                     * @param _path Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Temporary secret ID
+                     * 获取Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TempSecretId Temporary secret ID
+                     * @return TempSecretId Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTempSecretId() const;
 
                     /**
-                     * 设置Temporary secret ID
+                     * 设置Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tempSecretId Temporary secret ID
+                     * @param _tempSecretId Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +147,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TempSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Temporary secret key
+                     * 获取Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TempSecretKey Temporary secret key
+                     * @return TempSecretKey Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTempSecretKey() const;
 
                     /**
-                     * 设置Temporary secret key
+                     * 设置Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tempSecretKey Temporary secret key
+                     * @param _tempSecretKey Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -172,18 +172,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TempSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Token 
+                     * 获取Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Token Token 
+                     * @return Token Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetToken() const;
 
                     /**
-                     * 设置Token 
+                     * 设置Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _token Token 
+                     * @param _token Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -197,15 +197,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
-                     * @return AccelerateEnable Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+                     * 获取Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
+                     * @return AccelerateEnable Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
                      * 
                      */
                     int64_t GetAccelerateEnable() const;
 
                     /**
-                     * 设置Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
-                     * @param _accelerateEnable Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+                     * 设置Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
+                     * @param _accelerateEnable Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
                      * 
                      */
                     void SetAccelerateEnable(const int64_t& _accelerateEnable);
@@ -220,49 +220,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Bucket
+                     * Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Region
+                     * Region.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Destination of upload
+                     * Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Temporary secret ID
+                     * Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tempSecretId;
                     bool m_tempSecretIdHasBeenSet;
 
                     /**
-                     * Temporary secret key
+                     * Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tempSecretKey;
                     bool m_tempSecretKeyHasBeenSet;
 
                     /**
-                     * Token 
+                     * Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+                     * Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
                      */
                     int64_t m_accelerateEnable;
                     bool m_accelerateEnableHasBeenSet;

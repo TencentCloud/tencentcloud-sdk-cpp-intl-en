@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
-                     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * 获取<p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
+                     * @return DBInstanceIdSet <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
                      * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
-                     * 设置List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
-                     * @param _dBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * 设置<p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
+                     * @param _dBInstanceIdSet <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
                      * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * <p>Instance ID collection, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Note: Simultaneous isolation of multiple instances is not recommended. It is advisable to import a single instance ID per operation.</p>
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;

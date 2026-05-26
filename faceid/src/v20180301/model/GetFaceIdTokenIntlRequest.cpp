@@ -28,7 +28,8 @@ GetFaceIdTokenIntlRequest::GetFaceIdTokenIntlRequest() :
     m_imageHasBeenSet(false),
     m_extraHasBeenSet(false),
     m_actionListHasBeenSet(false),
-    m_sdkVersionHasBeenSet(false)
+    m_sdkVersionHasBeenSet(false),
+    m_retryLimitHasBeenSet(false)
 {
 }
 
@@ -85,6 +86,14 @@ string GetFaceIdTokenIntlRequest::ToJsonString() const
         string key = "SdkVersion";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_sdkVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_retryLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetryLimit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retryLimit, allocator);
     }
 
 
@@ -189,6 +198,22 @@ void GetFaceIdTokenIntlRequest::SetSdkVersion(const string& _sdkVersion)
 bool GetFaceIdTokenIntlRequest::SdkVersionHasBeenSet() const
 {
     return m_sdkVersionHasBeenSet;
+}
+
+int64_t GetFaceIdTokenIntlRequest::GetRetryLimit() const
+{
+    return m_retryLimit;
+}
+
+void GetFaceIdTokenIntlRequest::SetRetryLimit(const int64_t& _retryLimit)
+{
+    m_retryLimit = _retryLimit;
+    m_retryLimitHasBeenSet = true;
+}
+
+bool GetFaceIdTokenIntlRequest::RetryLimitHasBeenSet() const
+{
+    return m_retryLimitHasBeenSet;
 }
 
 

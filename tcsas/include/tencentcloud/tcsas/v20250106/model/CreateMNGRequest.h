@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcsas/v20250106/model/MNPI18NSyncDto.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game type</p>
-                     * @return MNPType <p>Mini game type</p>
+                     * 获取<p>Mini game category.</p>
+                     * @return MNPType <p>Mini game category.</p>
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置<p>Mini game type</p>
-                     * @param _mNPType <p>Mini game type</p>
+                     * 设置<p>Mini game category.</p>
+                     * @param _mNPType <p>Mini game category.</p>
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game name</p>
-                     * @return MNPName <p>Mini game name</p>
+                     * 获取<p>Mini game name.</p>
+                     * @return MNPName <p>Mini game name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置<p>Mini game name</p>
-                     * @param _mNPName <p>Mini game name</p>
+                     * 设置<p>Mini game name.</p>
+                     * @param _mNPName <p>Mini game name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game icon</p>
-                     * @return MNPIcon <p>Mini game icon</p>
+                     * 获取<p>Mini game icon.</p>
+                     * @return MNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置<p>Mini game icon</p>
-                     * @param _mNPIcon <p>Mini game icon</p>
+                     * 设置<p>Mini game icon.</p>
+                     * @param _mNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game introduction</p>
-                     * @return MNPIntro <p>Mini game introduction</p>
+                     * 获取<p>Mini game introduction.</p>
+                     * @return MNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置<p>Mini game introduction</p>
-                     * @param _mNPIntro <p>Mini game introduction</p>
+                     * 设置<p>Mini game introduction.</p>
+                     * @param _mNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game description</p>
-                     * @return MNPDesc <p>Mini game description</p>
+                     * 获取<p>Mini game description.</p>
+                     * @return MNPDesc <p>Mini game description.</p>
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置<p>Mini game description</p>
-                     * @param _mNPDesc <p>Mini game description</p>
+                     * 设置<p>Mini game description.</p>
+                     * @param _mNPDesc <p>Mini game description.</p>
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -148,15 +149,15 @@ namespace TencentCloud
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>Platform ID</p>
-                     * @return PlatformId <p>Platform ID</p>
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置<p>Platform ID</p>
-                     * @param _platformId <p>Platform ID</p>
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -169,15 +170,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Team ID</p>
-                     * @return TeamId <p>Team ID</p>
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置<p>Team ID</p>
-                     * @param _teamId <p>Team ID</p>
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -189,49 +190,76 @@ namespace TencentCloud
                      */
                     bool TeamIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>The mini game name and description in multiple languages.</p>
+                     * @return I18nList <p>The mini game name and description in multiple languages.</p>
+                     * 
+                     */
+                    std::vector<MNPI18NSyncDto> GetI18nList() const;
+
+                    /**
+                     * 设置<p>The mini game name and description in multiple languages.</p>
+                     * @param _i18nList <p>The mini game name and description in multiple languages.</p>
+                     * 
+                     */
+                    void SetI18nList(const std::vector<MNPI18NSyncDto>& _i18nList);
+
+                    /**
+                     * 判断参数 I18nList 是否已赋值
+                     * @return I18nList 是否已赋值
+                     * 
+                     */
+                    bool I18nListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Mini game type</p>
+                     * <p>Mini game category.</p>
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * <p>Mini game name</p>
+                     * <p>Mini game name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * <p>Mini game icon</p>
+                     * <p>Mini game icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * <p>Mini game introduction</p>
+                     * <p>Mini game introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * <p>Mini game description</p>
+                     * <p>Mini game description.</p>
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * <p>Platform ID</p>
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Team ID</p>
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
+
+                    /**
+                     * <p>The mini game name and description in multiple languages.</p>
+                     */
+                    std::vector<MNPI18NSyncDto> m_i18nList;
+                    bool m_i18nListHasBeenSet;
 
                 };
             }

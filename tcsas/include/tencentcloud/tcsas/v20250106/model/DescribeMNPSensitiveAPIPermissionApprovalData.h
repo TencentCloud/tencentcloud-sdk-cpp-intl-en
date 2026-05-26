@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a permission request to allow a mini program to call sensitive APIs
+                * Detail data for querying mini program sensitive API permission approval.
                 */
                 class DescribeMNPSensitiveAPIPermissionApprovalData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API ID
-                     * @return APIId API ID
+                     * 获取API ID.
+                     * @return APIId API ID.
                      * 
                      */
                     std::string GetAPIId() const;
 
                     /**
-                     * 设置API ID
-                     * @param _aPIId API ID
+                     * 设置API ID.
+                     * @param _aPIId API ID.
                      * 
                      */
                     void SetAPIId(const std::string& _aPIId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool APIMethodHasBeenSet() const;
 
                     /**
-                     * 获取Reason for application
-                     * @return ApplyReason Reason for application
+                     * 获取Reason for request.
+                     * @return ApplyReason Reason for request.
                      * 
                      */
                     std::string GetApplyReason() const;
 
                     /**
-                     * 设置Reason for application
-                     * @param _applyReason Reason for application
+                     * 设置Reason for request.
+                     * @param _applyReason Reason for request.
                      * 
                      */
                     void SetApplyReason(const std::string& _applyReason);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RejectReasonHasBeenSet() const;
 
                     /**
-                     * 获取Approval status. valid values: 20 (rejected), 30 (approved).
-                     * @return ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+                     * 获取Approval status. Valid values: 20: Rejected; 30: Approved.
+                     * @return ApprovalStatus Approval status. Valid values: 20: Rejected; 30: Approved.
                      * 
                      */
                     int64_t GetApprovalStatus() const;
 
                     /**
-                     * 设置Approval status. valid values: 20 (rejected), 30 (approved).
-                     * @param _approvalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+                     * 设置Approval status. Valid values: 20: Rejected; 30: Approved.
+                     * @param _approvalStatus Approval status. Valid values: 20: Rejected; 30: Approved.
                      * 
                      */
                     void SetApprovalStatus(const int64_t& _approvalStatus);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool APIDescHasBeenSet() const;
 
                     /**
-                     * 获取API type. 1: system; 2: custom.
-                     * @return APIType API type. 1: system; 2: custom.
+                     * 获取API type. Valid values: 1: System; 2: Custom.
+                     * @return APIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     int64_t GetAPIType() const;
 
                     /**
-                     * 设置API type. 1: system; 2: custom.
-                     * @param _aPIType API type. 1: system; 2: custom.
+                     * 设置API type. Valid values: 1: System; 2: Custom.
+                     * @param _aPIType API type. Valid values: 1: System; 2: Custom.
                      * 
                      */
                     void SetAPIType(const int64_t& _aPIType);
@@ -196,7 +196,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API ID
+                     * API ID.
                      */
                     std::string m_aPIId;
                     bool m_aPIIdHasBeenSet;
@@ -208,7 +208,7 @@ namespace TencentCloud
                     bool m_aPIMethodHasBeenSet;
 
                     /**
-                     * Reason for application
+                     * Reason for request.
                      */
                     std::string m_applyReason;
                     bool m_applyReasonHasBeenSet;
@@ -220,7 +220,7 @@ namespace TencentCloud
                     bool m_rejectReasonHasBeenSet;
 
                     /**
-                     * Approval status. valid values: 20 (rejected), 30 (approved).
+                     * Approval status. Valid values: 20: Rejected; 30: Approved.
                      */
                     int64_t m_approvalStatus;
                     bool m_approvalStatusHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_aPIDescHasBeenSet;
 
                     /**
-                     * API type. 1: system; 2: custom.
+                     * API type. Valid values: 1: System; 2: Custom.
                      */
                     int64_t m_aPIType;
                     bool m_aPITypeHasBeenSet;

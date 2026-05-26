@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tenant ID
-                     * @return PlatformId Tenant ID
+                     * 获取Tenant ID.
+                     * @return PlatformId Tenant ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Tenant ID
-                     * @param _platformId Tenant ID
+                     * 设置Tenant ID.
+                     * @param _platformId Tenant ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Fixed value: mnp_data_analysis
-                     * @return ReportId Fixed value: mnp_data_analysis
+                     * 获取Fixed value: mnp_data_analysis.
+                     * @return ReportId Fixed value: mnp_data_analysis.
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置Fixed value: mnp_data_analysis
-                     * @param _reportId Fixed value: mnp_data_analysis
+                     * 设置Fixed value: mnp_data_analysis.
+                     * @param _reportId Fixed value: mnp_data_analysis.
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -85,43 +85,43 @@ namespace TencentCloud
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取IndexId (optional):
+                     * 获取Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
-                     * @return IndexIds IndexId (optional):
+app_new_device_num: Number of new devices.
+                     * @return IndexIds Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
                      * 
                      */
                     std::vector<std::string> GetIndexIds() const;
 
                     /**
-                     * 设置IndexId (optional):
+                     * 设置Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
-                     * @param _indexIds IndexId (optional):
+app_new_device_num: Number of new devices.
+                     * @param _indexIds Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
                      * 
                      */
                     void SetIndexIds(const std::vector<std::string>& _indexIds);
@@ -134,15 +134,15 @@ app_new_device_num: Number of new devices
                     bool IndexIdsHasBeenSet() const;
 
                     /**
-                     * 获取Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
-                     * @return QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+                     * 获取Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+                     * @return QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
                      * 
                      */
                     std::string GetQueryData() const;
 
                     /**
-                     * 设置Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
-                     * @param _queryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+                     * 设置Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+                     * @param _queryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
                      * 
                      */
                     void SetQueryData(const std::string& _queryData);
@@ -155,15 +155,15 @@ app_new_device_num: Number of new devices
                     bool QueryDataHasBeenSet() const;
 
                     /**
-                     * 获取Superapp ID
-                     * @return ApplicationIds Superapp ID
+                     * 获取Superapp ID.
+                     * @return ApplicationIds Superapp ID.
                      * 
                      */
                     std::vector<std::string> GetApplicationIds() const;
 
                     /**
-                     * 设置Superapp ID
-                     * @param _applicationIds Superapp ID
+                     * 设置Superapp ID.
+                     * @param _applicationIds Superapp ID.
                      * 
                      */
                     void SetApplicationIds(const std::vector<std::string>& _applicationIds);
@@ -178,38 +178,38 @@ app_new_device_num: Number of new devices
                 private:
 
                     /**
-                     * Tenant ID
+                     * Tenant ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Fixed value: mnp_data_analysis
+                     * Fixed value: mnp_data_analysis.
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * IndexId (optional):
+                     * Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
                      */
                     std::vector<std::string> m_indexIds;
                     bool m_indexIdsHasBeenSet;
 
                     /**
-                     * Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+                     * Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
                      */
                     std::string m_queryData;
                     bool m_queryDataHasBeenSet;
 
                     /**
-                     * Superapp ID
+                     * Superapp ID.
                      */
                     std::vector<std::string> m_applicationIds;
                     bool m_applicationIdsHasBeenSet;

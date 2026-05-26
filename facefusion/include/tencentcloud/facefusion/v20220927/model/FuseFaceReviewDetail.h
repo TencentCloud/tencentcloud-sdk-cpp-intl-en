@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face Fusion is not suitable for CR facial information.
+                * 
                 */
                 class FuseFaceReviewDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reserved Field
-                     * @return Field Reserved Field
+                     * 获取
+                     * @return Field 
                      * 
                      */
                     std::string GetField() const;
 
                     /**
-                     * 设置Reserved Field
-                     * @param _field Reserved Field
+                     * 设置
+                     * @param _field 
                      * 
                      */
                     void SetField(const std::string& _field);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FieldHasBeenSet() const;
 
                     /**
-                     * 获取Tag name matched in audit
-                     * @return Label Tag name matched in audit
+                     * 获取
+                     * @return Label 
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag name matched in audit
-                     * @param _label Tag name matched in audit
+                     * 设置
+                     * @param _label 
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -89,39 +89,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
-
-0 to 70: Suggestion is PASS;
-
-70 to 80: Suggestion is REVIEW;
-
-80 to 100: Suggestion is BLOCK.
-                     * @return Confidence Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
-
-0 to 70: Suggestion is PASS;
-
-70 to 80: Suggestion is REVIEW;
-
-80 to 100: Suggestion is BLOCK.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
-
-0 to 70: Suggestion is PASS;
-
-70 to 80: Suggestion is REVIEW;
-
-80 to 100: Suggestion is BLOCK.
-                     * @param _confidence Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
-
-0 to 70: Suggestion is PASS;
-
-70 to 80: Suggestion is REVIEW;
-
-80 to 100: Suggestion is BLOCK.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -134,39 +110,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Audit conclusion for identified scenarios:
-
-PASS: Normal
-
-REVIEW: Suspected
-
-BLOCK: Violation
-                     * @return Suggestion Audit conclusion for identified scenarios:
-
-PASS: Normal
-
-REVIEW: Suspected
-
-BLOCK: Violation
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Audit conclusion for identified scenarios:
-
-PASS: Normal
-
-REVIEW: Suspected
-
-BLOCK: Violation
-                     * @param _suggestion Audit conclusion for identified scenarios:
-
-PASS: Normal
-
-REVIEW: Suspected
-
-BLOCK: Violation
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -181,37 +133,25 @@ BLOCK: Violation
                 private:
 
                     /**
-                     * Reserved Field
+                     * 
                      */
                     std::string m_field;
                     bool m_fieldHasBeenSet;
 
                     /**
-                     * Tag name matched in audit
+                     * 
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
-
-0 to 70: Suggestion is PASS;
-
-70 to 80: Suggestion is REVIEW;
-
-80 to 100: Suggestion is BLOCK.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Audit conclusion for identified scenarios:
-
-PASS: Normal
-
-REVIEW: Suspected
-
-BLOCK: Violation
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;

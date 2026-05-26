@@ -646,7 +646,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to add a team member
+                 *This API is used to add a team member.
                  * @param req AddTeamMemberRequest
                  * @return AddTeamMemberOutcome
                  */
@@ -673,7 +673,7 @@ namespace TencentCloud
                 ConfigureMNPPreviewOutcomeCallable ConfigureMNPPreviewCallable(const Model::ConfigureMNPPreviewRequest& request);
 
                 /**
-                 *This API is used to create an application.
+                 *This API is used to create a superapp.
                  * @param req CreateApplicationRequest
                  * @return CreateApplicationOutcome
                  */
@@ -691,7 +691,7 @@ namespace TencentCloud
                 CreateApplicationConfigOutcomeCallable CreateApplicationConfigCallable(const Model::CreateApplicationConfigRequest& request);
 
                 /**
-                 *This API is used to create a sensitive API of an application.
+                 *This API is used to create a superapp sensitive API.
                  * @param req CreateApplicationSensitiveAPIRequest
                  * @return CreateApplicationSensitiveAPIOutcome
                  */
@@ -772,7 +772,7 @@ namespace TencentCloud
                 CreateMNPApprovalOutcomeCallable CreateMNPApprovalCallable(const Model::CreateMNPApprovalRequest& request);
 
                 /**
-                 *This API is used to add a domain name to the allowlist / blocklist of a mini program.
+                 *This API is used to create a domain allowlist/blocklist for a mini program.
                  * @param req CreateMNPDomainACLRequest
                  * @return CreateMNPDomainACLOutcome
                  */
@@ -781,7 +781,7 @@ namespace TencentCloud
                 CreateMNPDomainACLOutcomeCallable CreateMNPDomainACLCallable(const Model::CreateMNPDomainACLRequest& request);
 
                 /**
-                 *This API is used to create a secret key for a mini program or mini game.
+                 *This API is used to create a package secret key for a mini program or mini game.
                  * @param req CreateMNPSecretKeyRequest
                  * @return CreateMNPSecretKeyOutcome
                  */
@@ -835,7 +835,7 @@ namespace TencentCloud
                 CreateUserOutcomeCallable CreateUserCallable(const Model::CreateUserRequest& request);
 
                 /**
-                 *This API is used to delete the applications.
+                 *This API is used to delete a superapp.
                  * @param req DeleteApplicationRequest
                  * @return DeleteApplicationOutcome
                  */
@@ -844,7 +844,7 @@ namespace TencentCloud
                 DeleteApplicationOutcomeCallable DeleteApplicationCallable(const Model::DeleteApplicationRequest& request);
 
                 /**
-                 *This API is used to delete a sensitive API.
+                 *This API is used to delete a superapp sensitive API.
                  * @param req DeleteApplicationSensitiveAPIRequest
                  * @return DeleteApplicationSensitiveAPIOutcome
                  */
@@ -907,7 +907,7 @@ namespace TencentCloud
                 DeleteUserOutcomeCallable DeleteUserCallable(const Model::DeleteUserRequest& request);
 
                 /**
-                 *This API is used to retrieve the line chart data for selected superapp metrics.
+                 *This API is used to query the line chart data for selected superapp metrics.
                  * @param req DescribeAPPDataDetailLineChartRequest
                  * @return DescribeAPPDataDetailLineChartOutcome
                  */
@@ -916,7 +916,7 @@ namespace TencentCloud
                 DescribeAPPDataDetailLineChartOutcomeCallable DescribeAPPDataDetailLineChartCallable(const Model::DescribeAPPDataDetailLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of the superapp data.
+                 *This API is used to query the data overview for the selected superapp metrics.
                  * @param req DescribeAPPDataOverviewRequest
                  * @return DescribeAPPDataOverviewOutcome
                  */
@@ -925,7 +925,7 @@ namespace TencentCloud
                 DescribeAPPDataOverviewOutcomeCallable DescribeAPPDataOverviewCallable(const Model::DescribeAPPDataOverviewRequest& request);
 
                 /**
-                 *This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+                 *This API is used to query the advertising line chart data for a mini program within a specified date range.
                  * @param req DescribeAdvertisingLineChartRequest
                  * @return DescribeAdvertisingLineChartOutcome
                  */
@@ -934,7 +934,7 @@ namespace TencentCloud
                 DescribeAdvertisingLineChartOutcomeCallable DescribeAdvertisingLineChartCallable(const Model::DescribeAdvertisingLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+                 *This API is used to query the mini program advertising overview.
                  * @param req DescribeAdvertisingOverviewRequest
                  * @return DescribeAdvertisingOverviewOutcome
                  */
@@ -943,7 +943,7 @@ namespace TencentCloud
                 DescribeAdvertisingOverviewOutcomeCallable DescribeAdvertisingOverviewCallable(const Model::DescribeAdvertisingOverviewRequest& request);
 
                 /**
-                 *This API is used to query the application details.
+                 *This API is used to query the superapp details.
                  * @param req DescribeApplicationRequest
                  * @return DescribeApplicationOutcome
                  */
@@ -952,7 +952,7 @@ namespace TencentCloud
                 DescribeApplicationOutcomeCallable DescribeApplicationCallable(const Model::DescribeApplicationRequest& request);
 
                 /**
-                 *This API is used to query the configuration files of an application.
+                 *This API is used to query the configuration files of a superapp.
                  * @param req DescribeApplicationConfigFileRequest
                  * @return DescribeApplicationConfigFileOutcome
                  */
@@ -961,7 +961,7 @@ namespace TencentCloud
                 DescribeApplicationConfigFileOutcomeCallable DescribeApplicationConfigFileCallable(const Model::DescribeApplicationConfigFileRequest& request);
 
                 /**
-                 *This API is used to retrieve the configuration details for an superapp.
+                 *This API is used to query the superapp configuration information.
                  * @param req DescribeApplicationConfigInfosRequest
                  * @return DescribeApplicationConfigInfosOutcome
                  */
@@ -970,7 +970,7 @@ namespace TencentCloud
                 DescribeApplicationConfigInfosOutcomeCallable DescribeApplicationConfigInfosCallable(const Model::DescribeApplicationConfigInfosRequest& request);
 
                 /**
-                 *This API is used to query the applications.
+                 *This API is used to query a list of superapps.
                  * @param req DescribeApplicationListRequest
                  * @return DescribeApplicationListOutcome
                  */
@@ -979,7 +979,7 @@ namespace TencentCloud
                 DescribeApplicationListOutcomeCallable DescribeApplicationListCallable(const Model::DescribeApplicationListRequest& request);
 
                 /**
-                 *This API is used to retrieve a list of the mini programs or mini games associated with a superapp.
+                 *This API is used to query the mini program or mini game list associated with a superapp.
                  * @param req DescribeApplicationMNPListRequest
                  * @return DescribeApplicationMNPListOutcome
                  */
@@ -988,7 +988,7 @@ namespace TencentCloud
                 DescribeApplicationMNPListOutcomeCallable DescribeApplicationMNPListCallable(const Model::DescribeApplicationMNPListRequest& request);
 
                 /**
-                 *This API is used to list sensitive APIs of an application.
+                 *This API is used to query a list of superapp sensitive APIs.
                  * @param req DescribeApplicationSensitiveAPIListRequest
                  * @return DescribeApplicationSensitiveAPIListOutcome
                  */
@@ -1006,7 +1006,7 @@ namespace TencentCloud
                 DescribeGlobalDomainACLOutcomeCallable DescribeGlobalDomainACLCallable(const Model::DescribeGlobalDomainACLRequest& request);
 
                 /**
-                 *This API is used to retrieve a global overview summary of usage statistics.
+                 *This API is used to query the data summary for the global overview.
                  * @param req DescribeGlobalOverviewDataSummaryRequest
                  * @return DescribeGlobalOverviewDataSummaryOutcome
                  */
@@ -1015,7 +1015,7 @@ namespace TencentCloud
                 DescribeGlobalOverviewDataSummaryOutcomeCallable DescribeGlobalOverviewDataSummaryCallable(const Model::DescribeGlobalOverviewDataSummaryRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed report data for global overview within a specified date range.
+                 *This API is used to query the detailed report data for global overview within a specified date range.
                  * @param req DescribeGlobalOverviewReportDetailRequest
                  * @return DescribeGlobalOverviewReportDetailOutcome
                  */
@@ -1033,7 +1033,7 @@ namespace TencentCloud
                 DescribeMNGOutcomeCallable DescribeMNGCallable(const Model::DescribeMNGRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+                 *This API is used to query the detailed visit analysis data for a mini game within a specified date range.
                  * @param req DescribeMNGAccessAnalysisDetailRequest
                  * @return DescribeMNGAccessAnalysisDetailOutcome
                  */
@@ -1042,7 +1042,7 @@ namespace TencentCloud
                 DescribeMNGAccessAnalysisDetailOutcomeCallable DescribeMNGAccessAnalysisDetailCallable(const Model::DescribeMNGAccessAnalysisDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve line chart analysis data for mini game visits.
+                 *This API is used to query the mini game visit analysis line chart.
                  * @param req DescribeMNGAccessAnalysisLineChartRequest
                  * @return DescribeMNGAccessAnalysisLineChartOutcome
                  */
@@ -1051,7 +1051,7 @@ namespace TencentCloud
                 DescribeMNGAccessAnalysisLineChartOutcomeCallable DescribeMNGAccessAnalysisLineChartCallable(const Model::DescribeMNGAccessAnalysisLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+                 *This API is used to query an overview of visit analysis data for a mini game within a specified date range.
                  * @param req DescribeMNGAccessAnalysisOverviewRequest
                  * @return DescribeMNGAccessAnalysisOverviewOutcome
                  */
@@ -1060,7 +1060,7 @@ namespace TencentCloud
                 DescribeMNGAccessAnalysisOverviewOutcomeCallable DescribeMNGAccessAnalysisOverviewCallable(const Model::DescribeMNGAccessAnalysisOverviewRequest& request);
 
                 /**
-                 *This API is used to retrieve the real-time active user statistics for a mini game.
+                 *This API is used to query the mini game real-time active user statistics.
                  * @param req DescribeMNGActiveUserRealTimeStatisticsRequest
                  * @return DescribeMNGActiveUserRealTimeStatisticsOutcome
                  */
@@ -1069,7 +1069,7 @@ namespace TencentCloud
                 DescribeMNGActiveUserRealTimeStatisticsOutcomeCallable DescribeMNGActiveUserRealTimeStatisticsCallable(const Model::DescribeMNGActiveUserRealTimeStatisticsRequest& request);
 
                 /**
-                 *This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+                 *This API is used to query the detailed mini game advertising data over a specified period.
                  * @param req DescribeMNGAdvertisingDetailRequest
                  * @return DescribeMNGAdvertisingDetailOutcome
                  */
@@ -1078,7 +1078,7 @@ namespace TencentCloud
                 DescribeMNGAdvertisingDetailOutcomeCallable DescribeMNGAdvertisingDetailCallable(const Model::DescribeMNGAdvertisingDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve mini game advertising data in a line chart format.
+                 *This API is used to query the mini game advertising data in a line chart format.
                  * @param req DescribeMNGAdvertisingLineChartRequest
                  * @return DescribeMNGAdvertisingLineChartOutcome
                  */
@@ -1087,7 +1087,7 @@ namespace TencentCloud
                 DescribeMNGAdvertisingLineChartOutcomeCallable DescribeMNGAdvertisingLineChartCallable(const Model::DescribeMNGAdvertisingLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+                 *This API is used to query an overview of mini game ad metrics within a specified date range.
                  * @param req DescribeMNGAdvertisingOverviewRequest
                  * @return DescribeMNGAdvertisingOverviewOutcome
                  */
@@ -1105,7 +1105,7 @@ namespace TencentCloud
                 DescribeMNGAllStageVersionsOutcomeCallable DescribeMNGAllStageVersionsCallable(const Model::DescribeMNGAllStageVersionsRequest& request);
 
                 /**
-                 *This API is used to query the list of mini game types.
+                 *This API is used to query the mini game categories.
                  * @param req DescribeMNGCategoryRequest
                  * @return DescribeMNGCategoryOutcome
                  */
@@ -1132,7 +1132,7 @@ namespace TencentCloud
                 DescribeMNGListOutcomeCallable DescribeMNGListCallable(const Model::DescribeMNGListRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed mini game monthly active user data.
+                 *This API is used to query the detailed mini game monthly active user data.
                  * @param req DescribeMNGMAUDataDetailRequest
                  * @return DescribeMNGMAUDataDetailOutcome
                  */
@@ -1141,7 +1141,7 @@ namespace TencentCloud
                 DescribeMNGMAUDataDetailOutcomeCallable DescribeMNGMAUDataDetailCallable(const Model::DescribeMNGMAUDataDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve mini game monthly active user data in a line chart format.
+                 *This API is used to query the mini game MAU line chart.
                  * @param req DescribeMNGMAULineChartRequest
                  * @return DescribeMNGMAULineChartOutcome
                  */
@@ -1150,7 +1150,7 @@ namespace TencentCloud
                 DescribeMNGMAULineChartOutcomeCallable DescribeMNGMAULineChartCallable(const Model::DescribeMNGMAULineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve MAU comparison data for a mini game between two months.
+                 *This API is used to query the MAU comparison data for a mini game between two months.
                  * @param req DescribeMNGMAUMonthlyComparisonMetricCardRequest
                  * @return DescribeMNGMAUMonthlyComparisonMetricCardOutcome
                  */
@@ -1168,7 +1168,7 @@ namespace TencentCloud
                 DescribeMNGOfflinePackageURLOutcomeCallable DescribeMNGOfflinePackageURLCallable(const Model::DescribeMNGOfflinePackageURLRequest& request);
 
                 /**
-                 *This API is used to retrieve the line chart data for mini game payment.
+                 *This API is used to query the mini game payment line chart.
                  * @param req DescribeMNGPaymentLineChartRequest
                  * @return DescribeMNGPaymentLineChartOutcome
                  */
@@ -1177,7 +1177,7 @@ namespace TencentCloud
                 DescribeMNGPaymentLineChartOutcomeCallable DescribeMNGPaymentLineChartCallable(const Model::DescribeMNGPaymentLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of mini game payment data within a specified period.
+                 *This API is used to query an overview of mini game payment data within a specified period.
                  * @param req DescribeMNGPaymentOverviewRequest
                  * @return DescribeMNGPaymentOverviewOutcome
                  */
@@ -1186,7 +1186,7 @@ namespace TencentCloud
                 DescribeMNGPaymentOverviewOutcomeCallable DescribeMNGPaymentOverviewCallable(const Model::DescribeMNGPaymentOverviewRequest& request);
 
                 /**
-                 *This API is used to retrieve a detailed payment report data for a mini game.
+                 *This API is used to query a detailed payment report data for a mini game.
                  * @param req DescribeMNGPaymentReportDetailRequest
                  * @return DescribeMNGPaymentReportDetailOutcome
                  */
@@ -1195,7 +1195,7 @@ namespace TencentCloud
                 DescribeMNGPaymentReportDetailOutcomeCallable DescribeMNGPaymentReportDetailCallable(const Model::DescribeMNGPaymentReportDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve the mini game payment retention data.
+                 *This API is used to query the mini game payment retention data.
                  * @param req DescribeMNGPaymentRetentionAnalysisRequest
                  * @return DescribeMNGPaymentRetentionAnalysisOutcome
                  */
@@ -1213,7 +1213,7 @@ namespace TencentCloud
                 DescribeMNGPreviewOutcomeCallable DescribeMNGPreviewCallable(const Model::DescribeMNGPreviewRequest& request);
 
                 /**
-                 *This API is used to query the released mini game versions.
+                 *This API is used to query the release version history of a mini game.
                  * @param req DescribeMNGReleasedVersionHistoryRequest
                  * @return DescribeMNGReleasedVersionHistoryOutcome
                  */
@@ -1222,7 +1222,7 @@ namespace TencentCloud
                 DescribeMNGReleasedVersionHistoryOutcomeCallable DescribeMNGReleasedVersionHistoryCallable(const Model::DescribeMNGReleasedVersionHistoryRequest& request);
 
                 /**
-                 *This API is used to retrieve user retention data for a mini game within a specified date range.
+                 *This API is used to query the user retention data for a mini game within a specified date range.
                  * @param req DescribeMNGRetentionDataRequest
                  * @return DescribeMNGRetentionDataOutcome
                  */
@@ -1231,7 +1231,7 @@ namespace TencentCloud
                 DescribeMNGRetentionDataOutcomeCallable DescribeMNGRetentionDataCallable(const Model::DescribeMNGRetentionDataRequest& request);
 
                 /**
-                 *This API is used to query the details of a sensitive API permission request for a mini game.
+                 *This API is used to query the details of permission requests to allow a mini game to call sensitive APIs.
                  * @param req DescribeMNGSensitiveAPIPermissionApprovalRequest
                  * @return DescribeMNGSensitiveAPIPermissionApprovalOutcome
                  */
@@ -1240,7 +1240,7 @@ namespace TencentCloud
                 DescribeMNGSensitiveAPIPermissionApprovalOutcomeCallable DescribeMNGSensitiveAPIPermissionApprovalCallable(const Model::DescribeMNGSensitiveAPIPermissionApprovalRequest& request);
 
                 /**
-                 *This API is used to query the list of sensitive APIs that available to the mini game.
+                 *This API is used to query a list of sensitive APIs that are available to the mini game.
                  * @param req DescribeMNGSensitiveAPIPermissionListRequest
                  * @return DescribeMNGSensitiveAPIPermissionListOutcome
                  */
@@ -1249,7 +1249,7 @@ namespace TencentCloud
                 DescribeMNGSensitiveAPIPermissionListOutcomeCallable DescribeMNGSensitiveAPIPermissionListCallable(const Model::DescribeMNGSensitiveAPIPermissionListRequest& request);
 
                 /**
-                 *This API is used to query the creation result of a mini game version.
+                 *This API is used to query the mini game version creation results.
                  * @param req DescribeMNGVersionRequest
                  * @return DescribeMNGVersionOutcome
                  */
@@ -1267,7 +1267,7 @@ namespace TencentCloud
                 DescribeMNPOutcomeCallable DescribeMNPCallable(const Model::DescribeMNPRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+                 *This API is used to query the overview of mini program visit analysis data within a specified date range.
                  * @param req DescribeMNPAccessAnalysisOverviewRequest
                  * @return DescribeMNPAccessAnalysisOverviewOutcome
                  */
@@ -1276,7 +1276,7 @@ namespace TencentCloud
                 DescribeMNPAccessAnalysisOverviewOutcomeCallable DescribeMNPAccessAnalysisOverviewCallable(const Model::DescribeMNPAccessAnalysisOverviewRequest& request);
 
                 /**
-                 *This API is used to retrieve the real-time active user statistics for a mini program.
+                 *This API is used to query the mini program real-time active user statistics.
                  * @param req DescribeMNPActiveUserRealTimeStatisticsRequest
                  * @return DescribeMNPActiveUserRealTimeStatisticsOutcome
                  */
@@ -1285,7 +1285,7 @@ namespace TencentCloud
                 DescribeMNPActiveUserRealTimeStatisticsOutcomeCallable DescribeMNPActiveUserRealTimeStatisticsCallable(const Model::DescribeMNPActiveUserRealTimeStatisticsRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+                 *This API is used to query the detailed advertising data for a mini program within a specified date range.
                  * @param req DescribeMNPAdvertisingDetailRequest
                  * @return DescribeMNPAdvertisingDetailOutcome
                  */
@@ -1294,7 +1294,7 @@ namespace TencentCloud
                 DescribeMNPAdvertisingDetailOutcomeCallable DescribeMNPAdvertisingDetailCallable(const Model::DescribeMNPAdvertisingDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini program version information.
+                 *This API is used to query versions of a mini program across all stages.
                  * @param req DescribeMNPAllStageVersionsRequest
                  * @return DescribeMNPAllStageVersionsOutcome
                  */
@@ -1303,7 +1303,7 @@ namespace TencentCloud
                 DescribeMNPAllStageVersionsOutcomeCallable DescribeMNPAllStageVersionsCallable(const Model::DescribeMNPAllStageVersionsRequest& request);
 
                 /**
-                 *This API is used to list the approval requests related with a mini program version.
+                 *This API is used to query a list of approval requests related with a mini program.
                  * @param req DescribeMNPApprovalListRequest
                  * @return DescribeMNPApprovalListOutcome
                  */
@@ -1312,7 +1312,7 @@ namespace TencentCloud
                 DescribeMNPApprovalListOutcomeCallable DescribeMNPApprovalListCallable(const Model::DescribeMNPApprovalListRequest& request);
 
                 /**
-                 *This API is used to query the mini program types.
+                 *This API is used to query the mini program category list.
                  * @param req DescribeMNPCategoryRequest
                  * @return DescribeMNPCategoryOutcome
                  */
@@ -1321,7 +1321,7 @@ namespace TencentCloud
                 DescribeMNPCategoryOutcomeCallable DescribeMNPCategoryCallable(const Model::DescribeMNPCategoryRequest& request);
 
                 /**
-                 *This API is used to query the domain allowlist / blocklist of a mini program.
+                 *This API is used to query the domain allowlist/blocklist of a mini program.
                  * @param req DescribeMNPDomainACLRequest
                  * @return DescribeMNPDomainACLOutcome
                  */
@@ -1330,7 +1330,7 @@ namespace TencentCloud
                 DescribeMNPDomainACLOutcomeCallable DescribeMNPDomainACLCallable(const Model::DescribeMNPDomainACLRequest& request);
 
                 /**
-                 *This API is used to query the mini programs.
+                 *This API is used to query the mini program list.
                  * @param req DescribeMNPListRequest
                  * @return DescribeMNPListOutcome
                  */
@@ -1339,7 +1339,7 @@ namespace TencentCloud
                 DescribeMNPListOutcomeCallable DescribeMNPListCallable(const Model::DescribeMNPListRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed mini program monthly active user data.
+                 *This API is used to query the detailed mini program monthly active user data.
                  * @param req DescribeMNPMAUDataDetailRequest
                  * @return DescribeMNPMAUDataDetailOutcome
                  */
@@ -1348,7 +1348,7 @@ namespace TencentCloud
                 DescribeMNPMAUDataDetailOutcomeCallable DescribeMNPMAUDataDetailCallable(const Model::DescribeMNPMAUDataDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve the mini program monthly active user data in a line chart format.
+                 *This API is used to query the mini program monthly active user data in a line chart format.
                  * @param req DescribeMNPMAULineChartRequest
                  * @return DescribeMNPMAULineChartOutcome
                  */
@@ -1357,7 +1357,7 @@ namespace TencentCloud
                 DescribeMNPMAULineChartOutcomeCallable DescribeMNPMAULineChartCallable(const Model::DescribeMNPMAULineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve MAU comparison data for a mini program between two months.
+                 *This API is used to query the MAU comparison data for a mini program between two months.
                  * @param req DescribeMNPMAUMetricCardRequest
                  * @return DescribeMNPMAUMetricCardOutcome
                  */
@@ -1375,7 +1375,7 @@ namespace TencentCloud
                 DescribeMNPOfflinePackageURLOutcomeCallable DescribeMNPOfflinePackageURLCallable(const Model::DescribeMNPOfflinePackageURLRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+                 *This API is used to query the detailed mini program page visit data.
                  * @param req DescribeMNPPageAnalysisDetailRequest
                  * @return DescribeMNPPageAnalysisDetailOutcome
                  */
@@ -1393,7 +1393,7 @@ namespace TencentCloud
                 DescribeMNPPreviewOutcomeCallable DescribeMNPPreviewCallable(const Model::DescribeMNPPreviewRequest& request);
 
                 /**
-                 *This API is used to list all released versions of a mini program.
+                 *This API is used to query the release version history of a mini program.
                  * @param req DescribeMNPReleasedVersionHistoryRequest
                  * @return DescribeMNPReleasedVersionHistoryOutcome
                  */
@@ -1402,7 +1402,7 @@ namespace TencentCloud
                 DescribeMNPReleasedVersionHistoryOutcomeCallable DescribeMNPReleasedVersionHistoryCallable(const Model::DescribeMNPReleasedVersionHistoryRequest& request);
 
                 /**
-                 *This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+                 *This API is used to query the mini program visit analysis line chart within a given date range.
                  * @param req DescribeMNPReportDataLineChartRequest
                  * @return DescribeMNPReportDataLineChartOutcome
                  */
@@ -1411,7 +1411,7 @@ namespace TencentCloud
                 DescribeMNPReportDataLineChartOutcomeCallable DescribeMNPReportDataLineChartCallable(const Model::DescribeMNPReportDataLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed mini program visit analysis data.
+                 *This API is used to query the detailed mini program visit analysis data.
                  * @param req DescribeMNPReportDetailRequest
                  * @return DescribeMNPReportDetailOutcome
                  */
@@ -1420,7 +1420,7 @@ namespace TencentCloud
                 DescribeMNPReportDetailOutcomeCallable DescribeMNPReportDetailCallable(const Model::DescribeMNPReportDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve user retention data for a mini program within a specified date range.
+                 *This API is used to query the mini program user retention data within a specified date range.
                  * @param req DescribeMNPRetentionDataRequest
                  * @return DescribeMNPRetentionDataOutcome
                  */
@@ -1429,7 +1429,7 @@ namespace TencentCloud
                 DescribeMNPRetentionDataOutcomeCallable DescribeMNPRetentionDataCallable(const Model::DescribeMNPRetentionDataRequest& request);
 
                 /**
-                 *This API is used to query details of a specific permission request to call sensitive APIs.
+                 *This API is used to query the details of a sensitive API permission request for a mini program.
                  * @param req DescribeMNPSensitiveAPIPermissionApprovalRequest
                  * @return DescribeMNPSensitiveAPIPermissionApprovalOutcome
                  */
@@ -1438,7 +1438,7 @@ namespace TencentCloud
                 DescribeMNPSensitiveAPIPermissionApprovalOutcomeCallable DescribeMNPSensitiveAPIPermissionApprovalCallable(const Model::DescribeMNPSensitiveAPIPermissionApprovalRequest& request);
 
                 /**
-                 *This API is used to query permission requests to allow a mini program calling sensitive APIs.
+                 *This API is used to query a list of permission requests to allow a mini program to call sensitive APIs.
                  * @param req DescribeMNPSensitiveAPIPermissionApprovalListRequest
                  * @return DescribeMNPSensitiveAPIPermissionApprovalListOutcome
                  */
@@ -1465,7 +1465,7 @@ namespace TencentCloud
                 DescribeMNPVersionOutcomeCallable DescribeMNPVersionCallable(const Model::DescribeMNPVersionRequest& request);
 
                 /**
-                 *This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+                 *This API is used to query the mini program payment data details within a specified date range.
                  * @param req DescribePaymentDataDetailRequest
                  * @return DescribePaymentDataDetailOutcome
                  */
@@ -1474,7 +1474,7 @@ namespace TencentCloud
                 DescribePaymentDataDetailOutcomeCallable DescribePaymentDataDetailCallable(const Model::DescribePaymentDataDetailRequest& request);
 
                 /**
-                 *This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+                 *This API is used to query the mini program payment line chart within a specified date range.
                  * @param req DescribePaymentDataLineChartRequest
                  * @return DescribePaymentDataLineChartOutcome
                  */
@@ -1483,7 +1483,7 @@ namespace TencentCloud
                 DescribePaymentDataLineChartOutcomeCallable DescribePaymentDataLineChartCallable(const Model::DescribePaymentDataLineChartRequest& request);
 
                 /**
-                 *This API is used to retrieve an overview of mini program payment data within a specified date range.
+                 *This API is used to query an overview of mini program payment data within a specified date range.
                  * @param req DescribePaymentDataOverviewRequest
                  * @return DescribePaymentDataOverviewOutcome
                  */
@@ -1492,7 +1492,7 @@ namespace TencentCloud
                 DescribePaymentDataOverviewOutcomeCallable DescribePaymentDataOverviewCallable(const Model::DescribePaymentDataOverviewRequest& request);
 
                 /**
-                 *This API is used to query the roles.
+                 *This API is used to query a list of roles.
                  * @param req DescribeRoleListRequest
                  * @return DescribeRoleListOutcome
                  */
@@ -1510,7 +1510,7 @@ namespace TencentCloud
                 DescribeTeamOutcomeCallable DescribeTeamCallable(const Model::DescribeTeamRequest& request);
 
                 /**
-                 *This API is used to query the teams.
+                 *This API is used to query a list of teams.
                  * @param req DescribeTeamListRequest
                  * @return DescribeTeamListOutcome
                  */
@@ -1519,7 +1519,7 @@ namespace TencentCloud
                 DescribeTeamListOutcomeCallable DescribeTeamListCallable(const Model::DescribeTeamListRequest& request);
 
                 /**
-                 *This API is used to query the team members.
+                 *This API is used to query a list of team members.
                  * @param req DescribeTeamMemberListRequest
                  * @return DescribeTeamMemberListOutcome
                  */
@@ -1546,7 +1546,7 @@ namespace TencentCloud
                 DescribeUserOutcomeCallable DescribeUserCallable(const Model::DescribeUserRequest& request);
 
                 /**
-                 *This API is used to query the users.
+                 *This API is used to query a list of users.
                  * @param req DescribeUserListRequest
                  * @return DescribeUserListOutcome
                  */
@@ -1555,7 +1555,7 @@ namespace TencentCloud
                 DescribeUserListOutcomeCallable DescribeUserListCallable(const Model::DescribeUserListRequest& request);
 
                 /**
-                 *This API is used to set a sensitive API to restricted.
+                 *This API is used to disable a superapp sensitive API.
                  * @param req DisableApplicationSensitiveAPIRequest
                  * @return DisableApplicationSensitiveAPIOutcome
                  */
@@ -1564,7 +1564,7 @@ namespace TencentCloud
                 DisableApplicationSensitiveAPIOutcomeCallable DisableApplicationSensitiveAPICallable(const Model::DisableApplicationSensitiveAPIRequest& request);
 
                 /**
-                 *This API is used to set an application sensitive API to public.
+                 *This API is used to enable a superapp sensitive API.
                  * @param req EnableApplicationSensitiveAPIRequest
                  * @return EnableApplicationSensitiveAPIOutcome
                  */
@@ -1573,7 +1573,7 @@ namespace TencentCloud
                 EnableApplicationSensitiveAPIOutcomeCallable EnableApplicationSensitiveAPICallable(const Model::EnableApplicationSensitiveAPIRequest& request);
 
                 /**
-                 *This API is used to change the application information.
+                 *This API is used to change the superapp information.
                  * @param req ModifyApplicationRequest
                  * @return ModifyApplicationOutcome
                  */
@@ -1618,7 +1618,7 @@ namespace TencentCloud
                 ModifyMNGDomainOutcomeCallable ModifyMNGDomainCallable(const Model::ModifyMNGDomainRequest& request);
 
                 /**
-                 *This API is used to modify the mini program information.
+                 *This API is used to edit the mini program information.
                  * @param req ModifyMNPRequest
                  * @return ModifyMNPOutcome
                  */
@@ -1663,7 +1663,7 @@ namespace TencentCloud
                 ModifyUserOutcomeCallable ModifyUserCallable(const Model::ModifyUserRequest& request);
 
                 /**
-                 *This API is used to approve or reject the release of a mini program version.
+                 *This API is used to process mini program approval requests.
                  * @param req ProcessMNPApprovalRequest
                  * @return ProcessMNPApprovalOutcome
                  */
@@ -1672,7 +1672,7 @@ namespace TencentCloud
                 ProcessMNPApprovalOutcomeCallable ProcessMNPApprovalCallable(const Model::ProcessMNPApprovalRequest& request);
 
                 /**
-                 *This API is used to approve or reject the sensitive API permission requests.
+                 *This API is used to process a sensitive API permission request for a mini program.
                  * @param req ProcessMNPSensitiveAPIPermissionApprovalRequest
                  * @return ProcessMNPSensitiveAPIPermissionApprovalOutcome
                  */
@@ -1726,7 +1726,7 @@ namespace TencentCloud
                 RollbackMNGVersionOutcomeCallable RollbackMNGVersionCallable(const Model::RollbackMNGVersionRequest& request);
 
                 /**
-                 *This API is used to rollback a mini program online version.
+                 *This API is used to roll back the released version of a mini program to a specified version.
                  * @param req RollbackMNPVersionRequest
                  * @return RollbackMNPVersionOutcome
                  */

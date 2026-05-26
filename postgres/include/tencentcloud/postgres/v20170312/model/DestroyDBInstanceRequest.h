@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the instance to be eliminated
-                     * @return DBInstanceId The ID of the instance to be eliminated
+                     * 获取<p>ID of the instance to be shut down</p>
+                     * @return DBInstanceId <p>ID of the instance to be shut down</p>
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置The ID of the instance to be eliminated
-                     * @param _dBInstanceId The ID of the instance to be eliminated
+                     * 设置<p>ID of the instance to be shut down</p>
+                     * @param _dBInstanceId <p>ID of the instance to be shut down</p>
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the instance to be eliminated
+                     * <p>ID of the instance to be shut down</p>
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;

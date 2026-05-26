@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return FlowId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Process ID
+                     * @return FlowId Process ID
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -62,8 +60,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Process ID
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

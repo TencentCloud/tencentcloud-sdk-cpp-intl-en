@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Queries the mini program version creation results
+                * Response for querying the mini game version creation result.
                 */
                 class DescribeMNGVersionResp : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task ID</p>
-                     * @return TaskId <p>Task ID</p>
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置<p>Task ID</p>
-                     * @param _taskId <p>Task ID</p>
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
-                     * @return TaskStatus <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+                     * 获取<p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
+                     * @return TaskStatus <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
                      * 
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
-                     * 设置<p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
-                     * @param _taskStatus <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+                     * 设置<p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
+                     * @param _taskStatus <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
                      * 
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status information</p>
-                     * @return TaskMsg <p>Task status information</p>
+                     * 获取<p>Task status information.</p>
+                     * @return TaskMsg <p>Task status information.</p>
                      * 
                      */
                     std::string GetTaskMsg() const;
 
                     /**
-                     * 设置<p>Task status information</p>
-                     * @param _taskMsg <p>Task status information</p>
+                     * 设置<p>Task status information.</p>
+                     * @param _taskMsg <p>Task status information.</p>
                      * 
                      */
                     void SetTaskMsg(const std::string& _taskMsg);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TaskMsgHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game version ID (returned upon successful compilation)</p>
-                     * @return MNPVersionId <p>Mini game version ID (returned upon successful compilation)</p>
+                     * 获取<p>Mini game version ID (returned upon successful compilation).</p>
+                     * @return MNPVersionId <p>Mini game version ID (returned upon successful compilation).</p>
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置<p>Mini game version ID (returned upon successful compilation)</p>
-                     * @param _mNPVersionId <p>Mini game version ID (returned upon successful compilation)</p>
+                     * 设置<p>Mini game version ID (returned upon successful compilation).</p>
+                     * @param _mNPVersionId <p>Mini game version ID (returned upon successful compilation).</p>
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Task ID</p>
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+                     * <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
                      */
                     int64_t m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * <p>Task status information</p>
+                     * <p>Task status information.</p>
                      */
                     std::string m_taskMsg;
                     bool m_taskMsgHasBeenSet;
 
                     /**
-                     * <p>Mini game version ID (returned upon successful compilation)</p>
+                     * <p>Mini game version ID (returned upon successful compilation).</p>
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;

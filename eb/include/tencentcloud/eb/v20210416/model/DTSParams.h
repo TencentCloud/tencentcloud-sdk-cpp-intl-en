@@ -46,7 +46,88 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取
+                     * @return ConsumerGroupName 
+                     * 
+                     */
+                    std::string GetConsumerGroupName() const;
+
+                    /**
+                     * 设置
+                     * @param _consumerGroupName 
+                     * 
+                     */
+                    void SetConsumerGroupName(const std::string& _consumerGroupName);
+
+                    /**
+                     * 判断参数 ConsumerGroupName 是否已赋值
+                     * @return ConsumerGroupName 是否已赋值
+                     * 
+                     */
+                    bool ConsumerGroupNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Account 
+                     * 
+                     */
+                    std::string GetAccount() const;
+
+                    /**
+                     * 设置
+                     * @param _account 
+                     * 
+                     */
+                    void SetAccount(const std::string& _account);
+
+                    /**
+                     * 判断参数 Account 是否已赋值
+                     * @return Account 是否已赋值
+                     * 
+                     */
+                    bool AccountHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Password 
+                     * 
+                     */
+                    std::string GetPassword() const;
+
+                    /**
+                     * 设置
+                     * @param _password 
+                     * 
+                     */
+                    void SetPassword(const std::string& _password);
+
+                    /**
+                     * 判断参数 Password 是否已赋值
+                     * @return Password 是否已赋值
+                     * 
+                     */
+                    bool PasswordHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::string m_consumerGroupName;
+                    bool m_consumerGroupNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_account;
+                    bool m_accountHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_password;
+                    bool m_passwordHasBeenSet;
 
                 };
             }

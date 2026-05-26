@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcsas/v20250106/model/MNPDetailI18nVO.h>
 
 
 namespace TencentCloud
@@ -35,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini game details
+                * Mini game detail information.
                 */
                 class DescribeMNGManagerDetailData : public AbstractModel
                 {
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Mini game type</p>
-                     * @return MNPType <p>Mini game type</p>
+                     * 获取<p>Mini game category.</p>
+                     * @return MNPType <p>Mini game category.</p>
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置<p>Mini game type</p>
-                     * @param _mNPType <p>Mini game type</p>
+                     * 设置<p>Mini game category.</p>
+                     * @param _mNPType <p>Mini game category.</p>
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game appid</p>
-                     * @return MNPId <p>Mini game appid</p>
+                     * 获取<p>Mini game appid.</p>
+                     * @return MNPId <p>Mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini game appid</p>
-                     * @param _mNPId <p>Mini game appid</p>
+                     * 设置<p>Mini game appid.</p>
+                     * @param _mNPId <p>Mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game name</p>
-                     * @return MNPName <p>Mini game name</p>
+                     * 获取<p>Mini game name.</p>
+                     * @return MNPName <p>Mini game name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置<p>Mini game name</p>
-                     * @param _mNPName <p>Mini game name</p>
+                     * 设置<p>Mini game name.</p>
+                     * @param _mNPName <p>Mini game name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game icon</p>
-                     * @return MNPIcon <p>Mini game icon</p>
+                     * 获取<p>Mini game icon.</p>
+                     * @return MNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置<p>Mini game icon</p>
-                     * @param _mNPIcon <p>Mini game icon</p>
+                     * 设置<p>Mini game icon.</p>
+                     * @param _mNPIcon <p>Mini game icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game introduction</p>
-                     * @return MNPIntro <p>Mini game introduction</p>
+                     * 获取<p>Mini game introduction.</p>
+                     * @return MNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置<p>Mini game introduction</p>
-                     * @param _mNPIntro <p>Mini game introduction</p>
+                     * 设置<p>Mini game introduction.</p>
+                     * @param _mNPIntro <p>Mini game introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game description</p>
-                     * @return MNPDesc <p>Mini game description</p>
+                     * 获取<p>Mini game description.</p>
+                     * @return MNPDesc <p>Mini game description.</p>
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置<p>Mini game description</p>
-                     * @param _mNPDesc <p>Mini game description</p>
+                     * 设置<p>Mini game description.</p>
+                     * @param _mNPDesc <p>Mini game description.</p>
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -173,15 +174,15 @@ namespace TencentCloud
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creation time (Unix timestamp)</p>
-                     * @return CreateTime <p>Creation time (Unix timestamp)</p>
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Creation time (Unix timestamp)</p>
-                     * @param _createTime <p>Creation time (Unix timestamp)</p>
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -194,15 +195,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creator</p>
-                     * @return CreateUser <p>Creator</p>
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置<p>Creator</p>
-                     * @param _createUser <p>Creator</p>
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -215,15 +216,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Connection status. Valid values: 1: Not connected; 2: Connected
-                     * @return AccessStatus Connection status. Valid values: 1: Not connected; 2: Connected
+                     * 获取Access status. Valid values: 1: Not connected; 2: Connected. 
+                     * @return AccessStatus Access status. Valid values: 1: Not connected; 2: Connected. 
                      * 
                      */
                     int64_t GetAccessStatus() const;
 
                     /**
-                     * 设置Connection status. Valid values: 1: Not connected; 2: Connected
-                     * @param _accessStatus Connection status. Valid values: 1: Not connected; 2: Connected
+                     * 设置Access status. Valid values: 1: Not connected; 2: Connected. 
+                     * @param _accessStatus Access status. Valid values: 1: Not connected; 2: Connected. 
                      * 
                      */
                     void SetAccessStatus(const int64_t& _accessStatus);
@@ -236,15 +237,15 @@ namespace TencentCloud
                     bool AccessStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Team name</p>
-                     * @return TeamName <p>Team name</p>
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置<p>Team name</p>
-                     * @param _teamName <p>Team name</p>
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -257,15 +258,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Team ID</p>
-                     * @return TeamId <p>Team ID</p>
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置<p>Team ID</p>
-                     * @param _teamId <p>Team ID</p>
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -278,15 +279,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-                     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * 获取<p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-                     * @param _status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * 设置<p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @param _status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -298,79 +299,106 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取The mini game name and description in multiple languages.
+                     * @return I18nList The mini game name and description in multiple languages.
+                     * 
+                     */
+                    std::vector<MNPDetailI18nVO> GetI18nList() const;
+
+                    /**
+                     * 设置The mini game name and description in multiple languages.
+                     * @param _i18nList The mini game name and description in multiple languages.
+                     * 
+                     */
+                    void SetI18nList(const std::vector<MNPDetailI18nVO>& _i18nList);
+
+                    /**
+                     * 判断参数 I18nList 是否已赋值
+                     * @return I18nList 是否已赋值
+                     * 
+                     */
+                    bool I18nListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Mini game type</p>
+                     * <p>Mini game category.</p>
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * <p>Mini game appid</p>
+                     * <p>Mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>Mini game name</p>
+                     * <p>Mini game name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * <p>Mini game icon</p>
+                     * <p>Mini game icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * <p>Mini game introduction</p>
+                     * <p>Mini game introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * <p>Mini game description</p>
+                     * <p>Mini game description.</p>
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * <p>Creation time (Unix timestamp)</p>
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Creator</p>
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Connection status. Valid values: 1: Not connected; 2: Connected
+                     * Access status. Valid values: 1: Not connected; 2: Connected. 
                      */
                     int64_t m_accessStatus;
                     bool m_accessStatusHasBeenSet;
 
                     /**
-                     * <p>Team name</p>
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * <p>Team ID</p>
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+                     * <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * The mini game name and description in multiple languages.
+                     */
+                    std::vector<MNPDetailI18nVO> m_i18nList;
+                    bool m_i18nListHasBeenSet;
 
                 };
             }

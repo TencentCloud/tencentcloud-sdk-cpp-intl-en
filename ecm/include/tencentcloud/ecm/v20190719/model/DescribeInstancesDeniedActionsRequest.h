@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取None
-                     * @return InstanceIdSet None
+                     * 获取Nothing
+                     * @return InstanceIdSet Nothing
                      * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
-                     * 设置None
-                     * @param _instanceIdSet None
+                     * 设置Nothing
+                     * @param _instanceIdSet Nothing
                      * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * None
+                     * Nothing
                      */
                     std::vector<std::string> m_instanceIdSet;
                     bool m_instanceIdSetHasBeenSet;

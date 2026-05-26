@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program version ID
-                     * @return MNPVersionId Mini program version ID
+                     * 获取Mini program version ID.
+                     * @return MNPVersionId Mini program version ID.
                      * 
                      */
                     int64_t GetMNPVersionId() const;
 
                     /**
-                     * 设置Mini program version ID
-                     * @param _mNPVersionId Mini program version ID
+                     * 设置Mini program version ID.
+                     * @param _mNPVersionId Mini program version ID.
                      * 
                      */
                     void SetMNPVersionId(const int64_t& _mNPVersionId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MNPVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取submit: Submit an approval request; cancel: Cancel the approval request
-                     * @return ApplyAction submit: Submit an approval request; cancel: Cancel the approval request
+                     * 获取submit: Submit an approval request; cancel: Cancel the approval request.
+                     * @return ApplyAction submit: Submit an approval request; cancel: Cancel the approval request.
                      * 
                      */
                     std::string GetApplyAction() const;
 
                     /**
-                     * 设置submit: Submit an approval request; cancel: Cancel the approval request
-                     * @param _applyAction submit: Submit an approval request; cancel: Cancel the approval request
+                     * 设置submit: Submit an approval request; cancel: Cancel the approval request.
+                     * @param _applyAction submit: Submit an approval request; cancel: Cancel the approval request.
                      * 
                      */
                     void SetApplyAction(const std::string& _applyAction);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApplyActionHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID
-                     * @return PlatformId Platform ID
+                     * 获取Platform ID.
+                     * @return PlatformId Platform ID.
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID
-                     * @param _platformId Platform ID
+                     * 设置Platform ID.
+                     * @param _platformId Platform ID.
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program version ID
+                     * Mini program version ID.
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
 
                     /**
-                     * submit: Submit an approval request; cancel: Cancel the approval request
+                     * submit: Submit an approval request; cancel: Cancel the approval request.
                      */
                     std::string m_applyAction;
                     bool m_applyActionHasBeenSet;
 
                     /**
-                     * Platform ID
+                     * Platform ID.
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;

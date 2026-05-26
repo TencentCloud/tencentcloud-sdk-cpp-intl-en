@@ -86,27 +86,31 @@ namespace TencentCloud
                     bool MaxFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 获取Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
+                     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @param _filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 设置Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
+                     * @param _filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -161,15 +165,15 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
-                     * @return OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * 获取Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+                     * @return OrderBy Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
-                     * @param _orderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * 设置Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+                     * @param _orderBy Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -182,15 +186,15 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-                     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 获取Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
+                     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 设置Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
+                     * @param _orderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -217,10 +221,11 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool m_maxFinishTimeHasBeenSet;
 
                     /**
-                     * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+                     * Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -238,13 +243,13 @@ db-instance-ip: Filter by instance VPC IP (in string format).
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;

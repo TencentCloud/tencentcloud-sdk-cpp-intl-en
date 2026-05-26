@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User list data
+                * User list data.
                 */
                 class DescribeUserListData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User ID
-                     * @return UserId User ID
+                     * 获取User ID.
+                     * @return UserId User ID.
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID
-                     * @param _userId User ID
+                     * 设置User ID.
+                     * @param _userId User ID.
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取User account
-                     * @return UserAccount User account
+                     * 获取User account.
+                     * @return UserAccount User account.
                      * 
                      */
                     std::string GetUserAccount() const;
 
                     /**
-                     * 设置User account
-                     * @param _userAccount User account
+                     * 设置User account.
+                     * @param _userAccount User account.
                      * 
                      */
                     void SetUserAccount(const std::string& _userAccount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UserAccountHasBeenSet() const;
 
                     /**
-                     * 获取Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
-                     * @return AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+                     * 获取User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+                     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
                      * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
-                     * 设置Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
-                     * @param _accountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+                     * 设置User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+                     * @param _accountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
                      * 
                      */
                     void SetAccountType(const int64_t& _accountType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AccountTypeHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return UserName User name
+                     * 获取User name.
+                     * @return UserName User name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name
-                     * @param _userName User name
+                     * 设置User name.
+                     * @param _userName User name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Status. 1: normal; 2: disabled.
-                     * @return Status Status. 1: normal; 2: disabled.
+                     * 获取Status. Valid values: 1: Active; 2: Disabled.
+                     * @return Status Status. Valid values: 1: Active; 2: Disabled.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status. 1: normal; 2: disabled.
-                     * @param _status Status. 1: normal; 2: disabled.
+                     * 设置Status. Valid values: 1: Active; 2: Disabled.
+                     * @param _status Status. Valid values: 1: Active; 2: Disabled.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Team name
-                     * @return TeamName Team name
+                     * 获取Team name.
+                     * @return TeamName Team name.
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name
-                     * @param _teamName Team name
+                     * 设置Team name.
+                     * @param _teamName Team name.
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User ID
+                     * User ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * User account
+                     * User account.
                      */
                     std::string m_userAccount;
                     bool m_userAccountHasBeenSet;
 
                     /**
-                     * Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+                     * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
                      */
                     int64_t m_accountType;
                     bool m_accountTypeHasBeenSet;
 
                     /**
-                     * User name
+                     * User name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Status. 1: normal; 2: disabled.
+                     * Status. Valid values: 1: Active; 2: Disabled.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Team name
+                     * Team name.
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;

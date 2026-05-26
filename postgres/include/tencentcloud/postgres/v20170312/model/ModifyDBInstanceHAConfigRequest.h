@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return DBInstanceId Instance ID
+                     * 获取Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _dBInstanceId Instance ID
+                     * 设置Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+                     * @param _dBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
@@ -64,26 +64,26 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+                     * 获取Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
-                     * @return SyncMode Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+                     * @return SyncMode Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
                      * 
                      */
                     std::string GetSyncMode() const;
 
                     /**
-                     * 设置Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+                     * 设置Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
-                     * @param _syncMode Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+                     * @param _syncMode Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
                      * 
                      */
@@ -97,23 +97,23 @@ namespace TencentCloud
                     bool SyncModeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
-                     * @return MaxStandbyLatency Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+                     * 获取Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+                     * @return MaxStandbyLatency Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
                      * 
                      */
                     uint64_t GetMaxStandbyLatency() const;
 
                     /**
-                     * 设置Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
-                     * @param _maxStandbyLatency Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+                     * 设置Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+                     * @param _maxStandbyLatency Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
                      * 
                      */
                     void SetMaxStandbyLatency(const uint64_t& _maxStandbyLatency);
@@ -126,23 +126,23 @@ namespace TencentCloud
                     bool MaxStandbyLatencyHasBeenSet() const;
 
                     /**
-                     * 获取The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
-                     * @return MaxStandbyLag The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+                     * 获取Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
+                     * @return MaxStandbyLag Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
                      * 
                      */
                     uint64_t GetMaxStandbyLag() const;
 
                     /**
-                     * 设置The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
-                     * @param _maxStandbyLag The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+                     * 设置Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
+                     * @param _maxStandbyLag Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
                      * 
                      */
                     void SetMaxStandbyLag(const uint64_t& _maxStandbyLag);
@@ -223,32 +223,32 @@ When the semi-sync instance is allowed to downgrade to async replication, `MaxSy
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
                      */
                     std::string m_dBInstanceId;
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+                     * Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
                      */
                     std::string m_syncMode;
                     bool m_syncModeHasBeenSet;
 
                     /**
-                     * Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+                     * Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
                      */
                     uint64_t m_maxStandbyLatency;
                     bool m_maxStandbyLatencyHasBeenSet;
 
                     /**
-                     * The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+                     * Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
                      */
                     uint64_t m_maxStandbyLag;
                     bool m_maxStandbyLagHasBeenSet;

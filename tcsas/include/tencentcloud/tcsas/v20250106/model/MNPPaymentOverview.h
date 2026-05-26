@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Payment overview data
+                * Payment overview data.
                 */
                 class MNPPaymentOverview : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of mini programs involved in the order
+                     * 获取Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderMNPNum Number of mini programs involved in the order
+                     * @return OrderMNPNum Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOrderMNPNum() const;
 
                     /**
-                     * 设置Number of mini programs involved in the order
+                     * 设置Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderMNPNum Number of mini programs involved in the order
+                     * @param _orderMNPNum Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -72,10 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderMNPNumHasBeenSet() const;
 
                     /**
-                     * 获取Total orders
+                     * 获取Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderNum Total orders
+                     * @return OrderNum Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -83,10 +83,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     int64_t GetOrderNum() const;
 
                     /**
-                     * 设置Total orders
+                     * 设置Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderNum Total orders
+                     * @param _orderNum Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -101,10 +101,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderNumHasBeenSet() const;
 
                     /**
-                     * 获取Total paid orders
+                     * 获取Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderPaidNum Total paid orders
+                     * @return OrderPaidNum Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -112,10 +112,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     int64_t GetOrderPaidNum() const;
 
                     /**
-                     * 设置Total paid orders
+                     * 设置Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderPaidNum Total paid orders
+                     * @param _orderPaidNum Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -130,10 +130,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderPaidNumHasBeenSet() const;
 
                     /**
-                     * 获取Total refunded orders
+                     * 获取Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderRefundNum Total refunded orders
+                     * @return OrderRefundNum Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -141,10 +141,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     int64_t GetOrderRefundNum() const;
 
                     /**
-                     * 设置Total refunded orders
+                     * 设置Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderRefundNum Total refunded orders
+                     * @param _orderRefundNum Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -159,18 +159,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderRefundNumHasBeenSet() const;
 
                     /**
-                     * 获取Total unpaid orders
+                     * 获取Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderUnpaidNum Total unpaid orders
+                     * @return OrderUnpaidNum Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOrderUnpaidNum() const;
 
                     /**
-                     * 设置Total unpaid orders
+                     * 设置Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderUnpaidNum Total unpaid orders
+                     * @param _orderUnpaidNum Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -184,18 +184,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderUnpaidNumHasBeenSet() const;
 
                     /**
-                     * 获取Total order users
+                     * 获取Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OrderUserNum Total order users
+                     * @return OrderUserNum Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetOrderUserNum() const;
 
                     /**
-                     * 设置Total order users
+                     * 设置Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _orderUserNum Total order users
+                     * @param _orderUserNum Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -209,18 +209,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OrderUserNumHasBeenSet() const;
 
                     /**
-                     * 获取Total paying users
+                     * 获取Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PaidUserNum Total paying users
+                     * @return PaidUserNum Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPaidUserNum() const;
 
                     /**
-                     * 设置Total paying users
+                     * 设置Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _paidUserNum Total paying users
+                     * @param _paidUserNum Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -234,18 +234,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PaidUserNumHasBeenSet() const;
 
                     /**
-                     * 获取Amount paid
+                     * 获取Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PaidAmount Amount paid
+                     * @return PaidAmount Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPaidAmount() const;
 
                     /**
-                     * 设置Amount paid
+                     * 设置Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _paidAmount Amount paid
+                     * @param _paidAmount Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -259,18 +259,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Total amount refunded
+                     * 获取Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RefundAmount Total amount refunded
+                     * @return RefundAmount Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRefundAmount() const;
 
                     /**
-                     * 设置Total amount refunded
+                     * 设置Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _refundAmount Total amount refunded
+                     * @param _refundAmount Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -284,18 +284,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RefundAmountHasBeenSet() const;
 
                     /**
-                     * 获取Total order amount
+                     * 获取Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalAmount Total order amount
+                     * @return TotalAmount Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTotalAmount() const;
 
                     /**
-                     * 设置Total order amount
+                     * 设置Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _totalAmount Total order amount
+                     * @param _totalAmount Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -309,18 +309,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalAmountHasBeenSet() const;
 
                     /**
-                     * 获取Unpaid amount
+                     * 获取Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UnpaidAmount Unpaid amount
+                     * @return UnpaidAmount Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUnpaidAmount() const;
 
                     /**
-                     * 设置Unpaid amount
+                     * 设置Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _unpaidAmount Unpaid amount
+                     * @param _unpaidAmount Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -334,18 +334,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UnpaidAmountHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp
+                     * 获取Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Timestamp
+                     * @return UpdateTime Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Timestamp
+                     * 设置Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Timestamp
+                     * @param _updateTime Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -359,18 +359,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Data date
+                     * 获取Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataTime Data date
+                     * @return DataTime Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Data date
+                     * 设置Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataTime Data date
+                     * @param _dataTime Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -386,14 +386,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of mini programs involved in the order
+                     * Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_orderMNPNum;
                     bool m_orderMNPNumHasBeenSet;
 
                     /**
-                     * Total orders
+                     * Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -401,7 +401,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_orderNumHasBeenSet;
 
                     /**
-                     * Total paid orders
+                     * Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -409,7 +409,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_orderPaidNumHasBeenSet;
 
                     /**
-                     * Total refunded orders
+                     * Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -417,63 +417,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_orderRefundNumHasBeenSet;
 
                     /**
-                     * Total unpaid orders
+                     * Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_orderUnpaidNum;
                     bool m_orderUnpaidNumHasBeenSet;
 
                     /**
-                     * Total order users
+                     * Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_orderUserNum;
                     bool m_orderUserNumHasBeenSet;
 
                     /**
-                     * Total paying users
+                     * Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_paidUserNum;
                     bool m_paidUserNumHasBeenSet;
 
                     /**
-                     * Amount paid
+                     * Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_paidAmount;
                     bool m_paidAmountHasBeenSet;
 
                     /**
-                     * Total amount refunded
+                     * Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_refundAmount;
                     bool m_refundAmountHasBeenSet;
 
                     /**
-                     * Total order amount
+                     * Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_totalAmount;
                     bool m_totalAmountHasBeenSet;
 
                     /**
-                     * Unpaid amount
+                     * Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_unpaidAmount;
                     bool m_unpaidAmountHasBeenSet;
 
                     /**
-                     * Timestamp
+                     * Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Data date
+                     * Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dataTime;

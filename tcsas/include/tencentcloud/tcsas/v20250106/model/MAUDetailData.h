@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MAU detailed data
+                * MAU detailed data.
                 */
                 class MAUDetailData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Date
-                     * @return DataTime Date
+                     * 获取Date.
+                     * @return DataTime Date.
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Date
-                     * @param _dataTime Date
+                     * 设置Date.
+                     * @param _dataTime Date.
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name
-                     * @return MNPName Mini program name
+                     * 获取Mini program name.
+                     * @return MNPName Mini program name.
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name
-                     * @param _mNPName Mini program name
+                     * 设置Mini program name.
+                     * @param _mNPName Mini program name.
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program type
-                     * @return MNPType Mini program type
+                     * 获取Mini program category.
+                     * @return MNPType Mini program category.
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置Mini program type
-                     * @param _mNPType Mini program type
+                     * 设置Mini program category.
+                     * @param _mNPType Mini program category.
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Estimated revenue
-                     * @return EstimatedEarnings Estimated revenue
+                     * 获取Estimated revenue.
+                     * @return EstimatedEarnings Estimated revenue.
                      * 
                      */
                     std::string GetEstimatedEarnings() const;
 
                     /**
-                     * 设置Estimated revenue
-                     * @param _estimatedEarnings Estimated revenue
+                     * 设置Estimated revenue.
+                     * @param _estimatedEarnings Estimated revenue.
                      * 
                      */
                     void SetEstimatedEarnings(const std::string& _estimatedEarnings);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EstimatedEarningsHasBeenSet() const;
 
                     /**
-                     * 获取Requests
-                     * @return RequestsNumber Requests
+                     * 获取Number of requests.
+                     * @return RequestsNumber Number of requests.
                      * 
                      */
                     int64_t GetRequestsNumber() const;
 
                     /**
-                     * 设置Requests
-                     * @param _requestsNumber Requests
+                     * 设置Number of requests.
+                     * @param _requestsNumber Number of requests.
                      * 
                      */
                     void SetRequestsNumber(const int64_t& _requestsNumber);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RequestsNumberHasBeenSet() const;
 
                     /**
-                     * 获取Impressions
-                     * @return Impressions Impressions
+                     * 获取Number of impressions.
+                     * @return Impressions Number of impressions.
                      * 
                      */
                     int64_t GetImpressions() const;
 
                     /**
-                     * 设置Impressions
-                     * @param _impressions Impressions
+                     * 设置Number of impressions.
+                     * @param _impressions Number of impressions.
                      * 
                      */
                     void SetImpressions(const int64_t& _impressions);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ImpressionsHasBeenSet() const;
 
                     /**
-                     * 获取Effective Cost Per Mille
-                     * @return ECPM Effective Cost Per Mille
+                     * 获取eCPM (effective cost per mille).
+                     * @return ECPM eCPM (effective cost per mille).
                      * 
                      */
                     std::string GetECPM() const;
 
                     /**
-                     * 设置Effective Cost Per Mille
-                     * @param _eCPM Effective Cost Per Mille
+                     * 设置eCPM (effective cost per mille).
+                     * @param _eCPM eCPM (effective cost per mille).
                      * 
                      */
                     void SetECPM(const std::string& _eCPM);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ECPMHasBeenSet() const;
 
                     /**
-                     * 获取Taps
-                     * @return ClicksNumber Taps
+                     * 获取Number of taps.
+                     * @return ClicksNumber Number of taps.
                      * 
                      */
                     int64_t GetClicksNumber() const;
 
                     /**
-                     * 设置Taps
-                     * @param _clicksNumber Taps
+                     * 设置Number of taps.
+                     * @param _clicksNumber Number of taps.
                      * 
                      */
                     void SetClicksNumber(const int64_t& _clicksNumber);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Date
+                     * Date.
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Mini program name
+                     * Mini program name.
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program type
+                     * Mini program category.
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Estimated revenue
+                     * Estimated revenue.
                      */
                     std::string m_estimatedEarnings;
                     bool m_estimatedEarningsHasBeenSet;
 
                     /**
-                     * Requests
+                     * Number of requests.
                      */
                     int64_t m_requestsNumber;
                     bool m_requestsNumberHasBeenSet;
 
                     /**
-                     * Impressions
+                     * Number of impressions.
                      */
                     int64_t m_impressions;
                     bool m_impressionsHasBeenSet;
 
                     /**
-                     * Effective Cost Per Mille
+                     * eCPM (effective cost per mille).
                      */
                     std::string m_eCPM;
                     bool m_eCPMHasBeenSet;
 
                     /**
-                     * Taps
+                     * Number of taps.
                      */
                     int64_t m_clicksNumber;
                     bool m_clicksNumberHasBeenSet;

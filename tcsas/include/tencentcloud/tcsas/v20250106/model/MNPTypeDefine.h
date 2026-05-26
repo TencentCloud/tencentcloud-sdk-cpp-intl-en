@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini program category information
+                * Mini program category information.
                 */
                 class MNPTypeDefine : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the mini program category name.
-                     * @return TypeName Specifies the mini program category name.
+                     * 获取Mini program category name.
+                     * @return TypeName Mini program category name.
                      * 
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Specifies the mini program category name.
-                     * @param _typeName Specifies the mini program category name.
+                     * 设置Mini program category name.
+                     * @param _typeName Mini program category name.
                      * 
                      */
                     void SetTypeName(const std::string& _typeName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program category value.
-                     * @return TypeValue Mini program category value.
+                     * 获取Mini program category values.
+                     * @return TypeValue Mini program category values.
                      * 
                      */
                     std::vector<std::string> GetTypeValue() const;
 
                     /**
-                     * 设置Mini program category value.
-                     * @param _typeValue Mini program category value.
+                     * 设置Mini program category values.
+                     * @param _typeValue Mini program category values.
                      * 
                      */
                     void SetTypeValue(const std::vector<std::string>& _typeValue);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TypeIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creator
-                     * @return CreateUser Creator
+                     * 获取Creator.
+                     * @return CreateUser Creator.
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator
-                     * @param _createUser Creator
+                     * 设置Creator.
+                     * @param _createUser Creator.
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether it is a system category.
-                     * @return IsSystem Indicates whether it is a system category.
+                     * 获取Whether it is a system category.
+                     * @return IsSystem Whether it is a system category.
                      * 
                      */
                     bool GetIsSystem() const;
 
                     /**
-                     * 设置Indicates whether it is a system category.
-                     * @param _isSystem Indicates whether it is a system category.
+                     * 设置Whether it is a system category.
+                     * @param _isSystem Whether it is a system category.
                      * 
                      */
                     void SetIsSystem(const bool& _isSystem);
@@ -175,13 +175,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the mini program category name.
+                     * Mini program category name.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
 
                     /**
-                     * Mini program category value.
+                     * Mini program category values.
                      */
                     std::vector<std::string> m_typeValue;
                     bool m_typeValueHasBeenSet;
@@ -193,19 +193,19 @@ namespace TencentCloud
                     bool m_typeIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     int64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Creator
+                     * Creator.
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Indicates whether it is a system category.
+                     * Whether it is a system category.
                      */
                     bool m_isSystem;
                     bool m_isSystemHasBeenSet;
