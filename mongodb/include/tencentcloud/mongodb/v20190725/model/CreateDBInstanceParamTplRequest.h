@@ -65,7 +65,7 @@ namespace TencentCloud
                     bool TplNameHasBeenSet() const;
 
                     /**
-                     * 获取Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1).
+                     * 获取Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701).
 - MONGO_36_WT: Version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: Version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: Version of the MongoDB 4.2 WiredTiger storage engine.
@@ -74,7 +74,7 @@ namespace TencentCloud
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
 - MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
-                     * @return MongoVersion Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1).
+                     * @return MongoVersion Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701).
 - MONGO_36_WT: Version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: Version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: Version of the MongoDB 4.2 WiredTiger storage engine.
@@ -88,7 +88,7 @@ namespace TencentCloud
                     std::string GetMongoVersion() const;
 
                     /**
-                     * 设置Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1).
+                     * 设置Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701).
 - MONGO_36_WT: Version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: Version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: Version of the MongoDB 4.2 WiredTiger storage engine.
@@ -97,7 +97,7 @@ namespace TencentCloud
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
 - MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
-                     * @param _mongoVersion Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1).
+                     * @param _mongoVersion Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701).
 - MONGO_36_WT: Version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: Version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: Version of the MongoDB 4.2 WiredTiger storage engine.
@@ -226,7 +226,7 @@ namespace TencentCloud
                     bool m_tplNameHasBeenSet;
 
                     /**
-                     * Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1).
+                     * Template version number. This field is required when **MirrorTplId** is empty. For the purchasable versions supported by the parameter template, use the interface [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701).
 - MONGO_36_WT: Version of the MongoDB 3.6 WiredTiger storage engine.
 - MONGO_40_WT: Version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: Version of the MongoDB 4.2 WiredTiger storage engine.
