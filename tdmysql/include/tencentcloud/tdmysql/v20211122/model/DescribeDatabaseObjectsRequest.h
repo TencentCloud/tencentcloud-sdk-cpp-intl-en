@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID, for example: tdsql3-42f40429.
-                     * @return InstanceId Instance ID, for example: tdsql3-42f40429.
+                     * 获取<p>Instance ID, such as tdsql3-42f40429.</p>
+                     * @return InstanceId <p>Instance ID, such as tdsql3-42f40429.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, for example: tdsql3-42f40429.
-                     * @param _instanceId Instance ID, for example: tdsql3-42f40429.
+                     * 设置<p>Instance ID, such as tdsql3-42f40429.</p>
+                     * @param _instanceId <p>Instance ID, such as tdsql3-42f40429.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database name, obtained via the DescribeDatabases api.
-                     * @return DbName Database name, obtained via the DescribeDatabases api.
+                     * 获取<p>Database name, obtained via the DescribeDatabases API.</p>
+                     * @return DbName <p>Database name, obtained via the DescribeDatabases API.</p>
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Database name, obtained via the DescribeDatabases api.
-                     * @param _dbName Database name, obtained via the DescribeDatabases api.
+                     * 设置<p>Database name, obtained via the DescribeDatabases API.</p>
+                     * @param _dbName <p>Database name, obtained via the DescribeDatabases API.</p>
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -84,19 +84,100 @@ namespace TencentCloud
                      */
                     bool DbNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Pagination index</p>
+                     * @return Offset <p>Pagination index</p>
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置<p>Pagination index</p>
+                     * @param _offset <p>Pagination index</p>
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Number of items per page</p>
+                     * @return Limit <p>Number of items per page</p>
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置<p>Number of items per page</p>
+                     * @param _limit <p>Number of items per page</p>
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Table name matching expression</p>
+                     * @return TableRegexp <p>Table name matching expression</p>
+                     * 
+                     */
+                    std::string GetTableRegexp() const;
+
+                    /**
+                     * 设置<p>Table name matching expression</p>
+                     * @param _tableRegexp <p>Table name matching expression</p>
+                     * 
+                     */
+                    void SetTableRegexp(const std::string& _tableRegexp);
+
+                    /**
+                     * 判断参数 TableRegexp 是否已赋值
+                     * @return TableRegexp 是否已赋值
+                     * 
+                     */
+                    bool TableRegexpHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID, for example: tdsql3-42f40429.
+                     * <p>Instance ID, such as tdsql3-42f40429.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database name, obtained via the DescribeDatabases api.
+                     * <p>Database name, obtained via the DescribeDatabases API.</p>
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
+
+                    /**
+                     * <p>Pagination index</p>
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * <p>Number of items per page</p>
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * <p>Table name matching expression</p>
+                     */
+                    std::string m_tableRegexp;
+                    bool m_tableRegexpHasBeenSet;
 
                 };
             }

@@ -77,6 +77,8 @@
 #include <tencentcloud/dlc/v20210125/model/CreateTasksResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateUserRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateUserResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateUserRoleRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateUserRoleResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateWorkGroupRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateWorkGroupResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DeleteCHDFSBindingProductRequest.h>
@@ -336,6 +338,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateUserResponse> CreateUserOutcome;
                 typedef std::future<CreateUserOutcome> CreateUserOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateUserRequest&, CreateUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateUserRoleResponse> CreateUserRoleOutcome;
+                typedef std::future<CreateUserRoleOutcome> CreateUserRoleOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateUserRoleRequest&, CreateUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUserRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateWorkGroupResponse> CreateWorkGroupOutcome;
                 typedef std::future<CreateWorkGroupOutcome> CreateWorkGroupOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateWorkGroupRequest&, CreateWorkGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWorkGroupAsyncHandler;
@@ -827,6 +832,15 @@ namespace TencentCloud
                 CreateUserOutcome CreateUser(const Model::CreateUserRequest &request);
                 void CreateUserAsync(const Model::CreateUserRequest& request, const CreateUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateUserOutcomeCallable CreateUserCallable(const Model::CreateUserRequest& request);
+
+                /**
+                 *This API is used to create a user role.
+                 * @param req CreateUserRoleRequest
+                 * @return CreateUserRoleOutcome
+                 */
+                CreateUserRoleOutcome CreateUserRole(const Model::CreateUserRoleRequest &request);
+                void CreateUserRoleAsync(const Model::CreateUserRoleRequest& request, const CreateUserRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateUserRoleOutcomeCallable CreateUserRoleCallable(const Model::CreateUserRoleRequest& request);
 
                 /**
                  *This API is used to create working groups.

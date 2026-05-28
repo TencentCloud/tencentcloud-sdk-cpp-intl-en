@@ -57,6 +57,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerFilterRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerFilterResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherUsageDetailsRequest.h>
@@ -176,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerInfoResponse> DescribeCustomerInfoOutcome;
                 typedef std::future<DescribeCustomerInfoOutcome> DescribeCustomerInfoOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerInfoRequest&, DescribeCustomerInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerOwnCostExplorerFilterResponse> DescribeCustomerOwnCostExplorerFilterOutcome;
+                typedef std::future<DescribeCustomerOwnCostExplorerFilterOutcome> DescribeCustomerOwnCostExplorerFilterOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnCostExplorerFilterRequest&, DescribeCustomerOwnCostExplorerFilterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnCostExplorerFilterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerOwnVoucherListResponse> DescribeCustomerOwnVoucherListOutcome;
                 typedef std::future<DescribeCustomerOwnVoucherListOutcome> DescribeCustomerOwnVoucherListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnVoucherListRequest&, DescribeCustomerOwnVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnVoucherListAsyncHandler;
@@ -445,6 +450,15 @@ Invocation roles: reseller, first-level distributor.
                 DescribeCustomerInfoOutcome DescribeCustomerInfo(const Model::DescribeCustomerInfoRequest &request);
                 void DescribeCustomerInfoAsync(const Model::DescribeCustomerInfoRequest& request, const DescribeCustomerInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerInfoOutcomeCallable DescribeCustomerInfoCallable(const Model::DescribeCustomerInfoRequest& request);
+
+                /**
+                 *Cost analysis API advanced filtering
+                 * @param req DescribeCustomerOwnCostExplorerFilterRequest
+                 * @return DescribeCustomerOwnCostExplorerFilterOutcome
+                 */
+                DescribeCustomerOwnCostExplorerFilterOutcome DescribeCustomerOwnCostExplorerFilter(const Model::DescribeCustomerOwnCostExplorerFilterRequest &request);
+                void DescribeCustomerOwnCostExplorerFilterAsync(const Model::DescribeCustomerOwnCostExplorerFilterRequest& request, const DescribeCustomerOwnCostExplorerFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerOwnCostExplorerFilterOutcomeCallable DescribeCustomerOwnCostExplorerFilterCallable(const Model::DescribeCustomerOwnCostExplorerFilterRequest& request);
 
                 /**
                  *This API is used to query the voucher list by Customer. 

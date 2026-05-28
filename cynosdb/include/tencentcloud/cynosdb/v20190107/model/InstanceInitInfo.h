@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance CPU
-                     * @return Cpu Instance CPU
+                     * 获取<p>Instance cpu</p>
+                     * @return Cpu <p>Instance cpu</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Instance CPU
-                     * @param _cpu Instance CPU
+                     * 设置<p>Instance cpu</p>
+                     * @param _cpu <p>Instance cpu</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory
-                     * @return Memory Instance memory
+                     * 获取<p>Instance memory</p>
+                     * @return Memory <p>Instance memory</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory
-                     * @param _memory Instance memory
+                     * 设置<p>Instance memory</p>
+                     * @param _memory <p>Instance memory</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values:`rw`, `ro`.
-                     * @return InstanceType Instance type. Valid values:`rw`, `ro`.
+                     * 获取<p>Instance type rw/ro</p>
+                     * @return InstanceType <p>Instance type rw/ro</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values:`rw`, `ro`.
-                     * @param _instanceType Instance type. Valid values:`rw`, `ro`.
+                     * 设置<p>Instance type rw/ro</p>
+                     * @param _instanceType <p>Instance type rw/ro</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of the instances. Value range: 1-15.
-                     * @return InstanceCount Number of the instances. Value range: 1-15.
+                     * 获取<p>Number of instances, range [1,15]</p>
+                     * @return InstanceCount <p>Number of instances, range [1,15]</p>
                      * 
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of the instances. Value range: 1-15.
-                     * @param _instanceCount Number of the instances. Value range: 1-15.
+                     * 设置<p>Number of instances, range [1,15]</p>
+                     * @param _instanceCount <p>Number of instances, range [1,15]</p>
                      * 
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Minimum number of serverless instances. Value range: 1-15.
-                     * @return MinRoCount Minimum number of serverless instances. Value range: 1-15.
+                     * 获取<p>Minimum count of Serverless instance, range [1,15]</p>
+                     * @return MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
                      * 
                      */
                     int64_t GetMinRoCount() const;
 
                     /**
-                     * 设置Minimum number of serverless instances. Value range: 1-15.
-                     * @param _minRoCount Minimum number of serverless instances. Value range: 1-15.
+                     * 设置<p>Minimum count of Serverless instance, range [1,15]</p>
+                     * @param _minRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
                      * 
                      */
                     void SetMinRoCount(const int64_t& _minRoCount);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MinRoCountHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of serverless instances. Value range: 1-15.
-                     * @return MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+                     * 获取<p>Maximum count of Serverless instances, range [1,15]</p>
+                     * @return MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
                      * 
                      */
                     int64_t GetMaxRoCount() const;
 
                     /**
-                     * 设置Maximum number of serverless instances. Value range: 1-15.
-                     * @param _maxRoCount Maximum number of serverless instances. Value range: 1-15.
+                     * 设置<p>Maximum count of Serverless instances, range [1,15]</p>
+                     * @param _maxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
                      * 
                      */
                     void SetMaxRoCount(const int64_t& _maxRoCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MaxRoCountHasBeenSet() const;
 
                     /**
-                     * 获取Minimum specifications for serverless instance
-                     * @return MinRoCpu Minimum specifications for serverless instance
+                     * 获取<p>Minimum specification of Serverless instance</p>
+                     * @return MinRoCpu <p>Minimum specification of Serverless instance</p>
                      * 
                      */
                     double GetMinRoCpu() const;
 
                     /**
-                     * 设置Minimum specifications for serverless instance
-                     * @param _minRoCpu Minimum specifications for serverless instance
+                     * 设置<p>Minimum specification of Serverless instance</p>
+                     * @param _minRoCpu <p>Minimum specification of Serverless instance</p>
                      * 
                      */
                     void SetMinRoCpu(const double& _minRoCpu);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MinRoCpuHasBeenSet() const;
 
                     /**
-                     * 获取Maximum specifications for serverless instance
-                     * @return MaxRoCpu Maximum specifications for serverless instance
+                     * 获取<p>Maximum specification of Serverless instance</p>
+                     * @return MaxRoCpu <p>Maximum specification of Serverless instance</p>
                      * 
                      */
                     double GetMaxRoCpu() const;
 
                     /**
-                     * 设置Maximum specifications for serverless instance
-                     * @param _maxRoCpu Maximum specifications for serverless instance
+                     * 设置<p>Maximum specification of Serverless instance</p>
+                     * @param _maxRoCpu <p>Maximum specification of Serverless instance</p>
                      * 
                      */
                     void SetMaxRoCpu(const double& _maxRoCpu);
@@ -215,23 +215,15 @@ namespace TencentCloud
                     bool MaxRoCpuHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
-                     * @return DeviceType Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+                     * 获取<p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+                     * @return DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
-                     * @param _deviceType Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+                     * 设置<p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+                     * @param _deviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -246,57 +238,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance CPU
+                     * <p>Instance cpu</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Instance memory
+                     * <p>Instance memory</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance type. Valid values:`rw`, `ro`.
+                     * <p>Instance type rw/ro</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Number of the instances. Value range: 1-15.
+                     * <p>Number of instances, range [1,15]</p>
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Minimum number of serverless instances. Value range: 1-15.
+                     * <p>Minimum count of Serverless instance, range [1,15]</p>
                      */
                     int64_t m_minRoCount;
                     bool m_minRoCountHasBeenSet;
 
                     /**
-                     * Maximum number of serverless instances. Value range: 1-15.
+                     * <p>Maximum count of Serverless instances, range [1,15]</p>
                      */
                     int64_t m_maxRoCount;
                     bool m_maxRoCountHasBeenSet;
 
                     /**
-                     * Minimum specifications for serverless instance
+                     * <p>Minimum specification of Serverless instance</p>
                      */
                     double m_minRoCpu;
                     bool m_minRoCpuHasBeenSet;
 
                     /**
-                     * Maximum specifications for serverless instance
+                     * <p>Maximum specification of Serverless instance</p>
                      */
                     double m_maxRoCpu;
                     bool m_maxRoCpuHasBeenSet;
 
                     /**
-                     * Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+                     * <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

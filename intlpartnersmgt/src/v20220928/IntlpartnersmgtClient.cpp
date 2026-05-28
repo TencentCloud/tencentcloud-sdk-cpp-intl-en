@@ -890,6 +890,56 @@ IntlpartnersmgtClient::DescribeCustomerInfoOutcomeCallable IntlpartnersmgtClient
     return prom->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilterOutcome IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilter(const DescribeCustomerOwnCostExplorerFilterRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerOwnCostExplorerFilter");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerOwnCostExplorerFilterResponse rsp = DescribeCustomerOwnCostExplorerFilterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerOwnCostExplorerFilterOutcome(rsp);
+        else
+            return DescribeCustomerOwnCostExplorerFilterOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerOwnCostExplorerFilterOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilterAsync(const DescribeCustomerOwnCostExplorerFilterRequest& request, const DescribeCustomerOwnCostExplorerFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCustomerOwnCostExplorerFilterRequest&;
+    using Resp = DescribeCustomerOwnCostExplorerFilterResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCustomerOwnCostExplorerFilter", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilterOutcomeCallable IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilterCallable(const DescribeCustomerOwnCostExplorerFilterRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCustomerOwnCostExplorerFilterOutcome>>();
+    DescribeCustomerOwnCostExplorerFilterAsync(
+    request,
+    [prom](
+        const IntlpartnersmgtClient*,
+        const DescribeCustomerOwnCostExplorerFilterRequest&,
+        DescribeCustomerOwnCostExplorerFilterOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerOwnVoucherListOutcome IntlpartnersmgtClient::DescribeCustomerOwnVoucherList(const DescribeCustomerOwnVoucherListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerOwnVoucherList");

@@ -62,7 +62,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/PythonSparkImage.h
   include/tencentcloud/dlc/v20210125/model/Task.h
   include/tencentcloud/dlc/v20210125/model/DataEngineConfigInstanceInfo.h
-  include/tencentcloud/dlc/v20210125/model/DetachUserPolicyRequest.h
+  include/tencentcloud/dlc/v20210125/model/CreateUserRoleResponse.h
   include/tencentcloud/dlc/v20210125/model/CrontabResumeSuspendStrategy.h
   include/tencentcloud/dlc/v20210125/model/DescribeQueryResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateCHDFSBindingProductRequest.h
@@ -122,6 +122,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/DescribeTaskStatisticsResponse.h
   include/tencentcloud/dlc/v20210125/model/DeleteUserResponse.h
   include/tencentcloud/dlc/v20210125/model/SortOrder.h
+  include/tencentcloud/dlc/v20210125/model/CreateUserRoleRequest.h
   include/tencentcloud/dlc/v20210125/model/SparkSessionBatchLog.h
   include/tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoRequest.h
   include/tencentcloud/dlc/v20210125/model/SmartOptimizerWrittenPolicy.h
@@ -242,6 +243,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/SmartPolicyBaseInfo.h
   include/tencentcloud/dlc/v20210125/model/CreateStoreLocationRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeThirdPartyAccessUserResponse.h
+  include/tencentcloud/dlc/v20210125/model/TaskResultInfo.h
   include/tencentcloud/dlc/v20210125/model/CreateResultDownloadRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeLakeFsInfoResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeJobsRequest.h
@@ -270,7 +272,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/NetworkConnection.h
   include/tencentcloud/dlc/v20210125/model/CreateTasksRequest.h
   include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h
-  include/tencentcloud/dlc/v20210125/model/TaskResultInfo.h
+  include/tencentcloud/dlc/v20210125/model/DetachUserPolicyRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsResponse.h
   include/tencentcloud/dlc/v20210125/model/DeleteThirdPartyAccessUserResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksResponse.h
@@ -371,7 +373,7 @@ set(dlc_src
   src/v20210125/model/PythonSparkImage.cpp
   src/v20210125/model/Task.cpp
   src/v20210125/model/DataEngineConfigInstanceInfo.cpp
-  src/v20210125/model/DetachUserPolicyRequest.cpp
+  src/v20210125/model/CreateUserRoleResponse.cpp
   src/v20210125/model/CrontabResumeSuspendStrategy.cpp
   src/v20210125/model/DescribeQueryResponse.cpp
   src/v20210125/model/CreateCHDFSBindingProductRequest.cpp
@@ -431,6 +433,7 @@ set(dlc_src
   src/v20210125/model/DescribeTaskStatisticsResponse.cpp
   src/v20210125/model/DeleteUserResponse.cpp
   src/v20210125/model/SortOrder.cpp
+  src/v20210125/model/CreateUserRoleRequest.cpp
   src/v20210125/model/SparkSessionBatchLog.cpp
   src/v20210125/model/DescribeEngineUsageInfoRequest.cpp
   src/v20210125/model/SmartOptimizerWrittenPolicy.cpp
@@ -551,6 +554,7 @@ set(dlc_src
   src/v20210125/model/SmartPolicyBaseInfo.cpp
   src/v20210125/model/CreateStoreLocationRequest.cpp
   src/v20210125/model/DescribeThirdPartyAccessUserResponse.cpp
+  src/v20210125/model/TaskResultInfo.cpp
   src/v20210125/model/CreateResultDownloadRequest.cpp
   src/v20210125/model/DescribeLakeFsInfoResponse.cpp
   src/v20210125/model/DescribeJobsRequest.cpp
@@ -579,7 +583,7 @@ set(dlc_src
   src/v20210125/model/NetworkConnection.cpp
   src/v20210125/model/CreateTasksRequest.cpp
   src/v20210125/model/SuspendResumeDataEngineRequest.cpp
-  src/v20210125/model/TaskResultInfo.cpp
+  src/v20210125/model/DetachUserPolicyRequest.cpp
   src/v20210125/model/DescribeSparkAppJobsResponse.cpp
   src/v20210125/model/DeleteThirdPartyAccessUserResponse.cpp
   src/v20210125/model/DescribeSparkAppTasksResponse.cpp

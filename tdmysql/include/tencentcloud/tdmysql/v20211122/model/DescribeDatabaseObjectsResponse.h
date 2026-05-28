@@ -48,8 +48,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Passthrough input parameter.
-                     * @return InstanceId Passthrough input parameter.
+                     * 获取<p>Passthrough input parameter.</p>
+                     * @return InstanceId <p>Passthrough input parameter.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -62,8 +62,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database name.
-                     * @return DbName Database name.
+                     * 获取<p>Database name.</p>
+                     * @return DbName <p>Database name.</p>
                      * 
                      */
                     std::string GetDbName() const;
@@ -76,9 +76,9 @@ namespace TencentCloud
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Table list.
+                     * 获取<p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tables Table list.
+                     * @return Tables <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -92,9 +92,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TablesHasBeenSet() const;
 
                     /**
-                     * 获取View list.
+                     * 获取<p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Views View list.
+                     * @return Views <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -108,9 +108,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewsHasBeenSet() const;
 
                     /**
-                     * 获取Stored procedure list.
+                     * 获取<p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Procs Stored procedure list.
+                     * @return Procs <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -124,9 +124,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcsHasBeenSet() const;
 
                     /**
-                     * 获取Function list.
+                     * 获取<p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Funcs Function list.
+                     * @return Funcs <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -142,40 +142,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Passthrough input parameter.
+                     * <p>Passthrough input parameter.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database name.
+                     * <p>Database name.</p>
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Table list.
+                     * <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DatabaseTable> m_tables;
                     bool m_tablesHasBeenSet;
 
                     /**
-                     * View list.
+                     * <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DatabaseView> m_views;
                     bool m_viewsHasBeenSet;
 
                     /**
-                     * Stored procedure list.
+                     * <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DatabaseProcedure> m_procs;
                     bool m_procsHasBeenSet;
 
                     /**
-                     * Function list.
+                     * <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DatabaseFunction> m_funcs;

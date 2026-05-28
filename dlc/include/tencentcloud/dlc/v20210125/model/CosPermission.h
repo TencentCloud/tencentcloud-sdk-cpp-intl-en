@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CosPath Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取COS path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CosPath COS path.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCosPath() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cosPath Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置COS path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cosPath COS path.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCosPath(const std::string& _cosPath);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool CosPathHasBeenSet() const;
 
                     /**
-                     * 获取Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Permission ["read", "write"]
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Permissions Permission ["read", "write"]
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPermissions() const;
 
                     /**
-                     * 设置Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _permissions Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Permission ["read", "write"]
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _permissions Permission ["read", "write"]
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPermissions(const std::vector<std::string>& _permissions);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * COS path.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cosPath;
                     bool m_cosPathHasBeenSet;
 
                     /**
-                     * Note: This field may return null, indicating that no valid values can be obtained.
+                     * Permission ["read", "write"]
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_permissions;
                     bool m_permissionsHasBeenSet;

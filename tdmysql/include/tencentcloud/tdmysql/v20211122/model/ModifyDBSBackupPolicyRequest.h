@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup policy.
-                     * @return BackupPolicy Backup policy.
+                     * 获取<p>Backup policy</p>
+                     * @return BackupPolicy <p>Backup policy</p>
                      * 
                      */
                     BackupPolicyModelInput GetBackupPolicy() const;
 
                     /**
-                     * 设置Backup policy.
-                     * @param _backupPolicy Backup policy.
+                     * 设置<p>Backup policy</p>
+                     * @param _backupPolicy <p>Backup policy</p>
                      * 
                      */
                     void SetBackupPolicy(const BackupPolicyModelInput& _backupPolicy);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool BackupPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backup policy.
+                     * <p>Backup policy</p>
                      */
                     BackupPolicyModelInput m_backupPolicy;
                     bool m_backupPolicyHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

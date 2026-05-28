@@ -48,36 +48,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * @return ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * 
+                     * 获取<p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+                     * @return ProxyCount <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+                     * @deprecated
                      */
                     int64_t GetProxyCount() const;
 
                     /**
-                     * 设置Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * @param _proxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-                     * 
+                     * 设置<p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+                     * @param _proxyCount <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+                     * @deprecated
                      */
                     void SetProxyCount(const int64_t& _proxyCount);
 
                     /**
                      * 判断参数 ProxyCount 是否已赋值
                      * @return ProxyCount 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ProxyCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return Cpu Number of CPU cores
+                     * 获取<p>cpu cores</p>
+                     * @return Cpu <p>cpu cores</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cpu Number of CPU cores
+                     * 设置<p>cpu cores</p>
+                     * @param _cpu <p>cpu cores</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory.
-                     * @return Mem Memory.
+                     * 获取<p>Memory</p>
+                     * @return Mem <p>Memory</p>
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory.
-                     * @param _mem Memory.
+                     * 设置<p>Memory</p>
+                     * @param _mem <p>Memory</p>
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool type: SessionConnectionPool (session-level connection pool).
-                     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool).
+                     * 获取<p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+                     * @return ConnectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Connection pool type: SessionConnectionPool (session-level connection pool).
-                     * @param _connectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool).
+                     * 设置<p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+                     * @param _connectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
-                     * @return OpenConnectionPool Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+                     * 获取<p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+                     * @return OpenConnectionPool <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
-                     * @param _openConnectionPool Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+                     * 设置<p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+                     * @param _openConnectionPool <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool OpenConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool threshold. measurement unit (seconds).
-                     * @return ConnectionPoolTimeOut Connection pool threshold. measurement unit (seconds).
+                     * 获取<p>Connection pool threshold: Measurement unit (seconds)</p>
+                     * @return ConnectionPoolTimeOut <p>Connection pool threshold: Measurement unit (seconds)</p>
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Connection pool threshold. measurement unit (seconds).
-                     * @param _connectionPoolTimeOut Connection pool threshold. measurement unit (seconds).
+                     * 设置<p>Connection pool threshold: Measurement unit (seconds)</p>
+                     * @param _connectionPoolTimeOut <p>Connection pool threshold: Measurement unit (seconds)</p>
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Description.
-                     * @return Description Description.
+                     * 获取<p>description</p>
+                     * @return Description <p>description</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description.
-                     * @param _description Description.
+                     * 设置<p>description</p>
+                     * @param _description <p>description</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-                     * @return ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * 获取<p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
+                     * @return ProxyZones <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
                      * 
                      */
                     std::vector<ProxyZone> GetProxyZones() const;
 
                     /**
-                     * 设置Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-                     * @param _proxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * 设置<p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
+                     * @param _proxyZones <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
                      * 
                      */
                     void SetProxyZones(const std::vector<ProxyZone>& _proxyZones);
@@ -218,49 +218,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+                     * <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
                      */
                     int64_t m_proxyCount;
                     bool m_proxyCountHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>cpu cores</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory.
+                     * <p>Memory</p>
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Connection pool type: SessionConnectionPool (session-level connection pool).
+                     * <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+                     * <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;
 
                     /**
-                     * Connection pool threshold. measurement unit (seconds).
+                     * <p>Connection pool threshold: Measurement unit (seconds)</p>
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
 
                     /**
-                     * Description.
+                     * <p>description</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+                     * <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;

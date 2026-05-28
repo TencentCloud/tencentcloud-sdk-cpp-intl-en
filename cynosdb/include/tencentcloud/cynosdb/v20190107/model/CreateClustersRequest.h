@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取<p>VPC network ID</p>
+                     * @return VpcId <p>VPC network ID</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置<p>VPC network ID</p>
+                     * @param _vpcId <p>VPC network ID</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取<p>Subnet ID</p>
+                     * @return SubnetId <p>Subnet ID</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置<p>Subnet ID</p>
+                     * @param _subnetId <p>Subnet ID</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values: 
-<li> MYSQL </li>
-                     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 获取<p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
+                     * @return DbType <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type. Valid values: 
-<li> MYSQL </li>
-                     * @param _dbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 设置<p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
+                     * @param _dbType <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -135,19 +131,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
-                     * @return DbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+                     * 获取<p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
+                     * @return DbVersion <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
-                     * @param _dbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+                     * 设置<p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
+                     * @param _dbVersion <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -160,15 +152,15 @@ namespace TencentCloud
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取<p>project-ID</p>
+                     * @return ProjectId <p>project-ID</p>
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param _projectId Project ID.
+                     * 设置<p>project-ID</p>
+                     * @param _projectId <p>project-ID</p>
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -181,19 +173,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
-                     * @return Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+                     * 获取<p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
+                     * @return Cpu <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
-                     * @param _cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+                     * 设置<p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
+                     * @param _cpu <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -206,19 +194,15 @@ Number of CPU cores of normal instance
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
-                     * @return Memory It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+                     * 获取<p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
+                     * @return Memory <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
-                     * @param _memory It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+                     * 设置<p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
+                     * @param _memory <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -231,15 +215,15 @@ Memory of a non-serverless instance in GB
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
-                     * @return InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * 获取<p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
+                     * @return InstanceCount <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
                      * 
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
-                     * @param _instanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * 设置<p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
+                     * @param _instanceCount <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
                      * 
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
@@ -252,19 +236,15 @@ Memory of a non-serverless instance in GB
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated.
-Storage capacity in GB
-                     * @return Storage This parameter has been deprecated.
-Storage capacity in GB
+                     * 获取<p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
+                     * @return Storage <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置This parameter has been deprecated.
-Storage capacity in GB
-                     * @param _storage This parameter has been deprecated.
-Storage capacity in GB
+                     * 设置<p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
+                     * @param _storage <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -277,15 +257,15 @@ Storage capacity in GB
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
-                     * @return ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+                     * 获取<p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
+                     * @return ClusterName <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
-                     * @param _clusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+                     * 设置<p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
+                     * @param _clusterName <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -298,15 +278,15 @@ Storage capacity in GB
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
-                     * @return AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+                     * 获取<p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+                     * @return AdminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
                      * 
                      */
                     std::string GetAdminPassword() const;
 
                     /**
-                     * 设置Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
-                     * @param _adminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+                     * 设置<p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+                     * @param _adminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
                      * 
                      */
                     void SetAdminPassword(const std::string& _adminPassword);
@@ -319,15 +299,15 @@ Storage capacity in GB
                     bool AdminPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Port. Valid range: [0, 65535). Default value: 3306
-                     * @return Port Port. Valid range: [0, 65535). Default value: 3306
+                     * 获取<p>Port, default 3306, in the range of [0, 65535)</p>
+                     * @return Port <p>Port, default 3306, in the range of [0, 65535)</p>
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port. Valid range: [0, 65535). Default value: 3306
-                     * @param _port Port. Valid range: [0, 65535). Default value: 3306
+                     * 设置<p>Port, default 3306, in the range of [0, 65535)</p>
+                     * @param _port <p>Port, default 3306, in the range of [0, 65535)</p>
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -340,23 +320,15 @@ Storage capacity in GB
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
-                     * @return PayMode Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+                     * 获取<p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
+                     * @return PayMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
-                     * @param _payMode Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+                     * 设置<p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
+                     * @param _payMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -369,15 +341,15 @@ Value is 1, which means yearly/monthly subscription.
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Number of purchased clusters. Valid range: [1,50]. Default value: 1
-                     * @return Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
+                     * 获取<p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
+                     * @return Count <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Number of purchased clusters. Valid range: [1,50]. Default value: 1
-                     * @param _count Number of purchased clusters. Valid range: [1,50]. Default value: 1
+                     * 设置<p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
+                     * @param _count <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -390,27 +362,15 @@ Value is 1, which means yearly/monthly subscription.
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
-                     * @return RollbackStrategy Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+                     * 获取<p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
+                     * @return RollbackStrategy <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
                      * 
                      */
                     std::string GetRollbackStrategy() const;
 
                     /**
-                     * 设置Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
-                     * @param _rollbackStrategy Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+                     * 设置<p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
+                     * @param _rollbackStrategy <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
                      * 
                      */
                     void SetRollbackStrategy(const std::string& _rollbackStrategy);
@@ -423,15 +383,15 @@ timeRollback: rollback by time point
                     bool RollbackStrategyHasBeenSet() const;
 
                     /**
-                     * 获取`snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
-                     * @return RollbackId `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+                     * 获取<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      * 
                      */
                     uint64_t GetRollbackId() const;
 
                     /**
-                     * 设置`snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
-                     * @param _rollbackId `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+                     * 设置<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * @param _rollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      * 
                      */
                     void SetRollbackId(const uint64_t& _rollbackId);
@@ -444,15 +404,15 @@ timeRollback: rollback by time point
                     bool RollbackIdHasBeenSet() const;
 
                     /**
-                     * 获取The source cluster ID passed in during rollback to find the source `poolId`
-                     * @return OriginalClusterId The source cluster ID passed in during rollback to find the source `poolId`
+                     * 获取<p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     std::string GetOriginalClusterId() const;
 
                     /**
-                     * 设置The source cluster ID passed in during rollback to find the source `poolId`
-                     * @param _originalClusterId The source cluster ID passed in during rollback to find the source `poolId`
+                     * 设置<p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * @param _originalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     void SetOriginalClusterId(const std::string& _originalClusterId);
@@ -465,15 +425,15 @@ timeRollback: rollback by time point
                     bool OriginalClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Specified time for time point rollback or snapshot time for snapshot rollback
-                     * @return ExpectTime Specified time for time point rollback or snapshot time for snapshot rollback
+                     * 获取<p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+                     * @return ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      * 
                      */
                     std::string GetExpectTime() const;
 
                     /**
-                     * 设置Specified time for time point rollback or snapshot time for snapshot rollback
-                     * @param _expectTime Specified time for time point rollback or snapshot time for snapshot rollback
+                     * 设置<p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+                     * @param _expectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      * 
                      */
                     void SetExpectTime(const std::string& _expectTime);
@@ -486,19 +446,15 @@ timeRollback: rollback by time point
                     bool ExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated.
-Specified allowed time range for time point rollback
-                     * @return ExpectTimeThresh This parameter has been deprecated.
-Specified allowed time range for time point rollback
+                     * 获取<p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
+                     * @return ExpectTimeThresh <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
                      * 
                      */
                     uint64_t GetExpectTimeThresh() const;
 
                     /**
-                     * 设置This parameter has been deprecated.
-Specified allowed time range for time point rollback
-                     * @param _expectTimeThresh This parameter has been deprecated.
-Specified allowed time range for time point rollback
+                     * 设置<p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
+                     * @param _expectTimeThresh <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
                      * 
                      */
                     void SetExpectTimeThresh(const uint64_t& _expectTimeThresh);
@@ -511,19 +467,15 @@ Specified allowed time range for time point rollback
                     bool ExpectTimeThreshHasBeenSet() const;
 
                     /**
-                     * 获取Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
-                     * @return StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+                     * 获取<p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
+                     * @return StorageLimit <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
-                     * @param _storageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+                     * 设置<p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
+                     * @param _storageLimit <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -536,15 +488,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration of yearly/monthly subscription plan
-                     * @return TimeSpan Purchase duration of yearly/monthly subscription plan
+                     * 获取<p>Annual and monthly subscription duration</p>
+                     * @return TimeSpan <p>Annual and monthly subscription duration</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Purchase duration of yearly/monthly subscription plan
-                     * @param _timeSpan Purchase duration of yearly/monthly subscription plan
+                     * 设置<p>Annual and monthly subscription duration</p>
+                     * @param _timeSpan <p>Annual and monthly subscription duration</p>
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -557,15 +509,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
-                     * @return TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * 获取<p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
+                     * @return TimeUnit <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
-                     * @param _timeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * 设置<p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
+                     * @param _timeUnit <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -578,19 +530,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-                     * @return AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+                     * 获取<p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
+                     * @return AutoRenewFlag <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-                     * @param _autoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+                     * 设置<p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
+                     * @param _autoRenewFlag <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -603,15 +551,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
-                     * @return AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+                     * 获取<p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
+                     * @return AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
-                     * @param _autoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+                     * 设置<p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
+                     * @param _autoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -624,15 +572,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
-                     * @return HaCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+                     * 获取<p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
+                     * @return HaCount <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
                      * 
                      */
                     int64_t GetHaCount() const;
 
                     /**
-                     * 设置Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
-                     * @param _haCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+                     * 设置<p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
+                     * @param _haCount <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
                      * 
                      */
                     void SetHaCount(const int64_t& _haCount);
@@ -645,15 +593,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool HaCountHasBeenSet() const;
 
                     /**
-                     * 获取Order source
-                     * @return OrderSource Order source
+                     * 获取<p>Order source</p>
+                     * @return OrderSource <p>Order source</p>
                      * 
                      */
                     std::string GetOrderSource() const;
 
                     /**
-                     * 设置Order source
-                     * @param _orderSource Order source
+                     * 设置<p>Order source</p>
+                     * @param _orderSource <p>Order source</p>
                      * 
                      */
                     void SetOrderSource(const std::string& _orderSource);
@@ -666,15 +614,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool OrderSourceHasBeenSet() const;
 
                     /**
-                     * 获取Array of tags to be bound to the created cluster
-                     * @return ResourceTags Array of tags to be bound to the created cluster
+                     * 获取<p>tag Array info that should be bound for cluster creation</p>
+                     * @return ResourceTags <p>tag Array info that should be bound for cluster creation</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置Array of tags to be bound to the created cluster
-                     * @param _resourceTags Array of tags to be bound to the created cluster
+                     * 设置<p>tag Array info that should be bound for cluster creation</p>
+                     * @param _resourceTags <p>tag Array info that should be bound for cluster creation</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -687,27 +635,15 @@ If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscripti
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-                     * @return DbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+                     * 获取<p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
+                     * @return DbMode <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-                     * @param _dbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+                     * 设置<p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
+                     * @param _dbMode <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -720,19 +656,15 @@ Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-                     * @return MinCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * 获取<p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * @return MinCpu <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-                     * @param _minCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * 设置<p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * @param _minCpu <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -745,19 +677,15 @@ Minimum number of CPU cores. For the value range, see the returned result of `De
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-                     * @return MaxCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * 获取<p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
+                     * @return MaxCpu <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-                     * @param _maxCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * 设置<p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
+                     * @param _maxCpu <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -770,27 +698,15 @@ Maximum number of CPU cores. For the value range, see the returned result of `De
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
-                     * @return AutoPause This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+                     * 获取<p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
+                     * @return AutoPause <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
                      * 
                      */
                     std::string GetAutoPause() const;
 
                     /**
-                     * 设置This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
-                     * @param _autoPause This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+                     * 设置<p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
+                     * @param _autoPause <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
                      * 
                      */
                     void SetAutoPause(const std::string& _autoPause);
@@ -803,19 +719,15 @@ Default value: yes
                     bool AutoPauseHasBeenSet() const;
 
                     /**
-                     * 获取This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
-                     * @return AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+                     * 获取<p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
+                     * @return AutoPauseDelay <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     int64_t GetAutoPauseDelay() const;
 
                     /**
-                     * 设置This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
-                     * @param _autoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+                     * 设置<p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
+                     * @param _autoPauseDelay <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     void SetAutoPauseDelay(const int64_t& _autoPauseDelay);
@@ -828,23 +740,15 @@ Default value: `600`
                     bool AutoPauseDelayHasBeenSet() const;
 
                     /**
-                     * 获取The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
-                     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+                     * 获取<p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
+                     * @return StoragePayMode <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
-                     * @param _storagePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+                     * 设置<p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
+                     * @param _storagePayMode <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -857,15 +761,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取Array of security group IDs
-                     * @return SecurityGroupIds Array of security group IDs
+                     * 获取<p>Security group id array</p>
+                     * @return SecurityGroupIds <p>Security group id array</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Array of security group IDs
-                     * @param _securityGroupIds Array of security group IDs
+                     * 设置<p>Security group id array</p>
+                     * @param _securityGroupIds <p>Security group id array</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -878,15 +782,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of alarm policy IDs
-                     * @return AlarmPolicyIds Array of alarm policy IDs
+                     * 获取<p>Alarm policy Id array</p>
+                     * @return AlarmPolicyIds <p>Alarm policy Id array</p>
                      * 
                      */
                     std::vector<std::string> GetAlarmPolicyIds() const;
 
                     /**
-                     * 设置Array of alarm policy IDs
-                     * @param _alarmPolicyIds Array of alarm policy IDs
+                     * 设置<p>Alarm policy Id array</p>
+                     * @param _alarmPolicyIds <p>Alarm policy Id array</p>
                      * 
                      */
                     void SetAlarmPolicyIds(const std::vector<std::string>& _alarmPolicyIds);
@@ -899,15 +803,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool AlarmPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-                     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * 获取<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
+                     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
                      * 
                      */
                     std::vector<ParamItem> GetClusterParams() const;
 
                     /**
-                     * 设置Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-                     * @param _clusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * 设置<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
+                     * @param _clusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
                      * 
                      */
                     void SetClusterParams(const std::vector<ParamItem>& _clusterParams);
@@ -920,15 +824,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool ClusterParamsHasBeenSet() const;
 
                     /**
-                     * 获取Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 获取<p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
+                     * @return DealMode <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @param _dealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 设置<p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
+                     * @param _dealMode <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -941,15 +845,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
-                     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+                     * 获取<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
-                     * @param _paramTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+                     * 设置<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * @param _paramTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -962,15 +866,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Multi-AZ address
-                     * @return SlaveZone Multi-AZ address
+                     * 获取<p>Multi-AZ address</p>
+                     * @return SlaveZone <p>Multi-AZ address</p>
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置Multi-AZ address
-                     * @param _slaveZone Multi-AZ address
+                     * 设置<p>Multi-AZ address</p>
+                     * @param _slaveZone <p>Multi-AZ address</p>
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -983,15 +887,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
-                     * @return InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+                     * 获取<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      * 
                      */
                     std::vector<InstanceInitInfo> GetInstanceInitInfos() const;
 
                     /**
-                     * 设置Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
-                     * @param _instanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+                     * 设置<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * @param _instanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      * 
                      */
                     void SetInstanceInitInfos(const std::vector<InstanceInitInfo>& _instanceInitInfos);
@@ -1004,15 +908,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool InstanceInitInfosHasBeenSet() const;
 
                     /**
-                     * 获取Global database unique identifier.
-                     * @return GdnId Global database unique identifier.
+                     * 获取<p>Global database unique ID</p>
+                     * @return GdnId <p>Global database unique ID</p>
                      * 
                      */
                     std::string GetGdnId() const;
 
                     /**
-                     * 设置Global database unique identifier.
-                     * @param _gdnId Global database unique identifier.
+                     * 设置<p>Global database unique ID</p>
+                     * @param _gdnId <p>Global database unique ID</p>
                      * 
                      */
                     void SetGdnId(const std::string& _gdnId);
@@ -1025,15 +929,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool GdnIdHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy configuration.
-                     * @return ProxyConfig Database proxy configuration.
+                     * 获取<p>Database proxy configuration</p>
+                     * @return ProxyConfig <p>Database proxy configuration</p>
                      * 
                      */
                     ProxyConfig GetProxyConfig() const;
 
                     /**
-                     * 设置Database proxy configuration.
-                     * @param _proxyConfig Database proxy configuration.
+                     * 设置<p>Database proxy configuration</p>
+                     * @param _proxyConfig <p>Database proxy configuration</p>
                      * 
                      */
                     void SetProxyConfig(const ProxyConfig& _proxyConfig);
@@ -1046,15 +950,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool ProxyConfigHasBeenSet() const;
 
                     /**
-                     * 获取Automatically archive.
-                     * @return AutoArchive Automatically archive.
+                     * 获取<p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
+                     * @return AutoArchive <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
                      * 
                      */
                     std::string GetAutoArchive() const;
 
                     /**
-                     * 设置Automatically archive.
-                     * @param _autoArchive Automatically archive.
+                     * 设置<p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
+                     * @param _autoArchive <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
                      * 
                      */
                     void SetAutoArchive(const std::string& _autoArchive);
@@ -1067,15 +971,15 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool AutoArchiveHasBeenSet() const;
 
                     /**
-                     * 获取Archiving processing time after pausing.
-                     * @return AutoArchiveDelayHours Archiving processing time after pausing.
+                     * 获取<p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
+                     * @return AutoArchiveDelayHours <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
                      * 
                      */
                     int64_t GetAutoArchiveDelayHours() const;
 
                     /**
-                     * 设置Archiving processing time after pausing.
-                     * @param _autoArchiveDelayHours Archiving processing time after pausing.
+                     * 设置<p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
+                     * @param _autoArchiveDelayHours <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
                      * 
                      */
                     void SetAutoArchiveDelayHours(const int64_t& _autoArchiveDelayHours);
@@ -1088,15 +992,36 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                     bool AutoArchiveDelayHoursHasBeenSet() const;
 
                     /**
-                     * 获取Kernel minor version number.
-                     * @return CynosVersion Kernel minor version number.
+                     * 获取<p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+                     * @return ClusterLevel <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+                     * 
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置<p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+                     * @param _clusterLevel <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+                     * 
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     * 
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Kernel minor version</p>
+                     * @return CynosVersion <p>Kernel minor version</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置Kernel minor version number.
-                     * @param _cynosVersion Kernel minor version number.
+                     * 设置<p>Kernel minor version</p>
+                     * @param _cynosVersion <p>Kernel minor version</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -1111,301 +1036,283 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
                 private:
 
                     /**
-                     * AZ
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>VPC network ID</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * <p>Subnet ID</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Database type. Valid values: 
-<li> MYSQL </li>
+                     * <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+                     * <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * <p>project-ID</p>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+                     * <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+                     * <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+                     * <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated.
-Storage capacity in GB
+                     * <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+                     * <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+                     * <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
                      */
                     std::string m_adminPassword;
                     bool m_adminPasswordHasBeenSet;
 
                     /**
-                     * Port. Valid range: [0, 65535). Default value: 3306
+                     * <p>Port, default 3306, in the range of [0, 65535)</p>
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+                     * <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Number of purchased clusters. Valid range: [1,50]. Default value: 1
+                     * <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+                     * <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
                      */
                     std::string m_rollbackStrategy;
                     bool m_rollbackStrategyHasBeenSet;
 
                     /**
-                     * `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+                     * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      */
                     uint64_t m_rollbackId;
                     bool m_rollbackIdHasBeenSet;
 
                     /**
-                     * The source cluster ID passed in during rollback to find the source `poolId`
+                     * <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      */
                     std::string m_originalClusterId;
                     bool m_originalClusterIdHasBeenSet;
 
                     /**
-                     * Specified time for time point rollback or snapshot time for snapshot rollback
+                     * <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      */
                     std::string m_expectTime;
                     bool m_expectTimeHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated.
-Specified allowed time range for time point rollback
+                     * <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
                      */
                     uint64_t m_expectTimeThresh;
                     bool m_expectTimeThreshHasBeenSet;
 
                     /**
-                     * Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+                     * <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Purchase duration of yearly/monthly subscription plan
+                     * <p>Annual and monthly subscription duration</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+                     * <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+                     * <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+                     * <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+                     * <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
                      */
                     int64_t m_haCount;
                     bool m_haCountHasBeenSet;
 
                     /**
-                     * Order source
+                     * <p>Order source</p>
                      */
                     std::string m_orderSource;
                     bool m_orderSourceHasBeenSet;
 
                     /**
-                     * Array of tags to be bound to the created cluster
+                     * <p>tag Array info that should be bound for cluster creation</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+                     * <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+                     * <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+                     * <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
                      */
                     std::string m_autoPause;
                     bool m_autoPauseHasBeenSet;
 
                     /**
-                     * This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+                     * <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
                      */
                     int64_t m_autoPauseDelay;
                     bool m_autoPauseDelayHasBeenSet;
 
                     /**
-                     * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+                     * <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * Array of security group IDs
+                     * <p>Security group id array</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Array of alarm policy IDs
+                     * <p>Alarm policy Id array</p>
                      */
                     std::vector<std::string> m_alarmPolicyIds;
                     bool m_alarmPolicyIdsHasBeenSet;
 
                     /**
-                     * Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
                      */
                     std::vector<ParamItem> m_clusterParams;
                     bool m_clusterParamsHasBeenSet;
 
                     /**
-                     * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+                     * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * Multi-AZ address
+                     * <p>Multi-AZ address</p>
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+                     * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      */
                     std::vector<InstanceInitInfo> m_instanceInitInfos;
                     bool m_instanceInitInfosHasBeenSet;
 
                     /**
-                     * Global database unique identifier.
+                     * <p>Global database unique ID</p>
                      */
                     std::string m_gdnId;
                     bool m_gdnIdHasBeenSet;
 
                     /**
-                     * Database proxy configuration.
+                     * <p>Database proxy configuration</p>
                      */
                     ProxyConfig m_proxyConfig;
                     bool m_proxyConfigHasBeenSet;
 
                     /**
-                     * Automatically archive.
+                     * <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
                      */
                     std::string m_autoArchive;
                     bool m_autoArchiveHasBeenSet;
 
                     /**
-                     * Archiving processing time after pausing.
+                     * <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
                      */
                     int64_t m_autoArchiveDelayHours;
                     bool m_autoArchiveDelayHoursHasBeenSet;
 
                     /**
-                     * Kernel minor version number.
+                     * <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * <p>Kernel minor version</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;

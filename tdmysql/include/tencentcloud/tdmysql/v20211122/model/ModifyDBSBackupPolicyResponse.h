@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Success status.
-                     * @return IsSuccess Success status.
+                     * 获取<p>Whether it is successful</p>
+                     * @return IsSuccess <p>Whether it is successful</p>
                      * 
                      */
                     bool GetIsSuccess() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool IsSuccessHasBeenSet() const;
 
                     /**
-                     * 获取Message.
-                     * @return Msg Message.
+                     * 获取<p>Message</p>
+                     * @return Msg <p>Message</p>
                      * 
                      */
                     std::string GetMsg() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Success status.
+                     * <p>Whether it is successful</p>
                      */
                     bool m_isSuccess;
                     bool m_isSuccessHasBeenSet;
 
                     /**
-                     * Message.
+                     * <p>Message</p>
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
