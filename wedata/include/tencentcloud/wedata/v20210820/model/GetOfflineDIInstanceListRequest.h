@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool PageIndexHasBeenSet() const;
 
                     /**
-                     * 获取Number of Items per Page
-                     * @return PageSize Number of Items per Page
+                     * 获取Number of Items per Page.
+                     * @return PageSize Number of Items per Page.
                      * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置Number of Items per Page
-                     * @param _pageSize Number of Items per Page
+                     * 设置Number of Items per Page.
+                     * @param _pageSize Number of Items per Page.
                      * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_pageIndexHasBeenSet;
 
                     /**
-                     * Number of Items per Page
+                     * Number of Items per Page.
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;

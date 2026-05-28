@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query Framework, required
-                     * @return Instance Query Framework, required
+                     * 获取Query Framework, required.
+                     * @return Instance Query Framework, required.
                      * 
                      */
                     SearchConditionInstanceNew GetInstance() const;
 
                     /**
-                     * 设置Query Framework, required
-                     * @param _instance Query Framework, required
+                     * 设置Query Framework, required.
+                     * @param _instance Query Framework, required.
                      * 
                      */
                     void SetInstance(const SearchConditionInstanceNew& _instance);
@@ -134,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query Framework, required
+                     * Query Framework, required.
                      */
                     SearchConditionInstanceNew m_instance;
                     bool m_instanceHasBeenSet;

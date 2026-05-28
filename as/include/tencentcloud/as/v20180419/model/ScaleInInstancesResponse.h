@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scaling activity ID
-                     * @return ActivityId Scaling activity ID
+                     * 获取Scaling activity ID.
+                     * @return ActivityId Scaling activity ID.
                      * 
                      */
                     std::string GetActivityId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scaling activity ID
+                     * Scaling activity ID.
                      */
                     std::string m_activityId;
                     bool m_activityIdHasBeenSet;

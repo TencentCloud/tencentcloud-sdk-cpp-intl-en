@@ -59,6 +59,8 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerInfoResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerFilterRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerFilterResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerSummaryRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnCostExplorerSummaryResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherListResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerOwnVoucherUsageDetailsRequest.h>
@@ -181,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomerOwnCostExplorerFilterResponse> DescribeCustomerOwnCostExplorerFilterOutcome;
                 typedef std::future<DescribeCustomerOwnCostExplorerFilterOutcome> DescribeCustomerOwnCostExplorerFilterOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnCostExplorerFilterRequest&, DescribeCustomerOwnCostExplorerFilterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnCostExplorerFilterAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomerOwnCostExplorerSummaryResponse> DescribeCustomerOwnCostExplorerSummaryOutcome;
+                typedef std::future<DescribeCustomerOwnCostExplorerSummaryOutcome> DescribeCustomerOwnCostExplorerSummaryOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnCostExplorerSummaryRequest&, DescribeCustomerOwnCostExplorerSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnCostExplorerSummaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerOwnVoucherListResponse> DescribeCustomerOwnVoucherListOutcome;
                 typedef std::future<DescribeCustomerOwnVoucherListOutcome> DescribeCustomerOwnVoucherListOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerOwnVoucherListRequest&, DescribeCustomerOwnVoucherListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerOwnVoucherListAsyncHandler;
@@ -459,6 +464,15 @@ Invocation roles: reseller, first-level distributor.
                 DescribeCustomerOwnCostExplorerFilterOutcome DescribeCustomerOwnCostExplorerFilter(const Model::DescribeCustomerOwnCostExplorerFilterRequest &request);
                 void DescribeCustomerOwnCostExplorerFilterAsync(const Model::DescribeCustomerOwnCostExplorerFilterRequest& request, const DescribeCustomerOwnCostExplorerFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomerOwnCostExplorerFilterOutcomeCallable DescribeCustomerOwnCostExplorerFilterCallable(const Model::DescribeCustomerOwnCostExplorerFilterRequest& request);
+
+                /**
+                 *Cost analysis API
+                 * @param req DescribeCustomerOwnCostExplorerSummaryRequest
+                 * @return DescribeCustomerOwnCostExplorerSummaryOutcome
+                 */
+                DescribeCustomerOwnCostExplorerSummaryOutcome DescribeCustomerOwnCostExplorerSummary(const Model::DescribeCustomerOwnCostExplorerSummaryRequest &request);
+                void DescribeCustomerOwnCostExplorerSummaryAsync(const Model::DescribeCustomerOwnCostExplorerSummaryRequest& request, const DescribeCustomerOwnCostExplorerSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomerOwnCostExplorerSummaryOutcomeCallable DescribeCustomerOwnCostExplorerSummaryCallable(const Model::DescribeCustomerOwnCostExplorerSummaryRequest& request);
 
                 /**
                  *This API is used to query the voucher list by Customer. 

@@ -940,6 +940,56 @@ IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerFilterOutcomeCallable Intl
     return prom->get_future();
 }
 
+IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerSummaryOutcome IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerSummary(const DescribeCustomerOwnCostExplorerSummaryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCustomerOwnCostExplorerSummary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCustomerOwnCostExplorerSummaryResponse rsp = DescribeCustomerOwnCostExplorerSummaryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCustomerOwnCostExplorerSummaryOutcome(rsp);
+        else
+            return DescribeCustomerOwnCostExplorerSummaryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCustomerOwnCostExplorerSummaryOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerSummaryAsync(const DescribeCustomerOwnCostExplorerSummaryRequest& request, const DescribeCustomerOwnCostExplorerSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCustomerOwnCostExplorerSummaryRequest&;
+    using Resp = DescribeCustomerOwnCostExplorerSummaryResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCustomerOwnCostExplorerSummary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerSummaryOutcomeCallable IntlpartnersmgtClient::DescribeCustomerOwnCostExplorerSummaryCallable(const DescribeCustomerOwnCostExplorerSummaryRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCustomerOwnCostExplorerSummaryOutcome>>();
+    DescribeCustomerOwnCostExplorerSummaryAsync(
+    request,
+    [prom](
+        const IntlpartnersmgtClient*,
+        const DescribeCustomerOwnCostExplorerSummaryRequest&,
+        DescribeCustomerOwnCostExplorerSummaryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerOwnVoucherListOutcome IntlpartnersmgtClient::DescribeCustomerOwnVoucherList(const DescribeCustomerOwnVoucherListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerOwnVoucherList");
