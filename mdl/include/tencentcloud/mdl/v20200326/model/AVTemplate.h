@@ -117,15 +117,15 @@ namespace TencentCloud
                     bool VcodecHasBeenSet() const;
 
                     /**
-                     * 获取Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
-                     * @return Width Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+                     * 获取Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+                     * @return Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
-                     * @param _width Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+                     * 设置Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+                     * @param _width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -138,15 +138,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
-                     * @return Height Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+                     * 获取Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+                     * @return Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
-                     * @param _height Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+                     * 设置Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+                     * @param _height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -159,15 +159,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
-                     * @return Fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * 获取Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
+                     * @return Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
                      * 
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
-                     * @param _fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * 设置Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
+                     * @param _fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
                      * 
                      */
                     void SetFps(const uint64_t& _fps);
@@ -243,15 +243,15 @@ namespace TencentCloud
                     bool NeedAudioHasBeenSet() const;
 
                     /**
-                     * 获取Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-                     * @return Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * 获取Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+                     * @return Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      * 
                      */
                     std::string GetAcodec() const;
 
                     /**
-                     * 设置Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-                     * @param _acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * 设置Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+                     * @param _acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      * 
                      */
                     void SetAcodec(const std::string& _acodec);
@@ -310,15 +310,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool VideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
-                     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+                     * 获取Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+                     * @return RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
                      * 
                      */
                     std::string GetRateControlMode() const;
 
                     /**
-                     * 设置Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
-                     * @param _rateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+                     * 设置Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+                     * @param _rateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
                      * 
                      */
                     void SetRateControlMode(const std::string& _rateControlMode);
@@ -502,15 +502,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool AudioSampleRateHasBeenSet() const;
 
                     /**
-                     * 获取This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
-                     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * 获取This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
+                     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
                      * 
                      */
                     std::string GetFrameRateType() const;
 
                     /**
-                     * 设置This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
-                     * @param _frameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * 设置This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
+                     * @param _frameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
                      * 
                      */
                     void SetFrameRateType(const std::string& _frameRateType);
@@ -523,15 +523,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool FrameRateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
-                     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * 获取Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
+                     * @return FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
                      * 
                      */
                     uint64_t GetFrameRateNumerator() const;
 
                     /**
-                     * 设置Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
-                     * @param _frameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * 设置Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
+                     * @param _frameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
                      * 
                      */
                     void SetFrameRateNumerator(const uint64_t& _frameRateNumerator);
@@ -544,15 +544,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool FrameRateNumeratorHasBeenSet() const;
 
                     /**
-                     * 获取Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
-                     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * 获取Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
+                     * @return FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
                      * 
                      */
                     uint64_t GetFrameRateDenominator() const;
 
                     /**
-                     * 设置Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
-                     * @param _frameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * 设置Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
+                     * @param _frameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
                      * 
                      */
                     void SetFrameRateDenominator(const uint64_t& _frameRateDenominator);
@@ -565,15 +565,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool FrameRateDenominatorHasBeenSet() const;
 
                     /**
-                     * 获取The number of B frames can be selected from 1 to 3.
-                     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+                     * 获取Number of B-frames 1-3.
+                     * @return BFramesNum Number of B-frames 1-3.
                      * 
                      */
                     uint64_t GetBFramesNum() const;
 
                     /**
-                     * 设置The number of B frames can be selected from 1 to 3.
-                     * @param _bFramesNum The number of B frames can be selected from 1 to 3.
+                     * 设置Number of B-frames 1-3.
+                     * @param _bFramesNum Number of B-frames 1-3.
                      * 
                      */
                     void SetBFramesNum(const uint64_t& _bFramesNum);
@@ -586,15 +586,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool BFramesNumHasBeenSet() const;
 
                     /**
-                     * 获取The number of reference frames can be selected from 1 to 16.
-                     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+                     * 获取Refer to the number of frames 1-16.
+                     * @return RefFramesNum Refer to the number of frames 1-16.
                      * 
                      */
                     uint64_t GetRefFramesNum() const;
 
                     /**
-                     * 设置The number of reference frames can be selected from 1 to 16.
-                     * @param _refFramesNum The number of reference frames can be selected from 1 to 16.
+                     * 设置Refer to the number of frames 1-16.
+                     * @param _refFramesNum Refer to the number of frames 1-16.
                      * 
                      */
                     void SetRefFramesNum(const uint64_t& _refFramesNum);
@@ -670,15 +670,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool AudioCodecDetailsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
-                     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * 获取Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
+                     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
                      * 
                      */
                     uint64_t GetMultiAudioTrackEnabled() const;
 
                     /**
-                     * 设置Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
-                     * @param _multiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * 设置Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
+                     * @param _multiAudioTrackEnabled Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
                      * 
                      */
                     void SetMultiAudioTrackEnabled(const uint64_t& _multiAudioTrackEnabled);
@@ -691,15 +691,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool MultiAudioTrackEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
-                     * @return AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * 获取Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
+                     * @return AudioTracks Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
                      * 
                      */
                     std::vector<AudioTrackInfo> GetAudioTracks() const;
 
                     /**
-                     * 设置Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
-                     * @param _audioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * 设置Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
+                     * @param _audioTracks Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
                      * 
                      */
                     void SetAudioTracks(const std::vector<AudioTrackInfo>& _audioTracks);
@@ -712,15 +712,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool AudioTracksHasBeenSet() const;
 
                     /**
-                     * 获取Do you want to enable video enhancement? 1: Enable 0: Do not enable.
-                     * @return VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+                     * 获取Whether to enable video enhancement, 1: enable 0: disable.
+                     * @return VideoEnhanceEnabled Whether to enable video enhancement, 1: enable 0: disable.
                      * 
                      */
                     uint64_t GetVideoEnhanceEnabled() const;
 
                     /**
-                     * 设置Do you want to enable video enhancement? 1: Enable 0: Do not enable.
-                     * @param _videoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+                     * 设置Whether to enable video enhancement, 1: enable 0: disable.
+                     * @param _videoEnhanceEnabled Whether to enable video enhancement, 1: enable 0: disable.
                      * 
                      */
                     void SetVideoEnhanceEnabled(const uint64_t& _videoEnhanceEnabled);
@@ -754,15 +754,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool VideoEnhanceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Key frame interval, 300-10000, optional.
-                     * @return GopSize Key frame interval, 300-10000, optional.
+                     * 获取Keyframe interval, 300-10000, optional.
+                     * @return GopSize Keyframe interval, 300-10000, optional.
                      * 
                      */
                     int64_t GetGopSize() const;
 
                     /**
-                     * 设置Key frame interval, 300-10000, optional.
-                     * @param _gopSize Key frame interval, 300-10000, optional.
+                     * 设置Keyframe interval, 300-10000, optional.
+                     * @param _gopSize Keyframe interval, 300-10000, optional.
                      * 
                      */
                     void SetGopSize(const int64_t& _gopSize);
@@ -775,15 +775,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool GopSizeHasBeenSet() const;
 
                     /**
-                     * 获取Keyframe units, only support MILLISECONDS (milliseconds).
-                     * @return GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+                     * 获取Key frame measurement unit currently only supports MILLISECONDS (ms).
+                     * @return GopSizeUnits Key frame measurement unit currently only supports MILLISECONDS (ms).
                      * 
                      */
                     std::string GetGopSizeUnits() const;
 
                     /**
-                     * 设置Keyframe units, only support MILLISECONDS (milliseconds).
-                     * @param _gopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+                     * 设置Key frame measurement unit currently only supports MILLISECONDS (ms).
+                     * @param _gopSizeUnits Key frame measurement unit currently only supports MILLISECONDS (ms).
                      * 
                      */
                     void SetGopSizeUnits(const std::string& _gopSizeUnits);
@@ -796,15 +796,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool GopSizeUnitsHasBeenSet() const;
 
                     /**
-                     * 获取Color space setting.
-                     * @return ColorSpaceSettings Color space setting.
+                     * 获取Colorspace configuration.
+                     * @return ColorSpaceSettings Colorspace configuration.
                      * 
                      */
                     ColorSpaceSetting GetColorSpaceSettings() const;
 
                     /**
-                     * 设置Color space setting.
-                     * @param _colorSpaceSettings Color space setting.
+                     * 设置Colorspace configuration.
+                     * @param _colorSpaceSettings Colorspace configuration.
                      * 
                      */
                     void SetColorSpaceSettings(const ColorSpaceSetting& _colorSpaceSettings);
@@ -817,15 +817,15 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool ColorSpaceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Traceability watermark.
-                     * @return ForensicWatermarkIds Traceability watermark.
+                     * 获取Traceable watermark.
+                     * @return ForensicWatermarkIds Traceable watermark.
                      * 
                      */
                     std::vector<std::string> GetForensicWatermarkIds() const;
 
                     /**
-                     * 设置Traceability watermark.
-                     * @param _forensicWatermarkIds Traceability watermark.
+                     * 设置Traceable watermark.
+                     * @param _forensicWatermarkIds Traceable watermark.
                      * 
                      */
                     void SetForensicWatermarkIds(const std::vector<std::string>& _forensicWatermarkIds);
@@ -858,19 +858,19 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_vcodecHasBeenSet;
 
                     /**
-                     * Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+                     * Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+                     * Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
                      */
                     uint64_t m_fps;
                     bool m_fpsHasBeenSet;
@@ -894,7 +894,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_needAudioHasBeenSet;
 
                     /**
-                     * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      */
                     std::string m_acodec;
                     bool m_acodecHasBeenSet;
@@ -913,7 +913,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_videoBitrateHasBeenSet;
 
                     /**
-                     * Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+                     * Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
                      */
                     std::string m_rateControlMode;
                     bool m_rateControlModeHasBeenSet;
@@ -967,31 +967,31 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_audioSampleRateHasBeenSet;
 
                     /**
-                     * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+                     * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
                      */
                     std::string m_frameRateType;
                     bool m_frameRateTypeHasBeenSet;
 
                     /**
-                     * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+                     * Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
                      */
                     uint64_t m_frameRateNumerator;
                     bool m_frameRateNumeratorHasBeenSet;
 
                     /**
-                     * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+                     * Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
                      */
                     uint64_t m_frameRateDenominator;
                     bool m_frameRateDenominatorHasBeenSet;
 
                     /**
-                     * The number of B frames can be selected from 1 to 3.
+                     * Number of B-frames 1-3.
                      */
                     uint64_t m_bFramesNum;
                     bool m_bFramesNumHasBeenSet;
 
                     /**
-                     * The number of reference frames can be selected from 1 to 16.
+                     * Refer to the number of frames 1-16.
                      */
                     uint64_t m_refFramesNum;
                     bool m_refFramesNumHasBeenSet;
@@ -1015,19 +1015,19 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_audioCodecDetailsHasBeenSet;
 
                     /**
-                     * Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+                     * Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
                      */
                     uint64_t m_multiAudioTrackEnabled;
                     bool m_multiAudioTrackEnabledHasBeenSet;
 
                     /**
-                     * Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+                     * Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
                      */
                     std::vector<AudioTrackInfo> m_audioTracks;
                     bool m_audioTracksHasBeenSet;
 
                     /**
-                     * Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+                     * Whether to enable video enhancement, 1: enable 0: disable.
                      */
                     uint64_t m_videoEnhanceEnabled;
                     bool m_videoEnhanceEnabledHasBeenSet;
@@ -1039,25 +1039,25 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                     bool m_videoEnhanceSettingsHasBeenSet;
 
                     /**
-                     * Key frame interval, 300-10000, optional.
+                     * Keyframe interval, 300-10000, optional.
                      */
                     int64_t m_gopSize;
                     bool m_gopSizeHasBeenSet;
 
                     /**
-                     * Keyframe units, only support MILLISECONDS (milliseconds).
+                     * Key frame measurement unit currently only supports MILLISECONDS (ms).
                      */
                     std::string m_gopSizeUnits;
                     bool m_gopSizeUnitsHasBeenSet;
 
                     /**
-                     * Color space setting.
+                     * Colorspace configuration.
                      */
                     ColorSpaceSetting m_colorSpaceSettings;
                     bool m_colorSpaceSettingsHasBeenSet;
 
                     /**
-                     * Traceability watermark.
+                     * Traceable watermark.
                      */
                     std::vector<std::string> m_forensicWatermarkIds;
                     bool m_forensicWatermarkIdsHasBeenSet;

@@ -27,11 +27,13 @@ UpgradeInstanceRequest::UpgradeInstanceRequest() :
     m_cpuHasBeenSet(false),
     m_memoryHasBeenSet(false),
     m_upgradeTypeHasBeenSet(false),
+    m_deviceTypeHasBeenSet(false),
     m_storageLimitHasBeenSet(false),
     m_autoVoucherHasBeenSet(false),
     m_dbTypeHasBeenSet(false),
     m_dealModeHasBeenSet(false),
-    m_upgradeModeHasBeenSet(false)
+    m_upgradeModeHasBeenSet(false),
+    m_upgradeProxyHasBeenSet(false)
 {
 }
 
@@ -74,6 +76,14 @@ string UpgradeInstanceRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_upgradeType.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_deviceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_storageLimitHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -112,6 +122,15 @@ string UpgradeInstanceRequest::ToJsonString() const
         string key = "UpgradeMode";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_upgradeMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_upgradeProxyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpgradeProxy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_upgradeProxy.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -184,6 +203,22 @@ void UpgradeInstanceRequest::SetUpgradeType(const string& _upgradeType)
 bool UpgradeInstanceRequest::UpgradeTypeHasBeenSet() const
 {
     return m_upgradeTypeHasBeenSet;
+}
+
+string UpgradeInstanceRequest::GetDeviceType() const
+{
+    return m_deviceType;
+}
+
+void UpgradeInstanceRequest::SetDeviceType(const string& _deviceType)
+{
+    m_deviceType = _deviceType;
+    m_deviceTypeHasBeenSet = true;
+}
+
+bool UpgradeInstanceRequest::DeviceTypeHasBeenSet() const
+{
+    return m_deviceTypeHasBeenSet;
 }
 
 uint64_t UpgradeInstanceRequest::GetStorageLimit() const
@@ -264,6 +299,22 @@ void UpgradeInstanceRequest::SetUpgradeMode(const string& _upgradeMode)
 bool UpgradeInstanceRequest::UpgradeModeHasBeenSet() const
 {
     return m_upgradeModeHasBeenSet;
+}
+
+UpgradeProxy UpgradeInstanceRequest::GetUpgradeProxy() const
+{
+    return m_upgradeProxy;
+}
+
+void UpgradeInstanceRequest::SetUpgradeProxy(const UpgradeProxy& _upgradeProxy)
+{
+    m_upgradeProxy = _upgradeProxy;
+    m_upgradeProxyHasBeenSet = true;
+}
+
+bool UpgradeInstanceRequest::UpgradeProxyHasBeenSet() const
+{
+    return m_upgradeProxyHasBeenSet;
 }
 
 

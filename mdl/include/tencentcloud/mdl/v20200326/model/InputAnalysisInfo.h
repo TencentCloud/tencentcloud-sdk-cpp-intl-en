@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Recognition configuration for input content.
+                * Input content identification configuration.
                 */
                 class InputAnalysisInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Highlight configuration.
-                     * @return HighlightSetting Highlight configuration.
+                     * 获取Highlights configuration.
+                     * @return HighlightSetting Highlights configuration.
                      * 
                      */
                     HighlightInfo GetHighlightSetting() const;
 
                     /**
-                     * 设置Highlight configuration.
-                     * @param _highlightSetting Highlight configuration.
+                     * 设置Highlights configuration.
+                     * @param _highlightSetting Highlights configuration.
                      * 
                      */
                     void SetHighlightSetting(const HighlightInfo& _highlightSetting);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Highlight configuration.
+                     * Highlights configuration.
                      */
                     HighlightInfo m_highlightSetting;
                     bool m_highlightSettingHasBeenSet;

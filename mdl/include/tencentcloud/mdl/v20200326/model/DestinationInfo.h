@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool OutputUrlHasBeenSet() const;
 
                     /**
-                     * 获取Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AuthKey Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Authentication key, length limited to [1, 128].
+                     * @return AuthKey Authentication key, length limited to [1, 128].
                      * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
-                     * 设置Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _authKey Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Authentication key, length limited to [1, 128].
+                     * @param _authKey Authentication key, length limited to [1, 128].
                      * 
                      */
                     void SetAuthKey(const std::string& _authKey);
@@ -95,19 +91,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AuthKeyHasBeenSet() const;
 
                     /**
-                     * 获取Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Username Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Authentication username, length limited to [1, 128].
+                     * @return Username Authentication username, length limited to [1, 128].
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _username Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Authentication username, length limited to [1, 128].
+                     * @param _username Authentication username, length limited to [1, 128].
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -120,19 +112,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Password Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Authentication password, length limited to [1, 128].
+                     * @return Password Authentication password, length limited to [1, 128].
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _password Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Authentication password, length limited to [1, 128].
+                     * @param _password Authentication password, length limited to [1, 128].
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -145,15 +133,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
-                     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+                     * 获取The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+                     * @return DestinationType The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
                      * 
                      */
                     std::string GetDestinationType() const;
 
                     /**
-                     * 设置The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
-                     * @param _destinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+                     * 设置The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+                     * @param _destinationType The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
                      * 
                      */
                     void SetDestinationType(const std::string& _destinationType);
@@ -166,15 +154,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DestinationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Aws S3 destination setting.
-                     * @return AmazonS3Settings Aws S3 destination setting.
+                     * 获取Forward the Aws S3 address information.
+                     * @return AmazonS3Settings Forward the Aws S3 address information.
                      * 
                      */
                     AmazonS3Settings GetAmazonS3Settings() const;
 
                     /**
-                     * 设置Aws S3 destination setting.
-                     * @param _amazonS3Settings Aws S3 destination setting.
+                     * 设置Forward the Aws S3 address information.
+                     * @param _amazonS3Settings Forward the Aws S3 address information.
                      * 
                      */
                     void SetAmazonS3Settings(const AmazonS3Settings& _amazonS3Settings);
@@ -187,15 +175,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AmazonS3SettingsHasBeenSet() const;
 
                     /**
-                     * 获取Cos destination setting.
-                     * @return CosSettings Cos destination setting.
+                     * 获取Forward COS address information.
+                     * @return CosSettings Forward COS address information.
                      * 
                      */
                     CosSettings GetCosSettings() const;
 
                     /**
-                     * 设置Cos destination setting.
-                     * @param _cosSettings Cos destination setting.
+                     * 设置Forward COS address information.
+                     * @param _cosSettings Forward COS address information.
                      * 
                      */
                     void SetCosSettings(const CosSettings& _cosSettings);
@@ -216,40 +204,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_outputUrlHasBeenSet;
 
                     /**
-                     * Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Authentication key, length limited to [1, 128].
                      */
                     std::string m_authKey;
                     bool m_authKeyHasBeenSet;
 
                     /**
-                     * Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Authentication username, length limited to [1, 128].
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Authentication password, length limited to [1, 128].
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+                     * The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
                      */
                     std::string m_destinationType;
                     bool m_destinationTypeHasBeenSet;
 
                     /**
-                     * Aws S3 destination setting.
+                     * Forward the Aws S3 address information.
                      */
                     AmazonS3Settings m_amazonS3Settings;
                     bool m_amazonS3SettingsHasBeenSet;
 
                     /**
-                     * Cos destination setting.
+                     * Forward COS address information.
                      */
                     CosSettings m_cosSettings;
                     bool m_cosSettingsHasBeenSet;

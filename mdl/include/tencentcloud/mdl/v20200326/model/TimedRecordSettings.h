@@ -47,23 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
+                     * @return AutoClear Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
                      * 
                      */
                     std::string GetAutoClear() const;
 
                     /**
-                     * 设置Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _autoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
+                     * @param _autoClear Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
                      * 
                      */
                     void SetAutoClear(const std::string& _autoClear);
@@ -78,9 +74,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
                      */
                     std::string m_autoClear;
                     bool m_autoClearHasBeenSet;

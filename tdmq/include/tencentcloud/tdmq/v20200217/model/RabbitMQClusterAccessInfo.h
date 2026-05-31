@@ -49,15 +49,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PublicAccessEndpoint 
+                     * 获取<p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PublicAccessEndpoint <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPublicAccessEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _publicAccessEndpoint 
+                     * 设置<p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _publicAccessEndpoint <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPublicAccessEndpoint(const std::string& _publicAccessEndpoint);
@@ -70,15 +74,15 @@ namespace TencentCloud
                     bool PublicAccessEndpointHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebConsoleEndpoint 
+                     * 获取<p>Public network access URL of the cluster Web console</p>
+                     * @return WebConsoleEndpoint <p>Public network access URL of the cluster Web console</p>
                      * 
                      */
                     std::string GetWebConsoleEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _webConsoleEndpoint 
+                     * 设置<p>Public network access URL of the cluster Web console</p>
+                     * @param _webConsoleEndpoint <p>Public network access URL of the cluster Web console</p>
                      * 
                      */
                     void SetWebConsoleEndpoint(const std::string& _webConsoleEndpoint);
@@ -91,15 +95,15 @@ namespace TencentCloud
                     bool WebConsoleEndpointHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebConsoleUsername 
+                     * 获取<p>Cluster Web console login username</p>
+                     * @return WebConsoleUsername <p>Cluster Web console login username</p>
                      * 
                      */
                     std::string GetWebConsoleUsername() const;
 
                     /**
-                     * 设置
-                     * @param _webConsoleUsername 
+                     * 设置<p>Cluster Web console login username</p>
+                     * @param _webConsoleUsername <p>Cluster Web console login username</p>
                      * 
                      */
                     void SetWebConsoleUsername(const std::string& _webConsoleUsername);
@@ -112,15 +116,15 @@ namespace TencentCloud
                     bool WebConsoleUsernameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebConsolePassword 
+                     * 获取<p>Cluster Web console login password</p>
+                     * @return WebConsolePassword <p>Cluster Web console login password</p>
                      * 
                      */
                     std::string GetWebConsolePassword() const;
 
                     /**
-                     * 设置
-                     * @param _webConsolePassword 
+                     * 设置<p>Cluster Web console login password</p>
+                     * @param _webConsolePassword <p>Cluster Web console login password</p>
                      * 
                      */
                     void SetWebConsolePassword(const std::string& _webConsolePassword);
@@ -133,15 +137,15 @@ namespace TencentCloud
                     bool WebConsolePasswordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicAccessEndpointStatus 
+                     * 获取<p>Abandoned</p>
+                     * @return PublicAccessEndpointStatus <p>Abandoned</p>
                      * 
                      */
                     bool GetPublicAccessEndpointStatus() const;
 
                     /**
-                     * 设置
-                     * @param _publicAccessEndpointStatus 
+                     * 设置<p>Abandoned</p>
+                     * @param _publicAccessEndpointStatus <p>Abandoned</p>
                      * 
                      */
                     void SetPublicAccessEndpointStatus(const bool& _publicAccessEndpointStatus);
@@ -154,15 +158,15 @@ namespace TencentCloud
                     bool PublicAccessEndpointStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicControlConsoleSwitchStatus 
+                     * 获取<p>Deprecated</p>
+                     * @return PublicControlConsoleSwitchStatus <p>Deprecated</p>
                      * 
                      */
                     bool GetPublicControlConsoleSwitchStatus() const;
 
                     /**
-                     * 设置
-                     * @param _publicControlConsoleSwitchStatus 
+                     * 设置<p>Deprecated</p>
+                     * @param _publicControlConsoleSwitchStatus <p>Deprecated</p>
                      * 
                      */
                     void SetPublicControlConsoleSwitchStatus(const bool& _publicControlConsoleSwitchStatus);
@@ -175,15 +179,15 @@ namespace TencentCloud
                     bool PublicControlConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcControlConsoleSwitchStatus 
+                     * 获取<p>Abandoned</p>
+                     * @return VpcControlConsoleSwitchStatus <p>Abandoned</p>
                      * 
                      */
                     bool GetVpcControlConsoleSwitchStatus() const;
 
                     /**
-                     * 设置
-                     * @param _vpcControlConsoleSwitchStatus 
+                     * 设置<p>Abandoned</p>
+                     * @param _vpcControlConsoleSwitchStatus <p>Abandoned</p>
                      * 
                      */
                     void SetVpcControlConsoleSwitchStatus(const bool& _vpcControlConsoleSwitchStatus);
@@ -196,15 +200,15 @@ namespace TencentCloud
                     bool VpcControlConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcWebConsoleEndpoint 
+                     * 获取<p>VPC access URL of the Web console</p>
+                     * @return VpcWebConsoleEndpoint <p>VPC access URL of the Web console</p>
                      * 
                      */
                     std::string GetVpcWebConsoleEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _vpcWebConsoleEndpoint 
+                     * 设置<p>VPC access URL of the Web console</p>
+                     * @param _vpcWebConsoleEndpoint <p>VPC access URL of the Web console</p>
                      * 
                      */
                     void SetVpcWebConsoleEndpoint(const std::string& _vpcWebConsoleEndpoint);
@@ -217,15 +221,15 @@ namespace TencentCloud
                     bool VpcWebConsoleEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-                     * @return PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * 获取<p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+                     * @return PublicWebConsoleSwitchStatus <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      * 
                      */
                     std::string GetPublicWebConsoleSwitchStatus() const;
 
                     /**
-                     * 设置Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-                     * @param _publicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * 设置<p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+                     * @param _publicWebConsoleSwitchStatus <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      * 
                      */
                     void SetPublicWebConsoleSwitchStatus(const std::string& _publicWebConsoleSwitchStatus);
@@ -238,19 +242,15 @@ namespace TencentCloud
                     bool PublicWebConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
-                     * @return VpcWebConsoleSwitchStatus Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+                     * 获取<p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+                     * @return VpcWebConsoleSwitchStatus <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      * 
                      */
                     std::string GetVpcWebConsoleSwitchStatus() const;
 
                     /**
-                     * 设置Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
-                     * @param _vpcWebConsoleSwitchStatus Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+                     * 设置<p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+                     * @param _vpcWebConsoleSwitchStatus <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      * 
                      */
                     void SetVpcWebConsoleSwitchStatus(const std::string& _vpcWebConsoleSwitchStatus);
@@ -263,15 +263,15 @@ OFF/ON/CREATING/DELETING
                     bool VpcWebConsoleSwitchStatusHasBeenSet() const;
 
                     /**
-                     * 获取Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-                     * @return PublicDataStreamStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * 获取<p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+                     * @return PublicDataStreamStatus <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
                      * 
                      */
                     std::string GetPublicDataStreamStatus() const;
 
                     /**
-                     * 设置Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-                     * @param _publicDataStreamStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * 设置<p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+                     * @param _publicDataStreamStatus <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
                      * 
                      */
                     void SetPublicDataStreamStatus(const std::string& _publicDataStreamStatus);
@@ -284,15 +284,15 @@ OFF/ON/CREATING/DELETING
                     bool PublicDataStreamStatusHasBeenSet() const;
 
                     /**
-                     * 获取Prometheus information.
-                     * @return PrometheusEndpointInfo Prometheus information.
+                     * 获取<p>Prometheus info</p>
+                     * @return PrometheusEndpointInfo <p>Prometheus info</p>
                      * 
                      */
                     PrometheusEndpointInfo GetPrometheusEndpointInfo() const;
 
                     /**
-                     * 设置Prometheus information.
-                     * @param _prometheusEndpointInfo Prometheus information.
+                     * 设置<p>Prometheus info</p>
+                     * @param _prometheusEndpointInfo <p>Prometheus info</p>
                      * 
                      */
                     void SetPrometheusEndpointInfo(const PrometheusEndpointInfo& _prometheusEndpointInfo);
@@ -305,15 +305,15 @@ OFF/ON/CREATING/DELETING
                     bool PrometheusEndpointInfoHasBeenSet() const;
 
                     /**
-                     * 获取Public domain name access point.
-                     * @return WebConsoleDomainEndpoint Public domain name access point.
+                     * 获取<p>public domain name access point</p>
+                     * @return WebConsoleDomainEndpoint <p>public domain name access point</p>
                      * 
                      */
                     std::string GetWebConsoleDomainEndpoint() const;
 
                     /**
-                     * 设置Public domain name access point.
-                     * @param _webConsoleDomainEndpoint Public domain name access point.
+                     * 设置<p>public domain name access point</p>
+                     * @param _webConsoleDomainEndpoint <p>public domain name access point</p>
                      * 
                      */
                     void SetWebConsoleDomainEndpoint(const std::string& _webConsoleDomainEndpoint);
@@ -326,15 +326,15 @@ OFF/ON/CREATING/DELETING
                     bool WebConsoleDomainEndpointHasBeenSet() const;
 
                     /**
-                     * 获取VPC information used by the control plane.
-                     * @return ControlPlaneEndpointInfo VPC information used by the control plane.
+                     * 获取<p>VPC information used by the control plane</p>
+                     * @return ControlPlaneEndpointInfo <p>VPC information used by the control plane</p>
                      * 
                      */
                     VpcEndpointInfo GetControlPlaneEndpointInfo() const;
 
                     /**
-                     * 设置VPC information used by the control plane.
-                     * @param _controlPlaneEndpointInfo VPC information used by the control plane.
+                     * 设置<p>VPC information used by the control plane</p>
+                     * @param _controlPlaneEndpointInfo <p>VPC information used by the control plane</p>
                      * 
                      */
                     void SetControlPlaneEndpointInfo(const VpcEndpointInfo& _controlPlaneEndpointInfo);
@@ -347,15 +347,15 @@ OFF/ON/CREATING/DELETING
                     bool ControlPlaneEndpointInfoHasBeenSet() const;
 
                     /**
-                     * 获取Encrypted TLS data stream public network access point.
-                     * @return PublicTlsAccessEndpoint Encrypted TLS data stream public network access point.
+                     * 获取<p>TLS encrypted data stream public network access point</p>
+                     * @return PublicTlsAccessEndpoint <p>TLS encrypted data stream public network access point</p>
                      * 
                      */
                     std::string GetPublicTlsAccessEndpoint() const;
 
                     /**
-                     * 设置Encrypted TLS data stream public network access point.
-                     * @param _publicTlsAccessEndpoint Encrypted TLS data stream public network access point.
+                     * 设置<p>TLS encrypted data stream public network access point</p>
+                     * @param _publicTlsAccessEndpoint <p>TLS encrypted data stream public network access point</p>
                      * 
                      */
                     void SetPublicTlsAccessEndpoint(const std::string& _publicTlsAccessEndpoint);
@@ -368,15 +368,15 @@ OFF/ON/CREATING/DELETING
                     bool PublicTlsAccessEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to reuse the public IP address.
-                     * @return PublicIpReused Specifies whether to reuse the public IP address.
+                     * 获取<p>Whether to reuse the public IP address</p>
+                     * @return PublicIpReused <p>Whether to reuse the public IP address</p>
                      * 
                      */
                     bool GetPublicIpReused() const;
 
                     /**
-                     * 设置Specifies whether to reuse the public IP address.
-                     * @param _publicIpReused Specifies whether to reuse the public IP address.
+                     * 设置<p>Whether to reuse the public IP address</p>
+                     * @param _publicIpReused <p>Whether to reuse the public IP address</p>
                      * 
                      */
                     void SetPublicIpReused(const bool& _publicIpReused);
@@ -389,15 +389,15 @@ OFF/ON/CREATING/DELETING
                     bool PublicIpReusedHasBeenSet() const;
 
                     /**
-                     * 获取Error message for public network console access point operations.
-                     * @return PublicWebConsoleErrorMessage Error message for public network console access point operations.
+                     * 获取<p>Error information of public network access operations for the Web console</p>
+                     * @return PublicWebConsoleErrorMessage <p>Error information of public network access operations for the Web console</p>
                      * 
                      */
                     std::string GetPublicWebConsoleErrorMessage() const;
 
                     /**
-                     * 设置Error message for public network console access point operations.
-                     * @param _publicWebConsoleErrorMessage Error message for public network console access point operations.
+                     * 设置<p>Error information of public network access operations for the Web console</p>
+                     * @param _publicWebConsoleErrorMessage <p>Error information of public network access operations for the Web console</p>
                      * 
                      */
                     void SetPublicWebConsoleErrorMessage(const std::string& _publicWebConsoleErrorMessage);
@@ -410,15 +410,15 @@ OFF/ON/CREATING/DELETING
                     bool PublicWebConsoleErrorMessageHasBeenSet() const;
 
                     /**
-                     * 获取Error message for private network console access point operations.
-                     * @return VpcWebConsoleErrorMessage Error message for private network console access point operations.
+                     * 获取<p>Error information of VPC access operations in the Web console</p>
+                     * @return VpcWebConsoleErrorMessage <p>Error information of VPC access operations in the Web console</p>
                      * 
                      */
                     std::string GetVpcWebConsoleErrorMessage() const;
 
                     /**
-                     * 设置Error message for private network console access point operations.
-                     * @param _vpcWebConsoleErrorMessage Error message for private network console access point operations.
+                     * 设置<p>Error information of VPC access operations in the Web console</p>
+                     * @param _vpcWebConsoleErrorMessage <p>Error information of VPC access operations in the Web console</p>
                      * 
                      */
                     void SetVpcWebConsoleErrorMessage(const std::string& _vpcWebConsoleErrorMessage);
@@ -431,15 +431,15 @@ OFF/ON/CREATING/DELETING
                     bool VpcWebConsoleErrorMessageHasBeenSet() const;
 
                     /**
-                     * 获取Error message for public network access point operation failure.
-                     * @return PublicDataStreamErrorMessage Error message for public network access point operation failure.
+                     * 获取<p>Error information of public network access point operations</p>
+                     * @return PublicDataStreamErrorMessage <p>Error information of public network access point operations</p>
                      * 
                      */
                     std::string GetPublicDataStreamErrorMessage() const;
 
                     /**
-                     * 设置Error message for public network access point operation failure.
-                     * @param _publicDataStreamErrorMessage Error message for public network access point operation failure.
+                     * 设置<p>Error information of public network access point operations</p>
+                     * @param _publicDataStreamErrorMessage <p>Error information of public network access point operations</p>
                      * 
                      */
                     void SetPublicDataStreamErrorMessage(const std::string& _publicDataStreamErrorMessage);
@@ -451,122 +451,149 @@ OFF/ON/CREATING/DELETING
                      */
                     bool PublicDataStreamErrorMessageHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Public network Stream access point</p>
+                     * @return PublicStreamAccessEndpoint <p>Public network Stream access point</p>
+                     * 
+                     */
+                    std::string GetPublicStreamAccessEndpoint() const;
+
+                    /**
+                     * 设置<p>Public network Stream access point</p>
+                     * @param _publicStreamAccessEndpoint <p>Public network Stream access point</p>
+                     * 
+                     */
+                    void SetPublicStreamAccessEndpoint(const std::string& _publicStreamAccessEndpoint);
+
+                    /**
+                     * 判断参数 PublicStreamAccessEndpoint 是否已赋值
+                     * @return PublicStreamAccessEndpoint 是否已赋值
+                     * 
+                     */
+                    bool PublicStreamAccessEndpointHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_publicAccessEndpoint;
                     bool m_publicAccessEndpointHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Public network access URL of the cluster Web console</p>
                      */
                     std::string m_webConsoleEndpoint;
                     bool m_webConsoleEndpointHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cluster Web console login username</p>
                      */
                     std::string m_webConsoleUsername;
                     bool m_webConsoleUsernameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cluster Web console login password</p>
                      */
                     std::string m_webConsolePassword;
                     bool m_webConsolePasswordHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Abandoned</p>
                      */
                     bool m_publicAccessEndpointStatus;
                     bool m_publicAccessEndpointStatusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Deprecated</p>
                      */
                     bool m_publicControlConsoleSwitchStatus;
                     bool m_publicControlConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Abandoned</p>
                      */
                     bool m_vpcControlConsoleSwitchStatus;
                     bool m_vpcControlConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>VPC access URL of the Web console</p>
                      */
                     std::string m_vpcWebConsoleEndpoint;
                     bool m_vpcWebConsoleEndpointHasBeenSet;
 
                     /**
-                     * Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      */
                     std::string m_publicWebConsoleSwitchStatus;
                     bool m_publicWebConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+                     * <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
                      */
                     std::string m_vpcWebConsoleSwitchStatus;
                     bool m_vpcWebConsoleSwitchStatusHasBeenSet;
 
                     /**
-                     * Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+                     * <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
                      */
                     std::string m_publicDataStreamStatus;
                     bool m_publicDataStreamStatusHasBeenSet;
 
                     /**
-                     * Prometheus information.
+                     * <p>Prometheus info</p>
                      */
                     PrometheusEndpointInfo m_prometheusEndpointInfo;
                     bool m_prometheusEndpointInfoHasBeenSet;
 
                     /**
-                     * Public domain name access point.
+                     * <p>public domain name access point</p>
                      */
                     std::string m_webConsoleDomainEndpoint;
                     bool m_webConsoleDomainEndpointHasBeenSet;
 
                     /**
-                     * VPC information used by the control plane.
+                     * <p>VPC information used by the control plane</p>
                      */
                     VpcEndpointInfo m_controlPlaneEndpointInfo;
                     bool m_controlPlaneEndpointInfoHasBeenSet;
 
                     /**
-                     * Encrypted TLS data stream public network access point.
+                     * <p>TLS encrypted data stream public network access point</p>
                      */
                     std::string m_publicTlsAccessEndpoint;
                     bool m_publicTlsAccessEndpointHasBeenSet;
 
                     /**
-                     * Specifies whether to reuse the public IP address.
+                     * <p>Whether to reuse the public IP address</p>
                      */
                     bool m_publicIpReused;
                     bool m_publicIpReusedHasBeenSet;
 
                     /**
-                     * Error message for public network console access point operations.
+                     * <p>Error information of public network access operations for the Web console</p>
                      */
                     std::string m_publicWebConsoleErrorMessage;
                     bool m_publicWebConsoleErrorMessageHasBeenSet;
 
                     /**
-                     * Error message for private network console access point operations.
+                     * <p>Error information of VPC access operations in the Web console</p>
                      */
                     std::string m_vpcWebConsoleErrorMessage;
                     bool m_vpcWebConsoleErrorMessageHasBeenSet;
 
                     /**
-                     * Error message for public network access point operation failure.
+                     * <p>Error information of public network access point operations</p>
                      */
                     std::string m_publicDataStreamErrorMessage;
                     bool m_publicDataStreamErrorMessageHasBeenSet;
+
+                    /**
+                     * <p>Public network Stream access point</p>
+                     */
+                    std::string m_publicStreamAccessEndpoint;
+                    bool m_publicStreamAccessEndpointHasBeenSet;
 
                 };
             }

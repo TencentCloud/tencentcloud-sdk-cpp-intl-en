@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/VaultInfo.h>
 
 
 namespace TencentCloud
@@ -151,6 +152,111 @@ namespace TencentCloud
                      */
                     bool BinlogIdHasBeenSet() const;
 
+                    /**
+                     * 获取binlog cross-region coverage
+                     * @return CrossRegions binlog cross-region coverage
+                     * 
+                     */
+                    std::vector<std::string> GetCrossRegions() const;
+
+                    /**
+                     * 设置binlog cross-region coverage
+                     * @param _crossRegions binlog cross-region coverage
+                     * 
+                     */
+                    void SetCrossRegions(const std::vector<std::string>& _crossRegions);
+
+                    /**
+                     * 判断参数 CrossRegions 是否已赋值
+                     * @return CrossRegions 是否已赋值
+                     * 
+                     */
+                    bool CrossRegionsHasBeenSet() const;
+
+                    /**
+                     * 获取Backup delivery status
+                     * @return CopyStatus Backup delivery status
+                     * 
+                     */
+                    std::string GetCopyStatus() const;
+
+                    /**
+                     * 设置Backup delivery status
+                     * @param _copyStatus Backup delivery status
+                     * 
+                     */
+                    void SetCopyStatus(const std::string& _copyStatus);
+
+                    /**
+                     * 判断参数 CopyStatus 是否已赋值
+                     * @return CopyStatus 是否已赋值
+                     * 
+                     */
+                    bool CopyStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Safe info
+                     * @return VaultInfos Safe info
+                     * 
+                     */
+                    std::vector<VaultInfo> GetVaultInfos() const;
+
+                    /**
+                     * 设置Safe info
+                     * @param _vaultInfos Safe info
+                     * 
+                     */
+                    void SetVaultInfos(const std::vector<VaultInfo>& _vaultInfos);
+
+                    /**
+                     * 判断参数 VaultInfos 是否已赋值
+                     * @return VaultInfos 是否已赋值
+                     * 
+                     */
+                    bool VaultInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Encryption key
+                     * @return EncryptKeyId Encryption key
+                     * 
+                     */
+                    std::string GetEncryptKeyId() const;
+
+                    /**
+                     * 设置Encryption key
+                     * @param _encryptKeyId Encryption key
+                     * 
+                     */
+                    void SetEncryptKeyId(const std::string& _encryptKeyId);
+
+                    /**
+                     * 判断参数 EncryptKeyId 是否已赋值
+                     * @return EncryptKeyId 是否已赋值
+                     * 
+                     */
+                    bool EncryptKeyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Encrypt key region
+                     * @return EncryptRegion Encrypt key region
+                     * 
+                     */
+                    std::string GetEncryptRegion() const;
+
+                    /**
+                     * 设置Encrypt key region
+                     * @param _encryptRegion Encrypt key region
+                     * 
+                     */
+                    void SetEncryptRegion(const std::string& _encryptRegion);
+
+                    /**
+                     * 判断参数 EncryptRegion 是否已赋值
+                     * @return EncryptRegion 是否已赋值
+                     * 
+                     */
+                    bool EncryptRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +288,36 @@ namespace TencentCloud
                      */
                     int64_t m_binlogId;
                     bool m_binlogIdHasBeenSet;
+
+                    /**
+                     * binlog cross-region coverage
+                     */
+                    std::vector<std::string> m_crossRegions;
+                    bool m_crossRegionsHasBeenSet;
+
+                    /**
+                     * Backup delivery status
+                     */
+                    std::string m_copyStatus;
+                    bool m_copyStatusHasBeenSet;
+
+                    /**
+                     * Safe info
+                     */
+                    std::vector<VaultInfo> m_vaultInfos;
+                    bool m_vaultInfosHasBeenSet;
+
+                    /**
+                     * Encryption key
+                     */
+                    std::string m_encryptKeyId;
+                    bool m_encryptKeyIdHasBeenSet;
+
+                    /**
+                     * Encrypt key region
+                     */
+                    std::string m_encryptRegion;
+                    bool m_encryptRegionHasBeenSet;
 
                 };
             }

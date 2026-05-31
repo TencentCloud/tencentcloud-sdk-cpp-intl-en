@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CLS Log Delivery Configuration
+                * 
                 */
                 class CLSInfo : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-                     * @return TopicOperation Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 获取
+                     * @return TopicOperation 
                      * 
                      */
                     std::string GetTopicOperation() const;
 
                     /**
-                     * 设置Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-                     * @param _topicOperation Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 设置
+                     * @param _topicOperation 
                      * 
                      */
                     void SetTopicOperation(const std::string& _topicOperation);
@@ -80,27 +68,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool TopicOperationHasBeenSet() const;
 
                     /**
-                     * 获取Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-                     * @return GroupOperation Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 获取
+                     * @return GroupOperation 
                      * 
                      */
                     std::string GetGroupOperation() const;
 
                     /**
-                     * 设置Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-                     * @param _groupOperation Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 设置
+                     * @param _groupOperation 
                      * 
                      */
                     void SetGroupOperation(const std::string& _groupOperation);
@@ -113,15 +89,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool GroupOperationHasBeenSet() const;
 
                     /**
-                     * 获取Log Delivery Region
-                     * @return Region Log Delivery Region
+                     * 获取
+                     * @return Region 
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Log Delivery Region
-                     * @param _region Log Delivery Region
+                     * 设置
+                     * @param _region 
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -134,15 +110,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取log topic id
-                     * @return TopicId log topic id
+                     * 获取
+                     * @return TopicId 
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置log topic id
-                     * @param _topicId log topic id
+                     * 设置
+                     * @param _topicId 
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -155,15 +131,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取log topic name
-                     * @return TopicName log topic name
+                     * 获取
+                     * @return TopicName 
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置log topic name
-                     * @param _topicName log topic name
+                     * 设置
+                     * @param _topicName 
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -176,15 +152,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取log set id
-                     * @return GroupId log set id
+                     * 获取
+                     * @return GroupId 
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置log set id
-                     * @param _groupId log set id
+                     * 设置
+                     * @param _groupId 
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -197,15 +173,15 @@ Combining the use of an existing log topic and creating a new log set is not all
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取log set name
-                     * @return GroupName log set name
+                     * 获取
+                     * @return GroupName 
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置log set name
-                     * @param _groupName log set name
+                     * 设置
+                     * @param _groupName 
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -220,49 +196,43 @@ Combining the use of an existing log topic and creating a new log set is not all
                 private:
 
                     /**
-                     * Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 
                      */
                     std::string m_topicOperation;
                     bool m_topicOperationHasBeenSet;
 
                     /**
-                     * Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+                     * 
                      */
                     std::string m_groupOperation;
                     bool m_groupOperationHasBeenSet;
 
                     /**
-                     * Log Delivery Region
+                     * 
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * log topic id
+                     * 
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * log topic name
+                     * 
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * log set id
+                     * 
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * log set name
+                     * 
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the minimum value of the cpu.
-                     * @return MinCpu Specifies the minimum value of the cpu.
+                     * 获取<p>cpu minimum value</p>
+                     * @return MinCpu <p>cpu minimum value</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置Specifies the minimum value of the cpu.
-                     * @param _minCpu Specifies the minimum value of the cpu.
+                     * 设置<p>cpu minimum value</p>
+                     * @param _minCpu <p>cpu minimum value</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of cpu.
-                     * @return MaxCpu Maximum value of cpu.
+                     * 获取<p>Maximum value of cpu</p>
+                     * @return MaxCpu <p>Maximum value of cpu</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置Maximum value of cpu.
-                     * @param _maxCpu Maximum value of cpu.
+                     * 设置<p>Maximum value of cpu</p>
+                     * @param _maxCpu <p>Maximum value of cpu</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取Maximum storage space.
-                     * @return MaxStorageSize Maximum storage space.
+                     * 获取<p>Maximum storage space</p>
+                     * @return MaxStorageSize <p>Maximum storage space</p>
                      * 
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置Maximum storage space.
-                     * @param _maxStorageSize Maximum storage space.
+                     * 设置<p>Maximum storage space</p>
+                     * @param _maxStorageSize <p>Maximum storage space</p>
                      * 
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether it is the default specification.
-                     * @return IsDefault Specifies whether it is the default specification.
+                     * 获取<p>Is the default specification</p>
+                     * @return IsDefault <p>Is the default specification</p>
                      * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
-                     * 设置Specifies whether it is the default specification.
-                     * @param _isDefault Specifies whether it is the default specification.
+                     * 设置<p>Is the default specification</p>
+                     * @param _isDefault <p>Is the default specification</p>
                      * 
                      */
                     void SetIsDefault(const int64_t& _isDefault);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool IsDefaultHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is inventory.
-                     * @return HasStock Whether there is inventory.
+                     * 获取<p>Whether there is inventory</p>
+                     * @return HasStock <p>Whether there is inventory</p>
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置Whether there is inventory.
-                     * @param _hasStock Whether there is inventory.
+                     * 设置<p>Whether there is inventory</p>
+                     * @param _hasStock <p>Whether there is inventory</p>
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool HasStockHasBeenSet() const;
 
                     /**
-                     * 获取Inventory quantity.
-                     * @return StockCount Inventory quantity.
+                     * 获取<p>Inventory quantity</p>
+                     * @return StockCount <p>Inventory quantity</p>
                      * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
-                     * 设置Inventory quantity.
-                     * @param _stockCount Inventory quantity.
+                     * 设置<p>Inventory quantity</p>
+                     * @param _stockCount <p>Inventory quantity</p>
                      * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
@@ -174,18 +174,18 @@ namespace TencentCloud
                     bool StockCountHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone inventory information.
+                     * 获取<p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneStockInfos Availability zone inventory information.
+                     * @return ZoneStockInfos <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ServerlessZoneStockInfo> GetZoneStockInfos() const;
 
                     /**
-                     * 设置Availability zone inventory information.
+                     * 设置<p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneStockInfos Availability zone inventory information.
+                     * @param _zoneStockInfos <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -201,43 +201,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specifies the minimum value of the cpu.
+                     * <p>cpu minimum value</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * Maximum value of cpu.
+                     * <p>Maximum value of cpu</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * Maximum storage space.
+                     * <p>Maximum storage space</p>
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
-                     * Specifies whether it is the default specification.
+                     * <p>Is the default specification</p>
                      */
                     int64_t m_isDefault;
                     bool m_isDefaultHasBeenSet;
 
                     /**
-                     * Whether there is inventory.
+                     * <p>Whether there is inventory</p>
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
 
                     /**
-                     * Inventory quantity.
+                     * <p>Inventory quantity</p>
                      */
                     int64_t m_stockCount;
                     bool m_stockCountHasBeenSet;
 
                     /**
-                     * Availability zone inventory information.
+                     * <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ServerlessZoneStockInfo> m_zoneStockInfos;

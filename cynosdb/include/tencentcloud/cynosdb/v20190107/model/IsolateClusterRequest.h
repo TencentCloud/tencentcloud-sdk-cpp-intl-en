@@ -84,6 +84,69 @@ namespace TencentCloud
                      */
                     bool DbTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsolateReasonTypes 
+                     * 
+                     */
+                    std::vector<int64_t> GetIsolateReasonTypes() const;
+
+                    /**
+                     * 设置
+                     * @param _isolateReasonTypes 
+                     * 
+                     */
+                    void SetIsolateReasonTypes(const std::vector<int64_t>& _isolateReasonTypes);
+
+                    /**
+                     * 判断参数 IsolateReasonTypes 是否已赋值
+                     * @return IsolateReasonTypes 是否已赋值
+                     * 
+                     */
+                    bool IsolateReasonTypesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsolateReason 
+                     * 
+                     */
+                    std::string GetIsolateReason() const;
+
+                    /**
+                     * 设置
+                     * @param _isolateReason 
+                     * 
+                     */
+                    void SetIsolateReason(const std::string& _isolateReason);
+
+                    /**
+                     * 判断参数 IsolateReason 是否已赋值
+                     * @return IsolateReason 是否已赋值
+                     * 
+                     */
+                    bool IsolateReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Retain backup, true - Retained (incur fees)
+                     * @return SaveBackup Retain backup, true - Retained (incur fees)
+                     * 
+                     */
+                    bool GetSaveBackup() const;
+
+                    /**
+                     * 设置Retain backup, true - Retained (incur fees)
+                     * @param _saveBackup Retain backup, true - Retained (incur fees)
+                     * 
+                     */
+                    void SetSaveBackup(const bool& _saveBackup);
+
+                    /**
+                     * 判断参数 SaveBackup 是否已赋值
+                     * @return SaveBackup 是否已赋值
+                     * 
+                     */
+                    bool SaveBackupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +160,24 @@ namespace TencentCloud
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<int64_t> m_isolateReasonTypes;
+                    bool m_isolateReasonTypesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_isolateReason;
+                    bool m_isolateReasonHasBeenSet;
+
+                    /**
+                     * Retain backup, true - Retained (incur fees)
+                     */
+                    bool m_saveBackup;
+                    bool m_saveBackupHasBeenSet;
 
                 };
             }

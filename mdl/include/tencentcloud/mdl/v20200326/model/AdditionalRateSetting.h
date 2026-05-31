@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * additional bit rate configuration.
+                * Additional bitrate configuration for video template.
                 */
                 class AdditionalRateSetting : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
-                     * @return VideoMaxBitrate The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+                     * 获取The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+                     * @return VideoMaxBitrate The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
                      * 
                      */
                     uint64_t GetVideoMaxBitrate() const;
 
                     /**
-                     * 设置The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
-                     * @param _videoMaxBitrate The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+                     * 设置The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+                     * @param _videoMaxBitrate The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
                      * 
                      */
                     void SetVideoMaxBitrate(const uint64_t& _videoMaxBitrate);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VideoMaxBitrateHasBeenSet() const;
 
                     /**
-                     * 获取Cache configuration supports configuring a Max Bitrate value of 1-4 times.
-                     * @return BufferSize Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+                     * 获取Cache configuration supports configuration as 1-4x the Max Bitrate value.
+                     * @return BufferSize Cache configuration supports configuration as 1-4x the Max Bitrate value.
                      * 
                      */
                     uint64_t GetBufferSize() const;
 
                     /**
-                     * 设置Cache configuration supports configuring a Max Bitrate value of 1-4 times.
-                     * @param _bufferSize Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+                     * 设置Cache configuration supports configuration as 1-4x the Max Bitrate value.
+                     * @param _bufferSize Cache configuration supports configuration as 1-4x the Max Bitrate value.
                      * 
                      */
                     void SetBufferSize(const uint64_t& _bufferSize);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BufferSizeHasBeenSet() const;
 
                     /**
-                     * 获取VBR scene is valid, video quality level, only supports user input numbers between 1-51.
-                     * @return QualityLevel VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+                     * 获取Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
+                     * @return QualityLevel Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
                      * 
                      */
                     uint64_t GetQualityLevel() const;
 
                     /**
-                     * 设置VBR scene is valid, video quality level, only supports user input numbers between 1-51.
-                     * @param _qualityLevel VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+                     * 设置Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
+                     * @param _qualityLevel Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
                      * 
                      */
                     void SetQualityLevel(const uint64_t& _qualityLevel);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+                     * The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
                      */
                     uint64_t m_videoMaxBitrate;
                     bool m_videoMaxBitrateHasBeenSet;
 
                     /**
-                     * Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+                     * Cache configuration supports configuration as 1-4x the Max Bitrate value.
                      */
                     uint64_t m_bufferSize;
                     bool m_bufferSizeHasBeenSet;
 
                     /**
-                     * VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+                     * Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
                      */
                     uint64_t m_qualityLevel;
                     bool m_qualityLevelHasBeenSet;

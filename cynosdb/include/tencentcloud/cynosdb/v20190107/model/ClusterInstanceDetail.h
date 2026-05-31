@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
+#include <tencentcloud/cynosdb/v20190107/model/AIOptimizerStatus.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Engine type
-                     * @return InstanceType Engine type
+                     * 获取<p>Engine type</p>
+                     * @return InstanceType <p>Engine type</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Engine type
-                     * @param _instanceType Engine type
+                     * 设置<p>Engine type</p>
+                     * @param _instanceType <p>Engine type</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status
-                     * @return InstanceStatus Instance status
+                     * 获取<p>Instance status</p>
+                     * @return InstanceStatus <p>Instance status</p>
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置Instance status
-                     * @param _instanceStatus Instance status
+                     * 设置<p>Instance status</p>
+                     * @param _instanceStatus <p>Instance status</p>
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance status description
-                     * @return InstanceStatusDesc Instance status description
+                     * 获取<p>Instance status description</p>
+                     * @return InstanceStatusDesc <p>Instance status description</p>
                      * 
                      */
                     std::string GetInstanceStatusDesc() const;
 
                     /**
-                     * 设置Instance status description
-                     * @param _instanceStatusDesc Instance status description
+                     * 设置<p>Instance status description</p>
+                     * @param _instanceStatusDesc <p>Instance status description</p>
                      * 
                      */
                     void SetInstanceStatusDesc(const std::string& _instanceStatusDesc);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool InstanceStatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return InstanceCpu Number of CPU cores
+                     * 获取<p>cpu cores</p>
+                     * @return InstanceCpu <p>cpu cores</p>
                      * 
                      */
                     int64_t GetInstanceCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _instanceCpu Number of CPU cores
+                     * 设置<p>cpu cores</p>
+                     * @param _instanceCpu <p>cpu cores</p>
                      * 
                      */
                     void SetInstanceCpu(const int64_t& _instanceCpu);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool InstanceCpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory
-                     * @return InstanceMemory Memory
+                     * 获取<p>Memory</p>
+                     * @return InstanceMemory <p>Memory</p>
                      * 
                      */
                     int64_t GetInstanceMemory() const;
 
                     /**
-                     * 设置Memory
-                     * @param _instanceMemory Memory
+                     * 设置<p>Memory</p>
+                     * @param _instanceMemory <p>Memory</p>
                      * 
                      */
                     void SetInstanceMemory(const int64_t& _instanceMemory);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool InstanceMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Disk
-                     * @return InstanceStorage Disk
+                     * 获取<p>hard disk</p>
+                     * @return InstanceStorage <p>hard disk</p>
                      * 
                      */
                     int64_t GetInstanceStorage() const;
 
                     /**
-                     * 设置Disk
-                     * @param _instanceStorage Disk
+                     * 设置<p>hard disk</p>
+                     * @param _instanceStorage <p>hard disk</p>
                      * 
                      */
                     void SetInstanceStorage(const int64_t& _instanceStorage);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool InstanceStorageHasBeenSet() const;
 
                     /**
-                     * 获取Instance role
-                     * @return InstanceRole Instance role
+                     * 获取<p>Instance role</p>
+                     * @return InstanceRole <p>Instance role</p>
                      * 
                      */
                     std::string GetInstanceRole() const;
 
                     /**
-                     * 设置Instance role
-                     * @param _instanceRole Instance role
+                     * 设置<p>Instance role</p>
+                     * @param _instanceRole <p>Instance role</p>
                      * 
                      */
                     void SetInstanceRole(const std::string& _instanceRole);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取Execution start time (seconds from 0 o'clock).	
-                     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).	
+                     * 获取<p>Execution start time (seconds from 00:00).</p>
+                     * @return MaintainStartTime <p>Execution start time (seconds from 00:00).</p>
                      * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
-                     * 设置Execution start time (seconds from 0 o'clock).	
-                     * @param _maintainStartTime Execution start time (seconds from 0 o'clock).	
+                     * 设置<p>Execution start time (seconds from 00:00).</p>
+                     * @param _maintainStartTime <p>Execution start time (seconds from 00:00).</p>
                      * 
                      */
                     void SetMaintainStartTime(const int64_t& _maintainStartTime);
@@ -258,15 +259,15 @@ namespace TencentCloud
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the continuous time. the unit is second.	
-                     * @return MaintainDuration Specifies the continuous time. the unit is second.	
+                     * 获取<p>Duration (unit: s)</p>
+                     * @return MaintainDuration <p>Duration (unit: s)</p>
                      * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
-                     * 设置Specifies the continuous time. the unit is second.	
-                     * @param _maintainDuration Specifies the continuous time. the unit is second.	
+                     * 设置<p>Duration (unit: s)</p>
+                     * @param _maintainDuration <p>Duration (unit: s)</p>
                      * 
                      */
                     void SetMaintainDuration(const int64_t& _maintainDuration);
@@ -279,15 +280,15 @@ namespace TencentCloud
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-                     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * 获取<p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+                     * @return MaintainWeekDays <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
                      * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-                     * @param _maintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * 设置<p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+                     * @param _maintainWeekDays <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
                      * 
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
@@ -300,15 +301,15 @@ namespace TencentCloud
                     bool MaintainWeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取serverless instance substatus.
-                     * @return ServerlessStatus serverless instance substatus.
+                     * 获取<p>serverless instance substatus</p>
+                     * @return ServerlessStatus <p>serverless instance substatus</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置serverless instance substatus.
-                     * @param _serverlessStatus serverless instance substatus.
+                     * 设置<p>serverless instance substatus</p>
+                     * @param _serverlessStatus <p>serverless instance substatus</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -321,15 +322,15 @@ namespace TencentCloud
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance task information.
-                     * @return InstanceTasks Instance task information.
+                     * 获取<p>Instance task information</p>
+                     * @return InstanceTasks <p>Instance task information</p>
                      * 
                      */
                     std::vector<ObjectTask> GetInstanceTasks() const;
 
                     /**
-                     * 设置Instance task information.
-                     * @param _instanceTasks Instance task information.
+                     * 设置<p>Instance task information</p>
+                     * @param _instanceTasks <p>Instance task information</p>
                      * 
                      */
                     void SetInstanceTasks(const std::vector<ObjectTask>& _instanceTasks);
@@ -342,23 +343,15 @@ namespace TencentCloud
                     bool InstanceTasksHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
-                     * @return InstanceDeviceType Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+                     * 获取<p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+                     * @return InstanceDeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      * 
                      */
                     std::string GetInstanceDeviceType() const;
 
                     /**
-                     * 设置Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
-                     * @param _instanceDeviceType Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+                     * 设置<p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+                     * @param _instanceDeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      * 
                      */
                     void SetInstanceDeviceType(const std::string& _instanceDeviceType);
@@ -371,19 +364,15 @@ namespace TencentCloud
                     bool InstanceDeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
-                     * @return InstanceStorageType Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+                     * 获取<p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+                     * @return InstanceStorageType <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
                      * 
                      */
                     std::string GetInstanceStorageType() const;
 
                     /**
-                     * 设置Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
-                     * @param _instanceStorageType Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+                     * 设置<p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+                     * @param _instanceStorageType <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
                      * 
                      */
                     void SetInstanceStorageType(const std::string& _instanceStorageType);
@@ -396,15 +385,15 @@ Description: this parameter returns a value only when querying resources belongi
                     bool InstanceStorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database type.
-                     * @return DbMode Database type.
+                     * 获取<p>Database type</p>
+                     * @return DbMode <p>Database type</p>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database type.
-                     * @param _dbMode Database type.
+                     * 设置<p>Database type</p>
+                     * @param _dbMode <p>Database type</p>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -417,19 +406,15 @@ Description: this parameter returns a value only when querying resources belongi
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取Node list
-Description: this parameter returns a value only when querying LibraDB resources.
-                     * @return NodeList Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+                     * 获取<p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+                     * @return NodeList <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
                      * 
                      */
                     std::vector<std::string> GetNodeList() const;
 
                     /**
-                     * 设置Node list
-Description: this parameter returns a value only when querying LibraDB resources.
-                     * @param _nodeList Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+                     * 设置<p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+                     * @param _nodeList <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
                      * 
                      */
                     void SetNodeList(const std::vector<std::string>& _nodeList);
@@ -441,119 +426,142 @@ Description: this parameter returns a value only when querying LibraDB resources
                      */
                     bool NodeListHasBeenSet() const;
 
+                    /**
+                     * 获取<p>AI optimizer status</p>
+                     * @return AIOptimizerStatus <p>AI optimizer status</p>
+                     * 
+                     */
+                    AIOptimizerStatus GetAIOptimizerStatus() const;
+
+                    /**
+                     * 设置<p>AI optimizer status</p>
+                     * @param _aIOptimizerStatus <p>AI optimizer status</p>
+                     * 
+                     */
+                    void SetAIOptimizerStatus(const AIOptimizerStatus& _aIOptimizerStatus);
+
+                    /**
+                     * 判断参数 AIOptimizerStatus 是否已赋值
+                     * @return AIOptimizerStatus 是否已赋值
+                     * 
+                     */
+                    bool AIOptimizerStatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Engine type
+                     * <p>Engine type</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance status
+                     * <p>Instance status</p>
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Instance status description
+                     * <p>Instance status description</p>
                      */
                     std::string m_instanceStatusDesc;
                     bool m_instanceStatusDescHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>cpu cores</p>
                      */
                     int64_t m_instanceCpu;
                     bool m_instanceCpuHasBeenSet;
 
                     /**
-                     * Memory
+                     * <p>Memory</p>
                      */
                     int64_t m_instanceMemory;
                     bool m_instanceMemoryHasBeenSet;
 
                     /**
-                     * Disk
+                     * <p>hard disk</p>
                      */
                     int64_t m_instanceStorage;
                     bool m_instanceStorageHasBeenSet;
 
                     /**
-                     * Instance role
+                     * <p>Instance role</p>
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * Execution start time (seconds from 0 o'clock).	
+                     * <p>Execution start time (seconds from 00:00).</p>
                      */
                     int64_t m_maintainStartTime;
                     bool m_maintainStartTimeHasBeenSet;
 
                     /**
-                     * Specifies the continuous time. the unit is second.	
+                     * <p>Duration (unit: s)</p>
                      */
                     int64_t m_maintainDuration;
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+                     * <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;
 
                     /**
-                     * serverless instance substatus.
+                     * <p>serverless instance substatus</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * Instance task information.
+                     * <p>Instance task information</p>
                      */
                     std::vector<ObjectTask> m_instanceTasks;
                     bool m_instanceTasksHasBeenSet;
 
                     /**
-                     * Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+                     * <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
                      */
                     std::string m_instanceDeviceType;
                     bool m_instanceDeviceTypeHasBeenSet;
 
                     /**
-                     * Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+                     * <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
                      */
                     std::string m_instanceStorageType;
                     bool m_instanceStorageTypeHasBeenSet;
 
                     /**
-                     * Database type.
+                     * <p>Database type</p>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+                     * <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
                      */
                     std::vector<std::string> m_nodeList;
                     bool m_nodeListHasBeenSet;
+
+                    /**
+                     * <p>AI optimizer status</p>
+                     */
+                    AIOptimizerStatus m_aIOptimizerStatus;
+                    bool m_aIOptimizerStatusHasBeenSet;
 
                 };
             }

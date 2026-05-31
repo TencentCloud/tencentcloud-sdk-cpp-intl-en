@@ -57,6 +57,8 @@
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupV2Request.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQGroupV2Response.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQMigrationTaskRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/CreateRocketMQMigrationTaskResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQNamespaceResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/CreateRocketMQRoleRequest.h>
@@ -356,6 +358,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRocketMQGroupV2Response> CreateRocketMQGroupV2Outcome;
                 typedef std::future<CreateRocketMQGroupV2Outcome> CreateRocketMQGroupV2OutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQGroupV2Request&, CreateRocketMQGroupV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQGroupV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRocketMQMigrationTaskResponse> CreateRocketMQMigrationTaskOutcome;
+                typedef std::future<CreateRocketMQMigrationTaskOutcome> CreateRocketMQMigrationTaskOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQMigrationTaskRequest&, CreateRocketMQMigrationTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQMigrationTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRocketMQNamespaceResponse> CreateRocketMQNamespaceOutcome;
                 typedef std::future<CreateRocketMQNamespaceOutcome> CreateRocketMQNamespaceOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::CreateRocketMQNamespaceRequest&, CreateRocketMQNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRocketMQNamespaceAsyncHandler;
@@ -866,6 +871,15 @@ This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, 
                 CreateRocketMQGroupV2Outcome CreateRocketMQGroupV2(const Model::CreateRocketMQGroupV2Request &request);
                 void CreateRocketMQGroupV2Async(const Model::CreateRocketMQGroupV2Request& request, const CreateRocketMQGroupV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateRocketMQGroupV2OutcomeCallable CreateRocketMQGroupV2Callable(const Model::CreateRocketMQGroupV2Request& request);
+
+                /**
+                 *Create a RocketMQ metadata migration task to batch create topics and consumer group data.
+                 * @param req CreateRocketMQMigrationTaskRequest
+                 * @return CreateRocketMQMigrationTaskOutcome
+                 */
+                CreateRocketMQMigrationTaskOutcome CreateRocketMQMigrationTask(const Model::CreateRocketMQMigrationTaskRequest &request);
+                void CreateRocketMQMigrationTaskAsync(const Model::CreateRocketMQMigrationTaskRequest& request, const CreateRocketMQMigrationTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRocketMQMigrationTaskOutcomeCallable CreateRocketMQMigrationTaskCallable(const Model::CreateRocketMQMigrationTaskRequest& request);
 
                 /**
                  *This API is used to create a RocketMQ namespace.

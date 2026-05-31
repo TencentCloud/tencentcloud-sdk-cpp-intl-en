@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Caption selector.
+                * Subtitle selector.
                 */
                 class CaptionSelector : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Caption selector name, which can contain 1-32 letters, digits, and underscores.
-                     * @return Name Caption selector name, which can contain 1-32 letters, digits, and underscores.
+                     * 获取Digits, uppercase and lowercase letters, underscore, length 1-32.
+                     * @return Name Digits, uppercase and lowercase letters, underscore, length 1-32.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Caption selector name, which can contain 1-32 letters, digits, and underscores.
-                     * @param _name Caption selector name, which can contain 1-32 letters, digits, and underscores.
+                     * 设置Digits, uppercase and lowercase letters, underscore, length 1-32.
+                     * @param _name Digits, uppercase and lowercase letters, underscore, length 1-32.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Caption source type, only support `SCTE-128`.
-                     * @return CaptionSourceType Caption source type, only support `SCTE-128`.
+                     * 获取Supports only `SCTE-128`.
+                     * @return CaptionSourceType Supports only `SCTE-128`.
                      * 
                      */
                     std::string GetCaptionSourceType() const;
 
                     /**
-                     * 设置Caption source type, only support `SCTE-128`.
-                     * @param _captionSourceType Caption source type, only support `SCTE-128`.
+                     * 设置Supports only `SCTE-128`.
+                     * @param _captionSourceType Supports only `SCTE-128`.
                      * 
                      */
                     void SetCaptionSourceType(const std::string& _captionSourceType);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Caption selector name, which can contain 1-32 letters, digits, and underscores.
+                     * Digits, uppercase and lowercase letters, underscore, length 1-32.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Caption source type, only support `SCTE-128`.
+                     * Supports only `SCTE-128`.
                      */
                     std::string m_captionSourceType;
                     bool m_captionSourceTypeHasBeenSet;

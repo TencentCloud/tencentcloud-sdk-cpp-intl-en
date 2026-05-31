@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio track index 1-based index mapping to the specified audio track integer starting from 1.
-                     * @return TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+                     * 获取Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
+                     * @return TrackIndex Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
                      * 
                      */
                     uint64_t GetTrackIndex() const;
 
                     /**
-                     * 设置Audio track index 1-based index mapping to the specified audio track integer starting from 1.
-                     * @param _trackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+                     * 设置Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
+                     * @param _trackIndex Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
                      * 
                      */
                     void SetTrackIndex(const uint64_t& _trackIndex);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+                     * Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
                      */
                     uint64_t m_trackIndex;
                     bool m_trackIndexHasBeenSet;

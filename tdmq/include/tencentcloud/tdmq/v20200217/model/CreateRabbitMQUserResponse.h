@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Username, which is used for login.
-                     * @return User Username, which is used for login.
+                     * 获取<p>Username, used when logging in</p>
+                     * @return User <p>Username, used when logging in</p>
                      * 
                      */
                     std::string GetUser() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Username, which is used for login.
+                     * <p>Username, used when logging in</p>
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;

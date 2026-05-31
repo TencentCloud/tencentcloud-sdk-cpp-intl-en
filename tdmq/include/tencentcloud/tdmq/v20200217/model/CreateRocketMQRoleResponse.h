@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Role name.
-                     * @return RoleName Role name.
+                     * 获取<p>Role name</p>
+                     * @return RoleName <p>Role name</p>
                      * 
                      */
                     std::string GetRoleName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool RoleNameHasBeenSet() const;
 
                     /**
-                     * 获取Role token.
-                     * @return Token Role token.
+                     * 获取<p>Role token</p>
+                     * @return Token <p>Role token</p>
                      * 
                      */
                     std::string GetToken() const;
@@ -72,9 +72,9 @@ namespace TencentCloud
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the remark description.
+                     * 获取<p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Specifies the remark description.
+                     * @return Remark <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -90,19 +90,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Role name.
+                     * <p>Role name</p>
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;
 
                     /**
-                     * Role token.
+                     * <p>Role token</p>
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * Specifies the remark description.
+                     * <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;

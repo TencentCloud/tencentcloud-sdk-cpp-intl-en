@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
-                     * @return ChannelMode Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+                     * 获取Sound track configuration. Available values: MONO, STEREO, 5.1.
+                     * @return ChannelMode Sound track configuration. Available values: MONO, STEREO, 5.1.
                      * 
                      */
                     std::string GetChannelMode() const;
 
                     /**
-                     * 设置Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
-                     * @param _channelMode Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+                     * 设置Sound track configuration. Available values: MONO, STEREO, 5.1.
+                     * @param _channelMode Sound track configuration. Available values: MONO, STEREO, 5.1.
                      * 
                      */
                     void SetChannelMode(const std::string& _channelMode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ChannelModeHasBeenSet() const;
 
                     /**
-                     * 获取Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
-                     * @return Profile Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+                     * 获取Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
+                     * @return Profile Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
                      * 
                      */
                     std::string GetProfile() const;
 
                     /**
-                     * 设置Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
-                     * @param _profile Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+                     * 设置Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
+                     * @param _profile Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
                      * 
                      */
                     void SetProfile(const std::string& _profile);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+                     * Sound track configuration. Available values: MONO, STEREO, 5.1.
                      */
                     std::string m_channelMode;
                     bool m_channelModeHasBeenSet;
 
                     /**
-                     * Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+                     * Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
                      */
                     std::string m_profile;
                     bool m_profileHasBeenSet;

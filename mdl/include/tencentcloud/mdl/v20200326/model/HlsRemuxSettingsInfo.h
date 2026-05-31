@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-                     * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * 获取Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+                     * @return SegmentDuration Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
                      * 
                      */
                     uint64_t GetSegmentDuration() const;
 
                     /**
-                     * 设置Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-                     * @param _segmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * 设置Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+                     * @param _segmentDuration Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
                      * 
                      */
                     void SetSegmentDuration(const uint64_t& _segmentDuration);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SegmentDurationHasBeenSet() const;
 
                     /**
-                     * 获取Number of segments. Value range: [3,30]. Default value: 5.
-                     * @return SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
+                     * 获取Number of shards. Input range [3, 30]. Default is 5.
+                     * @return SegmentNumber Number of shards. Input range [3, 30]. Default is 5.
                      * 
                      */
                     uint64_t GetSegmentNumber() const;
 
                     /**
-                     * 设置Number of segments. Value range: [3,30]. Default value: 5.
-                     * @param _segmentNumber Number of segments. Value range: [3,30]. Default value: 5.
+                     * 设置Number of shards. Input range [3, 30]. Default is 5.
+                     * @param _segmentNumber Number of shards. Input range [3, 30]. Default is 5.
                      * 
                      */
                     void SetSegmentNumber(const uint64_t& _segmentNumber);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SegmentNumberHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
-                     * @return PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * 获取Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+                     * @return PdtInsertion Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
                      * 
                      */
                     std::string GetPdtInsertion() const;
 
                     /**
-                     * 设置Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
-                     * @param _pdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * 设置Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+                     * @param _pdtInsertion Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
                      * 
                      */
                     void SetPdtInsertion(const std::string& _pdtInsertion);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PdtInsertionHasBeenSet() const;
 
                     /**
-                     * 获取PDT duration in seconds. Value range: (0,3000]. Default value: 600.
-                     * @return PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+                     * 获取Pdt duration in seconds. Input range (0, 3000]. Default 600.
+                     * @return PdtDuration Pdt duration in seconds. Input range (0, 3000]. Default 600.
                      * 
                      */
                     uint64_t GetPdtDuration() const;
 
                     /**
-                     * 设置PDT duration in seconds. Value range: (0,3000]. Default value: 600.
-                     * @param _pdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+                     * 设置Pdt duration in seconds. Input range (0, 3000]. Default 600.
+                     * @param _pdtDuration Pdt duration in seconds. Input range (0, 3000]. Default 600.
                      * 
                      */
                     void SetPdtDuration(const uint64_t& _pdtDuration);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PdtDurationHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
-                     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+                     * 获取Video packaging type, selectable SEPARATE|MERGE.
+                     * @return Scheme Video packaging type, selectable SEPARATE|MERGE.
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
-                     * @param _scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+                     * 设置Video packaging type, selectable SEPARATE|MERGE.
+                     * @param _scheme Video packaging type, selectable SEPARATE|MERGE.
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -152,19 +152,19 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
-                     * @return SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+                     * 获取Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+                     * @return SegmentType Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
-                     * @param _segmentType The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+                     * 设置Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+                     * @param _segmentType Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -177,15 +177,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool SegmentTypeHasBeenSet() const;
 
                     /**
-                     * 获取The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-                     * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * 获取When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+                     * @return H265PackageType When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
                      * 
                      */
                     std::string GetH265PackageType() const;
 
                     /**
-                     * 设置The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-                     * @param _h265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * 设置When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+                     * @param _h265PackageType When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
                      * 
                      */
                     void SetH265PackageType(const std::string& _h265PackageType);
@@ -198,15 +198,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool H265PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
-                     * @return LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+                     * 获取Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+                     * @return LowLatency Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
                      * 
                      */
                     uint64_t GetLowLatency() const;
 
                     /**
-                     * 设置Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
-                     * @param _lowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+                     * 设置Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+                     * @param _lowLatency Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
                      * 
                      */
                     void SetLowLatency(const uint64_t& _lowLatency);
@@ -219,15 +219,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool LowLatencyHasBeenSet() const;
 
                     /**
-                     * 获取Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
-                     * @return PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+                     * 获取Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+                     * @return PartialSegmentDuration Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
                      * 
                      */
                     uint64_t GetPartialSegmentDuration() const;
 
                     /**
-                     * 设置Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
-                     * @param _partialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+                     * 设置Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+                     * @param _partialSegmentDuration Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
                      * 
                      */
                     void SetPartialSegmentDuration(const uint64_t& _partialSegmentDuration);
@@ -240,15 +240,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool PartialSegmentDurationHasBeenSet() const;
 
                     /**
-                     * 获取Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
-                     * @return PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+                     * 获取Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+                     * @return PartialSegmentPlaySite Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
                      * 
                      */
                     uint64_t GetPartialSegmentPlaySite() const;
 
                     /**
-                     * 设置Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
-                     * @param _partialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+                     * 设置Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+                     * @param _partialSegmentPlaySite Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
                      * 
                      */
                     void SetPartialSegmentPlaySite(const uint64_t& _partialSegmentPlaySite);
@@ -261,15 +261,23 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool PartialSegmentPlaySiteHasBeenSet() const;
 
                     /**
-                     * 获取Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
-                     * @return StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * 获取Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+                     * @return StreamOrder Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
                      * 
                      */
                     uint64_t GetStreamOrder() const;
 
                     /**
-                     * 设置Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
-                     * @param _streamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * 设置Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+                     * @param _streamOrder Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
                      * 
                      */
                     void SetStreamOrder(const uint64_t& _streamOrder);
@@ -282,15 +290,23 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool StreamOrderHasBeenSet() const;
 
                     /**
-                     * 获取Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
-                     * @return VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * 获取Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+                     * @return VideoResolution Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
                      * 
                      */
                     uint64_t GetVideoResolution() const;
 
                     /**
-                     * 设置Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
-                     * @param _videoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * 设置Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+                     * @param _videoResolution Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
                      * 
                      */
                     void SetVideoResolution(const uint64_t& _videoResolution);
@@ -303,15 +319,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool VideoResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
-                     * @return EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * 获取Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+                     * @return EndListTag Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
                      * 
                      */
                     int64_t GetEndListTag() const;
 
                     /**
-                     * 设置Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
-                     * @param _endListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * 设置Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+                     * @param _endListTag Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
                      * 
                      */
                     void SetEndListTag(const int64_t& _endListTag);
@@ -324,15 +340,15 @@ Currently, fMP4 segments do not support DRM or time shifting.
                     bool EndListTagHasBeenSet() const;
 
                     /**
-                     * 获取Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
-                     * @return AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * 获取Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
+                     * @return AdMarkupType Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
                      * 
                      */
                     std::string GetAdMarkupType() const;
 
                     /**
-                     * 设置Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
-                     * @param _adMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * 设置Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
+                     * @param _adMarkupType Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
                      * 
                      */
                     void SetAdMarkupType(const std::string& _adMarkupType);
@@ -347,86 +363,90 @@ Currently, fMP4 segments do not support DRM or time shifting.
                 private:
 
                     /**
-                     * Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
                      */
                     uint64_t m_segmentDuration;
                     bool m_segmentDurationHasBeenSet;
 
                     /**
-                     * Number of segments. Value range: [3,30]. Default value: 5.
+                     * Number of shards. Input range [3, 30]. Default is 5.
                      */
                     uint64_t m_segmentNumber;
                     bool m_segmentNumberHasBeenSet;
 
                     /**
-                     * Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
                      */
                     std::string m_pdtInsertion;
                     bool m_pdtInsertionHasBeenSet;
 
                     /**
-                     * PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+                     * Pdt duration in seconds. Input range (0, 3000]. Default 600.
                      */
                     uint64_t m_pdtDuration;
                     bool m_pdtDurationHasBeenSet;
 
                     /**
-                     * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+                     * Video packaging type, selectable SEPARATE|MERGE.
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+                     * Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;
 
                     /**
-                     * The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
                      */
                     std::string m_h265PackageType;
                     bool m_h265PackageTypeHasBeenSet;
 
                     /**
-                     * Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+                     * Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
                      */
                     uint64_t m_lowLatency;
                     bool m_lowLatencyHasBeenSet;
 
                     /**
-                     * Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+                     * Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
                      */
                     uint64_t m_partialSegmentDuration;
                     bool m_partialSegmentDurationHasBeenSet;
 
                     /**
-                     * Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+                     * Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
                      */
                     uint64_t m_partialSegmentPlaySite;
                     bool m_partialSegmentPlaySiteHasBeenSet;
 
                     /**
-                     * Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+                     * Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
                      */
                     uint64_t m_streamOrder;
                     bool m_streamOrderHasBeenSet;
 
                     /**
-                     * Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+                     * Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
                      */
                     uint64_t m_videoResolution;
                     bool m_videoResolutionHasBeenSet;
 
                     /**
-                     * Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+                     * Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
                      */
                     int64_t m_endListTag;
                     bool m_endListTagHasBeenSet;
 
                     /**
-                     * Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+                     * Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
                      */
                     std::string m_adMarkupType;
                     bool m_adMarkupTypeHasBeenSet;

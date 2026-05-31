@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyParamItem.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxy.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +66,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return Cpu Number of CPU cores
+                     * 获取<p>Cpu cores</p>
+                     * @return Cpu <p>Cpu cores</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cpu Number of CPU cores
+                     * 设置<p>Cpu cores</p>
+                     * @param _cpu <p>Cpu cores</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -128,15 +129,36 @@ namespace TencentCloud
                     bool ReadOnlyCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-                     * @return InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+                     * 获取<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置<p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * @param _deviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+                     * @return InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
                      * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-                     * @param _instanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+                     * 设置<p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+                     * @param _instanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
                      * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
@@ -149,15 +171,15 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取<p>ID of the associated VPC network.</p>
+                     * @return VpcId <p>ID of the associated VPC network.</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置<p>ID of the associated VPC network.</p>
+                     * @param _vpcId <p>ID of the associated VPC network.</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -170,15 +192,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID. If `VpcId` is set, `SubnetId` is required.
-                     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
+                     * 获取<p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
+                     * @return SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID. If `VpcId` is set, `SubnetId` is required.
-                     * @param _subnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
+                     * 设置<p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
+                     * @param _subnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -233,15 +255,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-                     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * 获取<p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+                     * @return AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-                     * @param _autoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * 设置<p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+                     * @param _autoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -254,19 +276,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values: 
-<li> MYSQL </li>
-                     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 获取<p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+                     * @return DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type. Valid values: 
-<li> MYSQL </li>
-                     * @param _dbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 设置<p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+                     * @param _dbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -279,15 +297,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Order source. String length range: [0,64).
-                     * @return OrderSource Order source. String length range: [0,64).
+                     * 获取<p>Order source, string length range [0,64)</p>
+                     * @return OrderSource <p>Order source, string length range [0,64)</p>
                      * 
                      */
                     std::string GetOrderSource() const;
 
                     /**
-                     * 设置Order source. String length range: [0,64).
-                     * @param _orderSource Order source. String length range: [0,64).
+                     * 设置<p>Order source, string length range [0,64)</p>
+                     * @param _orderSource <p>Order source, string length range [0,64)</p>
                      * 
                      */
                     void SetOrderSource(const std::string& _orderSource);
@@ -300,15 +318,15 @@ namespace TencentCloud
                     bool OrderSourceHasBeenSet() const;
 
                     /**
-                     * 获取Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 获取<p>Transaction mode. 0: place order and pay; 1: place order</p>
+                     * @return DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @param _dealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 设置<p>Transaction mode. 0: place order and pay; 1: place order</p>
+                     * @param _dealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -321,15 +339,15 @@ namespace TencentCloud
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template ID
-                     * @return ParamTemplateId Parameter template ID
+                     * 获取<p>Parameter template ID</p>
+                     * @return ParamTemplateId <p>Parameter template ID</p>
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID
-                     * @param _paramTemplateId Parameter template ID
+                     * 设置<p>Parameter template ID</p>
+                     * @param _paramTemplateId <p>Parameter template ID</p>
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -342,15 +360,15 @@ namespace TencentCloud
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
-                     * @return InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     * 获取<p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+                     * @return InstanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
                      * 
                      */
                     std::vector<ModifyParamItem> GetInstanceParams() const;
 
                     /**
-                     * 设置Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
-                     * @param _instanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     * 设置<p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+                     * @param _instanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
                      * 
                      */
                     void SetInstanceParams(const std::vector<ModifyParamItem>& _instanceParams);
@@ -363,15 +381,15 @@ namespace TencentCloud
                     bool InstanceParamsHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID. You can specify an security group when creating a read-only instance.
-                     * @return SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+                     * 获取<p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+                     * @return SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID. You can specify an security group when creating a read-only instance.
-                     * @param _securityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+                     * 设置<p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+                     * @param _securityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -383,16 +401,37 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>proxy sync upgrade</p>
+                     * @return UpgradeProxy <p>proxy sync upgrade</p>
+                     * 
+                     */
+                    UpgradeProxy GetUpgradeProxy() const;
+
+                    /**
+                     * 设置<p>proxy sync upgrade</p>
+                     * @param _upgradeProxy <p>proxy sync upgrade</p>
+                     * 
+                     */
+                    void SetUpgradeProxy(const UpgradeProxy& _upgradeProxy);
+
+                    /**
+                     * 判断参数 UpgradeProxy 是否已赋值
+                     * @return UpgradeProxy 是否已赋值
+                     * 
+                     */
+                    bool UpgradeProxyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>Cpu cores</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
@@ -410,19 +449,25 @@ namespace TencentCloud
                     bool m_readOnlyCountHasBeenSet;
 
                     /**
-                     * Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+                     * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
+
+                    /**
+                     * <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>ID of the associated VPC network.</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID. If `VpcId` is set, `SubnetId` is required.
+                     * <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -440,47 +485,52 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Database type. Valid values: 
-<li> MYSQL </li>
+                     * <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Order source. String length range: [0,64).
+                     * <p>Order source, string length range [0,64)</p>
                      */
                     std::string m_orderSource;
                     bool m_orderSourceHasBeenSet;
 
                     /**
-                     * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * <p>Transaction mode. 0: place order and pay; 1: place order</p>
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * Parameter template ID
+                     * <p>Parameter template ID</p>
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     * <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
                      */
                     std::vector<ModifyParamItem> m_instanceParams;
                     bool m_instanceParamsHasBeenSet;
 
                     /**
-                     * Security group ID. You can specify an security group when creating a read-only instance.
+                     * <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * <p>proxy sync upgrade</p>
+                     */
+                    UpgradeProxy m_upgradeProxy;
+                    bool m_upgradeProxyHasBeenSet;
 
                 };
             }

@@ -71,22 +71,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
                      * @return AudioTemplateNames Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
                      * 
                      */
                     std::vector<std::string> GetAudioTemplateNames() const;
 
                     /**
                      * 设置Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
                      * @param _audioTemplateNames Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
                      * 
                      */
                     void SetAudioTemplateNames(const std::vector<std::string>& _audioTemplateNames);
@@ -99,19 +95,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AudioTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video transcoding template name array, with the maximum number of [0, 1].
+                     * @return VideoTemplateNames Video transcoding template name array, with the maximum number of [0, 1].
                      * 
                      */
                     std::vector<std::string> GetVideoTemplateNames() const;
 
                     /**
-                     * 设置Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _videoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video transcoding template name array, with the maximum number of [0, 1].
+                     * @param _videoTemplateNames Video transcoding template name array, with the maximum number of [0, 1].
                      * 
                      */
                     void SetVideoTemplateNames(const std::vector<std::string>& _videoTemplateNames);
@@ -124,15 +116,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VideoTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取SCTE-35 information configuration.
-                     * @return Scte35Settings SCTE-35 information configuration.
+                     * 获取Scte-35 information configuration.
+                     * @return Scte35Settings Scte-35 information configuration.
                      * 
                      */
                     Scte35SettingsInfo GetScte35Settings() const;
 
                     /**
-                     * 设置SCTE-35 information configuration.
-                     * @param _scte35Settings SCTE-35 information configuration.
+                     * 设置Scte-35 information configuration.
+                     * @param _scte35Settings Scte-35 information configuration.
                      * 
                      */
                     void SetScte35Settings(const Scte35SettingsInfo& _scte35Settings);
@@ -145,19 +137,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool Scte35SettingsHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Audio/video transcoding template name array, with the maximum number of 1.
+                     * @return AVTemplateNames Audio/video transcoding template name array, with the maximum number of 1.
                      * 
                      */
                     std::vector<std::string> GetAVTemplateNames() const;
 
                     /**
-                     * 设置Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _aVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Audio/video transcoding template name array, with the maximum number of 1.
+                     * @param _aVTemplateNames Audio/video transcoding template name array, with the maximum number of 1.
                      * 
                      */
                     void SetAVTemplateNames(const std::vector<std::string>& _aVTemplateNames);
@@ -170,15 +158,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool AVTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取For the subtitle template used, only the AVTemplateNames is valid.
-                     * @return CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+                     * 获取The used subtitle template is only valid for merge template.
+                     * @return CaptionTemplateNames The used subtitle template is only valid for merge template.
                      * 
                      */
                     std::vector<std::string> GetCaptionTemplateNames() const;
 
                     /**
-                     * 设置For the subtitle template used, only the AVTemplateNames is valid.
-                     * @param _captionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+                     * 设置The used subtitle template is only valid for merge template.
+                     * @param _captionTemplateNames The used subtitle template is only valid for merge template.
                      * 
                      */
                     void SetCaptionTemplateNames(const std::vector<std::string>& _captionTemplateNames);
@@ -191,15 +179,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool CaptionTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Meta information controls configuration.
-                     * @return TimedMetadataSettings Meta information controls configuration.
+                     * 获取Meta-information control configuration.
+                     * @return TimedMetadataSettings Meta-information control configuration.
                      * 
                      */
                     TimedMetadataSettingInfo GetTimedMetadataSettings() const;
 
                     /**
-                     * 设置Meta information controls configuration.
-                     * @param _timedMetadataSettings Meta information controls configuration.
+                     * 设置Meta-information control configuration.
+                     * @param _timedMetadataSettings Meta-information control configuration.
                      * 
                      */
                     void SetTimedMetadataSettings(const TimedMetadataSettingInfo& _timedMetadataSettings);
@@ -212,15 +200,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool TimedMetadataSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Frame capture template name array. Quantity limit: [0,1].
-                     * @return FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+                     * 获取Screenshot transcode template name array. Limit: 1.
+                     * @return FrameCaptureTemplateNames Screenshot transcode template name array. Limit: 1.
                      * 
                      */
                     std::vector<std::string> GetFrameCaptureTemplateNames() const;
 
                     /**
-                     * 设置Frame capture template name array. Quantity limit: [0,1].
-                     * @param _frameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+                     * 设置Screenshot transcode template name array. Limit: 1.
+                     * @param _frameCaptureTemplateNames Screenshot transcode template name array. Limit: 1.
                      * 
                      */
                     void SetFrameCaptureTemplateNames(const std::vector<std::string>& _frameCaptureTemplateNames);
@@ -233,15 +221,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool FrameCaptureTemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Name modification for sub m3u8.
-                     * @return NameModifier Name modification for sub m3u8.
+                     * 获取Modify the name of the sub-m3u8.
+                     * @return NameModifier Modify the name of the sub-m3u8.
                      * 
                      */
                     std::string GetNameModifier() const;
 
                     /**
-                     * 设置Name modification for sub m3u8.
-                     * @param _nameModifier Name modification for sub m3u8.
+                     * 设置Modify the name of the sub-m3u8.
+                     * @param _nameModifier Modify the name of the sub-m3u8.
                      * 
                      */
                     void SetNameModifier(const std::string& _nameModifier);
@@ -263,52 +251,49 @@ Note: this field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
                      */
                     std::vector<std::string> m_audioTemplateNames;
                     bool m_audioTemplateNamesHasBeenSet;
 
                     /**
-                     * Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video transcoding template name array, with the maximum number of [0, 1].
                      */
                     std::vector<std::string> m_videoTemplateNames;
                     bool m_videoTemplateNamesHasBeenSet;
 
                     /**
-                     * SCTE-35 information configuration.
+                     * Scte-35 information configuration.
                      */
                     Scte35SettingsInfo m_scte35Settings;
                     bool m_scte35SettingsHasBeenSet;
 
                     /**
-                     * Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Audio/video transcoding template name array, with the maximum number of 1.
                      */
                     std::vector<std::string> m_aVTemplateNames;
                     bool m_aVTemplateNamesHasBeenSet;
 
                     /**
-                     * For the subtitle template used, only the AVTemplateNames is valid.
+                     * The used subtitle template is only valid for merge template.
                      */
                     std::vector<std::string> m_captionTemplateNames;
                     bool m_captionTemplateNamesHasBeenSet;
 
                     /**
-                     * Meta information controls configuration.
+                     * Meta-information control configuration.
                      */
                     TimedMetadataSettingInfo m_timedMetadataSettings;
                     bool m_timedMetadataSettingsHasBeenSet;
 
                     /**
-                     * Frame capture template name array. Quantity limit: [0,1].
+                     * Screenshot transcode template name array. Limit: 1.
                      */
                     std::vector<std::string> m_frameCaptureTemplateNames;
                     bool m_frameCaptureTemplateNamesHasBeenSet;
 
                     /**
-                     * Name modification for sub m3u8.
+                     * Modify the name of the sub-m3u8.
                      */
                     std::string m_nameModifier;
                     bool m_nameModifierHasBeenSet;

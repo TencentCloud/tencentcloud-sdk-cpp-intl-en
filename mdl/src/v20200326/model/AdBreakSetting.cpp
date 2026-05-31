@@ -23,8 +23,10 @@ using namespace std;
 AdBreakSetting::AdBreakSetting() :
     m_formatHasBeenSet(false),
     m_durationHasBeenSet(false),
+    m_adSourceHasBeenSet(false),
     m_lSqueezeSettingHasBeenSet(false),
-    m_adSourceHasBeenSet(false)
+    m_pipSettingHasBeenSet(false),
+    m_borderFrameSettingHasBeenSet(false)
 {
 }
 
@@ -53,6 +55,16 @@ CoreInternalOutcome AdBreakSetting::Deserialize(const rapidjson::Value &value)
         m_durationHasBeenSet = true;
     }
 
+    if (value.HasMember("AdSource") && !value["AdSource"].IsNull())
+    {
+        if (!value["AdSource"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdBreakSetting.AdSource` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_adSource = string(value["AdSource"].GetString());
+        m_adSourceHasBeenSet = true;
+    }
+
     if (value.HasMember("LSqueezeSetting") && !value["LSqueezeSetting"].IsNull())
     {
         if (!value["LSqueezeSetting"].IsObject())
@@ -70,14 +82,38 @@ CoreInternalOutcome AdBreakSetting::Deserialize(const rapidjson::Value &value)
         m_lSqueezeSettingHasBeenSet = true;
     }
 
-    if (value.HasMember("AdSource") && !value["AdSource"].IsNull())
+    if (value.HasMember("PipSetting") && !value["PipSetting"].IsNull())
     {
-        if (!value["AdSource"].IsString())
+        if (!value["PipSetting"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `AdBreakSetting.AdSource` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AdBreakSetting.PipSetting` is not object type").SetRequestId(requestId));
         }
-        m_adSource = string(value["AdSource"].GetString());
-        m_adSourceHasBeenSet = true;
+
+        CoreInternalOutcome outcome = m_pipSetting.Deserialize(value["PipSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_pipSettingHasBeenSet = true;
+    }
+
+    if (value.HasMember("BorderFrameSetting") && !value["BorderFrameSetting"].IsNull())
+    {
+        if (!value["BorderFrameSetting"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AdBreakSetting.BorderFrameSetting` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_borderFrameSetting.Deserialize(value["BorderFrameSetting"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_borderFrameSettingHasBeenSet = true;
     }
 
 
@@ -103,6 +139,14 @@ void AdBreakSetting::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         value.AddMember(iKey, m_duration, allocator);
     }
 
+    if (m_adSourceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdSource";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_adSource.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_lSqueezeSettingHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -112,12 +156,22 @@ void AdBreakSetting::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         m_lSqueezeSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
-    if (m_adSourceHasBeenSet)
+    if (m_pipSettingHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AdSource";
+        string key = "PipSetting";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_adSource.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pipSetting.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_borderFrameSettingHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BorderFrameSetting";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_borderFrameSetting.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -155,6 +209,22 @@ bool AdBreakSetting::DurationHasBeenSet() const
     return m_durationHasBeenSet;
 }
 
+string AdBreakSetting::GetAdSource() const
+{
+    return m_adSource;
+}
+
+void AdBreakSetting::SetAdSource(const string& _adSource)
+{
+    m_adSource = _adSource;
+    m_adSourceHasBeenSet = true;
+}
+
+bool AdBreakSetting::AdSourceHasBeenSet() const
+{
+    return m_adSourceHasBeenSet;
+}
+
 LSqueezeSetting AdBreakSetting::GetLSqueezeSetting() const
 {
     return m_lSqueezeSetting;
@@ -171,19 +241,35 @@ bool AdBreakSetting::LSqueezeSettingHasBeenSet() const
     return m_lSqueezeSettingHasBeenSet;
 }
 
-string AdBreakSetting::GetAdSource() const
+PipSetting AdBreakSetting::GetPipSetting() const
 {
-    return m_adSource;
+    return m_pipSetting;
 }
 
-void AdBreakSetting::SetAdSource(const string& _adSource)
+void AdBreakSetting::SetPipSetting(const PipSetting& _pipSetting)
 {
-    m_adSource = _adSource;
-    m_adSourceHasBeenSet = true;
+    m_pipSetting = _pipSetting;
+    m_pipSettingHasBeenSet = true;
 }
 
-bool AdBreakSetting::AdSourceHasBeenSet() const
+bool AdBreakSetting::PipSettingHasBeenSet() const
 {
-    return m_adSourceHasBeenSet;
+    return m_pipSettingHasBeenSet;
+}
+
+BorderFrameSetting AdBreakSetting::GetBorderFrameSetting() const
+{
+    return m_borderFrameSetting;
+}
+
+void AdBreakSetting::SetBorderFrameSetting(const BorderFrameSetting& _borderFrameSetting)
+{
+    m_borderFrameSetting = _borderFrameSetting;
+    m_borderFrameSettingHasBeenSet = true;
+}
+
+bool AdBreakSetting::BorderFrameSettingHasBeenSet() const
+{
+    return m_borderFrameSettingHasBeenSet;
 }
 

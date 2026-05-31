@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取Limit on the number of records. The default value is 20.
+                     * @return Limit Limit on the number of records. The default value is 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param _limit Maximum number
+                     * 设置Limit on the number of records. The default value is 20.
+                     * @param _limit Limit on the number of records. The default value is 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * Limit on the number of records. The default value is 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

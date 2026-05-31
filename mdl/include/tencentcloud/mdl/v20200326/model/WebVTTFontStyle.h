@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
-                     * @return TextColor Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * 获取Text color, 6 hexadecimal characters in RGB (not required #).
+                     * @return TextColor Text color, 6 hexadecimal characters in RGB (not required #).
                      * 
                      */
                     std::string GetTextColor() const;
 
                     /**
-                     * 设置Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
-                     * @param _textColor Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * 设置Text color, 6 hexadecimal characters in RGB (not required #).
+                     * @param _textColor Text color, 6 hexadecimal characters in RGB (not required #).
                      * 
                      */
                     void SetTextColor(const std::string& _textColor);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextColorHasBeenSet() const;
 
                     /**
-                     * 获取Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
-                     * @return BackgroundColor Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * 获取Background color, 6 hexadecimal characters in RGB (not required #)
+                     * @return BackgroundColor Background color, 6 hexadecimal characters in RGB (not required #)
                      * 
                      */
                     std::string GetBackgroundColor() const;
 
                     /**
-                     * 设置Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
-                     * @param _backgroundColor Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * 设置Background color, 6 hexadecimal characters in RGB (not required #)
+                     * @param _backgroundColor Background color, 6 hexadecimal characters in RGB (not required #)
                      * 
                      */
                     void SetBackgroundColor(const std::string& _backgroundColor);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackgroundColorHasBeenSet() const;
 
                     /**
-                     * 获取Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
-                     * @return BackgroundAlpha Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
+                     * 获取Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
+                     * @return BackgroundAlpha Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
                      * 
                      */
                     int64_t GetBackgroundAlpha() const;
 
                     /**
-                     * 设置Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
-                     * @param _backgroundAlpha Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
+                     * 设置Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
+                     * @param _backgroundAlpha Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
                      * 
                      */
                     void SetBackgroundAlpha(const int64_t& _backgroundAlpha);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BackgroundAlphaHasBeenSet() const;
 
                     /**
-                     * 获取Font size, in units of vh (1% of height), default value 0 means automatic.
-                     * @return FontSize Font size, in units of vh (1% of height), default value 0 means automatic.
+                     * 获取Font size, in vh (1% of height), default value 0 means auto.
+                     * @return FontSize Font size, in vh (1% of height), default value 0 means auto.
                      * 
                      */
                     int64_t GetFontSize() const;
 
                     /**
-                     * 设置Font size, in units of vh (1% of height), default value 0 means automatic.
-                     * @param _fontSize Font size, in units of vh (1% of height), default value 0 means automatic.
+                     * 设置Font size, in vh (1% of height), default value 0 means auto.
+                     * @param _fontSize Font size, in vh (1% of height), default value 0 means auto.
                      * 
                      */
                     void SetFontSize(const int64_t& _fontSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
-                     * @return Line The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
+                     * 获取The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
+                     * @return Line The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
                      * 
                      */
                     std::string GetLine() const;
 
                     /**
-                     * 设置The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
-                     * @param _line The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
+                     * 设置The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
+                     * @param _line The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
                      * 
                      */
                     void SetLine(const std::string& _line);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool LineHasBeenSet() const;
 
                     /**
-                     * 获取The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
-                     * @return LineAlignment The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
+                     * 获取The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
+                     * @return LineAlignment The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
                      * 
                      */
                     std::string GetLineAlignment() const;
 
                     /**
-                     * 设置The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
-                     * @param _lineAlignment The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
+                     * 设置The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
+                     * @param _lineAlignment The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
                      * 
                      */
                     void SetLineAlignment(const std::string& _lineAlignment);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool LineAlignmentHasBeenSet() const;
 
                     /**
-                     * 获取The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
-                     * @return Position The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
+                     * 获取The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
+                     * @return Position The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
                      * 
                      */
                     std::string GetPosition() const;
 
                     /**
-                     * 设置The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
-                     * @param _position The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
+                     * 设置The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
+                     * @param _position The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
                      * 
                      */
                     void SetPosition(const std::string& _position);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PositionHasBeenSet() const;
 
                     /**
-                     * 获取The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
-                     * @return PositionAlignment The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
+                     * 获取The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
+                     * @return PositionAlignment The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
                      * 
                      */
                     std::string GetPositionAlignment() const;
 
                     /**
-                     * 设置The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
-                     * @param _positionAlignment The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
+                     * 设置The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
+                     * @param _positionAlignment The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
                      * 
                      */
                     void SetPositionAlignment(const std::string& _positionAlignment);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool PositionAlignmentHasBeenSet() const;
 
                     /**
-                     * 获取Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
-                     * @return CueSize Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
+                     * 获取The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
+                     * @return CueSize The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
                      * 
                      */
                     std::string GetCueSize() const;
 
                     /**
-                     * 设置Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
-                     * @param _cueSize Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
+                     * 设置The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
+                     * @param _cueSize The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
                      * 
                      */
                     void SetCueSize(const std::string& _cueSize);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CueSizeHasBeenSet() const;
 
                     /**
-                     * 获取Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
-                     * @return TextAlignment Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
+                     * 获取Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
+                     * @return TextAlignment Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
                      * 
                      */
                     std::string GetTextAlignment() const;
 
                     /**
-                     * 设置Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
-                     * @param _textAlignment Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
+                     * 设置Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
+                     * @param _textAlignment Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
                      * 
                      */
                     void SetTextAlignment(const std::string& _textAlignment);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * Text color, 6 hexadecimal characters in RGB (not required #).
                      */
                     std::string m_textColor;
                     bool m_textColorHasBeenSet;
 
                     /**
-                     * Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+                     * Background color, 6 hexadecimal characters in RGB (not required #)
                      */
                     std::string m_backgroundColor;
                     bool m_backgroundColorHasBeenSet;
 
                     /**
-                     * Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
+                     * Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
                      */
                     int64_t m_backgroundAlpha;
                     bool m_backgroundAlphaHasBeenSet;
 
                     /**
-                     * Font size, in units of vh (1% of height), default value 0 means automatic.
+                     * Font size, in vh (1% of height), default value 0 means auto.
                      */
                     int64_t m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
+                     * The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
                      */
                     std::string m_line;
                     bool m_lineHasBeenSet;
 
                     /**
-                     * The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
+                     * The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
                      */
                     std::string m_lineAlignment;
                     bool m_lineAlignmentHasBeenSet;
 
                     /**
-                     * The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
+                     * The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
                      */
                     std::string m_position;
                     bool m_positionHasBeenSet;
 
                     /**
-                     * The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
+                     * The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
                      */
                     std::string m_positionAlignment;
                     bool m_positionAlignmentHasBeenSet;
 
                     /**
-                     * Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
+                     * The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
                      */
                     std::string m_cueSize;
                     bool m_cueSizeHasBeenSet;
 
                     /**
-                     * Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
+                     * Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
                      */
                     std::string m_textAlignment;
                     bool m_textAlignmentHasBeenSet;

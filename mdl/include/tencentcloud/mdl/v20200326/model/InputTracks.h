@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio track configuration list.
                 */
                 class InputTracks : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio track configuration information.
-                     * @return Tracks Audio track configuration information.
+                     * 获取Audio track configuration message.
+                     * @return Tracks Audio track configuration message.
                      * 
                      */
                     std::vector<InputTrack> GetTracks() const;
 
                     /**
-                     * 设置Audio track configuration information.
-                     * @param _tracks Audio track configuration information.
+                     * 设置Audio track configuration message.
+                     * @param _tracks Audio track configuration message.
                      * 
                      */
                     void SetTracks(const std::vector<InputTrack>& _tracks);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio track configuration information.
+                     * Audio track configuration message.
                      */
                     std::vector<InputTrack> m_tracks;
                     bool m_tracksHasBeenSet;

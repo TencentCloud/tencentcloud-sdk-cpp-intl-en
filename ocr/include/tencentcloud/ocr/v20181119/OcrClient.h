@@ -49,6 +49,8 @@
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MainlandPermitOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/MainlandPermitOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/PODAuditAIRequest.h>
+#include <tencentcloud/ocr/v20181119/model/PODAuditAIResponse.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/PermitOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilCommonOCRRequest.h>
@@ -158,6 +160,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::MainlandPermitOCRResponse> MainlandPermitOCROutcome;
                 typedef std::future<MainlandPermitOCROutcome> MainlandPermitOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::MainlandPermitOCRRequest&, MainlandPermitOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> MainlandPermitOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::PODAuditAIResponse> PODAuditAIOutcome;
+                typedef std::future<PODAuditAIOutcome> PODAuditAIOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::PODAuditAIRequest&, PODAuditAIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PODAuditAIAsyncHandler;
                 typedef Outcome<Core::Error, Model::PermitOCRResponse> PermitOCROutcome;
                 typedef std::future<PermitOCROutcome> PermitOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::PermitOCRRequest&, PermitOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> PermitOCRAsyncHandler;
@@ -791,6 +796,15 @@ A maximum of 20 requests can be initiated per second for this API.
                 MainlandPermitOCROutcome MainlandPermitOCR(const Model::MainlandPermitOCRRequest &request);
                 void MainlandPermitOCRAsync(const Model::MainlandPermitOCRRequest& request, const MainlandPermitOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 MainlandPermitOCROutcomeCallable MainlandPermitOCRCallable(const Model::MainlandPermitOCRRequest& request);
+
+                /**
+                 *The POD intelligent review deeply integrates multimodal large model image understanding technology, targeting the logistics last-mile delivery scenario to provide high-precision POD compliance audit service. The system auto-recognizes ticket imperfections and risks of non-compliance, helping businesses achieve standardized control in the delivery process and effectively avoid customer complaints and disputes caused by non-compliant credentials.
+                 * @param req PODAuditAIRequest
+                 * @return PODAuditAIOutcome
+                 */
+                PODAuditAIOutcome PODAuditAI(const Model::PODAuditAIRequest &request);
+                void PODAuditAIAsync(const Model::PODAuditAIRequest& request, const PODAuditAIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PODAuditAIOutcomeCallable PODAuditAICallable(const Model::PODAuditAIRequest& request);
 
                 /**
                  *This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Thumbnail configuration
                 */
                 class ThumbnailSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
-                     * @return ThumbnailEnabled Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+                     * 获取Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
+                     * @return ThumbnailEnabled Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
                      * 
                      */
                     int64_t GetThumbnailEnabled() const;
 
                     /**
-                     * 设置Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
-                     * @param _thumbnailEnabled Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+                     * 设置Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
+                     * @param _thumbnailEnabled Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
                      * 
                      */
                     void SetThumbnailEnabled(const int64_t& _thumbnailEnabled);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+                     * Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
                      */
                     int64_t m_thumbnailEnabled;
                     bool m_thumbnailEnabledHasBeenSet;

@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool HighLogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * @return AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * 获取Audit rule (deprecated).
+                     * @return AuditRuleFilters Audit rule (deprecated).
                      * @deprecated
                      */
                     std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
 
                     /**
-                     * 设置Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * @param _auditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * 设置Audit rule (deprecated).
+                     * @param _auditRuleFilters Audit rule (deprecated).
                      * @deprecated
                      */
                     void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
@@ -148,6 +148,27 @@ namespace TencentCloud
                      */
                     bool RuleTemplateIdsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AuditAll 
+                     * 
+                     */
+                    bool GetAuditAll() const;
+
+                    /**
+                     * 设置
+                     * @param _auditAll 
+                     * 
+                     */
+                    void SetAuditAll(const bool& _auditAll);
+
+                    /**
+                     * 判断参数 AuditAll 是否已赋值
+                     * @return AuditAll 是否已赋值
+                     * 
+                     */
+                    bool AuditAllHasBeenSet() const;
+
                 private:
 
                     /**
@@ -169,7 +190,7 @@ namespace TencentCloud
                     bool m_highLogExpireDayHasBeenSet;
 
                     /**
-                     * Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * Audit rule (deprecated).
                      */
                     std::vector<AuditRuleFilters> m_auditRuleFilters;
                     bool m_auditRuleFiltersHasBeenSet;
@@ -179,6 +200,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_auditAll;
+                    bool m_auditAllHasBeenSet;
 
                 };
             }

@@ -105,6 +105,69 @@ namespace TencentCloud
                      */
                     bool DbTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance Refund Reason Types
+                     * @return IsolateReasonTypes Instance Refund Reason Types
+                     * 
+                     */
+                    std::vector<int64_t> GetIsolateReasonTypes() const;
+
+                    /**
+                     * 设置Instance Refund Reason Types
+                     * @param _isolateReasonTypes Instance Refund Reason Types
+                     * 
+                     */
+                    void SetIsolateReasonTypes(const std::vector<int64_t>& _isolateReasonTypes);
+
+                    /**
+                     * 判断参数 IsolateReasonTypes 是否已赋值
+                     * @return IsolateReasonTypes 是否已赋值
+                     * 
+                     */
+                    bool IsolateReasonTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Instance Refund Reason Supplement
+                     * @return IsolateReason Instance Refund Reason Supplement
+                     * 
+                     */
+                    std::string GetIsolateReason() const;
+
+                    /**
+                     * 设置Instance Refund Reason Supplement
+                     * @param _isolateReason Instance Refund Reason Supplement
+                     * 
+                     */
+                    void SetIsolateReason(const std::string& _isolateReason);
+
+                    /**
+                     * 判断参数 IsolateReason 是否已赋值
+                     * @return IsolateReason 是否已赋值
+                     * 
+                     */
+                    bool IsolateReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Backup retention
+                     * @return SaveBackup Backup retention
+                     * 
+                     */
+                    bool GetSaveBackup() const;
+
+                    /**
+                     * 设置Backup retention
+                     * @param _saveBackup Backup retention
+                     * 
+                     */
+                    void SetSaveBackup(const bool& _saveBackup);
+
+                    /**
+                     * 判断参数 SaveBackup 是否已赋值
+                     * @return SaveBackup 是否已赋值
+                     * 
+                     */
+                    bool SaveBackupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +187,24 @@ namespace TencentCloud
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
+
+                    /**
+                     * Instance Refund Reason Types
+                     */
+                    std::vector<int64_t> m_isolateReasonTypes;
+                    bool m_isolateReasonTypesHasBeenSet;
+
+                    /**
+                     * Instance Refund Reason Supplement
+                     */
+                    std::string m_isolateReason;
+                    bool m_isolateReasonHasBeenSet;
+
+                    /**
+                     * Backup retention
+                     */
+                    bool m_saveBackup;
+                    bool m_saveBackupHasBeenSet;
 
                 };
             }

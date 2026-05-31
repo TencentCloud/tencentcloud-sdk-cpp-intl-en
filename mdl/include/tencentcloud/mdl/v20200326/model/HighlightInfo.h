@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Collection configuration.
+                * Highlight configuration.
                 */
                 class HighlightInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
-                     * @return HighlightEnabled Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
+                     * 获取Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
+                     * @return HighlightEnabled Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
                      * 
                      */
                     uint64_t GetHighlightEnabled() const;
 
                     /**
-                     * 设置Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
-                     * @param _highlightEnabled Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
+                     * 设置Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
+                     * @param _highlightEnabled Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
                      * 
                      */
                     void SetHighlightEnabled(const uint64_t& _highlightEnabled);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool HighlightEnabledHasBeenSet() const;
 
                     /**
-                     * 获取The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
-                     * @return Type The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
+                     * 获取Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
+                     * @return Type Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
-                     * @param _type The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
+                     * 设置Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
+                     * @param _type Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +93,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS, the region where COS is stored.
-                     * @return Region Valid when Type is COS, the region where COS is stored.
+                     * 获取Valid when Type is COS. Region of COS storage.
+                     * @return Region Valid when Type is COS. Region of COS storage.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Valid when Type is COS, the region where COS is stored.
-                     * @param _region Valid when Type is COS, the region where COS is stored.
+                     * 设置Valid when Type is COS. Region of COS storage.
+                     * @param _region Valid when Type is COS. Region of COS storage.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -110,15 +114,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS, the bucket name stored in COS.
-                     * @return Bucket Valid when Type is COS, the bucket name stored in COS.
+                     * 获取Valid when Type is COS. Bucket name of COS storage.
+                     * @return Bucket Valid when Type is COS. Bucket name of COS storage.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Valid when Type is COS, the bucket name stored in COS.
-                     * @param _bucket Valid when Type is COS, the bucket name stored in COS.
+                     * 设置Valid when Type is COS. Bucket name of COS storage.
+                     * @param _bucket Valid when Type is COS. Bucket name of COS storage.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -131,15 +135,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS, the path where cos is stored.
-                     * @return Path Valid when Type is COS, the path where cos is stored.
+                     * 获取Valid when Type is COS. Path of COS storage.
+                     * @return Path Valid when Type is COS. Path of COS storage.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Valid when Type is COS, the path where cos is stored.
-                     * @param _path Valid when Type is COS, the path where cos is stored.
+                     * 设置Valid when Type is COS. Path of COS storage.
+                     * @param _path Valid when Type is COS. Path of COS storage.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -152,15 +156,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS, the file name stored in cos.
-                     * @return Filename Valid when Type is COS, the file name stored in cos.
+                     * 获取Valid when Type is COS. Name of the stored file in COS.
+                     * @return Filename Valid when Type is COS. Name of the stored file in COS.
                      * 
                      */
                     std::string GetFilename() const;
 
                     /**
-                     * 设置Valid when Type is COS, the file name stored in cos.
-                     * @param _filename Valid when Type is COS, the file name stored in cos.
+                     * 设置Valid when Type is COS. Name of the stored file in COS.
+                     * @param _filename Valid when Type is COS. Name of the stored file in COS.
                      * 
                      */
                     void SetFilename(const std::string& _filename);
@@ -173,15 +177,19 @@ namespace TencentCloud
                     bool FilenameHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
-                     * @return TimestampFormat Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
+                     * 获取Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
+                     * @return TimestampFormat Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
                      * 
                      */
                     std::string GetTimestampFormat() const;
 
                     /**
-                     * 设置Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
-                     * @param _timestampFormat Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
+                     * 设置Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
+                     * @param _timestampFormat Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
                      * 
                      */
                     void SetTimestampFormat(const std::string& _timestampFormat);
@@ -194,15 +202,15 @@ namespace TencentCloud
                     bool TimestampFormatHasBeenSet() const;
 
                     /**
-                     * 获取Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
-                     * @return AudioSelectorNames Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+                     * 获取Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
+                     * @return AudioSelectorNames Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
                      * 
                      */
                     std::vector<std::string> GetAudioSelectorNames() const;
 
                     /**
-                     * 设置Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
-                     * @param _audioSelectorNames Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+                     * 设置Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
+                     * @param _audioSelectorNames Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
                      * 
                      */
                     void SetAudioSelectorNames(const std::vector<std::string>& _audioSelectorNames);
@@ -217,49 +225,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
+                     * Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
                      */
                     uint64_t m_highlightEnabled;
                     bool m_highlightEnabledHasBeenSet;
 
                     /**
-                     * The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
+                     * Products to save results. Option: COS.
+Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Valid when Type is COS, the region where COS is stored.
+                     * Valid when Type is COS. Region of COS storage.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Valid when Type is COS, the bucket name stored in COS.
+                     * Valid when Type is COS. Bucket name of COS storage.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Valid when Type is COS, the path where cos is stored.
+                     * Valid when Type is COS. Path of COS storage.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Valid when Type is COS, the file name stored in cos.
+                     * Valid when Type is COS. Name of the stored file in COS.
                      */
                     std::string m_filename;
                     bool m_filenameHasBeenSet;
 
                     /**
-                     * Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
+                     * Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+unix is a second-level timestamp. utc 0 represents the year, month, day.
                      */
                     std::string m_timestampFormat;
                     bool m_timestampFormatHasBeenSet;
 
                     /**
-                     * Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+                     * Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
                      */
                     std::vector<std::string> m_audioSelectorNames;
                     bool m_audioSelectorNamesHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateBackupVaultItem.h>
 
 
 namespace TencentCloud
@@ -35,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Logical Backup Configuration Information
+                * 
                 */
                 class LogicBackupConfigInfo : public AbstractModel
                 {
@@ -110,15 +111,19 @@ namespace TencentCloud
                     bool LogicBackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the retention time for automatic logical backup.
-                     * @return LogicReserveDuration Specifies the retention time for automatic logical backup.
+                     * 获取Automatic logical backup retention time.
+Unit: seconds.
+                     * @return LogicReserveDuration Automatic logical backup retention time.
+Unit: seconds.
                      * 
                      */
                     uint64_t GetLogicReserveDuration() const;
 
                     /**
-                     * 设置Specifies the retention time for automatic logical backup.
-                     * @param _logicReserveDuration Specifies the retention time for automatic logical backup.
+                     * 设置Automatic logical backup retention time.
+Unit: seconds.
+                     * @param _logicReserveDuration Automatic logical backup retention time.
+Unit: seconds.
                      * 
                      */
                     void SetLogicReserveDuration(const uint64_t& _logicReserveDuration);
@@ -131,15 +136,19 @@ namespace TencentCloud
                     bool LogicReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Whether cross-regional logical backup is enabled.
-                     * @return LogicCrossRegionsEnable Whether cross-regional logical backup is enabled.
+                     * 获取Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
+                     * @return LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
                      * 
                      */
                     std::string GetLogicCrossRegionsEnable() const;
 
                     /**
-                     * 设置Whether cross-regional logical backup is enabled.
-                     * @param _logicCrossRegionsEnable Whether cross-regional logical backup is enabled.
+                     * 设置Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
+                     * @param _logicCrossRegionsEnable Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
                      * 
                      */
                     void SetLogicCrossRegionsEnable(const std::string& _logicCrossRegionsEnable);
@@ -152,15 +161,15 @@ namespace TencentCloud
                     bool LogicCrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取Logical Backup Cross-Region
-                     * @return LogicCrossRegions Logical Backup Cross-Region
+                     * 获取
+                     * @return LogicCrossRegions 
                      * 
                      */
                     std::vector<std::string> GetLogicCrossRegions() const;
 
                     /**
-                     * 设置Logical Backup Cross-Region
-                     * @param _logicCrossRegions Logical Backup Cross-Region
+                     * 设置
+                     * @param _logicCrossRegions 
                      * 
                      */
                     void SetLogicCrossRegions(const std::vector<std::string>& _logicCrossRegions);
@@ -171,6 +180,27 @@ namespace TencentCloud
                      * 
                      */
                     bool LogicCrossRegionsHasBeenSet() const;
+
+                    /**
+                     * 获取Backup delivery relationship
+                     * @return AutoCopyVaults Backup delivery relationship
+                     * 
+                     */
+                    std::vector<CreateBackupVaultItem> GetAutoCopyVaults() const;
+
+                    /**
+                     * 设置Backup delivery relationship
+                     * @param _autoCopyVaults Backup delivery relationship
+                     * 
+                     */
+                    void SetAutoCopyVaults(const std::vector<CreateBackupVaultItem>& _autoCopyVaults);
+
+                    /**
+                     * 判断参数 AutoCopyVaults 是否已赋值
+                     * @return AutoCopyVaults 是否已赋值
+                     * 
+                     */
+                    bool AutoCopyVaultsHasBeenSet() const;
 
                 private:
 
@@ -193,22 +223,30 @@ namespace TencentCloud
                     bool m_logicBackupTimeEndHasBeenSet;
 
                     /**
-                     * Specifies the retention time for automatic logical backup.
+                     * Automatic logical backup retention time.
+Unit: seconds.
                      */
                     uint64_t m_logicReserveDuration;
                     bool m_logicReserveDurationHasBeenSet;
 
                     /**
-                     * Whether cross-regional logical backup is enabled.
+                     * Is cross-regional logical backup enabled?.
+Valid values: ON/OFF.
                      */
                     std::string m_logicCrossRegionsEnable;
                     bool m_logicCrossRegionsEnableHasBeenSet;
 
                     /**
-                     * Logical Backup Cross-Region
+                     * 
                      */
                     std::vector<std::string> m_logicCrossRegions;
                     bool m_logicCrossRegionsHasBeenSet;
+
+                    /**
+                     * Backup delivery relationship
+                     */
+                    std::vector<CreateBackupVaultItem> m_autoCopyVaults;
+                    bool m_autoCopyVaultsHasBeenSet;
 
                 };
             }

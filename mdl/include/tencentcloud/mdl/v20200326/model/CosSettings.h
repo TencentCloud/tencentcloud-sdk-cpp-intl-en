@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cos destination setting.
+                * Cos address configuration
                 */
                 class CosSettings : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取File output path, which can be empty. If it is not empty, it  ends with /.
-                     * @return FilePath File output path, which can be empty. If it is not empty, it  ends with /.
+                     * 获取COS file output path, can be empty, ends with / if not empty.
+                     * @return FilePath COS file output path, can be empty, ends with / if not empty.
                      * 
                      */
                     std::string GetFilePath() const;
 
                     /**
-                     * 设置File output path, which can be empty. If it is not empty, it  ends with /.
-                     * @param _filePath File output path, which can be empty. If it is not empty, it  ends with /.
+                     * 设置COS file output path, can be empty, ends with / if not empty.
+                     * @param _filePath COS file output path, can be empty, ends with / if not empty.
                      * 
                      */
                     void SetFilePath(const std::string& _filePath);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FilePathHasBeenSet() const;
 
                     /**
-                     * 获取User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-                     * @return FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+                     * 获取User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * @return FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-                     * @param _fileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+                     * 设置User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * @param _fileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取File suffix, only supports `jpg`.
-                     * @return FileExt File suffix, only supports `jpg`.
+                     * 获取COS file suffix is only supported for jpg.
+                     * @return FileExt COS file suffix is only supported for jpg.
                      * 
                      */
                     std::string GetFileExt() const;
 
                     /**
-                     * 设置File suffix, only supports `jpg`.
-                     * @param _fileExt File suffix, only supports `jpg`.
+                     * 设置COS file suffix is only supported for jpg.
+                     * @param _fileExt COS file suffix is only supported for jpg.
                      * 
                      */
                     void SetFileExt(const std::string& _fileExt);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FileExtHasBeenSet() const;
 
                     /**
-                     * 获取Support `unix` or `utc0`, default unix.
-                     * @return TimeFormat Support `unix` or `utc0`, default unix.
+                     * 获取Support [unix|utc0]. Default is unix.
+                     * @return TimeFormat Support [unix|utc0]. Default is unix.
                      * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
-                     * 设置Support `unix` or `utc0`, default unix.
-                     * @param _timeFormat Support `unix` or `utc0`, default unix.
+                     * 设置Support [unix|utc0]. Default is unix.
+                     * @param _timeFormat Support [unix|utc0]. Default is unix.
                      * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
@@ -187,25 +187,25 @@ namespace TencentCloud
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * File output path, which can be empty. If it is not empty, it  ends with /.
+                     * COS file output path, can be empty, ends with / if not empty.
                      */
                     std::string m_filePath;
                     bool m_filePathHasBeenSet;
 
                     /**
-                     * User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+                     * User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * File suffix, only supports `jpg`.
+                     * COS file suffix is only supported for jpg.
                      */
                     std::string m_fileExt;
                     bool m_fileExtHasBeenSet;
 
                     /**
-                     * Support `unix` or `utc0`, default unix.
+                     * Support [unix|utc0]. Default is unix.
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;

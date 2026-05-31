@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取Keywords
-                     * @return KeyWords Keywords
+                     * 获取
+                     * @return KeyWords 
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置Keywords
-                     * @param _keyWords Keywords
+                     * 设置
+                     * @param _keyWords 
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -291,7 +291,7 @@ namespace TencentCloud
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * Keywords
+                     * 
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;

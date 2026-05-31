@@ -49,19 +49,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-                     * @return State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+                     * 获取Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+                     * @return State Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-                     * @param _state Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+                     * 设置Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+                     * @param _state Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -74,23 +74,23 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
-                     * @return Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+                     * 获取Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+                     * @return Scheme Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
-                     * @param _scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+                     * 设置Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+                     * @param _scheme Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -103,19 +103,19 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
-                     * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+                     * 获取Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+                     * @return ContentId Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
                      * 
                      */
                     std::string GetContentId() const;
 
                     /**
-                     * 设置If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
-                     * @param _contentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+                     * 设置Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+                     * @param _contentId Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
                      * 
                      */
                     void SetContentId(const std::string& _contentId);
@@ -128,19 +128,15 @@ If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits,
                     bool ContentIdHasBeenSet() const;
 
                     /**
-                     * 获取The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+                     * @return Keys Required when Scheme is CustomDRMKeys. The content is the key customized by users.
                      * 
                      */
                     std::vector<DrmKey> GetKeys() const;
 
                     /**
-                     * 设置The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+                     * @param _keys Required when Scheme is CustomDRMKeys. The content is the key customized by users.
                      * 
                      */
                     void SetKeys(const std::vector<DrmKey>& _keys);
@@ -153,19 +149,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取SDMC key configuration information, used when Scheme is SDMCDRM.
+                     * @return SDMCSettings SDMC key configuration information, used when Scheme is SDMCDRM.
                      * 
                      */
                     SDMCSettingsInfo GetSDMCSettings() const;
 
                     /**
-                     * 设置SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _sDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置SDMC key configuration information, used when Scheme is SDMCDRM.
+                     * @param _sDMCSettings SDMC key configuration information, used when Scheme is SDMCDRM.
                      * 
                      */
                     void SetSDMCSettings(const SDMCSettingsInfo& _sDMCSettings);
@@ -178,43 +170,31 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool SDMCSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+                     * 获取Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
-                     * @return DrmType Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
+                     * @return DrmType Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+                     * 设置Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
-                     * @param _drmType Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
+                     * @param _drmType Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -229,50 +209,45 @@ DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDE
                 private:
 
                     /**
-                     * Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+                     * Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+                     * Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+                     * Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
                      */
                     std::string m_contentId;
                     bool m_contentIdHasBeenSet;
 
                     /**
-                     * The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Required when Scheme is CustomDRMKeys. The content is the key customized by users.
                      */
                     std::vector<DrmKey> m_keys;
                     bool m_keysHasBeenSet;
 
                     /**
-                     * SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * SDMC key configuration information, used when Scheme is SDMCDRM.
                      */
                     SDMCSettingsInfo m_sDMCSettings;
                     bool m_sDMCSettingsHasBeenSet;
 
                     /**
-                     * Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+                     * Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * General setting.
+                * Common configuration.
                 */
                 class GeneralSetting : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Static graphic overlay configuration.
-                     * @return StaticImageSettings Static graphic overlay configuration.
+                     * 获取Static image overlay configuration.
+                     * @return StaticImageSettings Static image overlay configuration.
                      * 
                      */
                     StaticImageSettings GetStaticImageSettings() const;
 
                     /**
-                     * 设置Static graphic overlay configuration.
-                     * @param _staticImageSettings Static graphic overlay configuration.
+                     * 设置Static image overlay configuration.
+                     * @param _staticImageSettings Static image overlay configuration.
                      * 
                      */
                     void SetStaticImageSettings(const StaticImageSettings& _staticImageSettings);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool StaticImageSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic graphic overlay configuration.
-                     * @return MotionGraphicsSettings Dynamic graphic overlay configuration.
+                     * 获取Real-time graphic overlay configuration.
+                     * @return MotionGraphicsSettings Real-time graphic overlay configuration.
                      * 
                      */
                     MotionGraphicsSetting GetMotionGraphicsSettings() const;
 
                     /**
-                     * 设置Dynamic graphic overlay configuration.
-                     * @param _motionGraphicsSettings Dynamic graphic overlay configuration.
+                     * 设置Real-time graphic overlay configuration.
+                     * @param _motionGraphicsSettings Real-time graphic overlay configuration.
                      * 
                      */
                     void SetMotionGraphicsSettings(const MotionGraphicsSetting& _motionGraphicsSettings);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool MotionGraphicsSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Thumbnail Configuration.
-                     * @return ThumbnailSettings Thumbnail Configuration.
+                     * 获取Thumbnail configuration
+                     * @return ThumbnailSettings Thumbnail configuration
                      * 
                      */
                     ThumbnailSettings GetThumbnailSettings() const;
 
                     /**
-                     * 设置Thumbnail Configuration.
-                     * @param _thumbnailSettings Thumbnail Configuration.
+                     * 设置Thumbnail configuration
+                     * @param _thumbnailSettings Thumbnail configuration
                      * 
                      */
                     void SetThumbnailSettings(const ThumbnailSettings& _thumbnailSettings);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Static graphic overlay configuration.
+                     * Static image overlay configuration.
                      */
                     StaticImageSettings m_staticImageSettings;
                     bool m_staticImageSettingsHasBeenSet;
 
                     /**
-                     * Dynamic graphic overlay configuration.
+                     * Real-time graphic overlay configuration.
                      */
                     MotionGraphicsSetting m_motionGraphicsSettings;
                     bool m_motionGraphicsSettingsHasBeenSet;
 
                     /**
-                     * Thumbnail Configuration.
+                     * Thumbnail configuration
                      */
                     ThumbnailSettings m_thumbnailSettings;
                     bool m_thumbnailSettingsHasBeenSet;

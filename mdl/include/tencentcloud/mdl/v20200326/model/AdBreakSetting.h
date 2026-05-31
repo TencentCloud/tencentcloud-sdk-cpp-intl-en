@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdl/v20200326/model/LSqueezeSetting.h>
+#include <tencentcloud/mdl/v20200326/model/PipSetting.h>
+#include <tencentcloud/mdl/v20200326/model/BorderFrameSetting.h>
 
 
 namespace TencentCloud
@@ -69,15 +71,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
-                     * @return Duration Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
+                     * 获取Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
+                     * @return Duration Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
                      * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
-                     * 设置Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
-                     * @param _duration Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
+                     * 设置Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
+                     * @param _duration Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
                      * 
                      */
                     void SetDuration(const uint64_t& _duration);
@@ -88,6 +90,27 @@ namespace TencentCloud
                      * 
                      */
                     bool DurationHasBeenSet() const;
+
+                    /**
+                     * 获取AdSource type, supports UPLOAD_CREATIVES
+                     * @return AdSource AdSource type, supports UPLOAD_CREATIVES
+                     * 
+                     */
+                    std::string GetAdSource() const;
+
+                    /**
+                     * 设置AdSource type, supports UPLOAD_CREATIVES
+                     * @param _adSource AdSource type, supports UPLOAD_CREATIVES
+                     * 
+                     */
+                    void SetAdSource(const std::string& _adSource);
+
+                    /**
+                     * 判断参数 AdSource 是否已赋值
+                     * @return AdSource 是否已赋值
+                     * 
+                     */
+                    bool AdSourceHasBeenSet() const;
 
                     /**
                      * 获取L-type compression recovery configuration
@@ -111,25 +134,46 @@ namespace TencentCloud
                     bool LSqueezeSettingHasBeenSet() const;
 
                     /**
-                     * 获取AdSource type, supports UPLOAD_CREATIVES
-                     * @return AdSource AdSource type, supports UPLOAD_CREATIVES
+                     * 获取
+                     * @return PipSetting 
                      * 
                      */
-                    std::string GetAdSource() const;
+                    PipSetting GetPipSetting() const;
 
                     /**
-                     * 设置AdSource type, supports UPLOAD_CREATIVES
-                     * @param _adSource AdSource type, supports UPLOAD_CREATIVES
+                     * 设置
+                     * @param _pipSetting 
                      * 
                      */
-                    void SetAdSource(const std::string& _adSource);
+                    void SetPipSetting(const PipSetting& _pipSetting);
 
                     /**
-                     * 判断参数 AdSource 是否已赋值
-                     * @return AdSource 是否已赋值
+                     * 判断参数 PipSetting 是否已赋值
+                     * @return PipSetting 是否已赋值
                      * 
                      */
-                    bool AdSourceHasBeenSet() const;
+                    bool PipSettingHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BorderFrameSetting 
+                     * 
+                     */
+                    BorderFrameSetting GetBorderFrameSetting() const;
+
+                    /**
+                     * 设置
+                     * @param _borderFrameSetting 
+                     * 
+                     */
+                    void SetBorderFrameSetting(const BorderFrameSetting& _borderFrameSetting);
+
+                    /**
+                     * 判断参数 BorderFrameSetting 是否已赋值
+                     * @return BorderFrameSetting 是否已赋值
+                     * 
+                     */
+                    bool BorderFrameSettingHasBeenSet() const;
 
                 private:
 
@@ -140,10 +184,16 @@ namespace TencentCloud
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
+                     * Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
                      */
                     uint64_t m_duration;
                     bool m_durationHasBeenSet;
+
+                    /**
+                     * AdSource type, supports UPLOAD_CREATIVES
+                     */
+                    std::string m_adSource;
+                    bool m_adSourceHasBeenSet;
 
                     /**
                      * L-type compression recovery configuration
@@ -152,10 +202,16 @@ namespace TencentCloud
                     bool m_lSqueezeSettingHasBeenSet;
 
                     /**
-                     * AdSource type, supports UPLOAD_CREATIVES
+                     * 
                      */
-                    std::string m_adSource;
-                    bool m_adSourceHasBeenSet;
+                    PipSetting m_pipSetting;
+                    bool m_pipSettingHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    BorderFrameSetting m_borderFrameSetting;
+                    bool m_borderFrameSettingHasBeenSet;
 
                 };
             }

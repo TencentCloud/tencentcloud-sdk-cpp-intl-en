@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Dynamic graphic configuration.
                 */
                 class MotionGraphicsSetting : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
-                     * @return MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+                     * 获取Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMotionGraphicsOverlayEnabled() const;
 
                     /**
-                     * 设置Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
-                     * @param _motionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+                     * 设置Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _motionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMotionGraphicsOverlayEnabled(const int64_t& _motionGraphicsOverlayEnabled);
@@ -70,7 +74,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+                     * Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_motionGraphicsOverlayEnabled;
                     bool m_motionGraphicsOverlayEnabledHasBeenSet;

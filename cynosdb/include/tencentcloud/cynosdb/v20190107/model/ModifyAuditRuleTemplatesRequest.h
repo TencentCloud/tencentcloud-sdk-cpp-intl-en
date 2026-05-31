@@ -127,6 +127,48 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * @return AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * 
+                     */
+                    uint64_t GetAlarmLevel() const;
+
+                    /**
+                     * 设置Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * @param _alarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     * 
+                     */
+                    void SetAlarmLevel(const uint64_t& _alarmLevel);
+
+                    /**
+                     * 判断参数 AlarmLevel 是否已赋值
+                     * @return AlarmLevel 是否已赋值
+                     * 
+                     */
+                    bool AlarmLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Alert policy. 0 - No alert, 1 - Alert.
+                     * @return AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+                     * 
+                     */
+                    uint64_t GetAlarmPolicy() const;
+
+                    /**
+                     * 设置Alert policy. 0 - No alert, 1 - Alert.
+                     * @param _alarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+                     * 
+                     */
+                    void SetAlarmPolicy(const uint64_t& _alarmPolicy);
+
+                    /**
+                     * 判断参数 AlarmPolicy 是否已赋值
+                     * @return AlarmPolicy 是否已赋值
+                     * 
+                     */
+                    bool AlarmPolicyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +194,18 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+                     */
+                    uint64_t m_alarmLevel;
+                    bool m_alarmLevelHasBeenSet;
+
+                    /**
+                     * Alert policy. 0 - No alert, 1 - Alert.
+                     */
+                    uint64_t m_alarmPolicy;
+                    bool m_alarmPolicyHasBeenSet;
 
                 };
             }

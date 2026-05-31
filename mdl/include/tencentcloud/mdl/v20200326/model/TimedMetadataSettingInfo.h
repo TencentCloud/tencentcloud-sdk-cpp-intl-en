@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
-                     * @return Behavior Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+                     * 获取Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+                     * @return Behavior Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
                      * 
                      */
                     uint64_t GetBehavior() const;
 
                     /**
-                     * 设置Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
-                     * @param _behavior Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+                     * 设置Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+                     * @param _behavior Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
                      * 
                      */
                     void SetBehavior(const uint64_t& _behavior);
@@ -70,7 +74,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+                     * Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
                      */
                     uint64_t m_behavior;
                     bool m_behaviorHasBeenSet;

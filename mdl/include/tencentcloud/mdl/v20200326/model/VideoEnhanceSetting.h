@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VideoEnhanceSetting
+                * Video enhancement configuration
                 */
                 class VideoEnhanceSetting : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
-                     * @return Type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+                     * 获取Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
+                     * @return Type Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
-                     * @param _type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+                     * 设置Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
+                     * @param _type Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+                     * Video enhancement type. Option: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance".
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

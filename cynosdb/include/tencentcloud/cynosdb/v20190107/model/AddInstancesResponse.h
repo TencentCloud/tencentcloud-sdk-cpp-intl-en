@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Freeze transaction. one frozen transaction is activated at a time.
-                     * @return TranId Freeze transaction. one frozen transaction is activated at a time.
+                     * 获取<p>Freeze transaction. One frozen flow is activated at a time.</p>
+                     * @return TranId <p>Freeze transaction. One frozen flow is activated at a time.</p>
                      * 
                      */
                     std::string GetTranId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the post-paid order number.
-                     * @return DealNames Specifies the post-paid order number.
+                     * 获取<p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
+                     * @return DealNames <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -72,22 +72,22 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Delivery resource id list.
-                     * @return ResourceIds Delivery resource id list.
-                     * 
+                     * 获取<p>Delivery resource id list.</p>
+                     * @return ResourceIds <p>Delivery resource id list.</p>
+                     * @deprecated
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
                      * 判断参数 ResourceIds 是否已赋值
                      * @return ResourceIds 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Large order number.
-                     * @return BigDealIds Large order number.
+                     * 获取<p>Large order number</p>
+                     * @return BigDealIds <p>Large order number</p>
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Freeze transaction. one frozen transaction is activated at a time.
+                     * <p>Freeze transaction. One frozen flow is activated at a time.</p>
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Specifies the post-paid order number.
+                     * <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Delivery resource id list.
+                     * <p>Delivery resource id list.</p>
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Large order number.
+                     * <p>Large order number</p>
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

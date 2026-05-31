@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Console Tag, for documentation please refer to: https://www.tencentcloud.com/document/product/651.
+                * Console tag, documentation link: https://www.tencentcloud.com/document/product/651.?from_cn_redirect=1
                 */
                 class Tag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-                     * @return TagKey Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * 获取Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
+                     * @return TagKey Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-                     * @param _tagKey Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * 设置Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
+                     * @param _tagKey Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-                     * @return TagValue Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * 获取Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
+                     * @return TagValue Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
-                     * @param _tagValue Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * 设置Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
+                     * @param _tagValue Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
-                     * @return Category Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+                     * 获取Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
+                     * @return Category Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
-                     * @param _category Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+                     * 设置Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
+                     * @param _category Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag key, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * Tag key. Refer to the tag document (https://www.tencentcloud.com/document/product/651/13354?from_cn_redirect=1) for limits.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value, for restrictions please refer to the tag documentation: https://www.tencentcloud.com/document/product/651/13354.
+                     * Tag value. For reference, see the tag document at https://www.tencentcloud.com/document/product/651/13354.?from_cn_redirect=1
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * Tag type, optional; for documentation please refer to: https://www.tencentcloud.com/document/product/651/33023#tag.
+                     * Tag type, optional. See the tag document for reference (https://www.tencentcloud.com/document/product/651/35327?from_cn_redirect=1#Tag).
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;

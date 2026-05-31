@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The callback configuration for push events.
-                     * @return PushEventSettings The callback configuration for push events.
+                     * 获取Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
+                     * @return PushEventSettings Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
                      * 
                      */
                     PushEventSetting GetPushEventSettings() const;
 
                     /**
-                     * 设置The callback configuration for push events.
-                     * @param _pushEventSettings The callback configuration for push events.
+                     * 设置Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
+                     * @param _pushEventSettings Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
                      * 
                      */
                     void SetPushEventSettings(const PushEventSetting& _pushEventSettings);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The callback configuration for push events.
+                     * Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
                      */
                     PushEventSetting m_pushEventSettings;
                     bool m_pushEventSettingsHasBeenSet;

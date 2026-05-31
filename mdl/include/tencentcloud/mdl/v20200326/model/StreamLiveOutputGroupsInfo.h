@@ -75,31 +75,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
-                     * @return Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+                     * 获取Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+                     * @return Type Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
-                     * @param _type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+                     * 设置Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+                     * @param _type Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,19 +100,19 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`,
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
-                     * @return Outputs Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+                     * 获取Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
+                     * @return Outputs Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
                      * 
                      */
                     std::vector<OutputInfo> GetOutputs() const;
 
                     /**
-                     * 设置Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
-                     * @param _outputs Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+                     * 设置Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
+                     * @param _outputs Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
                      * 
                      */
                     void SetOutputs(const std::vector<OutputInfo>& _outputs);
@@ -158,19 +146,15 @@ If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is 
                     bool DestinationsHasBeenSet() const;
 
                     /**
-                     * 获取HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+                     * @return HlsRemuxSettings HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
                      * 
                      */
                     HlsRemuxSettingsInfo GetHlsRemuxSettings() const;
 
                     /**
-                     * 设置HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _hlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+                     * @param _hlsRemuxSettings HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
                      * 
                      */
                     void SetHlsRemuxSettings(const HlsRemuxSettingsInfo& _hlsRemuxSettings);
@@ -183,19 +167,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool HlsRemuxSettingsHasBeenSet() const;
 
                     /**
-                     * 获取DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DrmSettings DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取DRM configuration message.
+                     * @return DrmSettings DRM configuration message.
                      * 
                      */
                     DrmSettingsInfo GetDrmSettings() const;
 
                     /**
-                     * 设置DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _drmSettings DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置DRM configuration message.
+                     * @param _drmSettings DRM configuration message.
                      * 
                      */
                     void SetDrmSettings(const DrmSettingsInfo& _drmSettings);
@@ -208,19 +188,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DrmSettingsHasBeenSet() const;
 
                     /**
-                     * 获取DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+                     * @return DashRemuxSettings DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
                      * 
                      */
                     DashRemuxSettingsInfo GetDashRemuxSettings() const;
 
                     /**
-                     * 设置DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _dashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+                     * @param _dashRemuxSettings DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
                      * 
                      */
                     void SetDashRemuxSettings(const DashRemuxSettingsInfo& _dashRemuxSettings);
@@ -233,19 +209,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool DashRemuxSettingsHasBeenSet() const;
 
                     /**
-                     * 获取StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+                     * @return StreamPackageSettings Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
                      * 
                      */
                     StreamPackageSettingsInfo GetStreamPackageSettings() const;
 
                     /**
-                     * 设置StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _streamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+                     * @param _streamPackageSettings Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
                      * 
                      */
                     void SetStreamPackageSettings(const StreamPackageSettingsInfo& _streamPackageSettings);
@@ -258,19 +230,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool StreamPackageSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return TimeShiftSettings Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Time shift configuration information.
+                     * @return TimeShiftSettings Time shift configuration information.
                      * 
                      */
                     TimeShiftSettingsInfo GetTimeShiftSettings() const;
 
                     /**
-                     * 设置Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _timeShiftSettings Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Time shift configuration information.
+                     * @param _timeShiftSettings Time shift configuration information.
                      * 
                      */
                     void SetTimeShiftSettings(const TimeShiftSettingsInfo& _timeShiftSettings);
@@ -291,18 +259,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+                     * Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+                     * Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
                      */
                     std::vector<OutputInfo> m_outputs;
                     bool m_outputsHasBeenSet;
@@ -314,36 +279,31 @@ If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is 
                     bool m_destinationsHasBeenSet;
 
                     /**
-                     * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
                      */
                     HlsRemuxSettingsInfo m_hlsRemuxSettings;
                     bool m_hlsRemuxSettingsHasBeenSet;
 
                     /**
-                     * DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+                     * DRM configuration message.
                      */
                     DrmSettingsInfo m_drmSettings;
                     bool m_drmSettingsHasBeenSet;
 
                     /**
-                     * DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+                     * DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
                      */
                     DashRemuxSettingsInfo m_dashRemuxSettings;
                     bool m_dashRemuxSettingsHasBeenSet;
 
                     /**
-                     * StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
                      */
                     StreamPackageSettingsInfo m_streamPackageSettings;
                     bool m_streamPackageSettingsHasBeenSet;
 
                     /**
-                     * Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Time shift configuration information.
                      */
                     TimeShiftSettingsInfo m_timeShiftSettings;
                     bool m_timeShiftSettingsHasBeenSet;

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tdmq/v20200217/model/RabbitMQVirtualHostStatistics.h>
+#include <tencentcloud/tdmq/v20200217/model/RabbitMQVHostBaseQuota.h>
 
 
 namespace TencentCloud
@@ -362,6 +363,27 @@ namespace TencentCloud
                      */
                     bool ModifyTsHasBeenSet() const;
 
+                    /**
+                     * 获取Basic quota information.
+                     * @return Quota Basic quota information.
+                     * 
+                     */
+                    RabbitMQVHostBaseQuota GetQuota() const;
+
+                    /**
+                     * 设置Basic quota information.
+                     * @param _quota Basic quota information.
+                     * 
+                     */
+                    void SetQuota(const RabbitMQVHostBaseQuota& _quota);
+
+                    /**
+                     * 判断参数 Quota 是否已赋值
+                     * @return Quota 是否已赋值
+                     * 
+                     */
+                    bool QuotaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -453,6 +475,12 @@ namespace TencentCloud
                      */
                     uint64_t m_modifyTs;
                     bool m_modifyTsHasBeenSet;
+
+                    /**
+                     * Basic quota information.
+                     */
+                    RabbitMQVHostBaseQuota m_quota;
+                    bool m_quotaHasBeenSet;
 
                 };
             }

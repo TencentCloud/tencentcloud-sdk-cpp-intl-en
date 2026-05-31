@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Static graphic overlay configuration.
+                * Static image overlay configuration.
                 */
                 class StaticImageSettings : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
-                     * @return GlobalImageOverlayEnabled Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+                     * 获取Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
+                     * @return GlobalImageOverlayEnabled Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
                      * 
                      */
                     int64_t GetGlobalImageOverlayEnabled() const;
 
                     /**
-                     * 设置Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
-                     * @param _globalImageOverlayEnabled Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+                     * 设置Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
+                     * @param _globalImageOverlayEnabled Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
                      * 
                      */
                     void SetGlobalImageOverlayEnabled(const int64_t& _globalImageOverlayEnabled);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+                     * Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
                      */
                     int64_t m_globalImageOverlayEnabled;
                     bool m_globalImageOverlayEnabledHasBeenSet;

@@ -131,6 +131,20 @@ no
                      */
                     bool AutoScaleDownHasBeenSet() const;
 
+                    /**
+                     * 获取Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+                     * @return AutoArchive Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+                     * 
+                     */
+                    std::string GetAutoArchive() const;
+
+                    /**
+                     * 判断参数 AutoArchive 是否已赋值
+                     * @return AutoArchive 是否已赋值
+                     * 
+                     */
+                    bool AutoArchiveHasBeenSet() const;
+
                 private:
 
                     /**
@@ -170,6 +184,12 @@ no
                      */
                     std::string m_autoScaleDown;
                     bool m_autoScaleDownHasBeenSet;
+
+                    /**
+                     * Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+                     */
+                    std::string m_autoArchive;
+                    bool m_autoArchiveHasBeenSet;
 
                 };
             }

@@ -149,15 +149,19 @@ namespace TencentCloud
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Read-Only weight of an instance
-                     * @return InstanceWeights Read-Only weight of an instance
+                     * 获取Instance Read-Only Weight.
+
+                     * @return InstanceWeights Instance Read-Only Weight.
+
                      * 
                      */
                     std::vector<ProxyInstanceWeight> GetInstanceWeights() const;
 
                     /**
-                     * 设置Read-Only weight of an instance
-                     * @param _instanceWeights Read-Only weight of an instance
+                     * 设置Instance Read-Only Weight.
+
+                     * @param _instanceWeights Instance Read-Only Weight.
+
                      * 
                      */
                     void SetInstanceWeights(const std::vector<ProxyInstanceWeight>& _instanceWeights);
@@ -374,6 +378,48 @@ namespace TencentCloud
                      */
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to treat the libra node as an ordinary RO node
+                     * @return ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+                     * 
+                     */
+                    bool GetApNodeAsRoNode() const;
+
+                    /**
+                     * 设置Whether to treat the libra node as an ordinary RO node
+                     * @param _apNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+                     * 
+                     */
+                    void SetApNodeAsRoNode(const bool& _apNodeAsRoNode);
+
+                    /**
+                     * 判断参数 ApNodeAsRoNode 是否已赋值
+                     * @return ApNodeAsRoNode 是否已赋值
+                     * 
+                     */
+                    bool ApNodeAsRoNodeHasBeenSet() const;
+
+                    /**
+                     * 获取libra node fault, whether to forward to other nodes
+                     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    bool GetApQueryToOtherNode() const;
+
+                    /**
+                     * 设置libra node fault, whether to forward to other nodes
+                     * @param _apQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    void SetApQueryToOtherNode(const bool& _apQueryToOtherNode);
+
+                    /**
+                     * 判断参数 ApQueryToOtherNode 是否已赋值
+                     * @return ApQueryToOtherNode 是否已赋值
+                     * 
+                     */
+                    bool ApQueryToOtherNodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -407,7 +453,8 @@ namespace TencentCloud
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Read-Only weight of an instance
+                     * Instance Read-Only Weight.
+
                      */
                     std::vector<ProxyInstanceWeight> m_instanceWeights;
                     bool m_instanceWeightsHasBeenSet;
@@ -469,6 +516,18 @@ namespace TencentCloud
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
+
+                    /**
+                     * Whether to treat the libra node as an ordinary RO node
+                     */
+                    bool m_apNodeAsRoNode;
+                    bool m_apNodeAsRoNodeHasBeenSet;
+
+                    /**
+                     * libra node fault, whether to forward to other nodes
+                     */
+                    bool m_apQueryToOtherNode;
+                    bool m_apQueryToOtherNodeHasBeenSet;
 
                 };
             }

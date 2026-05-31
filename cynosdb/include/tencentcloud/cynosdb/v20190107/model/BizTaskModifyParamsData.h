@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter Modification Task Data
+                * 
                 */
                 class BizTaskModifyParamsData : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取
+                     * @return ClusterId 
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置
+                     * @param _clusterId 
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -114,7 +114,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * 
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;

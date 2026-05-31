@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool KeyRegionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether global encryption is enabled
+                     * @return IsOpenGlobalEncryption Whether global encryption is enabled
+                     * 
+                     */
+                    bool GetIsOpenGlobalEncryption() const;
+
+                    /**
+                     * 设置Whether global encryption is enabled
+                     * @param _isOpenGlobalEncryption Whether global encryption is enabled
+                     * 
+                     */
+                    void SetIsOpenGlobalEncryption(const bool& _isOpenGlobalEncryption);
+
+                    /**
+                     * 判断参数 IsOpenGlobalEncryption 是否已赋值
+                     * @return IsOpenGlobalEncryption 是否已赋值
+                     * 
+                     */
+                    bool IsOpenGlobalEncryptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
+
+                    /**
+                     * Whether global encryption is enabled
+                     */
+                    bool m_isOpenGlobalEncryption;
+                    bool m_isOpenGlobalEncryptionHasBeenSet;
 
                 };
             }

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the sub-order number.
-                     * @return DealName Specifies the sub-order number.
+                     * 获取<p>Sub-order number</p>
+                     * @return DealName <p>Sub-order number</p>
                      * 
                      */
                     std::string GetDealName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DealNameHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-                     * @return BigDealId Order ID
+                     * 获取<p>Order ID</p>
+                     * @return BigDealId <p>Order ID</p>
                      * 
                      */
                     std::string GetBigDealId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BigDealIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster Id</p>
+                     * @return ClusterId <p>Cluster Id</p>
                      * 
                      */
                     std::string GetClusterId() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name.
-                     * @return ClusterName Cluster name.
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the sub-order number.
+                     * <p>Sub-order number</p>
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;
 
                     /**
-                     * Order ID
+                     * <p>Order ID</p>
                      */
                     std::string m_bigDealId;
                     bool m_bigDealIdHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster Id</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name.
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;

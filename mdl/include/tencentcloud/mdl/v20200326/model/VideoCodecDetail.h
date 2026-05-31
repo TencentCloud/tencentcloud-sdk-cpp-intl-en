@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video codec additional configuration.
+                * Additional configuration for video codec.
                 */
                 class VideoCodecDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
-                     * @return Profile The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+                     * 获取Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+                     * @return Profile Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
                      * 
                      */
                     std::string GetProfile() const;
 
                     /**
-                     * 设置The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
-                     * @param _profile The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+                     * 设置Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+                     * @param _profile Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
                      * 
                      */
                     void SetProfile(const std::string& _profile);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProfileHasBeenSet() const;
 
                     /**
-                     * 获取Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
-                     * @return Level Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+                     * 获取Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+                     * @return Level Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
-                     * @param _level Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+                     * 设置Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+                     * @param _level Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
-                     * @return EntropyEncoding Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+                     * 获取Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+                     * @return EntropyEncoding Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
                      * 
                      */
                     std::string GetEntropyEncoding() const;
 
                     /**
-                     * 设置Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
-                     * @param _entropyEncoding Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+                     * 设置Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+                     * @param _entropyEncoding Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
                      * 
                      */
                     void SetEntropyEncoding(const std::string& _entropyEncoding);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EntropyEncodingHasBeenSet() const;
 
                     /**
-                     * 获取Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
-                     * @return AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+                     * 获取Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+                     * @return AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
                      * 
                      */
                     std::string GetAdaptiveQuantization() const;
 
                     /**
-                     * 设置Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
-                     * @param _adaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+                     * 设置Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+                     * @param _adaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
                      * 
                      */
                     void SetAdaptiveQuantization(const std::string& _adaptiveQuantization);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AdaptiveQuantizationHasBeenSet() const;
 
                     /**
-                     * 获取Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
-                     * @return LookAheadRateControl Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+                     * 获取Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
+                     * @return LookAheadRateControl Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
                      * 
                      */
                     std::string GetLookAheadRateControl() const;
 
                     /**
-                     * 设置Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
-                     * @param _lookAheadRateControl Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+                     * 设置Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
+                     * @param _lookAheadRateControl Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
                      * 
                      */
                     void SetLookAheadRateControl(const std::string& _lookAheadRateControl);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+                     * Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
                      */
                     std::string m_profile;
                     bool m_profileHasBeenSet;
 
                     /**
-                     * Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+                     * Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+                     * Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
                      */
                     std::string m_entropyEncoding;
                     bool m_entropyEncodingHasBeenSet;
 
                     /**
-                     * Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+                     * Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
                      */
                     std::string m_adaptiveQuantization;
                     bool m_adaptiveQuantizationHasBeenSet;
 
                     /**
-                     * Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+                     * Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
                      */
                     std::string m_lookAheadRateControl;
                     bool m_lookAheadRateControlHasBeenSet;

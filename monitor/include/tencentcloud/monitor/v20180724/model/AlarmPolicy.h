@@ -30,6 +30,8 @@
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyTriggerTask.h>
 #include <tencentcloud/monitor/v20180724/model/ConditionsTemp.h>
 #include <tencentcloud/monitor/v20180724/model/TagInstance.h>
+#include <tencentcloud/monitor/v20180724/model/AlarmConditionFilter.h>
+#include <tencentcloud/monitor/v20180724/model/AlarmGroupByItem.h>
 #include <tencentcloud/monitor/v20180724/model/Tag.h>
 
 
@@ -791,6 +793,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TagInstancesHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return Filter 
+                     * 
+                     */
+                    AlarmConditionFilter GetFilter() const;
+
+                    /**
+                     * 设置
+                     * @param _filter 
+                     * 
+                     */
+                    void SetFilter(const AlarmConditionFilter& _filter);
+
+                    /**
+                     * 判断参数 Filter 是否已赋值
+                     * @return Filter 是否已赋值
+                     * 
+                     */
+                    bool FilterHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return GroupBy 
+                     * 
+                     */
+                    std::vector<AlarmGroupByItem> GetGroupBy() const;
+
+                    /**
+                     * 设置
+                     * @param _groupBy 
+                     * 
+                     */
+                    void SetGroupBy(const std::vector<AlarmGroupByItem>& _groupBy);
+
+                    /**
+                     * 判断参数 GroupBy 是否已赋值
+                     * @return GroupBy 是否已赋值
+                     * 
+                     */
+                    bool GroupByHasBeenSet() const;
+
+                    /**
                      * 获取Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return FilterDimensionsParam Information on the filter dimension associated with a policy.
@@ -1147,6 +1191,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<TagInstance> m_tagInstances;
                     bool m_tagInstancesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AlarmConditionFilter m_filter;
+                    bool m_filterHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AlarmGroupByItem> m_groupBy;
+                    bool m_groupByHasBeenSet;
 
                     /**
                      * Information on the filter dimension associated with a policy.

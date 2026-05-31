@@ -23,6 +23,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/VideoEnhanceSetting.h
   include/tencentcloud/mdl/v20200326/model/AudioTrackInfo.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h
+  include/tencentcloud/mdl/v20200326/model/PipSetting.h
   include/tencentcloud/mdl/v20200326/model/CreateWatermarkDetectionRequest.h
   include/tencentcloud/mdl/v20200326/model/StreamInfo.h
   include/tencentcloud/mdl/v20200326/model/StreamVideoInfo.h
@@ -49,6 +50,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DestinationInfo.h
   include/tencentcloud/mdl/v20200326/model/Tag.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputRequest.h
+  include/tencentcloud/mdl/v20200326/model/SourceLayout.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.h
   include/tencentcloud/mdl/v20200326/model/AmazonS3Settings.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputRequest.h
@@ -190,6 +192,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputSecurityGroupResponse.h
   include/tencentcloud/mdl/v20200326/model/StreamLiveChannelInfo.h
   include/tencentcloud/mdl/v20200326/model/SegmentationDescriptorInfo.h
+  include/tencentcloud/mdl/v20200326/model/BorderFrameSetting.h
   include/tencentcloud/mdl/v20200326/model/InputSettingInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeImageSettings.h
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelRequest.h
@@ -202,6 +205,7 @@ set(mdl_src
   src/v20200326/model/VideoEnhanceSetting.cpp
   src/v20200326/model/AudioTrackInfo.cpp
   src/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.cpp
+  src/v20200326/model/PipSetting.cpp
   src/v20200326/model/CreateWatermarkDetectionRequest.cpp
   src/v20200326/model/StreamInfo.cpp
   src/v20200326/model/StreamVideoInfo.cpp
@@ -228,6 +232,7 @@ set(mdl_src
   src/v20200326/model/DestinationInfo.cpp
   src/v20200326/model/Tag.cpp
   src/v20200326/model/DeleteStreamLiveInputRequest.cpp
+  src/v20200326/model/SourceLayout.cpp
   src/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.cpp
   src/v20200326/model/AmazonS3Settings.cpp
   src/v20200326/model/ModifyStreamLiveInputRequest.cpp
@@ -369,6 +374,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveInputSecurityGroupResponse.cpp
   src/v20200326/model/StreamLiveChannelInfo.cpp
   src/v20200326/model/SegmentationDescriptorInfo.cpp
+  src/v20200326/model/BorderFrameSetting.cpp
   src/v20200326/model/InputSettingInfo.cpp
   src/v20200326/model/DescribeImageSettings.cpp
   src/v20200326/model/DeleteStreamLiveChannelRequest.cpp

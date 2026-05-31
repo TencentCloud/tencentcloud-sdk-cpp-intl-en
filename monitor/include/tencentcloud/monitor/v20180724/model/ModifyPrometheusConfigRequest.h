@@ -169,6 +169,27 @@ namespace TencentCloud
                      */
                     bool RawJobsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return UpdateImage 
+                     * 
+                     */
+                    int64_t GetUpdateImage() const;
+
+                    /**
+                     * 设置
+                     * @param _updateImage 
+                     * 
+                     */
+                    void SetUpdateImage(const int64_t& _updateImage);
+
+                    /**
+                     * 判断参数 UpdateImage 是否已赋值
+                     * @return UpdateImage 是否已赋值
+                     * 
+                     */
+                    bool UpdateImageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +227,12 @@ namespace TencentCloud
                      */
                     std::vector<PrometheusConfigItem> m_rawJobs;
                     bool m_rawJobsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_updateImage;
+                    bool m_updateImageHasBeenSet;
 
                 };
             }

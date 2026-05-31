@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StartTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
-                     * @return Filters Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+                     * 获取Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+                     * @return Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
                      * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
-                     * @param _filters Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+                     * 设置Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+                     * @param _filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
                      * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_startTimeEndHasBeenSet;
 
                     /**
-                     * Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+                     * Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
                      */
                     std::vector<QueryFilter> m_filters;
                     bool m_filtersHasBeenSet;

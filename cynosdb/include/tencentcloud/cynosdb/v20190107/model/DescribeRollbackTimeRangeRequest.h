@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Safe id
+                     * @return VaultId Safe id
+                     * 
+                     */
+                    std::string GetVaultId() const;
+
+                    /**
+                     * 设置Safe id
+                     * @param _vaultId Safe id
+                     * 
+                     */
+                    void SetVaultId(const std::string& _vaultId);
+
+                    /**
+                     * 判断参数 VaultId 是否已赋值
+                     * @return VaultId 是否已赋值
+                     * 
+                     */
+                    bool VaultIdHasBeenSet() const;
+
+                    /**
+                     * 获取Safe region
+                     * @return VaultRegion Safe region
+                     * 
+                     */
+                    std::string GetVaultRegion() const;
+
+                    /**
+                     * 设置Safe region
+                     * @param _vaultRegion Safe region
+                     * 
+                     */
+                    void SetVaultRegion(const std::string& _vaultRegion);
+
+                    /**
+                     * 判断参数 VaultRegion 是否已赋值
+                     * @return VaultRegion 是否已赋值
+                     * 
+                     */
+                    bool VaultRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Safe id
+                     */
+                    std::string m_vaultId;
+                    bool m_vaultIdHasBeenSet;
+
+                    /**
+                     * Safe region
+                     */
+                    std::string m_vaultRegion;
+                    bool m_vaultRegionHasBeenSet;
 
                 };
             }

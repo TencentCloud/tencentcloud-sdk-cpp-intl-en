@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Transaction start time
-                     * @return StartTime Transaction start time
+                     * 获取<p>Earliest transaction start time.</p>
+                     * @return StartTime <p>Earliest transaction start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Transaction start time
-                     * @param _startTime Transaction start time
+                     * 设置<p>Earliest transaction start time.</p>
+                     * @param _startTime <p>Earliest transaction start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction end time
-                     * @return EndTime Transaction end time
+                     * 获取<p>Latest transaction start time.</p>
+                     * @return EndTime <p>Latest transaction start time.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Transaction end time
-                     * @param _endTime Transaction end time
+                     * 设置<p>Latest transaction start time.</p>
+                     * @param _endTime <p>Latest transaction start time.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取<p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+                     * @return Limit <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param _limit Maximum number
+                     * 设置<p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+                     * @param _limit <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取<p>Offset.</p>
+                     * @return Offset <p>Offset.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置<p>Offset.</p>
+                     * @param _offset <p>Offset.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return Username Username
+                     * 获取<p>Username.</p>
+                     * @return Username <p>Username.</p>
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username
-                     * @param _username Username
+                     * 设置<p>Username.</p>
+                     * @param _username <p>Username.</p>
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取Client host
-                     * @return Host Client host
+                     * 获取<p>Client host.</p>
+                     * @return Host <p>Client host.</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Client host
-                     * @param _host Client host
+                     * 设置<p>Client host.</p>
+                     * @param _host <p>Client host.</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Database name
-                     * @return Database Database name
+                     * 获取<p>Database name.</p>
+                     * @return Database <p>Database name.</p>
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
-                     * 设置Database name
-                     * @param _database Database name
+                     * 设置<p>Database name.</p>
+                     * @param _database <p>Database name.</p>
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
-                     * @return OrderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+                     * 获取<p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+                     * @return OrderBy <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
-                     * @param _orderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+                     * 设置<p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+                     * @param _orderBy <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: asc, desc.
-                     * @return OrderByType Sorting order. Valid values: asc, desc.
+                     * 获取<p>Sorting type. Valid values: asc and desc.</p>
+                     * @return OrderByType <p>Sorting type. Valid values: asc and desc.</p>
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values: asc, desc.
-                     * @param _orderByType Sorting order. Valid values: asc, desc.
+                     * 设置<p>Sorting type. Valid values: asc and desc.</p>
+                     * @param _orderByType <p>Sorting type. Valid values: asc and desc.</p>
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取sql statement.
-                     * @return SqlText sql statement.
+                     * 获取<p>SQL statement.</p>
+                     * @return SqlText <p>SQL statement.</p>
                      * 
                      */
                     std::string GetSqlText() const;
 
                     /**
-                     * 设置sql statement.
-                     * @param _sqlText sql statement.
+                     * 设置<p>SQL statement.</p>
+                     * @param _sqlText <p>SQL statement.</p>
                      * 
                      */
                     void SetSqlText(const std::string& _sqlText);
@@ -276,67 +276,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Transaction start time
+                     * <p>Earliest transaction start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Transaction end time
+                     * <p>Latest transaction start time.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * <p>Offset.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Username
+                     * <p>Username.</p>
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * Client host
+                     * <p>Client host.</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Database name
+                     * <p>Database name.</p>
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+                     * <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: asc, desc.
+                     * <p>Sorting type. Valid values: asc and desc.</p>
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * sql statement.
+                     * <p>SQL statement.</p>
                      */
                     std::string m_sqlText;
                     bool m_sqlTextHasBeenSet;

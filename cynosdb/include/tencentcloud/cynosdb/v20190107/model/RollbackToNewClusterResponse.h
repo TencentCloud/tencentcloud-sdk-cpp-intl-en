@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Frozen transaction ID.
-                     * @return TranId Frozen transaction ID.
+                     * 获取<p>Frozen transaction ID</p>
+                     * @return TranId <p>Frozen transaction ID</p>
                      * 
                      */
                     std::string GetTranId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-                     * @return DealNames Order ID
+                     * 获取<p>Order ID</p>
+                     * @return DealNames <p>Order ID</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
-                     * @return ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+                     * 获取<p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+                     * @return ResourceIds <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
-                     * @return ClusterIds Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+                     * 获取<p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+                     * @return ClusterIds <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
                      * 
                      */
                     std::vector<std::string> GetClusterIds() const;
@@ -100,8 +100,10 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Large order number.
-                     * @return BigDealIds Large order number.
+                     * 获取<p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BigDealIds <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -116,31 +118,32 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Frozen transaction ID.
+                     * <p>Frozen transaction ID</p>
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Order ID
+                     * <p>Order ID</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+                     * <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+                     * <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Large order number.
+                     * <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

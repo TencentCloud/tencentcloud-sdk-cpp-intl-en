@@ -72,23 +72,19 @@ Note: uppercase letters in the string will be automatically converted to lowerca
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
+                     * @return Track Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
                      * 
                      */
                     std::string GetTrack() const;
 
                     /**
-                     * 设置Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
+                     * @param _track Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -101,23 +97,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TrackHasBeenSet() const;
 
                     /**
-                     * 获取Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
+                     * @return KeyId KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _keyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
+                     * @param _keyId KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -130,31 +122,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+                     * 获取Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+Note: The string will be modified to lowercase.
+                     * @return Iv Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
                      * 
                      */
                     std::string GetIv() const;
 
                     /**
-                     * 设置Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+                     * 设置Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+Note: The string will be modified to lowercase.
+                     * @param _iv Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
                      * 
                      */
                     void SetIv(const std::string& _iv);
@@ -167,19 +155,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IvHasBeenSet() const;
 
                     /**
-                     * 获取The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取uri of the license server. AES128 is used. Can be empty.
+                     * @return KeyUri uri of the license server. AES128 is used. Can be empty.
                      * 
                      */
                     std::string GetKeyUri() const;
 
                     /**
-                     * 设置The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _keyUri The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置uri of the license server. AES128 is used. Can be empty.
+                     * @param _keyUri uri of the license server. AES128 is used. Can be empty.
                      * 
                      */
                     void SetKeyUri(const std::string& _keyUri);
@@ -201,34 +185,30 @@ Note: uppercase letters in the string will be automatically converted to lowerca
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;
 
                     /**
-                     * Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+                     * Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
                      */
                     std::string m_iv;
                     bool m_ivHasBeenSet;
 
                     /**
-                     * The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * uri of the license server. AES128 is used. Can be empty.
                      */
                     std::string m_keyUri;
                     bool m_keyUriHasBeenSet;

@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template name.
-                     * @return Name Template name.
+                     * 获取Template Name
+                     * @return Name Template Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name.
-                     * @param _name Template name.
+                     * 设置Template Name
+                     * @param _name Template Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Name of caption selector. Required when CaptionSource selects `INPUT`.
-                     * @return CaptionSelectorName Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * 获取Name of the subtitle selector. Required when CaptionSource is set to INPUT.
+                     * @return CaptionSelectorName Name of the subtitle selector. Required when CaptionSource is set to INPUT.
                      * 
                      */
                     std::string GetCaptionSelectorName() const;
 
                     /**
-                     * 设置Name of caption selector. Required when CaptionSource selects `INPUT`.
-                     * @param _captionSelectorName Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * 设置Name of the subtitle selector. Required when CaptionSource is set to INPUT.
+                     * @param _captionSelectorName Name of the subtitle selector. Required when CaptionSource is set to INPUT.
                      * 
                      */
                     void SetCaptionSelectorName(const std::string& _captionSelectorName);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool CaptionSelectorNameHasBeenSet() const;
 
                     /**
-                     * 获取Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
-                     * @return CaptionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+                     * 获取Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
+                     * @return CaptionSource Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
                      * 
                      */
                     std::string GetCaptionSource() const;
 
                     /**
-                     * 设置Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
-                     * @param _captionSource Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+                     * 设置Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
+                     * @param _captionSource Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
                      * 
                      */
                     void SetCaptionSource(const std::string& _captionSource);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool CaptionSourceHasBeenSet() const;
 
                     /**
-                     * 获取Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
-                     * @return ContentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+                     * 获取Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
+                     * @return ContentType Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
                      * 
                      */
                     uint64_t GetContentType() const;
 
                     /**
-                     * 设置Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
-                     * @param _contentType Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+                     * 设置Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
+                     * @param _contentType Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
                      * 
                      */
                     void SetContentType(const uint64_t& _contentType);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ContentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
-                     * @return TargetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+                     * 获取Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
+                     * @return TargetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
                      * 
                      */
                     uint64_t GetTargetType() const;
 
                     /**
-                     * 设置Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
-                     * @param _targetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+                     * 设置Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
+                     * @param _targetType Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
                      * 
                      */
                     void SetTargetType(const uint64_t& _targetType);
@@ -154,19 +154,15 @@ namespace TencentCloud
                     bool TargetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
-                     * @return SourceLanguage Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * 获取Original speech languages: Chinese, English, Japanese, Korean.
+                     * @return SourceLanguage Original speech languages: Chinese, English, Japanese, Korean.
                      * 
                      */
                     std::string GetSourceLanguage() const;
 
                     /**
-                     * 设置Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
-                     * @param _sourceLanguage Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * 设置Original speech languages: Chinese, English, Japanese, Korean.
+                     * @param _sourceLanguage Original speech languages: Chinese, English, Japanese, Korean.
                      * 
                      */
                     void SetSourceLanguage(const std::string& _sourceLanguage);
@@ -179,19 +175,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool SourceLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Target language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
-                     * @return TargetLanguage Target language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * 获取Target languages: Chinese, English, Japanese, Korean.
+                     * @return TargetLanguage Target languages: Chinese, English, Japanese, Korean.
                      * 
                      */
                     std::string GetTargetLanguage() const;
 
                     /**
-                     * 设置Target language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
-                     * @param _targetLanguage Target language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * 设置Target languages: Chinese, English, Japanese, Korean.
+                     * @param _targetLanguage Target languages: Chinese, English, Japanese, Korean.
                      * 
                      */
                     void SetTargetLanguage(const std::string& _targetLanguage);
@@ -204,15 +196,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool TargetLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Font style configuration. Required when CaptionSource selects `ANALYSIS `.
-                     * @return FontStyle Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+                     * 获取Font style configuration. Required for BurnIn.
+                     * @return FontStyle Font style configuration. Required for BurnIn.
                      * 
                      */
                     SubtitleFontConf GetFontStyle() const;
 
                     /**
-                     * 设置Font style configuration. Required when CaptionSource selects `ANALYSIS `.
-                     * @param _fontStyle Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+                     * 设置Font style configuration. Required for BurnIn.
+                     * @param _fontStyle Font style configuration. Required for BurnIn.
                      * 
                      */
                     void SetFontStyle(const SubtitleFontConf& _fontStyle);
@@ -225,15 +217,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool FontStyleHasBeenSet() const;
 
                     /**
-                     * 获取There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
-                     * @return StateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+                     * 获取STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
+                     * @return StateEffectMode STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
                      * 
                      */
                     std::string GetStateEffectMode() const;
 
                     /**
-                     * 设置There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
-                     * @param _stateEffectMode There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+                     * 设置STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
+                     * @param _stateEffectMode STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
                      * 
                      */
                     void SetStateEffectMode(const std::string& _stateEffectMode);
@@ -246,15 +238,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool StateEffectModeHasBeenSet() const;
 
                     /**
-                     * 获取Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
-                     * @return SteadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+                     * 获取Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
+                     * @return SteadyStateDelayedTime Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
                      * 
                      */
                     uint64_t GetSteadyStateDelayedTime() const;
 
                     /**
-                     * 设置Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
-                     * @param _steadyStateDelayedTime Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+                     * 设置Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
+                     * @param _steadyStateDelayedTime Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
                      * 
                      */
                     void SetSteadyStateDelayedTime(const uint64_t& _steadyStateDelayedTime);
@@ -267,15 +259,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool SteadyStateDelayedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
-                     * @return AudioSelectorName Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+                     * 获取Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
+                     * @return AudioSelectorName Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
                      * 
                      */
                     std::string GetAudioSelectorName() const;
 
                     /**
-                     * 设置Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
-                     * @param _audioSelectorName Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+                     * 设置Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
+                     * @param _audioSelectorName Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
                      * 
                      */
                     void SetAudioSelectorName(const std::string& _audioSelectorName);
@@ -288,15 +280,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool AudioSelectorNameHasBeenSet() const;
 
                     /**
-                     * 获取Format configuration for speech recognition output on WebVTT.
-                     * @return WebVTTFontStyle Format configuration for speech recognition output on WebVTT.
+                     * 获取Format configuration for WebVTT output in speech recognition.
+                     * @return WebVTTFontStyle Format configuration for WebVTT output in speech recognition.
                      * 
                      */
                     WebVTTFontStyle GetWebVTTFontStyle() const;
 
                     /**
-                     * 设置Format configuration for speech recognition output on WebVTT.
-                     * @param _webVTTFontStyle Format configuration for speech recognition output on WebVTT.
+                     * 设置Format configuration for WebVTT output in speech recognition.
+                     * @param _webVTTFontStyle Format configuration for WebVTT output in speech recognition.
                      * 
                      */
                     void SetWebVTTFontStyle(const WebVTTFontStyle& _webVTTFontStyle);
@@ -309,15 +301,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool WebVTTFontStyleHasBeenSet() const;
 
                     /**
-                     * 获取Language code, length 2-20. ISO 639-2 three-digit code is recommend.
-                     * @return LanguageCode Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+                     * 获取Language code, length 2-20.
+                     * @return LanguageCode Language code, length 2-20.
                      * 
                      */
                     std::string GetLanguageCode() const;
 
                     /**
-                     * 设置Language code, length 2-20. ISO 639-2 three-digit code is recommend.
-                     * @param _languageCode Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+                     * 设置Language code, length 2-20.
+                     * @param _languageCode Language code, length 2-20.
                      * 
                      */
                     void SetLanguageCode(const std::string& _languageCode);
@@ -330,15 +322,15 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                     bool LanguageCodeHasBeenSet() const;
 
                     /**
-                     * 获取Language description, less than 100 characters in length.
-                     * @return LanguageDescription Language description, less than 100 characters in length.
+                     * 获取Language description, length less than 100.
+                     * @return LanguageDescription Language description, length less than 100.
                      * 
                      */
                     std::string GetLanguageDescription() const;
 
                     /**
-                     * 设置Language description, less than 100 characters in length.
-                     * @param _languageDescription Language description, less than 100 characters in length.
+                     * 设置Language description, length less than 100.
+                     * @param _languageDescription Language description, length less than 100.
                      * 
                      */
                     void SetLanguageDescription(const std::string& _languageDescription);
@@ -353,87 +345,85 @@ Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource
                 private:
 
                     /**
-                     * Template name.
+                     * Template Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Name of caption selector. Required when CaptionSource selects `INPUT`.
+                     * Name of the subtitle selector. Required when CaptionSource is set to INPUT.
                      */
                     std::string m_captionSelectorName;
                     bool m_captionSelectorNameHasBeenSet;
 
                     /**
-                     * Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+                     * Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
                      */
                     std::string m_captionSource;
                     bool m_captionSourceHasBeenSet;
 
                     /**
-                     * Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+                     * Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
                      */
                     uint64_t m_contentType;
                     bool m_contentTypeHasBeenSet;
 
                     /**
-                     * Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+                     * Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
                      */
                     uint64_t m_targetType;
                     bool m_targetTypeHasBeenSet;
 
                     /**
-                     * Original phonetic language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * Original speech languages: Chinese, English, Japanese, Korean.
                      */
                     std::string m_sourceLanguage;
                     bool m_sourceLanguageHasBeenSet;
 
                     /**
-                     * Target language.
-Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+                     * Target languages: Chinese, English, Japanese, Korean.
                      */
                     std::string m_targetLanguage;
                     bool m_targetLanguageHasBeenSet;
 
                     /**
-                     * Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+                     * Font style configuration. Required for BurnIn.
                      */
                     SubtitleFontConf m_fontStyle;
                     bool m_fontStyleHasBeenSet;
 
                     /**
-                     * There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+                     * STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
                      */
                     std::string m_stateEffectMode;
                     bool m_stateEffectModeHasBeenSet;
 
                     /**
-                     * Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+                     * Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
                      */
                     uint64_t m_steadyStateDelayedTime;
                     bool m_steadyStateDelayedTimeHasBeenSet;
 
                     /**
-                     * Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+                     * Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
                      */
                     std::string m_audioSelectorName;
                     bool m_audioSelectorNameHasBeenSet;
 
                     /**
-                     * Format configuration for speech recognition output on WebVTT.
+                     * Format configuration for WebVTT output in speech recognition.
                      */
                     WebVTTFontStyle m_webVTTFontStyle;
                     bool m_webVTTFontStyleHasBeenSet;
 
                     /**
-                     * Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+                     * Language code, length 2-20.
                      */
                     std::string m_languageCode;
                     bool m_languageCodeHasBeenSet;
 
                     /**
-                     * Language description, less than 100 characters in length.
+                     * Language description, length less than 100.
                      */
                     std::string m_languageDescription;
                     bool m_languageDescriptionHasBeenSet;

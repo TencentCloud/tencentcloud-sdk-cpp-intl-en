@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audit instance details
+                * 
                 */
                 class InstanceAuditStatus : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取
+                     * @return InstanceId 
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置
+                     * @param _instanceId 
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Audit status. ON- Audit is enabled; OFF- Audit is disabled.
-                     * @return AuditStatus Audit status. ON- Audit is enabled; OFF- Audit is disabled.
+                     * 获取
+                     * @return AuditStatus 
                      * 
                      */
                     std::string GetAuditStatus() const;
 
                     /**
-                     * 设置Audit status. ON- Audit is enabled; OFF- Audit is disabled.
-                     * @param _auditStatus Audit status. ON- Audit is enabled; OFF- Audit is disabled.
+                     * 设置
+                     * @param _auditStatus 
                      * 
                      */
                     void SetAuditStatus(const std::string& _auditStatus);
@@ -366,13 +366,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * 
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Audit status. ON- Audit is enabled; OFF- Audit is disabled.
+                     * 
                      */
                     std::string m_auditStatus;
                     bool m_auditStatusHasBeenSet;

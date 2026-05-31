@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ.
-                     * @return Zone AZ.
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ.
-                     * @param _zone AZ.
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取During rollback, pass in the source cluster ID to find the source pool ID.
-                     * @return OriginalClusterId During rollback, pass in the source cluster ID to find the source pool ID.
+                     * 获取<p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     std::string GetOriginalClusterId() const;
 
                     /**
-                     * 设置During rollback, pass in the source cluster ID to find the source pool ID.
-                     * @param _originalClusterId During rollback, pass in the source cluster ID to find the source pool ID.
+                     * 设置<p>During rollback, input the source cluster ID to search for the source poolId</p>
+                     * @param _originalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      * 
                      */
                     void SetOriginalClusterId(const std::string& _originalClusterId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OriginalClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID.
-                     * @return UniqVpcId VPC ID.
+                     * 获取<p>VPC network ID</p>
+                     * @return UniqVpcId <p>VPC network ID</p>
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID.
-                     * @param _uniqVpcId VPC ID.
+                     * 设置<p>VPC network ID</p>
+                     * @param _uniqVpcId <p>VPC network ID</p>
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID.
-                     * @return UniqSubnetId Subnet ID.
+                     * 获取<p>Subnet ID</p>
+                     * @return UniqSubnetId <p>Subnet ID</p>
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置Subnet ID.
-                     * @param _uniqSubnetId Subnet ID.
+                     * 设置<p>Subnet ID</p>
+                     * @param _uniqSubnetId <p>Subnet ID</p>
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
-                     * @return ClusterName The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+                     * 获取<p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+                     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
-                     * @param _clusterName The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+                     * 设置<p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+                     * @param _clusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
-                     * @return RollbackId Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+                     * 获取<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      * 
                      */
                     uint64_t GetRollbackId() const;
 
                     /**
-                     * 设置Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
-                     * @param _rollbackId Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+                     * 设置<p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+                     * @param _rollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      * 
                      */
                     void SetRollbackId(const uint64_t& _rollbackId);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool RollbackIdHasBeenSet() const;
 
                     /**
-                     * 获取Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
-                     * @return ExpectTime Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+                     * 获取<p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+                     * @return ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      * 
                      */
                     std::string GetExpectTime() const;
 
                     /**
-                     * 设置Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
-                     * @param _expectTime Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+                     * 设置<p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+                     * @param _expectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      * 
                      */
                     void SetExpectTime(const std::string& _expectTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
-                     * @return AutoVoucher Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+                     * 获取<p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+                     * @return AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
-                     * @param _autoVoucher Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+                     * 设置<p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+                     * @param _autoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Information about the tag array to be bound during cluster creation.
-                     * @return ResourceTags Information about the tag array to be bound during cluster creation.
+                     * 获取<p>tag Array information that should be bound for cluster creation</p>
+                     * @return ResourceTags <p>tag Array information that should be bound for cluster creation</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置Information about the tag array to be bound during cluster creation.
-                     * @param _resourceTags Information about the tag array to be bound during cluster creation.
+                     * 设置<p>tag Array information that should be bound for cluster creation</p>
+                     * @param _resourceTags <p>tag Array information that should be bound for cluster creation</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
-                     * @return DbMode Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+                     * 获取<p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
+                     * @return DbMode <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
-                     * @param _dbMode Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+                     * 设置<p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
+                     * @param _dbMode <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-                     * @return MinCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * 获取<p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-                     * @param _minCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * 设置<p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+                     * @param _minCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-                     * @return MaxCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * 获取<p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+                     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-                     * @param _maxCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * 设置<p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+                     * @param _maxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
-                     * @return AutoPause Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+                     * 获取<p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
+                     * @return AutoPause <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
                      * 
                      */
                     std::string GetAutoPause() const;
 
                     /**
-                     * 设置Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
-                     * @param _autoPause Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+                     * 设置<p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
+                     * @param _autoPause <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
                      * 
                      */
                     void SetAutoPause(const std::string& _autoPause);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool AutoPauseHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
-                     * @return AutoPauseDelay Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+                     * 获取<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     int64_t GetAutoPauseDelay() const;
 
                     /**
-                     * 设置Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
-                     * @param _autoPauseDelay Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+                     * 设置<p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+                     * @param _autoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
                      * 
                      */
                     void SetAutoPauseDelay(const int64_t& _autoPauseDelay);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool AutoPauseDelayHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID array.
-                     * @return SecurityGroupIds Security group ID array.
+                     * 获取<p>Security group id array</p>
+                     * @return SecurityGroupIds <p>Security group id array</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group ID array.
-                     * @param _securityGroupIds Security group ID array.
+                     * 设置<p>Security group id array</p>
+                     * @param _securityGroupIds <p>Security group id array</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy ID array.
-                     * @return AlarmPolicyIds Alarm policy ID array.
+                     * 获取<p>Alarm policy Id array</p>
+                     * @return AlarmPolicyIds <p>Alarm policy Id array</p>
                      * 
                      */
                     std::vector<std::string> GetAlarmPolicyIds() const;
 
                     /**
-                     * 设置Alarm policy ID array.
-                     * @param _alarmPolicyIds Alarm policy ID array.
+                     * 设置<p>Alarm policy Id array</p>
+                     * @param _alarmPolicyIds <p>Alarm policy Id array</p>
                      * 
                      */
                     void SetAlarmPolicyIds(const std::vector<std::string>& _alarmPolicyIds);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool AlarmPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
-                     * @return ClusterParams Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+                     * 获取<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+                     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
                      * 
                      */
                     std::vector<ParamItem> GetClusterParams() const;
 
                     /**
-                     * 设置Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
-                     * @param _clusterParams Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+                     * 设置<p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+                     * @param _clusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
                      * 
                      */
                     void SetClusterParams(const std::vector<ParamItem>& _clusterParams);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool ClusterParamsHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template ID, which can be obtained through the DescribeParamTemplates API.
-                     * @return ParamTemplateId Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+                     * 获取<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      * 
                      */
                     int64_t GetParamTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID, which can be obtained through the DescribeParamTemplates API.
-                     * @param _paramTemplateId Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+                     * 设置<p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+                     * @param _paramTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      * 
                      */
                     void SetParamTemplateId(const int64_t& _paramTemplateId);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
-                     * @return InstanceInitInfos Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+                     * 获取<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      * 
                      */
                     std::vector<InstanceInitInfo> GetInstanceInitInfos() const;
 
                     /**
-                     * 设置Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
-                     * @param _instanceInitInfos Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+                     * 设置<p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+                     * @param _instanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      * 
                      */
                     void SetInstanceInitInfos(const std::vector<InstanceInitInfo>& _instanceInitInfos);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool InstanceInitInfosHasBeenSet() const;
 
                     /**
-                     * 获取0 - place an order and pay; 1 - place an order.
-                     * @return DealMode 0 - place an order and pay; 1 - place an order.
+                     * 获取<p>0-Place order and pay 1-Placing order</p>
+                     * @return DealMode <p>0-Place order and pay 1-Placing order</p>
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置0 - place an order and pay; 1 - place an order.
-                     * @param _dealMode 0 - place an order and pay; 1 - place an order.
+                     * 设置<p>0-Place order and pay 1-Placing order</p>
+                     * @param _dealMode <p>0-Place order and pay 1-Placing order</p>
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -468,15 +468,15 @@ namespace TencentCloud
                     bool DealModeHasBeenSet() const;
 
                     /**
-                     * 获取Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
-                     * @return PayMode Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+                     * 获取<p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+                     * @return PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
-                     * @param _payMode Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+                     * 设置<p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+                     * @param _payMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -489,15 +489,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Time.
-                     * @return TimeSpan Time.
+                     * 获取<p>Time</p>
+                     * @return TimeSpan <p>Time</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Time.
-                     * @param _timeSpan Time.
+                     * 设置<p>Time</p>
+                     * @param _timeSpan <p>Time</p>
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -510,15 +510,15 @@ namespace TencentCloud
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Unit.
-                     * @return TimeUnit Unit.
+                     * 获取<p>Unit</p>
+                     * @return TimeUnit <p>Unit</p>
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
-                     * 设置Unit.
-                     * @param _timeUnit Unit.
+                     * 设置<p>Unit</p>
+                     * @param _timeUnit <p>Unit</p>
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -531,15 +531,15 @@ namespace TencentCloud
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Rollback database information.
-                     * @return RollbackDatabases Rollback database information.
+                     * 获取<p>Rollback database info</p>
+                     * @return RollbackDatabases <p>Rollback database info</p>
                      * 
                      */
                     std::vector<RollbackDatabase> GetRollbackDatabases() const;
 
                     /**
-                     * 设置Rollback database information.
-                     * @param _rollbackDatabases Rollback database information.
+                     * 设置<p>Rollback database info</p>
+                     * @param _rollbackDatabases <p>Rollback database info</p>
                      * 
                      */
                     void SetRollbackDatabases(const std::vector<RollbackDatabase>& _rollbackDatabases);
@@ -552,15 +552,15 @@ namespace TencentCloud
                     bool RollbackDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Rollback table information.
-                     * @return RollbackTables Rollback table information.
+                     * 获取<p>Roll back table information</p>
+                     * @return RollbackTables <p>Roll back table information</p>
                      * 
                      */
                     std::vector<RollbackTable> GetRollbackTables() const;
 
                     /**
-                     * 设置Rollback table information.
-                     * @param _rollbackTables Rollback table information.
+                     * 设置<p>Roll back table information</p>
+                     * @param _rollbackTables <p>Roll back table information</p>
                      * 
                      */
                     void SetRollbackTables(const std::vector<RollbackTable>& _rollbackTables);
@@ -573,15 +573,15 @@ namespace TencentCloud
                     bool RollbackTablesHasBeenSet() const;
 
                     /**
-                     * 获取Source read-only instance information.
-                     * @return OriginalROInstanceList Source read-only instance information.
+                     * 获取<p>Original ro instance information</p>
+                     * @return OriginalROInstanceList <p>Original ro instance information</p>
                      * 
                      */
                     std::vector<std::string> GetOriginalROInstanceList() const;
 
                     /**
-                     * 设置Source read-only instance information.
-                     * @param _originalROInstanceList Source read-only instance information.
+                     * 设置<p>Original ro instance information</p>
+                     * @param _originalROInstanceList <p>Original ro instance information</p>
                      * 
                      */
                     void SetOriginalROInstanceList(const std::vector<std::string>& _originalROInstanceList);
@@ -594,15 +594,15 @@ namespace TencentCloud
                     bool OriginalROInstanceListHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectId <p>Project ID.</p>
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置<p>Project ID.</p>
+                     * @param _projectId <p>Project ID.</p>
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -615,15 +615,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable archiving. Valid values: yes; no. The default value is yes.
-                     * @return AutoArchive Whether to enable archiving. Valid values: yes; no. The default value is yes.
+                     * 获取<p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+                     * @return AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
                      * 
                      */
                     std::string GetAutoArchive() const;
 
                     /**
-                     * 设置Whether to enable archiving. Valid values: yes; no. The default value is yes.
-                     * @param _autoArchive Whether to enable archiving. Valid values: yes; no. The default value is yes.
+                     * 设置<p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+                     * @param _autoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
                      * 
                      */
                     void SetAutoArchive(const std::string& _autoArchive);
@@ -635,175 +635,202 @@ namespace TencentCloud
                      */
                     bool AutoArchiveHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to restore from the saved backup</p>
+                     * @return FromSaveBackup <p>Whether to restore from the saved backup</p>
+                     * 
+                     */
+                    bool GetFromSaveBackup() const;
+
+                    /**
+                     * 设置<p>Whether to restore from the saved backup</p>
+                     * @param _fromSaveBackup <p>Whether to restore from the saved backup</p>
+                     * 
+                     */
+                    void SetFromSaveBackup(const bool& _fromSaveBackup);
+
+                    /**
+                     * 判断参数 FromSaveBackup 是否已赋值
+                     * @return FromSaveBackup 是否已赋值
+                     * 
+                     */
+                    bool FromSaveBackupHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ.
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * During rollback, pass in the source cluster ID to find the source pool ID.
+                     * <p>During rollback, input the source cluster ID to search for the source poolId</p>
                      */
                     std::string m_originalClusterId;
                     bool m_originalClusterIdHasBeenSet;
 
                     /**
-                     * VPC ID.
+                     * <p>VPC network ID</p>
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID.
+                     * <p>Subnet ID</p>
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+                     * <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+                     * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
                      */
                     uint64_t m_rollbackId;
                     bool m_rollbackIdHasBeenSet;
 
                     /**
-                     * Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+                     * <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
                      */
                     std::string m_expectTime;
                     bool m_expectTimeHasBeenSet;
 
                     /**
-                     * Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+                     * <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Information about the tag array to be bound during cluster creation.
+                     * <p>tag Array information that should be bound for cluster creation</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+                     * <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+                     * <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+                     * <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
                      */
                     std::string m_autoPause;
                     bool m_autoPauseHasBeenSet;
 
                     /**
-                     * Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+                     * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
                      */
                     int64_t m_autoPauseDelay;
                     bool m_autoPauseDelayHasBeenSet;
 
                     /**
-                     * Security group ID array.
+                     * <p>Security group id array</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Alarm policy ID array.
+                     * <p>Alarm policy Id array</p>
                      */
                     std::vector<std::string> m_alarmPolicyIds;
                     bool m_alarmPolicyIdsHasBeenSet;
 
                     /**
-                     * Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+                     * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
                      */
                     std::vector<ParamItem> m_clusterParams;
                     bool m_clusterParamsHasBeenSet;
 
                     /**
-                     * Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+                     * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
                      */
                     int64_t m_paramTemplateId;
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+                     * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
                      */
                     std::vector<InstanceInitInfo> m_instanceInitInfos;
                     bool m_instanceInitInfosHasBeenSet;
 
                     /**
-                     * 0 - place an order and pay; 1 - place an order.
+                     * <p>0-Place order and pay 1-Placing order</p>
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
 
                     /**
-                     * Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+                     * <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Time.
+                     * <p>Time</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Unit.
+                     * <p>Unit</p>
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Rollback database information.
+                     * <p>Rollback database info</p>
                      */
                     std::vector<RollbackDatabase> m_rollbackDatabases;
                     bool m_rollbackDatabasesHasBeenSet;
 
                     /**
-                     * Rollback table information.
+                     * <p>Roll back table information</p>
                      */
                     std::vector<RollbackTable> m_rollbackTables;
                     bool m_rollbackTablesHasBeenSet;
 
                     /**
-                     * Source read-only instance information.
+                     * <p>Original ro instance information</p>
                      */
                     std::vector<std::string> m_originalROInstanceList;
                     bool m_originalROInstanceListHasBeenSet;
 
                     /**
-                     * Project ID
+                     * <p>Project ID.</p>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Whether to enable archiving. Valid values: yes; no. The default value is yes.
+                     * <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
                      */
                     std::string m_autoArchive;
                     bool m_autoArchiveHasBeenSet;
+
+                    /**
+                     * <p>Whether to restore from the saved backup</p>
+                     */
+                    bool m_fromSaveBackup;
+                    bool m_fromSaveBackupHasBeenSet;
 
                 };
             }

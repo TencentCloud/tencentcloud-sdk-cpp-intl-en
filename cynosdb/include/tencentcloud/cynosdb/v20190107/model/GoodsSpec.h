@@ -222,15 +222,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Machine type.
-                     * @return DeviceType Machine type.
+                     * 获取Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @return DeviceType Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Machine type.
-                     * @param _deviceType Machine type.
+                     * 设置Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @param _deviceType Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -294,7 +302,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_timeUnitHasBeenSet;
 
                     /**
-                     * Machine type.
+                     * Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;

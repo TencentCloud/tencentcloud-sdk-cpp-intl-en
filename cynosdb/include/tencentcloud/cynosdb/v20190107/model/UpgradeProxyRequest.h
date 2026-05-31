@@ -211,6 +211,48 @@ namespace TencentCloud
                      */
                     bool ProxyZonesHasBeenSet() const;
 
+                    /**
+                     * 获取whether rolling upgrade
+                     * @return IsRollUpgrade whether rolling upgrade
+                     * 
+                     */
+                    std::string GetIsRollUpgrade() const;
+
+                    /**
+                     * 设置whether rolling upgrade
+                     * @param _isRollUpgrade whether rolling upgrade
+                     * 
+                     */
+                    void SetIsRollUpgrade(const std::string& _isRollUpgrade);
+
+                    /**
+                     * 判断参数 IsRollUpgrade 是否已赋值
+                     * @return IsRollUpgrade 是否已赋值
+                     * 
+                     */
+                    bool IsRollUpgradeHasBeenSet() const;
+
+                    /**
+                     * 获取Rolling upgrade waiting time, unit: second
+                     * @return RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+                     * 
+                     */
+                    int64_t GetRollUpgradeWaitingTime() const;
+
+                    /**
+                     * 设置Rolling upgrade waiting time, unit: second
+                     * @param _rollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+                     * 
+                     */
+                    void SetRollUpgradeWaitingTime(const int64_t& _rollUpgradeWaitingTime);
+
+                    /**
+                     * 判断参数 RollUpgradeWaitingTime 是否已赋值
+                     * @return RollUpgradeWaitingTime 是否已赋值
+                     * 
+                     */
+                    bool RollUpgradeWaitingTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -260,6 +302,18 @@ namespace TencentCloud
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;
+
+                    /**
+                     * whether rolling upgrade
+                     */
+                    std::string m_isRollUpgrade;
+                    bool m_isRollUpgradeHasBeenSet;
+
+                    /**
+                     * Rolling upgrade waiting time, unit: second
+                     */
+                    int64_t m_rollUpgradeWaitingTime;
+                    bool m_rollUpgradeWaitingTimeHasBeenSet;
 
                 };
             }

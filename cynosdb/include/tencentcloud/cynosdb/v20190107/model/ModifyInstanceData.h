@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance Resizing Task Information
+                * 
                 */
                 class ModifyInstanceData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CPU After Resizing
-                     * @return Cpu CPU After Resizing
+                     * 获取
+                     * @return Cpu 
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置CPU After Resizing
-                     * @param _cpu CPU After Resizing
+                     * 设置
+                     * @param _cpu 
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory After Resizing
-                     * @return Memory Memory After Resizing
+                     * 获取
+                     * @return Memory 
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory After Resizing
-                     * @param _memory Memory After Resizing
+                     * 设置
+                     * @param _memory 
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage Limit After Resizing
-                     * @return StorageLimit Storage Limit After Resizing
+                     * 获取
+                     * @return StorageLimit 
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage Limit After Resizing
-                     * @param _storageLimit Storage Limit After Resizing
+                     * 设置
+                     * @param _storageLimit 
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取CPU Before Resizing
-                     * @return OldCpu CPU Before Resizing
+                     * 获取
+                     * @return OldCpu 
                      * 
                      */
                     int64_t GetOldCpu() const;
 
                     /**
-                     * 设置CPU Before Resizing
-                     * @param _oldCpu CPU Before Resizing
+                     * 设置
+                     * @param _oldCpu 
                      * 
                      */
                     void SetOldCpu(const int64_t& _oldCpu);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OldCpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory Before Resizing
-                     * @return OldMemory Memory Before Resizing
+                     * 获取
+                     * @return OldMemory 
                      * 
                      */
                     int64_t GetOldMemory() const;
 
                     /**
-                     * 设置Memory Before Resizing
-                     * @param _oldMemory Memory Before Resizing
+                     * 设置
+                     * @param _oldMemory 
                      * 
                      */
                     void SetOldMemory(const int64_t& _oldMemory);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OldMemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage Limit Before Resizing
-                     * @return OldStorageLimit Storage Limit Before Resizing
+                     * 获取
+                     * @return OldStorageLimit 
                      * 
                      */
                     int64_t GetOldStorageLimit() const;
 
                     /**
-                     * 设置Storage Limit Before Resizing
-                     * @param _oldStorageLimit Storage Limit Before Resizing
+                     * 设置
+                     * @param _oldStorageLimit 
                      * 
                      */
                     void SetOldStorageLimit(const int64_t& _oldStorageLimit);
@@ -173,15 +173,23 @@ namespace TencentCloud
                     bool OldStorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type before scaling.
-                     * @return OldDeviceType Instance machine type before scaling.
+                     * 获取Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @return OldDeviceType Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     std::string GetOldDeviceType() const;
 
                     /**
-                     * 设置Instance machine type before scaling.
-                     * @param _oldDeviceType Instance machine type before scaling.
+                     * 设置Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @param _oldDeviceType Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     void SetOldDeviceType(const std::string& _oldDeviceType);
@@ -194,15 +202,23 @@ namespace TencentCloud
                     bool OldDeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type after scaling.
-                     * @return DeviceType Instance machine type after scaling.
+                     * 获取Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @return DeviceType Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance machine type after scaling.
-                     * @param _deviceType Instance machine type after scaling.
+                     * 设置Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
+                     * @param _deviceType Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -215,15 +231,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
-                     * @return UpgradeType Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+                     * 获取
+                     * @return UpgradeType 
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
-                     * @param _upgradeType Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+                     * 设置
+                     * @param _upgradeType 
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -280,55 +296,59 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CPU After Resizing
+                     * 
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory After Resizing
+                     * 
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Storage Limit After Resizing
+                     * 
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * CPU Before Resizing
+                     * 
                      */
                     int64_t m_oldCpu;
                     bool m_oldCpuHasBeenSet;
 
                     /**
-                     * Memory Before Resizing
+                     * 
                      */
                     int64_t m_oldMemory;
                     bool m_oldMemoryHasBeenSet;
 
                     /**
-                     * Storage Limit Before Resizing
+                     * 
                      */
                     int64_t m_oldStorageLimit;
                     bool m_oldStorageLimitHasBeenSet;
 
                     /**
-                     * Instance machine type before scaling.
+                     * Instance Machine Type Before Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      */
                     std::string m_oldDeviceType;
                     bool m_oldDeviceTypeHasBeenSet;
 
                     /**
-                     * Instance machine type after scaling.
+                     * Instance Machine Type After Scaling
+1. common, universal type.
+2. exclusive, dedicated.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+                     * 
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;

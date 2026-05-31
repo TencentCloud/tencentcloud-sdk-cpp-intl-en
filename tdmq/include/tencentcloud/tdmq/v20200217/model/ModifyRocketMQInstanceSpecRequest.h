@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the exclusive instance
-                     * @return InstanceId ID of the exclusive instance
+                     * 获取<p>Dedicated Instance ID</p>
+                     * @return InstanceId <p>Dedicated Instance ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the exclusive instance
-                     * @param _instanceId ID of the exclusive instance
+                     * 设置<p>Dedicated Instance ID</p>
+                     * @param _instanceId <p>Dedicated Instance ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,31 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
-                     * @return Specification Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+                     * 获取<p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+                     * @return Specification <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
                      * 
                      */
                     std::string GetSpecification() const;
 
                     /**
-                     * 设置Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
-                     * @param _specification Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+                     * 设置<p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+                     * @param _specification <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
                      * 
                      */
                     void SetSpecification(const std::string& _specification);
@@ -101,15 +85,15 @@ Valid values: `rocket-vip-basic-1` (Basic),
                     bool SpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Node count
-                     * @return NodeCount Node count
+                     * 获取<p>Node count</p>
+                     * @return NodeCount <p>Node count</p>
                      * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
-                     * 设置Node count
-                     * @param _nodeCount Node count
+                     * 设置<p>Node count</p>
+                     * @param _nodeCount <p>Node count</p>
                      * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
@@ -122,15 +106,15 @@ Valid values: `rocket-vip-basic-1` (Basic),
                     bool NodeCountHasBeenSet() const;
 
                     /**
-                     * 获取Storage space in GB
-                     * @return StorageSize Storage space in GB
+                     * 获取<p>Storage space in GB</p>
+                     * @return StorageSize <p>Storage space in GB</p>
                      * 
                      */
                     uint64_t GetStorageSize() const;
 
                     /**
-                     * 设置Storage space in GB
-                     * @param _storageSize Storage space in GB
+                     * 设置<p>Storage space in GB</p>
+                     * @param _storageSize <p>Storage space in GB</p>
                      * 
                      */
                     void SetStorageSize(const uint64_t& _storageSize);
@@ -142,35 +126,58 @@ Valid values: `rocket-vip-basic-1` (Basic),
                      */
                     bool StorageSizeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Deploy availability zone list</p>
+                     * @return ZoneIds <p>Deploy availability zone list</p>
+                     * 
+                     */
+                    std::vector<std::string> GetZoneIds() const;
+
+                    /**
+                     * 设置<p>Deploy availability zone list</p>
+                     * @param _zoneIds <p>Deploy availability zone list</p>
+                     * 
+                     */
+                    void SetZoneIds(const std::vector<std::string>& _zoneIds);
+
+                    /**
+                     * 判断参数 ZoneIds 是否已赋值
+                     * @return ZoneIds 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the exclusive instance
+                     * <p>Dedicated Instance ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+                     * <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
                      */
                     std::string m_specification;
                     bool m_specificationHasBeenSet;
 
                     /**
-                     * Node count
+                     * <p>Node count</p>
                      */
                     uint64_t m_nodeCount;
                     bool m_nodeCountHasBeenSet;
 
                     /**
-                     * Storage space in GB
+                     * <p>Storage space in GB</p>
                      */
                     uint64_t m_storageSize;
                     bool m_storageSizeHasBeenSet;
+
+                    /**
+                     * <p>Deploy availability zone list</p>
+                     */
+                    std::vector<std::string> m_zoneIds;
+                    bool m_zoneIdsHasBeenSet;
 
                 };
             }

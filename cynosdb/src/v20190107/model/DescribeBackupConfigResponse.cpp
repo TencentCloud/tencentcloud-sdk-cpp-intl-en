@@ -30,7 +30,9 @@ DescribeBackupConfigResponse::DescribeBackupConfigResponse() :
     m_backupFreqHasBeenSet(false),
     m_backupTypeHasBeenSet(false),
     m_logicCrossRegionsConfigUpdateTimeHasBeenSet(false),
-    m_logicBackupConfigHasBeenSet(false)
+    m_logicBackupConfigHasBeenSet(false),
+    m_snapshotSecondaryBackupConfigHasBeenSet(false),
+    m_sparseBackupConfigHasBeenSet(false)
 {
 }
 
@@ -148,6 +150,40 @@ CoreInternalOutcome DescribeBackupConfigResponse::Deserialize(const string &payl
         m_logicBackupConfigHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SnapshotSecondaryBackupConfig") && !rsp["SnapshotSecondaryBackupConfig"].IsNull())
+    {
+        if (!rsp["SnapshotSecondaryBackupConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SnapshotSecondaryBackupConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_snapshotSecondaryBackupConfig.Deserialize(rsp["SnapshotSecondaryBackupConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_snapshotSecondaryBackupConfigHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("SparseBackupConfig") && !rsp["SparseBackupConfig"].IsNull())
+    {
+        if (!rsp["SparseBackupConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `SparseBackupConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_sparseBackupConfig.Deserialize(rsp["SparseBackupConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_sparseBackupConfigHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -218,6 +254,24 @@ string DescribeBackupConfigResponse::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_logicBackupConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_snapshotSecondaryBackupConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SnapshotSecondaryBackupConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_snapshotSecondaryBackupConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_sparseBackupConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SparseBackupConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sparseBackupConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -300,6 +354,26 @@ LogicBackupConfigInfo DescribeBackupConfigResponse::GetLogicBackupConfig() const
 bool DescribeBackupConfigResponse::LogicBackupConfigHasBeenSet() const
 {
     return m_logicBackupConfigHasBeenSet;
+}
+
+BackupConfigInfo DescribeBackupConfigResponse::GetSnapshotSecondaryBackupConfig() const
+{
+    return m_snapshotSecondaryBackupConfig;
+}
+
+bool DescribeBackupConfigResponse::SnapshotSecondaryBackupConfigHasBeenSet() const
+{
+    return m_snapshotSecondaryBackupConfigHasBeenSet;
+}
+
+SparseBackupConfigRsp DescribeBackupConfigResponse::GetSparseBackupConfig() const
+{
+    return m_sparseBackupConfig;
+}
+
+bool DescribeBackupConfigResponse::SparseBackupConfigHasBeenSet() const
+{
+    return m_sparseBackupConfigHasBeenSet;
 }
 
 

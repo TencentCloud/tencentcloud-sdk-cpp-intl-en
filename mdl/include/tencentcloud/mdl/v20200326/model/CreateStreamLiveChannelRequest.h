@@ -57,15 +57,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-                     * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 获取Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+                     * @return Name Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-                     * @param _name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 设置Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+                     * @param _name Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -78,15 +78,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Inputs to attach. You can attach 1 to 5 inputs.
-                     * @return AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+                     * 获取Associated media input, limit on the number [1, 5].
+                     * @return AttachedInputs Associated media input, limit on the number [1, 5].
                      * 
                      */
                     std::vector<AttachedInput> GetAttachedInputs() const;
 
                     /**
-                     * 设置Inputs to attach. You can attach 1 to 5 inputs.
-                     * @param _attachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+                     * 设置Associated media input, limit on the number [1, 5].
+                     * @param _attachedInputs Associated media input, limit on the number [1, 5].
                      * 
                      */
                     void SetAttachedInputs(const std::vector<AttachedInput>& _attachedInputs);
@@ -99,15 +99,15 @@ namespace TencentCloud
                     bool AttachedInputsHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of the channel's output groups. Quantity: [1, 10]
-                     * @return OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
+                     * 获取Configuration message of the output group for the channel. Limit on the number [1, 10].
+                     * @return OutputGroups Configuration message of the output group for the channel. Limit on the number [1, 10].
                      * 
                      */
                     std::vector<StreamLiveOutputGroupsInfo> GetOutputGroups() const;
 
                     /**
-                     * 设置Configuration information of the channel's output groups. Quantity: [1, 10]
-                     * @param _outputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
+                     * 设置Configuration message of the output group for the channel. Limit on the number [1, 10].
+                     * @param _outputGroups Configuration message of the output group for the channel. Limit on the number [1, 10].
                      * 
                      */
                     void SetOutputGroups(const std::vector<StreamLiveOutputGroupsInfo>& _outputGroups);
@@ -120,15 +120,15 @@ namespace TencentCloud
                     bool OutputGroupsHasBeenSet() const;
 
                     /**
-                     * 获取Audio transcoding templates. Quantity: [1, 20]
-                     * @return AudioTemplates Audio transcoding templates. Quantity: [1, 20]
+                     * 获取Audio transcoding template array, with the maximum number of [1, 20].
+                     * @return AudioTemplates Audio transcoding template array, with the maximum number of [1, 20].
                      * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioTemplates() const;
 
                     /**
-                     * 设置Audio transcoding templates. Quantity: [1, 20]
-                     * @param _audioTemplates Audio transcoding templates. Quantity: [1, 20]
+                     * 设置Audio transcoding template array, with the maximum number of [1, 20].
+                     * @param _audioTemplates Audio transcoding template array, with the maximum number of [1, 20].
                      * 
                      */
                     void SetAudioTemplates(const std::vector<AudioTemplateInfo>& _audioTemplates);
@@ -141,15 +141,15 @@ namespace TencentCloud
                     bool AudioTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取Video transcoding templates. Quantity: [1, 10]
-                     * @return VideoTemplates Video transcoding templates. Quantity: [1, 10]
+                     * 获取Video transcoding template array, with the maximum number of [1, 10].
+                     * @return VideoTemplates Video transcoding template array, with the maximum number of [1, 10].
                      * 
                      */
                     std::vector<VideoTemplateInfo> GetVideoTemplates() const;
 
                     /**
-                     * 设置Video transcoding templates. Quantity: [1, 10]
-                     * @param _videoTemplates Video transcoding templates. Quantity: [1, 10]
+                     * 设置Video transcoding template array, with the maximum number of [1, 10].
+                     * @param _videoTemplates Video transcoding template array, with the maximum number of [1, 10].
                      * 
                      */
                     void SetVideoTemplates(const std::vector<VideoTemplateInfo>& _videoTemplates);
@@ -162,15 +162,15 @@ namespace TencentCloud
                     bool VideoTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video transcoding templates. Quantity: [1, 10]
-                     * @return AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+                     * 获取Audio and video transcoding template array, with a limit on the number between 1 and 10.
+                     * @return AVTemplates Audio and video transcoding template array, with a limit on the number between 1 and 10.
                      * 
                      */
                     std::vector<AVTemplate> GetAVTemplates() const;
 
                     /**
-                     * 设置Audio/Video transcoding templates. Quantity: [1, 10]
-                     * @param _aVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+                     * 设置Audio and video transcoding template array, with a limit on the number between 1 and 10.
+                     * @param _aVTemplates Audio and video transcoding template array, with a limit on the number between 1 and 10.
                      * 
                      */
                     void SetAVTemplates(const std::vector<AVTemplate>& _aVTemplates);
@@ -183,15 +183,15 @@ namespace TencentCloud
                     bool AVTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle template configuration.
-                     * @return CaptionTemplates Subtitle template configuration.
+                     * 获取Subtitle template configuration is only valid for joint transcoding template.
+                     * @return CaptionTemplates Subtitle template configuration is only valid for joint transcoding template.
                      * 
                      */
                     std::vector<SubtitleConf> GetCaptionTemplates() const;
 
                     /**
-                     * 设置Subtitle template configuration.
-                     * @param _captionTemplates Subtitle template configuration.
+                     * 设置Subtitle template configuration is only valid for joint transcoding template.
+                     * @param _captionTemplates Subtitle template configuration is only valid for joint transcoding template.
                      * 
                      */
                     void SetCaptionTemplates(const std::vector<SubtitleConf>& _captionTemplates);
@@ -204,15 +204,15 @@ namespace TencentCloud
                     bool CaptionTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取Event settings
-                     * @return PlanSettings Event settings
+                     * 获取Configuration message of the scheduled task.
+                     * @return PlanSettings Configuration message of the scheduled task.
                      * 
                      */
                     PlanSettings GetPlanSettings() const;
 
                     /**
-                     * 设置Event settings
-                     * @param _planSettings Event settings
+                     * 设置Configuration message of the scheduled task.
+                     * @param _planSettings Configuration message of the scheduled task.
                      * 
                      */
                     void SetPlanSettings(const PlanSettings& _planSettings);
@@ -225,15 +225,15 @@ namespace TencentCloud
                     bool PlanSettingsHasBeenSet() const;
 
                     /**
-                     * 获取The callback settings.
-                     * @return EventNotifySettings The callback settings.
+                     * 获取Callback configuration information.
+                     * @return EventNotifySettings Callback configuration information.
                      * 
                      */
                     EventNotifySetting GetEventNotifySettings() const;
 
                     /**
-                     * 设置The callback settings.
-                     * @param _eventNotifySettings The callback settings.
+                     * 设置Callback configuration information.
+                     * @param _eventNotifySettings Callback configuration information.
                      * 
                      */
                     void SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings);
@@ -288,15 +288,15 @@ namespace TencentCloud
                     bool PipelineInputSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Recognition configuration for input content.
-                     * @return InputAnalysisSettings Recognition configuration for input content.
+                     * 获取Input content identification configuration.
+                     * @return InputAnalysisSettings Input content identification configuration.
                      * 
                      */
                     InputAnalysisInfo GetInputAnalysisSettings() const;
 
                     /**
-                     * 设置Recognition configuration for input content.
-                     * @param _inputAnalysisSettings Recognition configuration for input content.
+                     * 设置Input content identification configuration.
+                     * @param _inputAnalysisSettings Input content identification configuration.
                      * 
                      */
                     void SetInputAnalysisSettings(const InputAnalysisInfo& _inputAnalysisSettings);
@@ -309,15 +309,15 @@ namespace TencentCloud
                     bool InputAnalysisSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Console tag list.
-                     * @return Tags Console tag list.
+                     * 获取Console tag list
+                     * @return Tags Console tag list
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Console tag list.
-                     * @param _tags Console tag list.
+                     * 设置Console tag list
+                     * @param _tags Console tag list
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -330,15 +330,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Frame capture templates.
-                     * @return FrameCaptureTemplates Frame capture templates.
+                     * 获取chart template
+                     * @return FrameCaptureTemplates chart template
                      * 
                      */
                     std::vector<FrameCaptureTemplate> GetFrameCaptureTemplates() const;
 
                     /**
-                     * 设置Frame capture templates.
-                     * @param _frameCaptureTemplates Frame capture templates.
+                     * 设置chart template
+                     * @param _frameCaptureTemplates chart template
                      * 
                      */
                     void SetFrameCaptureTemplates(const std::vector<FrameCaptureTemplate>& _frameCaptureTemplates);
@@ -351,15 +351,15 @@ namespace TencentCloud
                     bool FrameCaptureTemplatesHasBeenSet() const;
 
                     /**
-                     * 获取General settings.
-                     * @return GeneralSettings General settings.
+                     * 获取Common configuration.
+                     * @return GeneralSettings Common configuration.
                      * 
                      */
                     GeneralSetting GetGeneralSettings() const;
 
                     /**
-                     * 设置General settings.
-                     * @param _generalSettings General settings.
+                     * 设置Common configuration.
+                     * @param _generalSettings Common configuration.
                      * 
                      */
                     void SetGeneralSettings(const GeneralSetting& _generalSettings);
@@ -374,55 +374,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Inputs to attach. You can attach 1 to 5 inputs.
+                     * Associated media input, limit on the number [1, 5].
                      */
                     std::vector<AttachedInput> m_attachedInputs;
                     bool m_attachedInputsHasBeenSet;
 
                     /**
-                     * Configuration information of the channel's output groups. Quantity: [1, 10]
+                     * Configuration message of the output group for the channel. Limit on the number [1, 10].
                      */
                     std::vector<StreamLiveOutputGroupsInfo> m_outputGroups;
                     bool m_outputGroupsHasBeenSet;
 
                     /**
-                     * Audio transcoding templates. Quantity: [1, 20]
+                     * Audio transcoding template array, with the maximum number of [1, 20].
                      */
                     std::vector<AudioTemplateInfo> m_audioTemplates;
                     bool m_audioTemplatesHasBeenSet;
 
                     /**
-                     * Video transcoding templates. Quantity: [1, 10]
+                     * Video transcoding template array, with the maximum number of [1, 10].
                      */
                     std::vector<VideoTemplateInfo> m_videoTemplates;
                     bool m_videoTemplatesHasBeenSet;
 
                     /**
-                     * Audio/Video transcoding templates. Quantity: [1, 10]
+                     * Audio and video transcoding template array, with a limit on the number between 1 and 10.
                      */
                     std::vector<AVTemplate> m_aVTemplates;
                     bool m_aVTemplatesHasBeenSet;
 
                     /**
-                     * Subtitle template configuration.
+                     * Subtitle template configuration is only valid for joint transcoding template.
                      */
                     std::vector<SubtitleConf> m_captionTemplates;
                     bool m_captionTemplatesHasBeenSet;
 
                     /**
-                     * Event settings
+                     * Configuration message of the scheduled task.
                      */
                     PlanSettings m_planSettings;
                     bool m_planSettingsHasBeenSet;
 
                     /**
-                     * The callback settings.
+                     * Callback configuration information.
                      */
                     EventNotifySetting m_eventNotifySettings;
                     bool m_eventNotifySettingsHasBeenSet;
@@ -440,25 +440,25 @@ namespace TencentCloud
                     bool m_pipelineInputSettingsHasBeenSet;
 
                     /**
-                     * Recognition configuration for input content.
+                     * Input content identification configuration.
                      */
                     InputAnalysisInfo m_inputAnalysisSettings;
                     bool m_inputAnalysisSettingsHasBeenSet;
 
                     /**
-                     * Console tag list.
+                     * Console tag list
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Frame capture templates.
+                     * chart template
                      */
                     std::vector<FrameCaptureTemplate> m_frameCaptureTemplates;
                     bool m_frameCaptureTemplatesHasBeenSet;
 
                     /**
-                     * General settings.
+                     * Common configuration.
                      */
                     GeneralSetting m_generalSettings;
                     bool m_generalSettingsHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LineSpacingHasBeenSet() const;
 
                     /**
-                     * 获取Margins.
-                     * @return Margins Margins.
+                     * 获取Margin.
+                     * @return Margins Margin.
                      * 
                      */
                     uint64_t GetMargins() const;
 
                     /**
-                     * 设置Margins.
-                     * @param _margins Margins.
+                     * 设置Margin.
+                     * @param _margins Margin.
                      * 
                      */
                     void SetMargins(const uint64_t& _margins);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MarginsHasBeenSet() const;
 
                     /**
-                     * 获取Rows.
-                     * @return Lines Rows.
+                     * 获取Number of rows.
+                     * @return Lines Number of rows.
                      * 
                      */
                     uint64_t GetLines() const;
 
                     /**
-                     * 设置Rows.
-                     * @param _lines Rows.
+                     * 设置Number of rows.
+                     * @param _lines Number of rows.
                      * 
                      */
                     void SetLines(const uint64_t& _lines);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CharactersPerLineHasBeenSet() const;
 
                     /**
-                     * 获取Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
-                     * @return SourceTextFont Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+                     * 获取Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+                     * @return SourceTextFont Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
                      * 
                      */
                     std::string GetSourceTextFont() const;
 
                     /**
-                     * 设置Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
-                     * @param _sourceTextFont Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+                     * 设置Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+                     * @param _sourceTextFont Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
                      * 
                      */
                     void SetSourceTextFont(const std::string& _sourceTextFont);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SourceTextFontHasBeenSet() const;
 
                     /**
-                     * 获取Font color is represented by 6 RGB hexadecimal characters.
-                     * @return TextColor Font color is represented by 6 RGB hexadecimal characters.
+                     * 获取Font color, represented by 6 characters in hexadecimal RGB.
+                     * @return TextColor Font color, represented by 6 characters in hexadecimal RGB.
                      * 
                      */
                     std::string GetTextColor() const;
 
                     /**
-                     * 设置Font color is represented by 6 RGB hexadecimal characters.
-                     * @param _textColor Font color is represented by 6 RGB hexadecimal characters.
+                     * 设置Font color, represented by 6 characters in hexadecimal RGB.
+                     * @param _textColor Font color, represented by 6 characters in hexadecimal RGB.
                      * 
                      */
                     void SetTextColor(const std::string& _textColor);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TextColorHasBeenSet() const;
 
                     /**
-                     * 获取The background color is represented by 6 RGB hexadecimal characters.
-                     * @return BackgroundColor The background color is represented by 6 RGB hexadecimal characters.
+                     * 获取Background color, represented by 6 characters in hexadecimal RGB.
+                     * @return BackgroundColor Background color, represented by 6 characters in hexadecimal RGB.
                      * 
                      */
                     std::string GetBackgroundColor() const;
 
                     /**
-                     * 设置The background color is represented by 6 RGB hexadecimal characters.
-                     * @param _backgroundColor The background color is represented by 6 RGB hexadecimal characters.
+                     * 设置Background color, represented by 6 characters in hexadecimal RGB.
+                     * @param _backgroundColor Background color, represented by 6 characters in hexadecimal RGB.
                      * 
                      */
                     void SetBackgroundColor(const std::string& _backgroundColor);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BackgroundColorHasBeenSet() const;
 
                     /**
-                     * 获取Background transparency, a number from 0-100.
-                     * @return BackgroundAlpha Background transparency, a number from 0-100.
+                     * 获取Background opacity. A number from 0 to 100.
+                     * @return BackgroundAlpha Background opacity. A number from 0 to 100.
                      * 
                      */
                     uint64_t GetBackgroundAlpha() const;
 
                     /**
-                     * 设置Background transparency, a number from 0-100.
-                     * @param _backgroundAlpha Background transparency, a number from 0-100.
+                     * 设置Background opacity. A number from 0 to 100.
+                     * @param _backgroundAlpha Background opacity. A number from 0 to 100.
                      * 
                      */
                     void SetBackgroundAlpha(const uint64_t& _backgroundAlpha);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool BackgroundAlphaHasBeenSet() const;
 
                     /**
-                     * 获取Preview copy.
-                     * @return PreviewContent Preview copy.
+                     * 获取Preview the copywriting.
+                     * @return PreviewContent Preview the copywriting.
                      * 
                      */
                     std::string GetPreviewContent() const;
 
                     /**
-                     * 设置Preview copy.
-                     * @param _previewContent Preview copy.
+                     * 设置Preview the copywriting.
+                     * @param _previewContent Preview the copywriting.
                      * 
                      */
                     void SetPreviewContent(const std::string& _previewContent);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool PreviewWindowWidthHasBeenSet() const;
 
                     /**
-                     * 获取Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
-                     * @return TranslatedTextFont Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+                     * 获取Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
+                     * @return TranslatedTextFont Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
                      * 
                      */
                     std::string GetTranslatedTextFont() const;
 
                     /**
-                     * 设置Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
-                     * @param _translatedTextFont Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+                     * 设置Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
+                     * @param _translatedTextFont Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
                      * 
                      */
                     void SetTranslatedTextFont(const std::string& _translatedTextFont);
@@ -307,13 +307,13 @@ namespace TencentCloud
                     bool m_lineSpacingHasBeenSet;
 
                     /**
-                     * Margins.
+                     * Margin.
                      */
                     uint64_t m_margins;
                     bool m_marginsHasBeenSet;
 
                     /**
-                     * Rows.
+                     * Number of rows.
                      */
                     uint64_t m_lines;
                     bool m_linesHasBeenSet;
@@ -325,31 +325,31 @@ namespace TencentCloud
                     bool m_charactersPerLineHasBeenSet;
 
                     /**
-                     * Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+                     * Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
                      */
                     std::string m_sourceTextFont;
                     bool m_sourceTextFontHasBeenSet;
 
                     /**
-                     * Font color is represented by 6 RGB hexadecimal characters.
+                     * Font color, represented by 6 characters in hexadecimal RGB.
                      */
                     std::string m_textColor;
                     bool m_textColorHasBeenSet;
 
                     /**
-                     * The background color is represented by 6 RGB hexadecimal characters.
+                     * Background color, represented by 6 characters in hexadecimal RGB.
                      */
                     std::string m_backgroundColor;
                     bool m_backgroundColorHasBeenSet;
 
                     /**
-                     * Background transparency, a number from 0-100.
+                     * Background opacity. A number from 0 to 100.
                      */
                     uint64_t m_backgroundAlpha;
                     bool m_backgroundAlphaHasBeenSet;
 
                     /**
-                     * Preview copy.
+                     * Preview the copywriting.
                      */
                     std::string m_previewContent;
                     bool m_previewContentHasBeenSet;
@@ -367,7 +367,7 @@ namespace TencentCloud
                     bool m_previewWindowWidthHasBeenSet;
 
                     /**
-                     * Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+                     * Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
                      */
                     std::string m_translatedTextFont;
                     bool m_translatedTextFontHasBeenSet;

@@ -146,15 +146,19 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool FailOverSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Caption selector for the input. There can be 0 to 1 audio selectors.
-                     * @return CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * 获取Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CaptionSelectors Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CaptionSelector> GetCaptionSelectors() const;
 
                     /**
-                     * 设置Caption selector for the input. There can be 0 to 1 audio selectors.
-                     * @param _captionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * 设置Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _captionSelectors Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCaptionSelectors(const std::vector<CaptionSelector>& _captionSelectors);
@@ -196,7 +200,8 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_failOverSettingsHasBeenSet;
 
                     /**
-                     * Caption selector for the input. There can be 0 to 1 audio selectors.
+                     * Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CaptionSelector> m_captionSelectors;
                     bool m_captionSelectorsHasBeenSet;

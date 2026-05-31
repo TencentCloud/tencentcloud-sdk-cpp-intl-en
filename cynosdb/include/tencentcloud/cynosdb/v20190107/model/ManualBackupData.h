@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Manual Backup Task Information
+                * 
                 */
                 class ManualBackupData : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup type. snapshot-snapshot backup
-                     * @return BackupType Backup type. snapshot-snapshot backup
+                     * 获取
+                     * @return BackupType 
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. snapshot-snapshot backup
-                     * @param _backupType Backup type. snapshot-snapshot backup
+                     * 设置
+                     * @param _backupType 
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup method. auto-automatic backup, manual-manual
-                     * @return BackupMethod Backup method. auto-automatic backup, manual-manual
+                     * 获取
+                     * @return BackupMethod 
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method. auto-automatic backup, manual-manual
-                     * @param _backupMethod Backup method. auto-automatic backup, manual-manual
+                     * 设置
+                     * @param _backupMethod 
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup Time
-                     * @return SnapshotTime Backup Time
+                     * 获取
+                     * @return SnapshotTime 
                      * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
-                     * 设置Backup Time
-                     * @param _snapshotTime Backup Time
+                     * 设置
+                     * @param _snapshotTime 
                      * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
@@ -138,19 +138,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Backup type. snapshot-snapshot backup
+                     * 
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup method. auto-automatic backup, manual-manual
+                     * 
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup Time
+                     * 
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;

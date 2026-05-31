@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/LogicBackupConfigInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/BackupConfigInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/SparseBackupConfigRsp.h>
 
 
 namespace TencentCloud
@@ -45,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
-                     * @return BackupTimeBeg Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * 获取<p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
                      * 
                      */
                     uint64_t GetBackupTimeBeg() const;
@@ -59,8 +61,8 @@ namespace TencentCloud
                     bool BackupTimeBegHasBeenSet() const;
 
                     /**
-                     * 获取Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
-                     * @return BackupTimeEnd Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * 获取<p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+                     * @return BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
                      * 
                      */
                     uint64_t GetBackupTimeEnd() const;
@@ -73,8 +75,8 @@ namespace TencentCloud
                     bool BackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
-                     * @return ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * 获取<p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+                     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
                      * 
                      */
                     uint64_t GetReserveDuration() const;
@@ -87,8 +89,8 @@ namespace TencentCloud
                     bool ReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
-                     * @return BackupFreq Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
+                     * 获取<p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+                     * @return BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
                      * 
                      */
                     std::vector<std::string> GetBackupFreq() const;
@@ -101,8 +103,8 @@ namespace TencentCloud
                     bool BackupFreqHasBeenSet() const;
 
                     /**
-                     * 获取Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
-                     * @return BackupType Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
+                     * 获取<p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+                     * @return BackupType <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
                      * 
                      */
                     std::string GetBackupType() const;
@@ -115,8 +117,8 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cross-Regional logical backup configuration modification time.
-                     * @return LogicCrossRegionsConfigUpdateTime Cross-Regional logical backup configuration modification time.
+                     * 获取<p>Cross-regional logical backup configuration modification time</p>
+                     * @return LogicCrossRegionsConfigUpdateTime <p>Cross-regional logical backup configuration modification time</p>
                      * 
                      */
                     std::string GetLogicCrossRegionsConfigUpdateTime() const;
@@ -129,8 +131,8 @@ namespace TencentCloud
                     bool LogicCrossRegionsConfigUpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Automatic logical backup configuration.
-                     * @return LogicBackupConfig Automatic logical backup configuration.
+                     * 获取<p>Automatic logical backup configuration</p>
+                     * @return LogicBackupConfig <p>Automatic logical backup configuration</p>
                      * 
                      */
                     LogicBackupConfigInfo GetLogicBackupConfig() const;
@@ -142,49 +144,92 @@ namespace TencentCloud
                      */
                     bool LogicBackupConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Second-level snapshot backup configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SnapshotSecondaryBackupConfig <p>Second-level snapshot backup configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    BackupConfigInfo GetSnapshotSecondaryBackupConfig() const;
+
+                    /**
+                     * 判断参数 SnapshotSecondaryBackupConfig 是否已赋值
+                     * @return SnapshotSecondaryBackupConfig 是否已赋值
+                     * 
+                     */
+                    bool SnapshotSecondaryBackupConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Sparse backup configuration</p>
+                     * @return SparseBackupConfig <p>Sparse backup configuration</p>
+                     * 
+                     */
+                    SparseBackupConfigRsp GetSparseBackupConfig() const;
+
+                    /**
+                     * 判断参数 SparseBackupConfig 是否已赋值
+                     * @return SparseBackupConfig 是否已赋值
+                     * 
+                     */
+                    bool SparseBackupConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
                      */
                     uint64_t m_backupTimeBeg;
                     bool m_backupTimeBegHasBeenSet;
 
                     /**
-                     * Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
                      */
                     uint64_t m_backupTimeEnd;
                     bool m_backupTimeEndHasBeenSet;
 
                     /**
-                     * Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
                      */
                     uint64_t m_reserveDuration;
                     bool m_reserveDurationHasBeenSet;
 
                     /**
-                     * Backup frequency. an array with a length of 7, indicating the backup methods corresponding to monday to sunday respectively. full represents full backup, and increment represents incremental backup.
+                     * <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
                      */
                     std::vector<std::string> m_backupFreq;
                     bool m_backupFreqHasBeenSet;
 
                     /**
-                     * Backup method. specifies the method of backup. valid values: logic (indicates logical backup), snapshot (indicates snapshot backup).
+                     * <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Cross-Regional logical backup configuration modification time.
+                     * <p>Cross-regional logical backup configuration modification time</p>
                      */
                     std::string m_logicCrossRegionsConfigUpdateTime;
                     bool m_logicCrossRegionsConfigUpdateTimeHasBeenSet;
 
                     /**
-                     * Automatic logical backup configuration.
+                     * <p>Automatic logical backup configuration</p>
                      */
                     LogicBackupConfigInfo m_logicBackupConfig;
                     bool m_logicBackupConfigHasBeenSet;
+
+                    /**
+                     * <p>Second-level snapshot backup configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    BackupConfigInfo m_snapshotSecondaryBackupConfig;
+                    bool m_snapshotSecondaryBackupConfigHasBeenSet;
+
+                    /**
+                     * <p>Sparse backup configuration</p>
+                     */
+                    SparseBackupConfigRsp m_sparseBackupConfig;
+                    bool m_sparseBackupConfigHasBeenSet;
 
                 };
             }

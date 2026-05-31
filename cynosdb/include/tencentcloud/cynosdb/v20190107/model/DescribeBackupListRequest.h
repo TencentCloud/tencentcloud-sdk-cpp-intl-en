@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot type. Optional values: full, full backup; increment, incremental backup
-                     * @return SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
+                     * 获取
+                     * @return SnapShotType 
                      * 
                      */
                     std::string GetSnapShotType() const;
 
                     /**
-                     * 设置Snapshot type. Optional values: full, full backup; increment, incremental backup
-                     * @param _snapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
+                     * 设置
+                     * @param _snapShotType 
                      * 
                      */
                     void SetSnapShotType(const std::string& _snapShotType);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup file name, fuzzy search
-                     * @return FileNames Backup file name, fuzzy search
+                     * 获取
+                     * @return FileNames 
                      * 
                      */
                     std::vector<std::string> GetFileNames() const;
 
                     /**
-                     * 设置Backup file name, fuzzy search
-                     * @param _fileNames Backup file name, fuzzy search
+                     * 设置
+                     * @param _fileNames 
                      * 
                      */
                     void SetFileNames(const std::vector<std::string>& _fileNames);
@@ -319,6 +319,69 @@ namespace TencentCloud
                      */
                     bool SnapshotIdListHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return BackupRegion 
+                     * 
+                     */
+                    std::string GetBackupRegion() const;
+
+                    /**
+                     * 设置
+                     * @param _backupRegion 
+                     * 
+                     */
+                    void SetBackupRegion(const std::string& _backupRegion);
+
+                    /**
+                     * 判断参数 BackupRegion 是否已赋值
+                     * @return BackupRegion 是否已赋值
+                     * 
+                     */
+                    bool BackupRegionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsCrossRegionsBackup 
+                     * 
+                     */
+                    std::string GetIsCrossRegionsBackup() const;
+
+                    /**
+                     * 设置
+                     * @param _isCrossRegionsBackup 
+                     * 
+                     */
+                    void SetIsCrossRegionsBackup(const std::string& _isCrossRegionsBackup);
+
+                    /**
+                     * 判断参数 IsCrossRegionsBackup 是否已赋值
+                     * @return IsCrossRegionsBackup 是否已赋值
+                     * 
+                     */
+                    bool IsCrossRegionsBackupHasBeenSet() const;
+
+                    /**
+                     * 获取Status you want to query
+                     * @return BackupStatus Status you want to query
+                     * 
+                     */
+                    std::vector<std::string> GetBackupStatus() const;
+
+                    /**
+                     * 设置Status you want to query
+                     * @param _backupStatus Status you want to query
+                     * 
+                     */
+                    void SetBackupStatus(const std::vector<std::string>& _backupStatus);
+
+                    /**
+                     * 判断参数 BackupStatus 是否已赋值
+                     * @return BackupStatus 是否已赋值
+                     * 
+                     */
+                    bool BackupStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -365,7 +428,7 @@ namespace TencentCloud
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Snapshot type. Optional values: full, full backup; increment, incremental backup
+                     * 
                      */
                     std::string m_snapShotType;
                     bool m_snapShotTypeHasBeenSet;
@@ -383,7 +446,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Backup file name, fuzzy search
+                     * 
                      */
                     std::vector<std::string> m_fileNames;
                     bool m_fileNamesHasBeenSet;
@@ -399,6 +462,24 @@ namespace TencentCloud
                      */
                     std::vector<int64_t> m_snapshotIdList;
                     bool m_snapshotIdListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_backupRegion;
+                    bool m_backupRegionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_isCrossRegionsBackup;
+                    bool m_isCrossRegionsBackupHasBeenSet;
+
+                    /**
+                     * Status you want to query
+                     */
+                    std::vector<std::string> m_backupStatus;
+                    bool m_backupStatusHasBeenSet;
 
                 };
             }

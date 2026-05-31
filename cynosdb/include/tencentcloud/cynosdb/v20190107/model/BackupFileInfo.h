@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/VaultInfo.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot file ID, which is deprecated. You need to use `BackupId`.
-                     * @return SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
+                     * 获取<p>Snapshot file ID, abandoned, please use BackupId</p>
+                     * @return SnapshotId <p>Snapshot file ID, abandoned, please use BackupId</p>
                      * 
                      */
                     uint64_t GetSnapshotId() const;
 
                     /**
-                     * 设置Snapshot file ID, which is deprecated. You need to use `BackupId`.
-                     * @param _snapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
+                     * 设置<p>Snapshot file ID, abandoned, please use BackupId</p>
+                     * @param _snapshotId <p>Snapshot file ID, abandoned, please use BackupId</p>
                      * 
                      */
                     void SetSnapshotId(const uint64_t& _snapshotId);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file name
-                     * @return FileName Backup file name
+                     * 获取<p>Backup file name</p>
+                     * @return FileName <p>Backup file name</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Backup file name
-                     * @param _fileName Backup file name
+                     * 设置<p>Backup file name</p>
+                     * @param _fileName <p>Backup file name</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Backup file size
-                     * @return FileSize Backup file size
+                     * 获取<p>Backup file size</p>
+                     * @return FileSize <p>Backup file size</p>
                      * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
-                     * 设置Backup file size
-                     * @param _fileSize Backup file size
+                     * 设置<p>Backup file size</p>
+                     * @param _fileSize <p>Backup file size</p>
                      * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Backup start time
-                     * @return StartTime Backup start time
+                     * 获取<p>Backup start time.</p>
+                     * @return StartTime <p>Backup start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Backup start time
-                     * @param _startTime Backup start time
+                     * 设置<p>Backup start time.</p>
+                     * @param _startTime <p>Backup start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup end time
-                     * @return FinishTime Backup end time
+                     * 获取<p>Backup completion time.</p>
+                     * @return FinishTime <p>Backup completion time.</p>
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Backup end time
-                     * @param _finishTime Backup end time
+                     * 设置<p>Backup completion time.</p>
+                     * @param _finishTime <p>Backup completion time.</p>
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
-                     * @return BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+                     * 获取<p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
+                     * @return BackupType <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
-                     * @param _backupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+                     * 设置<p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
+                     * @param _backupType <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -173,15 +174,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Back mode. auto: auto backup; manual: manual backup
-                     * @return BackupMethod Back mode. auto: auto backup; manual: manual backup
+                     * 获取<p>Backup method: auto, automatic backup; manual, manual backup</p>
+                     * @return BackupMethod <p>Backup method: auto, automatic backup; manual, manual backup</p>
                      * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Back mode. auto: auto backup; manual: manual backup
-                     * @param _backupMethod Back mode. auto: auto backup; manual: manual backup
+                     * 设置<p>Backup method: auto, automatic backup; manual, manual backup</p>
+                     * @param _backupMethod <p>Backup method: auto, automatic backup; manual, manual backup</p>
                      * 
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
@@ -194,15 +195,15 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
-                     * @return BackupStatus Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
+                     * 获取<p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+                     * @return BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
                      * 
                      */
                     std::string GetBackupStatus() const;
 
                     /**
-                     * 设置Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
-                     * @param _backupStatus Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
+                     * 设置<p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+                     * @param _backupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
                      * 
                      */
                     void SetBackupStatus(const std::string& _backupStatus);
@@ -215,15 +216,15 @@ namespace TencentCloud
                     bool BackupStatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup file time
-                     * @return SnapshotTime Backup file time
+                     * 获取<p>Backup file time</p>
+                     * @return SnapshotTime <p>Backup file time</p>
                      * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
-                     * 设置Backup file time
-                     * @param _snapshotTime Backup file time
+                     * 设置<p>Backup file time</p>
+                     * @param _snapshotTime <p>Backup file time</p>
                      * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
@@ -236,15 +237,15 @@ namespace TencentCloud
                     bool SnapshotTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup ID.
-                     * @return BackupId Backup ID.
+                     * 获取<p>Backup ID</p>
+                     * @return BackupId <p>Backup ID</p>
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Backup ID.
-                     * @param _backupId Backup ID.
+                     * 设置<p>Backup ID</p>
+                     * @param _backupId <p>Backup ID</p>
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -257,15 +258,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
-                     * @return SnapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+                     * 获取<p>Snapshot type. Value range: full, full; increment, incremental</p>
+                     * @return SnapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
                      * 
                      */
                     std::string GetSnapShotType() const;
 
                     /**
-                     * 设置Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
-                     * @param _snapShotType Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+                     * 设置<p>Snapshot type. Value range: full, full; increment, incremental</p>
+                     * @param _snapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
                      * 
                      */
                     void SetSnapShotType(const std::string& _snapShotType);
@@ -278,15 +279,15 @@ namespace TencentCloud
                     bool SnapShotTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the remark of the backup file.
-                     * @return BackupName Specifies the remark of the backup file.
+                     * 获取<p>Backup file remark</p>
+                     * @return BackupName <p>Backup file remark</p>
                      * 
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置Specifies the remark of the backup file.
-                     * @param _backupName Specifies the remark of the backup file.
+                     * 设置<p>Backup file remark</p>
+                     * @param _backupName <p>Backup file remark</p>
                      * 
                      */
                     void SetBackupName(const std::string& _backupName);
@@ -298,79 +299,214 @@ namespace TencentCloud
                      */
                     bool BackupNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Delivery status</p>
+                     * @return CopyStatus <p>Delivery status</p>
+                     * 
+                     */
+                    std::string GetCopyStatus() const;
+
+                    /**
+                     * 设置<p>Delivery status</p>
+                     * @param _copyStatus <p>Delivery status</p>
+                     * 
+                     */
+                    void SetCopyStatus(const std::string& _copyStatus);
+
+                    /**
+                     * 判断参数 CopyStatus 是否已赋值
+                     * @return CopyStatus 是否已赋值
+                     * 
+                     */
+                    bool CopyStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Key id</p>
+                     * @return EncryptKeyId <p>Key id</p>
+                     * 
+                     */
+                    std::string GetEncryptKeyId() const;
+
+                    /**
+                     * 设置<p>Key id</p>
+                     * @param _encryptKeyId <p>Key id</p>
+                     * 
+                     */
+                    void SetEncryptKeyId(const std::string& _encryptKeyId);
+
+                    /**
+                     * 判断参数 EncryptKeyId 是否已赋值
+                     * @return EncryptKeyId 是否已赋值
+                     * 
+                     */
+                    bool EncryptKeyIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Key region</p>
+                     * @return EncryptRegion <p>Key region</p>
+                     * 
+                     */
+                    std::string GetEncryptRegion() const;
+
+                    /**
+                     * 设置<p>Key region</p>
+                     * @param _encryptRegion <p>Key region</p>
+                     * 
+                     */
+                    void SetEncryptRegion(const std::string& _encryptRegion);
+
+                    /**
+                     * 判断参数 EncryptRegion 是否已赋值
+                     * @return EncryptRegion 是否已赋值
+                     * 
+                     */
+                    bool EncryptRegionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Safe info</p>
+                     * @return VaultInfos <p>Safe info</p>
+                     * 
+                     */
+                    std::vector<VaultInfo> GetVaultInfos() const;
+
+                    /**
+                     * 设置<p>Safe info</p>
+                     * @param _vaultInfos <p>Safe info</p>
+                     * 
+                     */
+                    void SetVaultInfos(const std::vector<VaultInfo>& _vaultInfos);
+
+                    /**
+                     * 判断参数 VaultInfos 是否已赋值
+                     * @return VaultInfos 是否已赋值
+                     * 
+                     */
+                    bool VaultInfosHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Backup cycle policy</p>
+                     * @return BackupPeriodStrategy <p>Backup cycle policy</p>
+                     * 
+                     */
+                    std::string GetBackupPeriodStrategy() const;
+
+                    /**
+                     * 设置<p>Backup cycle policy</p>
+                     * @param _backupPeriodStrategy <p>Backup cycle policy</p>
+                     * 
+                     */
+                    void SetBackupPeriodStrategy(const std::string& _backupPeriodStrategy);
+
+                    /**
+                     * 判断参数 BackupPeriodStrategy 是否已赋值
+                     * @return BackupPeriodStrategy 是否已赋值
+                     * 
+                     */
+                    bool BackupPeriodStrategyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Snapshot file ID, which is deprecated. You need to use `BackupId`.
+                     * <p>Snapshot file ID, abandoned, please use BackupId</p>
                      */
                     uint64_t m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Backup file name
+                     * <p>Backup file name</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Backup file size
+                     * <p>Backup file size</p>
                      */
                     uint64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Backup start time
+                     * <p>Backup start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Backup end time
+                     * <p>Backup completion time.</p>
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+                     * <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Back mode. auto: auto backup; manual: manual backup
+                     * <p>Backup method: auto, automatic backup; manual, manual backup</p>
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
+                     * <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
                      */
                     std::string m_backupStatus;
                     bool m_backupStatusHasBeenSet;
 
                     /**
-                     * Backup file time
+                     * <p>Backup file time</p>
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;
 
                     /**
-                     * Backup ID.
+                     * <p>Backup ID</p>
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+                     * <p>Snapshot type. Value range: full, full; increment, incremental</p>
                      */
                     std::string m_snapShotType;
                     bool m_snapShotTypeHasBeenSet;
 
                     /**
-                     * Specifies the remark of the backup file.
+                     * <p>Backup file remark</p>
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
+
+                    /**
+                     * <p>Delivery status</p>
+                     */
+                    std::string m_copyStatus;
+                    bool m_copyStatusHasBeenSet;
+
+                    /**
+                     * <p>Key id</p>
+                     */
+                    std::string m_encryptKeyId;
+                    bool m_encryptKeyIdHasBeenSet;
+
+                    /**
+                     * <p>Key region</p>
+                     */
+                    std::string m_encryptRegion;
+                    bool m_encryptRegionHasBeenSet;
+
+                    /**
+                     * <p>Safe info</p>
+                     */
+                    std::vector<VaultInfo> m_vaultInfos;
+                    bool m_vaultInfosHasBeenSet;
+
+                    /**
+                     * <p>Backup cycle policy</p>
+                     */
+                    std::string m_backupPeriodStrategy;
+                    bool m_backupPeriodStrategyHasBeenSet;
 
                 };
             }

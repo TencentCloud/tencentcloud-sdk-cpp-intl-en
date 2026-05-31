@@ -153,7 +153,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetRegionId() const;
+                    int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
@@ -162,7 +162,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetRegionId(const std::string& _regionId);
+                    void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
@@ -255,7 +255,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::string m_regionId;
+                    int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**

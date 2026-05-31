@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance Parameter Modification Task Details
+                * 
                 */
                 class BizTaskModifyInstanceParam : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取
+                     * @return InstanceId 
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置
+                     * @param _instanceId 
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * 
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

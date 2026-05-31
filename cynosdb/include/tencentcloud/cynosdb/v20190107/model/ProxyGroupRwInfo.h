@@ -257,6 +257,48 @@ namespace TencentCloud
                      */
                     bool AccessModeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to treat the libra node as an ordinary RO node
+                     * @return ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+                     * 
+                     */
+                    bool GetApNodeAsRoNode() const;
+
+                    /**
+                     * 设置Whether to treat the libra node as an ordinary RO node
+                     * @param _apNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+                     * 
+                     */
+                    void SetApNodeAsRoNode(const bool& _apNodeAsRoNode);
+
+                    /**
+                     * 判断参数 ApNodeAsRoNode 是否已赋值
+                     * @return ApNodeAsRoNode 是否已赋值
+                     * 
+                     */
+                    bool ApNodeAsRoNodeHasBeenSet() const;
+
+                    /**
+                     * 获取libra node fault, whether to forward to other nodes
+                     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    bool GetApQueryToOtherNode() const;
+
+                    /**
+                     * 设置libra node fault, whether to forward to other nodes
+                     * @param _apQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    void SetApQueryToOtherNode(const bool& _apQueryToOtherNode);
+
+                    /**
+                     * 判断参数 ApQueryToOtherNode 是否已赋值
+                     * @return ApQueryToOtherNode 是否已赋值
+                     * 
+                     */
+                    bool ApQueryToOtherNodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -318,6 +360,18 @@ namespace TencentCloud
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;
+
+                    /**
+                     * Whether to treat the libra node as an ordinary RO node
+                     */
+                    bool m_apNodeAsRoNode;
+                    bool m_apNodeAsRoNodeHasBeenSet;
+
+                    /**
+                     * libra node fault, whether to forward to other nodes
+                     */
+                    bool m_apQueryToOtherNode;
+                    bool m_apQueryToOtherNodeHasBeenSet;
 
                 };
             }

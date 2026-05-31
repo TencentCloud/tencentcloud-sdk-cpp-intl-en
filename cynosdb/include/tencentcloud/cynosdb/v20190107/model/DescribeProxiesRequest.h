@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
-                     * @return ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+                     * 获取<p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
+                     * @return ClusterId <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
-                     * @param _clusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+                     * 设置<p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
+                     * @param _clusterId <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: `20`. Maximum value: `100`,
-                     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * 获取<p>Number of returned results, defaults to 20 with a maximum value of 100</p>
+                     * @return Limit <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: `20`. Maximum value: `100`,
-                     * @param _limit Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * 设置<p>Number of returned results, defaults to 20 with a maximum value of 100</p>
+                     * @param _limit <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Record offset. Default value: `0`.
-                     * @return Offset Record offset. Default value: `0`.
+                     * 获取<p>Record offset. Default value is 0</p>
+                     * @return Offset <p>Record offset. Default value is 0</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Record offset. Default value: `0`.
-                     * @param _offset Record offset. Default value: `0`.
+                     * 设置<p>Record offset. Default value is 0</p>
+                     * @param _offset <p>Record offset. Default value is 0</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -107,23 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
-                     * @return OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+                     * 获取<p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
+                     * @return OrderBy <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
-                     * @param _orderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+                     * 设置<p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
+                     * @param _orderBy <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -136,23 +128,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-                     * @return OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * 获取<p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
+                     * @return OrderByType <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
                      * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-                     * @param _orderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * 设置<p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
+                     * @param _orderByType <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
                      * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
@@ -165,15 +149,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-                     * @return Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * 获取<p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+                     * @return Filters <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
                      * 
                      */
                     std::vector<QueryParamFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-                     * @param _filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * 设置<p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+                     * @param _filters <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
                      * 
                      */
                     void SetFilters(const std::vector<QueryParamFilter>& _filters);
@@ -188,41 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+                     * <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: `20`. Maximum value: `100`,
+                     * <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Record offset. Default value: `0`.
+                     * <p>Record offset. Default value is 0</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+                     * <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+                     * <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
                      */
                     std::vector<QueryParamFilter> m_filters;
                     bool m_filtersHasBeenSet;

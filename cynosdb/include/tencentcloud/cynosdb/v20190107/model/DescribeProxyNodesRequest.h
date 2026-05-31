@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-                     * @return Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * 获取Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-                     * @param _filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * 设置Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+                     * @param _filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_orderByTypeHasBeenSet;
 
                     /**
-                     * Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+                     * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
                      */
                     std::vector<QueryFilter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -45,23 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
-                     * @return ZoneIds Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+                     * 获取<p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+                     * @return ZoneIds <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
                      * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
-                     * 设置Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
-                     * @param _zoneIds Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+                     * 设置<p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+                     * @param _zoneIds <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
                      * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
@@ -74,19 +66,15 @@ Single-AZ deployment selects an availability zone. example: [200002].
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @return ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 获取<p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+                     * @return ProductName <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @param _productName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 设置<p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+                     * @param _productName <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -99,23 +87,15 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取`1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
-                     * @return AutoRenewFlag `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+                     * 获取<p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+                     * @return AutoRenewFlag <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置`1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
-                     * @param _autoRenewFlag `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+                     * 设置<p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+                     * @param _autoRenewFlag <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -128,15 +108,15 @@ false. disables automatic monthly renewal.
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration. value range: 1–50.
-                     * @return TimeSpan Purchase duration. value range: 1–50.
+                     * 获取<p>Purchase period, value ranges from 1 to 50</p>
+                     * @return TimeSpan <p>Purchase period, value ranges from 1 to 50</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Purchase duration. value range: 1–50.
-                     * @param _timeSpan Purchase duration. value range: 1–50.
+                     * 设置<p>Purchase period, value ranges from 1 to 50</p>
+                     * @param _timeSpan <p>Purchase period, value ranges from 1 to 50</p>
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -149,15 +129,15 @@ false. disables automatic monthly renewal.
                     bool TimeSpanHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
-                     * @return ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+                     * 获取<p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+                     * @return ClusterName <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
-                     * @param _clusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+                     * 设置<p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+                     * @param _clusterName <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -170,15 +150,15 @@ false. disables automatic monthly renewal.
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
-                     * @return AutoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+                     * 获取<p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+                     * @return AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
-                     * @param _autoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+                     * 设置<p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+                     * @param _autoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -191,19 +171,15 @@ false. disables automatic monthly renewal.
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @return StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 获取<p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+                     * @return StorageSize <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      * 
                      */
                     int64_t GetStorageSize() const;
 
                     /**
-                     * 设置Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-                     * @param _storageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * 设置<p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+                     * @param _storageSize <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      * 
                      */
                     void SetStorageSize(const int64_t& _storageSize);
@@ -216,15 +192,15 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                     bool StorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the vpc network tag.
-                     * @return Vpc Specifies the vpc network tag.
+                     * 获取<p>vpc network tag</p>
+                     * @return Vpc <p>vpc network tag</p>
                      * 
                      */
                     VpcInfo GetVpc() const;
 
                     /**
-                     * 设置Specifies the vpc network tag.
-                     * @param _vpc Specifies the vpc network tag.
+                     * 设置<p>vpc network tag</p>
+                     * @param _vpc <p>vpc network tag</p>
                      * 
                      */
                     void SetVpc(const VpcInfo& _vpc);
@@ -237,15 +213,15 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                     bool VpcHasBeenSet() const;
 
                     /**
-                     * 获取Tag list of the cluster (abandoned).
-                     * @return Tags Tag list of the cluster (abandoned).
+                     * 获取<p>Tag list of the cluster (abandoned)</p>
+                     * @return Tags <p>Tag list of the cluster (abandoned)</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list of the cluster (abandoned).
-                     * @param _tags Tag list of the cluster (abandoned).
+                     * 设置<p>Tag list of the cluster (abandoned)</p>
+                     * @param _tags <p>Tag list of the cluster (abandoned)</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -257,67 +233,88 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster version information</p>
+                     * @return InstanceVersion <p>Cluster version information</p>
+                     * 
+                     */
+                    std::string GetInstanceVersion() const;
+
+                    /**
+                     * 设置<p>Cluster version information</p>
+                     * @param _instanceVersion <p>Cluster version information</p>
+                     * 
+                     */
+                    void SetInstanceVersion(const std::string& _instanceVersion);
+
+                    /**
+                     * 判断参数 InstanceVersion 是否已赋值
+                     * @return InstanceVersion 是否已赋值
+                     * 
+                     */
+                    bool InstanceVersionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+                     * <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
                      */
                     std::vector<int64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+                     * <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Purchase duration. value range: 1–50.
+                     * <p>Purchase period, value ranges from 1 to 50</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
-                     * Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+                     * <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+                     * <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+                     * <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
                      */
                     int64_t m_storageSize;
                     bool m_storageSizeHasBeenSet;
 
                     /**
-                     * Specifies the vpc network tag.
+                     * <p>vpc network tag</p>
                      */
                     VpcInfo m_vpc;
                     bool m_vpcHasBeenSet;
 
                     /**
-                     * Tag list of the cluster (abandoned).
+                     * <p>Tag list of the cluster (abandoned)</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * <p>Cluster version information</p>
+                     */
+                    std::string m_instanceVersion;
+                    bool m_instanceVersionHasBeenSet;
 
                 };
             }

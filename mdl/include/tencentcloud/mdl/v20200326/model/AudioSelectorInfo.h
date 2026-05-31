@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool AudioPidSelectionHasBeenSet() const;
 
                     /**
-                     * 获取Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
-                     * @return AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * 获取Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
+                     * @return AudioSelectorType Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
                      * 
                      */
                     std::string GetAudioSelectorType() const;
 
                     /**
-                     * 设置Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
-                     * @param _audioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * 设置Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
+                     * @param _audioSelectorType Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
                      * 
                      */
                     void SetAudioSelectorType(const std::string& _audioSelectorType);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_audioPidSelectionHasBeenSet;
 
                     /**
-                     * Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+                     * Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
                      */
                     std::string m_audioSelectorType;
                     bool m_audioSelectorTypeHasBeenSet;

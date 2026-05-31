@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取<p>vpc id</p>
+                     * @return VpcId <p>vpc id</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param _vpcId 
+                     * 设置<p>vpc id</p>
+                     * @param _vpcId <p>vpc id</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取<p>Subnet id</p>
+                     * @return SubnetId <p>Subnet id</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param _subnetId 
+                     * 设置<p>Subnet id</p>
+                     * @param _subnetId <p>Subnet id</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcEndpoint 
+                     * 获取<p>vpc access point information</p>
+                     * @return VpcEndpoint <p>vpc access point information</p>
                      * 
                      */
                     std::string GetVpcEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param _vpcEndpoint 
+                     * 设置<p>vpc access point information</p>
+                     * @param _vpcEndpoint <p>vpc access point information</p>
                      * 
                      */
                     void SetVpcEndpoint(const std::string& _vpcEndpoint);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VpcEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Access point status. valid values: OFF, ON, CREATING, DELETING.
-                     * @return VpcDataStreamEndpointStatus Access point status. valid values: OFF, ON, CREATING, DELETING.
+                     * 获取<p>vpc access point status OFF/ON/CREATING/DELETING</p>
+                     * @return VpcDataStreamEndpointStatus <p>vpc access point status OFF/ON/CREATING/DELETING</p>
                      * 
                      */
                     std::string GetVpcDataStreamEndpointStatus() const;
 
                     /**
-                     * 设置Access point status. valid values: OFF, ON, CREATING, DELETING.
-                     * @param _vpcDataStreamEndpointStatus Access point status. valid values: OFF, ON, CREATING, DELETING.
+                     * 设置<p>vpc access point status OFF/ON/CREATING/DELETING</p>
+                     * @param _vpcDataStreamEndpointStatus <p>vpc access point status OFF/ON/CREATING/DELETING</p>
                      * 
                      */
                     void SetVpcDataStreamEndpointStatus(const std::string& _vpcDataStreamEndpointStatus);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool VpcDataStreamEndpointStatusHasBeenSet() const;
 
                     /**
-                     * 获取Encrypted TLS data stream access point.
-                     * @return VpcTlsEndpoint Encrypted TLS data stream access point.
+                     * 获取<p>TLS encrypted data stream access point</p>
+                     * @return VpcTlsEndpoint <p>TLS encrypted data stream access point</p>
                      * 
                      */
                     std::string GetVpcTlsEndpoint() const;
 
                     /**
-                     * 设置Encrypted TLS data stream access point.
-                     * @param _vpcTlsEndpoint Encrypted TLS data stream access point.
+                     * 设置<p>TLS encrypted data stream access point</p>
+                     * @param _vpcTlsEndpoint <p>TLS encrypted data stream access point</p>
                      * 
                      */
                     void SetVpcTlsEndpoint(const std::string& _vpcTlsEndpoint);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool VpcTlsEndpointHasBeenSet() const;
 
                     /**
-                     * 获取Error message for VPC access point operations.
-                     * @return VpcErrorMessage Error message for VPC access point operations.
+                     * 获取<p>Error information of VPC access point operation failure</p>
+                     * @return VpcErrorMessage <p>Error information of VPC access point operation failure</p>
                      * 
                      */
                     std::string GetVpcErrorMessage() const;
 
                     /**
-                     * 设置Error message for VPC access point operations.
-                     * @param _vpcErrorMessage Error message for VPC access point operations.
+                     * 设置<p>Error information of VPC access point operation failure</p>
+                     * @param _vpcErrorMessage <p>Error information of VPC access point operation failure</p>
                      * 
                      */
                     void SetVpcErrorMessage(const std::string& _vpcErrorMessage);
@@ -172,43 +172,97 @@ namespace TencentCloud
                      */
                     bool VpcErrorMessageHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Access point ID</p>
+                     * @return Id <p>Access point ID</p>
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置<p>Access point ID</p>
+                     * @param _id <p>Access point ID</p>
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>vpc Stream access point</p>
+                     * @return VpcStreamEndpoint <p>vpc Stream access point</p>
+                     * 
+                     */
+                    std::string GetVpcStreamEndpoint() const;
+
+                    /**
+                     * 设置<p>vpc Stream access point</p>
+                     * @param _vpcStreamEndpoint <p>vpc Stream access point</p>
+                     * 
+                     */
+                    void SetVpcStreamEndpoint(const std::string& _vpcStreamEndpoint);
+
+                    /**
+                     * 判断参数 VpcStreamEndpoint 是否已赋值
+                     * @return VpcStreamEndpoint 是否已赋值
+                     * 
+                     */
+                    bool VpcStreamEndpointHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>vpc id</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subnet id</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>vpc access point information</p>
                      */
                     std::string m_vpcEndpoint;
                     bool m_vpcEndpointHasBeenSet;
 
                     /**
-                     * Access point status. valid values: OFF, ON, CREATING, DELETING.
+                     * <p>vpc access point status OFF/ON/CREATING/DELETING</p>
                      */
                     std::string m_vpcDataStreamEndpointStatus;
                     bool m_vpcDataStreamEndpointStatusHasBeenSet;
 
                     /**
-                     * Encrypted TLS data stream access point.
+                     * <p>TLS encrypted data stream access point</p>
                      */
                     std::string m_vpcTlsEndpoint;
                     bool m_vpcTlsEndpointHasBeenSet;
 
                     /**
-                     * Error message for VPC access point operations.
+                     * <p>Error information of VPC access point operation failure</p>
                      */
                     std::string m_vpcErrorMessage;
                     bool m_vpcErrorMessageHasBeenSet;
+
+                    /**
+                     * <p>Access point ID</p>
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * <p>vpc Stream access point</p>
+                     */
+                    std::string m_vpcStreamEndpoint;
+                    bool m_vpcStreamEndpointHasBeenSet;
 
                 };
             }

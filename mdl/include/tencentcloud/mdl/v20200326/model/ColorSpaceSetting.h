@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Color space setting.
+                * Colorspace configuration.
                 */
                 class ColorSpaceSetting : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
-                     * @return ColorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+                     * 获取Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
+                     * @return ColorSpace Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
                      * 
                      */
                     std::string GetColorSpace() const;
 
                     /**
-                     * 设置Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
-                     * @param _colorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+                     * 设置Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
+                     * @param _colorSpace Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
                      * 
                      */
                     void SetColorSpace(const std::string& _colorSpace);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+                     * Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
                      */
                     std::string m_colorSpace;
                     bool m_colorSpaceHasBeenSet;

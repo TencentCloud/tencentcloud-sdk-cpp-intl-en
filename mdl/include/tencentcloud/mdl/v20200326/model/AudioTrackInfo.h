@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
-                     * @return TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+                     * 获取User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+                     * @return TrackName User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
                      * 
                      */
                     std::string GetTrackName() const;
 
                     /**
-                     * 设置User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
-                     * @param _trackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+                     * 设置User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+                     * @param _trackName User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
                      * 
                      */
                     void SetTrackName(const std::string& _trackName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TrackNameHasBeenSet() const;
 
                     /**
-                     * 获取Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-                     * @return AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * 获取Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+                     * @return AudioCodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      * 
                      */
                     std::string GetAudioCodec() const;
 
                     /**
-                     * 设置Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-                     * @param _audioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * 设置Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+                     * @param _audioCodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      * 
                      */
                     void SetAudioCodec(const std::string& _audioCodec);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool AudioSampleRateHasBeenSet() const;
 
                     /**
-                     * 获取Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
-                     * @return AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+                     * 获取Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
+                     * @return AudioSelectorName Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
                      * 
                      */
                     std::string GetAudioSelectorName() const;
 
                     /**
-                     * 设置Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
-                     * @param _audioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+                     * 设置Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
+                     * @param _audioSelectorName Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
                      * 
                      */
                     void SetAudioSelectorName(const std::string& _audioSelectorName);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool AudioNormalizationHasBeenSet() const;
 
                     /**
-                     * 获取Audio encoding configuration.
-                     * @return AudioCodecDetails Audio encoding configuration.
+                     * 获取Additional audio mode and sound channel configuration.
+                     * @return AudioCodecDetails Additional audio mode and sound channel configuration.
                      * 
                      */
                     AudioCodecDetail GetAudioCodecDetails() const;
 
                     /**
-                     * 设置Audio encoding configuration.
-                     * @param _audioCodecDetails Audio encoding configuration.
+                     * 设置Additional audio mode and sound channel configuration.
+                     * @param _audioCodecDetails Additional audio mode and sound channel configuration.
                      * 
                      */
                     void SetAudioCodecDetails(const AudioCodecDetail& _audioCodecDetails);
@@ -198,13 +198,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+                     * User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
                      */
                     std::string m_trackName;
                     bool m_trackNameHasBeenSet;
 
                     /**
-                     * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+                     * Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
                      */
                     std::string m_audioCodec;
                     bool m_audioCodecHasBeenSet;
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_audioSampleRateHasBeenSet;
 
                     /**
-                     * Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+                     * Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
                      */
                     std::string m_audioSelectorName;
                     bool m_audioSelectorNameHasBeenSet;
@@ -234,7 +234,7 @@ namespace TencentCloud
                     bool m_audioNormalizationHasBeenSet;
 
                     /**
-                     * Audio encoding configuration.
+                     * Additional audio mode and sound channel configuration.
                      */
                     AudioCodecDetail m_audioCodecDetails;
                     bool m_audioCodecDetailsHasBeenSet;

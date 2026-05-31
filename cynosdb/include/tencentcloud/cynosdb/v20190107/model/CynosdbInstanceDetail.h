@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User `Uin`
-                     * @return Uin User `Uin`
+                     * 获取<p>User Uin</p>
+                     * @return Uin <p>User Uin</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User `Uin`
-                     * @param _uin User `Uin`
+                     * 设置<p>User Uin</p>
+                     * @param _uin <p>User Uin</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取User `AppId`
-                     * @return AppId User `AppId`
+                     * 获取<p>User AppId</p>
+                     * @return AppId <p>User AppId</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User `AppId`
-                     * @param _appId User `AppId`
+                     * 设置<p>User AppId</p>
+                     * @param _appId <p>User AppId</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取<p>Project ID</p>
+                     * @return ProjectId <p>Project ID</p>
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置<p>Project ID</p>
+                     * @param _projectId <p>Project ID</p>
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取<p>Region</p>
+                     * @return Region <p>Region</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置<p>Region</p>
+                     * @param _region <p>Region</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance status
-                     * @return Status Instance status
+                     * 获取<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+                     * @return Status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Instance status
-                     * @param _status Instance status
+                     * 设置<p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+                     * @param _status <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance status description
-                     * @return StatusDesc Instance status description
+                     * 获取<p>Status description in Chinese of the instance</p>
+                     * @return StatusDesc <p>Status description in Chinese of the instance</p>
                      * 
                      */
                     std::string GetStatusDesc() const;
 
                     /**
-                     * 设置Instance status description
-                     * @param _statusDesc Instance status description
+                     * 设置<p>Status description in Chinese of the instance</p>
+                     * @param _statusDesc <p>Status description in Chinese of the instance</p>
                      * 
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
@@ -278,23 +278,15 @@ namespace TencentCloud
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Serverless instance status. Valid values:
-resume
-pause
-                     * @return ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+                     * 获取<p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+                     * @return ServerlessStatus <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置Serverless instance status. Valid values:
-resume
-pause
-                     * @param _serverlessStatus Serverless instance status. Valid values:
-resume
-pause
+                     * 设置<p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+                     * @param _serverlessStatus <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -307,15 +299,15 @@ pause
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Database type
-                     * @return DbType Database type
+                     * 获取<p>Database type.</p>
+                     * @return DbType <p>Database type.</p>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type
-                     * @param _dbType Database type
+                     * 设置<p>Database type.</p>
+                     * @param _dbType <p>Database type.</p>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -328,15 +320,15 @@ pause
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database version
-                     * @return DbVersion Database version
+                     * 获取<p>Database version</p>
+                     * @return DbVersion <p>Database version</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置Database version
-                     * @param _dbVersion Database version
+                     * 设置<p>Database version</p>
+                     * @param _dbVersion <p>Database version</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -349,15 +341,15 @@ pause
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-                     * @return Cpu Number of CPU cores
+                     * 获取<p>Cpu, unit: cores</p>
+                     * @return Cpu <p>Cpu, unit: cores</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-                     * @param _cpu Number of CPU cores
+                     * 设置<p>Cpu, unit: cores</p>
+                     * @param _cpu <p>Cpu, unit: cores</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -370,15 +362,15 @@ pause
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory in GB
-                     * @return Memory Memory in GB
+                     * 获取<p>Memory, unit: GB</p>
+                     * @return Memory <p>Memory, unit: GB</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory in GB
-                     * @param _memory Memory in GB
+                     * 设置<p>Memory, unit: GB</p>
+                     * @param _memory <p>Memory, unit: GB</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -391,15 +383,15 @@ pause
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage capacity in GB
-                     * @return Storage Storage capacity in GB
+                     * 获取<p>Stored amount, unit: GB</p>
+                     * @return Storage <p>Stored amount, unit: GB</p>
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Storage capacity in GB
-                     * @param _storage Storage capacity in GB
+                     * 设置<p>Stored amount, unit: GB</p>
+                     * @param _storage <p>Stored amount, unit: GB</p>
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -412,15 +404,15 @@ pause
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Instance type
-                     * @return InstanceType Instance type
+                     * 获取<p>Instance type</p>
+                     * @return InstanceType <p>Instance type</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance type
-                     * @param _instanceType Instance type
+                     * 设置<p>Instance type</p>
+                     * @param _instanceType <p>Instance type</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -433,15 +425,15 @@ pause
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Current instance role
-                     * @return InstanceRole Current instance role
+                     * 获取<p>Current instance role</p>
+                     * @return InstanceRole <p>Current instance role</p>
                      * 
                      */
                     std::string GetInstanceRole() const;
 
                     /**
-                     * 设置Current instance role
-                     * @param _instanceRole Current instance role
+                     * 设置<p>Current instance role</p>
+                     * @param _instanceRole <p>Current instance role</p>
                      * 
                      */
                     void SetInstanceRole(const std::string& _instanceRole);
@@ -454,15 +446,15 @@ pause
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -475,15 +467,15 @@ pause
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -496,15 +488,15 @@ pause
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode
-                     * @return PayMode Billing mode
+                     * 获取<p>Payment mode</p>
+                     * @return PayMode <p>Payment mode</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode
-                     * @param _payMode Billing mode
+                     * 设置<p>Payment mode</p>
+                     * @param _payMode <p>Payment mode</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -517,15 +509,15 @@ pause
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance expiration time
-                     * @return PeriodEndTime Instance expiration time
+                     * 获取<p>Instance expiration time</p>
+                     * @return PeriodEndTime <p>Instance expiration time</p>
                      * 
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
-                     * 设置Instance expiration time
-                     * @param _periodEndTime Instance expiration time
+                     * 设置<p>Instance expiration time</p>
+                     * @param _periodEndTime <p>Instance expiration time</p>
                      * 
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
@@ -538,15 +530,15 @@ pause
                     bool PeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Network type
-                     * @return NetType Network type
+                     * 获取<p>Network type.</p>
+                     * @return NetType <p>Network type.</p>
                      * 
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置Network type
-                     * @param _netType Network type
+                     * 设置<p>Network type.</p>
+                     * @param _netType <p>Network type.</p>
                      * 
                      */
                     void SetNetType(const int64_t& _netType);
@@ -559,15 +551,15 @@ pause
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取<p>VPC network ID</p>
+                     * @return VpcId <p>VPC network ID</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置<p>VPC network ID</p>
+                     * @param _vpcId <p>VPC network ID</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -580,15 +572,15 @@ pause
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取<p>Subnet ID.</p>
+                     * @return SubnetId <p>Subnet ID.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置<p>Subnet ID.</p>
+                     * @param _subnetId <p>Subnet ID.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -601,15 +593,15 @@ pause
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of instance
-                     * @return Vip Private IP of instance
+                     * 获取<p>Instance private IP address</p>
+                     * @return Vip <p>Instance private IP address</p>
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Private IP of instance
-                     * @param _vip Private IP of instance
+                     * 设置<p>Instance private IP address</p>
+                     * @param _vip <p>Instance private IP address</p>
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -622,15 +614,15 @@ pause
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Private port of instance
-                     * @return Vport Private port of instance
+                     * 获取<p>Instance Intranet Port</p>
+                     * @return Vport <p>Instance Intranet Port</p>
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Private port of instance
-                     * @param _vport Private port of instance
+                     * 设置<p>Instance Intranet Port</p>
+                     * @param _vport <p>Instance Intranet Port</p>
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -643,15 +635,15 @@ pause
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Public domain name of instance
-                     * @return WanDomain Public domain name of instance
+                     * 获取<p>Instance public network domain name</p>
+                     * @return WanDomain <p>Instance public network domain name</p>
                      * 
                      */
                     std::string GetWanDomain() const;
 
                     /**
-                     * 设置Public domain name of instance
-                     * @param _wanDomain Public domain name of instance
+                     * 设置<p>Instance public network domain name</p>
+                     * @param _wanDomain <p>Instance public network domain name</p>
                      * 
                      */
                     void SetWanDomain(const std::string& _wanDomain);
@@ -664,15 +656,15 @@ pause
                     bool WanDomainHasBeenSet() const;
 
                     /**
-                     * 获取Character set
-                     * @return Charset Character set
+                     * 获取<p>Character set</p>
+                     * @return Charset <p>Character set</p>
                      * 
                      */
                     std::string GetCharset() const;
 
                     /**
-                     * 设置Character set
-                     * @param _charset Character set
+                     * 设置<p>Character set</p>
+                     * @param _charset <p>Character set</p>
                      * 
                      */
                     void SetCharset(const std::string& _charset);
@@ -685,15 +677,15 @@ pause
                     bool CharsetHasBeenSet() const;
 
                     /**
-                     * 获取TDSQL-C kernel version
-                     * @return CynosVersion TDSQL-C kernel version
+                     * 获取<p>Cynos kernel version</p>
+                     * @return CynosVersion <p>Cynos kernel version</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置TDSQL-C kernel version
-                     * @param _cynosVersion TDSQL-C kernel version
+                     * 设置<p>Cynos kernel version</p>
+                     * @param _cynosVersion <p>Cynos kernel version</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -706,15 +698,15 @@ pause
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取Renewal flag
-                     * @return RenewFlag Renewal flag
+                     * 获取<p>Renewal flag</p>
+                     * @return RenewFlag <p>Renewal flag</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置Renewal flag
-                     * @param _renewFlag Renewal flag
+                     * 设置<p>Renewal flag</p>
+                     * @param _renewFlag <p>Renewal flag</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -727,15 +719,15 @@ pause
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of CPU cores for a serverless instance
-                     * @return MinCpu The minimum number of CPU cores for a serverless instance
+                     * 获取<p>serverless instance cpu minimum</p>
+                     * @return MinCpu <p>serverless instance cpu minimum</p>
                      * 
                      */
                     double GetMinCpu() const;
 
                     /**
-                     * 设置The minimum number of CPU cores for a serverless instance
-                     * @param _minCpu The minimum number of CPU cores for a serverless instance
+                     * 设置<p>serverless instance cpu minimum</p>
+                     * @param _minCpu <p>serverless instance cpu minimum</p>
                      * 
                      */
                     void SetMinCpu(const double& _minCpu);
@@ -748,15 +740,15 @@ pause
                     bool MinCpuHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of CPU cores for a serverless instance
-                     * @return MaxCpu The maximum number of CPU cores for a serverless instance
+                     * 获取<p>cpu cap of the serverless instance</p>
+                     * @return MaxCpu <p>cpu cap of the serverless instance</p>
                      * 
                      */
                     double GetMaxCpu() const;
 
                     /**
-                     * 设置The maximum number of CPU cores for a serverless instance
-                     * @param _maxCpu The maximum number of CPU cores for a serverless instance
+                     * 设置<p>cpu cap of the serverless instance</p>
+                     * @param _maxCpu <p>cpu cap of the serverless instance</p>
                      * 
                      */
                     void SetMaxCpu(const double& _maxCpu);
@@ -769,15 +761,15 @@ pause
                     bool MaxCpuHasBeenSet() const;
 
                     /**
-                     * 获取Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
-                     * @return DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+                     * 获取<p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
+                     * @return DbMode <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
-                     * @param _dbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+                     * 设置<p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
+                     * @param _dbMode <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -789,219 +781,244 @@ pause
                      */
                     bool DbModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster read/write instance Availability Zone</p>
+                     * @return MasterZone <p>Cluster read/write instance Availability Zone</p>
+                     * 
+                     */
+                    std::string GetMasterZone() const;
+
+                    /**
+                     * 设置<p>Cluster read/write instance Availability Zone</p>
+                     * @param _masterZone <p>Cluster read/write instance Availability Zone</p>
+                     * 
+                     */
+                    void SetMasterZone(const std::string& _masterZone);
+
+                    /**
+                     * 判断参数 MasterZone 是否已赋值
+                     * @return MasterZone 是否已赋值
+                     * 
+                     */
+                    bool MasterZoneHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User `Uin`
+                     * <p>User Uin</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * User `AppId`
+                     * <p>User AppId</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Project ID
+                     * <p>Project ID</p>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Region
+                     * <p>Region</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance status
+                     * <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance status description
+                     * <p>Status description in Chinese of the instance</p>
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Serverless instance status. Valid values:
-resume
-pause
+                     * <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * Database type
+                     * <p>Database type.</p>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Database version
+                     * <p>Database version</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * Number of CPU cores
+                     * <p>Cpu, unit: cores</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory in GB
+                     * <p>Memory, unit: GB</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Storage capacity in GB
+                     * <p>Stored amount, unit: GB</p>
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Instance type
+                     * <p>Instance type</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Current instance role
+                     * <p>Current instance role</p>
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * Update time
+                     * <p>Update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Billing mode
+                     * <p>Payment mode</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Instance expiration time
+                     * <p>Instance expiration time</p>
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
-                     * Network type
+                     * <p>Network type.</p>
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>VPC network ID</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * <p>Subnet ID.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Private IP of instance
+                     * <p>Instance private IP address</p>
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Private port of instance
+                     * <p>Instance Intranet Port</p>
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Public domain name of instance
+                     * <p>Instance public network domain name</p>
                      */
                     std::string m_wanDomain;
                     bool m_wanDomainHasBeenSet;
 
                     /**
-                     * Character set
+                     * <p>Character set</p>
                      */
                     std::string m_charset;
                     bool m_charsetHasBeenSet;
 
                     /**
-                     * TDSQL-C kernel version
+                     * <p>Cynos kernel version</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * Renewal flag
+                     * <p>Renewal flag</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * The minimum number of CPU cores for a serverless instance
+                     * <p>serverless instance cpu minimum</p>
                      */
                     double m_minCpu;
                     bool m_minCpuHasBeenSet;
 
                     /**
-                     * The maximum number of CPU cores for a serverless instance
+                     * <p>cpu cap of the serverless instance</p>
                      */
                     double m_maxCpu;
                     bool m_maxCpuHasBeenSet;
 
                     /**
-                     * Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+                     * <p>Db type:<li>NORMAL</li><li>SERVERLESS</li></p>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
+
+                    /**
+                     * <p>Cluster read/write instance Availability Zone</p>
+                     */
+                    std::string m_masterZone;
+                    bool m_masterZoneHasBeenSet;
 
                 };
             }

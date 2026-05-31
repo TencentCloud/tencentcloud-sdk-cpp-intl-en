@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Frame capture template.
+                * Chart template.
                 */
                 class FrameCaptureTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
-                     * @return Name Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+                     * 获取Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+                     * @return Name Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
-                     * @param _name Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+                     * 设置Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+                     * @param _name Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-                     * @return Width Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * 获取Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+                     * @return Width Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-                     * @param _width Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * 设置Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+                     * @param _width Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-                     * @return Height Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * 获取Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+                     * @return Height Screenshot height, optional, input range [0, 3000], must be a multiple of 2
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-                     * @param _height Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * 设置Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+                     * @param _height Screenshot height, optional, input range [0, 3000], must be a multiple of 2
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Interval of frame capture, an integer between 1 and 3600.
-                     * @return CaptureInterval Interval of frame capture, an integer between 1 and 3600.
+                     * 获取Screenshot interval, an integer between 1 and 3600.
+                     * @return CaptureInterval Screenshot interval, an integer between 1 and 3600.
                      * 
                      */
                     uint64_t GetCaptureInterval() const;
 
                     /**
-                     * 设置Interval of frame capture, an integer between 1 and 3600.
-                     * @param _captureInterval Interval of frame capture, an integer between 1 and 3600.
+                     * 设置Screenshot interval, an integer between 1 and 3600.
+                     * @param _captureInterval Screenshot interval, an integer between 1 and 3600.
                      * 
                      */
                     void SetCaptureInterval(const uint64_t& _captureInterval);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CaptureIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Interval units of frame capture, only supports SECONDS.
-                     * @return CaptureIntervalUnits Interval units of frame capture, only supports SECONDS.
+                     * 获取Screenshot measurement unit, supports only SECONDS.
+                     * @return CaptureIntervalUnits Screenshot measurement unit, supports only SECONDS.
                      * 
                      */
                     std::string GetCaptureIntervalUnits() const;
 
                     /**
-                     * 设置Interval units of frame capture, only supports SECONDS.
-                     * @param _captureIntervalUnits Interval units of frame capture, only supports SECONDS.
+                     * 设置Screenshot measurement unit, supports only SECONDS.
+                     * @param _captureIntervalUnits Screenshot measurement unit, supports only SECONDS.
                      * 
                      */
                     void SetCaptureIntervalUnits(const std::string& _captureIntervalUnits);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CaptureIntervalUnitsHasBeenSet() const;
 
                     /**
-                     * 获取Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
-                     * @return ScalingBehavior Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+                     * 获取Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+                     * @return ScalingBehavior Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
                      * 
                      */
                     std::string GetScalingBehavior() const;
 
                     /**
-                     * 设置Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
-                     * @param _scalingBehavior Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+                     * 设置Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+                     * @param _scalingBehavior Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
                      * 
                      */
                     void SetScalingBehavior(const std::string& _scalingBehavior);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ScalingBehaviorHasBeenSet() const;
 
                     /**
-                     * 获取Sharpness, an integer between 0 and 100.
-                     * @return Sharpness Sharpness, an integer between 0 and 100.
+                     * 获取Sharpening degree, an integer between 0 and 100.
+                     * @return Sharpness Sharpening degree, an integer between 0 and 100.
                      * 
                      */
                     uint64_t GetSharpness() const;
 
                     /**
-                     * 设置Sharpness, an integer between 0 and 100.
-                     * @param _sharpness Sharpness, an integer between 0 and 100.
+                     * 设置Sharpening degree, an integer between 0 and 100.
+                     * @param _sharpness Sharpening degree, an integer between 0 and 100.
                      * 
                      */
                     void SetSharpness(const uint64_t& _sharpness);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+                     * Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+                     * Screenshot height, optional, input range [0, 3000], must be a multiple of 2
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Interval of frame capture, an integer between 1 and 3600.
+                     * Screenshot interval, an integer between 1 and 3600.
                      */
                     uint64_t m_captureInterval;
                     bool m_captureIntervalHasBeenSet;
 
                     /**
-                     * Interval units of frame capture, only supports SECONDS.
+                     * Screenshot measurement unit, supports only SECONDS.
                      */
                     std::string m_captureIntervalUnits;
                     bool m_captureIntervalUnitsHasBeenSet;
 
                     /**
-                     * Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+                     * Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
                      */
                     std::string m_scalingBehavior;
                     bool m_scalingBehaviorHasBeenSet;
 
                     /**
-                     * Sharpness, an integer between 0 and 100.
+                     * Sharpening degree, an integer between 0 and 100.
                      */
                     uint64_t m_sharpness;
                     bool m_sharpnessHasBeenSet;

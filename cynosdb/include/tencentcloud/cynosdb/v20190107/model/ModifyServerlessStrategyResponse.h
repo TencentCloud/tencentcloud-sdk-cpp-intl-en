@@ -44,26 +44,46 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async process id.
-                     * @return FlowId Async process id.
-                     * 
+                     * 获取<p>Async process id</p>
+                     * @return FlowId <p>Async process id</p>
+                     * @deprecated
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool FlowIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
+                     * 
+                     */
+                    int64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Async process id.
+                     * <p>Async process id</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * <p>Task ID.</p>
+                     */
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

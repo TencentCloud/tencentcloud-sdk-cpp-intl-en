@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return SecondaryInputId ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Input Id of the backup stream.
+                     * @return SecondaryInputId Input Id of the backup stream.
                      * 
                      */
                     std::string GetSecondaryInputId() const;
 
                     /**
-                     * 设置ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _secondaryInputId ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Input Id of the backup stream.
+                     * @param _secondaryInputId Input Id of the backup stream.
                      * 
                      */
                     void SetSecondaryInputId(const std::string& _secondaryInputId);
@@ -116,8 +112,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Input Id of the backup stream.
                      */
                     std::string m_secondaryInputId;
                     bool m_secondaryInputIdHasBeenSet;

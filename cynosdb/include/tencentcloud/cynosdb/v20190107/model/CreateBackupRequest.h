@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/DatabaseTables.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateBackupVaultItem.h>
 
 
 namespace TencentCloud
@@ -148,6 +149,27 @@ namespace TencentCloud
                      */
                     bool BackupNameHasBeenSet() const;
 
+                    /**
+                     * 获取	Message sent to safe
+                     * @return Vaults 	Message sent to safe
+                     * 
+                     */
+                    std::vector<CreateBackupVaultItem> GetVaults() const;
+
+                    /**
+                     * 设置	Message sent to safe
+                     * @param _vaults 	Message sent to safe
+                     * 
+                     */
+                    void SetVaults(const std::vector<CreateBackupVaultItem>& _vaults);
+
+                    /**
+                     * 判断参数 Vaults 是否已赋值
+                     * @return Vaults 是否已赋值
+                     * 
+                     */
+                    bool VaultsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -179,6 +201,12 @@ namespace TencentCloud
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
+
+                    /**
+                     * 	Message sent to safe
+                     */
+                    std::vector<CreateBackupVaultItem> m_vaults;
+                    bool m_vaultsHasBeenSet;
 
                 };
             }

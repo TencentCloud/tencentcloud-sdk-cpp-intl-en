@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool PackageVersionHasBeenSet() const;
 
                     /**
-                     * 获取Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
-                     * @return PackageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+                     * 获取Resource package size. Compute resource unit: unit; storage resource: GB.
+                     * @return PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
                      * 
                      */
                     double GetPackageSpec() const;
 
                     /**
-                     * 设置Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
-                     * @param _packageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+                     * 设置Resource package size. Compute resource unit: unit; storage resource: GB.
+                     * @param _packageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
                      * 
                      */
                     void SetPackageSpec(const double& _packageSpec);
@@ -237,7 +237,7 @@ namespace TencentCloud
                     bool m_packageVersionHasBeenSet;
 
                     /**
-                     * Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+                     * Resource package size. Compute resource unit: unit; storage resource: GB.
                      */
                     double m_packageSpec;
                     bool m_packageSpecHasBeenSet;

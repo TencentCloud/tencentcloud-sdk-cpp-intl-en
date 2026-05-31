@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-                     * @return Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * 获取Search field. Currently supports: ProxyGroupId
+                     * @return Names Search field. Currently supports: ProxyGroupId
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-                     * @param _names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * 设置Search field. Currently supports: ProxyGroupId
+                     * @param _names Search field. Currently supports: ProxyGroupId
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * Search field. Currently supports: ProxyGroupId
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;

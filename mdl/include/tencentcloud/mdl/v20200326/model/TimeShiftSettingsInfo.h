@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Whether to enable time shifting. Option [OPEN|CLOSE].
+                     * @return State Whether to enable time shifting. Option [OPEN|CLOSE].
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _state Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Whether to enable time shifting. Option [OPEN|CLOSE].
+                     * @param _state Whether to enable time shifting. Option [OPEN|CLOSE].
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -72,19 +68,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PlayDomain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Enable time-shift bound domain name.
+                     * @return PlayDomain Enable time-shift bound domain name.
                      * 
                      */
                     std::string GetPlayDomain() const;
 
                     /**
-                     * 设置Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _playDomain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Enable time-shift bound domain name.
+                     * @param _playDomain Enable time-shift bound domain name.
                      * 
                      */
                     void SetPlayDomain(const std::string& _playDomain);
@@ -97,15 +89,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PlayDomainHasBeenSet() const;
 
                     /**
-                     * 获取Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
-                     * @return StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
+                     * @return StartoverWindow The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
                      * 
                      */
                     int64_t GetStartoverWindow() const;
 
                     /**
-                     * 设置Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _startoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
+                     * @param _startoverWindow The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
                      * 
                      */
                     void SetStartoverWindow(const int64_t& _startoverWindow);
@@ -120,21 +112,19 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Whether to enable time shifting. Option [OPEN|CLOSE].
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Enable time-shift bound domain name.
                      */
                     std::string m_playDomain;
                     bool m_playDomainHasBeenSet;
 
                     /**
-                     * Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+                     * The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
                      */
                     int64_t m_startoverWindow;
                     bool m_startoverWindowHasBeenSet;

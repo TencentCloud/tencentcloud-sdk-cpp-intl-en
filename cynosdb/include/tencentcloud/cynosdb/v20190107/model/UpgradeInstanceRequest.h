@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/UpgradeProxy.h>
 
 
 namespace TencentCloud
@@ -127,6 +128,35 @@ namespace TencentCloud
                     bool UpgradeTypeHasBeenSet() const;
 
                     /**
+                     * 获取Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+                     * @return DeviceType Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+                     * @param _deviceType Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
+                    /**
                      * 获取This parameter has been disused.
                      * @return StorageLimit This parameter has been disused.
                      * 
@@ -231,6 +261,27 @@ namespace TencentCloud
                      */
                     bool UpgradeModeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return UpgradeProxy 
+                     * 
+                     */
+                    UpgradeProxy GetUpgradeProxy() const;
+
+                    /**
+                     * 设置
+                     * @param _upgradeProxy 
+                     * 
+                     */
+                    void SetUpgradeProxy(const UpgradeProxy& _upgradeProxy);
+
+                    /**
+                     * 判断参数 UpgradeProxy 是否已赋值
+                     * @return UpgradeProxy 是否已赋值
+                     * 
+                     */
+                    bool UpgradeProxyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -256,6 +307,14 @@ namespace TencentCloud
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;
+
+                    /**
+                     * Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
 
                     /**
                      * This parameter has been disused.
@@ -286,6 +345,12 @@ namespace TencentCloud
                      */
                     std::string m_upgradeMode;
                     bool m_upgradeModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    UpgradeProxy m_upgradeProxy;
+                    bool m_upgradeProxyHasBeenSet;
 
                 };
             }

@@ -52,51 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster status. Valid values are as follows:
-creating
-running
-isolating
-isolated
-activating (removing isolation)
-offlining (deactivating)
-offlined (deactivated)
-deleting
-deleted
-                     * @return Status Cluster status. Valid values are as follows:
-creating
-running
-isolating
-isolated
-activating (removing isolation)
-offlining (deactivating)
-offlined (deactivated)
-deleting
-deleted
+                     * 获取<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * @return Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Cluster status. Valid values are as follows:
-creating
-running
-isolating
-isolated
-activating (removing isolation)
-offlining (deactivating)
-offlined (deactivated)
-deleting
-deleted
-                     * @param _status Cluster status. Valid values are as follows:
-creating
-running
-isolating
-isolated
-activating (removing isolation)
-offlining (deactivating)
-offlined (deactivated)
-deleting
-deleted
+                     * 设置<p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+                     * @param _status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -109,15 +73,15 @@ deleted
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -130,15 +94,15 @@ deleted
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -151,15 +115,15 @@ deleted
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -172,15 +136,15 @@ deleted
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取<p>Region</p>
+                     * @return Region <p>Region</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置<p>Region</p>
+                     * @param _region <p>Region</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -193,15 +157,15 @@ deleted
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Database version
-                     * @return DbVersion Database version
+                     * 获取<p>Database version</p>
+                     * @return DbVersion <p>Database version</p>
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置Database version
-                     * @param _dbVersion Database version
+                     * 设置<p>Database version</p>
+                     * @param _dbVersion <p>Database version</p>
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -214,15 +178,15 @@ deleted
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -235,15 +199,15 @@ deleted
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances
-                     * @return InstanceNum Number of instances
+                     * 获取<p>Number of instances</p>
+                     * @return InstanceNum <p>Number of instances</p>
                      * 
                      */
                     int64_t GetInstanceNum() const;
 
                     /**
-                     * 设置Number of instances
-                     * @param _instanceNum Number of instances
+                     * 设置<p>Number of instances</p>
+                     * @param _instanceNum <p>Number of instances</p>
                      * 
                      */
                     void SetInstanceNum(const int64_t& _instanceNum);
@@ -256,15 +220,15 @@ deleted
                     bool InstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取User UIN
-                     * @return Uin User UIN
+                     * 获取<p>User uin</p>
+                     * @return Uin <p>User uin</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User UIN
-                     * @param _uin User UIN
+                     * 设置<p>User uin</p>
+                     * @param _uin <p>User uin</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -277,15 +241,15 @@ deleted
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Engine type.
-                     * @return DbType Engine type.
+                     * 获取<p>Engine type</p>
+                     * @return DbType <p>Engine type</p>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Engine type.
-                     * @param _dbType Engine type.
+                     * 设置<p>Engine type</p>
+                     * @param _dbType <p>Engine type</p>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -298,15 +262,15 @@ deleted
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取User appid.
-                     * @return AppId User appid.
+                     * 获取<p>User appid</p>
+                     * @return AppId <p>User appid</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User appid.
-                     * @param _appId User appid.
+                     * 设置<p>User appid</p>
+                     * @param _appId <p>User appid</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -319,15 +283,15 @@ deleted
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status description
-                     * @return StatusDesc Cluster status description
+                     * 获取<p>Cluster status description</p>
+                     * @return StatusDesc <p>Cluster status description</p>
                      * 
                      */
                     std::string GetStatusDesc() const;
 
                     /**
-                     * 设置Cluster status description
-                     * @param _statusDesc Cluster status description
+                     * 设置<p>Cluster status description</p>
+                     * @param _statusDesc <p>Cluster status description</p>
                      * 
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
@@ -340,15 +304,15 @@ deleted
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Creation Time
-                     * @return CreateTime Cluster Creation Time
+                     * 获取<p>Cluster creation time</p>
+                     * @return CreateTime <p>Cluster creation time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Cluster Creation Time
-                     * @param _createTime Cluster Creation Time
+                     * 设置<p>Cluster creation time</p>
+                     * @param _createTime <p>Cluster creation time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -361,15 +325,15 @@ deleted
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
-                     * @return PayMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * 获取<p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * @return PayMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
-                     * @param _payMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * 设置<p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * @param _payMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -382,15 +346,15 @@ deleted
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time.
-                     * @return PeriodEndTime Expiration time.
+                     * 获取<p>End time</p>
+                     * @return PeriodEndTime <p>End time</p>
                      * 
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
-                     * 设置Expiration time.
-                     * @param _periodEndTime Expiration time.
+                     * 设置<p>End time</p>
+                     * @param _periodEndTime <p>End time</p>
                      * 
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
@@ -403,15 +367,15 @@ deleted
                     bool PeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster read/write vip.
-                     * @return Vip Cluster read/write vip.
+                     * 获取<p>Cluster read/write vip</p>
+                     * @return Vip <p>Cluster read/write vip</p>
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Cluster read/write vip.
-                     * @param _vip Cluster read/write vip.
+                     * 设置<p>Cluster read/write vip</p>
+                     * @param _vip <p>Cluster read/write vip</p>
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -424,15 +388,15 @@ deleted
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Cluster read/write vport.
-                     * @return Vport Cluster read/write vport.
+                     * 获取<p>Cluster read/write vport</p>
+                     * @return Vport <p>Cluster read/write vport</p>
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置Cluster read/write vport.
-                     * @param _vport Cluster read/write vport.
+                     * 设置<p>Cluster read/write vport</p>
+                     * @param _vport <p>Cluster read/write vport</p>
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -445,15 +409,15 @@ deleted
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectID Project ID
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectID <p>Project ID.</p>
                      * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectID Project ID
+                     * 设置<p>Project ID.</p>
+                     * @param _projectID <p>Project ID.</p>
                      * 
                      */
                     void SetProjectID(const int64_t& _projectID);
@@ -466,15 +430,15 @@ deleted
                     bool ProjectIDHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the virtual private cloud ID.
-                     * @return VpcId Specifies the virtual private cloud ID.
+                     * 获取<p>VPC ID</p>
+                     * @return VpcId <p>VPC ID</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Specifies the virtual private cloud ID.
-                     * @param _vpcId Specifies the virtual private cloud ID.
+                     * 设置<p>VPC ID</p>
+                     * @param _vpcId <p>VPC ID</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -487,15 +451,15 @@ deleted
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subnet ID.
-                     * @return SubnetId Specifies the subnet ID.
+                     * 获取<p>Subnet ID.</p>
+                     * @return SubnetId <p>Subnet ID.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Specifies the subnet ID.
-                     * @param _subnetId Specifies the subnet ID.
+                     * 设置<p>Subnet ID.</p>
+                     * @param _subnetId <p>Subnet ID.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -508,15 +472,15 @@ deleted
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cynos kernel version.
-                     * @return CynosVersion Specifies the cynos kernel version.
+                     * 获取<p>cynos kernel version</p>
+                     * @return CynosVersion <p>cynos kernel version</p>
                      * 
                      */
                     std::string GetCynosVersion() const;
 
                     /**
-                     * 设置Specifies the cynos kernel version.
-                     * @param _cynosVersion Specifies the cynos kernel version.
+                     * 设置<p>cynos kernel version</p>
+                     * @param _cynosVersion <p>cynos kernel version</p>
                      * 
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
@@ -529,15 +493,15 @@ deleted
                     bool CynosVersionHasBeenSet() const;
 
                     /**
-                     * 获取cynos version tag.
-                     * @return CynosVersionTag cynos version tag.
+                     * 获取<p>cynos version tag</p>
+                     * @return CynosVersionTag <p>cynos version tag</p>
                      * 
                      */
                     std::string GetCynosVersionTag() const;
 
                     /**
-                     * 设置cynos version tag.
-                     * @param _cynosVersionTag cynos version tag.
+                     * 设置<p>cynos version tag</p>
+                     * @param _cynosVersionTag <p>cynos version tag</p>
                      * 
                      */
                     void SetCynosVersionTag(const std::string& _cynosVersionTag);
@@ -550,15 +514,15 @@ deleted
                     bool CynosVersionTagHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage capacity.
-                     * @return StorageLimit Specifies the storage capacity.
+                     * 获取<p>Storage capacity</p>
+                     * @return StorageLimit <p>Storage capacity</p>
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Specifies the storage capacity.
-                     * @param _storageLimit Specifies the storage capacity.
+                     * 设置<p>Storage capacity</p>
+                     * @param _storageLimit <p>Storage capacity</p>
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -571,15 +535,15 @@ deleted
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Renewal Flag
-                     * @return RenewFlag Renewal Flag
+                     * 获取<p>Renewal flag</p>
+                     * @return RenewFlag <p>Renewal flag</p>
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置Renewal Flag
-                     * @param _renewFlag Renewal Flag
+                     * 设置<p>Renewal flag</p>
+                     * @param _renewFlag <p>Renewal flag</p>
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -592,15 +556,15 @@ deleted
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Task being processed.
-                     * @return ProcessingTask Task being processed.
+                     * 获取<p>Currently processing task</p>
+                     * @return ProcessingTask <p>Currently processing task</p>
                      * 
                      */
                     std::string GetProcessingTask() const;
 
                     /**
-                     * 设置Task being processed.
-                     * @param _processingTask Task being processed.
+                     * 设置<p>Currently processing task</p>
+                     * @param _processingTask <p>Currently processing task</p>
                      * 
                      */
                     void SetProcessingTask(const std::string& _processingTask);
@@ -613,15 +577,15 @@ deleted
                     bool ProcessingTaskHasBeenSet() const;
 
                     /**
-                     * 获取Task array of the cluster.
-                     * @return Tasks Task array of the cluster.
+                     * 获取<p>Task array of the cluster</p>
+                     * @return Tasks <p>Task array of the cluster</p>
                      * 
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
-                     * 设置Task array of the cluster.
-                     * @param _tasks Task array of the cluster.
+                     * 设置<p>Task array of the cluster</p>
+                     * @param _tasks <p>Task array of the cluster</p>
                      * 
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
@@ -634,15 +598,15 @@ deleted
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Array of tags bound to the cluster.
-                     * @return ResourceTags Array of tags bound to the cluster.
+                     * 获取<p>tag Array of cluster binding</p>
+                     * @return ResourceTags <p>tag Array of cluster binding</p>
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置Array of tags bound to the cluster.
-                     * @param _resourceTags Array of tags bound to the cluster.
+                     * 设置<p>tag Array of cluster binding</p>
+                     * @param _resourceTags <p>tag Array of cluster binding</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -655,15 +619,15 @@ deleted
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Db type (NORMAL, SERVERLESS).
-                     * @return DbMode Db type (NORMAL, SERVERLESS).
+                     * 获取<p>Db type (NORMAL, SERVERLESS)</p>
+                     * @return DbMode <p>Db type (NORMAL, SERVERLESS)</p>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Db type (NORMAL, SERVERLESS).
-                     * @param _dbMode Db type (NORMAL, SERVERLESS).
+                     * 设置<p>Db type (NORMAL, SERVERLESS)</p>
+                     * @param _dbMode <p>Db type (NORMAL, SERVERLESS)</p>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -676,23 +640,15 @@ deleted
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-resume
-pause
-                     * @return ServerlessStatus Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-resume
-pause
+                     * 获取<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+                     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
                      * 
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
-                     * 设置Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-resume
-pause
-                     * @param _serverlessStatus Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-resume
-pause
+                     * 设置<p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+                     * @param _serverlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
                      * 
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
@@ -705,15 +661,15 @@ pause
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Cluster prepaid storage size.
-                     * @return Storage Cluster prepaid storage size.
+                     * 获取<p>Cluster Prepaid storage size</p>
+                     * @return Storage <p>Cluster Prepaid storage size</p>
                      * 
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Cluster prepaid storage size.
-                     * @param _storage Cluster prepaid storage size.
+                     * 设置<p>Cluster Prepaid storage size</p>
+                     * @param _storage <p>Cluster Prepaid storage size</p>
                      * 
                      */
                     void SetStorage(const int64_t& _storage);
@@ -726,15 +682,15 @@ pause
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
-                     * @return StorageId Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
+                     * 获取<p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+                     * @return StorageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
                      * 
                      */
                     std::string GetStorageId() const;
 
                     /**
-                     * 设置Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
-                     * @param _storageId Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
+                     * 设置<p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+                     * @param _storageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
                      * 
                      */
                     void SetStorageId(const std::string& _storageId);
@@ -747,15 +703,15 @@ pause
                     bool StorageIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
-                     * @return StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * 获取<p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * @return StoragePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      * 
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
-                     * @param _storagePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * 设置<p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+                     * @param _storagePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      * 
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
@@ -768,15 +724,15 @@ pause
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum storage value corresponding to cluster computing specifications.
-                     * @return MinStorageSize Minimum storage value corresponding to cluster computing specifications.
+                     * 获取<p>Minimum storage of the cluster compute specification</p>
+                     * @return MinStorageSize <p>Minimum storage of the cluster compute specification</p>
                      * 
                      */
                     int64_t GetMinStorageSize() const;
 
                     /**
-                     * 设置Minimum storage value corresponding to cluster computing specifications.
-                     * @param _minStorageSize Minimum storage value corresponding to cluster computing specifications.
+                     * 设置<p>Minimum storage of the cluster compute specification</p>
+                     * @param _minStorageSize <p>Minimum storage of the cluster compute specification</p>
                      * 
                      */
                     void SetMinStorageSize(const int64_t& _minStorageSize);
@@ -789,15 +745,15 @@ pause
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum storage value corresponding to the cluster computing specification.
-                     * @return MaxStorageSize The maximum storage value corresponding to the cluster computing specification.
+                     * 获取<p>Maximum storage value of the cluster compute specification</p>
+                     * @return MaxStorageSize <p>Maximum storage value of the cluster compute specification</p>
                      * 
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置The maximum storage value corresponding to the cluster computing specification.
-                     * @param _maxStorageSize The maximum storage value corresponding to the cluster computing specification.
+                     * 设置<p>Maximum storage value of the cluster compute specification</p>
+                     * @param _maxStorageSize <p>Maximum storage value of the cluster compute specification</p>
                      * 
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
@@ -810,15 +766,15 @@ pause
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster network information.
-                     * @return NetAddrs Specifies the cluster network information.
+                     * 获取<p>Cluster network information</p>
+                     * @return NetAddrs <p>Cluster network information</p>
                      * 
                      */
                     std::vector<NetAddr> GetNetAddrs() const;
 
                     /**
-                     * 设置Specifies the cluster network information.
-                     * @param _netAddrs Specifies the cluster network information.
+                     * 设置<p>Cluster network information</p>
+                     * @param _netAddrs <p>Cluster network information</p>
                      * 
                      */
                     void SetNetAddrs(const std::vector<NetAddr>& _netAddrs);
@@ -831,15 +787,15 @@ pause
                     bool NetAddrsHasBeenSet() const;
 
                     /**
-                     * 获取Physical availability zone.
-                     * @return PhysicalZone Physical availability zone.
+                     * 获取<p>Physical AZ</p>
+                     * @return PhysicalZone <p>Physical AZ</p>
                      * 
                      */
                     std::string GetPhysicalZone() const;
 
                     /**
-                     * 设置Physical availability zone.
-                     * @param _physicalZone Physical availability zone.
+                     * 设置<p>Physical AZ</p>
+                     * @param _physicalZone <p>Physical AZ</p>
                      * 
                      */
                     void SetPhysicalZone(const std::string& _physicalZone);
@@ -852,15 +808,15 @@ pause
                     bool PhysicalZoneHasBeenSet() const;
 
                     /**
-                     * 获取Primary AZ.
-                     * @return MasterZone Primary AZ.
+                     * 获取<p>Primary AZ</p>
+                     * @return MasterZone <p>Primary AZ</p>
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置Primary AZ.
-                     * @param _masterZone Primary AZ.
+                     * 设置<p>Primary AZ</p>
+                     * @param _masterZone <p>Primary AZ</p>
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -873,15 +829,15 @@ pause
                     bool MasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is an availability zone.
-                     * @return HasSlaveZone Whether there is an availability zone.
+                     * 获取<p>Whether there is a secondary AZ</p>
+                     * @return HasSlaveZone <p>Whether there is a secondary AZ</p>
                      * 
                      */
                     std::string GetHasSlaveZone() const;
 
                     /**
-                     * 设置Whether there is an availability zone.
-                     * @param _hasSlaveZone Whether there is an availability zone.
+                     * 设置<p>Whether there is a secondary AZ</p>
+                     * @param _hasSlaveZone <p>Whether there is a secondary AZ</p>
                      * 
                      */
                     void SetHasSlaveZone(const std::string& _hasSlaveZone);
@@ -894,15 +850,15 @@ pause
                     bool HasSlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取Secondary AZ.
-                     * @return SlaveZones Secondary AZ.
+                     * 获取<p>Secondary AZ</p>
+                     * @return SlaveZones <p>Secondary AZ</p>
                      * 
                      */
                     std::vector<std::string> GetSlaveZones() const;
 
                     /**
-                     * 设置Secondary AZ.
-                     * @param _slaveZones Secondary AZ.
+                     * 设置<p>Secondary AZ</p>
+                     * @param _slaveZones <p>Secondary AZ</p>
                      * 
                      */
                     void SetSlaveZones(const std::vector<std::string>& _slaveZones);
@@ -915,15 +871,15 @@ pause
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Business type.
-                     * @return BusinessType Business type.
+                     * 获取<p>Business type</p>
+                     * @return BusinessType <p>Business type</p>
                      * 
                      */
                     std::string GetBusinessType() const;
 
                     /**
-                     * 设置Business type.
-                     * @param _businessType Business type.
+                     * 设置<p>Business type</p>
+                     * @param _businessType <p>Business type</p>
                      * 
                      */
                     void SetBusinessType(const std::string& _businessType);
@@ -936,15 +892,15 @@ pause
                     bool BusinessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to freeze.
-                     * @return IsFreeze Whether to freeze.
+                     * 获取<p>Freeze or not</p>
+                     * @return IsFreeze <p>Freeze or not</p>
                      * 
                      */
                     std::string GetIsFreeze() const;
 
                     /**
-                     * 设置Whether to freeze.
-                     * @param _isFreeze Whether to freeze.
+                     * 设置<p>Freeze or not</p>
+                     * @param _isFreeze <p>Freeze or not</p>
                      * 
                      */
                     void SetIsFreeze(const std::string& _isFreeze);
@@ -957,15 +913,15 @@ pause
                     bool IsFreezeHasBeenSet() const;
 
                     /**
-                     * 获取Order Source
-                     * @return OrderSource Order Source
+                     * 获取<p>Order source</p>
+                     * @return OrderSource <p>Order source</p>
                      * 
                      */
                     std::string GetOrderSource() const;
 
                     /**
-                     * 设置Order Source
-                     * @param _orderSource Order Source
+                     * 设置<p>Order source</p>
+                     * @param _orderSource <p>Order source</p>
                      * 
                      */
                     void SetOrderSource(const std::string& _orderSource);
@@ -978,15 +934,15 @@ pause
                     bool OrderSourceHasBeenSet() const;
 
                     /**
-                     * 获取Capacity.
-                     * @return Ability Capacity.
+                     * 获取<p>Capacity</p>
+                     * @return Ability <p>Capacity</p>
                      * 
                      */
                     Ability GetAbility() const;
 
                     /**
-                     * 设置Capacity.
-                     * @param _ability Capacity.
+                     * 设置<p>Capacity</p>
+                     * @param _ability <p>Capacity</p>
                      * 
                      */
                     void SetAbility(const Ability& _ability);
@@ -999,15 +955,15 @@ pause
                     bool AbilityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
-                     * @return ResourcePackages Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+                     * 获取<p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+                     * @return ResourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
                      * 
                      */
                     std::vector<ResourcePackage> GetResourcePackages() const;
 
                     /**
-                     * 设置Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
-                     * @param _resourcePackages Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+                     * 设置<p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+                     * @param _resourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
                      * 
                      */
                     void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
@@ -1020,15 +976,15 @@ pause
                     bool ResourcePackagesHasBeenSet() const;
 
                     /**
-                     * 获取Global database unique Id.
-                     * @return GdnId Global database unique Id.
+                     * 获取<p>Global database unique ID</p>
+                     * @return GdnId <p>Global database unique ID</p>
                      * 
                      */
                     std::string GetGdnId() const;
 
                     /**
-                     * 设置Global database unique Id.
-                     * @param _gdnId Global database unique Id.
+                     * 设置<p>Global database unique ID</p>
+                     * @param _gdnId <p>Global database unique ID</p>
                      * 
                      */
                     void SetGdnId(const std::string& _gdnId);
@@ -1041,15 +997,15 @@ pause
                     bool GdnIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
-                     * @return GdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * 获取<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+                     * @return GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
                      * 
                      */
                     std::string GetGdnRole() const;
 
                     /**
-                     * 设置Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
-                     * @param _gdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * 设置<p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+                     * @param _gdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
                      * 
                      */
                     void SetGdnRole(const std::string& _gdnRole);
@@ -1064,288 +1020,277 @@ pause
                 private:
 
                     /**
-                     * Cluster status. Valid values are as follows:
-creating
-running
-isolating
-isolated
-activating (removing isolation)
-offlining (deactivating)
-offlined (deactivated)
-deleting
-deleted
+                     * <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Update time
+                     * <p>Update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * AZ
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Region
+                     * <p>Region</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Database version
+                     * <p>Database version</p>
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Number of instances
+                     * <p>Number of instances</p>
                      */
                     int64_t m_instanceNum;
                     bool m_instanceNumHasBeenSet;
 
                     /**
-                     * User UIN
+                     * <p>User uin</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Engine type.
+                     * <p>Engine type</p>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * User appid.
+                     * <p>User appid</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Cluster status description
+                     * <p>Cluster status description</p>
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * Cluster Creation Time
+                     * <p>Cluster creation time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Expiration time.
+                     * <p>End time</p>
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
-                     * Cluster read/write vip.
+                     * <p>Cluster read/write vip</p>
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Cluster read/write vport.
+                     * <p>Cluster read/write vport</p>
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Project ID
+                     * <p>Project ID.</p>
                      */
                     int64_t m_projectID;
                     bool m_projectIDHasBeenSet;
 
                     /**
-                     * Specifies the virtual private cloud ID.
+                     * <p>VPC ID</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Specifies the subnet ID.
+                     * <p>Subnet ID.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Specifies the cynos kernel version.
+                     * <p>cynos kernel version</p>
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
-                     * cynos version tag.
+                     * <p>cynos version tag</p>
                      */
                     std::string m_cynosVersionTag;
                     bool m_cynosVersionTagHasBeenSet;
 
                     /**
-                     * Specifies the storage capacity.
+                     * <p>Storage capacity</p>
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Renewal Flag
+                     * <p>Renewal flag</p>
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Task being processed.
+                     * <p>Currently processing task</p>
                      */
                     std::string m_processingTask;
                     bool m_processingTaskHasBeenSet;
 
                     /**
-                     * Task array of the cluster.
+                     * <p>Task array of the cluster</p>
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Array of tags bound to the cluster.
+                     * <p>tag Array of cluster binding</p>
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Db type (NORMAL, SERVERLESS).
+                     * <p>Db type (NORMAL, SERVERLESS)</p>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-resume
-pause
+                     * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * Cluster prepaid storage size.
+                     * <p>Cluster Prepaid storage size</p>
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
+                     * <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
                      */
                     std::string m_storageId;
                     bool m_storageIdHasBeenSet;
 
                     /**
-                     * Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+                     * <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * Minimum storage value corresponding to cluster computing specifications.
+                     * <p>Minimum storage of the cluster compute specification</p>
                      */
                     int64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * The maximum storage value corresponding to the cluster computing specification.
+                     * <p>Maximum storage value of the cluster compute specification</p>
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
-                     * Specifies the cluster network information.
+                     * <p>Cluster network information</p>
                      */
                     std::vector<NetAddr> m_netAddrs;
                     bool m_netAddrsHasBeenSet;
 
                     /**
-                     * Physical availability zone.
+                     * <p>Physical AZ</p>
                      */
                     std::string m_physicalZone;
                     bool m_physicalZoneHasBeenSet;
 
                     /**
-                     * Primary AZ.
+                     * <p>Primary AZ</p>
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;
 
                     /**
-                     * Whether there is an availability zone.
+                     * <p>Whether there is a secondary AZ</p>
                      */
                     std::string m_hasSlaveZone;
                     bool m_hasSlaveZoneHasBeenSet;
 
                     /**
-                     * Secondary AZ.
+                     * <p>Secondary AZ</p>
                      */
                     std::vector<std::string> m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Business type.
+                     * <p>Business type</p>
                      */
                     std::string m_businessType;
                     bool m_businessTypeHasBeenSet;
 
                     /**
-                     * Whether to freeze.
+                     * <p>Freeze or not</p>
                      */
                     std::string m_isFreeze;
                     bool m_isFreezeHasBeenSet;
 
                     /**
-                     * Order Source
+                     * <p>Order source</p>
                      */
                     std::string m_orderSource;
                     bool m_orderSourceHasBeenSet;
 
                     /**
-                     * Capacity.
+                     * <p>Capacity</p>
                      */
                     Ability m_ability;
                     bool m_abilityHasBeenSet;
 
                     /**
-                     * Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+                     * <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
 
                     /**
-                     * Global database unique Id.
+                     * <p>Global database unique ID</p>
                      */
                     std::string m_gdnId;
                     bool m_gdnIdHasBeenSet;
 
                     /**
-                     * Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+                     * <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
                      */
                     std::string m_gdnRole;
                     bool m_gdnRoleHasBeenSet;

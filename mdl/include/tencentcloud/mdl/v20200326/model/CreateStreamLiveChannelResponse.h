@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel ID
-                     * @return Id Channel ID
+                     * 获取Channel ID.
+                     * @return Id Channel ID.
                      * 
                      */
                     std::string GetId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Tag prompt information, this information will be attached when the tag operation fails.
-                     * @return TagMsg Tag prompt information, this information will be attached when the tag operation fails.
+                     * 获取Tag prompt message. When the operation fails, the information comes with it.
+                     * @return TagMsg Tag prompt message. When the operation fails, the information comes with it.
                      * 
                      */
                     std::string GetTagMsg() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel ID
+                     * Channel ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Tag prompt information, this information will be attached when the tag operation fails.
+                     * Tag prompt message. When the operation fails, the information comes with it.
                      */
                     std::string m_tagMsg;
                     bool m_tagMsgHasBeenSet;

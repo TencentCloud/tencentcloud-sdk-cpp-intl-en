@@ -255,6 +255,27 @@ offlined: Instance eliminated
                      */
                     bool InstanceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+                     * @return ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+                     * 
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+                     * @param _clusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+                     * 
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     * 
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -315,6 +336,12 @@ offlined: Instance eliminated
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
 
                 };
             }

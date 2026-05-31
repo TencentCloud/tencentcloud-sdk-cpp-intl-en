@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
-                     * @return InstanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+                     * 获取<p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+                     * @return InstanceId <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
-                     * @param _instanceId Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+                     * 设置<p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+                     * @param _instanceId <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of security groups to be modified, which is an array of one or more security group IDs.
-                     * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 获取<p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+                     * @return SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置List of IDs of security groups to be modified, which is an array of one or more security group IDs.
-                     * @param _securityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 设置<p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+                     * @param _securityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -105,25 +105,106 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取<p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+                     * @return UniqVpcId <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+                     * 
+                     */
+                    std::string GetUniqVpcId() const;
+
+                    /**
+                     * 设置<p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+                     * @param _uniqVpcId <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+                     * 
+                     */
+                    void SetUniqVpcId(const std::string& _uniqVpcId);
+
+                    /**
+                     * 判断参数 UniqVpcId 是否已赋值
+                     * @return UniqVpcId 是否已赋值
+                     * 
+                     */
+                    bool UniqVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * @return Vip <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * 
+                     */
+                    std::string GetVip() const;
+
+                    /**
+                     * 设置<p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * @param _vip <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * 
+                     */
+                    void SetVip(const std::string& _vip);
+
+                    /**
+                     * 判断参数 Vip 是否已赋值
+                     * @return Vip 是否已赋值
+                     * 
+                     */
+                    bool VipHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * @return Vport <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * 
+                     */
+                    int64_t GetVport() const;
+
+                    /**
+                     * 设置<p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * @param _vport <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     * 
+                     */
+                    void SetVport(const int64_t& _vport);
+
+                    /**
+                     * 判断参数 Vport 是否已赋值
+                     * @return Vport 是否已赋值
+                     * 
+                     */
+                    bool VportHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
+                     * <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * AZ
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+                     */
+                    std::string m_uniqVpcId;
+                    bool m_uniqVpcIdHasBeenSet;
+
+                    /**
+                     * <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     */
+                    std::string m_vip;
+                    bool m_vipHasBeenSet;
+
+                    /**
+                     * <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+                     */
+                    int64_t m_vport;
+                    bool m_vportHasBeenSet;
 
                 };
             }

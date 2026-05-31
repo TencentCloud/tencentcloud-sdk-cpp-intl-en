@@ -690,6 +690,56 @@ OcrClient::MainlandPermitOCROutcomeCallable OcrClient::MainlandPermitOCRCallable
     return prom->get_future();
 }
 
+OcrClient::PODAuditAIOutcome OcrClient::PODAuditAI(const PODAuditAIRequest &request)
+{
+    auto outcome = MakeRequest(request, "PODAuditAI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PODAuditAIResponse rsp = PODAuditAIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PODAuditAIOutcome(rsp);
+        else
+            return PODAuditAIOutcome(o.GetError());
+    }
+    else
+    {
+        return PODAuditAIOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::PODAuditAIAsync(const PODAuditAIRequest& request, const PODAuditAIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const PODAuditAIRequest&;
+    using Resp = PODAuditAIResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "PODAuditAI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::PODAuditAIOutcomeCallable OcrClient::PODAuditAICallable(const PODAuditAIRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<PODAuditAIOutcome>>();
+    PODAuditAIAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const PODAuditAIRequest&,
+        PODAuditAIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OcrClient::PermitOCROutcome OcrClient::PermitOCR(const PermitOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "PermitOCR");

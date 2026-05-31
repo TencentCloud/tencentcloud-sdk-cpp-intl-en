@@ -35,7 +35,10 @@ DescribeBackupListRequest::DescribeBackupListRequest() :
     m_endTimeHasBeenSet(false),
     m_fileNamesHasBeenSet(false),
     m_backupNamesHasBeenSet(false),
-    m_snapshotIdListHasBeenSet(false)
+    m_snapshotIdListHasBeenSet(false),
+    m_backupRegionHasBeenSet(false),
+    m_isCrossRegionsBackupHasBeenSet(false),
+    m_backupStatusHasBeenSet(false)
 {
 }
 
@@ -167,6 +170,35 @@ string DescribeBackupListRequest::ToJsonString() const
         for (auto itr = m_snapshotIdList.begin(); itr != m_snapshotIdList.end(); ++itr)
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
+    }
+
+    if (m_backupRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupRegion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_backupRegion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isCrossRegionsBackupHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsCrossRegionsBackup";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_isCrossRegionsBackup.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_backupStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackupStatus";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_backupStatus.begin(); itr != m_backupStatus.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
@@ -384,6 +416,54 @@ void DescribeBackupListRequest::SetSnapshotIdList(const vector<int64_t>& _snapsh
 bool DescribeBackupListRequest::SnapshotIdListHasBeenSet() const
 {
     return m_snapshotIdListHasBeenSet;
+}
+
+string DescribeBackupListRequest::GetBackupRegion() const
+{
+    return m_backupRegion;
+}
+
+void DescribeBackupListRequest::SetBackupRegion(const string& _backupRegion)
+{
+    m_backupRegion = _backupRegion;
+    m_backupRegionHasBeenSet = true;
+}
+
+bool DescribeBackupListRequest::BackupRegionHasBeenSet() const
+{
+    return m_backupRegionHasBeenSet;
+}
+
+string DescribeBackupListRequest::GetIsCrossRegionsBackup() const
+{
+    return m_isCrossRegionsBackup;
+}
+
+void DescribeBackupListRequest::SetIsCrossRegionsBackup(const string& _isCrossRegionsBackup)
+{
+    m_isCrossRegionsBackup = _isCrossRegionsBackup;
+    m_isCrossRegionsBackupHasBeenSet = true;
+}
+
+bool DescribeBackupListRequest::IsCrossRegionsBackupHasBeenSet() const
+{
+    return m_isCrossRegionsBackupHasBeenSet;
+}
+
+vector<string> DescribeBackupListRequest::GetBackupStatus() const
+{
+    return m_backupStatus;
+}
+
+void DescribeBackupListRequest::SetBackupStatus(const vector<string>& _backupStatus)
+{
+    m_backupStatus = _backupStatus;
+    m_backupStatusHasBeenSet = true;
+}
+
+bool DescribeBackupListRequest::BackupStatusHasBeenSet() const
+{
+    return m_backupStatusHasBeenSet;
 }
 
 
