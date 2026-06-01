@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Device
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return Device Device
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取device
+                     * @return Device device
                      * 
                      */
                     std::string GetDevice() const;
 
                     /**
-                     * 设置Device
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _device Device
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置device
+                     * @param _device device
                      * 
                      */
                     void SetDevice(const std::string& _device);
@@ -72,19 +68,15 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool DeviceHasBeenSet() const;
 
                     /**
-                     * 获取Type
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return Type Type
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Type.
+                     * @return Type Type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _type Type
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Type.
+                     * @param _type Type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,18 +90,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
                     /**
                      * 获取Device type
-Note: this field may return `null`, indicating that no valid value can be found.
                      * @return DeviceType Device type
-Note: this field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
                      * 设置Device type
-Note: this field may return `null`, indicating that no valid value can be found.
                      * @param _deviceType Device type
-Note: this field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -122,19 +110,15 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Memory
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return Memory Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Memory, measured in MB
+                     * @return Memory Memory, measured in MB
                      * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
-                     * 设置Memory
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _memory Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Memory, measured in MB
+                     * @param _memory Memory, measured in MB
                      * 
                      */
                     void SetMemory(const uint64_t& _memory);
@@ -147,19 +131,15 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return Cpu Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Number of cores
+                     * @return Cpu Number of cores
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _cpu Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Number of cores
+                     * @param _cpu Number of cores
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -174,36 +154,31 @@ Note: this field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * Device
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * device
                      */
                     std::string m_device;
                     bool m_deviceHasBeenSet;
 
                     /**
-                     * Type
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Device type
-Note: this field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Memory, measured in MB
                      */
                     uint64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Number of cores
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;

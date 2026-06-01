@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取TencentDB account
-                     * @return Accounts TencentDB account
+                     * 获取TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @return Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置TencentDB account
-                     * @param _accounts TencentDB account
+                     * 设置TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @param _accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AccountsHasBeenSet() const;
 
                     /**
-                     * 获取Database account remarks
-                     * @return Description Database account remarks
+                     * 获取Remark information of the database account. Input limit: 255 characters.
+                     * @return Description Remark information of the database account. Input limit: 255 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Database account remarks
-                     * @param _description Database account remarks
+                     * 设置Remark information of the database account. Input limit: 255 characters.
+                     * @param _description Remark information of the database account. Input limit: 255 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -115,13 +115,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * TencentDB account
+                     * TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;
 
                     /**
-                     * Database account remarks
+                     * Remark information of the database account. Input limit: 255 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

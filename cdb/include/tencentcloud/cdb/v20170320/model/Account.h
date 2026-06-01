@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取New account name
-                     * @return User New account name
+                     * 获取Account name, enter 1-32 characters.
+                     * @return User Account name, enter 1-32 characters.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置New account name
-                     * @param _user New account name
+                     * 设置Account name, enter 1-32 characters.
+                     * @param _user Account name, enter 1-32 characters.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取New account domain name
-                     * @return Host New account domain name
+                     * 获取Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
+                     * @return Host Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置New account domain name
-                     * @param _host New account domain name
+                     * 设置Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
+                     * @param _host Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -91,13 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * New account name
+                     * Account name, enter 1-32 characters.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * New account domain name
+                     * Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

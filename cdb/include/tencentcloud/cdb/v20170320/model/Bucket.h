@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取None
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Key None
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置None
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _key None
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -96,7 +92,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * None
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

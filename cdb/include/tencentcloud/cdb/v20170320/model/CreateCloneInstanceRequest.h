@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdb/v20170320/model/TagInfo.h>
+#include <tencentcloud/cdb/v20170320/model/ClusterTopology.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the instance to be cloned from
-                     * @return InstanceId ID of the instance to be cloned from
+                     * 获取<p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @return InstanceId <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance to be cloned from
-                     * @param _instanceId ID of the instance to be cloned from
+                     * 设置<p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @param _instanceId <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +66,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
-                     * @return SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+                     * 获取<p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+                     * @return SpecifiedRollbackTime <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
                      * 
                      */
                     std::string GetSpecifiedRollbackTime() const;
 
                     /**
-                     * 设置To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
-                     * @param _specifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+                     * 设置<p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+                     * @param _specifiedRollbackTime <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
                      * 
                      */
                     void SetSpecifiedRollbackTime(const std::string& _specifiedRollbackTime);
@@ -86,15 +87,15 @@ namespace TencentCloud
                     bool SpecifiedRollbackTimeHasBeenSet() const;
 
                     /**
-                     * 获取To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
-                     * @return SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+                     * 获取<p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+                     * @return SpecifiedBackupId <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
                      * 
                      */
                     int64_t GetSpecifiedBackupId() const;
 
                     /**
-                     * 设置To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
-                     * @param _specifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+                     * 设置<p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+                     * @param _specifiedBackupId <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
                      * 
                      */
                     void SetSpecifiedBackupId(const int64_t& _specifiedBackupId);
@@ -107,15 +108,15 @@ namespace TencentCloud
                     bool SpecifiedBackupIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
-                     * @return UniqVpcId VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+                     * 获取<p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+                     * @return UniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
-                     * @param _uniqVpcId VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+                     * 设置<p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+                     * @param _uniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -128,15 +129,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
-                     * @return UniqSubnetId VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+                     * 获取<p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+                     * @return UniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
-                     * @param _uniqSubnetId VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+                     * 设置<p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+                     * @param _uniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -149,15 +150,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
-                     * @return Memory Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+                     * 获取<p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @return Memory <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
-                     * @param _memory Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+                     * 设置<p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @param _memory <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -170,15 +171,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
-                     * @return Volume Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+                     * 获取<p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @return Volume <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
-                     * @param _volume Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+                     * 设置<p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @param _volume <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -191,15 +192,15 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the cloned instance
-                     * @return InstanceName Name of the cloned instance
+                     * 获取<p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+                     * @return InstanceName <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Name of the cloned instance
-                     * @param _instanceName Name of the cloned instance
+                     * 设置<p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+                     * @param _instanceName <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -212,15 +213,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
-                     * @return SecurityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+                     * 获取<p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+                     * @return SecurityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroup() const;
 
                     /**
-                     * 设置Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
-                     * @param _securityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+                     * 设置<p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+                     * @param _securityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
                      * 
                      */
                     void SetSecurityGroup(const std::vector<std::string>& _securityGroup);
@@ -233,15 +234,15 @@ namespace TencentCloud
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Information of the cloned instance tag
-                     * @return ResourceTags Information of the cloned instance tag
+                     * 获取<p>Tag information of the instance.</p>
+                     * @return ResourceTags <p>Tag information of the instance.</p>
                      * 
                      */
                     std::vector<TagInfo> GetResourceTags() const;
 
                     /**
-                     * 设置Information of the cloned instance tag
-                     * @param _resourceTags Information of the cloned instance tag
+                     * 设置<p>Tag information of the instance.</p>
+                     * @param _resourceTags <p>Tag information of the instance.</p>
                      * 
                      */
                     void SetResourceTags(const std::vector<TagInfo>& _resourceTags);
@@ -254,15 +255,15 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
-                     * @return Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+                     * 获取<p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @return Cpu <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
-                     * @param _cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+                     * 设置<p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+                     * @param _cpu <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -275,15 +276,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
-                     * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+                     * 获取<p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+                     * @return ProtectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
                      * 
                      */
                     int64_t GetProtectMode() const;
 
                     /**
-                     * 设置Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
-                     * @param _protectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+                     * 设置<p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+                     * @param _protectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
                      * 
                      */
                     void SetProtectMode(const int64_t& _protectMode);
@@ -296,15 +297,15 @@ namespace TencentCloud
                     bool ProtectModeHasBeenSet() const;
 
                     /**
-                     * 获取Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
-                     * @return DeployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+                     * 获取<p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+                     * @return DeployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
                      * 
                      */
                     int64_t GetDeployMode() const;
 
                     /**
-                     * 设置Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
-                     * @param _deployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+                     * 设置<p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+                     * @param _deployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
                      * 
                      */
                     void SetDeployMode(const int64_t& _deployMode);
@@ -317,15 +318,15 @@ namespace TencentCloud
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
-                     * @return SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+                     * 获取<p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+                     * @return SlaveZone <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
-                     * @param _slaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+                     * 设置<p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+                     * @param _slaveZone <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -338,19 +339,15 @@ namespace TencentCloud
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
-                     * @return BackupZone Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+                     * 获取<p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+                     * @return BackupZone <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
                      * 
                      */
                     std::string GetBackupZone() const;
 
                     /**
-                     * 设置Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
-                     * @param _backupZone Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+                     * 设置<p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+                     * @param _backupZone <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
                      * 
                      */
                     void SetBackupZone(const std::string& _backupZone);
@@ -363,15 +360,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool BackupZoneHasBeenSet() const;
 
                     /**
-                     * 获取Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
-                     * @return DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+                     * 获取<p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+                     * @return DeviceType <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
-                     * @param _deviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+                     * 设置<p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+                     * @param _deviceType <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -384,15 +381,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
-                     * @return InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+                     * 获取<p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * @return InstanceNodes <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      * 
                      */
                     int64_t GetInstanceNodes() const;
 
                     /**
-                     * 设置The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
-                     * @param _instanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+                     * 设置<p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * @param _instanceNodes <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      * 
                      */
                     void SetInstanceNodes(const int64_t& _instanceNodes);
@@ -405,15 +402,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool InstanceNodesHasBeenSet() const;
 
                     /**
-                     * 获取Placement group ID.
-                     * @return DeployGroupId Placement group ID.
+                     * 获取<p>Placement group ID.</p>
+                     * @return DeployGroupId <p>Placement group ID.</p>
                      * 
                      */
                     std::string GetDeployGroupId() const;
 
                     /**
-                     * 设置Placement group ID.
-                     * @param _deployGroupId Placement group ID.
+                     * 设置<p>Placement group ID.</p>
+                     * @param _deployGroupId <p>Placement group ID.</p>
                      * 
                      */
                     void SetDeployGroupId(const std::string& _deployGroupId);
@@ -426,15 +423,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool DeployGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
-                     * @return DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+                     * 获取<p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+                     * @return DryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
                      * 
                      */
                     bool GetDryRun() const;
 
                     /**
-                     * 设置Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
-                     * @param _dryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+                     * 设置<p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+                     * @param _dryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
                      * 
                      */
                     void SetDryRun(const bool& _dryRun);
@@ -447,15 +444,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool DryRunHasBeenSet() const;
 
                     /**
-                     * 获取Financial cage ID.
-                     * @return CageId Financial cage ID.
+                     * 获取<p>Financial Enclosure ID.</p>
+                     * @return CageId <p>Financial Enclosure ID.</p>
                      * 
                      */
                     std::string GetCageId() const;
 
                     /**
-                     * 设置Financial cage ID.
-                     * @param _cageId Financial cage ID.
+                     * 设置<p>Financial Enclosure ID.</p>
+                     * @param _cageId <p>Financial Enclosure ID.</p>
                      * 
                      */
                     void SetCageId(const std::string& _cageId);
@@ -468,15 +465,15 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                     bool CageIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID. Default value: 0.
-                     * @return ProjectId Project ID. Default value: 0.
+                     * 获取<p>Project ID. Default project ID 0.</p>
+                     * @return ProjectId <p>Project ID. Default project ID 0.</p>
                      * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. Default value: 0.
-                     * @param _projectId Project ID. Default value: 0.
+                     * 设置<p>Project ID. Default project ID 0.</p>
+                     * @param _projectId <p>Project ID. Default project ID 0.</p>
                      * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
@@ -488,134 +485,349 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                      */
                     bool ProjectIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+                     * @return PayType <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+                     * 
+                     */
+                    std::string GetPayType() const;
+
+                    /**
+                     * 设置<p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+                     * @param _payType <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+                     * 
+                     */
+                    void SetPayType(const std::string& _payType);
+
+                    /**
+                     * 判断参数 PayType 是否已赋值
+                     * @return PayType 是否已赋值
+                     * 
+                     */
+                    bool PayTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+                     * @return Period <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+                     * 
+                     */
+                    int64_t GetPeriod() const;
+
+                    /**
+                     * 设置<p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+                     * @param _period <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+                     * 
+                     */
+                    void SetPeriod(const int64_t& _period);
+
+                    /**
+                     * 判断参数 Period 是否已赋值
+                     * @return Period 是否已赋值
+                     * 
+                     */
+                    bool PeriodHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Topology configuration for cloud disk edition nodes.</p>
+                     * @return ClusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+                     * 
+                     */
+                    ClusterTopology GetClusterTopology() const;
+
+                    /**
+                     * 设置<p>Topology configuration for cloud disk edition nodes.</p>
+                     * @param _clusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+                     * 
+                     */
+                    void SetClusterTopology(const ClusterTopology& _clusterTopology);
+
+                    /**
+                     * 判断参数 ClusterTopology 是否已赋值
+                     * @return ClusterTopology 是否已赋值
+                     * 
+                     */
+                    bool ClusterTopologyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+                     * @return SrcRegion <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+                     * 
+                     */
+                    std::string GetSrcRegion() const;
+
+                    /**
+                     * 设置<p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+                     * @param _srcRegion <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+                     * 
+                     */
+                    void SetSrcRegion(const std::string& _srcRegion);
+
+                    /**
+                     * 判断参数 SrcRegion 是否已赋值
+                     * @return SrcRegion 是否已赋值
+                     * 
+                     */
+                    bool SrcRegionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Offsite data backup id</p>
+                     * @return SpecifiedSubBackupId <p>Offsite data backup id</p>
+                     * 
+                     */
+                    int64_t GetSpecifiedSubBackupId() const;
+
+                    /**
+                     * 设置<p>Offsite data backup id</p>
+                     * @param _specifiedSubBackupId <p>Offsite data backup id</p>
+                     * 
+                     */
+                    void SetSpecifiedSubBackupId(const int64_t& _specifiedSubBackupId);
+
+                    /**
+                     * 判断参数 SpecifiedSubBackupId 是否已赋值
+                     * @return SpecifiedSubBackupId 是否已赋值
+                     * 
+                     */
+                    bool SpecifiedSubBackupIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+                     * @return MasterZone <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+                     * @deprecated
+                     */
+                    std::string GetMasterZone() const;
+
+                    /**
+                     * 设置<p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+                     * @param _masterZone <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+                     * @deprecated
+                     */
+                    void SetMasterZone(const std::string& _masterZone);
+
+                    /**
+                     * 判断参数 MasterZone 是否已赋值
+                     * @return MasterZone 是否已赋值
+                     * @deprecated
+                     */
+                    bool MasterZoneHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+                     * @return Zone <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+                     * 
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置<p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+                     * @param _zone <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+                     * 
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     * 
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取<p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+                     * @return FourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+                     * 
+                     */
+                    std::string GetFourthZone() const;
+
+                    /**
+                     * 设置<p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+                     * @param _fourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+                     * 
+                     */
+                    void SetFourthZone(const std::string& _fourthZone);
+
+                    /**
+                     * 判断参数 FourthZone 是否已赋值
+                     * @return FourthZone 是否已赋值
+                     * 
+                     */
+                    bool FourthZoneHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the instance to be cloned from
+                     * <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+                     * <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
                      */
                     std::string m_specifiedRollbackTime;
                     bool m_specifiedRollbackTimeHasBeenSet;
 
                     /**
-                     * To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+                     * <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
                      */
                     int64_t m_specifiedBackupId;
                     bool m_specifiedBackupIdHasBeenSet;
 
                     /**
-                     * VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+                     * <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+                     * <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+                     * <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+                     * <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Name of the cloned instance
+                     * <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+                     * <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
                      */
                     std::vector<std::string> m_securityGroup;
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Information of the cloned instance tag
+                     * <p>Tag information of the instance.</p>
                      */
                     std::vector<TagInfo> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+                     * <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+                     * <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
                      */
                     int64_t m_protectMode;
                     bool m_protectModeHasBeenSet;
 
                     /**
-                     * Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+                     * <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
                      */
                     int64_t m_deployMode;
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+                     * <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+                     * <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
                      */
                     std::string m_backupZone;
                     bool m_backupZoneHasBeenSet;
 
                     /**
-                     * Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+                     * <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+                     * <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      */
                     int64_t m_instanceNodes;
                     bool m_instanceNodesHasBeenSet;
 
                     /**
-                     * Placement group ID.
+                     * <p>Placement group ID.</p>
                      */
                     std::string m_deployGroupId;
                     bool m_deployGroupIdHasBeenSet;
 
                     /**
-                     * Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+                     * <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
                      */
                     bool m_dryRun;
                     bool m_dryRunHasBeenSet;
 
                     /**
-                     * Financial cage ID.
+                     * <p>Financial Enclosure ID.</p>
                      */
                     std::string m_cageId;
                     bool m_cageIdHasBeenSet;
 
                     /**
-                     * Project ID. Default value: 0.
+                     * <p>Project ID. Default project ID 0.</p>
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+                     */
+                    std::string m_payType;
+                    bool m_payTypeHasBeenSet;
+
+                    /**
+                     * <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+                     */
+                    int64_t m_period;
+                    bool m_periodHasBeenSet;
+
+                    /**
+                     * <p>Topology configuration for cloud disk edition nodes.</p>
+                     */
+                    ClusterTopology m_clusterTopology;
+                    bool m_clusterTopologyHasBeenSet;
+
+                    /**
+                     * <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+                     */
+                    std::string m_srcRegion;
+                    bool m_srcRegionHasBeenSet;
+
+                    /**
+                     * <p>Offsite data backup id</p>
+                     */
+                    int64_t m_specifiedSubBackupId;
+                    bool m_specifiedSubBackupIdHasBeenSet;
+
+                    /**
+                     * <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+                     */
+                    std::string m_masterZone;
+                    bool m_masterZoneHasBeenSet;
+
+                    /**
+                     * <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+                     */
+                    std::string m_fourthZone;
+                    bool m_fourthZoneHasBeenSet;
 
                 };
             }

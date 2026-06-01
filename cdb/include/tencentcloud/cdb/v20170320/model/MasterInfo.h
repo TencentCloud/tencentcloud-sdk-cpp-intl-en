@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region information
-                     * @return Region Region information
+                     * 获取<p>Regional information</p>
+                     * @return Region <p>Regional information</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region information
-                     * @param _region Region information
+                     * 设置<p>Regional information</p>
+                     * @param _region <p>Regional information</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return RegionId Region ID
+                     * 获取<p>Region ID</p>
+                     * @return RegionId <p>Region ID</p>
                      * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _regionId Region ID
+                     * 设置<p>Region ID</p>
+                     * @param _regionId <p>Region ID</p>
                      * 
                      */
                     void SetRegionId(const int64_t& _regionId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ ID
-                     * @return ZoneId AZ ID
+                     * 获取<p>Availability zone ID.</p>
+                     * @return ZoneId <p>Availability zone ID.</p>
                      * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置AZ ID
-                     * @param _zoneId AZ ID
+                     * 设置<p>Availability zone ID.</p>
+                     * @param _zoneId <p>Availability zone ID.</p>
                      * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取AZ information
-                     * @return Zone AZ information
+                     * 获取<p>AZ information</p>
+                     * @return Zone <p>AZ information</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ information
-                     * @param _zone AZ information
+                     * 设置<p>AZ information</p>
+                     * @param _zone <p>AZ information</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Long instance ID
-                     * @return ResourceId Long instance ID
+                     * 获取<p>Instance long ID</p>
+                     * @return ResourceId <p>Instance long ID</p>
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Long instance ID
-                     * @param _resourceId Long instance ID
+                     * 设置<p>Instance long ID</p>
+                     * @param _resourceId <p>Instance long ID</p>
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status
-                     * @return Status Instance status
+                     * 获取<p>Instance status</p>
+                     * @return Status <p>Instance status</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status
-                     * @param _status Instance status
+                     * 设置<p>Instance status</p>
+                     * @param _status <p>Instance status</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance type
-                     * @return InstanceType Instance type
+                     * 获取<p>Instance type</p>
+                     * @return InstanceType <p>Instance type</p>
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type
-                     * @param _instanceType Instance type
+                     * 设置<p>Instance type</p>
+                     * @param _instanceType <p>Instance type</p>
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status
-                     * @return TaskStatus Task status
+                     * 获取<p>Task status.</p>
+                     * @return TaskStatus <p>Task status.</p>
                      * 
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
-                     * 设置Task status
-                     * @param _taskStatus Task status
+                     * 设置<p>Task status.</p>
+                     * @param _taskStatus <p>Task status.</p>
                      * 
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Memory capacity
-                     * @return Memory Memory capacity
+                     * 获取<p>Memory capacity</p>
+                     * @return Memory <p>Memory capacity</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory capacity
-                     * @param _memory Memory capacity
+                     * 设置<p>Memory capacity</p>
+                     * @param _memory <p>Memory capacity</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Disk capacity
-                     * @return Volume Disk capacity
+                     * 获取<p>Disk capacity</p>
+                     * @return Volume <p>Disk capacity</p>
                      * 
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Disk capacity
-                     * @param _volume Disk capacity
+                     * 设置<p>Disk capacity</p>
+                     * @param _volume <p>Disk capacity</p>
                      * 
                      */
                     void SetVolume(const int64_t& _volume);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Instance model
-                     * @return DeviceType Instance model
+                     * 获取<p>Instance model</p>
+                     * @return DeviceType <p>Instance model</p>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance model
-                     * @param _deviceType Instance model
+                     * 设置<p>Instance model</p>
+                     * @param _deviceType <p>Instance model</p>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Queries per second
-                     * @return Qps Queries per second
+                     * 获取<p>Queries per second.</p>
+                     * @return Qps <p>Queries per second.</p>
                      * 
                      */
                     int64_t GetQps() const;
 
                     /**
-                     * 设置Queries per second
-                     * @param _qps Queries per second
+                     * 设置<p>Queries per second.</p>
+                     * @param _qps <p>Queries per second.</p>
                      * 
                      */
                     void SetQps(const int64_t& _qps);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取<p>VPC ID</p>
+                     * @return VpcId <p>VPC ID</p>
                      * 
                      */
                     int64_t GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置<p>VPC ID</p>
+                     * @param _vpcId <p>VPC ID</p>
                      * 
                      */
                     void SetVpcId(const int64_t& _vpcId);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取<p>subnet ID</p>
+                     * @return SubnetId <p>subnet ID</p>
                      * 
                      */
                     int64_t GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置<p>subnet ID</p>
+                     * @param _subnetId <p>subnet ID</p>
                      * 
                      */
                     void SetSubnetId(const int64_t& _subnetId);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated cluster ID
-                     * @return ExClusterId Dedicated cluster ID
+                     * 获取<p>Dedicated cluster ID</p>
+                     * @return ExClusterId <p>Dedicated cluster ID</p>
                      * 
                      */
                     std::string GetExClusterId() const;
 
                     /**
-                     * 设置Dedicated cluster ID
-                     * @param _exClusterId Dedicated cluster ID
+                     * 设置<p>Dedicated cluster ID</p>
+                     * @param _exClusterId <p>Dedicated cluster ID</p>
                      * 
                      */
                     void SetExClusterId(const std::string& _exClusterId);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool ExClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Dedicated cluster name
-                     * @return ExClusterName Dedicated cluster name
+                     * 获取<p>Dedicated cluster name</p>
+                     * @return ExClusterName <p>Dedicated cluster name</p>
                      * 
                      */
                     std::string GetExClusterName() const;
 
                     /**
-                     * 设置Dedicated cluster name
-                     * @param _exClusterName Dedicated cluster name
+                     * 设置<p>Dedicated cluster name</p>
+                     * @param _exClusterName <p>Dedicated cluster name</p>
                      * 
                      */
                     void SetExClusterName(const std::string& _exClusterName);
@@ -427,109 +427,109 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region information
+                     * <p>Regional information</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Region ID
+                     * <p>Region ID</p>
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * AZ ID
+                     * <p>Availability zone ID.</p>
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * AZ information
+                     * <p>AZ information</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Long instance ID
+                     * <p>Instance long ID</p>
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * Instance status
+                     * <p>Instance status</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance type
+                     * <p>Instance type</p>
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Task status
+                     * <p>Task status.</p>
                      */
                     int64_t m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Memory capacity
+                     * <p>Memory capacity</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Disk capacity
+                     * <p>Disk capacity</p>
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Instance model
+                     * <p>Instance model</p>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * Queries per second
+                     * <p>Queries per second.</p>
                      */
                     int64_t m_qps;
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>VPC ID</p>
                      */
                     int64_t m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * <p>subnet ID</p>
                      */
                     int64_t m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Dedicated cluster ID
+                     * <p>Dedicated cluster ID</p>
                      */
                     std::string m_exClusterId;
                     bool m_exClusterIdHasBeenSet;
 
                     /**
-                     * Dedicated cluster name
+                     * <p>Dedicated cluster name</p>
                      */
                     std::string m_exClusterName;
                     bool m_exClusterNameHasBeenSet;

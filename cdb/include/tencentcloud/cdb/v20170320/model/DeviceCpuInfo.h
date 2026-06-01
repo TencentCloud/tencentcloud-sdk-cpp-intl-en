@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  CPU load
+                * CPU load
                 */
                 class DeviceCpuInfo : public AbstractModel
                 {

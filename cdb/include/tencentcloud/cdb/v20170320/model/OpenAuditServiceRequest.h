@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TencentDB for MySQL instance ID
-                     * @return InstanceId TencentDB for MySQL instance ID
+                     * 获取CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TencentDB for MySQL instance ID
-                     * @param _instanceId TencentDB for MySQL instance ID
+                     * 设置CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,43 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
-                     * @return LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+                     * 获取Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+                     * @return LogExpireDay Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      * 
                      */
                     uint64_t GetLogExpireDay() const;
 
                     /**
-                     * 设置Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
-                     * @param _logExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+                     * 设置Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+                     * @param _logExpireDay Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      * 
                      */
                     void SetLogExpireDay(const uint64_t& _logExpireDay);
@@ -86,15 +114,47 @@ namespace TencentCloud
                     bool LogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
-                     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+                     * 获取High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+                     * @return HighLogExpireDay High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      * 
                      */
                     uint64_t GetHighLogExpireDay() const;
 
                     /**
-                     * 设置Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
-                     * @param _highLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+                     * 设置High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+                     * @param _highLogExpireDay High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      * 
                      */
                     void SetHighLogExpireDay(const uint64_t& _highLogExpireDay);
@@ -107,36 +167,36 @@ namespace TencentCloud
                     bool HighLogExpireDayHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * @return AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * 
+                     * 获取Audit rule (deprecated, no longer effective).
+                     * @return AuditRuleFilters Audit rule (deprecated, no longer effective).
+                     * @deprecated
                      */
                     std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
 
                     /**
-                     * 设置Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * @param _auditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-                     * 
+                     * 设置Audit rule (deprecated, no longer effective).
+                     * @param _auditRuleFilters Audit rule (deprecated, no longer effective).
+                     * @deprecated
                      */
                     void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
 
                     /**
                      * 判断参数 AuditRuleFilters 是否已赋值
                      * @return AuditRuleFilters 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AuditRuleFiltersHasBeenSet() const;
 
                     /**
-                     * 获取Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
-                     * @return RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+                     * 获取Rule template ID.
+                     * @return RuleTemplateIds Rule template ID.
                      * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
-                     * 设置Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
-                     * @param _ruleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+                     * 设置Rule template ID.
+                     * @param _ruleTemplateIds Rule template ID.
                      * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
@@ -149,15 +209,15 @@ namespace TencentCloud
                     bool RuleTemplateIdsHasBeenSet() const;
 
                     /**
-                     * 获取Audit type. Valid values: true: Record all; false: Record by rules (default value).
-                     * @return AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * 获取Audit type. true - full audit; default false - rule audit.
+                     * @return AuditAll Audit type. true - full audit; default false - rule audit.
                      * 
                      */
                     bool GetAuditAll() const;
 
                     /**
-                     * 设置Audit type. Valid values: true: Record all; false: Record by rules (default value).
-                     * @param _auditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * 设置Audit type. true - full audit; default false - rule audit.
+                     * @param _auditAll Audit type. true - full audit; default false - rule audit.
                      * 
                      */
                     void SetAuditAll(const bool& _auditAll);
@@ -172,37 +232,52 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TencentDB for MySQL instance ID
+                     * CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+                     * Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      */
                     uint64_t m_logExpireDay;
                     bool m_logExpireDayHasBeenSet;
 
                     /**
-                     * Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+                     * High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
                      */
                     uint64_t m_highLogExpireDay;
                     bool m_highLogExpireDayHasBeenSet;
 
                     /**
-                     * Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+                     * Audit rule (deprecated, no longer effective).
                      */
                     std::vector<AuditRuleFilters> m_auditRuleFilters;
                     bool m_auditRuleFiltersHasBeenSet;
 
                     /**
-                     * Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+                     * Rule template ID.
                      */
                     std::vector<std::string> m_ruleTemplateIds;
                     bool m_ruleTemplateIdsHasBeenSet;
 
                     /**
-                     * Audit type. Valid values: true: Record all; false: Record by rules (default value).
+                     * Audit type. true - full audit; default false - rule audit.
                      */
                     bool m_auditAll;
                     bool m_auditAllHasBeenSet;

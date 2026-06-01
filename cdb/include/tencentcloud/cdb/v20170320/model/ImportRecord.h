@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status value
-                     * @return Status Status value
+                     * 获取Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+                     * @return Status Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status value
-                     * @param _status Status value
+                     * 设置Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+                     * @param _status Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Status value
-                     * @return Code Status value
+                     * 获取Status value. Task exception when the value is negative.
+                     * @return Code Status value. Task exception when the value is negative.
                      * 
                      */
                     int64_t GetCode() const;
 
                     /**
-                     * 设置Status value
-                     * @param _code Status value
+                     * 设置Status value. Task exception when the value is negative.
+                     * @param _code Status value. Task exception when the value is negative.
                      * 
                      */
                     void SetCode(const int64_t& _code);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CodeHasBeenSet() const;
 
                     /**
-                     * 获取Execution duration
-                     * @return CostTime Execution duration
+                     * 获取Execution time, unit: seconds.
+                     * @return CostTime Execution time, unit: seconds.
                      * 
                      */
                     int64_t GetCostTime() const;
 
                     /**
-                     * 设置Execution duration
-                     * @param _costTime Execution duration
+                     * 设置Execution time, unit: seconds.
+                     * @param _costTime Execution time, unit: seconds.
                      * 
                      */
                     void SetCostTime(const int64_t& _costTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Execution progress
-                     * @return Process Execution progress
+                     * 获取Execution progress, measurement unit: percentage.
+                     * @return Process Execution progress, measurement unit: percentage.
                      * 
                      */
                     int64_t GetProcess() const;
 
                     /**
-                     * 设置Execution progress
-                     * @param _process Execution progress
+                     * 设置Execution progress, measurement unit: percentage.
+                     * @param _process Execution progress, measurement unit: percentage.
                      * 
                      */
                     void SetProcess(const int64_t& _process);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取File size
-                     * @return FileSize File size
+                     * 获取File size, unit: byte.
+                     * @return FileSize File size, unit: byte.
                      * 
                      */
                     std::string GetFileSize() const;
 
                     /**
-                     * 设置File size
-                     * @param _fileSize File size
+                     * 设置File size, unit: byte.
+                     * @param _fileSize File size, unit: byte.
                      * 
                      */
                     void SetFileSize(const std::string& _fileSize);
@@ -322,19 +322,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status value
+                     * Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Status value
+                     * Status value. Task exception when the value is negative.
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;
 
                     /**
-                     * Execution duration
+                     * Execution time, unit: seconds.
                      */
                     int64_t m_costTime;
                     bool m_costTimeHasBeenSet;
@@ -358,7 +358,7 @@ namespace TencentCloud
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Execution progress
+                     * Execution progress, measurement unit: percentage.
                      */
                     int64_t m_process;
                     bool m_processHasBeenSet;
@@ -370,7 +370,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * File size
+                     * File size, unit: byte.
                      */
                     std::string m_fileSize;
                     bool m_fileSizeHasBeenSet;

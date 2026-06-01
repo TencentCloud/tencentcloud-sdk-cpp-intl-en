@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database user account.
-                     * @return User Database user account.
+                     * 获取Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @return User Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置Database user account.
-                     * @param _user Database user account.
+                     * 设置Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @param _user Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取Database account domain name.
-                     * @return Host Database account domain name.
+                     * 获取Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+                     * @return Host Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Database account domain name.
-                     * @param _host Database account domain name.
+                     * 设置Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+                     * @param _host Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database user account.
+                     * Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * Database account domain name.
+                     * Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

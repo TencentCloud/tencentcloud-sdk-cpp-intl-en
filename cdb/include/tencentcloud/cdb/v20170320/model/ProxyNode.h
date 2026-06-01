@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyId Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy node ID
+                     * @return ProxyId Proxy node ID
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyId Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy node ID
+                     * @param _proxyId Proxy node ID
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Cpu Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of CPU cores.
+                     * @return Cpu Number of CPU cores.
                      * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cpu Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
                      * 
                      */
                     void SetCpu(const uint64_t& _cpu);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory size Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mem Memory size Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Memory size, measured in MB.
+                     * @return Mem Memory size, measured in MB.
                      * 
                      */
                     uint64_t GetMem() const;
 
                     /**
-                     * 设置Memory size Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mem Memory size Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Memory size, measured in MB.
+                     * @param _mem Memory size, measured in MB.
                      * 
                      */
                     void SetMem(const uint64_t& _mem);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Node status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Node status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
+                     * @return Status Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Node status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Node status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
+                     * @param _status Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy node availability zone
+                     * @return Zone Proxy node availability zone
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy node availability zone
+                     * @param _zone Proxy node availability zone
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy Node Region
+                     * @return Region Proxy Node Region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy Node Region
+                     * @param _region Proxy Node Region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Connections Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Connection Connections Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of connections
+                     * @return Connection Number of connections
                      * 
                      */
                     uint64_t GetConnection() const;
 
                     /**
-                     * 设置Connections Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _connection Connections Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of connections
+                     * @param _connection Number of connections
                      * 
                      */
                     void SetConnection(const uint64_t& _connection);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy node ID
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of CPU cores.
                      */
                     uint64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory size Note: This field may return null, indicating that no valid values can be obtained.
+                     * Memory size, measured in MB.
                      */
                     uint64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Node status Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy node availability zone
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy Node Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Connections Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of connections
                      */
                     uint64_t m_connection;
                     bool m_connectionHasBeenSet;

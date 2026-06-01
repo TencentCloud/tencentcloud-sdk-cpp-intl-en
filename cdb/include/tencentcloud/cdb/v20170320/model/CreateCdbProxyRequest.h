@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return UniqVpcId VPC ID
+                     * 获取VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _uniqVpcId VPC ID
+                     * 设置VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID
-                     * @return UniqSubnetId VPC subnet ID
+                     * 获取Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID
-                     * @param _uniqSubnetId VPC subnet ID
+                     * 设置Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -107,15 +107,51 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取The specification configuration of a node
-                     * @return ProxyNodeCustom The specification configuration of a node
+                     * 获取Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
+                     * @return ProxyNodeCustom Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
                      * 
                      */
                     std::vector<ProxyNodeCustom> GetProxyNodeCustom() const;
 
                     /**
-                     * 设置The specification configuration of a node
-                     * @param _proxyNodeCustom The specification configuration of a node
+                     * 设置Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
+                     * @param _proxyNodeCustom Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
                      * 
                      */
                     void SetProxyNodeCustom(const std::vector<ProxyNodeCustom>& _proxyNodeCustom);
@@ -171,14 +207,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * @return ConnectionPoolLimit Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * 
                      */
                     uint64_t GetConnectionPoolLimit() const;
 
                     /**
                      * 设置Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * @param _connectionPoolLimit Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * 
                      */
                     void SetConnectionPoolLimit(const uint64_t& _connectionPoolLimit);
@@ -190,28 +230,58 @@ namespace TencentCloud
                      */
                     bool ConnectionPoolLimitHasBeenSet() const;
 
+                    /**
+                     * 获取Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+                     * @return ProxyVersion Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+                     * 
+                     */
+                    std::string GetProxyVersion() const;
+
+                    /**
+                     * 设置Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+                     * @param _proxyVersion Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+                     * 
+                     */
+                    void SetProxyVersion(const std::string& _proxyVersion);
+
+                    /**
+                     * 判断参数 ProxyVersion 是否已赋值
+                     * @return ProxyVersion 是否已赋值
+                     * 
+                     */
+                    bool ProxyVersionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID
+                     * Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * The specification configuration of a node
+                     * Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
                      */
                     std::vector<ProxyNodeCustom> m_proxyNodeCustom;
                     bool m_proxyNodeCustomHasBeenSet;
@@ -230,9 +300,16 @@ namespace TencentCloud
 
                     /**
                      * Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      */
                     uint64_t m_connectionPoolLimit;
                     bool m_connectionPoolLimitHasBeenSet;
+
+                    /**
+                     * Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+                     */
+                    std::string m_proxyVersion;
+                    bool m_proxyVersionHasBeenSet;
 
                 };
             }

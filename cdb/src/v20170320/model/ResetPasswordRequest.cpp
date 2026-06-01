@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/DescribeCpuExpandStrategyRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ResetPasswordRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,12 +22,14 @@
 using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-DescribeCpuExpandStrategyRequest::DescribeCpuExpandStrategyRequest() :
-    m_instanceIdHasBeenSet(false)
+ResetPasswordRequest::ResetPasswordRequest() :
+    m_instanceIdHasBeenSet(false),
+    m_userHasBeenSet(false),
+    m_hostHasBeenSet(false)
 {
 }
 
-string DescribeCpuExpandStrategyRequest::ToJsonString() const
+string ResetPasswordRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -42,6 +44,22 @@ string DescribeCpuExpandStrategyRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_userHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "User";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_user.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hostHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Host";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_host.c_str(), allocator).Move(), allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -50,20 +68,52 @@ string DescribeCpuExpandStrategyRequest::ToJsonString() const
 }
 
 
-string DescribeCpuExpandStrategyRequest::GetInstanceId() const
+string ResetPasswordRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void DescribeCpuExpandStrategyRequest::SetInstanceId(const string& _instanceId)
+void ResetPasswordRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool DescribeCpuExpandStrategyRequest::InstanceIdHasBeenSet() const
+bool ResetPasswordRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
+}
+
+string ResetPasswordRequest::GetUser() const
+{
+    return m_user;
+}
+
+void ResetPasswordRequest::SetUser(const string& _user)
+{
+    m_user = _user;
+    m_userHasBeenSet = true;
+}
+
+bool ResetPasswordRequest::UserHasBeenSet() const
+{
+    return m_userHasBeenSet;
+}
+
+string ResetPasswordRequest::GetHost() const
+{
+    return m_host;
+}
+
+void ResetPasswordRequest::SetHost(const string& _host)
+{
+    m_host = _host;
+    m_hostHasBeenSet = true;
+}
+
+bool ResetPasswordRequest::HostHasBeenSet() const
+{
+    return m_hostHasBeenSet;
 }
 
 

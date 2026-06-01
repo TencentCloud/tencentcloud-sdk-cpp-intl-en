@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Timestamp Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Error occurrence time. Timestamp in seconds.
+                     * @return Timestamp Error occurrence time. Timestamp in seconds.
                      * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
-                     * 设置Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _timestamp Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Error occurrence time. Timestamp in seconds.
+                     * @param _timestamp Error occurrence time. Timestamp in seconds.
                      * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
@@ -73,18 +69,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Error details
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Content Error details
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Error details
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _content Error details
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -99,15 +91,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Error occurrence time. Timestamp in seconds.
                      */
                     uint64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
                      * Error details
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

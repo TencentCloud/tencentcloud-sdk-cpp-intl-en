@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Value range: 1-2,000. Default value: 50.
-                     * @return Limit Number of entries per page. Value range: 1-2,000. Default value: 50.
+                     * 获取Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
+                     * @return Limit Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Value range: 1-2,000. Default value: 50.
-                     * @param _limit Number of entries per page. Value range: 1-2,000. Default value: 50.
+                     * 设置Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
+                     * @param _limit Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Value range: 1-2,000. Default value: 50.
+                     * Page size. Default value: 50. Minimum value: 1. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

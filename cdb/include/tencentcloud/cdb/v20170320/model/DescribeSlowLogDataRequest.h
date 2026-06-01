@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp, such as 1585142640.
-                     * @return StartTime Start timestamp, such as 1585142640.
+                     * 获取Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
+                     * @return StartTime Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start timestamp, such as 1585142640.
-                     * @param _startTime Start timestamp, such as 1585142640.
+                     * 设置Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
+                     * @param _startTime Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -85,15 +89,19 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, such as 1585142640.
-                     * @return EndTime End timestamp, such as 1585142640.
+                     * 获取End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
+                     * @return EndTime End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp, such as 1585142640.
-                     * @param _endTime End timestamp, such as 1585142640.
+                     * 设置End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
+                     * @param _endTime End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -169,15 +177,35 @@ namespace TencentCloud
                     bool DataBasesHasBeenSet() const;
 
                     /**
-                     * 获取Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
-                     * @return SortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+                     * 获取Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
+                     * @return SortBy Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
-                     * @param _sortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+                     * 设置Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
+                     * @param _sortBy Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -190,15 +218,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: ASC (ascending), DESC (descending).
-                     * @return OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * 获取Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
+                     * @return OrderBy Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting order. Valid values: ASC (ascending), DESC (descending).
-                     * @param _orderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * 设置Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
+                     * @param _orderBy Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -211,15 +239,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取Offset. The default is 0, and the maximum is 9999.
+                     * @return Offset Offset. The default is 0, and the maximum is 9999.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置Offset. The default is 0, and the maximum is 9999.
+                     * @param _offset Offset. The default is 0, and the maximum is 9999.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -232,15 +260,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
-                     * @return Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+                     * 获取The number of records returned in a single use, default is 100, maximum is 800.
+                     * @return Limit The number of records returned in a single use, default is 100, maximum is 800.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
-                     * @param _limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+                     * 设置The number of records returned in a single use, default is 100, maximum is 800.
+                     * @param _limit The number of records returned in a single use, default is 100, maximum is 800.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -273,22 +301,45 @@ namespace TencentCloud
                      */
                     bool InstTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Node ID.
+                     * @return OpResourceId Node ID.
+                     * 
+                     */
+                    std::string GetOpResourceId() const;
+
+                    /**
+                     * 设置Node ID.
+                     * @param _opResourceId Node ID.
+                     * 
+                     */
+                    void SetOpResourceId(const std::string& _opResourceId);
+
+                    /**
+                     * 判断参数 OpResourceId 是否已赋值
+                     * @return OpResourceId 是否已赋值
+                     * 
+                     */
+                    bool OpResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start timestamp, such as 1585142640.
+                     * Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End timestamp, such as 1585142640.
+                     * End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -312,25 +363,30 @@ namespace TencentCloud
                     bool m_dataBasesHasBeenSet;
 
                     /**
-                     * Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+                     * Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * Offset. The default is 0, and the maximum is 9999.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+                     * The number of records returned in a single use, default is 100, maximum is 800.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -340,6 +396,12 @@ namespace TencentCloud
                      */
                     std::string m_instType;
                     bool m_instTypeHasBeenSet;
+
+                    /**
+                     * Node ID.
+                     */
+                    std::string m_opResourceId;
+                    bool m_opResourceIdHasBeenSet;
 
                 };
             }

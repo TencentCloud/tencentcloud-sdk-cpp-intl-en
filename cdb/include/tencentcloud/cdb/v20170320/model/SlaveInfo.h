@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of secondary server 1
-                     * @return First Information of secondary server 1
+                     * 获取<p>Secondary server information of the top spot</p>
+                     * @return First <p>Secondary server information of the top spot</p>
                      * 
                      */
                     SlaveInstanceInfo GetFirst() const;
 
                     /**
-                     * 设置Information of secondary server 1
-                     * @param _first Information of secondary server 1
+                     * 设置<p>Secondary server information of the top spot</p>
+                     * @param _first <p>Secondary server information of the top spot</p>
                      * 
                      */
                     void SetFirst(const SlaveInstanceInfo& _first);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FirstHasBeenSet() const;
 
                     /**
-                     * 获取Second secondary server information.
-                     * @return Second Second secondary server information.
+                     * 获取<p>Second standby machine information</p>
+                     * @return Second <p>Second standby machine information</p>
                      * 
                      */
                     SlaveInstanceInfo GetSecond() const;
 
                     /**
-                     * 设置Second secondary server information.
-                     * @param _second Second secondary server information.
+                     * 设置<p>Second standby machine information</p>
+                     * @param _second <p>Second standby machine information</p>
                      * 
                      */
                     void SetSecond(const SlaveInstanceInfo& _second);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Information of secondary server 1
+                     * <p>Secondary server information of the top spot</p>
                      */
                     SlaveInstanceInfo m_first;
                     bool m_firstHasBeenSet;
 
                     /**
-                     * Second secondary server information.
+                     * <p>Second standby machine information</p>
                      */
                     SlaveInstanceInfo m_second;
                     bool m_secondHasBeenSet;

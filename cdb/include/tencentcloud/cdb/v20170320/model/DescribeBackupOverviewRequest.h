@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TencentDB product type to be queried. Currently, only `mysql` is supported.
-                     * @return Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 获取The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
+                     * @return Product The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
                      * 
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置TencentDB product type to be queried. Currently, only `mysql` is supported.
-                     * @param _product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 设置The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
+                     * @param _product The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
                      * 
                      */
                     void SetProduct(const std::string& _product);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;

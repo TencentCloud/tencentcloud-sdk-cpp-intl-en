@@ -210,19 +210,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return RuleName Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Audit rule name.
+                     * @return RuleName Audit rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _ruleName Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Audit rule name.
+                     * @param _ruleName Audit rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -236,18 +232,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * 获取Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceName Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
                      * @param _instanceName Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -308,15 +300,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Audit rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
                      * Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

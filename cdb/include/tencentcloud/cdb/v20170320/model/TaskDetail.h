@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/TaskAttachInfo.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error code.
-                     * @return Code Error code.
+                     * 获取Error code. `0` indicates success. Other values correspond to different error scenarios.
+                     * @return Code Error code. `0` indicates success. Other values correspond to different error scenarios.
                      * 
                      */
                     int64_t GetCode() const;
 
                     /**
-                     * 设置Error code.
-                     * @param _code Error code.
+                     * 设置Error code. `0` indicates success. Other values correspond to different error scenarios.
+                     * @param _code Error code. `0` indicates success. Other values correspond to different error scenarios.
                      * 
                      */
                     void SetCode(const int64_t& _code);
@@ -299,19 +300,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIds ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the associated instance.
+                     * @return InstanceIds ID of the associated instance.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceIds ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the associated instance.
+                     * @param _instanceIds ID of the associated instance.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -344,10 +341,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 
+                    /**
+                     * 获取Additional information of the task.
+                     * @return TaskAttachInfo Additional information of the task.
+                     * 
+                     */
+                    std::vector<TaskAttachInfo> GetTaskAttachInfo() const;
+
+                    /**
+                     * 设置Additional information of the task.
+                     * @param _taskAttachInfo Additional information of the task.
+                     * 
+                     */
+                    void SetTaskAttachInfo(const std::vector<TaskAttachInfo>& _taskAttachInfo);
+
+                    /**
+                     * 判断参数 TaskAttachInfo 是否已赋值
+                     * @return TaskAttachInfo 是否已赋值
+                     * 
+                     */
+                    bool TaskAttachInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Error code.
+                     * Error code. `0` indicates success. Other values correspond to different error scenarios.
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;
@@ -416,8 +434,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the associated instance.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -427,6 +444,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;
+
+                    /**
+                     * Additional information of the task.
+                     */
+                    std::vector<TaskAttachInfo> m_taskAttachInfo;
+                    bool m_taskAttachInfoHasBeenSet;
 
                 };
             }

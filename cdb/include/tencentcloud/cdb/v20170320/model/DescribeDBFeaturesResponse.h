@@ -114,8 +114,10 @@ namespace TencentCloud
                     bool IsRemoteRoHasBeenSet() const;
 
                     /**
-                     * 获取Region of the source instance
-                     * @return MasterRegion Region of the source instance
+                     * 获取Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
+                     * @return MasterRegion Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
                      * 
                      */
                     std::string GetMasterRegion() const;
@@ -202,7 +204,8 @@ namespace TencentCloud
                     bool m_isRemoteRoHasBeenSet;
 
                     /**
-                     * Region of the source instance
+                     * Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
                      */
                     std::string m_masterRegion;
                     bool m_masterRegionHasBeenSet;

@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
-                     * @return BackupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+                     * 获取Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
+                     * @return BackupDBTableList Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
                      * 
                      */
                     std::vector<BackupItem> GetBackupDBTableList() const;
 
                     /**
-                     * 设置Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
-                     * @param _backupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+                     * 设置Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
+                     * @param _backupDBTableList Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
                      * 
                      */
                     void SetBackupDBTableList(const std::vector<BackupItem>& _backupDBTableList);
@@ -111,15 +111,15 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                     bool BackupDBTableListHasBeenSet() const;
 
                     /**
-                     * 获取Manual backup alias
-                     * @return ManualBackupName Manual backup alias
+                     * 获取Manually back up the alias. Keep the input length within 60 characters.
+                     * @return ManualBackupName Manually back up the alias. Keep the input length within 60 characters.
                      * 
                      */
                     std::string GetManualBackupName() const;
 
                     /**
-                     * 设置Manual backup alias
-                     * @param _manualBackupName Manual backup alias
+                     * 设置Manually back up the alias. Keep the input length within 60 characters.
+                     * @param _manualBackupName Manually back up the alias. Keep the input length within 60 characters.
                      * 
                      */
                     void SetManualBackupName(const std::string& _manualBackupName);
@@ -130,6 +130,27 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                      * 
                      */
                     bool ManualBackupNameHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+                     * @return EncryptionFlag Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+                     * 
+                     */
+                    std::string GetEncryptionFlag() const;
+
+                    /**
+                     * 设置Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+                     * @param _encryptionFlag Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetEncryptionFlag(const std::string& _encryptionFlag);
+
+                    /**
+                     * 判断参数 EncryptionFlag 是否已赋值
+                     * @return EncryptionFlag 是否已赋值
+                     * 
+                     */
+                    bool EncryptionFlagHasBeenSet() const;
 
                 private:
 
@@ -146,17 +167,23 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+                     * Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
                      */
                     std::vector<BackupItem> m_backupDBTableList;
                     bool m_backupDBTableListHasBeenSet;
 
                     /**
-                     * Manual backup alias
+                     * Manually back up the alias. Keep the input length within 60 characters.
                      */
                     std::string m_manualBackupName;
                     bool m_manualBackupNameHasBeenSet;
+
+                    /**
+                     * Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+                     */
+                    std::string m_encryptionFlag;
+                    bool m_encryptionFlagHasBeenSet;
 
                 };
             }

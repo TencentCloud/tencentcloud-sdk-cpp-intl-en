@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+                     * @return InstanceType Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+                     * @param _instanceType Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+                     * @return Status Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+                     * @param _status Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+                     * @return Weight Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+                     * @param _weight Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Instance region Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Instance region Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance region
+                     * @return Region Instance region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Instance region Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Instance region Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance region
+                     * @param _region Instance region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Availability zone to which the instance belongs
+                     * @return Zone Availability zone to which the instance belongs
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Availability zone to which the instance belongs
+                     * @param _zone Availability zone to which the instance belongs
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -193,49 +193,103 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Instance Node ID
+                     * @return InstNodeId Instance Node ID
+                     * 
+                     */
+                    std::string GetInstNodeId() const;
+
+                    /**
+                     * 设置Instance Node ID
+                     * @param _instNodeId Instance Node ID
+                     * 
+                     */
+                    void SetInstNodeId(const std::string& _instNodeId);
+
+                    /**
+                     * 判断参数 InstNodeId 是否已赋值
+                     * @return InstNodeId 是否已赋值
+                     * 
+                     */
+                    bool InstNodeIdHasBeenSet() const;
+
+                    /**
+                     * 获取Node role
+                     * @return InstNodeRole Node role
+                     * 
+                     */
+                    std::string GetInstNodeRole() const;
+
+                    /**
+                     * 设置Node role
+                     * @param _instNodeRole Node role
+                     * 
+                     */
+                    void SetInstNodeRole(const std::string& _instNodeRole);
+
+                    /**
+                     * 判断参数 InstNodeRole 是否已赋值
+                     * @return InstNodeRole 是否已赋值
+                     * 
+                     */
+                    bool InstNodeRoleHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Instance region Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+                     * Availability zone to which the instance belongs
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * Instance Node ID
+                     */
+                    std::string m_instNodeId;
+                    bool m_instNodeIdHasBeenSet;
+
+                    /**
+                     * Node role
+                     */
+                    std::string m_instNodeRole;
+                    bool m_instNodeRoleHasBeenSet;
 
                 };
             }

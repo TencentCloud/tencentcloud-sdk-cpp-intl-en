@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return ErrorLog Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Error log delivery CLS configuration
+                     * @return ErrorLog Error log delivery CLS configuration
                      * 
                      */
                     LogToCLSConfig GetErrorLog() const;
@@ -61,10 +59,8 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool ErrorLogHasBeenSet() const;
 
                     /**
-                     * 获取Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return SlowLog Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Slow log delivery CLS configuration
+                     * @return SlowLog Slow log delivery CLS configuration
                      * 
                      */
                     LogToCLSConfig GetSlowLog() const;
@@ -79,15 +75,13 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 private:
 
                     /**
-                     * Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Error log delivery CLS configuration
                      */
                     LogToCLSConfig m_errorLog;
                     bool m_errorLogHasBeenSet;
 
                     /**
-                     * Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Slow log delivery CLS configuration
                      */
                     LogToCLSConfig m_slowLog;
                     bool m_slowLogHasBeenSet;

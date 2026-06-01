@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned aggregation bucket information set
+                     * @return Items Returned aggregation bucket information set
                      * 
                      */
                     std::vector<AuditLogAggregationResult> GetItems() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ItemsHasBeenSet() const;
 
                     /**
-                     * 获取Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of logs scanned
+                     * @return TotalCount Number of logs scanned
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Returned aggregation bucket information set
                      */
                     std::vector<AuditLogAggregationResult> m_items;
                     bool m_itemsHasBeenSet;
 
                     /**
-                     * Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of logs scanned
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Items Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RollbackTask> GetItems() const;
@@ -84,7 +82,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RollbackTask> m_items;
                     bool m_itemsHasBeenSet;

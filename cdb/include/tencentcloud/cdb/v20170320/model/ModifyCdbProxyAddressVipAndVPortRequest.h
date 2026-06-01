@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Proxy group ID
-                     * @return ProxyGroupId Proxy group ID
+                     * 获取Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @return ProxyGroupId Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy group ID
-                     * @param _proxyGroupId Proxy group ID
+                     * 设置Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @param _proxyGroupId Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Address ID of the proxy group
-                     * @return ProxyAddressId Address ID of the proxy group
+                     * 获取Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @return ProxyAddressId Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyAddressId() const;
 
                     /**
-                     * 设置Address ID of the proxy group
-                     * @param _proxyAddressId Address ID of the proxy group
+                     * 设置Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @param _proxyAddressId Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyAddressId(const std::string& _proxyAddressId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProxyAddressIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return UniqVpcId VPC ID
+                     * 获取VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqVpcId VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _uniqVpcId VPC ID
+                     * 设置VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqVpcId VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID
-                     * @return UniqSubnetId VPC subnet ID
+                     * 获取Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqSubnetId Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID
-                     * @param _uniqSubnetId VPC subnet ID
+                     * 设置Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqSubnetId Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取IP address
-                     * @return Vip IP address
+                     * 获取IP. If not specified, the system will assign an available IP under subnet.
+                     * @return Vip IP. If not specified, the system will assign an available IP under subnet.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置IP address
-                     * @param _vip IP address
+                     * 设置IP. If not specified, the system will assign an available IP under subnet.
+                     * @param _vip IP. If not specified, the system will assign an available IP under subnet.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return VPort Port
+                     * 获取Port. Default value 3306, value ranges from 1024 to 65535.
+                     * @return VPort Port. Default value 3306, value ranges from 1024 to 65535.
                      * 
                      */
                     uint64_t GetVPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _vPort Port
+                     * 设置Port. Default value 3306, value ranges from 1024 to 65535.
+                     * @param _vPort Port. Default value 3306, value ranges from 1024 to 65535.
                      * 
                      */
                     void SetVPort(const uint64_t& _vPort);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取Valid Hours of Old IP
-                     * @return ReleaseDuration Valid Hours of Old IP
+                     * 获取Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
+                     * @return ReleaseDuration Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
                      * 
                      */
                     uint64_t GetReleaseDuration() const;
 
                     /**
-                     * 设置Valid Hours of Old IP
-                     * @param _releaseDuration Valid Hours of Old IP
+                     * 设置Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
+                     * @param _releaseDuration Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
                      * 
                      */
                     void SetReleaseDuration(const uint64_t& _releaseDuration);
@@ -192,43 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Proxy group ID
+                     * Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Address ID of the proxy group
+                     * Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      */
                     std::string m_proxyAddressId;
                     bool m_proxyAddressIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID
+                     * Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * IP address
+                     * IP. If not specified, the system will assign an available IP under subnet.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Port
+                     * Port. Default value 3306, value ranges from 1024 to 65535.
                      */
                     uint64_t m_vPort;
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * Valid Hours of Old IP
+                     * Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
                      */
                     uint64_t m_releaseDuration;
                     bool m_releaseDurationHasBeenSet;

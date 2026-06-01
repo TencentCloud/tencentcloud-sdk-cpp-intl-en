@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Binlog backup filename
-                     * @return Name Binlog backup filename
+                     * 获取<p>binlog backup file name</p>
+                     * @return Name <p>binlog backup file name</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Binlog backup filename
-                     * @param _name Binlog backup filename
+                     * 设置<p>binlog backup file name</p>
+                     * @param _name <p>binlog backup file name</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Backup file size in bytes
-                     * @return Size Backup file size in bytes
+                     * 获取<p>Backup file size, unit: Byte</p>
+                     * @return Size <p>Backup file size, unit: Byte</p>
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Backup file size in bytes
-                     * @param _size Backup file size in bytes
+                     * 设置<p>Backup file size, unit: Byte</p>
+                     * @param _size <p>Backup file size, unit: Byte</p>
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取File stored time in the format of 2016-03-17 02:10:37
-                     * @return Date File stored time in the format of 2016-03-17 02:10:37
+                     * 获取<p>File storage time. Time format: 2016-03-17 02:10:37</p>
+                     * @return Date <p>File storage time. Time format: 2016-03-17 02:10:37</p>
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置File stored time in the format of 2016-03-17 02:10:37
-                     * @param _date File stored time in the format of 2016-03-17 02:10:37
+                     * 设置<p>File storage time. Time format: 2016-03-17 02:10:37</p>
+                     * @param _date <p>File storage time. Time format: 2016-03-17 02:10:37</p>
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取Download address
-                     * @return IntranetUrl Download address
+                     * 获取<p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+                     * @return IntranetUrl <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
                      * 
                      */
                     std::string GetIntranetUrl() const;
 
                     /**
-                     * 设置Download address
-                     * @param _intranetUrl Download address
+                     * 设置<p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+                     * @param _intranetUrl <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
                      * 
                      */
                     void SetIntranetUrl(const std::string& _intranetUrl);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool IntranetUrlHasBeenSet() const;
 
                     /**
-                     * 获取Download address
-                     * @return InternetUrl Download address
+                     * 获取<p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+                     * @return InternetUrl <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
                      * 
                      */
                     std::string GetInternetUrl() const;
 
                     /**
-                     * 设置Download address
-                     * @param _internetUrl Download address
+                     * 设置<p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+                     * @param _internetUrl <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
                      * 
                      */
                     void SetInternetUrl(const std::string& _internetUrl);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool InternetUrlHasBeenSet() const;
 
                     /**
-                     * 获取Log type. Value range: binlog
-                     * @return Type Log type. Value range: binlog
+                     * 获取<p>Log specific type. Possible values: binlog - binary log</p>
+                     * @return Type <p>Log specific type. Possible values: binlog - binary log</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Log type. Value range: binlog
-                     * @param _type Log type. Value range: binlog
+                     * 设置<p>Log specific type. Possible values: binlog - binary log</p>
+                     * @param _type <p>Log specific type. Possible values: binlog - binary log</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Binlog file start file
-                     * @return BinlogStartTime Binlog file start file
+                     * 获取<p>binlog file start time</p>
+                     * @return BinlogStartTime <p>binlog file start time</p>
                      * 
                      */
                     std::string GetBinlogStartTime() const;
 
                     /**
-                     * 设置Binlog file start file
-                     * @param _binlogStartTime Binlog file start file
+                     * 设置<p>binlog file start time</p>
+                     * @param _binlogStartTime <p>binlog file start time</p>
                      * 
                      */
                     void SetBinlogStartTime(const std::string& _binlogStartTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool BinlogStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Binlog file end time
-                     * @return BinlogFinishTime Binlog file end time
+                     * 获取<p>binlog file expiration time</p>
+                     * @return BinlogFinishTime <p>binlog file expiration time</p>
                      * 
                      */
                     std::string GetBinlogFinishTime() const;
 
                     /**
-                     * 设置Binlog file end time
-                     * @param _binlogFinishTime Binlog file end time
+                     * 设置<p>binlog file expiration time</p>
+                     * @param _binlogFinishTime <p>binlog file expiration time</p>
                      * 
                      */
                     void SetBinlogFinishTime(const std::string& _binlogFinishTime);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool BinlogFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取The region where the binlog file resides
-                     * @return Region The region where the binlog file resides
+                     * 获取<p>Region where local binlog files are located</p>
+                     * @return Region <p>Region where local binlog files are located</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置The region where the binlog file resides
-                     * @param _region The region where the binlog file resides
+                     * 设置<p>Region where local binlog files are located</p>
+                     * @param _region <p>Region where local binlog files are located</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-                     * @return Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * 获取<p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+                     * @return Status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-                     * @param _status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * 设置<p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+                     * @param _status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The detailed information of remote binlog backups
-                     * @return RemoteInfo The detailed information of remote binlog backups
+                     * 获取<p>Detailed information of binlog offsite backup</p>
+                     * @return RemoteInfo <p>Detailed information of binlog offsite backup</p>
                      * 
                      */
                     std::vector<RemoteBackupInfo> GetRemoteInfo() const;
 
                     /**
-                     * 设置The detailed information of remote binlog backups
-                     * @param _remoteInfo The detailed information of remote binlog backups
+                     * 设置<p>Detailed information of binlog offsite backup</p>
+                     * @param _remoteInfo <p>Detailed information of binlog offsite backup</p>
                      * 
                      */
                     void SetRemoteInfo(const std::vector<RemoteBackupInfo>& _remoteInfo);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool RemoteInfoHasBeenSet() const;
 
                     /**
-                     * 获取Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
-                     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * 获取<p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+                     * @return CosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
                      * 
                      */
                     int64_t GetCosStorageType() const;
 
                     /**
-                     * 设置Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
-                     * @param _cosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * 设置<p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+                     * @param _cosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
                      * 
                      */
                     void SetCosStorageType(const int64_t& _cosStorageType);
@@ -300,105 +300,132 @@ namespace TencentCloud
                     bool CosStorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * 
+                     * 获取<p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+                     * @return InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+                     * @deprecated
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * 
+                     * 设置<p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+                     * @param _instanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+                     * @deprecated
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Backup completion progress</p>
+                     * @return Progress <p>Backup completion progress</p>
+                     * 
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置<p>Backup completion progress</p>
+                     * @param _progress <p>Backup completion progress</p>
+                     * 
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     * 
+                     */
+                    bool ProgressHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Binlog backup filename
+                     * <p>binlog backup file name</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Backup file size in bytes
+                     * <p>Backup file size, unit: Byte</p>
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * File stored time in the format of 2016-03-17 02:10:37
+                     * <p>File storage time. Time format: 2016-03-17 02:10:37</p>
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * Download address
+                     * <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
                      */
                     std::string m_intranetUrl;
                     bool m_intranetUrlHasBeenSet;
 
                     /**
-                     * Download address
+                     * <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
                      */
                     std::string m_internetUrl;
                     bool m_internetUrlHasBeenSet;
 
                     /**
-                     * Log type. Value range: binlog
+                     * <p>Log specific type. Possible values: binlog - binary log</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Binlog file start file
+                     * <p>binlog file start time</p>
                      */
                     std::string m_binlogStartTime;
                     bool m_binlogStartTimeHasBeenSet;
 
                     /**
-                     * Binlog file end time
+                     * <p>binlog file expiration time</p>
                      */
                     std::string m_binlogFinishTime;
                     bool m_binlogFinishTimeHasBeenSet;
 
                     /**
-                     * The region where the binlog file resides
+                     * <p>Region where local binlog files are located</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The detailed information of remote binlog backups
+                     * <p>Detailed information of binlog offsite backup</p>
                      */
                     std::vector<RemoteBackupInfo> m_remoteInfo;
                     bool m_remoteInfoHasBeenSet;
 
                     /**
-                     * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
                      */
                     int64_t m_cosStorageType;
                     bool m_cosStorageTypeHasBeenSet;
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * <p>Backup completion progress</p>
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

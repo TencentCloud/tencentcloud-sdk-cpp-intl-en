@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of TencentDB accounts
-                     * @return Accounts List of TencentDB accounts
+                     * 获取Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @return Accounts Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置List of TencentDB accounts
-                     * @param _accounts List of TencentDB accounts
+                     * 设置Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @param _accounts Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of TencentDB accounts
+                     * Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;

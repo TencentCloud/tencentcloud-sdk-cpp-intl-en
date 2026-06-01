@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool SundayHasBeenSet() const;
 
                     /**
-                     * 获取Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
-                     * @return MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * 获取Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
+                     * @return MaxDelayTime Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
                      * 
                      */
                     uint64_t GetMaxDelayTime() const;
 
                     /**
-                     * 设置Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
-                     * @param _maxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * 设置Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
+                     * @param _maxDelayTime Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
                      * 
                      */
                     void SetMaxDelayTime(const uint64_t& _maxDelayTime);
@@ -234,7 +234,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_sundayHasBeenSet;
 
                     /**
-                     * Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
                      */
                     uint64_t m_maxDelayTime;
                     bool m_maxDelayTimeHasBeenSet;

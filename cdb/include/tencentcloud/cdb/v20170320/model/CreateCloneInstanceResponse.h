@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取LimitAsync task request ID, which can be used to query the execution result of an async task
-                     * @return AsyncRequestId LimitAsync task request ID, which can be used to query the execution result of an async task
+                     * 获取<p>Request ID of the asynchronous task. Use this ID to query the outcome of the async task.</p>
+                     * @return AsyncRequestId <p>Request ID of the asynchronous task. Use this ID to query the outcome of the async task.</p>
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * LimitAsync task request ID, which can be used to query the execution result of an async task
+                     * <p>Request ID of the asynchronous task. Use this ID to query the outcome of the async task.</p>
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

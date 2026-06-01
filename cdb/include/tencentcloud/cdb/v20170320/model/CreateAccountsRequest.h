@@ -86,15 +86,31 @@ namespace TencentCloud
                     bool AccountsHasBeenSet() const;
 
                     /**
-                     * 获取Password of the new account
-                     * @return Password Password of the new account
+                     * 获取Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+                     * @return Password Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password of the new account
-                     * @param _password Password of the new account
+                     * 设置Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+                     * @param _password Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -107,15 +123,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Description Remarks
+                     * 获取Remark information. Input limit: 255 characters.
+                     * @return Description Remark information. Input limit: 255 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _description Remarks
+                     * 设置Remark information. Input limit: 255 characters.
+                     * @param _description Remark information. Input limit: 255 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -163,13 +179,17 @@ namespace TencentCloud
                     bool m_accountsHasBeenSet;
 
                     /**
-                     * Password of the new account
+                     * Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Remarks
+                     * Remark information. Input limit: 255 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

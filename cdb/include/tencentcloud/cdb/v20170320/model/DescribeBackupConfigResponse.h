@@ -47,28 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
                      * @return StartTimeMin Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
-                     * 
+                     * @deprecated
                      */
                     int64_t GetStartTimeMin() const;
 
                     /**
                      * 判断参数 StartTimeMin 是否已赋值
                      * @return StartTimeMin 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool StartTimeMinHasBeenSet() const;
 
                     /**
                      * 获取Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
                      * @return StartTimeMax Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
-                     * 
+                     * @deprecated
                      */
                     int64_t GetStartTimeMax() const;
 
                     /**
                      * 判断参数 StartTimeMax 是否已赋值
                      * @return StartTimeMax 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool StartTimeMaxHasBeenSet() const;
 

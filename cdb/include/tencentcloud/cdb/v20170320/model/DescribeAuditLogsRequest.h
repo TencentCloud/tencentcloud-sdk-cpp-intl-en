@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取Start time. We recommend that the interval between start and end time does not exceed 7 days.
+                     * @return StartTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _startTime Start time
+                     * 设置Start time. We recommend that the interval between start and end time does not exceed 7 days.
+                     * @param _startTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time. We recommend that the interval between start and end time does not exceed 7 days.
+                     * @return EndTime End time. We recommend that the interval between start and end time does not exceed 7 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time. We recommend that the interval between start and end time does not exceed 7 days.
+                     * @param _endTime End time. We recommend that the interval between start and end time does not exceed 7 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset
-                     * @return Offset Pagination offset
+                     * 获取Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+                     * @return Offset Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset
-                     * @param _offset Pagination offset
+                     * 设置Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+                     * @param _offset Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order Valid values: `ASC (ascending), `DESC` (descending).
-                     * @return Order Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+                     * 获取Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+                     * @return Order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order Valid values: `ASC (ascending), `DESC` (descending).
-                     * @param _order Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+                     * 设置Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+                     * @param _order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -170,27 +170,27 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
-                     * @return OrderBy Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+                     * 获取Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
+                     * @return OrderBy Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
-                     * @param _orderBy Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+                     * 设置Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
+                     * @param _orderBy Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -226,19 +226,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time. We recommend that the interval between start and end time does not exceed 7 days.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time. We recommend that the interval between start and end time does not exceed 7 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -250,22 +250,22 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset
+                     * Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+                     * Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+                     * Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RO group ID.
-                     * @return RoGroupId RO group ID.
+                     * 获取ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+                     * @return RoGroupId ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetRoGroupId() const;
 
                     /**
-                     * 设置RO group ID.
-                     * @param _roGroupId RO group ID.
+                     * 设置ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+                     * @param _roGroupId ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      * 
                      */
                     void SetRoGroupId(const std::string& _roGroupId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool RoGroupInfoHasBeenSet() const;
 
                     /**
-                     * 获取Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
-                     * @return RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * 获取Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+                     * @return RoWeightValues Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<RoWeightValue> GetRoWeightValues() const;
 
                     /**
-                     * 设置Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
-                     * @param _roWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * 设置Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+                     * @param _roWeightValues Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      * 
                      */
                     void SetRoWeightValues(const std::vector<RoWeightValue>& _roWeightValues);
@@ -131,28 +131,28 @@ namespace TencentCloud
                     /**
                      * 获取This field has been deprecated.
                      * @return ReplicationDelayTime This field has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     int64_t GetReplicationDelayTime() const;
 
                     /**
                      * 设置This field has been deprecated.
                      * @param _replicationDelayTime This field has been deprecated.
-                     * 
+                     * @deprecated
                      */
                     void SetReplicationDelayTime(const int64_t& _replicationDelayTime);
 
                     /**
                      * 判断参数 ReplicationDelayTime 是否已赋值
                      * @return ReplicationDelayTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ReplicationDelayTimeHasBeenSet() const;
 
                 private:
 
                     /**
-                     * RO group ID.
+                     * ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      */
                     std::string m_roGroupId;
                     bool m_roGroupIdHasBeenSet;
@@ -164,7 +164,7 @@ namespace TencentCloud
                     bool m_roGroupInfoHasBeenSet;
 
                     /**
-                     * Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
                      */
                     std::vector<RoWeightValue> m_roWeightValues;
                     bool m_roWeightValuesHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instances.
-                     * @return InstanceIds List of instances.
+                     * 获取Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
+                     * @return InstanceIds Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of instances.
-                     * @param _instanceIds List of instances.
+                     * 设置Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
+                     * @param _instanceIds Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page.
-                     * @return Limit Number of entries per page.
+                     * 获取Page size. Defaults to 15.
+                     * @return Limit Page size. Defaults to 15.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page.
-                     * @param _limit Number of entries per page.
+                     * 设置Page size. Defaults to 15.
+                     * @param _limit Page size. Defaults to 15.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instances.
+                     * Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page.
+                     * Page size. Defaults to 15.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

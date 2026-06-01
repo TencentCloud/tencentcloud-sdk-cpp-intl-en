@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RO group information array. An instance can be associated with multiple RO groups.
-                     * @return RoGroups RO group information array. An instance can be associated with multiple RO groups.
+                     * 获取RO group information array. An instance can associate with multiple RO groups.
+                     * @return RoGroups RO group information array. An instance can associate with multiple RO groups.
                      * 
                      */
                     std::vector<RoGroup> GetRoGroups() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RO group information array. An instance can be associated with multiple RO groups.
+                     * RO group information array. An instance can associate with multiple RO groups.
                      */
                     std::vector<RoGroup> m_roGroups;
                     bool m_roGroupsHasBeenSet;

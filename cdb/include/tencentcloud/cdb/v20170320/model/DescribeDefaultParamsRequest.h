@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
-                     * @return EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * 获取Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+                     * @return EngineVersion Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
-                     * @param _engineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * 设置Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+                     * @param _engineVersion Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -64,15 +68,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-                     * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 获取Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+                     * @return TemplateType Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
                      * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
-                     * 设置Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-                     * @param _templateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 设置Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+                     * @param _templateType Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
                      * 
                      */
                     void SetTemplateType(const std::string& _templateType);
@@ -85,15 +89,15 @@ namespace TencentCloud
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template engine. Default value: `InnoDB`.
-                     * @return EngineType Parameter template engine. Default value: `InnoDB`.
+                     * 获取Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
+                     * @return EngineType Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
                      * 
                      */
                     std::string GetEngineType() const;
 
                     /**
-                     * 设置Parameter template engine. Default value: `InnoDB`.
-                     * @param _engineType Parameter template engine. Default value: `InnoDB`.
+                     * 设置Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
+                     * @param _engineType Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
                      * 
                      */
                     void SetEngineType(const std::string& _engineType);
@@ -108,19 +112,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
 
                     /**
-                     * Parameter template engine. Default value: `InnoDB`.
+                     * Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target IP. Either this parameter or `DstPort` must be passed in.
-                     * @return DstIp Target IP. Either this parameter or `DstPort` must be passed in.
+                     * 获取Target IP address.
+                     * @return DstIp Target IP address.
                      * 
                      */
                     std::string GetDstIp() const;
 
                     /**
-                     * 设置Target IP. Either this parameter or `DstPort` must be passed in.
-                     * @param _dstIp Target IP. Either this parameter or `DstPort` must be passed in.
+                     * 设置Target IP address.
+                     * @param _dstIp Target IP address.
                      * 
                      */
                     void SetDstIp(const std::string& _dstIp);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DstIpHasBeenSet() const;
 
                     /**
-                     * 获取Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
-                     * @return DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+                     * 获取Destination port. Support scope: [1024-65535].
+                     * @return DstPort Destination port. Support scope: [1024-65535].
                      * 
                      */
                     int64_t GetDstPort() const;
 
                     /**
-                     * 设置Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
-                     * @param _dstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+                     * 设置Destination port. Support scope: [1024-65535].
+                     * @param _dstPort Destination port. Support scope: [1024-65535].
                      * 
                      */
                     void SetDstPort(const int64_t& _dstPort);
@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool ReleaseDurationHasBeenSet() const;
 
+                    /**
+                     * 获取When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+                     * @return OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+                     * 
+                     */
+                    std::string GetOpResourceId() const;
+
+                    /**
+                     * 设置When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+                     * @param _opResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+                     * 
+                     */
+                    void SetOpResourceId(const std::string& _opResourceId);
+
+                    /**
+                     * 判断参数 OpResourceId 是否已赋值
+                     * @return OpResourceId 是否已赋值
+                     * 
+                     */
+                    bool OpResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -177,13 +198,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Target IP. Either this parameter or `DstPort` must be passed in.
+                     * Target IP address.
                      */
                     std::string m_dstIp;
                     bool m_dstIpHasBeenSet;
 
                     /**
-                     * Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+                     * Destination port. Support scope: [1024-65535].
                      */
                     int64_t m_dstPort;
                     bool m_dstPortHasBeenSet;
@@ -205,6 +226,12 @@ namespace TencentCloud
                      */
                     int64_t m_releaseDuration;
                     bool m_releaseDurationHasBeenSet;
+
+                    /**
+                     * When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+                     */
+                    std::string m_opResourceId;
+                    bool m_opResourceIdHasBeenSet;
 
                 };
             }

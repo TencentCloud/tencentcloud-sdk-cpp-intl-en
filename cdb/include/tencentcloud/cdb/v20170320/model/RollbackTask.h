@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Detail Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Rollback task detail.
+                     * @return Detail Rollback task detail.
                      * 
                      */
                     std::vector<RollbackInstancesInfo> GetDetail() const;
 
                     /**
-                     * 设置Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _detail Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Rollback task detail.
+                     * @param _detail Rollback task detail.
                      * 
                      */
                     void SetDetail(const std::vector<RollbackInstancesInfo>& _detail);
@@ -210,8 +206,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Rollback task detail.
                      */
                     std::vector<RollbackInstancesInfo> m_detail;
                     bool m_detailHasBeenSet;

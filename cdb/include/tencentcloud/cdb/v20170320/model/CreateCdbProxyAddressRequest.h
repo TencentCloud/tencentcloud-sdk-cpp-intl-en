@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Proxy group ID
-                     * @return ProxyGroupId Proxy group ID
+                     * 获取Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy group ID
-                     * @param _proxyGroupId Proxy group ID
+                     * 设置Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @param _proxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool MinCountHasBeenSet() const;
 
                     /**
-                     * 获取The delay threshold. Minimum value:  `0`
-                     * @return MaxDelay The delay threshold. Minimum value:  `0`
+                     * 获取Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
+                     * @return MaxDelay Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
                      * 
                      */
                     uint64_t GetMaxDelay() const;
 
                     /**
-                     * 设置The delay threshold. Minimum value:  `0`
-                     * @param _maxDelay The delay threshold. Minimum value:  `0`
+                     * 设置Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
+                     * @param _maxDelay Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
                      * 
                      */
                     void SetMaxDelay(const uint64_t& _maxDelay);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool ProxyAllocationHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return UniqVpcId VPC ID
+                     * 获取VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _uniqVpcId VPC ID
+                     * 设置VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID
-                     * @return UniqSubnetId VPC subnet ID
+                     * 获取Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID
-                     * @param _uniqSubnetId VPC subnet ID
+                     * 设置Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _uniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -296,15 +296,19 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the connection pool. Valid values: 
-                     * @return ConnectionPool Whether to enable the connection pool. Valid values: 
+                     * 获取Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
+                     * @return ConnectionPool Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * 
                      */
                     bool GetConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable the connection pool. Valid values: 
-                     * @param _connectionPool Whether to enable the connection pool. Valid values: 
+                     * 设置Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
+                     * @param _connectionPool Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      * 
                      */
                     void SetConnectionPool(const bool& _connectionPool);
@@ -338,15 +342,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取IP address
-                     * @return Vip IP address
+                     * 获取IP. Leave it blank to default to a random supported IP in the selected VPC.
+                     * @return Vip IP. Leave it blank to default to a random supported IP in the selected VPC.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置IP address
-                     * @param _vip IP address
+                     * 设置IP. Leave it blank to default to a random supported IP in the selected VPC.
+                     * @param _vip IP. Leave it blank to default to a random supported IP in the selected VPC.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -359,15 +363,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return VPort Port
+                     * 获取Port. Default value 3306.
+                     * @return VPort Port. Default value 3306.
                      * 
                      */
                     uint64_t GetVPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _vPort Port
+                     * 设置Port. Default value 3306.
+                     * @param _vPort Port. Default value 3306.
                      * 
                      */
                     void SetVPort(const uint64_t& _vPort);
@@ -401,15 +405,15 @@ namespace TencentCloud
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
-                     * @return ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+                     * 获取Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
+                     * @return ConnectionPoolType Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
-                     * @param _connectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+                     * 设置Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
+                     * @param _connectionPoolType Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -422,15 +426,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable adaptive load balancing. Disabled by default.
-                     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+                     * 获取Whether adaptive load balancing is enabled. Off by default.
+                     * @return AutoLoadBalance Whether adaptive load balancing is enabled. Off by default.
                      * 
                      */
                     bool GetAutoLoadBalance() const;
 
                     /**
-                     * 设置Whether to enable adaptive load balancing. Disabled by default.
-                     * @param _autoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+                     * 设置Whether adaptive load balancing is enabled. Off by default.
+                     * @param _autoLoadBalance Whether adaptive load balancing is enabled. Off by default.
                      * 
                      */
                     void SetAutoLoadBalance(const bool& _autoLoadBalance);
@@ -443,15 +447,15 @@ namespace TencentCloud
                     bool AutoLoadBalanceHasBeenSet() const;
 
                     /**
-                     * 获取Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
-                     * @return AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+                     * 获取Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
+                     * @return AccessMode Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
-                     * @param _accessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+                     * 设置Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
+                     * @param _accessMode Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -466,7 +470,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Proxy group ID
+                     * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
@@ -490,7 +494,7 @@ namespace TencentCloud
                     bool m_minCountHasBeenSet;
 
                     /**
-                     * The delay threshold. Minimum value:  `0`
+                     * Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
                      */
                     uint64_t m_maxDelay;
                     bool m_maxDelayHasBeenSet;
@@ -526,19 +530,20 @@ namespace TencentCloud
                     bool m_proxyAllocationHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID
+                     * Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Whether to enable the connection pool. Valid values: 
+                     * Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
                      */
                     bool m_connectionPool;
                     bool m_connectionPoolHasBeenSet;
@@ -550,13 +555,13 @@ namespace TencentCloud
                     bool m_descHasBeenSet;
 
                     /**
-                     * IP address
+                     * IP. Leave it blank to default to a random supported IP in the selected VPC.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Port
+                     * Port. Default value 3306.
                      */
                     uint64_t m_vPort;
                     bool m_vPortHasBeenSet;
@@ -568,19 +573,19 @@ namespace TencentCloud
                     bool m_securityGroupHasBeenSet;
 
                     /**
-                     * Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+                     * Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Whether to enable adaptive load balancing. Disabled by default.
+                     * Whether adaptive load balancing is enabled. Off by default.
                      */
                     bool m_autoLoadBalance;
                     bool m_autoLoadBalanceHasBeenSet;
 
                     /**
-                     * Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+                     * Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;

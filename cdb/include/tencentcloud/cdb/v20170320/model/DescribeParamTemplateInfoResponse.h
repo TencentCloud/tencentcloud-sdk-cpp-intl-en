@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version specified in the parameter template
-                     * @return EngineVersion Database engine version specified in the parameter template
+                     * 获取The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
+                     * @return EngineVersion The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
                      * 
                      */
                     std::string GetEngineVersion() const;
@@ -143,10 +143,8 @@ namespace TencentCloud
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter template engine. Supported values include "InnoDB", "RocksDB".
+                     * @return EngineType Parameter template engine. Supported values include "InnoDB", "RocksDB".
                      * 
                      */
                     std::string GetEngineType() const;
@@ -173,7 +171,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Database engine version specified in the parameter template
+                     * The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
@@ -203,8 +201,7 @@ Note:  This field may return null, indicating that no valid values can be obtain
                     bool m_templateTypeHasBeenSet;
 
                     /**
-                     * Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Parameter template engine. Supported values include "InnoDB", "RocksDB".
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Timestamp SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Sql execution time. Unix second-level timestamp.
+                     * @return Timestamp Sql execution time. Unix second-level timestamp.
                      * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
-                     * 设置SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _timestamp SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Sql execution time. Unix second-level timestamp.
+                     * @param _timestamp Sql execution time. Unix second-level timestamp.
                      * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return QueryTime SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Execution duration of Sql (seconds).
+                     * @return QueryTime Execution duration of Sql (seconds).
                      * 
                      */
                     double GetQueryTime() const;
 
                     /**
-                     * 设置SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _queryTime SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Execution duration of Sql (seconds).
+                     * @param _queryTime Execution duration of Sql (seconds).
                      * 
                      */
                     void SetQueryTime(const double& _queryTime);
@@ -97,19 +89,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool QueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SqlText SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Sql statement.
+                     * @return SqlText Sql statement.
                      * 
                      */
                     std::string GetSqlText() const;
 
                     /**
-                     * 设置SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sqlText SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Sql statement.
+                     * @param _sqlText Sql statement.
                      * 
                      */
                     void SetSqlText(const std::string& _sqlText);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SqlTextHasBeenSet() const;
 
                     /**
-                     * 获取Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UserHost Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Client IP address.
+                     * @return UserHost Client IP address.
                      * 
                      */
                     std::string GetUserHost() const;
 
                     /**
-                     * 设置Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _userHost Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Client IP address.
+                     * @param _userHost Client IP address.
                      * 
                      */
                     void SetUserHost(const std::string& _userHost);
@@ -148,18 +132,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Username.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _userName Username.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -173,18 +153,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Database Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _database Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -197,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LockTime Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Lock duration (unit: second).
+                     * @return LockTime Lock duration (unit: second).
                      * 
                      */
                     double GetLockTime() const;
 
                     /**
-                     * 设置Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _lockTime Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Lock duration (unit: second).
+                     * @param _lockTime Lock duration (unit: second).
                      * 
                      */
                     void SetLockTime(const double& _lockTime);
@@ -223,18 +195,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RowsExamined Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRowsExamined() const;
 
                     /**
                      * 设置Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _rowsExamined Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRowsExamined(const int64_t& _rowsExamined);
@@ -247,19 +215,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RowsExaminedHasBeenSet() const;
 
                     /**
-                     * 获取Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RowsSent Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Result set row count.
+                     * @return RowsSent Result set row count.
                      * 
                      */
                     int64_t GetRowsSent() const;
 
                     /**
-                     * 设置Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _rowsSent Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Result set row count.
+                     * @param _rowsSent Result set row count.
                      * 
                      */
                     void SetRowsSent(const int64_t& _rowsSent);
@@ -272,19 +236,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RowsSentHasBeenSet() const;
 
                     /**
-                     * 获取SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SqlTemplate SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Sql Template.
+                     * @return SqlTemplate Sql Template.
                      * 
                      */
                     std::string GetSqlTemplate() const;
 
                     /**
-                     * 设置SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sqlTemplate SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Sql Template.
+                     * @param _sqlTemplate Sql Template.
                      * 
                      */
                     void SetSqlTemplate(const std::string& _sqlTemplate);
@@ -297,19 +257,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SqlTemplateHasBeenSet() const;
 
                     /**
-                     * 获取SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Md5 SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取md5 of the Sql statement.
+                     * @return Md5 md5 of the Sql statement.
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _md5 SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置md5 of the Sql statement.
+                     * @param _md5 md5 of the Sql statement.
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -324,78 +280,67 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Sql execution time. Unix second-level timestamp.
                      */
                     uint64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Execution duration of Sql (seconds).
                      */
                     double m_queryTime;
                     bool m_queryTimeHasBeenSet;
 
                     /**
-                     * SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Sql statement.
                      */
                     std::string m_sqlText;
                     bool m_sqlTextHasBeenSet;
 
                     /**
-                     * Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Client IP address.
                      */
                     std::string m_userHost;
                     bool m_userHostHasBeenSet;
 
                     /**
                      * Username.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
                      * Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Lock duration (unit: second).
                      */
                     double m_lockTime;
                     bool m_lockTimeHasBeenSet;
 
                     /**
                      * Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_rowsExamined;
                     bool m_rowsExaminedHasBeenSet;
 
                     /**
-                     * Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Result set row count.
                      */
                     int64_t m_rowsSent;
                     bool m_rowsSentHasBeenSet;
 
                     /**
-                     * SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Sql Template.
                      */
                     std::string m_sqlTemplate;
                     bool m_sqlTemplateHasBeenSet;
 
                     /**
-                     * SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * md5 of the Sql statement.
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;

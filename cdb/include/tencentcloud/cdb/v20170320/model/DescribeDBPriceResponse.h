@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
-                     * @return Price Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+                     * 获取<p>Instance price, unit: cent.</p>
+                     * @return Price <p>Instance price, unit: cent.</p>
                      * 
                      */
                     int64_t GetPrice() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
-                     * @return OriginalPrice Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+                     * 获取<p>Original price of instance. Measurement unit: cent.</p>
+                     * @return OriginalPrice <p>Original price of instance. Measurement unit: cent.</p>
                      * 
                      */
                     int64_t GetOriginalPrice() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency: `CNY`, `USD`.
-                     * @return Currency Currency: `CNY`, `USD`.
+                     * 获取<p>Currency unit. CNY - RMB, USD - USD.</p>
+                     * @return Currency <p>Currency unit. CNY - RMB, USD - USD.</p>
                      * 
                      */
                     std::string GetCurrency() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+                     * <p>Instance price, unit: cent.</p>
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+                     * <p>Original price of instance. Measurement unit: cent.</p>
                      */
                     int64_t m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Currency: `CNY`, `USD`.
+                     * <p>Currency unit. CNY - RMB, USD - USD.</p>
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

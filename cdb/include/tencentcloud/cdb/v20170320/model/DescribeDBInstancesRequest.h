@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
-                     * @return InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+                     * 获取<p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+                     * @return InstanceTypes <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
                      * 
                      */
                     std::vector<uint64_t> GetInstanceTypes() const;
 
                     /**
-                     * 设置Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
-                     * @param _instanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+                     * 设置<p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+                     * @param _instanceTypes <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
                      * 
                      */
                     void SetInstanceTypes(const std::vector<uint64_t>& _instanceTypes);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool InstanceTypesHasBeenSet() const;
 
                     /**
-                     * 获取Private IP address of the instance.
-                     * @return Vips Private IP address of the instance.
+                     * 获取<p>Private IP address of the instance.</p>
+                     * @return Vips <p>Private IP address of the instance.</p>
                      * 
                      */
                     std::vector<std::string> GetVips() const;
 
                     /**
-                     * 设置Private IP address of the instance.
-                     * @param _vips Private IP address of the instance.
+                     * 设置<p>Private IP address of the instance.</p>
+                     * @param _vips <p>Private IP address of the instance.</p>
                      * 
                      */
                     void SetVips(const std::vector<std::string>& _vips);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool VipsHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
-                     * @return Status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+                     * 获取<p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+                     * @return Status <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
                      * 
                      */
                     std::vector<uint64_t> GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
-                     * @param _status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+                     * 设置<p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+                     * @param _status <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
                      * 
                      */
                     void SetStatus(const std::vector<uint64_t>& _status);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取<p>Offset. Default value is 0.</p>
+                     * @return Offset <p>Offset. Default value is 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置<p>Offset. Default value is 0.</p>
+                     * @param _offset <p>Offset. Default value is 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
-                     * @return Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+                     * 获取<p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+                     * @return Limit <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
-                     * @param _limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+                     * 设置<p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+                     * @param _limit <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
-                     * @return SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+                     * 获取<p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+                     * @return SecurityGroupId <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
                      * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
-                     * @param _securityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+                     * 设置<p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+                     * @param _securityGroupId <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
                      * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
-                     * @return PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+                     * 获取<p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+                     * @return PayTypes <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
                      * 
                      */
                     std::vector<uint64_t> GetPayTypes() const;
 
                     /**
-                     * 设置Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
-                     * @param _payTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+                     * 设置<p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+                     * @param _payTypes <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
                      * 
                      */
                     void SetPayTypes(const std::vector<uint64_t>& _payTypes);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool PayTypesHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-                     * @return InstanceNames Instance name.
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceNames <p>Instance name.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceNames() const;
 
                     /**
-                     * 设置Instance name.
-                     * @param _instanceNames Instance name.
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceNames <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceNames(const std::vector<std::string>& _instanceNames);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
-                     * 获取Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
-                     * @return TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+                     * 获取<p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+                     * @return TaskStatus <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
                      * 
                      */
                     std::vector<uint64_t> GetTaskStatus() const;
 
                     /**
-                     * 设置Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
-                     * @param _taskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+                     * 设置<p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+                     * @param _taskStatus <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
                      * 
                      */
                     void SetTaskStatus(const std::vector<uint64_t>& _taskStatus);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
-                     * @return EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+                     * 获取<p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+                     * @return EngineVersions <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
                      * 
                      */
                     std::vector<std::string> GetEngineVersions() const;
 
                     /**
-                     * 设置Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
-                     * @param _engineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+                     * 设置<p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+                     * @param _engineVersions <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
                      * 
                      */
                     void SetEngineVersions(const std::vector<std::string>& _engineVersions);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool EngineVersionsHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID.
-                     * @return VpcIds VPC ID.
+                     * 获取<p>VPC ID.</p>
+                     * @return VpcIds <p>VPC ID.</p>
                      * 
                      */
                     std::vector<uint64_t> GetVpcIds() const;
 
                     /**
-                     * 设置VPC ID.
-                     * @param _vpcIds VPC ID.
+                     * 设置<p>VPC ID.</p>
+                     * @param _vpcIds <p>VPC ID.</p>
                      * 
                      */
                     void SetVpcIds(const std::vector<uint64_t>& _vpcIds);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool VpcIdsHasBeenSet() const;
 
                     /**
-                     * 获取AZ ID.
-                     * @return ZoneIds AZ ID.
+                     * 获取<p>Availability zone ID.</p>
+                     * @return ZoneIds <p>Availability zone ID.</p>
                      * 
                      */
                     std::vector<uint64_t> GetZoneIds() const;
 
                     /**
-                     * 设置AZ ID.
-                     * @param _zoneIds AZ ID.
+                     * 设置<p>Availability zone ID.</p>
+                     * @param _zoneIds <p>Availability zone ID.</p>
                      * 
                      */
                     void SetZoneIds(const std::vector<uint64_t>& _zoneIds);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID.
-                     * @return SubnetIds Subnet ID.
+                     * 获取<p>Subnet ID.</p>
+                     * @return SubnetIds <p>Subnet ID.</p>
                      * 
                      */
                     std::vector<uint64_t> GetSubnetIds() const;
 
                     /**
-                     * 设置Subnet ID.
-                     * @param _subnetIds Subnet ID.
+                     * 设置<p>Subnet ID.</p>
+                     * @param _subnetIds <p>Subnet ID.</p>
                      * 
                      */
                     void SetSubnetIds(const std::vector<uint64_t>& _subnetIds);
@@ -338,15 +338,15 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
-                     * @return CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+                     * 获取<p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+                     * @return CdbErrors <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
                      * 
                      */
                     std::vector<int64_t> GetCdbErrors() const;
 
                     /**
-                     * 设置Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
-                     * @param _cdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+                     * 设置<p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+                     * @param _cdbErrors <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
                      * 
                      */
                     void SetCdbErrors(const std::vector<int64_t>& _cdbErrors);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool CdbErrorsHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
-                     * @return OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+                     * 获取<p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+                     * @return OrderBy <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
-                     * @param _orderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+                     * 设置<p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+                     * @param _orderBy <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
-                     * @return OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+                     * 获取<p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+                     * @return OrderDirection <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
                      * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
-                     * @param _orderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+                     * 设置<p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+                     * @param _orderDirection <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
                      * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
@@ -401,19 +401,15 @@ namespace TencentCloud
                     bool OrderDirectionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
-                     * @return WithSecurityGroup Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+                     * 获取<p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+                     * @return WithSecurityGroup <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
                      * 
                      */
                     int64_t GetWithSecurityGroup() const;
 
                     /**
-                     * 设置Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
-                     * @param _withSecurityGroup Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+                     * 设置<p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+                     * @param _withSecurityGroup <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
                      * 
                      */
                     void SetWithSecurityGroup(const int64_t& _withSecurityGroup);
@@ -426,15 +422,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool WithSecurityGroupHasBeenSet() const;
 
                     /**
-                     * 获取Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
-                     * @return WithExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+                     * 获取<p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+                     * @return WithExCluster <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
                      * 
                      */
                     int64_t GetWithExCluster() const;
 
                     /**
-                     * 设置Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
-                     * @param _withExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+                     * 设置<p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+                     * @param _withExCluster <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
                      * 
                      */
                     void SetWithExCluster(const int64_t& _withExCluster);
@@ -447,15 +443,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool WithExClusterHasBeenSet() const;
 
                     /**
-                     * 获取Exclusive cluster ID.
-                     * @return ExClusterId Exclusive cluster ID.
+                     * 获取<p>Dedicated cluster ID.</p>
+                     * @return ExClusterId <p>Dedicated cluster ID.</p>
                      * 
                      */
                     std::string GetExClusterId() const;
 
                     /**
-                     * 设置Exclusive cluster ID.
-                     * @param _exClusterId Exclusive cluster ID.
+                     * 设置<p>Dedicated cluster ID.</p>
+                     * @param _exClusterId <p>Dedicated cluster ID.</p>
                      * 
                      */
                     void SetExClusterId(const std::string& _exClusterId);
@@ -468,15 +464,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool ExClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceIds Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceIds <p>Instance ID.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceIds Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceIds <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -489,15 +485,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Initialization flag. Value range: 0 (not initialized), 1 (initialized).
-                     * @return InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+                     * 获取<p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+                     * @return InitFlag <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
                      * 
                      */
                     int64_t GetInitFlag() const;
 
                     /**
-                     * 设置Initialization flag. Value range: 0 (not initialized), 1 (initialized).
-                     * @param _initFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+                     * 设置<p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+                     * @param _initFlag <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
                      * 
                      */
                     void SetInitFlag(const int64_t& _initFlag);
@@ -510,15 +506,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool InitFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-                     * @return WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * 获取<p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+                     * @return WithDr <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
                      * 
                      */
                     int64_t GetWithDr() const;
 
                     /**
-                     * 设置Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-                     * @param _withDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * 设置<p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+                     * @param _withDr <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
                      * 
                      */
                     void SetWithDr(const int64_t& _withDr);
@@ -531,15 +527,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool WithDrHasBeenSet() const;
 
                     /**
-                     * 获取Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @return WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 获取<p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+                     * @return WithRo <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      * 
                      */
                     int64_t GetWithRo() const;
 
                     /**
-                     * 设置Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @param _withRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 设置<p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+                     * @param _withRo <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      * 
                      */
                     void SetWithRo(const int64_t& _withRo);
@@ -552,15 +548,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool WithRoHasBeenSet() const;
 
                     /**
-                     * 获取Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @return WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 获取<p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+                     * @return WithMaster <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      * 
                      */
                     int64_t GetWithMaster() const;
 
                     /**
-                     * 设置Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-                     * @param _withMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * 设置<p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+                     * @param _withMaster <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      * 
                      */
                     void SetWithMaster(const int64_t& _withMaster);
@@ -573,15 +569,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool WithMasterHasBeenSet() const;
 
                     /**
-                     * 获取Placement group ID list.
-                     * @return DeployGroupIds Placement group ID list.
+                     * 获取<p>Placement group ID list.</p>
+                     * @return DeployGroupIds <p>Placement group ID list.</p>
                      * 
                      */
                     std::vector<std::string> GetDeployGroupIds() const;
 
                     /**
-                     * 设置Placement group ID list.
-                     * @param _deployGroupIds Placement group ID list.
+                     * 设置<p>Placement group ID list.</p>
+                     * @param _deployGroupIds <p>Placement group ID list.</p>
                      * 
                      */
                     void SetDeployGroupIds(const std::vector<std::string>& _deployGroupIds);
@@ -594,15 +590,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool DeployGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use the tag key as a filter condition
-                     * @return TagKeysForSearch Whether to use the tag key as a filter condition
+                     * 获取<p>Filter by tag key.</p>
+                     * @return TagKeysForSearch <p>Filter by tag key.</p>
                      * 
                      */
                     std::vector<std::string> GetTagKeysForSearch() const;
 
                     /**
-                     * 设置Whether to use the tag key as a filter condition
-                     * @param _tagKeysForSearch Whether to use the tag key as a filter condition
+                     * 设置<p>Filter by tag key.</p>
+                     * @param _tagKeysForSearch <p>Filter by tag key.</p>
                      * 
                      */
                     void SetTagKeysForSearch(const std::vector<std::string>& _tagKeysForSearch);
@@ -615,15 +611,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool TagKeysForSearchHasBeenSet() const;
 
                     /**
-                     * 获取Financial cage IDs.
-                     * @return CageIds Financial cage IDs.
+                     * 获取<p>Financial Enclosure ID.</p>
+                     * @return CageIds <p>Financial Enclosure ID.</p>
                      * 
                      */
                     std::vector<std::string> GetCageIds() const;
 
                     /**
-                     * 设置Financial cage IDs.
-                     * @param _cageIds Financial cage IDs.
+                     * 设置<p>Financial Enclosure ID.</p>
+                     * @param _cageIds <p>Financial Enclosure ID.</p>
                      * 
                      */
                     void SetCageIds(const std::vector<std::string>& _cageIds);
@@ -636,15 +632,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool CageIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return TagValues Tag value
+                     * 获取<p>Tag value</p>
+                     * @return TagValues <p>Tag value</p>
                      * 
                      */
                     std::vector<std::string> GetTagValues() const;
 
                     /**
-                     * 设置Tag value
-                     * @param _tagValues Tag value
+                     * 设置<p>Tag value</p>
+                     * @param _tagValues <p>Tag value</p>
                      * 
                      */
                     void SetTagValues(const std::vector<std::string>& _tagValues);
@@ -657,15 +653,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool TagValuesHasBeenSet() const;
 
                     /**
-                     * 获取VPC character vpcId
-                     * @return UniqueVpcIds VPC character vpcId
+                     * 获取<p>Character type VPC ID</p>
+                     * @return UniqueVpcIds <p>Character type VPC ID</p>
                      * 
                      */
                     std::vector<std::string> GetUniqueVpcIds() const;
 
                     /**
-                     * 设置VPC character vpcId
-                     * @param _uniqueVpcIds VPC character vpcId
+                     * 设置<p>Character type VPC ID</p>
+                     * @param _uniqueVpcIds <p>Character type VPC ID</p>
                      * 
                      */
                     void SetUniqueVpcIds(const std::vector<std::string>& _uniqueVpcIds);
@@ -678,15 +674,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool UniqueVpcIdsHasBeenSet() const;
 
                     /**
-                     * 获取VPC character subnetId
-                     * @return UniqSubnetIds VPC character subnetId
+                     * 获取<p>VPC character type subnetId</p>
+                     * @return UniqSubnetIds <p>VPC character type subnetId</p>
                      * 
                      */
                     std::vector<std::string> GetUniqSubnetIds() const;
 
                     /**
-                     * 设置VPC character subnetId
-                     * @param _uniqSubnetIds VPC character subnetId
+                     * 设置<p>VPC character type subnetId</p>
+                     * @param _uniqSubnetIds <p>VPC character type subnetId</p>
                      * 
                      */
                     void SetUniqSubnetIds(const std::vector<std::string>& _uniqSubnetIds);
@@ -699,19 +695,15 @@ Note: 0 indicates no; 1 indicates yes.
                     bool UniqSubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tag key value.
-Note that tags cannot be queried for instances being created.
-                     * @return Tags Tag key value.
-Note that tags cannot be queried for instances being created.
+                     * 获取<p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+                     * @return Tags <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag key value.
-Note that tags cannot be queried for instances being created.
-                     * @param _tags Tag key value.
-Note that tags cannot be queried for instances being created.
+                     * 设置<p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+                     * @param _tags <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -724,15 +716,15 @@ Note that tags cannot be queried for instances being created.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy IP
-                     * @return ProxyVips Database proxy IP
+                     * 获取<p>Database proxy IP.</p>
+                     * @return ProxyVips <p>Database proxy IP.</p>
                      * 
                      */
                     std::vector<std::string> GetProxyVips() const;
 
                     /**
-                     * 设置Database proxy IP
-                     * @param _proxyVips Database proxy IP
+                     * 设置<p>Database proxy IP.</p>
+                     * @param _proxyVips <p>Database proxy IP.</p>
                      * 
                      */
                     void SetProxyVips(const std::vector<std::string>& _proxyVips);
@@ -745,15 +737,15 @@ Note that tags cannot be queried for instances being created.
                     bool ProxyVipsHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy ID
-                     * @return ProxyIds Database proxy ID
+                     * 获取<p>Database proxy ID.</p>
+                     * @return ProxyIds <p>Database proxy ID.</p>
                      * 
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
-                     * 设置Database proxy ID
-                     * @param _proxyIds Database proxy ID
+                     * 设置<p>Database proxy ID.</p>
+                     * @param _proxyIds <p>Database proxy ID.</p>
                      * 
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
@@ -766,15 +758,15 @@ Note that tags cannot be queried for instances being created.
                     bool ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Database engine type. Valid values: InnoDB; RocksDB.
-                     * @return EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
+                     * 获取<p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+                     * @return EngineTypes <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
                      * 
                      */
                     std::vector<std::string> GetEngineTypes() const;
 
                     /**
-                     * 设置Database engine type. Valid values: InnoDB; RocksDB.
-                     * @param _engineTypes Database engine type. Valid values: InnoDB; RocksDB.
+                     * 设置<p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+                     * @param _engineTypes <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
                      * 
                      */
                     void SetEngineTypes(const std::vector<std::string>& _engineTypes);
@@ -787,15 +779,15 @@ Note that tags cannot be queried for instances being created.
                     bool EngineTypesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
-                     * @return QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * 获取<p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
+                     * @return QueryClusterInfo <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
                      * 
                      */
                     bool GetQueryClusterInfo() const;
 
                     /**
-                     * 设置Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
-                     * @param _queryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * 设置<p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
+                     * @param _queryClusterInfo <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
                      * 
                      */
                     void SetQueryClusterInfo(const bool& _queryClusterInfo);
@@ -816,213 +808,211 @@ Note that tags cannot be queried for instances being created.
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+                     * <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
                      */
                     std::vector<uint64_t> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;
 
                     /**
-                     * Private IP address of the instance.
+                     * <p>Private IP address of the instance.</p>
                      */
                     std::vector<std::string> m_vips;
                     bool m_vipsHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+                     * <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
                      */
                     std::vector<uint64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * <p>Offset. Default value is 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+                     * <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+                     * <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+                     * <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
                      */
                     std::vector<uint64_t> m_payTypes;
                     bool m_payTypesHasBeenSet;
 
                     /**
-                     * Instance name.
+                     * <p>Instance name.</p>
                      */
                     std::vector<std::string> m_instanceNames;
                     bool m_instanceNamesHasBeenSet;
 
                     /**
-                     * Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+                     * <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
                      */
                     std::vector<uint64_t> m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+                     * <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
                      */
                     std::vector<std::string> m_engineVersions;
                     bool m_engineVersionsHasBeenSet;
 
                     /**
-                     * VPC ID.
+                     * <p>VPC ID.</p>
                      */
                     std::vector<uint64_t> m_vpcIds;
                     bool m_vpcIdsHasBeenSet;
 
                     /**
-                     * AZ ID.
+                     * <p>Availability zone ID.</p>
                      */
                     std::vector<uint64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Subnet ID.
+                     * <p>Subnet ID.</p>
                      */
                     std::vector<uint64_t> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+                     * <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
                      */
                     std::vector<int64_t> m_cdbErrors;
                     bool m_cdbErrorsHasBeenSet;
 
                     /**
-                     * Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+                     * <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+                     * <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;
 
                     /**
-                     * Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+                     * <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
                      */
                     int64_t m_withSecurityGroup;
                     bool m_withSecurityGroupHasBeenSet;
 
                     /**
-                     * Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+                     * <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
                      */
                     int64_t m_withExCluster;
                     bool m_withExClusterHasBeenSet;
 
                     /**
-                     * Exclusive cluster ID.
+                     * <p>Dedicated cluster ID.</p>
                      */
                     std::string m_exClusterId;
                     bool m_exClusterIdHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+                     * <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
                      */
                     int64_t m_initFlag;
                     bool m_initFlagHasBeenSet;
 
                     /**
-                     * Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+                     * <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
                      */
                     int64_t m_withDr;
                     bool m_withDrHasBeenSet;
 
                     /**
-                     * Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      */
                     int64_t m_withRo;
                     bool m_withRoHasBeenSet;
 
                     /**
-                     * Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+                     * <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
                      */
                     int64_t m_withMaster;
                     bool m_withMasterHasBeenSet;
 
                     /**
-                     * Placement group ID list.
+                     * <p>Placement group ID list.</p>
                      */
                     std::vector<std::string> m_deployGroupIds;
                     bool m_deployGroupIdsHasBeenSet;
 
                     /**
-                     * Whether to use the tag key as a filter condition
+                     * <p>Filter by tag key.</p>
                      */
                     std::vector<std::string> m_tagKeysForSearch;
                     bool m_tagKeysForSearchHasBeenSet;
 
                     /**
-                     * Financial cage IDs.
+                     * <p>Financial Enclosure ID.</p>
                      */
                     std::vector<std::string> m_cageIds;
                     bool m_cageIdsHasBeenSet;
 
                     /**
-                     * Tag value
+                     * <p>Tag value</p>
                      */
                     std::vector<std::string> m_tagValues;
                     bool m_tagValuesHasBeenSet;
 
                     /**
-                     * VPC character vpcId
+                     * <p>Character type VPC ID</p>
                      */
                     std::vector<std::string> m_uniqueVpcIds;
                     bool m_uniqueVpcIdsHasBeenSet;
 
                     /**
-                     * VPC character subnetId
+                     * <p>VPC character type subnetId</p>
                      */
                     std::vector<std::string> m_uniqSubnetIds;
                     bool m_uniqSubnetIdsHasBeenSet;
 
                     /**
-                     * Tag key value.
-Note that tags cannot be queried for instances being created.
+                     * <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Database proxy IP
+                     * <p>Database proxy IP.</p>
                      */
                     std::vector<std::string> m_proxyVips;
                     bool m_proxyVipsHasBeenSet;
 
                     /**
-                     * Database proxy ID
+                     * <p>Database proxy ID.</p>
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;
 
                     /**
-                     * Database engine type. Valid values: InnoDB; RocksDB.
+                     * <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
                      */
                     std::vector<std::string> m_engineTypes;
                     bool m_engineTypesHasBeenSet;
 
                     /**
-                     * Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+                     * <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
                      */
                     bool m_queryClusterInfo;
                     bool m_queryClusterInfoHasBeenSet;

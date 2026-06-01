@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Automatic scale-out policy for elastic CPU scale-out.
+                * CPU Elastic Scaling auto scale-out policy.
                 */
                 class AutoStrategy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
-                     * @return ExpandThreshold CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
+                     * 获取Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
+                     * @return ExpandThreshold Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
                      * 
                      */
                     int64_t GetExpandThreshold() const;
 
                     /**
-                     * 设置CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
-                     * @param _expandThreshold CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
+                     * 设置Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
+                     * @param _expandThreshold Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
                      * 
                      */
                     void SetExpandThreshold(const int64_t& _expandThreshold);
@@ -66,27 +66,6 @@ namespace TencentCloud
                      * 
                      */
                     bool ExpandThresholdHasBeenSet() const;
-
-                    /**
-                     * 获取Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-                     * @return ExpandPeriod Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-                     * 
-                     */
-                    int64_t GetExpandPeriod() const;
-
-                    /**
-                     * 设置Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-                     * @param _expandPeriod Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-                     * 
-                     */
-                    void SetExpandPeriod(const int64_t& _expandPeriod);
-
-                    /**
-                     * 判断参数 ExpandPeriod 是否已赋值
-                     * @return ExpandPeriod 是否已赋值
-                     * 
-                     */
-                    bool ExpandPeriodHasBeenSet() const;
 
                     /**
                      * 获取CPU utilization threshold (percent value). Valid values: 10, 20, and 30. Automatic scale-in will be triggered when CPU utilization reaches the set threshold.
@@ -110,39 +89,104 @@ namespace TencentCloud
                     bool ShrinkThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
-                     * @return ShrinkPeriod Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
-                     * 
+                     * 获取Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpandPeriod Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    int64_t GetExpandPeriod() const;
+
+                    /**
+                     * 设置Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expandPeriod Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
+                     */
+                    void SetExpandPeriod(const int64_t& _expandPeriod);
+
+                    /**
+                     * 判断参数 ExpandPeriod 是否已赋值
+                     * @return ExpandPeriod 是否已赋值
+                     * @deprecated
+                     */
+                    bool ExpandPeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ShrinkPeriod Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     int64_t GetShrinkPeriod() const;
 
                     /**
-                     * 设置Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
-                     * @param _shrinkPeriod Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
-                     * 
+                     * 设置Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _shrinkPeriod Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @deprecated
                      */
                     void SetShrinkPeriod(const int64_t& _shrinkPeriod);
 
                     /**
                      * 判断参数 ShrinkPeriod 是否已赋值
                      * @return ShrinkPeriod 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ShrinkPeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+                     * @return ExpandSecondPeriod Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+                     * 
+                     */
+                    int64_t GetExpandSecondPeriod() const;
+
+                    /**
+                     * 设置Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+                     * @param _expandSecondPeriod Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+                     * 
+                     */
+                    void SetExpandSecondPeriod(const int64_t& _expandSecondPeriod);
+
+                    /**
+                     * 判断参数 ExpandSecondPeriod 是否已赋值
+                     * @return ExpandSecondPeriod 是否已赋值
+                     * 
+                     */
+                    bool ExpandSecondPeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+                     * @return ShrinkSecondPeriod Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+                     * 
+                     */
+                    int64_t GetShrinkSecondPeriod() const;
+
+                    /**
+                     * 设置Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+                     * @param _shrinkSecondPeriod Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+                     * 
+                     */
+                    void SetShrinkSecondPeriod(const int64_t& _shrinkSecondPeriod);
+
+                    /**
+                     * 判断参数 ShrinkSecondPeriod 是否已赋值
+                     * @return ShrinkSecondPeriod 是否已赋值
+                     * 
+                     */
+                    bool ShrinkSecondPeriodHasBeenSet() const;
 
                 private:
 
                     /**
-                     * CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
+                     * Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
                      */
                     int64_t m_expandThreshold;
                     bool m_expandThresholdHasBeenSet;
-
-                    /**
-                     * Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-                     */
-                    int64_t m_expandPeriod;
-                    bool m_expandPeriodHasBeenSet;
 
                     /**
                      * CPU utilization threshold (percent value). Valid values: 10, 20, and 30. Automatic scale-in will be triggered when CPU utilization reaches the set threshold.
@@ -151,10 +195,30 @@ namespace TencentCloud
                     bool m_shrinkThresholdHasBeenSet;
 
                     /**
-                     * Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
+                     * Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_expandPeriod;
+                    bool m_expandPeriodHasBeenSet;
+
+                    /**
+                     * Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_shrinkPeriod;
                     bool m_shrinkPeriodHasBeenSet;
+
+                    /**
+                     * Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+                     */
+                    int64_t m_expandSecondPeriod;
+                    bool m_expandSecondPeriodHasBeenSet;
+
+                    /**
+                     * Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+                     */
+                    int64_t m_shrinkSecondPeriod;
+                    bool m_shrinkSecondPeriodHasBeenSet;
 
                 };
             }

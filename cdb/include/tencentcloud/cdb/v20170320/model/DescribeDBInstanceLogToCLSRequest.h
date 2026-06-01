@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -63,13 +63,40 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Region of the CLS service
+                     * @return ClsRegion Region of the CLS service
+                     * 
+                     */
+                    std::string GetClsRegion() const;
+
+                    /**
+                     * 设置Region of the CLS service
+                     * @param _clsRegion Region of the CLS service
+                     * 
+                     */
+                    void SetClsRegion(const std::string& _clsRegion);
+
+                    /**
+                     * 判断参数 ClsRegion 是否已赋值
+                     * @return ClsRegion 是否已赋值
+                     * 
+                     */
+                    bool ClsRegionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Region of the CLS service
+                     */
+                    std::string m_clsRegion;
+                    bool m_clsRegionHasBeenSet;
 
                 };
             }

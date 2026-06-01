@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
-                     * @return Limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+                     * 获取Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
+                     * @return Limit Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
-                     * @param _limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+                     * 设置Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
+                     * @param _limit Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+                     * Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

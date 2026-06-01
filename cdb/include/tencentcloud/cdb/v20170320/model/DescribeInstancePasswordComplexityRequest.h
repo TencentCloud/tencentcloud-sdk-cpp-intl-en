@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBECPUEXPANDSTRATEGYREQUEST_H_
-#define TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBECPUEXPANDSTRATEGYREQUEST_H_
+#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBEINSTANCEPASSWORDCOMPLEXITYREQUEST_H_
+#define TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBEINSTANCEPASSWORDCOMPLEXITYREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,26 +32,26 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeCpuExpandStrategy request structure.
+                * DescribeInstancePasswordComplexity request structure.
                 */
-                class DescribeCpuExpandStrategyRequest : public AbstractModel
+                class DescribeInstancePasswordComplexityRequest : public AbstractModel
                 {
                 public:
-                    DescribeCpuExpandStrategyRequest();
-                    ~DescribeCpuExpandStrategyRequest() = default;
+                    DescribeInstancePasswordComplexityRequest();
+                    ~DescribeInstancePasswordComplexityRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID. 
+                     * @return InstanceId Instance ID. 
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID. 
+                     * @param _instanceId Instance ID. 
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID. 
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -77,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBECPUEXPANDSTRATEGYREQUEST_H_
+#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_DESCRIBEINSTANCEPASSWORDCOMPLEXITYREQUEST_H_

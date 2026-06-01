@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Proxy version Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyVersion Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取proxy version
+                     * @return ProxyVersion proxy version
                      * 
                      */
                     std::string GetProxyVersion() const;
 
                     /**
-                     * 设置Proxy version Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyVersion Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置proxy version
+                     * @param _proxyVersion proxy version
                      * 
                      */
                     void SetProxyVersion(const std::string& _proxyVersion);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportUpgradeProxyVersion Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy supports edition upgrade
+                     * @return SupportUpgradeProxyVersion Proxy supports edition upgrade
                      * 
                      */
                     std::string GetSupportUpgradeProxyVersion() const;
 
                     /**
-                     * 设置Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _supportUpgradeProxyVersion Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy supports edition upgrade
+                     * @param _supportUpgradeProxyVersion Proxy supports edition upgrade
                      * 
                      */
                     void SetSupportUpgradeProxyVersion(const std::string& _supportUpgradeProxyVersion);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool SupportUpgradeProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Proxy status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+                     * @return Status Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Proxy status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+                     * @param _status Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskStatus Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+                     * @return TaskStatus Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskStatus Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+                     * @param _taskStatus Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyNode Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy group node information
+                     * @return ProxyNode Proxy group node information
                      * 
                      */
                     std::vector<ProxyNode> GetProxyNode() const;
 
                     /**
-                     * 设置Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyNode Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy group node information
+                     * @param _proxyNode Proxy group node information
                      * 
                      */
                     void SetProxyNode(const std::vector<ProxyNode>& _proxyNode);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ProxyNodeHasBeenSet() const;
 
                     /**
-                     * 获取Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyAddress Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy group address information
+                     * @return ProxyAddress Proxy group address information
                      * 
                      */
                     std::vector<ProxyAddress> GetProxyAddress() const;
 
                     /**
-                     * 设置Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyAddress Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Proxy group address information
+                     * @param _proxyAddress Proxy group address information
                      * 
                      */
                     void SetProxyAddress(const std::vector<ProxyAddress>& _proxyAddress);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ProxyAddressHasBeenSet() const;
 
                     /**
-                     * 获取Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConnectionPoolLimit Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Connection pool threshold
+                     * @return ConnectionPoolLimit Connection pool threshold
                      * 
                      */
                     uint64_t GetConnectionPoolLimit() const;
 
                     /**
-                     * 设置Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _connectionPoolLimit Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Connection pool threshold
+                     * @param _connectionPoolLimit Connection pool threshold
                      * 
                      */
                     void SetConnectionPoolLimit(const uint64_t& _connectionPoolLimit);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool ConnectionPoolLimitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportCreateProxyAddress Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Support creating an address
+                     * @return SupportCreateProxyAddress Support creating an address
                      * 
                      */
                     bool GetSupportCreateProxyAddress() const;
 
                     /**
-                     * 设置Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _supportCreateProxyAddress Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Support creating an address
+                     * @param _supportCreateProxyAddress Support creating an address
                      * 
                      */
                     void SetSupportCreateProxyAddress(const bool& _supportCreateProxyAddress);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool SupportCreateProxyAddressHasBeenSet() const;
 
                     /**
-                     * 获取TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportUpgradeProxyMysqlVersion TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取cdb version required for proxy version upgrade
+                     * @return SupportUpgradeProxyMysqlVersion cdb version required for proxy version upgrade
                      * 
                      */
                     std::string GetSupportUpgradeProxyMysqlVersion() const;
 
                     /**
-                     * 设置TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _supportUpgradeProxyMysqlVersion TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置cdb version required for proxy version upgrade
+                     * @param _supportUpgradeProxyMysqlVersion cdb version required for proxy version upgrade
                      * 
                      */
                     void SetSupportUpgradeProxyMysqlVersion(const std::string& _supportUpgradeProxyMysqlVersion);
@@ -267,55 +267,55 @@ namespace TencentCloud
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+                     * proxy version
                      */
                     std::string m_proxyVersion;
                     bool m_proxyVersionHasBeenSet;
 
                     /**
-                     * Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy supports edition upgrade
                      */
                     std::string m_supportUpgradeProxyVersion;
                     bool m_supportUpgradeProxyVersionHasBeenSet;
 
                     /**
-                     * Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+                     * Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+                     * Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy group node information
                      */
                     std::vector<ProxyNode> m_proxyNode;
                     bool m_proxyNodeHasBeenSet;
 
                     /**
-                     * Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy group address information
                      */
                     std::vector<ProxyAddress> m_proxyAddress;
                     bool m_proxyAddressHasBeenSet;
 
                     /**
-                     * Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+                     * Connection pool threshold
                      */
                     uint64_t m_connectionPoolLimit;
                     bool m_connectionPoolLimitHasBeenSet;
 
                     /**
-                     * Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+                     * Support creating an address
                      */
                     bool m_supportCreateProxyAddress;
                     bool m_supportCreateProxyAddressHasBeenSet;
 
                     /**
-                     * TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+                     * cdb version required for proxy version upgrade
                      */
                     std::string m_supportUpgradeProxyMysqlVersion;
                     bool m_supportUpgradeProxyMysqlVersionHasBeenSet;

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
+                     * @return Status Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
                      * 
                      */
                     std::string GetStatus() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Info Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task execution information description.
+                     * @return Info Task execution information description.
                      * 
                      */
                     std::string GetInfo() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task execution information description.
                      */
                     std::string m_info;
                     bool m_infoHasBeenSet;

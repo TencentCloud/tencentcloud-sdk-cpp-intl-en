@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+                     * @return IsRelatedSwitch Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+                     * 
+                     */
+                    bool GetIsRelatedSwitch() const;
+
+                    /**
+                     * 设置Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+                     * @param _isRelatedSwitch Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+                     * 
+                     */
+                    void SetIsRelatedSwitch(const bool& _isRelatedSwitch);
+
+                    /**
+                     * 判断参数 IsRelatedSwitch 是否已赋值
+                     * @return IsRelatedSwitch 是否已赋值
+                     * 
+                     */
+                    bool IsRelatedSwitchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+                     */
+                    bool m_isRelatedSwitch;
+                    bool m_isRelatedSwitchHasBeenSet;
 
                 };
             }

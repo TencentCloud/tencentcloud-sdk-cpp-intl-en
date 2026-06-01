@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
-                     * @return InstanceId Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+                     * 获取Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+                     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
-                     * @param _instanceId Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+                     * 设置Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+                     * @param _instanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Information about the account for which password rotation needs to be enabled. The account and host names are included.
-                     * @return Accounts Information about the account for which password rotation needs to be enabled. The account and host names are included.
+                     * 获取Currently, enable password rotation for account information, including account name and host name.
+                     * @return Accounts Currently, enable password rotation for account information, including account name and host name.
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置Information about the account for which password rotation needs to be enabled. The account and host names are included.
-                     * @param _accounts Information about the account for which password rotation needs to be enabled. The account and host names are included.
+                     * 设置Currently, enable password rotation for account information, including account name and host name.
+                     * @param _accounts Currently, enable password rotation for account information, including account name and host name.
                      * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+                     * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Information about the account for which password rotation needs to be enabled. The account and host names are included.
+                     * Currently, enable password rotation for account information, including account name and host name.
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;

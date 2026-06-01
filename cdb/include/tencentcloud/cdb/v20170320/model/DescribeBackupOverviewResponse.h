@@ -100,10 +100,8 @@ namespace TencentCloud
                     bool FreeVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RemoteBackupVolume Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Total offsite backup capacity of the user in current region.
+                     * @return RemoteBackupVolume Total offsite backup capacity of the user in current region.
                      * 
                      */
                     int64_t GetRemoteBackupVolume() const;
@@ -116,10 +114,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RemoteBackupVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Archive backup capacity, including data backup and log backup.
+                     * @return BackupArchiveVolume Archive backup capacity, including data backup and log backup.
                      * 
                      */
                     int64_t GetBackupArchiveVolume() const;
@@ -132,10 +128,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BackupArchiveVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Standard storage backup capacity includes data backup and log backup.
+                     * @return BackupStandbyVolume Standard storage backup capacity includes data backup and log backup.
                      * 
                      */
                     int64_t GetBackupStandbyVolume() const;
@@ -174,22 +168,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_freeVolumeHasBeenSet;
 
                     /**
-                     * Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Total offsite backup capacity of the user in current region.
                      */
                     int64_t m_remoteBackupVolume;
                     bool m_remoteBackupVolumeHasBeenSet;
 
                     /**
-                     * Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Archive backup capacity, including data backup and log backup.
                      */
                     int64_t m_backupArchiveVolume;
                     bool m_backupArchiveVolumeHasBeenSet;
 
                     /**
-                     * Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Standard storage backup capacity includes data backup and log backup.
                      */
                     int64_t m_backupStandbyVolume;
                     bool m_backupStandbyVolumeHasBeenSet;

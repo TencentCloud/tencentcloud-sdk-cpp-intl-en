@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queries database error code
-                     * @return Code Queries database error code
+                     * 获取Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
+                     * @return Code Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
                      * 
                      */
                     int64_t GetCode() const;
 
                     /**
-                     * 设置Queries database error code
-                     * @param _code Queries database error code
+                     * 设置Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
+                     * @param _code Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
                      * 
                      */
                     void SetCode(const int64_t& _code);
@@ -134,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queries database error code
+                     * Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;

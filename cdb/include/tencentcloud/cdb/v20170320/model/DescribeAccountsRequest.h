@@ -126,6 +126,69 @@ namespace TencentCloud
                      */
                     bool AccountRegexpHasBeenSet() const;
 
+                    /**
+                     * 获取Default none, support: ASC, DESC, asc, desc
+                     * @return SortBy Default none, support: ASC, DESC, asc, desc
+                     * 
+                     */
+                    std::string GetSortBy() const;
+
+                    /**
+                     * 设置Default none, support: ASC, DESC, asc, desc
+                     * @param _sortBy Default none, support: ASC, DESC, asc, desc
+                     * 
+                     */
+                    void SetSortBy(const std::string& _sortBy);
+
+                    /**
+                     * 判断参数 SortBy 是否已赋值
+                     * @return SortBy 是否已赋值
+                     * 
+                     */
+                    bool SortByHasBeenSet() const;
+
+                    /**
+                     * 获取Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+                     * @return OrderBy Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+                     * 
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+                     * @param _orderBy Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+                     * 
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     * 
+                     */
+                    bool OrderByHasBeenSet() const;
+
+                    /**
+                     * 获取Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+                     * @return HostRegexp Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+                     * 
+                     */
+                    std::string GetHostRegexp() const;
+
+                    /**
+                     * 设置Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+                     * @param _hostRegexp Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+                     * 
+                     */
+                    void SetHostRegexp(const std::string& _hostRegexp);
+
+                    /**
+                     * 判断参数 HostRegexp 是否已赋值
+                     * @return HostRegexp 是否已赋值
+                     * 
+                     */
+                    bool HostRegexpHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +214,24 @@ namespace TencentCloud
                      */
                     std::string m_accountRegexp;
                     bool m_accountRegexpHasBeenSet;
+
+                    /**
+                     * Default none, support: ASC, DESC, asc, desc
+                     */
+                    std::string m_sortBy;
+                    bool m_sortByHasBeenSet;
+
+                    /**
+                     * Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
+
+                    /**
+                     * Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+                     */
+                    std::string m_hostRegexp;
+                    bool m_hostRegexpHasBeenSet;
 
                 };
             }

@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Items Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returned records.
+                     * @return Items Returned records.
                      * 
                      */
                     std::vector<ErrlogItem> GetItems() const;
@@ -83,8 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returned records.
                      */
                     std::vector<ErrlogItem> m_items;
                     bool m_itemsHasBeenSet;

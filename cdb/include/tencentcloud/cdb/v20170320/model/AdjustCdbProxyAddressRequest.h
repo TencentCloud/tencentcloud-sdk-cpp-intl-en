@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Proxy group ID
-                     * @return ProxyGroupId Proxy group ID
+                     * 获取<p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+                     * @return ProxyGroupId <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy group ID
-                     * @param _proxyGroupId Proxy group ID
+                     * 设置<p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+                     * @param _proxyGroupId <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
-                     * @return WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+                     * 获取<p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+                     * @return WeightMode <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
                      * 
                      */
                     std::string GetWeightMode() const;
 
                     /**
-                     * 设置Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
-                     * @param _weightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+                     * 设置<p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+                     * @param _weightMode <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
                      * 
                      */
                     void SetWeightMode(const std::string& _weightMode);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
-                     * @return IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+                     * 获取<p>Whether delay removal is enabled. Value: "true" | "false"</p>
+                     * @return IsKickOut <p>Whether delay removal is enabled. Value: "true" | "false"</p>
                      * 
                      */
                     bool GetIsKickOut() const;
 
                     /**
-                     * 设置Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
-                     * @param _isKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+                     * 设置<p>Whether delay removal is enabled. Value: "true" | "false"</p>
+                     * @param _isKickOut <p>Whether delay removal is enabled. Value: "true" | "false"</p>
                      * 
                      */
                     void SetIsKickOut(const bool& _isKickOut);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool IsKickOutHasBeenSet() const;
 
                     /**
-                     * 获取Least read-only instances. Minimum value:  `0`
-                     * @return MinCount Least read-only instances. Minimum value:  `0`
+                     * 获取<p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+                     * @return MinCount <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
                      * 
                      */
                     uint64_t GetMinCount() const;
 
                     /**
-                     * 设置Least read-only instances. Minimum value:  `0`
-                     * @param _minCount Least read-only instances. Minimum value:  `0`
+                     * 设置<p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+                     * @param _minCount <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
                      * 
                      */
                     void SetMinCount(const uint64_t& _minCount);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool MinCountHasBeenSet() const;
 
                     /**
-                     * 获取The delay threshold. Minimum value:  `0`
-                     * @return MaxDelay The delay threshold. Minimum value:  `0`
+                     * 获取<p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+                     * @return MaxDelay <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
                      * 
                      */
                     uint64_t GetMaxDelay() const;
 
                     /**
-                     * 设置The delay threshold. Minimum value:  `0`
-                     * @param _maxDelay The delay threshold. Minimum value:  `0`
+                     * 设置<p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+                     * @param _maxDelay <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
                      * 
                      */
                     void SetMaxDelay(const uint64_t& _maxDelay);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool MaxDelayHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable failover. Valid values: `true`, `false`.
-                     * @return FailOver Whether to enable failover. Valid values: `true`, `false`.
+                     * 获取<p>Whether fault migration is enabled, value: "true" | "false"</p>
+                     * @return FailOver <p>Whether fault migration is enabled, value: "true" | "false"</p>
                      * 
                      */
                     bool GetFailOver() const;
 
                     /**
-                     * 设置Whether to enable failover. Valid values: `true`, `false`.
-                     * @param _failOver Whether to enable failover. Valid values: `true`, `false`.
+                     * 设置<p>Whether fault migration is enabled, value: "true" | "false"</p>
+                     * @param _failOver <p>Whether fault migration is enabled, value: "true" | "false"</p>
                      * 
                      */
                     void SetFailOver(const bool& _failOver);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
-                     * @return AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+                     * 获取<p>Automatically add RO. Parameter: "true" | "false"</p>
+                     * @return AutoAddRo <p>Automatically add RO. Parameter: "true" | "false"</p>
                      * 
                      */
                     bool GetAutoAddRo() const;
 
                     /**
-                     * 设置Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
-                     * @param _autoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+                     * 设置<p>Automatically add RO. Parameter: "true" | "false"</p>
+                     * @param _autoAddRo <p>Automatically add RO. Parameter: "true" | "false"</p>
                      * 
                      */
                     void SetAutoAddRo(const bool& _autoAddRo);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool AutoAddRoHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is read-only. Valid values: `true`, `false`.
-                     * @return ReadOnly Whether it is read-only. Valid values: `true`, `false`.
+                     * 获取<p>Whether it is read-only. Value: "true" | "false".</p>
+                     * @return ReadOnly <p>Whether it is read-only. Value: "true" | "false".</p>
                      * 
                      */
                     bool GetReadOnly() const;
 
                     /**
-                     * 设置Whether it is read-only. Valid values: `true`, `false`.
-                     * @param _readOnly Whether it is read-only. Valid values: `true`, `false`.
+                     * 设置<p>Whether it is read-only. Value: "true" | "false".</p>
+                     * @param _readOnly <p>Whether it is read-only. Value: "true" | "false".</p>
                      * 
                      */
                     void SetReadOnly(const bool& _readOnly);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Address ID of the proxy group
-                     * @return ProxyAddressId Address ID of the proxy group
+                     * 获取<p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+                     * @return ProxyAddressId <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      * 
                      */
                     std::string GetProxyAddressId() const;
 
                     /**
-                     * 设置Address ID of the proxy group
-                     * @param _proxyAddressId Address ID of the proxy group
+                     * 设置<p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+                     * @param _proxyAddressId <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      * 
                      */
                     void SetProxyAddressId(const std::string& _proxyAddressId);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ProxyAddressIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable transaction splitting. Valid values: `true`, `false`.
-                     * @return TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
+                     * 获取<p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+                     * @return TransSplit <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
                      * 
                      */
                     bool GetTransSplit() const;
 
                     /**
-                     * 设置Whether to enable transaction splitting. Valid values: `true`, `false`.
-                     * @param _transSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
+                     * 设置<p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+                     * @param _transSplit <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
                      * 
                      */
                     void SetTransSplit(const bool& _transSplit);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool TransSplitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the connection pool
-                     * @return ConnectionPool Whether to enable the connection pool
+                     * 获取<p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+                     * @return ConnectionPool <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
                      * 
                      */
                     bool GetConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable the connection pool
-                     * @param _connectionPool Whether to enable the connection pool
+                     * 设置<p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+                     * @param _connectionPool <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
                      * 
                      */
                     void SetConnectionPool(const bool& _connectionPool);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool ConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
-                     * @return ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+                     * 获取<p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+                     * @return ProxyAllocation <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
                      * 
                      */
                     std::vector<ProxyAllocation> GetProxyAllocation() const;
 
                     /**
-                     * 设置Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
-                     * @param _proxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+                     * 设置<p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+                     * @param _proxyAllocation <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
                      * 
                      */
                     void SetProxyAllocation(const std::vector<ProxyAllocation>& _proxyAllocation);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool ProxyAllocationHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable adaptive load balancing. Disabled by default.
-                     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+                     * 获取<p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+                     * @return AutoLoadBalance <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
                      * 
                      */
                     bool GetAutoLoadBalance() const;
 
                     /**
-                     * 设置Whether to enable adaptive load balancing. Disabled by default.
-                     * @param _autoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+                     * 设置<p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+                     * @param _autoLoadBalance <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
                      * 
                      */
                     void SetAutoLoadBalance(const bool& _autoLoadBalance);
@@ -317,15 +317,15 @@ namespace TencentCloud
                     bool AutoLoadBalanceHasBeenSet() const;
 
                     /**
-                     * 获取Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
-                     * @return AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+                     * 获取<p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+                     * @return AccessMode <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
-                     * @param _accessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+                     * 设置<p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+                     * @param _accessMode <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -337,91 +337,145 @@ namespace TencentCloud
                      */
                     bool AccessModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to treat the libra node as an ordinary RO node</p>
+                     * @return ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+                     * 
+                     */
+                    bool GetApNodeAsRoNode() const;
+
+                    /**
+                     * 设置<p>Whether to treat the libra node as an ordinary RO node</p>
+                     * @param _apNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+                     * 
+                     */
+                    void SetApNodeAsRoNode(const bool& _apNodeAsRoNode);
+
+                    /**
+                     * 判断参数 ApNodeAsRoNode 是否已赋值
+                     * @return ApNodeAsRoNode 是否已赋值
+                     * 
+                     */
+                    bool ApNodeAsRoNodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to forward to other nodes in case of a libra node fault</p>
+                     * @return ApQueryToOtherNode <p>Whether to forward to other nodes in case of a libra node fault</p>
+                     * 
+                     */
+                    bool GetApQueryToOtherNode() const;
+
+                    /**
+                     * 设置<p>Whether to forward to other nodes in case of a libra node fault</p>
+                     * @param _apQueryToOtherNode <p>Whether to forward to other nodes in case of a libra node fault</p>
+                     * 
+                     */
+                    void SetApQueryToOtherNode(const bool& _apQueryToOtherNode);
+
+                    /**
+                     * 判断参数 ApQueryToOtherNode 是否已赋值
+                     * @return ApQueryToOtherNode 是否已赋值
+                     * 
+                     */
+                    bool ApQueryToOtherNodeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Proxy group ID
+                     * <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+                     * <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+                     * <p>Whether delay removal is enabled. Value: "true" | "false"</p>
                      */
                     bool m_isKickOut;
                     bool m_isKickOutHasBeenSet;
 
                     /**
-                     * Least read-only instances. Minimum value:  `0`
+                     * <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
                      */
                     uint64_t m_minCount;
                     bool m_minCountHasBeenSet;
 
                     /**
-                     * The delay threshold. Minimum value:  `0`
+                     * <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
                      */
                     uint64_t m_maxDelay;
                     bool m_maxDelayHasBeenSet;
 
                     /**
-                     * Whether to enable failover. Valid values: `true`, `false`.
+                     * <p>Whether fault migration is enabled, value: "true" | "false"</p>
                      */
                     bool m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+                     * <p>Automatically add RO. Parameter: "true" | "false"</p>
                      */
                     bool m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;
 
                     /**
-                     * Whether it is read-only. Valid values: `true`, `false`.
+                     * <p>Whether it is read-only. Value: "true" | "false".</p>
                      */
                     bool m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * Address ID of the proxy group
+                     * <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
                      */
                     std::string m_proxyAddressId;
                     bool m_proxyAddressIdHasBeenSet;
 
                     /**
-                     * Whether to enable transaction splitting. Valid values: `true`, `false`.
+                     * <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
                      */
                     bool m_transSplit;
                     bool m_transSplitHasBeenSet;
 
                     /**
-                     * Whether to enable the connection pool
+                     * <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
                      */
                     bool m_connectionPool;
                     bool m_connectionPoolHasBeenSet;
 
                     /**
-                     * Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+                     * <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
                      */
                     std::vector<ProxyAllocation> m_proxyAllocation;
                     bool m_proxyAllocationHasBeenSet;
 
                     /**
-                     * Whether to enable adaptive load balancing. Disabled by default.
+                     * <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
                      */
                     bool m_autoLoadBalance;
                     bool m_autoLoadBalanceHasBeenSet;
 
                     /**
-                     * Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+                     * <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;
+
+                    /**
+                     * <p>Whether to treat the libra node as an ordinary RO node</p>
+                     */
+                    bool m_apNodeAsRoNode;
+                    bool m_apNodeAsRoNodeHasBeenSet;
+
+                    /**
+                     * <p>Whether to forward to other nodes in case of a libra node fault</p>
+                     */
+                    bool m_apQueryToOtherNode;
+                    bool m_apQueryToOtherNodeHasBeenSet;
 
                 };
             }

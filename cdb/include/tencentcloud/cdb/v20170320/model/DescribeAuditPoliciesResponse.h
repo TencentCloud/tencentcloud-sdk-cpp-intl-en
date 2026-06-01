@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Items Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Audit policy details.
+                     * @return Items Audit policy details.
                      * 
                      */
                     std::vector<AuditPolicy> GetItems() const;
@@ -83,8 +81,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Audit policy details.
                      */
                     std::vector<AuditPolicy> m_items;
                     bool m_itemsHasBeenSet;

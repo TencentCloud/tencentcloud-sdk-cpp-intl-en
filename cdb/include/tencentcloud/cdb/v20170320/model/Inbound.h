@@ -173,6 +173,27 @@ namespace TencentCloud
                     bool AddressModuleHasBeenSet() const;
 
                     /**
+                     * 获取Rule ID, rule ID of the nested security group
+                     * @return Id Rule ID, rule ID of the nested security group
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Rule ID, rule ID of the nested security group
+                     * @param _id Rule ID, rule ID of the nested security group
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
                      * 获取Rule description
                      * @return Desc Rule description
                      * 
@@ -230,6 +251,12 @@ namespace TencentCloud
                      */
                     std::string m_addressModule;
                     bool m_addressModuleHasBeenSet;
+
+                    /**
+                     * Rule ID, rule ID of the nested security group
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                     /**
                      * Rule description

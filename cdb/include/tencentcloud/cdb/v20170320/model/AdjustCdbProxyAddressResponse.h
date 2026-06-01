@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AsyncRequestId Async task ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Asynchronous Task ID</p>
+                     * @return AsyncRequestId <p>Asynchronous Task ID</p>
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Asynchronous Task ID</p>
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

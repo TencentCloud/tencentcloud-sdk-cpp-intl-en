@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Proxy group ID
-                     * @return ProxyGroupId Proxy group ID
+                     * 获取Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy group ID
-                     * @param _proxyGroupId Proxy group ID
+                     * 设置Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @param _proxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Address ID of the proxy group
-                     * @return ProxyAddressId Address ID of the proxy group
+                     * 获取Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+                     * @return ProxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
                      * 
                      */
                     std::string GetProxyAddressId() const;
 
                     /**
-                     * 设置Address ID of the proxy group
-                     * @param _proxyAddressId Address ID of the proxy group
+                     * 设置Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+                     * @param _proxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
                      * 
                      */
                     void SetProxyAddressId(const std::string& _proxyAddressId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Proxy group ID
+                     * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Address ID of the proxy group
+                     * Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
                      */
                     std::string m_proxyAddressId;
                     bool m_proxyAddressIdHasBeenSet;

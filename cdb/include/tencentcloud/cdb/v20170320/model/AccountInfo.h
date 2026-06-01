@@ -154,21 +154,21 @@ namespace TencentCloud
                     /**
                      * 获取This parameter is deprecated.
                      * @return CreateTime This parameter is deprecated.
-                     * 
+                     * @deprecated
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置This parameter is deprecated.
                      * @param _createTime This parameter is deprecated.
-                     * 
+                     * @deprecated
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -192,6 +192,27 @@ namespace TencentCloud
                      * 
                      */
                     bool MaxUserConnectionsHasBeenSet() const;
+
+                    /**
+                     * 获取Is password rotation enabled for the user account?
+                     * @return OpenCam Is password rotation enabled for the user account?
+                     * 
+                     */
+                    bool GetOpenCam() const;
+
+                    /**
+                     * 设置Is password rotation enabled for the user account?
+                     * @param _openCam Is password rotation enabled for the user account?
+                     * 
+                     */
+                    void SetOpenCam(const bool& _openCam);
+
+                    /**
+                     * 判断参数 OpenCam 是否已赋值
+                     * @return OpenCam 是否已赋值
+                     * 
+                     */
+                    bool OpenCamHasBeenSet() const;
 
                 private:
 
@@ -236,6 +257,12 @@ namespace TencentCloud
                      */
                     int64_t m_maxUserConnections;
                     bool m_maxUserConnectionsHasBeenSet;
+
+                    /**
+                     * Is password rotation enabled for the user account?
+                     */
+                    bool m_openCam;
+                    bool m_openCamHasBeenSet;
 
                 };
             }

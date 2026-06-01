@@ -86,10 +86,8 @@ namespace TencentCloud
                     bool EncryptionHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyId Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Key ID used for encryption.
+                     * @return KeyId Key ID used for encryption.
                      * 
                      */
                     std::string GetKeyId() const;
@@ -103,9 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyRegion Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKeyRegion() const;
@@ -118,10 +114,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeyRegionHasBeenSet() const;
 
                     /**
-                     * 获取The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取The default region of the KMS service used by the current CDB backend service.
+                     * @return DefaultKmsRegion The default region of the KMS service used by the current CDB backend service.
                      * 
                      */
                     std::string GetDefaultKmsRegion() const;
@@ -154,22 +148,19 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool m_encryptionHasBeenSet;
 
                     /**
-                     * Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Key ID used for encryption.
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
                      * Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_keyRegion;
                     bool m_keyRegionHasBeenSet;
 
                     /**
-                     * The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * The default region of the KMS service used by the current CDB backend service.
                      */
                     std::string m_defaultKmsRegion;
                     bool m_defaultKmsRegionHasBeenSet;

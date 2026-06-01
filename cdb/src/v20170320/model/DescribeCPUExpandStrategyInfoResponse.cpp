@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/DescribeCpuExpandStrategyResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCPUExpandStrategyInfoResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,16 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-DescribeCpuExpandStrategyResponse::DescribeCpuExpandStrategyResponse() :
+DescribeCPUExpandStrategyInfoResponse::DescribeCPUExpandStrategyInfoResponse() :
     m_typeHasBeenSet(false),
     m_expandCpuHasBeenSet(false),
-    m_autoStrategyHasBeenSet(false)
+    m_autoStrategyHasBeenSet(false),
+    m_periodStrategyHasBeenSet(false),
+    m_timeIntervalStrategyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeCpuExpandStrategyResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeCPUExpandStrategyInfoResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -76,29 +78,70 @@ CoreInternalOutcome DescribeCpuExpandStrategyResponse::Deserialize(const string 
 
     if (rsp.HasMember("ExpandCpu") && !rsp["ExpandCpu"].IsNull())
     {
-        if (!rsp["ExpandCpu"].IsString())
+        if (!rsp["ExpandCpu"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `ExpandCpu` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ExpandCpu` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_expandCpu = string(rsp["ExpandCpu"].GetString());
+        m_expandCpu = rsp["ExpandCpu"].GetInt64();
         m_expandCpuHasBeenSet = true;
     }
 
     if (rsp.HasMember("AutoStrategy") && !rsp["AutoStrategy"].IsNull())
     {
-        if (!rsp["AutoStrategy"].IsString())
+        if (!rsp["AutoStrategy"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `AutoStrategy` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AutoStrategy` is not object type").SetRequestId(requestId));
         }
-        m_autoStrategy = string(rsp["AutoStrategy"].GetString());
+
+        CoreInternalOutcome outcome = m_autoStrategy.Deserialize(rsp["AutoStrategy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
         m_autoStrategyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("PeriodStrategy") && !rsp["PeriodStrategy"].IsNull())
+    {
+        if (!rsp["PeriodStrategy"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `PeriodStrategy` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_periodStrategy.Deserialize(rsp["PeriodStrategy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_periodStrategyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TimeIntervalStrategy") && !rsp["TimeIntervalStrategy"].IsNull())
+    {
+        if (!rsp["TimeIntervalStrategy"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `TimeIntervalStrategy` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_timeIntervalStrategy.Deserialize(rsp["TimeIntervalStrategy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_timeIntervalStrategyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeCpuExpandStrategyResponse::ToJsonString() const
+string DescribeCPUExpandStrategyInfoResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
@@ -117,7 +160,7 @@ string DescribeCpuExpandStrategyResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpandCpu";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_expandCpu.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_expandCpu, allocator);
     }
 
     if (m_autoStrategyHasBeenSet)
@@ -125,7 +168,26 @@ string DescribeCpuExpandStrategyResponse::ToJsonString() const
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AutoStrategy";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_autoStrategy.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_autoStrategy.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_periodStrategyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PeriodStrategy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_periodStrategy.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_timeIntervalStrategyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeIntervalStrategy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_timeIntervalStrategy.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +202,54 @@ string DescribeCpuExpandStrategyResponse::ToJsonString() const
 }
 
 
-string DescribeCpuExpandStrategyResponse::GetType() const
+string DescribeCPUExpandStrategyInfoResponse::GetType() const
 {
     return m_type;
 }
 
-bool DescribeCpuExpandStrategyResponse::TypeHasBeenSet() const
+bool DescribeCPUExpandStrategyInfoResponse::TypeHasBeenSet() const
 {
     return m_typeHasBeenSet;
 }
 
-string DescribeCpuExpandStrategyResponse::GetExpandCpu() const
+int64_t DescribeCPUExpandStrategyInfoResponse::GetExpandCpu() const
 {
     return m_expandCpu;
 }
 
-bool DescribeCpuExpandStrategyResponse::ExpandCpuHasBeenSet() const
+bool DescribeCPUExpandStrategyInfoResponse::ExpandCpuHasBeenSet() const
 {
     return m_expandCpuHasBeenSet;
 }
 
-string DescribeCpuExpandStrategyResponse::GetAutoStrategy() const
+AutoStrategy DescribeCPUExpandStrategyInfoResponse::GetAutoStrategy() const
 {
     return m_autoStrategy;
 }
 
-bool DescribeCpuExpandStrategyResponse::AutoStrategyHasBeenSet() const
+bool DescribeCPUExpandStrategyInfoResponse::AutoStrategyHasBeenSet() const
 {
     return m_autoStrategyHasBeenSet;
+}
+
+PeriodStrategy DescribeCPUExpandStrategyInfoResponse::GetPeriodStrategy() const
+{
+    return m_periodStrategy;
+}
+
+bool DescribeCPUExpandStrategyInfoResponse::PeriodStrategyHasBeenSet() const
+{
+    return m_periodStrategyHasBeenSet;
+}
+
+TimeIntervalStrategy DescribeCPUExpandStrategyInfoResponse::GetTimeIntervalStrategy() const
+{
+    return m_timeIntervalStrategy;
+}
+
+bool DescribeCPUExpandStrategyInfoResponse::TimeIntervalStrategyHasBeenSet() const
+{
+    return m_timeIntervalStrategyHasBeenSet;
 }
 
 

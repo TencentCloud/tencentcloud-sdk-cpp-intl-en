@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Engine version. If it is left empty, all parameter templates will be queried.
-                     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+                     * 获取Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+                     * @return EngineVersions Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
                      * 
                      */
                     std::vector<std::string> GetEngineVersions() const;
 
                     /**
-                     * 设置Engine version. If it is left empty, all parameter templates will be queried.
-                     * @param _engineVersions Engine version. If it is left empty, all parameter templates will be queried.
+                     * 设置Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+                     * @param _engineVersions Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
                      * 
                      */
                     void SetEngineVersions(const std::vector<std::string>& _engineVersions);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EngineVersionsHasBeenSet() const;
 
                     /**
-                     * 获取Engine type. If it is left empty, all engine types will be queried.
-                     * @return EngineTypes Engine type. If it is left empty, all engine types will be queried.
+                     * 获取Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+                     * @return EngineTypes Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
                      * 
                      */
                     std::vector<std::string> GetEngineTypes() const;
 
                     /**
-                     * 设置Engine type. If it is left empty, all engine types will be queried.
-                     * @param _engineTypes Engine type. If it is left empty, all engine types will be queried.
+                     * 设置Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+                     * @param _engineTypes Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
                      * 
                      */
                     void SetEngineTypes(const std::vector<std::string>& _engineTypes);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EngineTypesHasBeenSet() const;
 
                     /**
-                     * 获取Template name. If it is left empty, all template names will be queried.
-                     * @return TemplateNames Template name. If it is left empty, all template names will be queried.
+                     * 获取Template name. Query all if default. Support fuzzy matching.
+                     * @return TemplateNames Template name. Query all if default. Support fuzzy matching.
                      * 
                      */
                     std::vector<std::string> GetTemplateNames() const;
 
                     /**
-                     * 设置Template name. If it is left empty, all template names will be queried.
-                     * @param _templateNames Template name. If it is left empty, all template names will be queried.
+                     * 设置Template name. Query all if default. Support fuzzy matching.
+                     * @param _templateNames Template name. Query all if default. Support fuzzy matching.
                      * 
                      */
                     void SetTemplateNames(const std::vector<std::string>& _templateNames);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TemplateNamesHasBeenSet() const;
 
                     /**
-                     * 获取Template ID. If it is left empty, all template IDs will be queried.
-                     * @return TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+                     * 获取Template ID. Query all if default.
+                     * @return TemplateIds Template ID. Query all if default.
                      * 
                      */
                     std::vector<int64_t> GetTemplateIds() const;
 
                     /**
-                     * 设置Template ID. If it is left empty, all template IDs will be queried.
-                     * @param _templateIds Template ID. If it is left empty, all template IDs will be queried.
+                     * 设置Template ID. Query all if default.
+                     * @param _templateIds Template ID. Query all if default.
                      * 
                      */
                     void SetTemplateIds(const std::vector<int64_t>& _templateIds);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Engine version. If it is left empty, all parameter templates will be queried.
+                     * Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
                      */
                     std::vector<std::string> m_engineVersions;
                     bool m_engineVersionsHasBeenSet;
 
                     /**
-                     * Engine type. If it is left empty, all engine types will be queried.
+                     * Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
                      */
                     std::vector<std::string> m_engineTypes;
                     bool m_engineTypesHasBeenSet;
 
                     /**
-                     * Template name. If it is left empty, all template names will be queried.
+                     * Template name. Query all if default. Support fuzzy matching.
                      */
                     std::vector<std::string> m_templateNames;
                     bool m_templateNamesHasBeenSet;
 
                     /**
-                     * Template ID. If it is left empty, all template IDs will be queried.
+                     * Template ID. Query all if default.
                      */
                     std::vector<int64_t> m_templateIds;
                     bool m_templateIdsHasBeenSet;

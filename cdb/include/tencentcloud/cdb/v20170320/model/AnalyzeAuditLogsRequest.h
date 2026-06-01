@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -130,23 +130,23 @@ namespace TencentCloud
                     bool AggregationConditionsHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
-                     * @return AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
-                     * 
+                     * 获取Deprecated.
+                     * @return AuditLogFilter Deprecated.
+                     * @deprecated
                      */
                     AuditLogFilter GetAuditLogFilter() const;
 
                     /**
-                     * 设置This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
-                     * @param _auditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
-                     * 
+                     * 设置Deprecated.
+                     * @param _auditLogFilter Deprecated.
+                     * @deprecated
                      */
                     void SetAuditLogFilter(const AuditLogFilter& _auditLogFilter);
 
                     /**
                      * 判断参数 AuditLogFilter 是否已赋值
                      * @return AuditLogFilter 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AuditLogFilterHasBeenSet() const;
 
@@ -174,7 +174,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -198,7 +198,7 @@ namespace TencentCloud
                     bool m_aggregationConditionsHasBeenSet;
 
                     /**
-                     * This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+                     * Deprecated.
                      */
                     AuditLogFilter m_auditLogFilter;
                     bool m_auditLogFilterHasBeenSet;

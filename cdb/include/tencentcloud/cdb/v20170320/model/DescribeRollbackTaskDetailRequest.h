@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AsyncRequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
-                     * @return Limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+                     * 获取Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
+                     * @return Limit Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
-                     * @param _limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+                     * 设置Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
+                     * @param _limit Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -141,7 +141,7 @@ namespace TencentCloud
                     bool m_asyncRequestIdHasBeenSet;
 
                     /**
-                     * Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+                     * Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

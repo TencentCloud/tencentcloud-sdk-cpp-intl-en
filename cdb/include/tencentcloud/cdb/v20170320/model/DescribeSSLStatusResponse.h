@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
-                     * @return Status Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+                     * 获取Whether to enable SSL. ON represents enabled, OFF represents not enabled.
+                     * @return Status Whether to enable SSL. ON represents enabled, OFF represents not enabled.
                      * 
                      */
                     std::string GetStatus() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Certificate download link.
-                     * @return Url Certificate download link.
+                     * 获取Certificate download URL.
+                     * @return Url Certificate download URL.
                      * 
                      */
                     std::string GetUrl() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+                     * Whether to enable SSL. ON represents enabled, OFF represents not enabled.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Certificate download link.
+                     * Certificate download URL.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

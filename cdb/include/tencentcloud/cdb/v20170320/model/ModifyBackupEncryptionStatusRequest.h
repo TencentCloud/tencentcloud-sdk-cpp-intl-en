@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool EncryptionStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+                     * @return BinlogEncryptionStatus Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+                     * 
+                     */
+                    std::string GetBinlogEncryptionStatus() const;
+
+                    /**
+                     * 设置Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+                     * @param _binlogEncryptionStatus Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+                     * 
+                     */
+                    void SetBinlogEncryptionStatus(const std::string& _binlogEncryptionStatus);
+
+                    /**
+                     * 判断参数 BinlogEncryptionStatus 是否已赋值
+                     * @return BinlogEncryptionStatus 是否已赋值
+                     * 
+                     */
+                    bool BinlogEncryptionStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     std::string m_encryptionStatus;
                     bool m_encryptionStatusHasBeenSet;
+
+                    /**
+                     * Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+                     */
+                    std::string m_binlogEncryptionStatus;
+                    bool m_binlogEncryptionStatusHasBeenSet;
 
                 };
             }

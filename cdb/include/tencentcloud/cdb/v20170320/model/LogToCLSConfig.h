@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return Status Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Delivery status on or turn off
+                     * @return Status Delivery status on or turn off
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _status Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Delivery status on or turn off
+                     * @param _status Delivery status on or turn off
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -72,19 +68,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return LogSetId CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取CLS Logset ID
+                     * @return LogSetId CLS Logset ID
                      * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
-                     * 设置CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _logSetId CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置CLS Logset ID
+                     * @param _logSetId CLS Logset ID
                      * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
@@ -97,19 +89,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool LogSetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return LogTopicId Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Log topic ID
+                     * @return LogTopicId Log topic ID
                      * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
-                     * 设置Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _logTopicId Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Log topic ID
+                     * @param _logTopicId Log topic ID
                      * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
@@ -121,28 +109,52 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                      */
                     bool LogTopicIdHasBeenSet() const;
 
+                    /**
+                     * 获取Region of the CLS service
+                     * @return ClsRegion Region of the CLS service
+                     * 
+                     */
+                    std::string GetClsRegion() const;
+
+                    /**
+                     * 设置Region of the CLS service
+                     * @param _clsRegion Region of the CLS service
+                     * 
+                     */
+                    void SetClsRegion(const std::string& _clsRegion);
+
+                    /**
+                     * 判断参数 ClsRegion 是否已赋值
+                     * @return ClsRegion 是否已赋值
+                     * 
+                     */
+                    bool ClsRegionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Delivery status on or turn off
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * CLS Logset ID
                      */
                     std::string m_logSetId;
                     bool m_logSetIdHasBeenSet;
 
                     /**
-                     * Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Log topic ID
                      */
                     std::string m_logTopicId;
                     bool m_logTopicIdHasBeenSet;
+
+                    /**
+                     * Region of the CLS service
+                     */
+                    std::string m_clsRegion;
+                    bool m_clsRegionHasBeenSet;
 
                 };
             }

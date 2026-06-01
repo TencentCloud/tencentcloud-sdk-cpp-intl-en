@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible instances.
-                     * @return TotalCount Number of eligible instances.
+                     * 获取<p>Total number of eligible instances.</p>
+                     * @return TotalCount <p>Total number of eligible instances.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of instance details
-                     * @return Items List of instance details
+                     * 获取<p>Instance detail list.</p>
+                     * @return Items <p>Instance detail list.</p>
                      * 
                      */
                     std::vector<InstanceInfo> GetItems() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible instances.
+                     * <p>Total number of eligible instances.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of instance details
+                     * <p>Instance detail list.</p>
                      */
                     std::vector<InstanceInfo> m_items;
                     bool m_itemsHasBeenSet;

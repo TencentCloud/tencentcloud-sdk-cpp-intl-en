@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log type. Valid values: error and slowLog.
-                     * @return LogType Log type. Valid values: error and slowLog.
+                     * 获取Log type. error: error log. slowlog: slow log.
+                     * @return LogType Log type. error: error log. slowlog: slow log.
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type. Valid values: error and slowLog.
-                     * @param _logType Log type. Valid values: error and slowLog.
+                     * 设置Log type. error: error log. slowlog: slow log.
+                     * @param _logType Log type. error: error log. slowlog: slow log.
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Enabling status. Valid values: ON and OFF.
-                     * @return Status Enabling status. Valid values: ON and OFF.
+                     * 获取Delivery status. ON: Enabled, OFF: Disabled.
+                     * @return Status Delivery status. ON: Enabled, OFF: Disabled.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Enabling status. Valid values: ON and OFF.
-                     * @param _status Enabling status. Valid values: ON and OFF.
+                     * 设置Delivery status. ON: Enabled, OFF: Disabled.
+                     * @param _status Delivery status. ON: Enabled, OFF: Disabled.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether a log set needs to be created.
-                     * @return CreateLogset Indicates whether a log set needs to be created.
+                     * 获取Whether required to create logset. Default to false.
+                     * @return CreateLogset Whether required to create logset. Default to false.
                      * 
                      */
                     bool GetCreateLogset() const;
 
                     /**
-                     * 设置Indicates whether a log set needs to be created.
-                     * @param _createLogset Indicates whether a log set needs to be created.
+                     * 设置Whether required to create logset. Default to false.
+                     * @param _createLogset Whether required to create logset. Default to false.
                      * 
                      */
                     void SetCreateLogset(const bool& _createLogset);
@@ -127,15 +127,19 @@ namespace TencentCloud
                     bool CreateLogsetHasBeenSet() const;
 
                     /**
-                     * 获取Log set name if the log set is to be created or ID of the selected existing log set.
-                     * @return Logset Log set name if the log set is to be created or ID of the selected existing log set.
+                     * 获取Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * @return Logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      * 
                      */
                     std::string GetLogset() const;
 
                     /**
-                     * 设置Log set name if the log set is to be created or ID of the selected existing log set.
-                     * @param _logset Log set name if the log set is to be created or ID of the selected existing log set.
+                     * 设置Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * @param _logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      * 
                      */
                     void SetLogset(const std::string& _logset);
@@ -148,15 +152,15 @@ namespace TencentCloud
                     bool LogsetHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether a log topic needs to be created.
-                     * @return CreateLogTopic Indicates whether a log topic needs to be created.
+                     * 获取Whether required to create log topic. Default to false.
+                     * @return CreateLogTopic Whether required to create log topic. Default to false.
                      * 
                      */
                     bool GetCreateLogTopic() const;
 
                     /**
-                     * 设置Indicates whether a log topic needs to be created.
-                     * @param _createLogTopic Indicates whether a log topic needs to be created.
+                     * 设置Whether required to create log topic. Default to false.
+                     * @param _createLogTopic Whether required to create log topic. Default to false.
                      * 
                      */
                     void SetCreateLogTopic(const bool& _createLogTopic);
@@ -169,15 +173,19 @@ namespace TencentCloud
                     bool CreateLogTopicHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name if the topic is to be created or ID of the selected existing topic.
-                     * @return LogTopic Log topic name if the topic is to be created or ID of the selected existing topic.
+                     * 获取Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * @return LogTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      * 
                      */
                     std::string GetLogTopic() const;
 
                     /**
-                     * 设置Log topic name if the topic is to be created or ID of the selected existing topic.
-                     * @param _logTopic Log topic name if the topic is to be created or ID of the selected existing topic.
+                     * 设置Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * @param _logTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      * 
                      */
                     void SetLogTopic(const std::string& _logTopic);
@@ -190,15 +198,15 @@ namespace TencentCloud
                     bool LogTopicHasBeenSet() const;
 
                     /**
-                     * 获取Log topic validity period, which is 30 days by default if not specified.
-                     * @return Period Log topic validity period, which is 30 days by default if not specified.
+                     * 获取Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+                     * @return Period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Log topic validity period, which is 30 days by default if not specified.
-                     * @param _period Log topic validity period, which is 30 days by default if not specified.
+                     * 设置Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+                     * @param _period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -211,15 +219,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to create an index when creating the log topic.
-                     * @return CreateIndex Indicates whether to create an index when creating the log topic.
+                     * 获取Whether to create an index when creating a log topic. Default to false.
+                     * @return CreateIndex Whether to create an index when creating a log topic. Default to false.
                      * 
                      */
                     bool GetCreateIndex() const;
 
                     /**
-                     * 设置Indicates whether to create an index when creating the log topic.
-                     * @param _createIndex Indicates whether to create an index when creating the log topic.
+                     * 设置Whether to create an index when creating a log topic. Default to false.
+                     * @param _createIndex Whether to create an index when creating a log topic. Default to false.
                      * 
                      */
                     void SetCreateIndex(const bool& _createIndex);
@@ -231,61 +239,90 @@ namespace TencentCloud
                      */
                     bool CreateIndexHasBeenSet() const;
 
+                    /**
+                     * 获取The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * @return ClsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * 
+                     */
+                    std::string GetClsRegion() const;
+
+                    /**
+                     * 设置The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * @param _clsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * 
+                     */
+                    void SetClsRegion(const std::string& _clsRegion);
+
+                    /**
+                     * 判断参数 ClsRegion 是否已赋值
+                     * @return ClsRegion 是否已赋值
+                     * 
+                     */
+                    bool ClsRegionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log type. Valid values: error and slowLog.
+                     * Log type. error: error log. slowlog: slow log.
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Enabling status. Valid values: ON and OFF.
+                     * Delivery status. ON: Enabled, OFF: Disabled.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Indicates whether a log set needs to be created.
+                     * Whether required to create logset. Default to false.
                      */
                     bool m_createLogset;
                     bool m_createLogsetHasBeenSet;
 
                     /**
-                     * Log set name if the log set is to be created or ID of the selected existing log set.
+                     * Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      */
                     std::string m_logset;
                     bool m_logsetHasBeenSet;
 
                     /**
-                     * Indicates whether a log topic needs to be created.
+                     * Whether required to create log topic. Default to false.
                      */
                     bool m_createLogTopic;
                     bool m_createLogTopicHasBeenSet;
 
                     /**
-                     * Log topic name if the topic is to be created or ID of the selected existing topic.
+                     * Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
                      */
                     std::string m_logTopic;
                     bool m_logTopicHasBeenSet;
 
                     /**
-                     * Log topic validity period, which is 30 days by default if not specified.
+                     * Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Indicates whether to create an index when creating the log topic.
+                     * Whether to create an index when creating a log topic. Default to false.
                      */
                     bool m_createIndex;
                     bool m_createIndexHasBeenSet;
+
+                    /**
+                     * The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     */
+                    std::string m_clsRegion;
+                    bool m_clsRegionHasBeenSet;
 
                 };
             }

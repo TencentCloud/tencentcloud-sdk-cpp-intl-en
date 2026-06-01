@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Count Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of proxy groups
+                     * @return Count Number of proxy groups
                      * 
                      */
                     uint64_t GetCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyInfos Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy group information
+                     * @return ProxyInfos Proxy group information
                      * 
                      */
                     std::vector<ProxyGroupInfo> GetProxyInfos() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of proxy groups
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy group information
                      */
                     std::vector<ProxyGroupInfo> m_proxyInfos;
                     bool m_proxyInfosHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The modified instance name.
-                     * @return InstanceName The modified instance name.
+                     * 获取Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
+                     * @return InstanceName Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置The modified instance name.
-                     * @param _instanceName The modified instance name.
+                     * 设置Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
+                     * @param _instanceName Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The modified instance name.
+                     * Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

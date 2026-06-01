@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Database name
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Database Database name
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _database Database name
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabase(const std::string& _database);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Table details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Table Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database table details
+                     * @return Table Database table details
                      * 
                      */
                     std::vector<RollbackTableName> GetTable() const;
 
                     /**
-                     * 设置Table details
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _table Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database table details
+                     * @param _table Database table details
                      * 
                      */
                     void SetTable(const std::vector<RollbackTableName>& _table);
@@ -101,14 +93,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Database name
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database table details
                      */
                     std::vector<RollbackTableName> m_table;
                     bool m_tableHasBeenSet;

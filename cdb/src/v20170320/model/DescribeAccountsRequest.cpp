@@ -26,7 +26,10 @@ DescribeAccountsRequest::DescribeAccountsRequest() :
     m_instanceIdHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false),
-    m_accountRegexpHasBeenSet(false)
+    m_accountRegexpHasBeenSet(false),
+    m_sortByHasBeenSet(false),
+    m_orderByHasBeenSet(false),
+    m_hostRegexpHasBeenSet(false)
 {
 }
 
@@ -67,6 +70,30 @@ string DescribeAccountsRequest::ToJsonString() const
         string key = "AccountRegexp";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_accountRegexp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sortByHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SortBy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sortBy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_orderByHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OrderBy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_orderBy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_hostRegexpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HostRegexp";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_hostRegexp.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -139,6 +166,54 @@ void DescribeAccountsRequest::SetAccountRegexp(const string& _accountRegexp)
 bool DescribeAccountsRequest::AccountRegexpHasBeenSet() const
 {
     return m_accountRegexpHasBeenSet;
+}
+
+string DescribeAccountsRequest::GetSortBy() const
+{
+    return m_sortBy;
+}
+
+void DescribeAccountsRequest::SetSortBy(const string& _sortBy)
+{
+    m_sortBy = _sortBy;
+    m_sortByHasBeenSet = true;
+}
+
+bool DescribeAccountsRequest::SortByHasBeenSet() const
+{
+    return m_sortByHasBeenSet;
+}
+
+string DescribeAccountsRequest::GetOrderBy() const
+{
+    return m_orderBy;
+}
+
+void DescribeAccountsRequest::SetOrderBy(const string& _orderBy)
+{
+    m_orderBy = _orderBy;
+    m_orderByHasBeenSet = true;
+}
+
+bool DescribeAccountsRequest::OrderByHasBeenSet() const
+{
+    return m_orderByHasBeenSet;
+}
+
+string DescribeAccountsRequest::GetHostRegexp() const
+{
+    return m_hostRegexp;
+}
+
+void DescribeAccountsRequest::SetHostRegexp(const string& _hostRegexp)
+{
+    m_hostRegexp = _hostRegexp;
+    m_hostRegexpHasBeenSet = true;
+}
+
+bool DescribeAccountsRequest::HostRegexpHasBeenSet() const
+{
+    return m_hostRegexpHasBeenSet;
 }
 
 

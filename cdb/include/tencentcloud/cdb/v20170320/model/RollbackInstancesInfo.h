@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Cloud database instance ID.
+                     * @return InstanceId Cloud database instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud database instance ID.
+                     * @param _instanceId Cloud database instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -74,15 +70,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
-                     * @return Strategy Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+                     * 获取Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+                     * @return Strategy Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
                      * 
                      */
                     std::string GetStrategy() const;
 
                     /**
-                     * 设置Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
-                     * @param _strategy Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+                     * 设置Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+                     * @param _strategy Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
                      * 
                      */
                     void SetStrategy(const std::string& _strategy);
@@ -95,15 +91,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StrategyHasBeenSet() const;
 
                     /**
-                     * 获取Database rollback time in the format of yyyy-mm-dd hh:mm:ss
-                     * @return RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+                     * 获取Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+                     * @return RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
                      * 
                      */
                     std::string GetRollbackTime() const;
 
                     /**
-                     * 设置Database rollback time in the format of yyyy-mm-dd hh:mm:ss
-                     * @param _rollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+                     * 设置Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+                     * @param _rollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
                      * 
                      */
                     void SetRollbackTime(const std::string& _rollbackTime);
@@ -116,19 +112,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RollbackTimeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Databases Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database information to be rolled back, which means database rollback.
+                     * @return Databases Database information to be rolled back, which means database rollback.
                      * 
                      */
                     std::vector<RollbackDBName> GetDatabases() const;
 
                     /**
-                     * 设置Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _databases Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database information to be rolled back, which means database rollback.
+                     * @param _databases Database information to be rolled back, which means database rollback.
                      * 
                      */
                     void SetDatabases(const std::vector<RollbackDBName>& _databases);
@@ -141,19 +133,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Tables Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Database table information to be rolled back, which means rollback by table.
+                     * @return Tables Database table information to be rolled back, which means rollback by table.
                      * 
                      */
                     std::vector<RollbackTables> GetTables() const;
 
                     /**
-                     * 设置Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _tables Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Database table information to be rolled back, which means rollback by table.
+                     * @param _tables Database table information to be rolled back, which means rollback by table.
                      * 
                      */
                     void SetTables(const std::vector<RollbackTables>& _tables);
@@ -168,34 +156,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Cloud database instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+                     * Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
                      */
                     std::string m_strategy;
                     bool m_strategyHasBeenSet;
 
                     /**
-                     * Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+                     * Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
                      */
                     std::string m_rollbackTime;
                     bool m_rollbackTimeHasBeenSet;
 
                     /**
-                     * Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database information to be rolled back, which means database rollback.
                      */
                     std::vector<RollbackDBName> m_databases;
                     bool m_databasesHasBeenSet;
 
                     /**
-                     * Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Database table information to be rolled back, which means rollback by table.
                      */
                     std::vector<RollbackTables> m_tables;
                     bool m_tablesHasBeenSet;

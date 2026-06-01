@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool WaitSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+                     * @return DstNodeId Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+                     * 
+                     */
+                    std::string GetDstNodeId() const;
+
+                    /**
+                     * 设置Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+                     * @param _dstNodeId Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+                     * 
+                     */
+                    void SetDstNodeId(const std::string& _dstNodeId);
+
+                    /**
+                     * 判断参数 DstNodeId 是否已赋值
+                     * @return DstNodeId 是否已赋值
+                     * 
+                     */
+                    bool DstNodeIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     bool m_waitSwitch;
                     bool m_waitSwitchHasBeenSet;
+
+                    /**
+                     * Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+                     */
+                    std::string m_dstNodeId;
+                    bool m_dstNodeIdHasBeenSet;
 
                 };
             }

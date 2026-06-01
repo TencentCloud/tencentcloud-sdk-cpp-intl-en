@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID.
-                     * @return TemplateId Template ID.
+                     * 获取Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+                     * @return TemplateId Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Template ID.
-                     * @param _templateId Template ID.
+                     * 设置Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+                     * @param _templateId Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Template name (up to 64 characters)
-                     * @return Name Template name (up to 64 characters)
+                     * 获取Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
+                     * @return Name Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name (up to 64 characters)
-                     * @param _name Template name (up to 64 characters)
+                     * 设置Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
+                     * @param _name Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -130,13 +130,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template ID.
+                     * Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Template name (up to 64 characters)
+                     * Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

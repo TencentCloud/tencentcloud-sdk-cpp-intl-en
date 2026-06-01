@@ -71,7 +71,9 @@ InstanceInfo::InstanceInfo() :
     m_clusterInfoHasBeenSet(false),
     m_analysisNodeInfosHasBeenSet(false),
     m_deviceBandwidthHasBeenSet(false),
-    m_destroyProtectHasBeenSet(false)
+    m_destroyProtectHasBeenSet(false),
+    m_cpuModelHasBeenSet(false),
+    m_analysisUpgradeVersionInfoHasBeenSet(false)
 {
 }
 
@@ -661,6 +663,33 @@ CoreInternalOutcome InstanceInfo::Deserialize(const rapidjson::Value &value)
         m_destroyProtectHasBeenSet = true;
     }
 
+    if (value.HasMember("CpuModel") && !value["CpuModel"].IsNull())
+    {
+        if (!value["CpuModel"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceInfo.CpuModel` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cpuModel = string(value["CpuModel"].GetString());
+        m_cpuModelHasBeenSet = true;
+    }
+
+    if (value.HasMember("AnalysisUpgradeVersionInfo") && !value["AnalysisUpgradeVersionInfo"].IsNull())
+    {
+        if (!value["AnalysisUpgradeVersionInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceInfo.AnalysisUpgradeVersionInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_analysisUpgradeVersionInfo.Deserialize(value["AnalysisUpgradeVersionInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_analysisUpgradeVersionInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1112,6 +1141,23 @@ void InstanceInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "DestroyProtect";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_destroyProtect.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cpuModelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CpuModel";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cpuModel.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_analysisUpgradeVersionInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AnalysisUpgradeVersionInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_analysisUpgradeVersionInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -1931,5 +1977,37 @@ void InstanceInfo::SetDestroyProtect(const string& _destroyProtect)
 bool InstanceInfo::DestroyProtectHasBeenSet() const
 {
     return m_destroyProtectHasBeenSet;
+}
+
+string InstanceInfo::GetCpuModel() const
+{
+    return m_cpuModel;
+}
+
+void InstanceInfo::SetCpuModel(const string& _cpuModel)
+{
+    m_cpuModel = _cpuModel;
+    m_cpuModelHasBeenSet = true;
+}
+
+bool InstanceInfo::CpuModelHasBeenSet() const
+{
+    return m_cpuModelHasBeenSet;
+}
+
+UpgradeAnalysisInstanceVersionInfo InstanceInfo::GetAnalysisUpgradeVersionInfo() const
+{
+    return m_analysisUpgradeVersionInfo;
+}
+
+void InstanceInfo::SetAnalysisUpgradeVersionInfo(const UpgradeAnalysisInstanceVersionInfo& _analysisUpgradeVersionInfo)
+{
+    m_analysisUpgradeVersionInfo = _analysisUpgradeVersionInfo;
+    m_analysisUpgradeVersionInfoHasBeenSet = true;
+}
+
+bool InstanceInfo::AnalysisUpgradeVersionInfoHasBeenSet() const
+{
+    return m_analysisUpgradeVersionInfoHasBeenSet;
 }
 

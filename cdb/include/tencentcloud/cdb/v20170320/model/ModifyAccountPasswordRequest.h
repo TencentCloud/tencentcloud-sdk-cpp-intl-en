@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool NewPasswordHasBeenSet() const;
 
                     /**
-                     * 获取TencentDB account
-                     * @return Accounts TencentDB account
+                     * 获取TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @return Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置TencentDB account
-                     * @param _accounts TencentDB account
+                     * 设置TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+                     * @param _accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
@@ -105,6 +105,27 @@ namespace TencentCloud
                      * 
                      */
                     bool AccountsHasBeenSet() const;
+
+                    /**
+                     * 获取Deprecated.
+                     * @return SkipValidatePassword Deprecated.
+                     * @deprecated
+                     */
+                    bool GetSkipValidatePassword() const;
+
+                    /**
+                     * 设置Deprecated.
+                     * @param _skipValidatePassword Deprecated.
+                     * @deprecated
+                     */
+                    void SetSkipValidatePassword(const bool& _skipValidatePassword);
+
+                    /**
+                     * 判断参数 SkipValidatePassword 是否已赋值
+                     * @return SkipValidatePassword 是否已赋值
+                     * @deprecated
+                     */
+                    bool SkipValidatePasswordHasBeenSet() const;
 
                 private:
 
@@ -121,10 +142,16 @@ namespace TencentCloud
                     bool m_newPasswordHasBeenSet;
 
                     /**
-                     * TencentDB account
+                     * TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;
+
+                    /**
+                     * Deprecated.
+                     */
+                    bool m_skipValidatePassword;
+                    bool m_skipValidatePasswordHasBeenSet;
 
                 };
             }

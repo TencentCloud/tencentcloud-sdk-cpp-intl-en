@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdb/v20170320/model/AutoStrategy.h>
+#include <tencentcloud/cdb/v20170320/model/TimeIntervalStrategy.h>
+#include <tencentcloud/cdb/v20170320/model/PeriodStrategy.h>
 
 
 namespace TencentCloud
@@ -44,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,19 +67,19 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Scale-out mode. Valid values: auto and
-manual.
-                     * @return Type Scale-out mode. Valid values: auto and
-manual.
+                     * 获取Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
+                     * @return Type Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Scale-out mode. Valid values: auto and
-manual.
-                     * @param _type Scale-out mode. Valid values: auto and
-manual.
+                     * 设置Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
+                     * @param _type Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +92,19 @@ manual.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
-                     * @return ExpandCpu Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * 获取Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
+                     * @return ExpandCpu Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
                      * 
                      */
                     int64_t GetExpandCpu() const;
 
                     /**
-                     * 设置Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
-                     * @param _expandCpu Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * 设置Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
+                     * @param _expandCpu Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
                      * 
                      */
                     void SetExpandCpu(const int64_t& _expandCpu);
@@ -131,23 +137,74 @@ manual.
                      */
                     bool AutoStrategyHasBeenSet() const;
 
+                    /**
+                     * 获取Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+                     * @return TimeIntervalStrategy Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+                     * 
+                     */
+                    TimeIntervalStrategy GetTimeIntervalStrategy() const;
+
+                    /**
+                     * 设置Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+                     * @param _timeIntervalStrategy Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+                     * 
+                     */
+                    void SetTimeIntervalStrategy(const TimeIntervalStrategy& _timeIntervalStrategy);
+
+                    /**
+                     * 判断参数 TimeIntervalStrategy 是否已赋值
+                     * @return TimeIntervalStrategy 是否已赋值
+                     * 
+                     */
+                    bool TimeIntervalStrategyHasBeenSet() const;
+
+                    /**
+                     * 获取Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+                     * @return PeriodStrategy Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+                     * 
+                     */
+                    PeriodStrategy GetPeriodStrategy() const;
+
+                    /**
+                     * 设置Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+                     * @param _periodStrategy Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+                     * 
+                     */
+                    void SetPeriodStrategy(const PeriodStrategy& _periodStrategy);
+
+                    /**
+                     * 判断参数 PeriodStrategy 是否已赋值
+                     * @return PeriodStrategy 是否已赋值
+                     * 
+                     */
+                    bool PeriodStrategyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Scale-out mode. Valid values: auto and
-manual.
+                     * Scale-out type supports auto-scaling and custom scaling.
+Description: 1. auto means automatic scaling. 2. manual means custom scaling with immediate effect. 3. timeInterval means custom scaling by time. 4. period means custom scaling by cycle.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+                     * Number of CPU cores for scale-out during customization.
+Description: 1. This parameter is required when Type is set to manual, timeInterval, or period. 2. The maximum number of CPU cores to increase is the current instance's CPU core number. For example, an 8-core 16GB instance can scale out up to 8 CPU cores, with a range of 1 - 8.
                      */
                     int64_t m_expandCpu;
                     bool m_expandCpuHasBeenSet;
@@ -157,6 +214,20 @@ manual.
                      */
                     AutoStrategy m_autoStrategy;
                     bool m_autoStrategyHasBeenSet;
+
+                    /**
+                     * Scaling policy by time period.
+Description: When Type is timeInterval, TimeIntervalStrategy is required.
+                     */
+                    TimeIntervalStrategy m_timeIntervalStrategy;
+                    bool m_timeIntervalStrategyHasBeenSet;
+
+                    /**
+                     * Scale by cycle.
+Description: When Type is period, PeriodStrategy is required.
+                     */
+                    PeriodStrategy m_periodStrategy;
+                    bool m_periodStrategyHasBeenSet;
 
                 };
             }

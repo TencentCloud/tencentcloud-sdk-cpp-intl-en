@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
-                     * @return InstanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+                     * 获取Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
-                     * @param _instanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+                     * 设置Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results per page. Default value: `20`.
-                     * @return Limit Number of results per page. Default value: `20`.
+                     * 获取Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
+                     * @return Limit Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results per page. Default value: `20`.
-                     * @param _limit Number of results per page. Default value: `20`.
+                     * 设置Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
+                     * @param _limit Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -108,7 +108,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+                     * Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results per page. Default value: `20`.
+                     * Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

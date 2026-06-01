@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Default retention policy of local binlog.
+                * Default configuration of local binlog retention policy
                 */
                 class LocalBinlogConfigDefault : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Retention period of local binlog. Value range: [72,168].
-                     * @return SaveHours Retention period of local binlog. Value range: [72,168].
+                     * 获取Local binlog retention duration. Valid values: [6,168].
+                     * @return SaveHours Local binlog retention duration. Valid values: [6,168].
                      * 
                      */
                     int64_t GetSaveHours() const;
 
                     /**
-                     * 设置Retention period of local binlog. Value range: [72,168].
-                     * @param _saveHours Retention period of local binlog. Value range: [72,168].
+                     * 设置Local binlog retention duration. Valid values: [6,168].
+                     * @param _saveHours Local binlog retention duration. Valid values: [6,168].
                      * 
                      */
                     void SetSaveHours(const int64_t& _saveHours);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SaveHoursHasBeenSet() const;
 
                     /**
-                     * 获取Space utilization of local binlog. Value range: [30,50].
-                     * @return MaxUsage Space utilization of local binlog. Value range: [30,50].
+                     * 获取Local binlog space utilization. Valid values: [30,50].
+                     * @return MaxUsage Local binlog space utilization. Valid values: [30,50].
                      * 
                      */
                     int64_t GetMaxUsage() const;
 
                     /**
-                     * 设置Space utilization of local binlog. Value range: [30,50].
-                     * @param _maxUsage Space utilization of local binlog. Value range: [30,50].
+                     * 设置Local binlog space utilization. Valid values: [30,50].
+                     * @param _maxUsage Local binlog space utilization. Valid values: [30,50].
                      * 
                      */
                     void SetMaxUsage(const int64_t& _maxUsage);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Retention period of local binlog. Value range: [72,168].
+                     * Local binlog retention duration. Valid values: [6,168].
                      */
                     int64_t m_saveHours;
                     bool m_saveHoursHasBeenSet;
 
                     /**
-                     * Space utilization of local binlog. Value range: [30,50].
+                     * Local binlog space utilization. Valid values: [30,50].
                      */
                     int64_t m_maxUsage;
                     bool m_maxUsageHasBeenSet;

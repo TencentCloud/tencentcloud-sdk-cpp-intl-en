@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取SQL Type.
-                     * @return SqlType SQL Type.
+                     * 获取
+                     * @return SqlType 
                      * 
                      */
                     std::string GetSqlType() const;
 
                     /**
-                     * 设置SQL Type.
-                     * @param _sqlType SQL Type.
+                     * 设置
+                     * @param _sqlType 
                      * 
                      */
                     void SetSqlType(const std::string& _sqlType);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Database Name.
-                     * @return DBName Database Name.
+                     * 获取
+                     * @return DBName 
                      * 
                      */
                     std::string GetDBName() const;
 
                     /**
-                     * 设置Database Name.
-                     * @param _dBName Database Name.
+                     * 设置
+                     * @param _dBName 
                      * 
                      */
                     void SetDBName(const std::string& _dBName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DBNameHasBeenSet() const;
 
                     /**
-                     * 获取SQL Statement.
-                     * @return Sql SQL Statement.
+                     * 获取
+                     * @return Sql 
                      * 
                      */
                     std::string GetSql() const;
 
                     /**
-                     * 设置SQL Statement.
-                     * @param _sql SQL Statement.
+                     * 设置
+                     * @param _sql 
                      * 
                      */
                     void SetSql(const std::string& _sql);
@@ -300,19 +300,15 @@ namespace TencentCloud
                     bool ThreadIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckRows Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of scanned rows.
+                     * @return CheckRows Number of scanned rows.
                      * 
                      */
                     int64_t GetCheckRows() const;
 
                     /**
-                     * 设置Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkRows Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of scanned rows.
+                     * @param _checkRows Number of scanned rows.
                      * 
                      */
                     void SetCheckRows(const int64_t& _checkRows);
@@ -325,19 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckRowsHasBeenSet() const;
 
                     /**
-                     * 获取CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CpuTime CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取cpu execution time, µs.
+                     * @return CpuTime cpu execution time, µs.
                      * 
                      */
                     double GetCpuTime() const;
 
                     /**
-                     * 设置CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cpuTime CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置cpu execution time, µs.
+                     * @param _cpuTime cpu execution time, µs.
                      * 
                      */
                     void SetCpuTime(const double& _cpuTime);
@@ -350,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuTimeHasBeenSet() const;
 
                     /**
-                     * 获取IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IoWaitTime IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取IO wait time, µs.
+                     * @return IoWaitTime IO wait time, µs.
                      * 
                      */
                     uint64_t GetIoWaitTime() const;
 
                     /**
-                     * 设置IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ioWaitTime IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置IO wait time, µs.
+                     * @param _ioWaitTime IO wait time, µs.
                      * 
                      */
                     void SetIoWaitTime(const uint64_t& _ioWaitTime);
@@ -375,19 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IoWaitTimeHasBeenSet() const;
 
                     /**
-                     * 获取Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LockWaitTime Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Lock waiting time (unit: microsecond).
+                     * @return LockWaitTime Lock waiting time (unit: microsecond).
                      * 
                      */
                     uint64_t GetLockWaitTime() const;
 
                     /**
-                     * 设置Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lockWaitTime Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Lock waiting time (unit: microsecond).
+                     * @param _lockWaitTime Lock waiting time (unit: microsecond).
                      * 
                      */
                     void SetLockWaitTime(const uint64_t& _lockWaitTime);
@@ -400,19 +384,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LockWaitTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start time, which combines with timestamp to form a time accurate to nanoseconds.
+                     * @return NsTime Start time, which combines with timestamp to form a time accurate to nanoseconds.
                      * 
                      */
                     uint64_t GetNsTime() const;
 
                     /**
-                     * 设置Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Start time, which combines with timestamp to form a time accurate to nanoseconds.
+                     * @param _nsTime Start time, which combines with timestamp to form a time accurate to nanoseconds.
                      * 
                      */
                     void SetNsTime(const uint64_t& _nsTime);
@@ -425,19 +405,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TrxLivingTime Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Transaction duration, µs.
+                     * @return TrxLivingTime Transaction duration, µs.
                      * 
                      */
                     uint64_t GetTrxLivingTime() const;
 
                     /**
-                     * 设置Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _trxLivingTime Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Transaction duration, µs.
+                     * @param _trxLivingTime Transaction duration, µs.
                      * 
                      */
                     void SetTrxLivingTime(const uint64_t& _trxLivingTime);
@@ -450,19 +426,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TrxLivingTimeHasBeenSet() const;
 
                     /**
-                     * 获取Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return TemplateInfo Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Basic info of the log hit rule template
+                     * @return TemplateInfo Basic info of the log hit rule template
                      * 
                      */
                     std::vector<LogRuleTemplateInfo> GetTemplateInfo() const;
 
                     /**
-                     * 设置Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _templateInfo Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Basic info of the log hit rule template
+                     * @param _templateInfo Basic info of the log hit rule template
                      * 
                      */
                     void SetTemplateInfo(const std::vector<LogRuleTemplateInfo>& _templateInfo);
@@ -473,6 +445,52 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                      * 
                      */
                     bool TemplateInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Transaction ID
+                     * @return TrxId Transaction ID
+                     * 
+                     */
+                    int64_t GetTrxId() const;
+
+                    /**
+                     * 设置Transaction ID
+                     * @param _trxId Transaction ID
+                     * 
+                     */
+                    void SetTrxId(const int64_t& _trxId);
+
+                    /**
+                     * 判断参数 TrxId 是否已赋值
+                     * @return TrxId 是否已赋值
+                     * 
+                     */
+                    bool TrxIdHasBeenSet() const;
+
+                    /**
+                     * 获取Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientPort Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    int64_t GetClientPort() const;
+
+                    /**
+                     * 设置Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _clientPort Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetClientPort(const int64_t& _clientPort);
+
+                    /**
+                     * 判断参数 ClientPort 是否已赋值
+                     * @return ClientPort 是否已赋值
+                     * 
+                     */
+                    bool ClientPortHasBeenSet() const;
 
                 private:
 
@@ -489,7 +507,7 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * SQL Type.
+                     * 
                      */
                     std::string m_sqlType;
                     bool m_sqlTypeHasBeenSet;
@@ -501,13 +519,13 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * Database Name.
+                     * 
                      */
                     std::string m_dBName;
                     bool m_dBNameHasBeenSet;
 
                     /**
-                     * SQL Statement.
+                     * 
                      */
                     std::string m_sql;
                     bool m_sqlHasBeenSet;
@@ -549,53 +567,59 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool m_threadIdHasBeenSet;
 
                     /**
-                     * Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of scanned rows.
                      */
                     int64_t m_checkRows;
                     bool m_checkRowsHasBeenSet;
 
                     /**
-                     * CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * cpu execution time, µs.
                      */
                     double m_cpuTime;
                     bool m_cpuTimeHasBeenSet;
 
                     /**
-                     * IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * IO wait time, µs.
                      */
                     uint64_t m_ioWaitTime;
                     bool m_ioWaitTimeHasBeenSet;
 
                     /**
-                     * Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Lock waiting time (unit: microsecond).
                      */
                     uint64_t m_lockWaitTime;
                     bool m_lockWaitTimeHasBeenSet;
 
                     /**
-                     * Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start time, which combines with timestamp to form a time accurate to nanoseconds.
                      */
                     uint64_t m_nsTime;
                     bool m_nsTimeHasBeenSet;
 
                     /**
-                     * Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Transaction duration, µs.
                      */
                     uint64_t m_trxLivingTime;
                     bool m_trxLivingTimeHasBeenSet;
 
                     /**
-                     * Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Basic info of the log hit rule template
                      */
                     std::vector<LogRuleTemplateInfo> m_templateInfo;
                     bool m_templateInfoHasBeenSet;
+
+                    /**
+                     * Transaction ID
+                     */
+                    int64_t m_trxId;
+                    bool m_trxIdHasBeenSet;
+
+                    /**
+                     * Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_clientPort;
+                    bool m_clientPortHasBeenSet;
 
                 };
             }

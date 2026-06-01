@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RO group ID in the format of `cdbrg-c1nl9rpv`.
-                     * @return RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * 获取ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
+                     * @return RoGroupId ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
                      * 
                      */
                     std::string GetRoGroupId() const;
 
                     /**
-                     * 设置RO group ID in the format of `cdbrg-c1nl9rpv`.
-                     * @param _roGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * 设置ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
+                     * @param _roGroupId ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
                      * 
                      */
                     void SetRoGroupId(const std::string& _roGroupId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
                      */
                     std::string m_roGroupId;
                     bool m_roGroupIdHasBeenSet;

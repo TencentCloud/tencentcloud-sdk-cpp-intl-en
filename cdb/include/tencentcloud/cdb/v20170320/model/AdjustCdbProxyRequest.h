@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Proxy group ID
-                     * @return ProxyGroupId Proxy group ID
+                     * 获取Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy group ID
-                     * @param _proxyGroupId Proxy group ID
+                     * 设置Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+                     * @param _proxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -86,15 +86,43 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取The specification configuration of a node
-                     * @return ProxyNodeCustom The specification configuration of a node
+                     * 获取Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
+                     * @return ProxyNodeCustom Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
                      * 
                      */
                     std::vector<ProxyNodeCustom> GetProxyNodeCustom() const;
 
                     /**
-                     * 设置The specification configuration of a node
-                     * @param _proxyNodeCustom The specification configuration of a node
+                     * 设置Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
+                     * @param _proxyNodeCustom Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
                      * 
                      */
                     void SetProxyNodeCustom(const std::vector<ProxyNodeCustom>& _proxyNodeCustom);
@@ -151,19 +179,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Proxy group ID
+                     * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * The specification configuration of a node
+                     * Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
                      */
                     std::vector<ProxyNodeCustom> m_proxyNodeCustom;
                     bool m_proxyNodeCustomHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
-                     * @return AsyncRequestId Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+                     * 获取<p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
+                     * @return AsyncRequestId <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+                     * <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

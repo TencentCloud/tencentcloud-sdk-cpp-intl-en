@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template ID
-                     * @return TemplateId Parameter template ID
+                     * 获取parameter template ID
+                     * @return TemplateId parameter template ID
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Parameter template ID
-                     * @param _templateId Parameter template ID
+                     * 设置parameter template ID
+                     * @param _templateId parameter template ID
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Instance engine version
-                     * @return EngineVersion Instance engine version
+                     * 获取Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+                     * @return EngineVersion Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置Instance engine version
-                     * @param _engineVersion Instance engine version
+                     * 设置Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+                     * @param _engineVersion Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template type
-                     * @return TemplateType Parameter template type
+                     * 获取Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+                     * @return TemplateType Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
                      * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
-                     * 设置Parameter template type
-                     * @param _templateType Parameter template type
+                     * 设置Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+                     * @param _templateType Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
                      * 
                      */
                     void SetTemplateType(const std::string& _templateType);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter template engine, values: InnoDB, RocksDB.
+                     * @return EngineType Parameter template engine, values: InnoDB, RocksDB.
                      * 
                      */
                     std::string GetEngineType() const;
 
                     /**
-                     * 设置Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _engineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter template engine, values: InnoDB, RocksDB.
+                     * @param _engineType Parameter template engine, values: InnoDB, RocksDB.
                      * 
                      */
                     void SetEngineType(const std::string& _engineType);
@@ -175,7 +175,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template ID
+                     * parameter template ID
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
@@ -193,19 +193,19 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Instance engine version
+                     * Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Parameter template type
+                     * Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
 
                     /**
-                     * Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter template engine, values: InnoDB, RocksDB.
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;

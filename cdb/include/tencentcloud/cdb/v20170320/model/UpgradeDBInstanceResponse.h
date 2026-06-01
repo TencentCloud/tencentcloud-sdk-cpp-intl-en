@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID.
-                     * @return DealIds Order ID.
+                     * 获取<p>Order ID.</p>
+                     * @return DealIds <p>Order ID.</p>
                      * 
                      */
                     std::vector<std::string> GetDealIds() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DealIdsHasBeenSet() const;
 
                     /**
-                     * 获取Async task request ID, which can be used to query the execution result of an async task.
-                     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+                     * 获取<p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
+                     * @return AsyncRequestId <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order ID.
+                     * <p>Order ID.</p>
                      */
                     std::vector<std::string> m_dealIds;
                     bool m_dealIdsHasBeenSet;
 
                     /**
-                     * Async task request ID, which can be used to query the execution result of an async task.
+                     * <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-                     * @return Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * 获取Backup snapshot time. Time format: 2016-03-17.
+                     * @return Date Backup snapshot time. Time format: 2016-03-17.
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-                     * @param _date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * 设置Backup snapshot time. Time format: 2016-03-17.
+                     * @param _date Backup snapshot time. Time format: 2016-03-17.
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * Backup snapshot time. Time format: 2016-03-17.
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;

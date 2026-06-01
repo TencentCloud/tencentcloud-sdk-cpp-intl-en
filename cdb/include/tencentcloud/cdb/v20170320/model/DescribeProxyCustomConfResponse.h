@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of queried proxy configurations
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return Count Number of queried proxy configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Number of proxy configurations
+                     * @return Count Number of proxy configurations
                      * 
                      */
                     uint64_t GetCount() const;
@@ -62,26 +60,22 @@ Note: this field may return `null`, indicating that no valid value can be found.
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Proxy configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return CustomConf Proxy configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * 
+                     * 获取proxy configuration
+                     * @return CustomConf proxy configuration
+                     * @deprecated
                      */
                     CustomConfig GetCustomConf() const;
 
                     /**
                      * 判断参数 CustomConf 是否已赋值
                      * @return CustomConf 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool CustomConfHasBeenSet() const;
 
                     /**
-                     * 获取Weight rule
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return WeightRule Weight rule
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Weight limit
+                     * @return WeightRule Weight limit
                      * 
                      */
                     Rule GetWeightRule() const;
@@ -93,28 +87,45 @@ Note: this field may return `null`, indicating that no valid value can be found.
                      */
                     bool WeightRuleHasBeenSet() const;
 
+                    /**
+                     * 获取proxy configuration
+                     * @return CustomConfInfo proxy configuration
+                     * 
+                     */
+                    std::vector<CustomConfig> GetCustomConfInfo() const;
+
+                    /**
+                     * 判断参数 CustomConfInfo 是否已赋值
+                     * @return CustomConfInfo 是否已赋值
+                     * 
+                     */
+                    bool CustomConfInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Number of queried proxy configurations
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Number of proxy configurations
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Proxy configuration details
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * proxy configuration
                      */
                     CustomConfig m_customConf;
                     bool m_customConfHasBeenSet;
 
                     /**
-                     * Weight rule
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Weight limit
                      */
                     Rule m_weightRule;
                     bool m_weightRuleHasBeenSet;
+
+                    /**
+                     * proxy configuration
+                     */
+                    std::vector<CustomConfig> m_customConfInfo;
+                    bool m_customConfInfoHasBeenSet;
 
                 };
             }

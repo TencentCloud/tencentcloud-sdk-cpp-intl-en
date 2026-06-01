@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag to be added or modified.
-                     * @return ReplaceTags Tag to be added or modified.
+                     * 获取Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+                     * @return ReplaceTags Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
                      * 
                      */
                     std::vector<TagInfo> GetReplaceTags() const;
 
                     /**
-                     * 设置Tag to be added or modified.
-                     * @param _replaceTags Tag to be added or modified.
+                     * 设置Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+                     * @param _replaceTags Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
                      * 
                      */
                     void SetReplaceTags(const std::vector<TagInfo>& _replaceTags);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ReplaceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Tag to be deleted.
-                     * @return DeleteTags Tag to be deleted.
+                     * 获取Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
+                     * @return DeleteTags Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
                      * 
                      */
                     std::vector<TagInfo> GetDeleteTags() const;
 
                     /**
-                     * 设置Tag to be deleted.
-                     * @param _deleteTags Tag to be deleted.
+                     * 设置Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
+                     * @param _deleteTags Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
                      * 
                      */
                     void SetDeleteTags(const std::vector<TagInfo>& _deleteTags);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Tag to be added or modified.
+                     * Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
                      */
                     std::vector<TagInfo> m_replaceTags;
                     bool m_replaceTagsHasBeenSet;
 
                     /**
-                     * Tag to be deleted.
+                     * Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
                      */
                     std::vector<TagInfo> m_deleteTags;
                     bool m_deleteTagsHasBeenSet;

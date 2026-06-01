@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AggregationField Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAggregationField() const;
 
                     /**
                      * 设置Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _aggregationField Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAggregationField(const std::string& _aggregationField);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AggregationFieldHasBeenSet() const;
 
                     /**
-                     * 获取Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Buckets Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Aggregate bucket result set
+                     * @return Buckets Aggregate bucket result set
                      * 
                      */
                     std::vector<Bucket> GetBuckets() const;
 
                     /**
-                     * 设置Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _buckets Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Aggregate bucket result set
+                     * @param _buckets Aggregate bucket result set
                      * 
                      */
                     void SetBuckets(const std::vector<Bucket>& _buckets);
@@ -101,14 +93,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_aggregationField;
                     bool m_aggregationFieldHasBeenSet;
 
                     /**
-                     * Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Aggregate bucket result set
                      */
                     std::vector<Bucket> m_buckets;
                     bool m_bucketsHasBeenSet;

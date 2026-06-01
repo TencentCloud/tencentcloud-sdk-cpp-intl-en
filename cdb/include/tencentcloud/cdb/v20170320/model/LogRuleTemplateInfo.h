@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return RuleTemplateId Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Template ID.
+                     * @return RuleTemplateId Template ID.
                      * 
                      */
                     std::string GetRuleTemplateId() const;
 
                     /**
-                     * 设置Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _ruleTemplateId Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Template ID.
+                     * @param _ruleTemplateId Template ID.
                      * 
                      */
                     void SetRuleTemplateId(const std::string& _ruleTemplateId);
@@ -72,19 +68,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool RuleTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return RuleTemplateName Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Rule template name
+                     * @return RuleTemplateName Rule template name
                      * 
                      */
                     std::string GetRuleTemplateName() const;
 
                     /**
-                     * 设置Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _ruleTemplateName Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Rule template name
+                     * @param _ruleTemplateName Rule template name
                      * 
                      */
                     void SetRuleTemplateName(const std::string& _ruleTemplateName);
@@ -97,19 +89,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return AlarmLevel Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     std::string GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _alarmLevel Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+                     * @param _alarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      * 
                      */
                     void SetAlarmLevel(const std::string& _alarmLevel);
@@ -122,19 +110,15 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @return RuleTemplateStatus Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 获取Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
+                     * @return RuleTemplateStatus Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
                      * 
                      */
                     int64_t GetRuleTemplateStatus() const;
 
                     /**
-                     * 设置Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
-                     * @param _ruleTemplateStatus Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * 设置Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
+                     * @param _ruleTemplateStatus Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
                      * 
                      */
                     void SetRuleTemplateStatus(const int64_t& _ruleTemplateStatus);
@@ -149,29 +133,25 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 private:
 
                     /**
-                     * Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Template ID.
                      */
                     std::string m_ruleTemplateId;
                     bool m_ruleTemplateIdHasBeenSet;
 
                     /**
-                     * Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Rule template name
                      */
                     std::string m_ruleTemplateName;
                     bool m_ruleTemplateNameHasBeenSet;
 
                     /**
-                     * Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
                      */
                     std::string m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+                     * Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
                      */
                     int64_t m_ruleTemplateStatus;
                     bool m_ruleTemplateStatusHasBeenSet;

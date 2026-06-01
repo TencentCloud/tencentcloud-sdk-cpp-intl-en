@@ -40,7 +40,10 @@ BackupInfo::BackupInfo() :
     m_remoteInfoHasBeenSet(false),
     m_cosStorageTypeHasBeenSet(false),
     m_instanceIdHasBeenSet(false),
-    m_encryptionFlagHasBeenSet(false)
+    m_progressHasBeenSet(false),
+    m_encryptionFlagHasBeenSet(false),
+    m_executedGTIDSetHasBeenSet(false),
+    m_mD5HasBeenSet(false)
 {
 }
 
@@ -249,6 +252,16 @@ CoreInternalOutcome BackupInfo::Deserialize(const rapidjson::Value &value)
         m_instanceIdHasBeenSet = true;
     }
 
+    if (value.HasMember("Progress") && !value["Progress"].IsNull())
+    {
+        if (!value["Progress"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.Progress` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_progress = value["Progress"].GetInt64();
+        m_progressHasBeenSet = true;
+    }
+
     if (value.HasMember("EncryptionFlag") && !value["EncryptionFlag"].IsNull())
     {
         if (!value["EncryptionFlag"].IsString())
@@ -257,6 +270,26 @@ CoreInternalOutcome BackupInfo::Deserialize(const rapidjson::Value &value)
         }
         m_encryptionFlag = string(value["EncryptionFlag"].GetString());
         m_encryptionFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExecutedGTIDSet") && !value["ExecutedGTIDSet"].IsNull())
+    {
+        if (!value["ExecutedGTIDSet"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.ExecutedGTIDSet` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_executedGTIDSet = string(value["ExecutedGTIDSet"].GetString());
+        m_executedGTIDSetHasBeenSet = true;
+    }
+
+    if (value.HasMember("MD5") && !value["MD5"].IsNull())
+    {
+        if (!value["MD5"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BackupInfo.MD5` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mD5 = string(value["MD5"].GetString());
+        m_mD5HasBeenSet = true;
     }
 
 
@@ -425,12 +458,36 @@ void BackupInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         value.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_progressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Progress";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_progress, allocator);
+    }
+
     if (m_encryptionFlagHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EncryptionFlag";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_encryptionFlag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_executedGTIDSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExecutedGTIDSet";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_executedGTIDSet.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mD5HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MD5";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mD5.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -740,6 +797,22 @@ bool BackupInfo::InstanceIdHasBeenSet() const
     return m_instanceIdHasBeenSet;
 }
 
+int64_t BackupInfo::GetProgress() const
+{
+    return m_progress;
+}
+
+void BackupInfo::SetProgress(const int64_t& _progress)
+{
+    m_progress = _progress;
+    m_progressHasBeenSet = true;
+}
+
+bool BackupInfo::ProgressHasBeenSet() const
+{
+    return m_progressHasBeenSet;
+}
+
 string BackupInfo::GetEncryptionFlag() const
 {
     return m_encryptionFlag;
@@ -754,5 +827,37 @@ void BackupInfo::SetEncryptionFlag(const string& _encryptionFlag)
 bool BackupInfo::EncryptionFlagHasBeenSet() const
 {
     return m_encryptionFlagHasBeenSet;
+}
+
+string BackupInfo::GetExecutedGTIDSet() const
+{
+    return m_executedGTIDSet;
+}
+
+void BackupInfo::SetExecutedGTIDSet(const string& _executedGTIDSet)
+{
+    m_executedGTIDSet = _executedGTIDSet;
+    m_executedGTIDSetHasBeenSet = true;
+}
+
+bool BackupInfo::ExecutedGTIDSetHasBeenSet() const
+{
+    return m_executedGTIDSetHasBeenSet;
+}
+
+string BackupInfo::GetMD5() const
+{
+    return m_mD5;
+}
+
+void BackupInfo::SetMD5(const string& _mD5)
+{
+    m_mD5 = _mD5;
+    m_mD5HasBeenSet = true;
+}
+
+bool BackupInfo::MD5HasBeenSet() const
+{
+    return m_mD5HasBeenSet;
 }
 

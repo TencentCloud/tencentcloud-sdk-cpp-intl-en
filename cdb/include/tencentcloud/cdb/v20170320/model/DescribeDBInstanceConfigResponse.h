@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
-                     * @return ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * 获取<p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
+                     * @return ProtectMode <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
                      * 
                      */
                     int64_t GetProtectMode() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool ProtectModeHasBeenSet() const;
 
                     /**
-                     * 获取Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
-                     * @return DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * 获取<p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
+                     * @return DeployMode <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
                      * 
                      */
                     int64_t GetDeployMode() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance AZ information in the format of "ap-shanghai-2".
-                     * @return Zone Instance AZ information in the format of "ap-shanghai-2".
+                     * 获取<p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
+                     * @return Zone <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
                      * 
                      */
                     std::string GetZone() const;
@@ -88,10 +88,10 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return SlaveConfig Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取<p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaveConfig <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SlaveConfig GetSlaveConfig() const;
@@ -104,10 +104,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool SlaveConfigHasBeenSet() const;
 
                     /**
-                     * 获取Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @return BackupConfig Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 获取<p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupConfig <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BackupConfig GetBackupConfig() const;
@@ -120,8 +120,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool BackupConfigHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
-                     * @return Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     * 获取<p>Whether to switch over to the standby database.</p>
+                     * @return Switched <p>Whether to switch over to the standby database.</p>
                      * 
                      */
                     bool GetSwitched() const;
@@ -133,45 +133,65 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     bool SwitchedHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
+                     * @return FourthConfig <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
+                     * 
+                     */
+                    BackupConfig GetFourthConfig() const;
+
+                    /**
+                     * 判断参数 FourthConfig 是否已赋值
+                     * @return FourthConfig 是否已赋值
+                     * 
+                     */
+                    bool FourthConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * <p>Data protection method of the primary instance, possible returned values: 0 - asynchronous replication mode, 1 - semi-sync replication mode, 2 - strong sync replication mode.</p>
                      */
                     int64_t m_protectMode;
                     bool m_protectModeHasBeenSet;
 
                     /**
-                     * Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * <p>Primary instance deployment mode. Possible returned values: 0 - single AZ deployment, 1 - multi-AZ deployment.</p>
                      */
                     int64_t m_deployMode;
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Instance AZ information in the format of "ap-shanghai-2".
+                     * <p>Primary AZ information of the instance, in the format of "ap-shanghai-2".</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Configurations of the replica node
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * <p>Configuration message of the first standby for two-node, three-node, and four-node instances.</p><p>When querying a two-node instance, this parameter returns the standby information of the two-node instance. When querying a three-node or four-node instance, this parameter returns the first standby information of the instance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SlaveConfig m_slaveConfig;
                     bool m_slaveConfigHasBeenSet;
 
                     /**
-                     * Configurations of the second replica node of a strong-sync instance
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * <p>Configuration message of the second standby database for three-node and 4-node instances.</p><p>When querying three-node and 4-node instances, this parameter returns the information of the second standby database.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BackupConfig m_backupConfig;
                     bool m_backupConfigHasBeenSet;
 
                     /**
-                     * This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     * <p>Whether to switch over to the standby database.</p>
                      */
                     bool m_switched;
                     bool m_switchedHasBeenSet;
+
+                    /**
+                     * <p>Configuration message of the third standby database in a 4-node instance.</p><p>When querying a 4-node instance, this parameter returns the info of the third standby database.</p>
+                     */
+                    BackupConfig m_fourthConfig;
+                    bool m_fourthConfigHasBeenSet;
 
                 };
             }

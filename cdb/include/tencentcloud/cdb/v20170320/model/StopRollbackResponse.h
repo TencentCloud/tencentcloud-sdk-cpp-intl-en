@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task request ID
-                     * @return AsyncRequestId Async task request ID
+                     * 获取Asynchronous Task ID of the execution request.
+                     * @return AsyncRequestId Asynchronous Task ID of the execution request.
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task request ID
+                     * Asynchronous Task ID of the execution request.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

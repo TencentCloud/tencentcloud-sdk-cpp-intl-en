@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter template name.
-                     * @return Name Parameter template name.
+                     * 获取Parameter template name. Up to 60 characters are allowed.
+                     * @return Name Parameter template name. Up to 60 characters are allowed.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter template name.
-                     * @param _name Parameter template name.
+                     * 设置Parameter template name. Up to 60 characters are allowed.
+                     * @param _name Parameter template name. Up to 60 characters are allowed.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取MySQL version number.
-                     * @return EngineVersion MySQL version number.
+                     * 获取MySQL version number. Available values: 5.6, 5.7, and 8.0.
+                     * @return EngineVersion MySQL version number. Available values: 5.6, 5.7, and 8.0.
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置MySQL version number.
-                     * @param _engineVersion MySQL version number.
+                     * 设置MySQL version number. Available values: 5.6, 5.7, and 8.0.
+                     * @param _engineVersion MySQL version number. Available values: 5.6, 5.7, and 8.0.
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Source parameter template ID.
-                     * @return TemplateId Source parameter template ID.
+                     * 获取Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+                     * @return TemplateId Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Source parameter template ID.
-                     * @param _templateId Source parameter template ID.
+                     * 设置Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+                     * @param _templateId Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -170,15 +170,19 @@ namespace TencentCloud
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
-                     * @return EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * 获取Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
+                     * @return EngineType Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
                      * 
                      */
                     std::string GetEngineType() const;
 
                     /**
-                     * 设置Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
-                     * @param _engineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * 设置Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
+                     * @param _engineType Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
                      * 
                      */
                     void SetEngineType(const std::string& _engineType);
@@ -193,7 +197,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameter template name.
+                     * Parameter template name. Up to 60 characters are allowed.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -205,13 +209,13 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * MySQL version number.
+                     * MySQL version number. Available values: 5.6, 5.7, and 8.0.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Source parameter template ID.
+                     * Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;
@@ -229,7 +233,8 @@ namespace TencentCloud
                     bool m_templateTypeHasBeenSet;
 
                     /**
-                     * Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;

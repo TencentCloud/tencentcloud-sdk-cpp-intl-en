@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 获取Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+                     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 设置Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+                     * @param _instanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup file retention period in days. Value range: 7-1830.
-                     * @return ExpireDays Backup file retention period in days. Value range: 7-1830.
+                     * 获取Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
+                     * @return ExpireDays Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
                      * 
                      */
                     int64_t GetExpireDays() const;
 
                     /**
-                     * 设置Backup file retention period in days. Value range: 7-1830.
-                     * @param _expireDays Backup file retention period in days. Value range: 7-1830.
+                     * 设置Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
+                     * @param _expireDays Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
                      * 
                      */
                     void SetExpireDays(const int64_t& _expireDays);
@@ -128,15 +136,23 @@ namespace TencentCloud
                     bool BackupMethodHasBeenSet() const;
 
                     /**
-                     * 获取Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
-                     * @return BinlogExpireDays Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+                     * 获取binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
+                     * @return BinlogExpireDays binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
                      * 
                      */
                     int64_t GetBinlogExpireDays() const;
 
                     /**
-                     * 设置Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
-                     * @param _binlogExpireDays Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+                     * 设置binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
+                     * @param _binlogExpireDays binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
                      * 
                      */
                     void SetBinlogExpireDays(const int64_t& _binlogExpireDays);
@@ -170,15 +186,15 @@ namespace TencentCloud
                     bool BackupTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
-                     * @return EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+                     * 获取Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
+                     * @return EnableBackupPeriodSave Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
                      * 
                      */
                     std::string GetEnableBackupPeriodSave() const;
 
                     /**
-                     * 设置Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
-                     * @param _enableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+                     * 设置Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
+                     * @param _enableBackupPeriodSave Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
                      * 
                      */
                     void SetEnableBackupPeriodSave(const std::string& _enableBackupPeriodSave);
@@ -296,15 +312,15 @@ namespace TencentCloud
                     bool StartBackupPeriodSaveDateHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @return EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 获取Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
+                     * @return EnableBackupArchive Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
                      * 
                      */
                     std::string GetEnableBackupArchive() const;
 
                     /**
-                     * 设置Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @param _enableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 设置Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
+                     * @param _enableBackupArchive Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
                      * 
                      */
                     void SetEnableBackupArchive(const std::string& _enableBackupArchive);
@@ -359,15 +375,15 @@ namespace TencentCloud
                     bool BinlogArchiveDaysHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @return EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 获取Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+                     * @return EnableBinlogArchive Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
                      * 
                      */
                     std::string GetEnableBinlogArchive() const;
 
                     /**
-                     * 设置Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @param _enableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 设置Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+                     * @param _enableBinlogArchive Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
                      * 
                      */
                     void SetEnableBinlogArchive(const std::string& _enableBinlogArchive);
@@ -380,15 +396,15 @@ namespace TencentCloud
                     bool EnableBinlogArchiveHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 获取Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
+                     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
                      * 
                      */
                     std::string GetEnableBackupStandby() const;
 
                     /**
-                     * 设置Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @param _enableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 设置Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
+                     * @param _enableBackupStandby Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
                      * 
                      */
                     void SetEnableBackupStandby(const std::string& _enableBackupStandby);
@@ -422,15 +438,15 @@ namespace TencentCloud
                     bool BackupStandbyDaysHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @return EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 获取Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
+                     * @return EnableBinlogStandby Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
                      * 
                      */
                     std::string GetEnableBinlogStandby() const;
 
                     /**
-                     * 设置Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-                     * @param _enableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 设置Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
+                     * @param _enableBinlogStandby Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
                      * 
                      */
                     void SetEnableBinlogStandby(const std::string& _enableBinlogStandby);
@@ -466,13 +482,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Backup file retention period in days. Value range: 7-1830.
+                     * Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
                      */
                     int64_t m_expireDays;
                     bool m_expireDaysHasBeenSet;
@@ -490,7 +508,9 @@ namespace TencentCloud
                     bool m_backupMethodHasBeenSet;
 
                     /**
-                     * Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+                     * binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
                      */
                     int64_t m_binlogExpireDays;
                     bool m_binlogExpireDaysHasBeenSet;
@@ -502,7 +522,7 @@ namespace TencentCloud
                     bool m_backupTimeWindowHasBeenSet;
 
                     /**
-                     * Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+                     * Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
                      */
                     std::string m_enableBackupPeriodSave;
                     bool m_enableBackupPeriodSaveHasBeenSet;
@@ -538,7 +558,7 @@ namespace TencentCloud
                     bool m_startBackupPeriodSaveDateHasBeenSet;
 
                     /**
-                     * Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
                      */
                     std::string m_enableBackupArchive;
                     bool m_enableBackupArchiveHasBeenSet;
@@ -556,13 +576,13 @@ namespace TencentCloud
                     bool m_binlogArchiveDaysHasBeenSet;
 
                     /**
-                     * Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
                      */
                     std::string m_enableBinlogArchive;
                     bool m_enableBinlogArchiveHasBeenSet;
 
                     /**
-                     * Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
                      */
                     std::string m_enableBackupStandby;
                     bool m_enableBackupStandbyHasBeenSet;
@@ -574,7 +594,7 @@ namespace TencentCloud
                     bool m_backupStandbyDaysHasBeenSet;
 
                     /**
-                     * Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
                      */
                     std::string m_enableBinlogStandby;
                     bool m_enableBinlogStandbyHasBeenSet;

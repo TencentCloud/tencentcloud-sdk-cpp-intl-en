@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp, such as 1585142640.
-                     * @return StartTime Start timestamp, such as 1585142640.
+                     * 获取Start timestamp. For example, 1585142640, in seconds.
+                     * @return StartTime Start timestamp. For example, 1585142640, in seconds.
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start timestamp, such as 1585142640.
-                     * @param _startTime Start timestamp, such as 1585142640.
+                     * 设置Start timestamp. For example, 1585142640, in seconds.
+                     * @param _startTime Start timestamp. For example, 1585142640, in seconds.
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp, such as 1585142640.
-                     * @return EndTime End timestamp, such as 1585142640.
+                     * 获取End timestamp. For example, 1585142640, in seconds.
+                     * @return EndTime End timestamp. For example, 1585142640, in seconds.
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp, such as 1585142640.
-                     * @param _endTime End timestamp, such as 1585142640.
+                     * 设置End timestamp. For example, 1585142640, in seconds.
+                     * @param _endTime End timestamp. For example, 1585142640, in seconds.
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of keywords to match. Up to 15 keywords are supported.
-                     * @return KeyWords List of keywords to match. Up to 15 keywords are supported.
+                     * 获取Keyword list to match, supports up to 15 keywords with fuzzy matching support.
+                     * @return KeyWords Keyword list to match, supports up to 15 keywords with fuzzy matching support.
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置List of keywords to match. Up to 15 keywords are supported.
-                     * @param _keyWords List of keywords to match. Up to 15 keywords are supported.
+                     * 设置Keyword list to match, supports up to 15 keywords with fuzzy matching support.
+                     * @param _keyWords Keyword list to match, supports up to 15 keywords with fuzzy matching support.
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -192,25 +192,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start timestamp, such as 1585142640.
+                     * Start timestamp. For example, 1585142640, in seconds.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End timestamp, such as 1585142640.
+                     * End timestamp. For example, 1585142640, in seconds.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * List of keywords to match. Up to 15 keywords are supported.
+                     * Keyword list to match, supports up to 15 keywords with fuzzy matching support.
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;

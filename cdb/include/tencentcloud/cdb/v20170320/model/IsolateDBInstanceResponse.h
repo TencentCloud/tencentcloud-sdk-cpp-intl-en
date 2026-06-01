@@ -44,26 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * 获取Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
+                     * @return AsyncRequestId Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
+                     * @deprecated
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

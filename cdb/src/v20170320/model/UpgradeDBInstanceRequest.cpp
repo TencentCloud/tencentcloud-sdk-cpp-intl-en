@@ -39,7 +39,11 @@ UpgradeDBInstanceRequest::UpgradeDBInstanceRequest() :
     m_maxDelayTimeHasBeenSet(false),
     m_crossClusterHasBeenSet(false),
     m_zoneIdHasBeenSet(false),
-    m_roTransTypeHasBeenSet(false)
+    m_roTransTypeHasBeenSet(false),
+    m_clusterTopologyHasBeenSet(false),
+    m_checkFastUpgradeRebootHasBeenSet(false),
+    m_dataCheckSensitiveHasBeenSet(false),
+    m_fourthZoneHasBeenSet(false)
 {
 }
 
@@ -184,6 +188,39 @@ string UpgradeDBInstanceRequest::ToJsonString() const
         string key = "RoTransType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_roTransType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterTopologyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterTopology";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_clusterTopology.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_checkFastUpgradeRebootHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CheckFastUpgradeReboot";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_checkFastUpgradeReboot, allocator);
+    }
+
+    if (m_dataCheckSensitiveHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataCheckSensitive";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dataCheckSensitive.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fourthZoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FourthZone";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_fourthZone.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -464,6 +501,70 @@ void UpgradeDBInstanceRequest::SetRoTransType(const string& _roTransType)
 bool UpgradeDBInstanceRequest::RoTransTypeHasBeenSet() const
 {
     return m_roTransTypeHasBeenSet;
+}
+
+ClusterTopology UpgradeDBInstanceRequest::GetClusterTopology() const
+{
+    return m_clusterTopology;
+}
+
+void UpgradeDBInstanceRequest::SetClusterTopology(const ClusterTopology& _clusterTopology)
+{
+    m_clusterTopology = _clusterTopology;
+    m_clusterTopologyHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::ClusterTopologyHasBeenSet() const
+{
+    return m_clusterTopologyHasBeenSet;
+}
+
+int64_t UpgradeDBInstanceRequest::GetCheckFastUpgradeReboot() const
+{
+    return m_checkFastUpgradeReboot;
+}
+
+void UpgradeDBInstanceRequest::SetCheckFastUpgradeReboot(const int64_t& _checkFastUpgradeReboot)
+{
+    m_checkFastUpgradeReboot = _checkFastUpgradeReboot;
+    m_checkFastUpgradeRebootHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::CheckFastUpgradeRebootHasBeenSet() const
+{
+    return m_checkFastUpgradeRebootHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetDataCheckSensitive() const
+{
+    return m_dataCheckSensitive;
+}
+
+void UpgradeDBInstanceRequest::SetDataCheckSensitive(const string& _dataCheckSensitive)
+{
+    m_dataCheckSensitive = _dataCheckSensitive;
+    m_dataCheckSensitiveHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::DataCheckSensitiveHasBeenSet() const
+{
+    return m_dataCheckSensitiveHasBeenSet;
+}
+
+string UpgradeDBInstanceRequest::GetFourthZone() const
+{
+    return m_fourthZone;
+}
+
+void UpgradeDBInstanceRequest::SetFourthZone(const string& _fourthZone)
+{
+    m_fourthZone = _fourthZone;
+    m_fourthZoneHasBeenSet = true;
+}
+
+bool UpgradeDBInstanceRequest::FourthZoneHasBeenSet() const
+{
+    return m_fourthZoneHasBeenSet;
 }
 
 

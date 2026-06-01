@@ -490,6 +490,56 @@ CdbClient::CloseCdbProxyAddressOutcomeCallable CdbClient::CloseCdbProxyAddressCa
     return prom->get_future();
 }
 
+CdbClient::CloseSSLOutcome CdbClient::CloseSSL(const CloseSSLRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloseSSL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloseSSLResponse rsp = CloseSSLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloseSSLOutcome(rsp);
+        else
+            return CloseSSLOutcome(o.GetError());
+    }
+    else
+    {
+        return CloseSSLOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CloseSSLAsync(const CloseSSLRequest& request, const CloseSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CloseSSLRequest&;
+    using Resp = CloseSSLResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CloseSSL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::CloseSSLOutcomeCallable CdbClient::CloseSSLCallable(const CloseSSLRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CloseSSLOutcome>>();
+    CloseSSLAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const CloseSSLRequest&,
+        CloseSSLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::CloseWanServiceOutcome CdbClient::CloseWanService(const CloseWanServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "CloseWanService");
@@ -1540,6 +1590,56 @@ CdbClient::DeleteBackupOutcomeCallable CdbClient::DeleteBackupCallable(const Del
     return prom->get_future();
 }
 
+CdbClient::DeleteDatabaseOutcome CdbClient::DeleteDatabase(const DeleteDatabaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDatabase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDatabaseResponse rsp = DeleteDatabaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDatabaseOutcome(rsp);
+        else
+            return DeleteDatabaseOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDatabaseOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DeleteDatabaseAsync(const DeleteDatabaseRequest& request, const DeleteDatabaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDatabaseRequest&;
+    using Resp = DeleteDatabaseResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDatabase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DeleteDatabaseOutcomeCallable CdbClient::DeleteDatabaseCallable(const DeleteDatabaseRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDatabaseOutcome>>();
+    DeleteDatabaseAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DeleteDatabaseRequest&,
+        DeleteDatabaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DeleteParamTemplateOutcome CdbClient::DeleteParamTemplate(const DeleteParamTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteParamTemplate");
@@ -1582,6 +1682,56 @@ CdbClient::DeleteParamTemplateOutcomeCallable CdbClient::DeleteParamTemplateCall
         const CdbClient*,
         const DeleteParamTemplateRequest&,
         DeleteParamTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DeleteRotationPasswordOutcome CdbClient::DeleteRotationPassword(const DeleteRotationPasswordRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRotationPassword");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRotationPasswordResponse rsp = DeleteRotationPasswordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRotationPasswordOutcome(rsp);
+        else
+            return DeleteRotationPasswordOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRotationPasswordOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DeleteRotationPasswordAsync(const DeleteRotationPasswordRequest& request, const DeleteRotationPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRotationPasswordRequest&;
+    using Resp = DeleteRotationPasswordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRotationPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DeleteRotationPasswordOutcomeCallable CdbClient::DeleteRotationPasswordCallable(const DeleteRotationPasswordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRotationPasswordOutcome>>();
+    DeleteRotationPasswordAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DeleteRotationPasswordRequest&,
+        DeleteRotationPasswordOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2640,6 +2790,56 @@ CdbClient::DescribeBinlogsOutcomeCallable CdbClient::DescribeBinlogsCallable(con
     return prom->get_future();
 }
 
+CdbClient::DescribeCPUExpandStrategyInfoOutcome CdbClient::DescribeCPUExpandStrategyInfo(const DescribeCPUExpandStrategyInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCPUExpandStrategyInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCPUExpandStrategyInfoResponse rsp = DescribeCPUExpandStrategyInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCPUExpandStrategyInfoOutcome(rsp);
+        else
+            return DescribeCPUExpandStrategyInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCPUExpandStrategyInfoOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeCPUExpandStrategyInfoAsync(const DescribeCPUExpandStrategyInfoRequest& request, const DescribeCPUExpandStrategyInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCPUExpandStrategyInfoRequest&;
+    using Resp = DescribeCPUExpandStrategyInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCPUExpandStrategyInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeCPUExpandStrategyInfoOutcomeCallable CdbClient::DescribeCPUExpandStrategyInfoCallable(const DescribeCPUExpandStrategyInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCPUExpandStrategyInfoOutcome>>();
+    DescribeCPUExpandStrategyInfoAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeCPUExpandStrategyInfoRequest&,
+        DescribeCPUExpandStrategyInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DescribeCdbProxyInfoOutcome CdbClient::DescribeCdbProxyInfo(const DescribeCdbProxyInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCdbProxyInfo");
@@ -2782,56 +2982,6 @@ CdbClient::DescribeCloneListOutcomeCallable CdbClient::DescribeCloneListCallable
         const CdbClient*,
         const DescribeCloneListRequest&,
         DescribeCloneListOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CdbClient::DescribeCpuExpandStrategyOutcome CdbClient::DescribeCpuExpandStrategy(const DescribeCpuExpandStrategyRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeCpuExpandStrategy");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeCpuExpandStrategyResponse rsp = DescribeCpuExpandStrategyResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeCpuExpandStrategyOutcome(rsp);
-        else
-            return DescribeCpuExpandStrategyOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeCpuExpandStrategyOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DescribeCpuExpandStrategyAsync(const DescribeCpuExpandStrategyRequest& request, const DescribeCpuExpandStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DescribeCpuExpandStrategyRequest&;
-    using Resp = DescribeCpuExpandStrategyResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DescribeCpuExpandStrategy", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CdbClient::DescribeCpuExpandStrategyOutcomeCallable CdbClient::DescribeCpuExpandStrategyCallable(const DescribeCpuExpandStrategyRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DescribeCpuExpandStrategyOutcome>>();
-    DescribeCpuExpandStrategyAsync(
-    request,
-    [prom](
-        const CdbClient*,
-        const DescribeCpuExpandStrategyRequest&,
-        DescribeCpuExpandStrategyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3690,6 +3840,56 @@ CdbClient::DescribeErrorLogDataOutcomeCallable CdbClient::DescribeErrorLogDataCa
     return prom->get_future();
 }
 
+CdbClient::DescribeInstanceAlarmEventsOutcome CdbClient::DescribeInstanceAlarmEvents(const DescribeInstanceAlarmEventsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceAlarmEvents");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceAlarmEventsResponse rsp = DescribeInstanceAlarmEventsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceAlarmEventsOutcome(rsp);
+        else
+            return DescribeInstanceAlarmEventsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceAlarmEventsOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeInstanceAlarmEventsAsync(const DescribeInstanceAlarmEventsRequest& request, const DescribeInstanceAlarmEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceAlarmEventsRequest&;
+    using Resp = DescribeInstanceAlarmEventsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceAlarmEvents", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeInstanceAlarmEventsOutcomeCallable CdbClient::DescribeInstanceAlarmEventsCallable(const DescribeInstanceAlarmEventsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceAlarmEventsOutcome>>();
+    DescribeInstanceAlarmEventsAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeInstanceAlarmEventsRequest&,
+        DescribeInstanceAlarmEventsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DescribeInstanceParamRecordsOutcome CdbClient::DescribeInstanceParamRecords(const DescribeInstanceParamRecordsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceParamRecords");
@@ -3782,6 +3982,156 @@ CdbClient::DescribeInstanceParamsOutcomeCallable CdbClient::DescribeInstancePara
         const CdbClient*,
         const DescribeInstanceParamsRequest&,
         DescribeInstanceParamsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeInstancePasswordComplexityOutcome CdbClient::DescribeInstancePasswordComplexity(const DescribeInstancePasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstancePasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstancePasswordComplexityResponse rsp = DescribeInstancePasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstancePasswordComplexityOutcome(rsp);
+        else
+            return DescribeInstancePasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstancePasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeInstancePasswordComplexityAsync(const DescribeInstancePasswordComplexityRequest& request, const DescribeInstancePasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstancePasswordComplexityRequest&;
+    using Resp = DescribeInstancePasswordComplexityResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstancePasswordComplexity", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeInstancePasswordComplexityOutcomeCallable CdbClient::DescribeInstancePasswordComplexityCallable(const DescribeInstancePasswordComplexityRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstancePasswordComplexityOutcome>>();
+    DescribeInstancePasswordComplexityAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeInstancePasswordComplexityRequest&,
+        DescribeInstancePasswordComplexityOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeInstanceUpgradeCheckJobOutcome CdbClient::DescribeInstanceUpgradeCheckJob(const DescribeInstanceUpgradeCheckJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceUpgradeCheckJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceUpgradeCheckJobResponse rsp = DescribeInstanceUpgradeCheckJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceUpgradeCheckJobOutcome(rsp);
+        else
+            return DescribeInstanceUpgradeCheckJobOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceUpgradeCheckJobOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeInstanceUpgradeCheckJobAsync(const DescribeInstanceUpgradeCheckJobRequest& request, const DescribeInstanceUpgradeCheckJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceUpgradeCheckJobRequest&;
+    using Resp = DescribeInstanceUpgradeCheckJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceUpgradeCheckJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeInstanceUpgradeCheckJobOutcomeCallable CdbClient::DescribeInstanceUpgradeCheckJobCallable(const DescribeInstanceUpgradeCheckJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceUpgradeCheckJobOutcome>>();
+    DescribeInstanceUpgradeCheckJobAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeInstanceUpgradeCheckJobRequest&,
+        DescribeInstanceUpgradeCheckJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeInstanceUpgradeTypeOutcome CdbClient::DescribeInstanceUpgradeType(const DescribeInstanceUpgradeTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceUpgradeType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceUpgradeTypeResponse rsp = DescribeInstanceUpgradeTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceUpgradeTypeOutcome(rsp);
+        else
+            return DescribeInstanceUpgradeTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceUpgradeTypeOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeInstanceUpgradeTypeAsync(const DescribeInstanceUpgradeTypeRequest& request, const DescribeInstanceUpgradeTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInstanceUpgradeTypeRequest&;
+    using Resp = DescribeInstanceUpgradeTypeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInstanceUpgradeType", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeInstanceUpgradeTypeOutcomeCallable CdbClient::DescribeInstanceUpgradeTypeCallable(const DescribeInstanceUpgradeTypeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInstanceUpgradeTypeOutcome>>();
+    DescribeInstanceUpgradeTypeAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeInstanceUpgradeTypeRequest&,
+        DescribeInstanceUpgradeTypeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4532,6 +4882,56 @@ CdbClient::DescribeSupportedPrivilegesOutcomeCallable CdbClient::DescribeSupport
         const CdbClient*,
         const DescribeSupportedPrivilegesRequest&,
         DescribeSupportedPrivilegesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::DescribeTableColumnsOutcome CdbClient::DescribeTableColumns(const DescribeTableColumnsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTableColumns");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTableColumnsResponse rsp = DescribeTableColumnsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTableColumnsOutcome(rsp);
+        else
+            return DescribeTableColumnsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTableColumnsOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeTableColumnsAsync(const DescribeTableColumnsRequest& request, const DescribeTableColumnsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTableColumnsRequest&;
+    using Resp = DescribeTableColumnsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTableColumns", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeTableColumnsOutcomeCallable CdbClient::DescribeTableColumnsCallable(const DescribeTableColumnsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTableColumnsOutcome>>();
+    DescribeTableColumnsAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeTableColumnsRequest&,
+        DescribeTableColumnsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -5640,6 +6040,56 @@ CdbClient::ModifyDBInstanceLogToCLSOutcomeCallable CdbClient::ModifyDBInstanceLo
     return prom->get_future();
 }
 
+CdbClient::ModifyDBInstanceModesOutcome CdbClient::ModifyDBInstanceModes(const ModifyDBInstanceModesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceModes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceModesResponse rsp = ModifyDBInstanceModesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceModesOutcome(rsp);
+        else
+            return ModifyDBInstanceModesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceModesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyDBInstanceModesAsync(const ModifyDBInstanceModesRequest& request, const ModifyDBInstanceModesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDBInstanceModesRequest&;
+    using Resp = ModifyDBInstanceModesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceModes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyDBInstanceModesOutcomeCallable CdbClient::ModifyDBInstanceModesCallable(const ModifyDBInstanceModesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceModesOutcome>>();
+    ModifyDBInstanceModesAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyDBInstanceModesRequest&,
+        ModifyDBInstanceModesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::ModifyDBInstanceNameOutcome CdbClient::ModifyDBInstanceName(const ModifyDBInstanceNameRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDBInstanceName");
@@ -6140,6 +6590,56 @@ CdbClient::ModifyParamTemplateOutcomeCallable CdbClient::ModifyParamTemplateCall
     return prom->get_future();
 }
 
+CdbClient::ModifyProtectModeOutcome CdbClient::ModifyProtectMode(const ModifyProtectModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyProtectMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyProtectModeResponse rsp = ModifyProtectModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyProtectModeOutcome(rsp);
+        else
+            return ModifyProtectModeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyProtectModeOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyProtectModeAsync(const ModifyProtectModeRequest& request, const ModifyProtectModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyProtectModeRequest&;
+    using Resp = ModifyProtectModeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyProtectMode", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyProtectModeOutcomeCallable CdbClient::ModifyProtectModeCallable(const ModifyProtectModeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyProtectModeOutcome>>();
+    ModifyProtectModeAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyProtectModeRequest&,
+        ModifyProtectModeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::ModifyRemoteBackupConfigOutcome CdbClient::ModifyRemoteBackupConfig(const ModifyRemoteBackupConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyRemoteBackupConfig");
@@ -6232,6 +6732,56 @@ CdbClient::ModifyRoGroupInfoOutcomeCallable CdbClient::ModifyRoGroupInfoCallable
         const CdbClient*,
         const ModifyRoGroupInfoRequest&,
         ModifyRoGroupInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::ModifyRoGroupVipVportOutcome CdbClient::ModifyRoGroupVipVport(const ModifyRoGroupVipVportRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRoGroupVipVport");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRoGroupVipVportResponse rsp = ModifyRoGroupVipVportResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRoGroupVipVportOutcome(rsp);
+        else
+            return ModifyRoGroupVipVportOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRoGroupVipVportOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyRoGroupVipVportAsync(const ModifyRoGroupVipVportRequest& request, const ModifyRoGroupVipVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRoGroupVipVportRequest&;
+    using Resp = ModifyRoGroupVipVportResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRoGroupVipVport", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ModifyRoGroupVipVportOutcomeCallable CdbClient::ModifyRoGroupVipVportCallable(const ModifyRoGroupVipVportRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRoGroupVipVportOutcome>>();
+    ModifyRoGroupVipVportAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ModifyRoGroupVipVportRequest&,
+        ModifyRoGroupVipVportOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6490,6 +7040,56 @@ CdbClient::OpenDBInstanceGTIDOutcomeCallable CdbClient::OpenDBInstanceGTIDCallab
     return prom->get_future();
 }
 
+CdbClient::OpenSSLOutcome CdbClient::OpenSSL(const OpenSSLRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenSSL");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenSSLResponse rsp = OpenSSLResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenSSLOutcome(rsp);
+        else
+            return OpenSSLOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenSSLOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::OpenSSLAsync(const OpenSSLRequest& request, const OpenSSLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const OpenSSLRequest&;
+    using Resp = OpenSSLResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "OpenSSL", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::OpenSSLOutcomeCallable CdbClient::OpenSSLCallable(const OpenSSLRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<OpenSSLOutcome>>();
+    OpenSSLAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const OpenSSLRequest&,
+        OpenSSLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::OpenWanServiceOutcome CdbClient::OpenWanService(const OpenWanServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "OpenWanService");
@@ -6682,6 +7282,56 @@ CdbClient::RenewDBInstanceOutcomeCallable CdbClient::RenewDBInstanceCallable(con
         const CdbClient*,
         const RenewDBInstanceRequest&,
         RenewDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::ResetPasswordOutcome CdbClient::ResetPassword(const ResetPasswordRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetPassword");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetPasswordResponse rsp = ResetPasswordResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetPasswordOutcome(rsp);
+        else
+            return ResetPasswordOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetPasswordOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ResetPasswordAsync(const ResetPasswordRequest& request, const ResetPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetPasswordRequest&;
+    using Resp = ResetPasswordResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetPassword", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::ResetPasswordOutcomeCallable CdbClient::ResetPasswordCallable(const ResetPasswordRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetPasswordOutcome>>();
+    ResetPasswordAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const ResetPasswordRequest&,
+        ResetPasswordOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -7132,6 +7782,56 @@ CdbClient::StopRollbackOutcomeCallable CdbClient::StopRollbackCallable(const Sto
         const CdbClient*,
         const StopRollbackRequest&,
         StopRollbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CdbClient::SubmitInstanceUpgradeCheckJobOutcome CdbClient::SubmitInstanceUpgradeCheckJob(const SubmitInstanceUpgradeCheckJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "SubmitInstanceUpgradeCheckJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SubmitInstanceUpgradeCheckJobResponse rsp = SubmitInstanceUpgradeCheckJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SubmitInstanceUpgradeCheckJobOutcome(rsp);
+        else
+            return SubmitInstanceUpgradeCheckJobOutcome(o.GetError());
+    }
+    else
+    {
+        return SubmitInstanceUpgradeCheckJobOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::SubmitInstanceUpgradeCheckJobAsync(const SubmitInstanceUpgradeCheckJobRequest& request, const SubmitInstanceUpgradeCheckJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SubmitInstanceUpgradeCheckJobRequest&;
+    using Resp = SubmitInstanceUpgradeCheckJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SubmitInstanceUpgradeCheckJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::SubmitInstanceUpgradeCheckJobOutcomeCallable CdbClient::SubmitInstanceUpgradeCheckJobCallable(const SubmitInstanceUpgradeCheckJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SubmitInstanceUpgradeCheckJobOutcome>>();
+    SubmitInstanceUpgradeCheckJobAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const SubmitInstanceUpgradeCheckJobRequest&,
+        SubmitInstanceUpgradeCheckJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseName Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _databaseName Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NewDatabaseName New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the rolled back database
+                     * @return NewDatabaseName Name of the rolled back database
                      * 
                      */
                     std::string GetNewDatabaseName() const;
 
                     /**
-                     * 设置New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _newDatabaseName New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the rolled back database
+                     * @param _newDatabaseName Name of the rolled back database
                      * 
                      */
                     void SetNewDatabaseName(const std::string& _newDatabaseName);
@@ -100,14 +92,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_databaseName;
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Name of the rolled back database
                      */
                     std::string m_newDatabaseName;
                     bool m_newDatabaseNameHasBeenSet;

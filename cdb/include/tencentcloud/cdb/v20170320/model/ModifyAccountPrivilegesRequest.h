@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database account, including username and domain name.
-                     * @return Accounts Database account, including username and domain name.
+                     * 获取Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+                     * @return Accounts Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置Database account, including username and domain name.
-                     * @param _accounts Database account, including username and domain name.
+                     * 设置Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+                     * @param _accounts Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
@@ -218,7 +218,7 @@ Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, 
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database account, including username and domain name.
+                     * Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;

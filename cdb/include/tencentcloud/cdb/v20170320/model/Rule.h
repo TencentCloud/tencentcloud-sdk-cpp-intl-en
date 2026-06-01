@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return LessThan The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Division ceiling
+                     * @return LessThan Division ceiling
                      * 
                      */
                     uint64_t GetLessThan() const;
 
                     /**
-                     * 设置The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param _lessThan The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 设置Division ceiling
+                     * @param _lessThan Division ceiling
                      * 
                      */
                     void SetLessThan(const uint64_t& _lessThan);
@@ -73,18 +69,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
                     /**
                      * 获取Weight
-Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Weight Weight
-Note: this field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight
-Note: this field may return `null`, indicating that no valid value can be found.
                      * @param _weight Weight
-Note: this field may return `null`, indicating that no valid value can be found.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -99,15 +91,13 @@ Note: this field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Division ceiling
                      */
                     uint64_t m_lessThan;
                     bool m_lessThanHasBeenSet;
 
                     /**
                      * Weight
-Note: this field may return `null`, indicating that no valid value can be found.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of short instance IDs.
-                     * @return InstanceIds List of short instance IDs.
+                     * 获取Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @return InstanceIds Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of short instance IDs.
-                     * @param _instanceIds List of short instance IDs.
+                     * 设置Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * @param _instanceIds Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ParamListHasBeenSet() const;
 
                     /**
-                     * 获取Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
-                     * @return TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+                     * 获取Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+                     * @return TemplateId Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
-                     * 设置Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
-                     * @param _templateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+                     * 设置Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+                     * @param _templateId Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
                      * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
@@ -172,7 +172,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of short instance IDs.
+                     * Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -184,7 +184,7 @@ namespace TencentCloud
                     bool m_paramListHasBeenSet;
 
                     /**
-                     * Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+                     * Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
                      */
                     int64_t m_templateId;
                     bool m_templateIdHasBeenSet;

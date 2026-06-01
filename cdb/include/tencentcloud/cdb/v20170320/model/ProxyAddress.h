@@ -153,15 +153,19 @@ namespace TencentCloud
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+                     * @return WeightMode Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
                      * 
                      */
                     std::string GetWeightMode() const;
 
                     /**
-                     * 设置Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _weightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+                     * @param _weightMode Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
                      * 
                      */
                     void SetWeightMode(const std::string& _weightMode);
@@ -174,15 +178,15 @@ namespace TencentCloud
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable delay removal. Parameter value: "true" | "false"
+                     * @return IsKickOut Whether to enable delay removal. Parameter value: "true" | "false"
                      * 
                      */
                     bool GetIsKickOut() const;
 
                     /**
-                     * 设置Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable delay removal. Parameter value: "true" | "false"
+                     * @param _isKickOut Whether to enable delay removal. Parameter value: "true" | "false"
                      * 
                      */
                     void SetIsKickOut(const bool& _isKickOut);
@@ -195,15 +199,15 @@ namespace TencentCloud
                     bool IsKickOutHasBeenSet() const;
 
                     /**
-                     * 获取Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MinCount Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum retention quantity, minimum value: 0.
+                     * @return MinCount Minimum retention quantity, minimum value: 0.
                      * 
                      */
                     uint64_t GetMinCount() const;
 
                     /**
-                     * 设置Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _minCount Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum retention quantity, minimum value: 0.
+                     * @param _minCount Minimum retention quantity, minimum value: 0.
                      * 
                      */
                     void SetMinCount(const uint64_t& _minCount);
@@ -216,15 +220,15 @@ namespace TencentCloud
                     bool MinCountHasBeenSet() const;
 
                     /**
-                     * 获取The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxDelay The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Delay removal threshold, minimum value: 0
+                     * @return MaxDelay Delay removal threshold, minimum value: 0
                      * 
                      */
                     uint64_t GetMaxDelay() const;
 
                     /**
-                     * 设置The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxDelay The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Delay removal threshold, minimum value: 0
+                     * @param _maxDelay Delay removal threshold, minimum value: 0
                      * 
                      */
                     void SetMaxDelay(const uint64_t& _maxDelay);
@@ -237,15 +241,15 @@ namespace TencentCloud
                     bool MaxDelayHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Automatically add RO. Value: "true" | "false"
+                     * @return AutoAddRo Automatically add RO. Value: "true" | "false"
                      * 
                      */
                     bool GetAutoAddRo() const;
 
                     /**
-                     * 设置Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _autoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Automatically add RO. Value: "true" | "false"
+                     * @param _autoAddRo Automatically add RO. Value: "true" | "false"
                      * 
                      */
                     void SetAutoAddRo(const bool& _autoAddRo);
@@ -258,15 +262,15 @@ namespace TencentCloud
                     bool AutoAddRoHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadOnly Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is read-only. Value: "true" | "false".
+                     * @return ReadOnly Whether it is read-only. Value: "true" | "false".
                      * 
                      */
                     bool GetReadOnly() const;
 
                     /**
-                     * 设置Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readOnly Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is read-only. Value: "true" | "false".
+                     * @param _readOnly Whether it is read-only. Value: "true" | "false".
                      * 
                      */
                     void SetReadOnly(const bool& _readOnly);
@@ -279,15 +283,15 @@ namespace TencentCloud
                     bool ReadOnlyHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransSplit Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether transaction splitting is enabled
+                     * @return TransSplit Whether transaction splitting is enabled
                      * 
                      */
                     bool GetTransSplit() const;
 
                     /**
-                     * 设置Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transSplit Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether transaction splitting is enabled
+                     * @param _transSplit Whether transaction splitting is enabled
                      * 
                      */
                     void SetTransSplit(const bool& _transSplit);
@@ -300,15 +304,15 @@ namespace TencentCloud
                     bool TransSplitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailOver Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether fault migration is enabled
+                     * @return FailOver Whether fault migration is enabled
                      * 
                      */
                     bool GetFailOver() const;
 
                     /**
-                     * 设置Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _failOver Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether fault migration is enabled
+                     * @param _failOver Whether fault migration is enabled
                      * 
                      */
                     void SetFailOver(const bool& _failOver);
@@ -321,15 +325,15 @@ namespace TencentCloud
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConnectionPool Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable connection pool
+                     * @return ConnectionPool Whether to enable connection pool
                      * 
                      */
                     bool GetConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _connectionPool Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable connection pool
+                     * @param _connectionPool Whether to enable connection pool
                      * 
                      */
                     void SetConnectionPool(const bool& _connectionPool);
@@ -342,15 +346,15 @@ namespace TencentCloud
                     bool ConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @return Desc Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 获取Description
+                     * @return Desc Description
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置Note:  This field may return null, indicating that no valid values can be obtained.
-                     * @param _desc Note:  This field may return null, indicating that no valid values can be obtained.
+                     * 设置Description
+                     * @param _desc Description
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -363,15 +367,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyAllocation Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read weight distribution of an instance
+                     * @return ProxyAllocation Read weight distribution of an instance
                      * 
                      */
                     std::vector<ProxyAllocation> GetProxyAllocation() const;
 
                     /**
-                     * 设置Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyAllocation Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read weight distribution of an instance
+                     * @param _proxyAllocation Read weight distribution of an instance
                      * 
                      */
                     void SetProxyAllocation(const std::vector<ProxyAllocation>& _proxyAllocation);
@@ -382,6 +386,90 @@ namespace TencentCloud
                      * 
                      */
                     bool ProxyAllocationHasBeenSet() const;
+
+                    /**
+                     * 获取Access mode
+                     * @return AccessMode Access mode
+                     * 
+                     */
+                    std::string GetAccessMode() const;
+
+                    /**
+                     * 设置Access mode
+                     * @param _accessMode Access mode
+                     * 
+                     */
+                    void SetAccessMode(const std::string& _accessMode);
+
+                    /**
+                     * 判断参数 AccessMode 是否已赋值
+                     * @return AccessMode 是否已赋值
+                     * 
+                     */
+                    bool AccessModeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether automatic CLB is enabled
+                     * @return AutoLoadBalance Whether automatic CLB is enabled
+                     * 
+                     */
+                    bool GetAutoLoadBalance() const;
+
+                    /**
+                     * 设置Whether automatic CLB is enabled
+                     * @param _autoLoadBalance Whether automatic CLB is enabled
+                     * 
+                     */
+                    void SetAutoLoadBalance(const bool& _autoLoadBalance);
+
+                    /**
+                     * 判断参数 AutoLoadBalance 是否已赋值
+                     * @return AutoLoadBalance 是否已赋值
+                     * 
+                     */
+                    bool AutoLoadBalanceHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to treat libra as a read-only node
+                     * @return ApNodeAsRoNode Whether to treat libra as a read-only node
+                     * 
+                     */
+                    bool GetApNodeAsRoNode() const;
+
+                    /**
+                     * 设置Whether to treat libra as a read-only node
+                     * @param _apNodeAsRoNode Whether to treat libra as a read-only node
+                     * 
+                     */
+                    void SetApNodeAsRoNode(const bool& _apNodeAsRoNode);
+
+                    /**
+                     * 判断参数 ApNodeAsRoNode 是否已赋值
+                     * @return ApNodeAsRoNode 是否已赋值
+                     * 
+                     */
+                    bool ApNodeAsRoNodeHasBeenSet() const;
+
+                    /**
+                     * 获取libra node fault, whether to forward to other nodes
+                     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    bool GetApQueryToOtherNode() const;
+
+                    /**
+                     * 设置libra node fault, whether to forward to other nodes
+                     * @param _apQueryToOtherNode libra node fault, whether to forward to other nodes
+                     * 
+                     */
+                    void SetApQueryToOtherNode(const bool& _apQueryToOtherNode);
+
+                    /**
+                     * 判断参数 ApQueryToOtherNode 是否已赋值
+                     * @return ApQueryToOtherNode 是否已赋值
+                     * 
+                     */
+                    bool ApQueryToOtherNodeHasBeenSet() const;
 
                 private:
 
@@ -416,70 +504,95 @@ namespace TencentCloud
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable delay removal. Parameter value: "true" | "false"
                      */
                     bool m_isKickOut;
                     bool m_isKickOutHasBeenSet;
 
                     /**
-                     * Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum retention quantity, minimum value: 0.
                      */
                     uint64_t m_minCount;
                     bool m_minCountHasBeenSet;
 
                     /**
-                     * The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Delay removal threshold, minimum value: 0
                      */
                     uint64_t m_maxDelay;
                     bool m_maxDelayHasBeenSet;
 
                     /**
-                     * Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Automatically add RO. Value: "true" | "false"
                      */
                     bool m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;
 
                     /**
-                     * Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is read-only. Value: "true" | "false".
                      */
                     bool m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
-                     * Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether transaction splitting is enabled
                      */
                     bool m_transSplit;
                     bool m_transSplitHasBeenSet;
 
                     /**
-                     * Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether fault migration is enabled
                      */
                     bool m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable connection pool
                      */
                     bool m_connectionPool;
                     bool m_connectionPoolHasBeenSet;
 
                     /**
-                     * Note:  This field may return null, indicating that no valid values can be obtained.
+                     * Description
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read weight distribution of an instance
                      */
                     std::vector<ProxyAllocation> m_proxyAllocation;
                     bool m_proxyAllocationHasBeenSet;
+
+                    /**
+                     * Access mode
+                     */
+                    std::string m_accessMode;
+                    bool m_accessModeHasBeenSet;
+
+                    /**
+                     * Whether automatic CLB is enabled
+                     */
+                    bool m_autoLoadBalance;
+                    bool m_autoLoadBalanceHasBeenSet;
+
+                    /**
+                     * Whether to treat libra as a read-only node
+                     */
+                    bool m_apNodeAsRoNode;
+                    bool m_apNodeAsRoNodeHasBeenSet;
+
+                    /**
+                     * libra node fault, whether to forward to other nodes
+                     */
+                    bool m_apQueryToOtherNode;
+                    bool m_apQueryToOtherNodeHasBeenSet;
 
                 };
             }

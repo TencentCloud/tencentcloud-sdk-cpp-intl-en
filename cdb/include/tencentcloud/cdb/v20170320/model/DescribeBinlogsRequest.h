@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Value range: 1-100. Default value: 20.
-                     * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
+                     * 获取Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+                     * @return Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Value range: 1-100. Default value: 20.
-                     * @param _limit Number of entries per page. Value range: 1-100. Default value: 20.
+                     * 设置Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+                     * @param _limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -147,6 +147,27 @@ namespace TencentCloud
                      */
                     bool MaxStartTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the binlog list contains the starting node MinStartTime, no by default
+                     * @return ContainsMinStartTime Whether the binlog list contains the starting node MinStartTime, no by default
+                     * 
+                     */
+                    bool GetContainsMinStartTime() const;
+
+                    /**
+                     * 设置Whether the binlog list contains the starting node MinStartTime, no by default
+                     * @param _containsMinStartTime Whether the binlog list contains the starting node MinStartTime, no by default
+                     * 
+                     */
+                    void SetContainsMinStartTime(const bool& _containsMinStartTime);
+
+                    /**
+                     * 判断参数 ContainsMinStartTime 是否已赋值
+                     * @return ContainsMinStartTime 是否已赋值
+                     * 
+                     */
+                    bool ContainsMinStartTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -162,7 +183,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Value range: 1-100. Default value: 20.
+                     * Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -178,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_maxStartTime;
                     bool m_maxStartTimeHasBeenSet;
+
+                    /**
+                     * Whether the binlog list contains the starting node MinStartTime, no by default
+                     */
+                    bool m_containsMinStartTime;
+                    bool m_containsMinStartTimeHasBeenSet;
 
                 };
             }

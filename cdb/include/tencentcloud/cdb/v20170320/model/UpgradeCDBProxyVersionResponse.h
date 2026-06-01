@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Async Processing ID
+                     * @return AsyncRequestId Async Processing ID
                      * 
                      */
                     std::string GetAsyncRequestId() const;
@@ -62,8 +60,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
                 private:
 
                     /**
-                     * Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Async Processing ID
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

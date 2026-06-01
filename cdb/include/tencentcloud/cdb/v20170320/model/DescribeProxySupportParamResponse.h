@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyVersion The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Proxy supports the maximum version
+                     * @return ProxyVersion Proxy supports the maximum version
                      * 
                      */
                     std::string GetProxyVersion() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportPool Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether connection pool is supported
+                     * @return SupportPool Whether connection pool is supported
                      * 
                      */
                     bool GetSupportPool() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool SupportPoolHasBeenSet() const;
 
                     /**
-                     * 获取Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoolMin Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum value of the connection pool
+                     * @return PoolMin Minimum value of the connection pool
                      * 
                      */
                     uint64_t GetPoolMin() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool PoolMinHasBeenSet() const;
 
                     /**
-                     * 获取Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoolMax Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum value of connection pool
+                     * @return PoolMax Maximum value of connection pool
                      * 
                      */
                     uint64_t GetPoolMax() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool PoolMaxHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportTransSplit Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether transaction split is supported
+                     * @return SupportTransSplit Whether transaction split is supported
                      * 
                      */
                     bool GetSupportTransSplit() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool SupportTransSplitHasBeenSet() const;
 
                     /**
-                     * 获取Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportPoolMinVersion Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum proxy version that supports connection pool
+                     * @return SupportPoolMinVersion Minimum proxy version that supports connection pool
                      * 
                      */
                     std::string GetSupportPoolMinVersion() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool SupportPoolMinVersionHasBeenSet() const;
 
                     /**
-                     * 获取Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportTransSplitMinVersion Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum proxy version supporting transaction split
+                     * @return SupportTransSplitMinVersion Minimum proxy version supporting transaction split
                      * 
                      */
                     std::string GetSupportTransSplitMinVersion() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool SupportTransSplitMinVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportReadOnly Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether setting as read-only is supported.
+                     * @return SupportReadOnly Whether setting as read-only is supported.
                      * 
                      */
                     bool GetSupportReadOnly() const;
@@ -155,55 +155,95 @@ namespace TencentCloud
                      */
                     bool SupportReadOnlyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to automatically balance the load
+                     * @return SupportAutoLoadBalance Whether to automatically balance the load
+                     * 
+                     */
+                    bool GetSupportAutoLoadBalance() const;
+
+                    /**
+                     * 判断参数 SupportAutoLoadBalance 是否已赋值
+                     * @return SupportAutoLoadBalance 是否已赋值
+                     * 
+                     */
+                    bool SupportAutoLoadBalanceHasBeenSet() const;
+
+                    /**
+                     * 获取Whether support access mode
+                     * @return SupportAccessMode Whether support access mode
+                     * 
+                     */
+                    bool GetSupportAccessMode() const;
+
+                    /**
+                     * 判断参数 SupportAccessMode 是否已赋值
+                     * @return SupportAccessMode 是否已赋值
+                     * 
+                     */
+                    bool SupportAccessModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The supported maximum proxy version Note: This field may return null, indicating that no valid values can be obtained.
+                     * Proxy supports the maximum version
                      */
                     std::string m_proxyVersion;
                     bool m_proxyVersionHasBeenSet;
 
                     /**
-                     * Whether to support the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether connection pool is supported
                      */
                     bool m_supportPool;
                     bool m_supportPoolHasBeenSet;
 
                     /**
-                     * Minimum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum value of the connection pool
                      */
                     uint64_t m_poolMin;
                     bool m_poolMinHasBeenSet;
 
                     /**
-                     * Maximum connections in the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum value of connection pool
                      */
                     uint64_t m_poolMax;
                     bool m_poolMaxHasBeenSet;
 
                     /**
-                     * Whether to support transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether transaction split is supported
                      */
                     bool m_supportTransSplit;
                     bool m_supportTransSplitHasBeenSet;
 
                     /**
-                     * Minimum proxy version supporting connection pool Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum proxy version that supports connection pool
                      */
                     std::string m_supportPoolMinVersion;
                     bool m_supportPoolMinVersionHasBeenSet;
 
                     /**
-                     * Minimum proxy version supporting transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum proxy version supporting transaction split
                      */
                     std::string m_supportTransSplitMinVersion;
                     bool m_supportTransSplitMinVersionHasBeenSet;
 
                     /**
-                     * Whether read-only mode is supported Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether setting as read-only is supported.
                      */
                     bool m_supportReadOnly;
                     bool m_supportReadOnlyHasBeenSet;
+
+                    /**
+                     * Whether to automatically balance the load
+                     */
+                    bool m_supportAutoLoadBalance;
+                    bool m_supportAutoLoadBalanceHasBeenSet;
+
+                    /**
+                     * Whether support access mode
+                     */
+                    bool m_supportAccessMode;
+                    bool m_supportAccessModeHasBeenSet;
 
                 };
             }

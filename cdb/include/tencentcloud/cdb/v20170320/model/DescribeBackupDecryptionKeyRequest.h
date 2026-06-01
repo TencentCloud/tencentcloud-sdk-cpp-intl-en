@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
-                     * @return InstanceId Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+                     * 获取Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+                     * @return InstanceId Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
-                     * @param _instanceId Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+                     * 设置Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+                     * @param _instanceId Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance backup ID, which can be obtained by the `DescribeBackups` API.
-                     * @return BackupId Instance backup ID, which can be obtained by the `DescribeBackups` API.
+                     * 获取Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+                     * @return BackupId Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
                      * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
-                     * 设置Instance backup ID, which can be obtained by the `DescribeBackups` API.
-                     * @param _backupId Instance backup ID, which can be obtained by the `DescribeBackups` API.
+                     * 设置Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+                     * @param _backupId Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
                      * 
                      */
                     void SetBackupId(const int64_t& _backupId);
@@ -84,19 +84,46 @@ namespace TencentCloud
                      */
                     bool BackupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Backup type. data - data backup, binlog - log backup. The default value is data.
+                     * @return BackupType Backup type. data - data backup, binlog - log backup. The default value is data.
+                     * 
+                     */
+                    std::string GetBackupType() const;
+
+                    /**
+                     * 设置Backup type. data - data backup, binlog - log backup. The default value is data.
+                     * @param _backupType Backup type. data - data backup, binlog - log backup. The default value is data.
+                     * 
+                     */
+                    void SetBackupType(const std::string& _backupType);
+
+                    /**
+                     * 判断参数 BackupType 是否已赋值
+                     * @return BackupType 是否已赋值
+                     * 
+                     */
+                    bool BackupTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+                     * Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance backup ID, which can be obtained by the `DescribeBackups` API.
+                     * Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
                      */
                     int64_t m_backupId;
                     bool m_backupIdHasBeenSet;
+
+                    /**
+                     * Backup type. data - data backup, binlog - log backup. The default value is data.
+                     */
+                    std::string m_backupType;
+                    bool m_backupTypeHasBeenSet;
 
                 };
             }

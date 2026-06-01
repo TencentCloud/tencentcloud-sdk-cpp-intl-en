@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TableName Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Original database table name before rollback
+                     * @return TableName Original database table name before rollback
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
-                     * 设置Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _tableName Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Original database table name before rollback
+                     * @param _tableName Original database table name before rollback
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TableNameHasBeenSet() const;
 
                     /**
-                     * 获取New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NewTableName New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Rolled back database table name
+                     * @return NewTableName Rolled back database table name
                      * 
                      */
                     std::string GetNewTableName() const;
 
                     /**
-                     * 设置New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _newTableName New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Rolled back database table name
+                     * @param _newTableName Rolled back database table name
                      * 
                      */
                     void SetNewTableName(const std::string& _newTableName);
@@ -99,15 +91,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Original table name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Original database table name before rollback
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;
 
                     /**
-                     * New table name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Rolled back database table name
                      */
                     std::string m_newTableName;
                     bool m_newTableNameHasBeenSet;
