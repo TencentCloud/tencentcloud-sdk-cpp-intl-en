@@ -197,6 +197,27 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                      */
                     bool PeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Peer IP address
+                     * @return RemoteIp Peer IP address
+                     * 
+                     */
+                    std::string GetRemoteIp() const;
+
+                    /**
+                     * 设置Peer IP address
+                     * @param _remoteIp Peer IP address
+                     * 
+                     */
+                    void SetRemoteIp(const std::string& _remoteIp);
+
+                    /**
+                     * 判断参数 RemoteIp 是否已赋值
+                     * @return RemoteIp 是否已赋值
+                     * 
+                     */
+                    bool RemoteIpHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +263,12 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
                      */
                     std::string m_period;
                     bool m_periodHasBeenSet;
+
+                    /**
+                     * Peer IP address
+                     */
+                    std::string m_remoteIp;
+                    bool m_remoteIpHasBeenSet;
 
                 };
             }

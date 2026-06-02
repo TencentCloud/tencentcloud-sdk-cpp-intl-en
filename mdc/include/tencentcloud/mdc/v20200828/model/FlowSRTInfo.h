@@ -235,6 +235,321 @@ namespace TencentCloud
                      */
                     bool RecvPacketDropNumberHasBeenSet() const;
 
+                    /**
+                     * 获取bandwidth
+                     * @return Bandwidth bandwidth
+                     * 
+                     */
+                    double GetBandwidth() const;
+
+                    /**
+                     * 设置bandwidth
+                     * @param _bandwidth bandwidth
+                     * 
+                     */
+                    void SetBandwidth(const double& _bandwidth);
+
+                    /**
+                     * 判断参数 Bandwidth 是否已赋值
+                     * @return Bandwidth 是否已赋值
+                     * 
+                     */
+                    bool BandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Transmit bandwidth
+                     * @return SendBandwidth Transmit bandwidth
+                     * 
+                     */
+                    double GetSendBandwidth() const;
+
+                    /**
+                     * 设置Transmit bandwidth
+                     * @param _sendBandwidth Transmit bandwidth
+                     * 
+                     */
+                    void SetSendBandwidth(const double& _sendBandwidth);
+
+                    /**
+                     * 判断参数 SendBandwidth 是否已赋值
+                     * @return SendBandwidth 是否已赋值
+                     * 
+                     */
+                    bool SendBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Receive bandwidth
+                     * @return RecvBandwidth Receive bandwidth
+                     * 
+                     */
+                    double GetRecvBandwidth() const;
+
+                    /**
+                     * 设置Receive bandwidth
+                     * @param _recvBandwidth Receive bandwidth
+                     * 
+                     */
+                    void SetRecvBandwidth(const double& _recvBandwidth);
+
+                    /**
+                     * 判断参数 RecvBandwidth 是否已赋值
+                     * @return RecvBandwidth 是否已赋值
+                     * 
+                     */
+                    bool RecvBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Number of packets sent
+                     * @return SendPackets Number of packets sent
+                     * 
+                     */
+                    int64_t GetSendPackets() const;
+
+                    /**
+                     * 设置Number of packets sent
+                     * @param _sendPackets Number of packets sent
+                     * 
+                     */
+                    void SetSendPackets(const int64_t& _sendPackets);
+
+                    /**
+                     * 判断参数 SendPackets 是否已赋值
+                     * @return SendPackets 是否已赋值
+                     * 
+                     */
+                    bool SendPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Number of received packets
+                     * @return RecvPackets Number of received packets
+                     * 
+                     */
+                    int64_t GetRecvPackets() const;
+
+                    /**
+                     * 设置Number of received packets
+                     * @param _recvPackets Number of received packets
+                     * 
+                     */
+                    void SetRecvPackets(const int64_t& _recvPackets);
+
+                    /**
+                     * 判断参数 RecvPackets 是否已赋值
+                     * @return RecvPackets 是否已赋值
+                     * 
+                     */
+                    bool RecvPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Send lost package
+                     * @return SendLostPackets Send lost package
+                     * 
+                     */
+                    int64_t GetSendLostPackets() const;
+
+                    /**
+                     * 设置Send lost package
+                     * @param _sendLostPackets Send lost package
+                     * 
+                     */
+                    void SetSendLostPackets(const int64_t& _sendLostPackets);
+
+                    /**
+                     * 判断参数 SendLostPackets 是否已赋值
+                     * @return SendLostPackets 是否已赋值
+                     * 
+                     */
+                    bool SendLostPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Accept lost packages
+                     * @return RecvLostPackets Accept lost packages
+                     * 
+                     */
+                    int64_t GetRecvLostPackets() const;
+
+                    /**
+                     * 设置Accept lost packages
+                     * @param _recvLostPackets Accept lost packages
+                     * 
+                     */
+                    void SetRecvLostPackets(const int64_t& _recvLostPackets);
+
+                    /**
+                     * 判断参数 RecvLostPackets 是否已赋值
+                     * @return RecvLostPackets 是否已赋值
+                     * 
+                     */
+                    bool RecvLostPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Number of retransmission packets sent
+                     * @return SendRetransmitPackets Number of retransmission packets sent
+                     * 
+                     */
+                    int64_t GetSendRetransmitPackets() const;
+
+                    /**
+                     * 设置Number of retransmission packets sent
+                     * @param _sendRetransmitPackets Number of retransmission packets sent
+                     * 
+                     */
+                    void SetSendRetransmitPackets(const int64_t& _sendRetransmitPackets);
+
+                    /**
+                     * 判断参数 SendRetransmitPackets 是否已赋值
+                     * @return SendRetransmitPackets 是否已赋值
+                     * 
+                     */
+                    bool SendRetransmitPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Number of received retransmission packets
+                     * @return RecvRetransmitPackets Number of received retransmission packets
+                     * 
+                     */
+                    int64_t GetRecvRetransmitPackets() const;
+
+                    /**
+                     * 设置Number of received retransmission packets
+                     * @param _recvRetransmitPackets Number of received retransmission packets
+                     * 
+                     */
+                    void SetRecvRetransmitPackets(const int64_t& _recvRetransmitPackets);
+
+                    /**
+                     * 判断参数 RecvRetransmitPackets 是否已赋值
+                     * @return RecvRetransmitPackets 是否已赋值
+                     * 
+                     */
+                    bool RecvRetransmitPacketsHasBeenSet() const;
+
+                    /**
+                     * 获取Flight window size
+                     * @return FlightSize Flight window size
+                     * 
+                     */
+                    int64_t GetFlightSize() const;
+
+                    /**
+                     * 设置Flight window size
+                     * @param _flightSize Flight window size
+                     * 
+                     */
+                    void SetFlightSize(const int64_t& _flightSize);
+
+                    /**
+                     * 判断参数 FlightSize 是否已赋值
+                     * @return FlightSize 是否已赋值
+                     * 
+                     */
+                    bool FlightSizeHasBeenSet() const;
+
+                    /**
+                     * 获取congestion window
+                     * @return CongestionWindow congestion window
+                     * 
+                     */
+                    int64_t GetCongestionWindow() const;
+
+                    /**
+                     * 设置congestion window
+                     * @param _congestionWindow congestion window
+                     * 
+                     */
+                    void SetCongestionWindow(const int64_t& _congestionWindow);
+
+                    /**
+                     * 判断参数 CongestionWindow 是否已赋值
+                     * @return CongestionWindow 是否已赋值
+                     * 
+                     */
+                    bool CongestionWindowHasBeenSet() const;
+
+                    /**
+                     * 获取Send buffer (ms)
+                     * @return SendBuffer Send buffer (ms)
+                     * 
+                     */
+                    int64_t GetSendBuffer() const;
+
+                    /**
+                     * 设置Send buffer (ms)
+                     * @param _sendBuffer Send buffer (ms)
+                     * 
+                     */
+                    void SetSendBuffer(const int64_t& _sendBuffer);
+
+                    /**
+                     * 判断参数 SendBuffer 是否已赋值
+                     * @return SendBuffer 是否已赋值
+                     * 
+                     */
+                    bool SendBufferHasBeenSet() const;
+
+                    /**
+                     * 获取Receive buffer (ms)
+                     * @return RecvBuffer Receive buffer (ms)
+                     * 
+                     */
+                    int64_t GetRecvBuffer() const;
+
+                    /**
+                     * 设置Receive buffer (ms)
+                     * @param _recvBuffer Receive buffer (ms)
+                     * 
+                     */
+                    void SetRecvBuffer(const int64_t& _recvBuffer);
+
+                    /**
+                     * 判断参数 RecvBuffer 是否已赋值
+                     * @return RecvBuffer 是否已赋值
+                     * 
+                     */
+                    bool RecvBufferHasBeenSet() const;
+
+                    /**
+                     * 获取Sending delay
+                     * @return SendLatency Sending delay
+                     * 
+                     */
+                    int64_t GetSendLatency() const;
+
+                    /**
+                     * 设置Sending delay
+                     * @param _sendLatency Sending delay
+                     * 
+                     */
+                    void SetSendLatency(const int64_t& _sendLatency);
+
+                    /**
+                     * 判断参数 SendLatency 是否已赋值
+                     * @return SendLatency 是否已赋值
+                     * 
+                     */
+                    bool SendLatencyHasBeenSet() const;
+
+                    /**
+                     * 获取Receiving delay
+                     * @return RecvLatency Receiving delay
+                     * 
+                     */
+                    int64_t GetRecvLatency() const;
+
+                    /**
+                     * 设置Receiving delay
+                     * @param _recvLatency Receiving delay
+                     * 
+                     */
+                    void SetRecvLatency(const int64_t& _recvLatency);
+
+                    /**
+                     * 判断参数 RecvLatency 是否已赋值
+                     * @return RecvLatency 是否已赋值
+                     * 
+                     */
+                    bool RecvLatencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -290,6 +605,96 @@ namespace TencentCloud
                      */
                     int64_t m_recvPacketDropNumber;
                     bool m_recvPacketDropNumberHasBeenSet;
+
+                    /**
+                     * bandwidth
+                     */
+                    double m_bandwidth;
+                    bool m_bandwidthHasBeenSet;
+
+                    /**
+                     * Transmit bandwidth
+                     */
+                    double m_sendBandwidth;
+                    bool m_sendBandwidthHasBeenSet;
+
+                    /**
+                     * Receive bandwidth
+                     */
+                    double m_recvBandwidth;
+                    bool m_recvBandwidthHasBeenSet;
+
+                    /**
+                     * Number of packets sent
+                     */
+                    int64_t m_sendPackets;
+                    bool m_sendPacketsHasBeenSet;
+
+                    /**
+                     * Number of received packets
+                     */
+                    int64_t m_recvPackets;
+                    bool m_recvPacketsHasBeenSet;
+
+                    /**
+                     * Send lost package
+                     */
+                    int64_t m_sendLostPackets;
+                    bool m_sendLostPacketsHasBeenSet;
+
+                    /**
+                     * Accept lost packages
+                     */
+                    int64_t m_recvLostPackets;
+                    bool m_recvLostPacketsHasBeenSet;
+
+                    /**
+                     * Number of retransmission packets sent
+                     */
+                    int64_t m_sendRetransmitPackets;
+                    bool m_sendRetransmitPacketsHasBeenSet;
+
+                    /**
+                     * Number of received retransmission packets
+                     */
+                    int64_t m_recvRetransmitPackets;
+                    bool m_recvRetransmitPacketsHasBeenSet;
+
+                    /**
+                     * Flight window size
+                     */
+                    int64_t m_flightSize;
+                    bool m_flightSizeHasBeenSet;
+
+                    /**
+                     * congestion window
+                     */
+                    int64_t m_congestionWindow;
+                    bool m_congestionWindowHasBeenSet;
+
+                    /**
+                     * Send buffer (ms)
+                     */
+                    int64_t m_sendBuffer;
+                    bool m_sendBufferHasBeenSet;
+
+                    /**
+                     * Receive buffer (ms)
+                     */
+                    int64_t m_recvBuffer;
+                    bool m_recvBufferHasBeenSet;
+
+                    /**
+                     * Sending delay
+                     */
+                    int64_t m_sendLatency;
+                    bool m_sendLatencyHasBeenSet;
+
+                    /**
+                     * Receiving delay
+                     */
+                    int64_t m_recvLatency;
+                    bool m_recvLatencyHasBeenSet;
 
                 };
             }

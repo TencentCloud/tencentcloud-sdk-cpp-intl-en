@@ -37,6 +37,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/InstanceCLSDeliveryInfo.h>
 #include <tencentcloud/cynosdb/v20190107/model/TaskProgressInfo.h>
 #include <tencentcloud/cynosdb/v20190107/model/GdnTaskInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/AIOptimizerTaskData.h>
 
 
 namespace TencentCloud
@@ -48,7 +49,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task Information
                 */
                 class BizTaskInfo : public AbstractModel
                 {
@@ -60,15 +61,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ID 
+                     * 获取<p>Task ID.</p>
+                     * @return ID <p>Task ID.</p>
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置
-                     * @param _iD 
+                     * 设置<p>Task ID.</p>
+                     * @param _iD <p>Task ID.</p>
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -81,15 +82,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AppId 
+                     * 获取<p>User appid</p>
+                     * @return AppId <p>User appid</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置
-                     * @param _appId 
+                     * 设置<p>User appid</p>
+                     * @param _appId <p>User appid</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -102,15 +103,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterId 
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置
-                     * @param _clusterId 
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -123,15 +124,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取<p>Region</p>
+                     * @return Region <p>Region</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置<p>Region</p>
+                     * @param _region <p>Region</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -144,15 +145,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Task creation time</p>
+                     * @return CreateTime <p>Task creation time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Task creation time</p>
+                     * @param _createTime <p>Task creation time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -165,15 +166,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the delayed execution time.
-                     * @return DelayTime Specifies the delayed execution time.
+                     * 获取<p>Delayed execution time</p>
+                     * @return DelayTime <p>Delayed execution time</p>
                      * 
                      */
                     std::string GetDelayTime() const;
 
                     /**
-                     * 设置Specifies the delayed execution time.
-                     * @param _delayTime Specifies the delayed execution time.
+                     * 设置<p>Delayed execution time</p>
+                     * @param _delayTime <p>Delayed execution time</p>
                      * 
                      */
                     void SetDelayTime(const std::string& _delayTime);
@@ -186,15 +187,15 @@ namespace TencentCloud
                     bool DelayTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task failure information.
-                     * @return ErrMsg Task failure information.
+                     * 获取<p>Task failure information</p>
+                     * @return ErrMsg <p>Task failure information</p>
                      * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
-                     * 设置Task failure information.
-                     * @param _errMsg Task failure information.
+                     * 设置<p>Task failure information</p>
+                     * @param _errMsg <p>Task failure information</p>
                      * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
@@ -207,15 +208,15 @@ namespace TencentCloud
                     bool ErrMsgHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FlowId 
+                     * 获取<p>Asynchronous task flow id</p>
+                     * @return FlowId <p>Asynchronous task flow id</p>
                      * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
-                     * 设置
-                     * @param _flowId 
+                     * 设置<p>Asynchronous task flow id</p>
+                     * @param _flowId <p>Asynchronous task flow id</p>
                      * 
                      */
                     void SetFlowId(const int64_t& _flowId);
@@ -228,15 +229,15 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取<p>Task input information</p>
+                     * @return Input <p>Task input information</p>
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置<p>Task input information</p>
+                     * @param _input <p>Task input information</p>
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -249,15 +250,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceGrpId 
+                     * 获取<p>Instance group id.</p>
+                     * @return InstanceGrpId <p>Instance group id.</p>
                      * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceGrpId 
+                     * 设置<p>Instance group id.</p>
+                     * @param _instanceGrpId <p>Instance group id.</p>
                      * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
@@ -270,15 +271,15 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceGroupId 
+                     * 获取<p>Instance group id.</p>
+                     * @return InstanceGroupId <p>Instance group id.</p>
                      * 
                      */
                     std::string GetInstanceGroupId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceGroupId 
+                     * 设置<p>Instance group id.</p>
+                     * @param _instanceGroupId <p>Instance group id.</p>
                      * 
                      */
                     void SetInstanceGroupId(const std::string& _instanceGroupId);
@@ -291,15 +292,15 @@ namespace TencentCloud
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取<p>Instance id</p>
+                     * @return InstanceId <p>Instance id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _instanceId 
+                     * 设置<p>Instance id</p>
+                     * @param _instanceId <p>Instance id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -312,15 +313,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ObjectId 
+                     * 获取<p>Task operation object id</p>
+                     * @return ObjectId <p>Task operation object id</p>
                      * 
                      */
                     std::string GetObjectId() const;
 
                     /**
-                     * 设置
-                     * @param _objectId 
+                     * 设置<p>Task operation object id</p>
+                     * @param _objectId <p>Task operation object id</p>
                      * 
                      */
                     void SetObjectId(const std::string& _objectId);
@@ -333,15 +334,15 @@ namespace TencentCloud
                     bool ObjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ObjectType 
+                     * 获取<p>Task operation object type.</p>
+                     * @return ObjectType <p>Task operation object type.</p>
                      * 
                      */
                     std::string GetObjectType() const;
 
                     /**
-                     * 设置
-                     * @param _objectType 
+                     * 设置<p>Task operation object type.</p>
+                     * @param _objectType <p>Task operation object type.</p>
                      * 
                      */
                     void SetObjectType(const std::string& _objectType);
@@ -354,15 +355,15 @@ namespace TencentCloud
                     bool ObjectTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operator 
+                     * 获取<p>Operator uin</p>
+                     * @return Operator <p>Operator uin</p>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置
-                     * @param _operator 
+                     * 设置<p>Operator uin</p>
+                     * @param _operator <p>Operator uin</p>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -375,15 +376,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取<p>Task output information</p>
+                     * @return Output <p>Task output information</p>
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置<p>Task output information</p>
+                     * @param _output <p>Task output information</p>
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -396,15 +397,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Task status</p>
+                     * @return Status <p>Task status</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Task status</p>
+                     * @param _status <p>Task status</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -417,15 +418,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskType 
+                     * 获取<p>Task type</p>
+                     * @return TaskType <p>Task type</p>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置
-                     * @param _taskType 
+                     * 设置<p>Task type</p>
+                     * @param _taskType <p>Task type</p>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -438,15 +439,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TriggerTaskId 
+                     * 获取<p>Parent task ID that triggers this task</p>
+                     * @return TriggerTaskId <p>Parent task ID that triggers this task</p>
                      * 
                      */
                     int64_t GetTriggerTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _triggerTaskId 
+                     * 设置<p>Parent task ID that triggers this task</p>
+                     * @param _triggerTaskId <p>Parent task ID that triggers this task</p>
                      * 
                      */
                     void SetTriggerTaskId(const int64_t& _triggerTaskId);
@@ -459,15 +460,15 @@ namespace TencentCloud
                     bool TriggerTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -480,15 +481,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取<p>Task start time</p>
+                     * @return StartTime <p>Task start time</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置<p>Task start time</p>
+                     * @param _startTime <p>Task start time</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -501,15 +502,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取<p>Task end time</p>
+                     * @return EndTime <p>Task end time</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置<p>Task end time</p>
+                     * @param _endTime <p>Task end time</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -522,15 +523,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterName 
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置
-                     * @param _clusterName 
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -543,15 +544,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceName 
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置
-                     * @param _instanceName 
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -564,15 +565,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Process 
+                     * 获取<p>Task progress</p>
+                     * @return Process <p>Task progress</p>
                      * 
                      */
                     int64_t GetProcess() const;
 
                     /**
-                     * 设置
-                     * @param _process 
+                     * 设置<p>Task progress</p>
+                     * @param _process <p>Task progress</p>
                      * 
                      */
                     void SetProcess(const int64_t& _process);
@@ -585,15 +586,19 @@ namespace TencentCloud
                     bool ProcessHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModifyParamsData 
+                     * 获取<p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ModifyParamsData <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     std::vector<ModifyParamsData> GetModifyParamsData() const;
 
                     /**
-                     * 设置
-                     * @param _modifyParamsData 
+                     * 设置<p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _modifyParamsData <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetModifyParamsData(const std::vector<ModifyParamsData>& _modifyParamsData);
@@ -606,15 +611,15 @@ namespace TencentCloud
                     bool ModifyParamsDataHasBeenSet() const;
 
                     /**
-                     * 获取Create cluster task information.
-                     * @return CreateClustersData Create cluster task information.
+                     * 获取<p>Create cluster task information</p>
+                     * @return CreateClustersData <p>Create cluster task information</p>
                      * 
                      */
                     CreateClustersData GetCreateClustersData() const;
 
                     /**
-                     * 设置Create cluster task information.
-                     * @param _createClustersData Create cluster task information.
+                     * 设置<p>Create cluster task information</p>
+                     * @param _createClustersData <p>Create cluster task information</p>
                      * 
                      */
                     void SetCreateClustersData(const CreateClustersData& _createClustersData);
@@ -627,15 +632,15 @@ namespace TencentCloud
                     bool CreateClustersDataHasBeenSet() const;
 
                     /**
-                     * 获取Cluster rollback task information.
-                     * @return RollbackData Cluster rollback task information.
+                     * 获取<p>Cluster rollback task information</p>
+                     * @return RollbackData <p>Cluster rollback task information</p>
                      * 
                      */
                     RollbackData GetRollbackData() const;
 
                     /**
-                     * 设置Cluster rollback task information.
-                     * @param _rollbackData Cluster rollback task information.
+                     * 设置<p>Cluster rollback task information</p>
+                     * @param _rollbackData <p>Cluster rollback task information</p>
                      * 
                      */
                     void SetRollbackData(const RollbackData& _rollbackData);
@@ -648,15 +653,15 @@ namespace TencentCloud
                     bool RollbackDataHasBeenSet() const;
 
                     /**
-                     * 获取Instance configuration change task information.
-                     * @return ModifyInstanceData Instance configuration change task information.
+                     * 获取<p>Instance configuration change task information</p>
+                     * @return ModifyInstanceData <p>Instance configuration change task information</p>
                      * 
                      */
                     ModifyInstanceData GetModifyInstanceData() const;
 
                     /**
-                     * 设置Instance configuration change task information.
-                     * @param _modifyInstanceData Instance configuration change task information.
+                     * 设置<p>Instance configuration change task information</p>
+                     * @param _modifyInstanceData <p>Instance configuration change task information</p>
                      * 
                      */
                     void SetModifyInstanceData(const ModifyInstanceData& _modifyInstanceData);
@@ -669,15 +674,19 @@ namespace TencentCloud
                     bool ModifyInstanceDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ManualBackupData 
+                     * 获取<p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ManualBackupData <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ManualBackupData GetManualBackupData() const;
 
                     /**
-                     * 设置
-                     * @param _manualBackupData 
+                     * 设置<p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _manualBackupData <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetManualBackupData(const ManualBackupData& _manualBackupData);
@@ -690,15 +699,15 @@ namespace TencentCloud
                     bool ManualBackupDataHasBeenSet() const;
 
                     /**
-                     * 获取Modify kernel version task information.
-                     * @return ModifyDbVersionData Modify kernel version task information.
+                     * 获取<p>Modify kernel version task information</p>
+                     * @return ModifyDbVersionData <p>Modify kernel version task information</p>
                      * 
                      */
                     ModifyDbVersionData GetModifyDbVersionData() const;
 
                     /**
-                     * 设置Modify kernel version task information.
-                     * @param _modifyDbVersionData Modify kernel version task information.
+                     * 设置<p>Modify kernel version task information</p>
+                     * @param _modifyDbVersionData <p>Modify kernel version task information</p>
                      * 
                      */
                     void SetModifyDbVersionData(const ModifyDbVersionData& _modifyDbVersionData);
@@ -711,15 +720,15 @@ namespace TencentCloud
                     bool ModifyDbVersionDataHasBeenSet() const;
 
                     /**
-                     * 获取Cluster availability zone information.
-                     * @return ClusterSlaveData Cluster availability zone information.
+                     * 获取<p>Cluster Availability Zone Information</p>
+                     * @return ClusterSlaveData <p>Cluster Availability Zone Information</p>
                      * 
                      */
                     ClusterSlaveData GetClusterSlaveData() const;
 
                     /**
-                     * 设置Cluster availability zone information.
-                     * @param _clusterSlaveData Cluster availability zone information.
+                     * 设置<p>Cluster Availability Zone Information</p>
+                     * @param _clusterSlaveData <p>Cluster Availability Zone Information</p>
                      * 
                      */
                     void SetClusterSlaveData(const ClusterSlaveData& _clusterSlaveData);
@@ -732,15 +741,19 @@ namespace TencentCloud
                     bool ClusterSlaveDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SwitchClusterLogBin 
+                     * 获取<p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SwitchClusterLogBin <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SwitchClusterLogBin GetSwitchClusterLogBin() const;
 
                     /**
-                     * 设置
-                     * @param _switchClusterLogBin 
+                     * 设置<p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _switchClusterLogBin <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitchClusterLogBin(const SwitchClusterLogBin& _switchClusterLogBin);
@@ -753,15 +766,19 @@ namespace TencentCloud
                     bool SwitchClusterLogBinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModifyInstanceParamsData 
+                     * 获取<p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ModifyInstanceParamsData <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BizTaskModifyParamsData GetModifyInstanceParamsData() const;
 
                     /**
-                     * 设置
-                     * @param _modifyInstanceParamsData 
+                     * 设置<p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _modifyInstanceParamsData <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyInstanceParamsData(const BizTaskModifyParamsData& _modifyInstanceParamsData);
@@ -774,15 +791,15 @@ namespace TencentCloud
                     bool ModifyInstanceParamsDataHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance time.
-                     * @return TaskMaintainInfo Maintenance time.
+                     * 获取<p>Maintenance time</p>
+                     * @return TaskMaintainInfo <p>Maintenance time</p>
                      * 
                      */
                     TaskMaintainInfo GetTaskMaintainInfo() const;
 
                     /**
-                     * 设置Maintenance time.
-                     * @param _taskMaintainInfo Maintenance time.
+                     * 设置<p>Maintenance time</p>
+                     * @param _taskMaintainInfo <p>Maintenance time</p>
                      * 
                      */
                     void SetTaskMaintainInfo(const TaskMaintainInfo& _taskMaintainInfo);
@@ -795,19 +812,15 @@ namespace TencentCloud
                     bool TaskMaintainInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance log delivery information.
-
-                     * @return InstanceCLSDeliveryInfos Instance log delivery information.
-
+                     * 获取<p>Instance Log Delivery Information</p>
+                     * @return InstanceCLSDeliveryInfos <p>Instance Log Delivery Information</p>
                      * 
                      */
                     std::vector<InstanceCLSDeliveryInfo> GetInstanceCLSDeliveryInfos() const;
 
                     /**
-                     * 设置Instance log delivery information.
-
-                     * @param _instanceCLSDeliveryInfos Instance log delivery information.
-
+                     * 设置<p>Instance Log Delivery Information</p>
+                     * @param _instanceCLSDeliveryInfos <p>Instance Log Delivery Information</p>
                      * 
                      */
                     void SetInstanceCLSDeliveryInfos(const std::vector<InstanceCLSDeliveryInfo>& _instanceCLSDeliveryInfos);
@@ -820,15 +833,15 @@ namespace TencentCloud
                     bool InstanceCLSDeliveryInfosHasBeenSet() const;
 
                     /**
-                     * 获取Task progress information.
-                     * @return TaskProgressInfo Task progress information.
+                     * 获取<p>Task progress information</p>
+                     * @return TaskProgressInfo <p>Task progress information</p>
                      * 
                      */
                     TaskProgressInfo GetTaskProgressInfo() const;
 
                     /**
-                     * 设置Task progress information.
-                     * @param _taskProgressInfo Task progress information.
+                     * 设置<p>Task progress information</p>
+                     * @param _taskProgressInfo <p>Task progress information</p>
                      * 
                      */
                     void SetTaskProgressInfo(const TaskProgressInfo& _taskProgressInfo);
@@ -841,15 +854,15 @@ namespace TencentCloud
                     bool TaskProgressInfoHasBeenSet() const;
 
                     /**
-                     * 获取Global Database Network Task
-                     * @return GdnTaskInfo Global Database Network Task
+                     * 获取<p>Global database network task</p>
+                     * @return GdnTaskInfo <p>Global database network task</p>
                      * 
                      */
                     GdnTaskInfo GetGdnTaskInfo() const;
 
                     /**
-                     * 设置Global Database Network Task
-                     * @param _gdnTaskInfo Global Database Network Task
+                     * 设置<p>Global database network task</p>
+                     * @param _gdnTaskInfo <p>Global database network task</p>
                      * 
                      */
                     void SetGdnTaskInfo(const GdnTaskInfo& _gdnTaskInfo);
@@ -862,15 +875,15 @@ namespace TencentCloud
                     bool GdnTaskInfoHasBeenSet() const;
 
                     /**
-                     * 获取Safe id
-                     * @return VaultId Safe id
+                     * 获取<p>Safe id</p>
+                     * @return VaultId <p>Safe id</p>
                      * 
                      */
                     std::string GetVaultId() const;
 
                     /**
-                     * 设置Safe id
-                     * @param _vaultId Safe id
+                     * 设置<p>Safe id</p>
+                     * @param _vaultId <p>Safe id</p>
                      * 
                      */
                     void SetVaultId(const std::string& _vaultId);
@@ -883,15 +896,15 @@ namespace TencentCloud
                     bool VaultIdHasBeenSet() const;
 
                     /**
-                     * 获取Safe name
-                     * @return VaultName Safe name
+                     * 获取<p>Safe name</p>
+                     * @return VaultName <p>Safe name</p>
                      * 
                      */
                     std::string GetVaultName() const;
 
                     /**
-                     * 设置Safe name
-                     * @param _vaultName Safe name
+                     * 设置<p>Safe name</p>
+                     * @param _vaultName <p>Safe name</p>
                      * 
                      */
                     void SetVaultName(const std::string& _vaultName);
@@ -903,248 +916,278 @@ namespace TencentCloud
                      */
                     bool VaultNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>AI optimizer task information</p>
+                     * @return AIOptimizerTaskData <p>AI optimizer task information</p>
+                     * 
+                     */
+                    AIOptimizerTaskData GetAIOptimizerTaskData() const;
+
+                    /**
+                     * 设置<p>AI optimizer task information</p>
+                     * @param _aIOptimizerTaskData <p>AI optimizer task information</p>
+                     * 
+                     */
+                    void SetAIOptimizerTaskData(const AIOptimizerTaskData& _aIOptimizerTaskData);
+
+                    /**
+                     * 判断参数 AIOptimizerTaskData 是否已赋值
+                     * @return AIOptimizerTaskData 是否已赋值
+                     * 
+                     */
+                    bool AIOptimizerTaskDataHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>Task ID.</p>
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * 
+                     * <p>User appid</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Region
+                     * <p>Region</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task creation time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Specifies the delayed execution time.
+                     * <p>Delayed execution time</p>
                      */
                     std::string m_delayTime;
                     bool m_delayTimeHasBeenSet;
 
                     /**
-                     * Task failure information.
+                     * <p>Task failure information</p>
                      */
                     std::string m_errMsg;
                     bool m_errMsgHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Asynchronous task flow id</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task input information</p>
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance group id.</p>
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance group id.</p>
                      */
                     std::string m_instanceGroupId;
                     bool m_instanceGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task operation object id</p>
                      */
                     std::string m_objectId;
                     bool m_objectIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task operation object type.</p>
                      */
                     std::string m_objectType;
                     bool m_objectTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Operator uin</p>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task output information</p>
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task status</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task type</p>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Parent task ID that triggers this task</p>
                      */
                     int64_t m_triggerTaskId;
                     bool m_triggerTaskIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task start time</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task end time</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task progress</p>
                      */
                     int64_t m_process;
                     bool m_processHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Modify parameter task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ModifyParamsData> m_modifyParamsData;
                     bool m_modifyParamsDataHasBeenSet;
 
                     /**
-                     * Create cluster task information.
+                     * <p>Create cluster task information</p>
                      */
                     CreateClustersData m_createClustersData;
                     bool m_createClustersDataHasBeenSet;
 
                     /**
-                     * Cluster rollback task information.
+                     * <p>Cluster rollback task information</p>
                      */
                     RollbackData m_rollbackData;
                     bool m_rollbackDataHasBeenSet;
 
                     /**
-                     * Instance configuration change task information.
+                     * <p>Instance configuration change task information</p>
                      */
                     ModifyInstanceData m_modifyInstanceData;
                     bool m_modifyInstanceDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Manual backup task information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ManualBackupData m_manualBackupData;
                     bool m_manualBackupDataHasBeenSet;
 
                     /**
-                     * Modify kernel version task information.
+                     * <p>Modify kernel version task information</p>
                      */
                     ModifyDbVersionData m_modifyDbVersionData;
                     bool m_modifyDbVersionDataHasBeenSet;
 
                     /**
-                     * Cluster availability zone information.
+                     * <p>Cluster Availability Zone Information</p>
                      */
                     ClusterSlaveData m_clusterSlaveData;
                     bool m_clusterSlaveDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Convert cluster logs</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SwitchClusterLogBin m_switchClusterLogBin;
                     bool m_switchClusterLogBinHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Modify instance parameter data</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BizTaskModifyParamsData m_modifyInstanceParamsData;
                     bool m_modifyInstanceParamsDataHasBeenSet;
 
                     /**
-                     * Maintenance time.
+                     * <p>Maintenance time</p>
                      */
                     TaskMaintainInfo m_taskMaintainInfo;
                     bool m_taskMaintainInfoHasBeenSet;
 
                     /**
-                     * Instance log delivery information.
-
+                     * <p>Instance Log Delivery Information</p>
                      */
                     std::vector<InstanceCLSDeliveryInfo> m_instanceCLSDeliveryInfos;
                     bool m_instanceCLSDeliveryInfosHasBeenSet;
 
                     /**
-                     * Task progress information.
+                     * <p>Task progress information</p>
                      */
                     TaskProgressInfo m_taskProgressInfo;
                     bool m_taskProgressInfoHasBeenSet;
 
                     /**
-                     * Global Database Network Task
+                     * <p>Global database network task</p>
                      */
                     GdnTaskInfo m_gdnTaskInfo;
                     bool m_gdnTaskInfoHasBeenSet;
 
                     /**
-                     * Safe id
+                     * <p>Safe id</p>
                      */
                     std::string m_vaultId;
                     bool m_vaultIdHasBeenSet;
 
                     /**
-                     * Safe name
+                     * <p>Safe name</p>
                      */
                     std::string m_vaultName;
                     bool m_vaultNameHasBeenSet;
+
+                    /**
+                     * <p>AI optimizer task information</p>
+                     */
+                    AIOptimizerTaskData m_aIOptimizerTaskData;
+                    bool m_aIOptimizerTaskDataHasBeenSet;
 
                 };
             }
