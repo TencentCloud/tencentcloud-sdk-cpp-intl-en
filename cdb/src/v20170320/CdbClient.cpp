@@ -2990,6 +2990,56 @@ CdbClient::DescribeCloneListOutcomeCallable CdbClient::DescribeCloneListCallable
     return prom->get_future();
 }
 
+CdbClient::DescribeClusterInfoOutcome CdbClient::DescribeClusterInfo(const DescribeClusterInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterInfoResponse rsp = DescribeClusterInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterInfoOutcome(rsp);
+        else
+            return DescribeClusterInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterInfoOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeClusterInfoAsync(const DescribeClusterInfoRequest& request, const DescribeClusterInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeClusterInfoRequest&;
+    using Resp = DescribeClusterInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CdbClient::DescribeClusterInfoOutcomeCallable CdbClient::DescribeClusterInfoCallable(const DescribeClusterInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeClusterInfoOutcome>>();
+    DescribeClusterInfoAsync(
+    request,
+    [prom](
+        const CdbClient*,
+        const DescribeClusterInfoRequest&,
+        DescribeClusterInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CdbClient::DescribeDBFeaturesOutcome CdbClient::DescribeDBFeatures(const DescribeDBFeaturesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBFeatures");

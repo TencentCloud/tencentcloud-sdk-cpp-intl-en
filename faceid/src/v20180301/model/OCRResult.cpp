@@ -28,7 +28,8 @@ OCRResult::OCRResult() :
     m_requestIdHasBeenSet(false),
     m_cardCutImageBase64HasBeenSet(false),
     m_cardBackCutImageBase64HasBeenSet(false),
-    m_warnCardInfosHasBeenSet(false)
+    m_warnCardInfosHasBeenSet(false),
+    m_originalCardInfoHasBeenSet(false)
 {
 }
 
@@ -134,6 +135,16 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         m_warnCardInfosHasBeenSet = true;
     }
 
+    if (value.HasMember("OriginalCardInfo") && !value["OriginalCardInfo"].IsNull())
+    {
+        if (!value["OriginalCardInfo"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `OCRResult.OriginalCardInfo` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalCardInfo = string(value["OriginalCardInfo"].GetString());
+        m_originalCardInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -210,6 +221,14 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
         }
+    }
+
+    if (m_originalCardInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalCardInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_originalCardInfo.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -341,5 +360,21 @@ void OCRResult::SetWarnCardInfos(const vector<int64_t>& _warnCardInfos)
 bool OCRResult::WarnCardInfosHasBeenSet() const
 {
     return m_warnCardInfosHasBeenSet;
+}
+
+string OCRResult::GetOriginalCardInfo() const
+{
+    return m_originalCardInfo;
+}
+
+void OCRResult::SetOriginalCardInfo(const string& _originalCardInfo)
+{
+    m_originalCardInfo = _originalCardInfo;
+    m_originalCardInfoHasBeenSet = true;
+}
+
+bool OCRResult::OriginalCardInfoHasBeenSet() const
+{
+    return m_originalCardInfoHasBeenSet;
 }
 

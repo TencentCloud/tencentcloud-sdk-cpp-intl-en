@@ -49,15 +49,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Is the indentity verification or OCR process passed
-                     * @return IsPass Is the indentity verification or OCR process passed
+                     * 获取<p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsPass <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetIsPass() const;
 
                     /**
-                     * 设置Is the indentity verification or OCR process passed
-                     * @param _isPass Is the indentity verification or OCR process passed
+                     * 设置<p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _isPass <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsPass(const bool& _isPass);
@@ -70,18 +74,18 @@ namespace TencentCloud
                     bool IsPassHasBeenSet() const;
 
                     /**
-                     * 获取The Base64 of ID card image
+                     * 获取<p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CardImageBase64 The Base64 of ID card image
+                     * @return CardImageBase64 <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCardImageBase64() const;
 
                     /**
-                     * 设置The Base64 of ID card image
+                     * 设置<p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cardImageBase64 The Base64 of ID card image
+                     * @param _cardImageBase64 <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -95,15 +99,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取OCR result of the ID card.
-                     * @return CardInfo OCR result of the ID card.
+                     * 获取<p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CardInfo <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     CardInfo GetCardInfo() const;
 
                     /**
-                     * 设置OCR result of the ID card.
-                     * @param _cardInfo OCR result of the ID card.
+                     * 设置<p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cardInfo <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetCardInfo(const CardInfo& _cardInfo);
@@ -116,15 +124,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardInfoHasBeenSet() const;
 
                     /**
-                     * 获取OCR result of the ID card.
-                     * @return NormalCardInfo OCR result of the ID card.
+                     * 获取<p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NormalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NormalCardInfo GetNormalCardInfo() const;
 
                     /**
-                     * 设置OCR result of the ID card.
-                     * @param _normalCardInfo OCR result of the ID card.
+                     * 设置<p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _normalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNormalCardInfo(const NormalCardInfo& _normalCardInfo);
@@ -137,15 +149,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NormalCardInfoHasBeenSet() const;
 
                     /**
-                     * 获取The request id
-                     * @return RequestId The request id
+                     * 获取<p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RequestId <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRequestId() const;
 
                     /**
-                     * 设置The request id
-                     * @param _requestId The request id
+                     * 设置<p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _requestId <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRequestId(const std::string& _requestId);
@@ -158,15 +174,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Base64 of cropped image of ID card
-                     * @return CardCutImageBase64 Base64 of cropped image of ID card
+                     * 获取<p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CardCutImageBase64 <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCardCutImageBase64() const;
 
                     /**
-                     * 设置Base64 of cropped image of ID card
-                     * @param _cardCutImageBase64 Base64 of cropped image of ID card
+                     * 设置<p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cardCutImageBase64 <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCardCutImageBase64(const std::string& _cardCutImageBase64);
@@ -179,15 +199,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardCutImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Base64 of the cropped image on the reverse side of the ID card
-                     * @return CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+                     * 获取<p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCardBackCutImageBase64() const;
 
                     /**
-                     * 设置Base64 of the cropped image on the reverse side of the ID card
-                     * @param _cardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+                     * 设置<p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCardBackCutImageBase64(const std::string& _cardBackCutImageBase64);
@@ -200,47 +224,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardBackCutImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-                     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * 获取<p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetWarnCardInfos() const;
 
                     /**
-                     * 设置Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-                     * @param _warnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * 设置<p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _warnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWarnCardInfos(const std::vector<int64_t>& _warnCardInfos);
@@ -252,64 +248,95 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WarnCardInfosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetOriginalCardInfo() const;
+
+                    /**
+                     * 设置<p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _originalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOriginalCardInfo(const std::string& _originalCardInfo);
+
+                    /**
+                     * 判断参数 OriginalCardInfo 是否已赋值
+                     * @return OriginalCardInfo 是否已赋值
+                     * 
+                     */
+                    bool OriginalCardInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Is the indentity verification or OCR process passed
+                     * <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isPass;
                     bool m_isPassHasBeenSet;
 
                     /**
-                     * The Base64 of ID card image
+                     * <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cardImageBase64;
                     bool m_cardImageBase64HasBeenSet;
 
                     /**
-                     * OCR result of the ID card.
+                     * <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     CardInfo m_cardInfo;
                     bool m_cardInfoHasBeenSet;
 
                     /**
-                     * OCR result of the ID card.
+                     * <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NormalCardInfo m_normalCardInfo;
                     bool m_normalCardInfoHasBeenSet;
 
                     /**
-                     * The request id
+                     * <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_requestId;
                     bool m_requestIdHasBeenSet;
 
                     /**
-                     * Base64 of cropped image of ID card
+                     * <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cardCutImageBase64;
                     bool m_cardCutImageBase64HasBeenSet;
 
                     /**
-                     * Base64 of the cropped image on the reverse side of the ID card
+                     * <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cardBackCutImageBase64;
                     bool m_cardBackCutImageBase64HasBeenSet;
 
                     /**
-                     * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
+
+                    /**
+                     * <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_originalCardInfo;
+                    bool m_originalCardInfoHasBeenSet;
 
                 };
             }

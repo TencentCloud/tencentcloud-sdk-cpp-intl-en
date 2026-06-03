@@ -29,7 +29,8 @@ VerificationDetail::VerificationDetail() :
     m_compareErrorMsgHasBeenSet(false),
     m_reqTimestampHasBeenSet(false),
     m_similarityHasBeenSet(false),
-    m_seqHasBeenSet(false)
+    m_seqHasBeenSet(false),
+    m_livenessInfoTagHasBeenSet(false)
 {
 }
 
@@ -128,6 +129,19 @@ CoreInternalOutcome VerificationDetail::Deserialize(const rapidjson::Value &valu
         m_seqHasBeenSet = true;
     }
 
+    if (value.HasMember("LivenessInfoTag") && !value["LivenessInfoTag"].IsNull())
+    {
+        if (!value["LivenessInfoTag"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `VerificationDetail.LivenessInfoTag` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["LivenessInfoTag"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_livenessInfoTag.push_back((*itr).GetString());
+        }
+        m_livenessInfoTagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +219,19 @@ void VerificationDetail::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         string key = "Seq";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_seq.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_livenessInfoTagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LivenessInfoTag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_livenessInfoTag.begin(); itr != m_livenessInfoTag.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -352,5 +379,21 @@ void VerificationDetail::SetSeq(const string& _seq)
 bool VerificationDetail::SeqHasBeenSet() const
 {
     return m_seqHasBeenSet;
+}
+
+vector<string> VerificationDetail::GetLivenessInfoTag() const
+{
+    return m_livenessInfoTag;
+}
+
+void VerificationDetail::SetLivenessInfoTag(const vector<string>& _livenessInfoTag)
+{
+    m_livenessInfoTag = _livenessInfoTag;
+    m_livenessInfoTagHasBeenSet = true;
+}
+
+bool VerificationDetail::LivenessInfoTagHasBeenSet() const
+{
+    return m_livenessInfoTagHasBeenSet;
 }
 

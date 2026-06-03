@@ -141,6 +141,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeClusterInfoRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeClusterInfoResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBFeaturesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBFeaturesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsRequest.h>
@@ -540,6 +542,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCloneListResponse> DescribeCloneListOutcome;
                 typedef std::future<DescribeCloneListOutcome> DescribeCloneListOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeCloneListRequest&, DescribeCloneListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloneListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterInfoResponse> DescribeClusterInfoOutcome;
+                typedef std::future<DescribeClusterInfoOutcome> DescribeClusterInfoOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeClusterInfoRequest&, DescribeClusterInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBFeaturesResponse> DescribeDBFeaturesOutcome;
                 typedef std::future<DescribeDBFeaturesOutcome> DescribeDBFeaturesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBFeaturesRequest&, DescribeDBFeaturesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBFeaturesAsyncHandler;
@@ -1405,6 +1410,15 @@ This API is used to query audit rules in current region.
                 DescribeCloneListOutcome DescribeCloneList(const Model::DescribeCloneListRequest &request);
                 void DescribeCloneListAsync(const Model::DescribeCloneListRequest& request, const DescribeCloneListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCloneListOutcomeCallable DescribeCloneListCallable(const Model::DescribeCloneListRequest& request);
+
+                /**
+                 *This API is used to query cloud disk edition instance info.
+                 * @param req DescribeClusterInfoRequest
+                 * @return DescribeClusterInfoOutcome
+                 */
+                DescribeClusterInfoOutcome DescribeClusterInfo(const Model::DescribeClusterInfoRequest &request);
+                void DescribeClusterInfoAsync(const Model::DescribeClusterInfoRequest& request, const DescribeClusterInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterInfoOutcomeCallable DescribeClusterInfoCallable(const Model::DescribeClusterInfoRequest& request);
 
                 /**
                  *This API is used to query cloud database version attributes, including whether database encryption and database audit are supported, and other features.

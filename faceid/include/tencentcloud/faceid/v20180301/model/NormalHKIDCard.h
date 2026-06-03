@@ -313,18 +313,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurrentIssueDateHasBeenSet() const;
 
                     /**
-                     * 获取Hong kong identity card version.
+                     * 获取Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HKIDVersion Hong kong identity card version.
+                     * @return HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHKIDVersion() const;
 
                     /**
-                     * 设置Hong kong identity card version.
+                     * 设置Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hKIDVersion Hong kong identity card version.
+                     * @param _hKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -414,7 +414,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_currentIssueDateHasBeenSet;
 
                     /**
-                     * Hong kong identity card version.
+                     * Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hKIDVersion;

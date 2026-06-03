@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/TagInfoItem.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
-                     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * 获取<p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @return InstanceId <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
-                     * @param _instanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * 设置<p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+                     * @param _instanceId <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log type. error: error log. slowlog: slow log.
-                     * @return LogType Log type. error: error log. slowlog: slow log.
+                     * 获取<p>Log type. Error: error log, slowlog: slow log.</p>
+                     * @return LogType <p>Log type. Error: error log, slowlog: slow log.</p>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type. error: error log. slowlog: slow log.
-                     * @param _logType Log type. error: error log. slowlog: slow log.
+                     * 设置<p>Log type. Error: error log, slowlog: slow log.</p>
+                     * @param _logType <p>Log type. Error: error log, slowlog: slow log.</p>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -85,15 +86,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Delivery status. ON: Enabled, OFF: Disabled.
-                     * @return Status Delivery status. ON: Enabled, OFF: Disabled.
+                     * 获取<p>Delivery status. ON: enabled, OFF: disabled.</p>
+                     * @return Status <p>Delivery status. ON: enabled, OFF: disabled.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Delivery status. ON: Enabled, OFF: Disabled.
-                     * @param _status Delivery status. ON: Enabled, OFF: Disabled.
+                     * 设置<p>Delivery status. ON: enabled, OFF: disabled.</p>
+                     * @param _status <p>Delivery status. ON: enabled, OFF: disabled.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -106,15 +107,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether required to create logset. Default to false.
-                     * @return CreateLogset Whether required to create logset. Default to false.
+                     * 获取<p>Whether required to create logset. Default to false.</p>
+                     * @return CreateLogset <p>Whether required to create logset. Default to false.</p>
                      * 
                      */
                     bool GetCreateLogset() const;
 
                     /**
-                     * 设置Whether required to create logset. Default to false.
-                     * @param _createLogset Whether required to create logset. Default to false.
+                     * 设置<p>Whether required to create logset. Default to false.</p>
+                     * @param _createLogset <p>Whether required to create logset. Default to false.</p>
                      * 
                      */
                     void SetCreateLogset(const bool& _createLogset);
@@ -127,19 +128,15 @@ namespace TencentCloud
                     bool CreateLogsetHasBeenSet() const;
 
                     /**
-                     * 获取Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-                     * @return Logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * 获取<p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
+                     * @return Logset <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
                      * 
                      */
                     std::string GetLogset() const;
 
                     /**
-                     * 设置Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-                     * @param _logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * 设置<p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
+                     * @param _logset <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
                      * 
                      */
                     void SetLogset(const std::string& _logset);
@@ -152,15 +149,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
                     bool LogsetHasBeenSet() const;
 
                     /**
-                     * 获取Whether required to create log topic. Default to false.
-                     * @return CreateLogTopic Whether required to create log topic. Default to false.
+                     * 获取<p>Whether required to create log topic. Default to false.</p>
+                     * @return CreateLogTopic <p>Whether required to create log topic. Default to false.</p>
                      * 
                      */
                     bool GetCreateLogTopic() const;
 
                     /**
-                     * 设置Whether required to create log topic. Default to false.
-                     * @param _createLogTopic Whether required to create log topic. Default to false.
+                     * 设置<p>Whether required to create log topic. Default to false.</p>
+                     * @param _createLogTopic <p>Whether required to create log topic. Default to false.</p>
                      * 
                      */
                     void SetCreateLogTopic(const bool& _createLogTopic);
@@ -173,19 +170,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
                     bool CreateLogTopicHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-                     * @return LogTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * 获取<p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
+                     * @return LogTopic <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
                      * 
                      */
                     std::string GetLogTopic() const;
 
                     /**
-                     * 设置Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
-                     * @param _logTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * 设置<p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
+                     * @param _logTopic <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
                      * 
                      */
                     void SetLogTopic(const std::string& _logTopic);
@@ -198,15 +191,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
                     bool LogTopicHasBeenSet() const;
 
                     /**
-                     * 获取Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
-                     * @return Period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+                     * 获取<p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
+                     * @return Period <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
-                     * @param _period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+                     * 设置<p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
+                     * @param _period <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -219,15 +212,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Whether to create an index when creating a log topic. Default to false.
-                     * @return CreateIndex Whether to create an index when creating a log topic. Default to false.
+                     * 获取<p>Whether to create an index when creating a log topic. Defaults to false.</p>
+                     * @return CreateIndex <p>Whether to create an index when creating a log topic. Defaults to false.</p>
                      * 
                      */
                     bool GetCreateIndex() const;
 
                     /**
-                     * 设置Whether to create an index when creating a log topic. Default to false.
-                     * @param _createIndex Whether to create an index when creating a log topic. Default to false.
+                     * 设置<p>Whether to create an index when creating a log topic. Defaults to false.</p>
+                     * @param _createIndex <p>Whether to create an index when creating a log topic. Defaults to false.</p>
                      * 
                      */
                     void SetCreateIndex(const bool& _createIndex);
@@ -240,15 +233,15 @@ Description: When the parameter Status is set to ON, you must fill in either the
                     bool CreateIndexHasBeenSet() const;
 
                     /**
-                     * 获取The region of CLS. If left empty, it defaults to the parameter value of Region.
-                     * @return ClsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * 获取<p>CLS region. If left empty, it defaults to the Region parameter value.</p>
+                     * @return ClsRegion <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
                      * 
                      */
                     std::string GetClsRegion() const;
 
                     /**
-                     * 设置The region of CLS. If left empty, it defaults to the parameter value of Region.
-                     * @param _clsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * 设置<p>CLS region. If left empty, it defaults to the Region parameter value.</p>
+                     * @param _clsRegion <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
                      * 
                      */
                     void SetClsRegion(const std::string& _clsRegion);
@@ -260,69 +253,94 @@ Description: When the parameter Status is set to ON, you must fill in either the
                      */
                     bool ClsRegionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+                     * @return ResourceTags <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+                     * 
+                     */
+                    std::vector<TagInfoItem> GetResourceTags() const;
+
+                    /**
+                     * 设置<p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+                     * @param _resourceTags <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+                     * 
+                     */
+                    void SetResourceTags(const std::vector<TagInfoItem>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     * 
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+                     * <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log type. error: error log. slowlog: slow log.
+                     * <p>Log type. Error: error log, slowlog: slow log.</p>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Delivery status. ON: Enabled, OFF: Disabled.
+                     * <p>Delivery status. ON: enabled, OFF: disabled.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether required to create logset. Default to false.
+                     * <p>Whether required to create logset. Default to false.</p>
                      */
                     bool m_createLogset;
                     bool m_createLogsetHasBeenSet;
 
                     /**
-                     * Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
                      */
                     std::string m_logset;
                     bool m_logsetHasBeenSet;
 
                     /**
-                     * Whether required to create log topic. Default to false.
+                     * <p>Whether required to create log topic. Default to false.</p>
                      */
                     bool m_createLogTopic;
                     bool m_createLogTopicHasBeenSet;
 
                     /**
-                     * Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+                     * <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
                      */
                     std::string m_logTopic;
                     bool m_logTopicHasBeenSet;
 
                     /**
-                     * Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+                     * <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Whether to create an index when creating a log topic. Default to false.
+                     * <p>Whether to create an index when creating a log topic. Defaults to false.</p>
                      */
                     bool m_createIndex;
                     bool m_createIndexHasBeenSet;
 
                     /**
-                     * The region of CLS. If left empty, it defaults to the parameter value of Region.
+                     * <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
                      */
                     std::string m_clsRegion;
                     bool m_clsRegionHasBeenSet;
+
+                    /**
+                     * <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+                     */
+                    std::vector<TagInfoItem> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }
