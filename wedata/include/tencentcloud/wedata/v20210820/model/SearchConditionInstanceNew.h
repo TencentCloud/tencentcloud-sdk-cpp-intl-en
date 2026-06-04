@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool ExecutionSpaceHasBeenSet() const;
 
                     /**
-                     * 获取Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
-                     * @return ProductName Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+                     * 获取Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+                     * @return ProductName Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
-                     * @param _productName Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+                     * 设置Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+                     * @param _productName Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -123,7 +123,7 @@ namespace TencentCloud
                     bool m_executionSpaceHasBeenSet;
 
                     /**
-                     * Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+                     * Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;

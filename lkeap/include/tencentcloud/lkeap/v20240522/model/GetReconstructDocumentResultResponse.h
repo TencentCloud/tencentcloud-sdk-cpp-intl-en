@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/lkeap/v20240522/model/ReconstructDocumentFailedPage.h>
+#include <tencentcloud/lkeap/v20240522/model/DocumentUsage.h>
+#include <tencentcloud/lkeap/v20240522/model/ErrorInfo.h>
 
 
 namespace TencentCloud
@@ -96,6 +98,34 @@ namespace TencentCloud
                      */
                     bool FailedPagesHasBeenSet() const;
 
+                    /**
+                     * 获取Amount of document parsing task.
+                     * @return Usage Amount of document parsing task.
+                     * 
+                     */
+                    DocumentUsage GetUsage() const;
+
+                    /**
+                     * 判断参数 Usage 是否已赋值
+                     * @return Usage 是否已赋值
+                     * 
+                     */
+                    bool UsageHasBeenSet() const;
+
+                    /**
+                     * 获取Error message for failed document parsing task. When a document parsing task fails, a specific error message will be returned.
+                     * @return Error Error message for failed document parsing task. When a document parsing task fails, a specific error message will be returned.
+                     * 
+                     */
+                    ErrorInfo GetError() const;
+
+                    /**
+                     * 判断参数 Error 是否已赋值
+                     * @return Error 是否已赋值
+                     * 
+                     */
+                    bool ErrorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +150,18 @@ namespace TencentCloud
                      */
                     std::vector<ReconstructDocumentFailedPage> m_failedPages;
                     bool m_failedPagesHasBeenSet;
+
+                    /**
+                     * Amount of document parsing task.
+                     */
+                    DocumentUsage m_usage;
+                    bool m_usageHasBeenSet;
+
+                    /**
+                     * Error message for failed document parsing task. When a document parsing task fails, a specific error message will be returned.
+                     */
+                    ErrorInfo m_error;
+                    bool m_errorHasBeenSet;
 
                 };
             }
