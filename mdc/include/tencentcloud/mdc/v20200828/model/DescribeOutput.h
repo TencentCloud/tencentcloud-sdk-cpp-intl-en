@@ -338,15 +338,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取Output RTSP pull stream configuration.
-                     * @return RTSPPullSettings Output RTSP pull stream configuration.
+                     * 获取
+                     * @return RTSPPullSettings 
                      * 
                      */
                     DescribeOutputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置Output RTSP pull stream configuration.
-                     * @param _rTSPPullSettings Output RTSP pull stream configuration.
+                     * 设置
+                     * @param _rTSPPullSettings 
                      * 
                      */
                     void SetRTSPPullSettings(const DescribeOutputRTSPPullSettings& _rTSPPullSettings);
@@ -359,15 +359,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Output HLS pull stream configuration.
-                     * @return HLSPullSettings Output HLS pull stream configuration.
+                     * 获取
+                     * @return HLSPullSettings 
                      * 
                      */
                     DescribeOutputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置Output HLS pull stream configuration.
-                     * @param _hLSPullSettings Output HLS pull stream configuration.
+                     * 设置
+                     * @param _hLSPullSettings 
                      * 
                      */
                     void SetHLSPullSettings(const DescribeOutputHLSPullSettings& _hLSPullSettings);
@@ -380,15 +380,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum pull stream concurrency, maximum 4, default 4.
-                     * @return MaxConcurrent Maximum pull stream concurrency, maximum 4, default 4.
+                     * 获取
+                     * @return MaxConcurrent 
                      * 
                      */
                     uint64_t GetMaxConcurrent() const;
 
                     /**
-                     * 设置Maximum pull stream concurrency, maximum 4, default 4.
-                     * @param _maxConcurrent Maximum pull stream concurrency, maximum 4, default 4.
+                     * 设置
+                     * @param _maxConcurrent 
                      * 
                      */
                     void SetMaxConcurrent(const uint64_t& _maxConcurrent);
@@ -504,19 +504,19 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * Output RTSP pull stream configuration.
+                     * 
                      */
                     DescribeOutputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * Output HLS pull stream configuration.
+                     * 
                      */
                     DescribeOutputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * Maximum pull stream concurrency, maximum 4, default 4.
+                     * 
                      */
                     uint64_t m_maxConcurrent;
                     bool m_maxConcurrentHasBeenSet;

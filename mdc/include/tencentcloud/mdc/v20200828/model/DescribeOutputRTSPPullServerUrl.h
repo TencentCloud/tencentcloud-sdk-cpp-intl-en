@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Query output RTSP pull stream URL information.
+                * 
                 */
                 class DescribeOutputRTSPPullServerUrl : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RTSP pull stream address Url.
-                     * @return Url RTSP pull stream address Url.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置RTSP pull stream address Url.
-                     * @param _url RTSP pull stream address Url.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RTSP pull stream address Url.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

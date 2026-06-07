@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host Machine Resource Overview Details
+                * 
                 */
                 class HostDetailInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type Family
-                     * @return HostTypeFamily Type Family
+                     * 获取
+                     * @return HostTypeFamily 
                      * 
                      */
                     std::string GetHostTypeFamily() const;
 
                     /**
-                     * 设置Type Family
-                     * @param _hostTypeFamily Type Family
+                     * 设置
+                     * @param _hostTypeFamily 
                      * 
                      */
                     void SetHostTypeFamily(const std::string& _hostTypeFamily);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HostTypeFamilyHasBeenSet() const;
 
                     /**
-                     * 获取Total CPU
-                     * @return CpuTotal Total CPU
+                     * 获取
+                     * @return CpuTotal 
                      * 
                      */
                     double GetCpuTotal() const;
 
                     /**
-                     * 设置Total CPU
-                     * @param _cpuTotal Total CPU
+                     * 设置
+                     * @param _cpuTotal 
                      * 
                      */
                     void SetCpuTotal(const double& _cpuTotal);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CpuTotalHasBeenSet() const;
 
                     /**
-                     * 获取Available CPU
-                     * @return CpuAvailable Available CPU
+                     * 获取
+                     * @return CpuAvailable 
                      * 
                      */
                     double GetCpuAvailable() const;
 
                     /**
-                     * 设置Available CPU
-                     * @param _cpuAvailable Available CPU
+                     * 设置
+                     * @param _cpuAvailable 
                      * 
                      */
                     void SetCpuAvailable(const double& _cpuAvailable);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CpuAvailableHasBeenSet() const;
 
                     /**
-                     * 获取Total Memory
-                     * @return MemTotal Total Memory
+                     * 获取
+                     * @return MemTotal 
                      * 
                      */
                     double GetMemTotal() const;
 
                     /**
-                     * 设置Total Memory
-                     * @param _memTotal Total Memory
+                     * 设置
+                     * @param _memTotal 
                      * 
                      */
                     void SetMemTotal(const double& _memTotal);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MemTotalHasBeenSet() const;
 
                     /**
-                     * 获取Available Memory
-                     * @return MemAvailable Available Memory
+                     * 获取
+                     * @return MemAvailable 
                      * 
                      */
                     double GetMemAvailable() const;
 
                     /**
-                     * 设置Available Memory
-                     * @param _memAvailable Available Memory
+                     * 设置
+                     * @param _memAvailable 
                      * 
                      */
                     void SetMemAvailable(const double& _memAvailable);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Type Family
+                     * 
                      */
                     std::string m_hostTypeFamily;
                     bool m_hostTypeFamilyHasBeenSet;
 
                     /**
-                     * Total CPU
+                     * 
                      */
                     double m_cpuTotal;
                     bool m_cpuTotalHasBeenSet;
 
                     /**
-                     * Available CPU
+                     * 
                      */
                     double m_cpuAvailable;
                     bool m_cpuAvailableHasBeenSet;
 
                     /**
-                     * Total Memory
+                     * 
                      */
                     double m_memTotal;
                     bool m_memTotalHasBeenSet;
 
                     /**
-                     * Available Memory
+                     * 
                      */
                     double m_memAvailable;
                     bool m_memAvailableHasBeenSet;

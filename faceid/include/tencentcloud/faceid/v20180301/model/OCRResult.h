@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The content of a single license in the license information.
+                * The content of a single license in the license information
                 */
                 class OCRResult : public AbstractModel
                 {

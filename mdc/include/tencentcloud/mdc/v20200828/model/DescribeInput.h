@@ -302,15 +302,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Input RTMP_PULL configuration.
-                     * @return RTMPPullSettings Input RTMP_PULL configuration.
+                     * 获取
+                     * @return RTMPPullSettings 
                      * 
                      */
                     DescribeInputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
-                     * 设置Input RTMP_PULL configuration.
-                     * @param _rTMPPullSettings Input RTMP_PULL configuration.
+                     * 设置
+                     * @param _rTMPPullSettings 
                      * 
                      */
                     void SetRTMPPullSettings(const DescribeInputRTMPPullSettings& _rTMPPullSettings);
@@ -323,15 +323,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Input RTSP_PULL configuration.
-                     * @return RTSPPullSettings Input RTSP_PULL configuration.
+                     * 获取
+                     * @return RTSPPullSettings 
                      * 
                      */
                     DescribeInputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置Input RTSP_PULL configuration.
-                     * @param _rTSPPullSettings Input RTSP_PULL configuration.
+                     * 设置
+                     * @param _rTSPPullSettings 
                      * 
                      */
                     void SetRTSPPullSettings(const DescribeInputRTSPPullSettings& _rTSPPullSettings);
@@ -344,15 +344,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Input HLS_PULL configuration.
-                     * @return HLSPullSettings Input HLS_PULL configuration.
+                     * 获取
+                     * @return HLSPullSettings 
                      * 
                      */
                     DescribeInputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置Input HLS_PULL configuration.
-                     * @param _hLSPullSettings Input HLS_PULL configuration.
+                     * 设置
+                     * @param _hLSPullSettings 
                      * 
                      */
                     void SetHLSPullSettings(const DescribeInputHLSPullSettings& _hLSPullSettings);
@@ -365,15 +365,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Delayed broadcast smooth stream delivery configuration.
-                     * @return ResilientStream Delayed broadcast smooth stream delivery configuration.
+                     * 获取
+                     * @return ResilientStream 
                      * 
                      */
                     ResilientStreamConf GetResilientStream() const;
 
                     /**
-                     * 设置Delayed broadcast smooth stream delivery configuration.
-                     * @param _resilientStream Delayed broadcast smooth stream delivery configuration.
+                     * 设置
+                     * @param _resilientStream 
                      * 
                      */
                     void SetResilientStream(const ResilientStreamConf& _resilientStream);
@@ -479,25 +479,25 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Input RTMP_PULL configuration.
+                     * 
                      */
                     DescribeInputRTMPPullSettings m_rTMPPullSettings;
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * Input RTSP_PULL configuration.
+                     * 
                      */
                     DescribeInputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * Input HLS_PULL configuration.
+                     * 
                      */
                     DescribeInputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * Delayed broadcast smooth stream delivery configuration.
+                     * 
                      */
                     ResilientStreamConf m_resilientStream;
                     bool m_resilientStreamHasBeenSet;

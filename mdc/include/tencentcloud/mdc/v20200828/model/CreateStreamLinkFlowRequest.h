@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/CreateInput.h>
+#include <tencentcloud/mdc/v20200828/model/CreateOutputInfo.h>
 
 
 namespace TencentCloud
@@ -127,6 +128,27 @@ namespace TencentCloud
                      */
                     bool EventIdHasBeenSet() const;
 
+                    /**
+                     * 获取Flow output group.
+                     * @return OutputGroup Flow output group.
+                     * 
+                     */
+                    std::vector<CreateOutputInfo> GetOutputGroup() const;
+
+                    /**
+                     * 设置Flow output group.
+                     * @param _outputGroup Flow output group.
+                     * 
+                     */
+                    void SetOutputGroup(const std::vector<CreateOutputInfo>& _outputGroup);
+
+                    /**
+                     * 判断参数 OutputGroup 是否已赋值
+                     * @return OutputGroup 是否已赋值
+                     * 
+                     */
+                    bool OutputGroupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +174,12 @@ namespace TencentCloud
                      */
                     std::string m_eventId;
                     bool m_eventIdHasBeenSet;
+
+                    /**
+                     * Flow output group.
+                     */
+                    std::vector<CreateOutputInfo> m_outputGroup;
+                    bool m_outputGroupHasBeenSet;
 
                 };
             }

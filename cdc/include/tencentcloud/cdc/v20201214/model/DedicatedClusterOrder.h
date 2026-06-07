@@ -71,84 +71,84 @@ namespace TencentCloud
                     /**
                      * 获取CDC type id (moved to the next level, obsolete and will be deleted later)
                      * @return DedicatedClusterTypeId CDC type id (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     std::string GetDedicatedClusterTypeId() const;
 
                     /**
                      * 设置CDC type id (moved to the next level, obsolete and will be deleted later)
                      * @param _dedicatedClusterTypeId CDC type id (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     void SetDedicatedClusterTypeId(const std::string& _dedicatedClusterTypeId);
 
                     /**
                      * 判断参数 DedicatedClusterTypeId 是否已赋值
                      * @return DedicatedClusterTypeId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DedicatedClusterTypeIdHasBeenSet() const;
 
                     /**
                      * 获取List of supported storage types (moved to the next level, obsolete and will be deleted later)
                      * @return SupportedStorageType List of supported storage types (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     std::vector<std::string> GetSupportedStorageType() const;
 
                     /**
                      * 设置List of supported storage types (moved to the next level, obsolete and will be deleted later)
                      * @param _supportedStorageType List of supported storage types (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     void SetSupportedStorageType(const std::vector<std::string>& _supportedStorageType);
 
                     /**
                      * 判断参数 SupportedStorageType 是否已赋值
                      * @return SupportedStorageType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SupportedStorageTypeHasBeenSet() const;
 
                     /**
                      * 获取Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
                      * @return SupportedUplinkSpeed Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     std::vector<int64_t> GetSupportedUplinkSpeed() const;
 
                     /**
                      * 设置Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
                      * @param _supportedUplinkSpeed Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     void SetSupportedUplinkSpeed(const std::vector<int64_t>& _supportedUplinkSpeed);
 
                     /**
                      * 判断参数 SupportedUplinkSpeed 是否已赋值
                      * @return SupportedUplinkSpeed 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SupportedUplinkSpeedHasBeenSet() const;
 
                     /**
                      * 获取List of supported instance families (moved to the next level, obsolete and will be deleted later)
                      * @return SupportedInstanceFamily List of supported instance families (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     std::vector<std::string> GetSupportedInstanceFamily() const;
 
                     /**
                      * 设置List of supported instance families (moved to the next level, obsolete and will be deleted later)
                      * @param _supportedInstanceFamily List of supported instance families (moved to the next level, obsolete and will be deleted later)
-                     * 
+                     * @deprecated
                      */
                     void SetSupportedInstanceFamily(const std::vector<std::string>& _supportedInstanceFamily);
 
                     /**
                      * 判断参数 SupportedInstanceFamily 是否已赋值
                      * @return SupportedInstanceFamily 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SupportedInstanceFamilyHasBeenSet() const;
 
@@ -504,15 +504,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Acceptance Status
-                     * @return CheckStatus Acceptance Status
+                     * 获取
+                     * @return CheckStatus 
                      * 
                      */
                     std::string GetCheckStatus() const;
 
                     /**
-                     * 设置Acceptance Status
-                     * @param _checkStatus Acceptance Status
+                     * 设置
+                     * @param _checkStatus 
                      * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
@@ -525,15 +525,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Expected Delivery Time
-                     * @return DeliverExpectTime Expected Delivery Time
+                     * 获取
+                     * @return DeliverExpectTime 
                      * 
                      */
                     std::string GetDeliverExpectTime() const;
 
                     /**
-                     * 设置Expected Delivery Time
-                     * @param _deliverExpectTime Expected Delivery Time
+                     * 设置
+                     * @param _deliverExpectTime 
                      * 
                      */
                     void SetDeliverExpectTime(const std::string& _deliverExpectTime);
@@ -546,15 +546,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool DeliverExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取Actual Delivery Completion Time
-                     * @return DeliverFinishTime Actual Delivery Completion Time
+                     * 获取
+                     * @return DeliverFinishTime 
                      * 
                      */
                     std::string GetDeliverFinishTime() const;
 
                     /**
-                     * 设置Actual Delivery Completion Time
-                     * @param _deliverFinishTime Actual Delivery Completion Time
+                     * 设置
+                     * @param _deliverFinishTime 
                      * 
                      */
                     void SetDeliverFinishTime(const std::string& _deliverFinishTime);
@@ -567,15 +567,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool DeliverFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expected Acceptance Time
-                     * @return CheckExpectTime Expected Acceptance Time
+                     * 获取
+                     * @return CheckExpectTime 
                      * 
                      */
                     std::string GetCheckExpectTime() const;
 
                     /**
-                     * 设置Expected Acceptance Time
-                     * @param _checkExpectTime Expected Acceptance Time
+                     * 设置
+                     * @param _checkExpectTime 
                      * 
                      */
                     void SetCheckExpectTime(const std::string& _checkExpectTime);
@@ -588,15 +588,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取Actual Acceptance Completion Time
-                     * @return CheckFinishTime Actual Acceptance Completion Time
+                     * 获取
+                     * @return CheckFinishTime 
                      * 
                      */
                     std::string GetCheckFinishTime() const;
 
                     /**
-                     * 设置Actual Acceptance Completion Time
-                     * @param _checkFinishTime Actual Acceptance Completion Time
+                     * 设置
+                     * @param _checkFinishTime 
                      * 
                      */
                     void SetCheckFinishTime(const std::string& _checkFinishTime);
@@ -609,15 +609,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool CheckFinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Order SLA
-                     * @return OrderSLA Order SLA
+                     * 获取
+                     * @return OrderSLA 
                      * 
                      */
                     std::string GetOrderSLA() const;
 
                     /**
-                     * 设置Order SLA
-                     * @param _orderSLA Order SLA
+                     * 设置
+                     * @param _orderSLA 
                      * 
                      */
                     void SetOrderSLA(const std::string& _orderSLA);
@@ -630,15 +630,15 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool OrderSLAHasBeenSet() const;
 
                     /**
-                     * 获取Order Payment Plan
-                     * @return OrderPayPlan Order Payment Plan
+                     * 获取
+                     * @return OrderPayPlan 
                      * 
                      */
                     std::string GetOrderPayPlan() const;
 
                     /**
-                     * 设置Order Payment Plan
-                     * @param _orderPayPlan Order Payment Plan
+                     * 设置
+                     * @param _orderPayPlan 
                      * 
                      */
                     void SetOrderPayPlan(const std::string& _orderPayPlan);
@@ -782,43 +782,43 @@ Note: The returned value of this field may be null, indicating that no valid val
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Acceptance Status
+                     * 
                      */
                     std::string m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Expected Delivery Time
+                     * 
                      */
                     std::string m_deliverExpectTime;
                     bool m_deliverExpectTimeHasBeenSet;
 
                     /**
-                     * Actual Delivery Completion Time
+                     * 
                      */
                     std::string m_deliverFinishTime;
                     bool m_deliverFinishTimeHasBeenSet;
 
                     /**
-                     * Expected Acceptance Time
+                     * 
                      */
                     std::string m_checkExpectTime;
                     bool m_checkExpectTimeHasBeenSet;
 
                     /**
-                     * Actual Acceptance Completion Time
+                     * 
                      */
                     std::string m_checkFinishTime;
                     bool m_checkFinishTimeHasBeenSet;
 
                     /**
-                     * Order SLA
+                     * 
                      */
                     std::string m_orderSLA;
                     bool m_orderSLAHasBeenSet;
 
                     /**
-                     * Order Payment Plan
+                     * 
                      */
                     std::string m_orderPayPlan;
                     bool m_orderPayPlanHasBeenSet;

@@ -128,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BestFrameBase64HasBeenSet() const;
 
                     /**
-                     * 获取Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OCRResult Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Card recognize result
+                     * @return OCRResult Card recognize result
                      * 
                      */
                     std::vector<OCRResult> GetOCRResult() const;
@@ -196,8 +194,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bestFrameBase64HasBeenSet;
 
                     /**
-                     * Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Card recognize result
                      */
                     std::vector<OCRResult> m_oCRResult;
                     bool m_oCRResultHasBeenSet;
