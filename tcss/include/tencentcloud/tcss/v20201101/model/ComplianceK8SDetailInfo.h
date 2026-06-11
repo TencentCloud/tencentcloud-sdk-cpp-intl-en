@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterName K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the K8S cluster.
+                     * @return ClusterName Name of the K8S cluster.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterName K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the K8S cluster.
+                     * @param _clusterName Name of the K8S cluster.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterVersion K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Kubernetes Cluster Version
+                     * @return ClusterVersion Kubernetes Cluster Version
                      * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
-                     * 设置K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterVersion K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Kubernetes Cluster Version
+                     * @param _clusterVersion Kubernetes Cluster Version
                      * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the K8S cluster.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Kubernetes Cluster Version
                      */
                     std::string m_clusterVersion;
                     bool m_clusterVersionHasBeenSet;

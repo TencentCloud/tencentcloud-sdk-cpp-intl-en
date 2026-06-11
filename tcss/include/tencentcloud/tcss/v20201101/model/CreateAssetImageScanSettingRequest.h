@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch
-                     * @return Enable Switch
+                     * 获取<p>Switch.</p>
+                     * @return Enable <p>Switch.</p>
                      * 
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置Switch
-                     * @param _enable Switch
+                     * 设置<p>Switch.</p>
+                     * @param _enable <p>Switch.</p>
                      * 
                      */
                     void SetEnable(const bool& _enable);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Scan time
-                     * @return ScanTime Scan time
+                     * 获取<p>Scan start time<br>01:00 Time Division</p>
+                     * @return ScanTime <p>Scan start time<br>01:00 Time Division</p>
                      * 
                      */
                     std::string GetScanTime() const;
 
                     /**
-                     * 设置Scan time
-                     * @param _scanTime Scan time
+                     * 设置<p>Scan start time<br>01:00 Time Division</p>
+                     * @param _scanTime <p>Scan start time<br>01:00 Time Division</p>
                      * 
                      */
                     void SetScanTime(const std::string& _scanTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scan cycle
-                     * @return ScanPeriod Scan cycle
+                     * 获取<p>Scan cycle</p>
+                     * @return ScanPeriod <p>Scan cycle</p>
                      * 
                      */
                     uint64_t GetScanPeriod() const;
 
                     /**
-                     * 设置Scan cycle
-                     * @param _scanPeriod Scan cycle
+                     * 设置<p>Scan cycle</p>
+                     * @param _scanPeriod <p>Scan cycle</p>
                      * 
                      */
                     void SetScanPeriod(const uint64_t& _scanPeriod);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ScanPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scan
-                     * @return ScanVirus Trojan scan
+                     * 获取<p>Scan for trojans</p>
+                     * @return ScanVirus <p>Scan for trojans</p>
                      * 
                      */
                     bool GetScanVirus() const;
 
                     /**
-                     * 设置Trojan scan
-                     * @param _scanVirus Trojan scan
+                     * 设置<p>Scan for trojans</p>
+                     * @param _scanVirus <p>Scan for trojans</p>
                      * 
                      */
                     void SetScanVirus(const bool& _scanVirus);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ScanVirusHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive data scan
-                     * @return ScanRisk Sensitive data scan
+                     * 获取<p>Scan sensitive information</p>
+                     * @return ScanRisk <p>Scan sensitive information</p>
                      * 
                      */
                     bool GetScanRisk() const;
 
                     /**
-                     * 设置Sensitive data scan
-                     * @param _scanRisk Sensitive data scan
+                     * 设置<p>Scan sensitive information</p>
+                     * @param _scanRisk <p>Scan sensitive information</p>
                      * 
                      */
                     void SetScanRisk(const bool& _scanRisk);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ScanRiskHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scan
-                     * @return ScanVul Vulnerability scan
+                     * 获取<p>Scan for vulnerabilities</p>
+                     * @return ScanVul <p>Scan for vulnerabilities</p>
                      * 
                      */
                     bool GetScanVul() const;
 
                     /**
-                     * 设置Vulnerability scan
-                     * @param _scanVul Vulnerability scan
+                     * 设置<p>Scan for vulnerabilities</p>
+                     * @param _scanVul <p>Scan for vulnerabilities</p>
                      * 
                      */
                     void SetScanVul(const bool& _scanVul);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ScanVulHasBeenSet() const;
 
                     /**
-                     * 获取All images
-                     * @return All All images
+                     * 获取<p>All images</p>
+                     * @return All <p>All images</p>
                      * @deprecated
                      */
                     bool GetAll() const;
 
                     /**
-                     * 设置All images
-                     * @param _all All images
+                     * 设置<p>All images</p>
+                     * @param _all <p>All images</p>
                      * @deprecated
                      */
                     void SetAll(const bool& _all);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取Custom image
-                     * @return Images Custom image
+                     * 获取<p>Custom Image</p>
+                     * @return Images <p>Custom Image</p>
                      * 
                      */
                     std::vector<std::string> GetImages() const;
 
                     /**
-                     * 设置Custom image
-                     * @param _images Custom image
+                     * 设置<p>Custom Image</p>
+                     * @param _images <p>Custom Image</p>
                      * 
                      */
                     void SetImages(const std::vector<std::string>& _images);
@@ -210,55 +210,190 @@ namespace TencentCloud
                      */
                     bool ImagesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether the image has running containers</p>
+                     * @return ContainerRunning <p>Whether the image has running containers</p>
+                     * 
+                     */
+                    bool GetContainerRunning() const;
+
+                    /**
+                     * 设置<p>Whether the image has running containers</p>
+                     * @param _containerRunning <p>Whether the image has running containers</p>
+                     * 
+                     */
+                    void SetContainerRunning(const bool& _containerRunning);
+
+                    /**
+                     * 判断参数 ContainerRunning 是否已赋值
+                     * @return ContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool ContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Scan range 0 all authorized images, 1 select mirror, 2 recommended scan, 3 cluster filtering scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+                     * @return ScanScope <p>Scan range 0 all authorized images, 1 select mirror, 2 recommended scan, 3 cluster filtering scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+                     * 
+                     */
+                    uint64_t GetScanScope() const;
+
+                    /**
+                     * 设置<p>Scan range 0 all authorized images, 1 select mirror, 2 recommended scan, 3 cluster filtering scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+                     * @param _scanScope <p>Scan range 0 all authorized images, 1 select mirror, 2 recommended scan, 3 cluster filtering scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+                     * 
+                     */
+                    void SetScanScope(const uint64_t& _scanScope);
+
+                    /**
+                     * 判断参数 ScanScope 是否已赋值
+                     * @return ScanScope 是否已赋值
+                     * 
+                     */
+                    bool ScanScopeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Scan end time<br>02:00 Time Division</p>
+                     * @return ScanEndTime <p>Scan end time<br>02:00 Time Division</p>
+                     * 
+                     */
+                    std::string GetScanEndTime() const;
+
+                    /**
+                     * 设置<p>Scan end time<br>02:00 Time Division</p>
+                     * @param _scanEndTime <p>Scan end time<br>02:00 Time Division</p>
+                     * 
+                     */
+                    void SetScanEndTime(const std::string& _scanEndTime);
+
+                    /**
+                     * 判断参数 ScanEndTime 是否已赋值
+                     * @return ScanEndTime 是否已赋值
+                     * 
+                     */
+                    bool ScanEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Exclude mirror scan</p>
+                     * @return ExcludeImages <p>Exclude mirror scan</p>
+                     * 
+                     */
+                    std::vector<std::string> GetExcludeImages() const;
+
+                    /**
+                     * 设置<p>Exclude mirror scan</p>
+                     * @param _excludeImages <p>Exclude mirror scan</p>
+                     * 
+                     */
+                    void SetExcludeImages(const std::vector<std::string>& _excludeImages);
+
+                    /**
+                     * 判断参数 ExcludeImages 是否已赋值
+                     * @return ExcludeImages 是否已赋值
+                     * 
+                     */
+                    bool ExcludeImagesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterIDs <p>Cluster ID.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetClusterIDs() const;
+
+                    /**
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterIDs <p>Cluster ID.</p>
+                     * 
+                     */
+                    void SetClusterIDs(const std::vector<std::string>& _clusterIDs);
+
+                    /**
+                     * 判断参数 ClusterIDs 是否已赋值
+                     * @return ClusterIDs 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Switch
+                     * <p>Switch.</p>
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Scan time
+                     * <p>Scan start time<br>01:00 Time Division</p>
                      */
                     std::string m_scanTime;
                     bool m_scanTimeHasBeenSet;
 
                     /**
-                     * Scan cycle
+                     * <p>Scan cycle</p>
                      */
                     uint64_t m_scanPeriod;
                     bool m_scanPeriodHasBeenSet;
 
                     /**
-                     * Trojan scan
+                     * <p>Scan for trojans</p>
                      */
                     bool m_scanVirus;
                     bool m_scanVirusHasBeenSet;
 
                     /**
-                     * Sensitive data scan
+                     * <p>Scan sensitive information</p>
                      */
                     bool m_scanRisk;
                     bool m_scanRiskHasBeenSet;
 
                     /**
-                     * Vulnerability scan
+                     * <p>Scan for vulnerabilities</p>
                      */
                     bool m_scanVul;
                     bool m_scanVulHasBeenSet;
 
                     /**
-                     * All images
+                     * <p>All images</p>
                      */
                     bool m_all;
                     bool m_allHasBeenSet;
 
                     /**
-                     * Custom image
+                     * <p>Custom Image</p>
                      */
                     std::vector<std::string> m_images;
                     bool m_imagesHasBeenSet;
+
+                    /**
+                     * <p>Whether the image has running containers</p>
+                     */
+                    bool m_containerRunning;
+                    bool m_containerRunningHasBeenSet;
+
+                    /**
+                     * <p>Scan range 0 all authorized images, 1 select mirror, 2 recommended scan, 3 cluster filtering scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+                     */
+                    uint64_t m_scanScope;
+                    bool m_scanScopeHasBeenSet;
+
+                    /**
+                     * <p>Scan end time<br>02:00 Time Division</p>
+                     */
+                    std::string m_scanEndTime;
+                    bool m_scanEndTimeHasBeenSet;
+
+                    /**
+                     * <p>Exclude mirror scan</p>
+                     */
+                    std::vector<std::string> m_excludeImages;
+                    bool m_excludeImagesHasBeenSet;
+
+                    /**
+                     * <p>Cluster ID.</p>
+                     */
+                    std::vector<std::string> m_clusterIDs;
+                    bool m_clusterIDsHasBeenSet;
 
                 };
             }

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineBasicInfoList Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineBasicInfo> GetBaselineBasicInfoList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineBasicInfo> m_baselineBasicInfoList;
                     bool m_baselineBasicInfoListHasBeenSet;

@@ -122,51 +122,47 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool MetaFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Tag data processing mode: 1: Do not tile (default); 2: Tile.
+                     * 获取tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+                     * @return TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTagTransaction() const;
 
                     /**
-                     * 设置Tag data processing mode: 1: Do not tile (default); 2: Tile.
+                     * 设置tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+                     * @param _tagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagTransaction(const int64_t& _tagTransaction);
@@ -251,16 +247,15 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool m_metaFieldsHasBeenSet;
 
                     /**
-                     * Tag data processing mode: 1: Do not tile (default); 2: Tile.
+                     * tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_tagTransaction;
                     bool m_tagTransactionHasBeenSet;

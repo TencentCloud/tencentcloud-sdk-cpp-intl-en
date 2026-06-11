@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return UserName 
+                     * 获取The account name.
+                     * @return UserName The account name.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置
-                     * @param _userName 
+                     * 设置The account name.
+                     * @param _userName The account name.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AuthRole 
+                     * 获取The account permission details.
+                     * @return AuthRole The account permission details.
                      * 
                      */
                     std::vector<Auth> GetAuthRole() const;
 
                     /**
-                     * 设置
-                     * @param _authRole 
+                     * 设置The account permission details.
+                     * @param _authRole The account permission details.
                      * 
                      */
                     void SetAuthRole(const std::vector<Auth>& _authRole);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool AuthRoleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取The time when the account was created.
+                     * @return CreateTime The time when the account was created.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置The time when the account was created.
+                     * @param _createTime The time when the account was created.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取The time when the account was last updated.
+                     * @return UpdateTime The time when the account was last updated.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置The time when the account was last updated.
+                     * @param _updateTime The time when the account was last updated.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserDesc 
+                     * 获取The remarks for the account.
+                     * @return UserDesc The remarks for the account.
                      * 
                      */
                     std::string GetUserDesc() const;
 
                     /**
-                     * 设置
-                     * @param _userDesc 
+                     * 设置The remarks for the account.
+                     * @param _userDesc The remarks for the account.
                      * 
                      */
                     void SetUserDesc(const std::string& _userDesc);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool UserDescHasBeenSet() const;
 
                     /**
-                     * 获取Console password update time.
-                     * @return ConsolePassUpdateTime Console password update time.
+                     * 获取The time when the console password was last updated.
+                     * @return ConsolePassUpdateTime The time when the console password was last updated.
                      * 
                      */
                     std::string GetConsolePassUpdateTime() const;
 
                     /**
-                     * 设置Console password update time.
-                     * @param _consolePassUpdateTime Console password update time.
+                     * 设置The time when the console password was last updated.
+                     * @param _consolePassUpdateTime The time when the console password was last updated.
                      * 
                      */
                     void SetConsolePassUpdateTime(const std::string& _consolePassUpdateTime);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The account name.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * 
+                     * The account permission details.
                      */
                     std::vector<Auth> m_authRole;
                     bool m_authRoleHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the account was created.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The time when the account was last updated.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The remarks for the account.
                      */
                     std::string m_userDesc;
                     bool m_userDescHasBeenSet;
 
                     /**
-                     * Console password update time.
+                     * The time when the console password was last updated.
                      */
                     std::string m_consolePassUpdateTime;
                     bool m_consolePassUpdateTimeHasBeenSet;

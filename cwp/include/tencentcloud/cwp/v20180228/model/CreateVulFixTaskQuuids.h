@@ -47,27 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability ID
-                     * @return VulId Vulnerability ID
-                     * 
-                     */
-                    uint64_t GetVulId() const;
-
-                    /**
-                     * 设置Vulnerability ID
-                     * @param _vulId Vulnerability ID
-                     * 
-                     */
-                    void SetVulId(const uint64_t& _vulId);
-
-                    /**
-                     * 判断参数 VulId 是否已赋值
-                     * @return VulId 是否已赋值
-                     * 
-                     */
-                    bool VulIdHasBeenSet() const;
-
-                    /**
                      * 获取Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
                      * @return Quuids Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
                      * 
@@ -89,15 +68,36 @@ namespace TencentCloud
                     bool QuuidsHasBeenSet() const;
 
                     /**
-                     * 获取Repair method: 0 component update or patch installation, 1 disable service
-                     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
+                     * 获取Vulnerability ID
+                     * @return VulId Vulnerability ID
+                     * 
+                     */
+                    uint64_t GetVulId() const;
+
+                    /**
+                     * 设置Vulnerability ID
+                     * @param _vulId Vulnerability ID
+                     * 
+                     */
+                    void SetVulId(const uint64_t& _vulId);
+
+                    /**
+                     * 判断参数 VulId 是否已赋值
+                     * @return VulId 是否已赋值
+                     * 
+                     */
+                    bool VulIdHasBeenSet() const;
+
+                    /**
+                     * 获取Repair method. 0: Update components or install patches. 1: Disable service.
+                     * @return FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
                      * 
                      */
                     uint64_t GetFixMethod() const;
 
                     /**
-                     * 设置Repair method: 0 component update or patch installation, 1 disable service
-                     * @param _fixMethod Repair method: 0 component update or patch installation, 1 disable service
+                     * 设置Repair method. 0: Update components or install patches. 1: Disable service.
+                     * @param _fixMethod Repair method. 0: Update components or install patches. 1: Disable service.
                      * 
                      */
                     void SetFixMethod(const uint64_t& _fixMethod);
@@ -109,13 +109,28 @@ namespace TencentCloud
                      */
                     bool FixMethodHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取kb id
+                     * @return KbId kb id
+                     * 
+                     */
+                    uint64_t GetKbId() const;
 
                     /**
-                     * Vulnerability ID
+                     * 设置kb id
+                     * @param _kbId kb id
+                     * 
                      */
-                    uint64_t m_vulId;
-                    bool m_vulIdHasBeenSet;
+                    void SetKbId(const uint64_t& _kbId);
+
+                    /**
+                     * 判断参数 KbId 是否已赋值
+                     * @return KbId 是否已赋值
+                     * 
+                     */
+                    bool KbIdHasBeenSet() const;
+
+                private:
 
                     /**
                      * Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
@@ -124,10 +139,22 @@ namespace TencentCloud
                     bool m_quuidsHasBeenSet;
 
                     /**
-                     * Repair method: 0 component update or patch installation, 1 disable service
+                     * Vulnerability ID
+                     */
+                    uint64_t m_vulId;
+                    bool m_vulIdHasBeenSet;
+
+                    /**
+                     * Repair method. 0: Update components or install patches. 1: Disable service.
                      */
                     uint64_t m_fixMethod;
                     bool m_fixMethodHasBeenSet;
+
+                    /**
+                     * kb id
+                     */
+                    uint64_t m_kbId;
+                    bool m_kbIdHasBeenSet;
 
                 };
             }

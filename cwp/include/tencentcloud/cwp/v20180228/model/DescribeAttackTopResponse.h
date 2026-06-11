@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetAttackTopInfo Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NetAttackTopInfo GetNetAttackTopInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NetAttackTopInfo m_netAttackTopInfo;
                     bool m_netAttackTopInfoHasBeenSet;

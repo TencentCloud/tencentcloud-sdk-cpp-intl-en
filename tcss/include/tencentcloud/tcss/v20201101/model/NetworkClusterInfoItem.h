@@ -278,19 +278,15 @@ namespace TencentCloud
                     bool NetworkPolicyPluginStatusHasBeenSet() const;
 
                     /**
-                     * 获取Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NetworkPolicyPluginError Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster Network Plugin Error Message
+                     * @return NetworkPolicyPluginError Cluster Network Plugin Error Message
                      * 
                      */
                     std::string GetNetworkPolicyPluginError() const;
 
                     /**
-                     * 设置Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _networkPolicyPluginError Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster Network Plugin Error Message
+                     * @param _networkPolicyPluginError Cluster Network Plugin Error Message
                      * 
                      */
                     void SetNetworkPolicyPluginError(const std::string& _networkPolicyPluginError);
@@ -303,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NetworkPolicyPluginErrorHasBeenSet() const;
 
                     /**
-                     * 获取Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return ClusterNetworkSettings Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取container network plugin
+                     * @return ClusterNetworkSettings container network plugin
                      * 
                      */
                     std::string GetClusterNetworkSettings() const;
 
                     /**
-                     * 设置Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _clusterNetworkSettings Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置container network plugin
+                     * @param _clusterNetworkSettings container network plugin
                      * 
                      */
                     void SetClusterNetworkSettings(const std::string& _clusterNetworkSettings);
@@ -396,15 +388,13 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool m_networkPolicyPluginStatusHasBeenSet;
 
                     /**
-                     * Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster Network Plugin Error Message
                      */
                     std::string m_networkPolicyPluginError;
                     bool m_networkPolicyPluginErrorHasBeenSet;
 
                     /**
-                     * Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * container network plugin
                      */
                     std::string m_clusterNetworkSettings;
                     bool m_clusterNetworkSettingsHasBeenSet;

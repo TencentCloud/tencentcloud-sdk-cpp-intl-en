@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ReferenceLinkHasBeenSet() const;
 
                     /**
-                     * 获取Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
-                     * @return HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+                     * 获取Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
+                     * @return HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
                      * 
                      */
                     int64_t GetHandleStatus() const;
 
                     /**
-                     * 设置Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
-                     * @param _handleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+                     * 设置Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
+                     * @param _handleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
                      * 
                      */
                     void SetHandleStatus(const int64_t& _handleStatus);
@@ -553,18 +553,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -696,7 +692,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_referenceLinkHasBeenSet;
 
                     /**
-                     * Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+                     * Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
                      */
                     int64_t m_handleStatus;
                     bool m_handleStatusHasBeenSet;
@@ -745,7 +741,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

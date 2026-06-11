@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取MD5 checksum of the file
-                     * @return MD5 MD5 checksum of the file
+                     * 获取File MD5 Value
+                     * @return MD5 File MD5 Value
                      * 
                      */
                     std::string GetMD5() const;
 
                     /**
-                     * 设置MD5 checksum of the file
-                     * @param _mD5 MD5 checksum of the file
+                     * 设置File MD5 Value
+                     * @param _mD5 File MD5 Value
                      * 
                      */
                     void SetMD5(const std::string& _mD5);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * MD5 checksum of the file
+                     * File MD5 Value
                      */
                     std::string m_mD5;
                     bool m_mD5HasBeenSet;

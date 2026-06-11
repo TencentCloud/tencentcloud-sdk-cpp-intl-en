@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ScreenBroadcasts> GetList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ScreenBroadcasts> m_list;
                     bool m_listHasBeenSet;

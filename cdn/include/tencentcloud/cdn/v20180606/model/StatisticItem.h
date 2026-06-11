@@ -122,19 +122,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool BpsThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CounterMeasure Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCounterMeasure() const;
 
                     /**
-                     * 设置Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _counterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _counterMeasure Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCounterMeasure(const std::string& _counterMeasure);
@@ -230,15 +230,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool MetricHasBeenSet() const;
 
                     /**
-                     * 获取Detection Cycle, Unit: Minutes, 60 or 1440
-                     * @return Cycle Detection Cycle, Unit: Minutes, 60 or 1440
+                     * 获取
+                     * @return Cycle 
                      * 
                      */
                     uint64_t GetCycle() const;
 
                     /**
-                     * 设置Detection Cycle, Unit: Minutes, 60 or 1440
-                     * @param _cycle Detection Cycle, Unit: Minutes, 60 or 1440
+                     * 设置
+                     * @param _cycle 
                      * 
                      */
                     void SetCycle(const uint64_t& _cycle);
@@ -307,8 +307,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_bpsThresholdHasBeenSet;
 
                     /**
-                     * Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_counterMeasure;
                     bool m_counterMeasureHasBeenSet;
@@ -337,7 +337,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_metricHasBeenSet;
 
                     /**
-                     * Detection Cycle, Unit: Minutes, 60 or 1440
+                     * 
                      */
                     uint64_t m_cycle;
                     bool m_cycleHasBeenSet;

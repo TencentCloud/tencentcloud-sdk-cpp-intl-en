@@ -28,7 +28,10 @@
 #include <tencentcloud/cls/v20201016/model/MonitorTime.h>
 #include <tencentcloud/cls/v20201016/model/CallBackInfo.h>
 #include <tencentcloud/cls/v20201016/model/AnalysisDimensional.h>
+#include <tencentcloud/cls/v20201016/model/Tag.h>
+#include <tencentcloud/cls/v20201016/model/AlarmClassification.h>
 #include <tencentcloud/cls/v20201016/model/MultiCondition.h>
+#include <tencentcloud/cls/v20201016/model/MonitorNotice.h>
 
 
 namespace TencentCloud
@@ -115,15 +118,15 @@ namespace TencentCloud
                     bool MonitorTimeHasBeenSet() const;
 
                     /**
-                     * 获取Single trigger condition. Mutually exclusive with the MultiConditions parameter.
-                     * @return Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+                     * 获取Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
+                     * @return Condition Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Single trigger condition. Mutually exclusive with the MultiConditions parameter.
-                     * @param _condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+                     * 设置Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
+                     * @param _condition Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -178,15 +181,15 @@ namespace TencentCloud
                     bool AlarmPeriodHasBeenSet() const;
 
                     /**
-                     * 获取List of associated alarm notification templates
-                     * @return AlarmNoticeIds List of associated alarm notification templates
+                     * 获取List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
+                     * @return AlarmNoticeIds List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
                      * 
                      */
                     std::vector<std::string> GetAlarmNoticeIds() const;
 
                     /**
-                     * 设置List of associated alarm notification templates
-                     * @param _alarmNoticeIds List of associated alarm notification templates
+                     * 设置List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
+                     * @param _alarmNoticeIds List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
                      * 
                      */
                     void SetAlarmNoticeIds(const std::vector<std::string>& _alarmNoticeIds);
@@ -241,15 +244,15 @@ namespace TencentCloud
                     bool AlarmIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time. Format: YYYY-MM-DD HH:MM:SS
+                     * @return CreateTime Creation time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time. Format: YYYY-MM-DD HH:MM:SS
+                     * @param _createTime Creation time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -262,15 +265,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last update time
-                     * @return UpdateTime Last update time
+                     * 获取Latest update time. Format: YYYY-MM-DD HH:MM:SS
+                     * @return UpdateTime Latest update time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last update time
-                     * @param _updateTime Last update time
+                     * 设置Latest update time. Format: YYYY-MM-DD HH:MM:SS
+                     * @param _updateTime Latest update time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -309,18 +312,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CallBack Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     CallBackInfo GetCallBack() const;
 
                     /**
                      * 设置Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _callBack Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCallBack(const CallBackInfo& _callBack);
@@ -333,19 +332,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CallBackHasBeenSet() const;
 
                     /**
-                     * 获取Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Analysis Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Multidimensional analysis settings
+                     * @return Analysis Multidimensional analysis settings
                      * 
                      */
                     std::vector<AnalysisDimensional> GetAnalysis() const;
 
                     /**
-                     * 设置Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _analysis Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Multidimensional analysis settings
+                     * @param _analysis Multidimensional analysis settings
                      * 
                      */
                     void SetAnalysis(const std::vector<AnalysisDimensional>& _analysis);
@@ -358,19 +353,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Group trigger status. true: enabled, false: disabled (default)
+                     * @return GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
                      * 
                      */
                     bool GetGroupTriggerStatus() const;
 
                     /**
-                     * 设置Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Group trigger status. true: enabled, false: disabled (default)
+                     * @param _groupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
                      * 
                      */
                     void SetGroupTriggerStatus(const bool& _groupTriggerStatus);
@@ -383,15 +374,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupTriggerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Grouping Trigger Conditions.
+                     * @return GroupTriggerCondition Grouping Trigger Conditions.
                      * 
                      */
                     std::vector<std::string> GetGroupTriggerCondition() const;
 
                     /**
-                     * 设置Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Grouping Trigger Conditions.
+                     * @param _groupTriggerCondition Grouping Trigger Conditions.
                      * 
                      */
                     void SetGroupTriggerCondition(const std::vector<std::string>& _groupTriggerCondition);
@@ -404,15 +395,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupTriggerConditionHasBeenSet() const;
 
                     /**
-                     * 获取Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag information bound to the alarm policy.
+                     * @return Tags Tag information bound to the alarm policy.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag information bound to the alarm policy.
+                     * @param _tags Tag information bound to the alarm policy.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+                     * @return MonitorObjectType Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
                      * 
                      */
                     uint64_t GetMonitorObjectType() const;
 
                     /**
-                     * 设置Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _monitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+                     * @param _monitorObjectType Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
                      * 
                      */
                     void SetMonitorObjectType(const uint64_t& _monitorObjectType);
@@ -425,15 +437,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonitorObjectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Alarm level. 0: Warn; 1: Information; 2: Critical.
+                     * @return AlarmLevel Alarm level. 0: Warn; 1: Information; 2: Critical.
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Alarm level. 0: Warn; 1: Information; 2: Critical.
+                     * @param _alarmLevel Alarm level. 0: Warn; 1: Information; 2: Critical.
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -446,15 +458,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Additional classification field for alerts.
+                     * @return Classifications Additional classification field for alerts.
+                     * 
+                     */
+                    std::vector<AlarmClassification> GetClassifications() const;
+
+                    /**
+                     * 设置Additional classification field for alerts.
+                     * @param _classifications Additional classification field for alerts.
+                     * 
+                     */
+                    void SetClassifications(const std::vector<AlarmClassification>& _classifications);
+
+                    /**
+                     * 判断参数 Classifications 是否已赋值
+                     * @return Classifications 是否已赋值
+                     * 
+                     */
+                    bool ClassificationsHasBeenSet() const;
+
+                    /**
+                     * 获取Multiple trigger conditions.
+Mutually exclusive conditions.
+                     * @return MultiConditions Multiple trigger conditions.
+Mutually exclusive conditions.
                      * 
                      */
                     std::vector<MultiCondition> GetMultiConditions() const;
 
                     /**
-                     * 设置Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _multiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Multiple trigger conditions.
+Mutually exclusive conditions.
+                     * @param _multiConditions Multiple trigger conditions.
+Mutually exclusive conditions.
                      * 
                      */
                     void SetMultiConditions(const std::vector<MultiCondition>& _multiConditions);
@@ -465,6 +502,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool MultiConditionsHasBeenSet() const;
+
+                    /**
+                     * 获取Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+                     * @return MonitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+                     * 
+                     */
+                    MonitorNotice GetMonitorNotice() const;
+
+                    /**
+                     * 设置Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+                     * @param _monitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+                     * 
+                     */
+                    void SetMonitorNotice(const MonitorNotice& _monitorNotice);
+
+                    /**
+                     * 判断参数 MonitorNotice 是否已赋值
+                     * @return MonitorNotice 是否已赋值
+                     * 
+                     */
+                    bool MonitorNoticeHasBeenSet() const;
 
                 private:
 
@@ -487,7 +545,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_monitorTimeHasBeenSet;
 
                     /**
-                     * Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+                     * Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
@@ -505,7 +563,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_alarmPeriodHasBeenSet;
 
                     /**
-                     * List of associated alarm notification templates
+                     * List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
                      */
                     std::vector<std::string> m_alarmNoticeIds;
                     bool m_alarmNoticeIdsHasBeenSet;
@@ -523,13 +581,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_alarmIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time. Format: YYYY-MM-DD HH:MM:SS
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last update time
+                     * Latest update time. Format: YYYY-MM-DD HH:MM:SS
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -543,48 +601,64 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     CallBackInfo m_callBack;
                     bool m_callBackHasBeenSet;
 
                     /**
-                     * Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Multidimensional analysis settings
                      */
                     std::vector<AnalysisDimensional> m_analysis;
                     bool m_analysisHasBeenSet;
 
                     /**
-                     * Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Group trigger status. true: enabled, false: disabled (default)
                      */
                     bool m_groupTriggerStatus;
                     bool m_groupTriggerStatusHasBeenSet;
 
                     /**
-                     * Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+                     * Grouping Trigger Conditions.
                      */
                     std::vector<std::string> m_groupTriggerCondition;
                     bool m_groupTriggerConditionHasBeenSet;
 
                     /**
-                     * Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag information bound to the alarm policy.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
                      */
                     uint64_t m_monitorObjectType;
                     bool m_monitorObjectTypeHasBeenSet;
 
                     /**
-                     * Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+                     * Alarm level. 0: Warn; 1: Information; 2: Critical.
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Additional classification field for alerts.
+                     */
+                    std::vector<AlarmClassification> m_classifications;
+                    bool m_classificationsHasBeenSet;
+
+                    /**
+                     * Multiple trigger conditions.
+Mutually exclusive conditions.
                      */
                     std::vector<MultiCondition> m_multiConditions;
                     bool m_multiConditionsHasBeenSet;
+
+                    /**
+                     * Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+                     */
+                    MonitorNotice m_monitorNotice;
+                    bool m_monitorNoticeHasBeenSet;
 
                 };
             }

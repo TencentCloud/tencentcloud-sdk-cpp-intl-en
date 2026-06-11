@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool BTimeHasBeenSet() const;
 
                     /**
-                     * 获取Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return HostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Log source host name
+                     * @return HostName Log source host name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _hostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Log source host name
+                     * @param _hostName Log source host name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -199,19 +195,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Raw log (only available when there is an error in creating the log index).
+                     * @return RawLog Raw log (only available when there is an error in creating the log index).
                      * 
                      */
                     std::string GetRawLog() const;
 
                     /**
-                     * 设置Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Raw log (only available when there is an error in creating the log index).
+                     * @param _rawLog Raw log (only available when there is an error in creating the log index).
                      * 
                      */
                     void SetRawLog(const std::string& _rawLog);
@@ -224,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RawLogHasBeenSet() const;
 
                     /**
-                     * 获取The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+                     * @return IndexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
                      * 
                      */
                     std::string GetIndexStatus() const;
 
                     /**
-                     * 设置The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _indexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+                     * @param _indexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
                      * 
                      */
                     void SetIndexStatus(const std::string& _indexStatus);
@@ -249,15 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IndexStatusHasBeenSet() const;
 
                     /**
-                     * 获取Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return HighLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Highlighted description of the log content
+                     * @return HighLights Highlighted description of the log content
                      * 
                      */
                     std::vector<HighLightItem> GetHighLights() const;
 
                     /**
-                     * 设置Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _highLights Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Highlighted description of the log content
+                     * @param _highLights Highlighted description of the log content
                      * 
                      */
                     void SetHighLights(const std::vector<HighLightItem>& _highLights);
@@ -308,28 +296,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bTimeHasBeenSet;
 
                     /**
-                     * Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Log source host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Raw log (only available when there is an error in creating the log index).
                      */
                     std::string m_rawLog;
                     bool m_rawLogHasBeenSet;
 
                     /**
-                     * The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cause for log index creation exception. It has a value only when a log index creation exception occurs.
                      */
                     std::string m_indexStatus;
                     bool m_indexStatusHasBeenSet;
 
                     /**
-                     * Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+                     * Highlighted description of the log content
                      */
                     std::vector<HighLightItem> m_highLights;
                     bool m_highLightsHasBeenSet;

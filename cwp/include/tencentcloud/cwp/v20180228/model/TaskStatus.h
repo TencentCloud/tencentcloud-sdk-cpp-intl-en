@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool FailHasBeenSet() const;
 
                     /**
-                     * 获取Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
+                     * @return Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
                      * 
                      */
                     std::string GetStop() const;
 
                     /**
-                     * 设置Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
+                     * @param _stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
                      * 
                      */
                     void SetStop(const std::string& _stop);
@@ -155,8 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_failHasBeenSet;
 
                     /**
-                     * Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
                      */
                     std::string m_stop;
                     bool m_stopHasBeenSet;

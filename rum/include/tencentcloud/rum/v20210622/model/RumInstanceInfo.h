@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * RUM instance information
+                * Rum instance information
                 */
                 class RumInstanceInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
-                     * @return InstanceStatus Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+                     * 获取Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+                     * @return InstanceStatus Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
                      * 
                      */
                     int64_t GetInstanceStatus() const;
 
                     /**
-                     * 设置Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
-                     * @param _instanceStatus Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+                     * 设置Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+                     * @param _instanceStatus Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
                      * 
                      */
                     void SetInstanceStatus(const int64_t& _instanceStatus);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return AreaId Region ID
+                     * 获取Zone Id
+                     * @return AreaId Zone Id
                      * 
                      */
                     int64_t GetAreaId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _areaId Region ID
+                     * 设置Zone Id
+                     * @param _areaId Zone Id
                      * 
                      */
                     void SetAreaId(const int64_t& _areaId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool InstanceDescHasBeenSet() const;
 
                     /**
-                     * 获取Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
-                     * @return ChargeStatus Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+                     * 获取Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+                     * @return ChargeStatus Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
                      * 
                      */
                     int64_t GetChargeStatus() const;
 
                     /**
-                     * 设置Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
-                     * @param _chargeStatus Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+                     * 设置Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+                     * @param _chargeStatus Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
                      * 
                      */
                     void SetChargeStatus(const int64_t& _chargeStatus);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ChargeStatusHasBeenSet() const;
 
                     /**
-                     * 获取Billing type (1: free; 2: prepaid; 3: postpaid)
-                     * @return ChargeType Billing type (1: free; 2: prepaid; 3: postpaid)
+                     * 获取Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
+                     * @return ChargeType Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
                      * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置Billing type (1: free; 2: prepaid; 3: postpaid)
-                     * @param _chargeType Billing type (1: free; 2: prepaid; 3: postpaid)
+                     * 设置Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
+                     * @param _chargeType Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
                      * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool UpdatedAtHasBeenSet() const;
 
                     /**
-                     * 获取Data retention period (in days)
-                     * @return DataRetentionDays Data retention period (in days)
+                     * 获取Data retention time (days)
+                     * @return DataRetentionDays Data retention time (days)
                      * 
                      */
                     int64_t GetDataRetentionDays() const;
 
                     /**
-                     * 设置Data retention period (in days)
-                     * @param _dataRetentionDays Data retention period (in days)
+                     * 设置Data retention time (days)
+                     * @param _dataRetentionDays Data retention time (days)
                      * 
                      */
                     void SetDataRetentionDays(const int64_t& _dataRetentionDays);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool DataRetentionDaysHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreatedAt Creation time
+                     * 获取Creation time.
+                     * @return CreatedAt Creation time.
                      * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createdAt Creation time
+                     * 设置Creation time.
+                     * @param _createdAt Creation time.
                      * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool CreatedAtHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取Instance type 1: Original web-related class 2: app endpoint type
+                     * @return InstanceType Instance type 1: Original web-related class 2: app endpoint type
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _instanceType 
+                     * 设置Instance type 1: Original web-related class 2: app endpoint type
+                     * @param _instanceType Instance type 1: Original web-related class 2: app endpoint type
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -323,13 +323,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+                     * Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
                      */
                     int64_t m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Zone Id
                      */
                     int64_t m_areaId;
                     bool m_areaIdHasBeenSet;
@@ -341,7 +341,7 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -359,13 +359,13 @@ namespace TencentCloud
                     bool m_instanceDescHasBeenSet;
 
                     /**
-                     * Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+                     * Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
                      */
                     int64_t m_chargeStatus;
                     bool m_chargeStatusHasBeenSet;
 
                     /**
-                     * Billing type (1: free; 2: prepaid; 3: postpaid)
+                     * Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
@@ -377,25 +377,25 @@ namespace TencentCloud
                     bool m_updatedAtHasBeenSet;
 
                     /**
-                     * Data retention period (in days)
+                     * Data retention time (days)
                      */
                     int64_t m_dataRetentionDays;
                     bool m_dataRetentionDaysHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createdAt;
                     bool m_createdAtHasBeenSet;
 
                     /**
-                     * 
+                     * Instance type 1: Original web-related class 2: app endpoint type
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to modify the validity period
-                     * @return IsModifyPeriod Whether to modify the validity period
+                     * 获取Whether to modify the validity period (deprecated).
+                     * @return IsModifyPeriod Whether to modify the validity period (deprecated).
                      * 
                      */
                     bool GetIsModifyPeriod() const;
 
                     /**
-                     * 设置Whether to modify the validity period
-                     * @param _isModifyPeriod Whether to modify the validity period
+                     * 设置Whether to modify the validity period (deprecated).
+                     * @param _isModifyPeriod Whether to modify the validity period (deprecated).
                      * 
                      */
                     void SetIsModifyPeriod(const bool& _isModifyPeriod);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Log retention days. The value 3640 indicates that the number of days is unlimited.
-                     * @return Period Log retention days. The value 3640 indicates that the number of days is unlimited.
+                     * 获取Log retention time. The value 3640 indicates that the time is unlimited.
+                     * @return Period Log retention time. The value 3640 indicates that the time is unlimited.
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Log retention days. The value 3640 indicates that the number of days is unlimited.
-                     * @param _period Log retention days. The value 3640 indicates that the number of days is unlimited.
+                     * 设置Log retention time. The value 3640 indicates that the time is unlimited.
+                     * @param _period Log retention time. The value 3640 indicates that the time is unlimited.
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -105,10 +105,52 @@ namespace TencentCloud
                      */
                     bool PeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Log storage duration unit: year/month/day
+                     * @return Granularity Log storage duration unit: year/month/day
+                     * 
+                     */
+                    std::string GetGranularity() const;
+
+                    /**
+                     * 设置Log storage duration unit: year/month/day
+                     * @param _granularity Log storage duration unit: year/month/day
+                     * 
+                     */
+                    void SetGranularity(const std::string& _granularity);
+
+                    /**
+                     * 判断参数 Granularity 是否已赋值
+                     * @return Granularity 是否已赋值
+                     * 
+                     */
+                    bool GranularityHasBeenSet() const;
+
+                    /**
+                     * 获取Language type
+                     * @return MsgLanguage Language type
+                     * 
+                     */
+                    std::string GetMsgLanguage() const;
+
+                    /**
+                     * 设置Language type
+                     * @param _msgLanguage Language type
+                     * 
+                     */
+                    void SetMsgLanguage(const std::string& _msgLanguage);
+
+                    /**
+                     * 判断参数 MsgLanguage 是否已赋值
+                     * @return MsgLanguage 是否已赋值
+                     * 
+                     */
+                    bool MsgLanguageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether to modify the validity period
+                     * Whether to modify the validity period (deprecated).
                      */
                     bool m_isModifyPeriod;
                     bool m_isModifyPeriodHasBeenSet;
@@ -120,10 +162,22 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Log retention days. The value 3640 indicates that the number of days is unlimited.
+                     * Log retention time. The value 3640 indicates that the time is unlimited.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
+
+                    /**
+                     * Log storage duration unit: year/month/day
+                     */
+                    std::string m_granularity;
+                    bool m_granularityHasBeenSet;
+
+                    /**
+                     * Language type
+                     */
+                    std::string m_msgLanguage;
+                    bool m_msgLanguageHasBeenSet;
 
                 };
             }

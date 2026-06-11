@@ -44,47 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
-                     * @return Filters Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+                     * 获取<p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+                     * @return Filters <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
-                     * 设置Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
-                     * @param _filters Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+                     * 设置<p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+                     * @param _filters <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -97,15 +65,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The number of results returned. Default value: 10. Maximum value: 100.
-                     * @return Limit The number of results returned. Default value: 10. Maximum value: 100.
+                     * 获取<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of results returned. Default value: 10. Maximum value: 100.
-                     * @param _limit The number of results returned. Default value: 10. Maximum value: 100.
+                     * 设置<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @param _limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -118,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0
-                     * @return Offset Offset. Default value: 0
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0
-                     * @param _offset Offset. Default value: 0
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -139,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sort order
-                     * @return Order Sort order
+                     * 获取<p>Sorting method.</p>
+                     * @return Order <p>Sorting method.</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sort order
-                     * @param _order Sort order
+                     * 设置<p>Sorting method.</p>
+                     * @param _order <p>Sorting method.</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -160,23 +128,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
-                     * @return By Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+                     * 获取<p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
+                     * @return By <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
-                     * @param _by Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+                     * 设置<p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
+                     * @param _by <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -191,41 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+                     * <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The number of results returned. Default value: 10. Maximum value: 100.
+                     * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sort order
+                     * <p>Sorting method.</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+                     * <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

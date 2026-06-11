@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Behavior High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取high-risk behavior
+                     * @return Behavior high-risk behavior
                      * 
                      */
                     uint64_t GetBehavior() const;
 
                     /**
-                     * 设置High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _behavior High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置high-risk behavior
+                     * @param _behavior high-risk behavior
                      * 
                      */
                     void SetBehavior(const uint64_t& _behavior);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type Type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstructionContent Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstructionContent() const;
 
                     /**
                      * 设置Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instructionContent Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstructionContent(const std::string& _instructionContent);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * high-risk behavior
                      */
                     uint64_t m_behavior;
                     bool m_behaviorHasBeenSet;
 
                     /**
                      * Type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
                      * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instructionContent;
                     bool m_instructionContentHasBeenSet;

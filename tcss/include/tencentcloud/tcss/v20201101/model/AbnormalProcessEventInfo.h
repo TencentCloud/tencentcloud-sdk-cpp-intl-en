@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process directory
-                     * @return ProcessPath Process directory
+                     * 获取<p>Process directory.</p>
+                     * @return ProcessPath <p>Process directory.</p>
                      * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
-                     * 设置Process directory
-                     * @param _processPath Process directory
+                     * 设置<p>Process directory.</p>
+                     * @param _processPath <p>Process directory.</p>
                      * 
                      */
                     void SetProcessPath(const std::string& _processPath);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Event type. `MALICE_PROCESS_START`: Malicious process startup.
-                     * @return EventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
+                     * 获取<p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+                     * @return EventType <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
                      * 
                      */
                     std::string GetEventType() const;
 
                     /**
-                     * 设置Event type. `MALICE_PROCESS_START`: Malicious process startup.
-                     * @param _eventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
+                     * 设置<p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+                     * @param _eventType <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
                      * 
                      */
                     void SetEventType(const std::string& _eventType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
-                     * @return MatchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * 获取<p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+                     * @return MatchRuleName <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
                      * 
                      */
                     std::string GetMatchRuleName() const;
 
                     /**
-                     * 设置Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
-                     * @param _matchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * 设置<p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+                     * @param _matchRuleName <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
                      * 
                      */
                     void SetMatchRuleName(const std::string& _matchRuleName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MatchRuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Generation time
-                     * @return FoundTime Generation time
+                     * 获取<p>Generation time.</p>
+                     * @return FoundTime <p>Generation time.</p>
                      * 
                      */
                     std::string GetFoundTime() const;
 
                     /**
-                     * 设置Generation time
-                     * @param _foundTime Generation time
+                     * 设置<p>Generation time.</p>
+                     * @param _foundTime <p>Generation time.</p>
                      * 
                      */
                     void SetFoundTime(const std::string& _foundTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FoundTimeHasBeenSet() const;
 
                     /**
-                     * 获取Container name
-                     * @return ContainerName Container name
+                     * 获取<p>Container name.</p>
+                     * @return ContainerName <p>Container name.</p>
                      * 
                      */
                     std::string GetContainerName() const;
 
                     /**
-                     * 设置Container name
-                     * @param _containerName Container name
+                     * 设置<p>Container name.</p>
+                     * @param _containerName <p>Container name.</p>
                      * 
                      */
                     void SetContainerName(const std::string& _containerName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ContainerNameHasBeenSet() const;
 
                     /**
-                     * 获取Image name
-                     * @return ImageName Image name
+                     * 获取<p>Image name.</p>
+                     * @return ImageName <p>Image name.</p>
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Image name
-                     * @param _imageName Image name
+                     * 设置<p>Image name.</p>
+                     * @param _imageName <p>Image name.</p>
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -173,31 +173,15 @@ namespace TencentCloud
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
-                     * @return Behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+                     * 获取<p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+                     * @return Behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
                      * 
                      */
                     std::string GetBehavior() const;
 
                     /**
-                     * 设置Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
-                     * @param _behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+                     * 设置<p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+                     * @param _behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
                      * 
                      */
                     void SetBehavior(const std::string& _behavior);
@@ -210,23 +194,15 @@ namespace TencentCloud
                     bool BehaviorHasBeenSet() const;
 
                     /**
-                     * 获取Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-                     * @return Status Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+                     * 获取<p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+                     * @return Status <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-                     * @param _status Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+                     * 设置<p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+                     * @param _status <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -239,15 +215,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Unique event ID
-                     * @return Id Unique event ID
+                     * 获取<p>Unique ID of the event record.</p>
+                     * @return Id <p>Unique ID of the event record.</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique event ID
-                     * @param _id Unique event ID
+                     * 设置<p>Unique ID of the event record.</p>
+                     * @param _id <p>Unique ID of the event record.</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -260,15 +236,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Image ID, which is used for redirect.
-                     * @return ImageId Image ID, which is used for redirect.
+                     * 获取<p>Image ID, used for redirection.</p>
+                     * @return ImageId <p>Image ID, used for redirection.</p>
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID, which is used for redirect.
-                     * @param _imageId Image ID, which is used for redirect.
+                     * 设置<p>Image ID, used for redirection.</p>
+                     * @param _imageId <p>Image ID, used for redirection.</p>
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -281,15 +257,15 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Container ID, which is used for redirect.
-                     * @return ContainerId Container ID, which is used for redirect.
+                     * 获取<p>Container ID, used for redirection.</p>
+                     * @return ContainerId <p>Container ID, used for redirection.</p>
                      * 
                      */
                     std::string GetContainerId() const;
 
                     /**
-                     * 设置Container ID, which is used for redirect.
-                     * @param _containerId Container ID, which is used for redirect.
+                     * 设置<p>Container ID, used for redirection.</p>
+                     * @param _containerId <p>Container ID, used for redirection.</p>
                      * 
                      */
                     void SetContainerId(const std::string& _containerId);
@@ -302,15 +278,15 @@ namespace TencentCloud
                     bool ContainerIdHasBeenSet() const;
 
                     /**
-                     * 获取Event solution
-                     * @return Solution Event solution
+                     * 获取<p>Event solution.</p>
+                     * @return Solution <p>Event solution.</p>
                      * 
                      */
                     std::string GetSolution() const;
 
                     /**
-                     * 设置Event solution
-                     * @param _solution Event solution
+                     * 设置<p>Event solution.</p>
+                     * @param _solution <p>Event solution.</p>
                      * 
                      */
                     void SetSolution(const std::string& _solution);
@@ -323,15 +299,15 @@ namespace TencentCloud
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取Event description
-                     * @return Description Event description
+                     * 获取<p>Event detailed description.</p>
+                     * @return Description <p>Event detailed description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Event description
-                     * @param _description Event description
+                     * 设置<p>Event detailed description.</p>
+                     * @param _description <p>Event detailed description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -344,15 +320,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Hit policy ID
-                     * @return MatchRuleId Hit policy ID
+                     * 获取<p>Hit policy ID.</p>
+                     * @return MatchRuleId <p>Hit policy ID.</p>
                      * 
                      */
                     std::string GetMatchRuleId() const;
 
                     /**
-                     * 设置Hit policy ID
-                     * @param _matchRuleId Hit policy ID
+                     * 设置<p>Hit policy ID.</p>
+                     * @param _matchRuleId <p>Hit policy ID.</p>
                      * 
                      */
                     void SetMatchRuleId(const std::string& _matchRuleId);
@@ -365,27 +341,15 @@ namespace TencentCloud
                     bool MatchRuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
-                     * @return MatchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+                     * 获取<p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+                     * @return MatchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
                      * 
                      */
                     std::string GetMatchAction() const;
 
                     /**
-                     * 设置Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
-                     * @param _matchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+                     * 设置<p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+                     * @param _matchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
                      * 
                      */
                     void SetMatchAction(const std::string& _matchAction);
@@ -398,15 +362,15 @@ namespace TencentCloud
                     bool MatchActionHasBeenSet() const;
 
                     /**
-                     * 获取Information of the process that hits the rule
-                     * @return MatchProcessPath Information of the process that hits the rule
+                     * 获取<p>Hit rule process information.</p>
+                     * @return MatchProcessPath <p>Hit rule process information.</p>
                      * 
                      */
                     std::string GetMatchProcessPath() const;
 
                     /**
-                     * 设置Information of the process that hits the rule
-                     * @param _matchProcessPath Information of the process that hits the rule
+                     * 设置<p>Hit rule process information.</p>
+                     * @param _matchProcessPath <p>Hit rule process information.</p>
                      * 
                      */
                     void SetMatchProcessPath(const std::string& _matchProcessPath);
@@ -419,15 +383,15 @@ namespace TencentCloud
                     bool MatchProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Whether the rule exists
-                     * @return RuleExist Whether the rule exists
+                     * 获取<p>Whether the rule exists.</p>
+                     * @return RuleExist <p>Whether the rule exists.</p>
                      * 
                      */
                     bool GetRuleExist() const;
 
                     /**
-                     * 设置Whether the rule exists
-                     * @param _ruleExist Whether the rule exists
+                     * 设置<p>Whether the rule exists.</p>
+                     * @param _ruleExist <p>Whether the rule exists.</p>
                      * 
                      */
                     void SetRuleExist(const bool& _ruleExist);
@@ -440,15 +404,15 @@ namespace TencentCloud
                     bool RuleExistHasBeenSet() const;
 
                     /**
-                     * 获取Number of events
-                     * @return EventCount Number of events
+                     * 获取<p>Number of events.</p>
+                     * @return EventCount <p>Number of events.</p>
                      * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
-                     * 设置Number of events
-                     * @param _eventCount Number of events
+                     * 设置<p>Number of events.</p>
+                     * @param _eventCount <p>Number of events.</p>
                      * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
@@ -461,15 +425,15 @@ namespace TencentCloud
                     bool EventCountHasBeenSet() const;
 
                     /**
-                     * 获取Last generation time
-                     * @return LatestFoundTime Last generation time
+                     * 获取<p>Last generation time.</p>
+                     * @return LatestFoundTime <p>Last generation time.</p>
                      * 
                      */
                     std::string GetLatestFoundTime() const;
 
                     /**
-                     * 设置Last generation time
-                     * @param _latestFoundTime Last generation time
+                     * 设置<p>Last generation time.</p>
+                     * @param _latestFoundTime <p>Last generation time.</p>
                      * 
                      */
                     void SetLatestFoundTime(const std::string& _latestFoundTime);
@@ -482,15 +446,15 @@ namespace TencentCloud
                     bool LatestFoundTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule group ID
-                     * @return RuleId Rule group ID
+                     * 获取<p>Rule group ID.</p>
+                     * @return RuleId <p>Rule group ID.</p>
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Rule group ID
-                     * @param _ruleId Rule group ID
+                     * 设置<p>Rule group ID.</p>
+                     * @param _ruleId <p>Rule group ID.</p>
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -503,15 +467,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-                     * @return MatchGroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+                     * 获取<p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+                     * @return MatchGroupName <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
                      * 
                      */
                     std::string GetMatchGroupName() const;
 
                     /**
-                     * 设置Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-                     * @param _matchGroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+                     * 设置<p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+                     * @param _matchGroupName <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
                      * 
                      */
                     void SetMatchGroupName(const std::string& _matchGroupName);
@@ -524,15 +488,15 @@ namespace TencentCloud
                     bool MatchGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-                     * @return MatchRuleLevel Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+                     * 获取<p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+                     * @return MatchRuleLevel <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
                      * 
                      */
                     std::string GetMatchRuleLevel() const;
 
                     /**
-                     * 设置Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-                     * @param _matchRuleLevel Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+                     * 设置<p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+                     * @param _matchRuleLevel <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
                      * 
                      */
                     void SetMatchRuleLevel(const std::string& _matchRuleLevel);
@@ -545,43 +509,15 @@ namespace TencentCloud
                     bool MatchRuleLevelHasBeenSet() const;
 
                     /**
-                     * 获取Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+                     * @return ContainerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
                      * 
                      */
                     std::string GetContainerNetStatus() const;
 
                     /**
-                     * 设置Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+                     * @param _containerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
                      * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
@@ -594,47 +530,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+                     * @return ContainerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+                     * @param _containerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
                      * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
@@ -647,19 +551,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Source of container isolation operation.</p>
+                     * @return ContainerIsolateOperationSrc <p>Source of container isolation operation.</p>
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
-                     * 设置Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Source of container isolation operation.</p>
+                     * @param _containerIsolateOperationSrc <p>Source of container isolation operation.</p>
                      * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
@@ -672,43 +572,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-                     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * 获取<p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+                     * @return ContainerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
                      * 
                      */
                     std::string GetContainerStatus() const;
 
                     /**
-                     * 设置Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-                     * @param _containerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * 设置<p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+                     * @param _containerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
                      * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
@@ -721,15 +593,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterID <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterID <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -742,15 +614,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 获取<p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+                     * @return NodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 设置<p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+                     * @param _nodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -763,15 +635,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Pod name
-                     * @return PodName Pod name
+                     * 获取<p>Pod name.</p>
+                     * @return PodName <p>Pod name.</p>
                      * 
                      */
                     std::string GetPodName() const;
 
                     /**
-                     * 设置Pod name
-                     * @param _podName Pod name
+                     * 设置<p>Pod name.</p>
+                     * @param _podName <p>Pod name.</p>
                      * 
                      */
                     void SetPodName(const std::string& _podName);
@@ -784,15 +656,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodNameHasBeenSet() const;
 
                     /**
-                     * 获取Pod IP
-                     * @return PodIP Pod IP
+                     * 获取<p>pod ip</p>
+                     * @return PodIP <p>pod ip</p>
                      * 
                      */
                     std::string GetPodIP() const;
 
                     /**
-                     * 设置Pod IP
-                     * @param _podIP Pod IP
+                     * 设置<p>pod ip</p>
+                     * @param _podIP <p>pod ip</p>
                      * 
                      */
                     void SetPodIP(const std::string& _podIP);
@@ -805,15 +677,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodIPHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return NodeUniqueID Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return NodeUniqueID <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetNodeUniqueID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _nodeUniqueID Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _nodeUniqueID <p>Cluster ID.</p>
                      * 
                      */
                     void SetNodeUniqueID(const std::string& _nodeUniqueID);
@@ -826,15 +698,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeUniqueIDHasBeenSet() const;
 
                     /**
-                     * 获取Node public IP
-                     * @return PublicIP Node public IP
+                     * 获取<p>Node public IP address.</p>
+                     * @return PublicIP <p>Node public IP address.</p>
                      * 
                      */
                     std::string GetPublicIP() const;
 
                     /**
-                     * 设置Node public IP
-                     * @param _publicIP Node public IP
+                     * 设置<p>Node public IP address.</p>
+                     * @param _publicIP <p>Node public IP address.</p>
                      * 
                      */
                     void SetPublicIP(const std::string& _publicIP);
@@ -847,15 +719,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicIPHasBeenSet() const;
 
                     /**
-                     * 获取Node name
-                     * @return NodeName Node name
+                     * 获取<p>Node name.</p>
+                     * @return NodeName <p>Node name.</p>
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Node name
-                     * @param _nodeName Node name
+                     * 设置<p>Node name.</p>
+                     * @param _nodeName <p>Node name.</p>
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -868,15 +740,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Node ID
-                     * @return NodeID Node ID
+                     * 获取<p>Node ID.</p>
+                     * @return NodeID <p>Node ID.</p>
                      * 
                      */
                     std::string GetNodeID() const;
 
                     /**
-                     * 设置Node ID
-                     * @param _nodeID Node ID
+                     * 设置<p>Node ID.</p>
+                     * @param _nodeID <p>Node ID.</p>
                      * 
                      */
                     void SetNodeID(const std::string& _nodeID);
@@ -889,15 +761,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIDHasBeenSet() const;
 
                     /**
-                     * 获取uuid
-                     * @return HostID uuid
+                     * 获取<p>uuid</p>
+                     * @return HostID <p>uuid</p>
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置uuid
-                     * @param _hostID uuid
+                     * 设置<p>uuid</p>
+                     * @param _hostID <p>uuid</p>
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -910,15 +782,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIDHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of the node
-                     * @return HostIP Private IP of the node
+                     * 获取<p>Node private IP address.</p>
+                     * @return HostIP <p>Node private IP address.</p>
                      * 
                      */
                     std::string GetHostIP() const;
 
                     /**
-                     * 设置Private IP of the node
-                     * @param _hostIP Private IP of the node
+                     * 设置<p>Node private IP address.</p>
+                     * @param _hostIP <p>Node private IP address.</p>
                      * 
                      */
                     void SetHostIP(const std::string& _hostIP);
@@ -931,15 +803,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -951,261 +823,256 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Command line parameters.</p>
+                     * @return CmdLine <p>Command line parameters.</p>
+                     * 
+                     */
+                    std::string GetCmdLine() const;
+
+                    /**
+                     * 设置<p>Command line parameters.</p>
+                     * @param _cmdLine <p>Command line parameters.</p>
+                     * 
+                     */
+                    void SetCmdLine(const std::string& _cmdLine);
+
+                    /**
+                     * 判断参数 CmdLine 是否已赋值
+                     * @return CmdLine 是否已赋值
+                     * 
+                     */
+                    bool CmdLineHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Process directory
+                     * <p>Process directory.</p>
                      */
                     std::string m_processPath;
                     bool m_processPathHasBeenSet;
 
                     /**
-                     * Event type. `MALICE_PROCESS_START`: Malicious process startup.
+                     * <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
                      */
                     std::string m_matchRuleName;
                     bool m_matchRuleNameHasBeenSet;
 
                     /**
-                     * Generation time
+                     * <p>Generation time.</p>
                      */
                     std::string m_foundTime;
                     bool m_foundTimeHasBeenSet;
 
                     /**
-                     * Container name
+                     * <p>Container name.</p>
                      */
                     std::string m_containerName;
                     bool m_containerNameHasBeenSet;
 
                     /**
-                     * Image name
+                     * <p>Image name.</p>
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+                     * <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
                      */
                     std::string m_behavior;
                     bool m_behaviorHasBeenSet;
 
                     /**
-                     * Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+                     * <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Unique event ID
+                     * <p>Unique ID of the event record.</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Image ID, which is used for redirect.
+                     * <p>Image ID, used for redirection.</p>
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Container ID, which is used for redirect.
+                     * <p>Container ID, used for redirection.</p>
                      */
                     std::string m_containerId;
                     bool m_containerIdHasBeenSet;
 
                     /**
-                     * Event solution
+                     * <p>Event solution.</p>
                      */
                     std::string m_solution;
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * Event description
+                     * <p>Event detailed description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Hit policy ID
+                     * <p>Hit policy ID.</p>
                      */
                     std::string m_matchRuleId;
                     bool m_matchRuleIdHasBeenSet;
 
                     /**
-                     * Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+                     * <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
                      */
                     std::string m_matchAction;
                     bool m_matchActionHasBeenSet;
 
                     /**
-                     * Information of the process that hits the rule
+                     * <p>Hit rule process information.</p>
                      */
                     std::string m_matchProcessPath;
                     bool m_matchProcessPathHasBeenSet;
 
                     /**
-                     * Whether the rule exists
+                     * <p>Whether the rule exists.</p>
                      */
                     bool m_ruleExist;
                     bool m_ruleExistHasBeenSet;
 
                     /**
-                     * Number of events
+                     * <p>Number of events.</p>
                      */
                     int64_t m_eventCount;
                     bool m_eventCountHasBeenSet;
 
                     /**
-                     * Last generation time
+                     * <p>Last generation time.</p>
                      */
                     std::string m_latestFoundTime;
                     bool m_latestFoundTimeHasBeenSet;
 
                     /**
-                     * Rule group ID
+                     * <p>Rule group ID.</p>
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+                     * <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
                      */
                     std::string m_matchGroupName;
                     bool m_matchGroupNameHasBeenSet;
 
                     /**
-                     * Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+                     * <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
                      */
                     std::string m_matchRuleLevel;
                     bool m_matchRuleLevelHasBeenSet;
 
                     /**
-                     * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
                      */
                     std::string m_containerNetStatus;
                     bool m_containerNetStatusHasBeenSet;
 
                     /**
-                     * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Source of container isolation operation.</p>
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * Pod name
+                     * <p>Pod name.</p>
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;
 
                     /**
-                     * Pod IP
+                     * <p>pod ip</p>
                      */
                     std::string m_podIP;
                     bool m_podIPHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_nodeUniqueID;
                     bool m_nodeUniqueIDHasBeenSet;
 
                     /**
-                     * Node public IP
+                     * <p>Node public IP address.</p>
                      */
                     std::string m_publicIP;
                     bool m_publicIPHasBeenSet;
 
                     /**
-                     * Node name
+                     * <p>Node name.</p>
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Node ID
+                     * <p>Node ID.</p>
                      */
                     std::string m_nodeID;
                     bool m_nodeIDHasBeenSet;
 
                     /**
-                     * uuid
+                     * <p>uuid</p>
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
 
                     /**
-                     * Private IP of the node
+                     * <p>Node private IP address.</p>
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * <p>Command line parameters.</p>
+                     */
+                    std::string m_cmdLine;
+                    bool m_cmdLineHasBeenSet;
 
                 };
             }

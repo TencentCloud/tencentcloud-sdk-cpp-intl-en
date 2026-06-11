@@ -69,18 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -94,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -119,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotName Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _snapshotName Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -144,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -169,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotId Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _snapshotId Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
@@ -214,15 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
-                     * @return Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+                     * 获取Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
+                     * @return Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
-                     * @param _status Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+                     * 设置Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
+                     * @param _status Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -236,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailReason Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFailReason() const;
 
                     /**
                      * 设置Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _failReason Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFailReason(const std::string& _failReason);
@@ -259,6 +235,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FailReasonHasBeenSet() const;
 
+                    /**
+                     * 获取Host type
+                     * @return MachineType Host type
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Host type
+                     * @param _machineType Host type
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -269,35 +266,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
                      * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
                      * Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
 
                     /**
                      * Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
                      * Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
@@ -309,17 +301,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+                     * Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_failReason;
                     bool m_failReasonHasBeenSet;
+
+                    /**
+                     * Host type
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
 
                 };
             }

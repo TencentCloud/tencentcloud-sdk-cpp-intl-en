@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DuplicateHosts Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DuplicateHosts> GetDuplicateHosts() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DuplicateHosts> m_duplicateHosts;
                     bool m_duplicateHostsHasBeenSet;

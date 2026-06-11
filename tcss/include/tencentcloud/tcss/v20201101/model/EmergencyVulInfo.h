@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取vulnerability tag
+                     * @return Tags vulnerability tag
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置vulnerability tag
+                     * @param _tags vulnerability tag
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -94,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVSSV3Score CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCVSSV3Score() const;
 
                     /**
                      * 设置CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cVSSV3Score CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCVSSV3Score(const double& _cVSSV3Score);
@@ -119,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -165,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Category Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
                      * 设置Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _category Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -190,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubmitTime Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubmitTime() const;
 
                     /**
                      * 设置Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _submitTime Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubmitTime(const std::string& _submitTime);
@@ -215,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LatestFoundTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLatestFoundTime() const;
 
                     /**
                      * 设置Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _latestFoundTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLatestFoundTime(const std::string& _latestFoundTime);
@@ -302,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PocIDHasBeenSet() const;
 
                     /**
-                     * 获取Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+                     * @return DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
                      * 
                      */
                     std::string GetDefenceStatus() const;
 
                     /**
-                     * 设置Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+                     * @param _defenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
                      * 
                      */
                     void SetDefenceStatus(const std::string& _defenceStatus);
@@ -327,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DefenceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+                     * @return DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
                      * 
                      */
                     std::string GetDefenceScope() const;
 
                     /**
-                     * 设置Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+                     * @param _defenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
                      * 
                      */
                     void SetDefenceScope(const std::string& _defenceScope);
@@ -352,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DefenceScopeHasBeenSet() const;
 
                     /**
-                     * 获取Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Hosts Defended Against Vulnerabilities
+                     * @return DefenceHostCount Number of Hosts Defended Against Vulnerabilities
                      * 
                      */
                     int64_t GetDefenceHostCount() const;
 
                     /**
-                     * 设置Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Hosts Defended Against Vulnerabilities
+                     * @param _defenceHostCount Number of Hosts Defended Against Vulnerabilities
                      * 
                      */
                     void SetDefenceHostCount(const int64_t& _defenceHostCount);
@@ -377,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DefenceHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Attacks Defended
+                     * @return DefendedCount Number of Attacks Defended
                      * 
                      */
                     int64_t GetDefendedCount() const;
 
                     /**
-                     * 设置Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Attacks Defended
+                     * @param _defendedCount Number of Attacks Defended
                      * 
                      */
                     void SetDefendedCount(const int64_t& _defendedCount);
@@ -410,22 +370,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * vulnerability tag
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cVSSV3Score;
                     bool m_cVSSV3ScoreHasBeenSet;
 
                     /**
                      * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -438,21 +395,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
                      * Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_submitTime;
                     bool m_submitTimeHasBeenSet;
 
                     /**
                      * Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_latestFoundTime;
                     bool m_latestFoundTimeHasBeenSet;
@@ -476,29 +430,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_pocIDHasBeenSet;
 
                     /**
-                     * Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
                      */
                     std::string m_defenceStatus;
                     bool m_defenceStatusHasBeenSet;
 
                     /**
-                     * Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
                      */
                     std::string m_defenceScope;
                     bool m_defenceScopeHasBeenSet;
 
                     /**
-                     * Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Hosts Defended Against Vulnerabilities
                      */
                     int64_t m_defenceHostCount;
                     bool m_defenceHostCountHasBeenSet;
 
                     /**
-                     * Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Attacks Defended
                      */
                     int64_t m_defendedCount;
                     bool m_defendedCountHasBeenSet;

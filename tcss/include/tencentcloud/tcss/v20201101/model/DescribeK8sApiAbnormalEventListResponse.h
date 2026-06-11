@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcss/v20201101/model/K8sApiAbnormalEventListItem.h>
+#include <tencentcloud/tcss/v20201101/model/K8SAPIRuleTypeZhItem.h>
 
 
 namespace TencentCloud
@@ -45,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event list
-                     * @return List Event list
+                     * 获取<p>Event list.</p>
+                     * @return List <p>Event list.</p>
                      * 
                      */
                     std::vector<K8sApiAbnormalEventListItem> GetList() const;
@@ -59,8 +60,8 @@ namespace TencentCloud
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total count
-                     * @return TotalCount Total count
+                     * 获取<p>Total quantity.</p>
+                     * @return TotalCount <p>Total quantity.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -72,19 +73,39 @@ namespace TencentCloud
                      */
                     bool TotalCountHasBeenSet() const;
 
+                    /**
+                     * 获取<p>K8s alarm types and corresponding descriptions.</p>
+                     * @return RuleTypeZhSet <p>K8s alarm types and corresponding descriptions.</p>
+                     * 
+                     */
+                    std::vector<K8SAPIRuleTypeZhItem> GetRuleTypeZhSet() const;
+
+                    /**
+                     * 判断参数 RuleTypeZhSet 是否已赋值
+                     * @return RuleTypeZhSet 是否已赋值
+                     * 
+                     */
+                    bool RuleTypeZhSetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Event list
+                     * <p>Event list.</p>
                      */
                     std::vector<K8sApiAbnormalEventListItem> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total count
+                     * <p>Total quantity.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
+
+                    /**
+                     * <p>K8s alarm types and corresponding descriptions.</p>
+                     */
+                    std::vector<K8SAPIRuleTypeZhItem> m_ruleTypeZhSet;
+                    bool m_ruleTypeZhSetHasBeenSet;
 
                 };
             }

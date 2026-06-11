@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
-                     * @return Filters Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+                     * 获取Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
+                     * @return Filters Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
-                     * @param _filters Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+                     * 设置Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
+                     * @param _filters Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -109,7 +117,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+                     * Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;

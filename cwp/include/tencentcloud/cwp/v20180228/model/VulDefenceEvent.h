@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
-                     * @return UpgradeType 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+                     * 获取0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
+                     * @return UpgradeType 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
                      * 
                      */
                     int64_t GetUpgradeType() const;
 
                     /**
-                     * 设置0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
-                     * @param _upgradeType 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+                     * 设置0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
+                     * @param _upgradeType 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
                      * 
                      */
                     void SetUpgradeType(const int64_t& _upgradeType);
@@ -448,18 +448,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -570,7 +566,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+                     * 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
                      */
                     int64_t m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;
@@ -589,7 +585,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

@@ -139,27 +139,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
-                     * @return Filters Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+                     * 获取Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
+                     * @return Filters Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
                      * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
-                     * @param _filters Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+                     * 设置Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
+                     * @param _filters Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
                      * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
@@ -200,10 +188,7 @@ Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+                     * Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
                      */
                     std::vector<ComplianceFilters> m_filters;
                     bool m_filtersHasBeenSet;

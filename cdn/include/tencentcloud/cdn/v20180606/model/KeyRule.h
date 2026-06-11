@@ -163,19 +163,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FullUrlCacheHasBeenSet() const;
 
                     /**
-                     * 获取Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return IgnoreCase Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IgnoreCase Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIgnoreCase() const;
 
                     /**
-                     * 设置Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _ignoreCase Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _ignoreCase Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
@@ -271,8 +279,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_fullUrlCacheHasBeenSet;
 
                     /**
-                     * Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ignoreCase;
                     bool m_ignoreCaseHasBeenSet;

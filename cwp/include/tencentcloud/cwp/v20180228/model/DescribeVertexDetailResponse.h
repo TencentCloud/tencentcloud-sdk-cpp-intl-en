@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VertexDetails Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Attribute information of the specified node list.
+                     * @return VertexDetails Attribute information of the specified node list.
                      * 
                      */
                     std::vector<VertexDetail> GetVertexDetails() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Attribute information of the specified node list.
                      */
                     std::vector<VertexDetail> m_vertexDetails;
                     bool m_vertexDetailsHasBeenSet;

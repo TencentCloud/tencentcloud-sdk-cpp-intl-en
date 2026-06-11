@@ -242,9 +242,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WindowVul Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SecurityEventInfo GetWindowVul() const;
@@ -257,10 +255,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WindowVulHasBeenSet() const;
 
                     /**
-                     * 获取Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LinuxVul Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total of linux system vulnerability events
+                     * @return LinuxVul Total of linux system vulnerability events
                      * 
                      */
                     SecurityEventInfo GetLinuxVul() const;
@@ -360,14 +356,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SecurityEventInfo m_windowVul;
                     bool m_windowVulHasBeenSet;
 
                     /**
-                     * Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total of linux system vulnerability events
                      */
                     SecurityEventInfo m_linuxVul;
                     bool m_linuxVulHasBeenSet;

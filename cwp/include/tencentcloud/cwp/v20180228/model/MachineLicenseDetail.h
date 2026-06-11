@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取xx
-                     * @return PayMode xx
+                     * 获取Billing mode. 0: pay-as-you-go; 1: prepaid.
+                     * @return PayMode Billing mode. 0: pay-as-you-go; 1: prepaid.
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置xx
-                     * @param _payMode xx
+                     * 设置Billing mode. 0: pay-as-you-go; 1: prepaid.
+                     * @param _payMode Billing mode. 0: pay-as-you-go; 1: prepaid.
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取xxx
-                     * @return ResourceId xxx
+                     * 获取Resource ID
+                     * @return ResourceId Resource ID
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置xxx
-                     * @param _resourceId xxx
+                     * 设置Resource ID
+                     * @param _resourceId Resource ID
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -110,15 +110,57 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取xxx
-                     * @return InquireKey xxx
+                     * 获取Authorization type
+                     * @return LicenseType Authorization type
+                     * 
+                     */
+                    uint64_t GetLicenseType() const;
+
+                    /**
+                     * 设置Authorization type
+                     * @param _licenseType Authorization type
+                     * 
+                     */
+                    void SetLicenseType(const uint64_t& _licenseType);
+
+                    /**
+                     * 判断参数 LicenseType 是否已赋值
+                     * @return LicenseType 是否已赋值
+                     * 
+                     */
+                    bool LicenseTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+                     * @return SourceType Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+                     * 
+                     */
+                    uint64_t GetSourceType() const;
+
+                    /**
+                     * 设置Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+                     * @param _sourceType Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+                     * 
+                     */
+                    void SetSourceType(const uint64_t& _sourceType);
+
+                    /**
+                     * 判断参数 SourceType 是否已赋值
+                     * @return SourceType 是否已赋值
+                     * 
+                     */
+                    bool SourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取This field has been deprecated.
+                     * @return InquireKey This field has been deprecated.
                      * 
                      */
                     std::string GetInquireKey() const;
 
                     /**
-                     * 设置xxx
-                     * @param _inquireKey xxx
+                     * 设置This field has been deprecated.
+                     * @param _inquireKey This field has been deprecated.
                      * 
                      */
                     void SetInquireKey(const std::string& _inquireKey);
@@ -131,25 +173,88 @@ namespace TencentCloud
                     bool InquireKeyHasBeenSet() const;
 
                     /**
-                     * 获取xxx
-                     * @return SourceType xxx
+                     * 获取Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
+                     * @return AutoRenewFlag Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
                      * 
                      */
-                    uint64_t GetSourceType() const;
+                    uint64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置xxx
-                     * @param _sourceType xxx
+                     * 设置Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
+                     * @param _autoRenewFlag Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
                      * 
                      */
-                    void SetSourceType(const uint64_t& _sourceType);
+                    void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
-                     * 判断参数 SourceType 是否已赋值
-                     * @return SourceType 是否已赋值
+                     * 判断参数 AutoRenewFlag 是否已赋值
+                     * @return AutoRenewFlag 是否已赋值
                      * 
                      */
-                    bool SourceTypeHasBeenSet() const;
+                    bool AutoRenewFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Expiry time. This value is empty for pay-as-you-go.
+                     * @return Deadline Expiry time. This value is empty for pay-as-you-go.
+                     * 
+                     */
+                    std::string GetDeadline() const;
+
+                    /**
+                     * 设置Expiry time. This value is empty for pay-as-you-go.
+                     * @param _deadline Expiry time. This value is empty for pay-as-you-go.
+                     * 
+                     */
+                    void SetDeadline(const std::string& _deadline);
+
+                    /**
+                     * 判断参数 Deadline 是否已赋值
+                     * @return Deadline 是否已赋值
+                     * 
+                     */
+                    bool DeadlineHasBeenSet() const;
+
+                    /**
+                     * 获取Time of purchase
+                     * @return BuyTime Time of purchase
+                     * 
+                     */
+                    std::string GetBuyTime() const;
+
+                    /**
+                     * 设置Time of purchase
+                     * @param _buyTime Time of purchase
+                     * 
+                     */
+                    void SetBuyTime(const std::string& _buyTime);
+
+                    /**
+                     * 判断参数 BuyTime 是否已赋值
+                     * @return BuyTime 是否已赋值
+                     * 
+                     */
+                    bool BuyTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of authorizations
+                     * @return LicenseCnt Number of authorizations
+                     * 
+                     */
+                    uint64_t GetLicenseCnt() const;
+
+                    /**
+                     * 设置Number of authorizations
+                     * @param _licenseCnt Number of authorizations
+                     * 
+                     */
+                    void SetLicenseCnt(const uint64_t& _licenseCnt);
+
+                    /**
+                     * 判断参数 LicenseCnt 是否已赋值
+                     * @return LicenseCnt 是否已赋值
+                     * 
+                     */
+                    bool LicenseCntHasBeenSet() const;
 
                 private:
 
@@ -160,28 +265,58 @@ namespace TencentCloud
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * xx
+                     * Billing mode. 0: pay-as-you-go; 1: prepaid.
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * xxx
+                     * Resource ID
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * xxx
+                     * Authorization type
+                     */
+                    uint64_t m_licenseType;
+                    bool m_licenseTypeHasBeenSet;
+
+                    /**
+                     * Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+                     */
+                    uint64_t m_sourceType;
+                    bool m_sourceTypeHasBeenSet;
+
+                    /**
+                     * This field has been deprecated.
                      */
                     std::string m_inquireKey;
                     bool m_inquireKeyHasBeenSet;
 
                     /**
-                     * xxx
+                     * Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
                      */
-                    uint64_t m_sourceType;
-                    bool m_sourceTypeHasBeenSet;
+                    uint64_t m_autoRenewFlag;
+                    bool m_autoRenewFlagHasBeenSet;
+
+                    /**
+                     * Expiry time. This value is empty for pay-as-you-go.
+                     */
+                    std::string m_deadline;
+                    bool m_deadlineHasBeenSet;
+
+                    /**
+                     * Time of purchase
+                     */
+                    std::string m_buyTime;
+                    bool m_buyTimeHasBeenSet;
+
+                    /**
+                     * Number of authorizations
+                     */
+                    uint64_t m_licenseCnt;
+                    bool m_licenseCntHasBeenSet;
 
                 };
             }

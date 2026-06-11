@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Errors Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Error information corresponding to multi-log topic retrieval
+                     * @return Errors Error information corresponding to multi-log topic retrieval
                      * 
                      */
                     std::vector<SearchLogErrors> GetErrors() const;
 
                     /**
-                     * 设置Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errors Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Error information corresponding to multi-log topic retrieval
+                     * @param _errors Error information corresponding to multi-log topic retrieval
                      * 
                      */
                     void SetErrors(const std::vector<SearchLogErrors>& _errors);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ErrorsHasBeenSet() const;
 
                     /**
-                     * 获取Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Infos Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Information for each log topic during multi-log topic retrieval
+                     * @return Infos Information for each log topic during multi-log topic retrieval
                      * 
                      */
                     std::vector<SearchLogInfos> GetInfos() const;
 
                     /**
-                     * 设置Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _infos Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Information for each log topic during multi-log topic retrieval
+                     * @param _infos Information for each log topic during multi-log topic retrieval
                      * 
                      */
                     void SetInfos(const std::vector<SearchLogInfos>& _infos);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * Error information corresponding to multi-log topic retrieval
                      */
                     std::vector<SearchLogErrors> m_errors;
                     bool m_errorsHasBeenSet;
 
                     /**
-                     * Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+                     * Information for each log topic during multi-log topic retrieval
                      */
                     std::vector<SearchLogInfos> m_infos;
                     bool m_infosHasBeenSet;

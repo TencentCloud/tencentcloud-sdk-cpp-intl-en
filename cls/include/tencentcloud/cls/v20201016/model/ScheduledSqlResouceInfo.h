@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target topic ID
-                     * @return TopicId Target topic ID
+                     * 获取Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Target topic ID
-                     * @param _topicId Target topic ID
+                     * 设置Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Region information for the topic
-                     * @return Region Region information for the topic
+                     * 获取Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+                     * @return Region Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region information for the topic
-                     * @param _region Region information for the topic
+                     * 设置Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+                     * @param _region Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -222,13 +222,13 @@ Dimension names must start with a letter or underscore, followed by letters, dig
                 private:
 
                     /**
-                     * Target topic ID
+                     * Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Region information for the topic
+                     * Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

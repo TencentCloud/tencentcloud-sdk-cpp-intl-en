@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @param _topicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -109,6 +113,7 @@ namespace TencentCloud
 
                     /**
                      * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

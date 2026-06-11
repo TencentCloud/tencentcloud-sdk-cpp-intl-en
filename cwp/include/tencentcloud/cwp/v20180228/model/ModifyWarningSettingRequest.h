@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Modified alarm setting content
-                     * @return WarningObjects Modified alarm setting content
+                     * 获取Modify alarm settings.
+                     * @return WarningObjects Modify alarm settings.
                      * 
                      */
                     std::vector<WarningObject> GetWarningObjects() const;
 
                     /**
-                     * 设置Modified alarm setting content
-                     * @param _warningObjects Modified alarm setting content
+                     * 设置Modify alarm settings.
+                     * @param _warningObjects Modify alarm settings.
                      * 
                      */
                     void SetWarningObjects(const std::vector<WarningObject>& _warningObjects);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Modified alarm setting content
+                     * Modify alarm settings.
                      */
                     std::vector<WarningObject> m_warningObjects;
                     bool m_warningObjectsHasBeenSet;

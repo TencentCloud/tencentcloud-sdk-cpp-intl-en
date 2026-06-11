@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing UUID
-                     * @return Uuid Yunjing UUID
+                     * 获取Host Security UUID
+                     * @return Uuid Host Security UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing UUID
-                     * @param _uuid Yunjing UUID
+                     * 设置Host Security UUID
+                     * @param _uuid Host Security UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Host ID
-                     * @return Quuid Host ID
+                     * 获取Host UUID
+                     * @return Quuid Host UUID
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置Host ID
-                     * @param _quuid Host ID
+                     * 设置Host UUID
+                     * @param _quuid Host UUID
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -446,19 +446,15 @@ namespace TencentCloud
                     bool DetectByHasBeenSet() const;
 
                     /**
-                     * 获取Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PsTree Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+                     * @return PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      * 
                      */
                     std::string GetPsTree() const;
 
                     /**
-                     * 设置Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _psTree Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+                     * @param _psTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      * 
                      */
                     void SetPsTree(const std::string& _psTree);
@@ -617,6 +613,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+                     * @return CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+                     * 
+                     */
+                    std::string GetCmdLineQuote() const;
+
+                    /**
+                     * 设置Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+                     * @param _cmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+                     * 
+                     */
+                    void SetCmdLineQuote(const std::string& _cmdLineQuote);
+
+                    /**
+                     * 判断参数 CmdLineQuote 是否已赋值
+                     * @return CmdLineQuote 是否已赋值
+                     * 
+                     */
+                    bool CmdLineQuoteHasBeenSet() const;
+
+                    /**
+                     * 获取Risk level
+                     * @return RiskLevel Risk level
+                     * 
+                     */
+                    uint64_t GetRiskLevel() const;
+
+                    /**
+                     * 设置Risk level
+                     * @param _riskLevel Risk level
+                     * 
+                     */
+                    void SetRiskLevel(const uint64_t& _riskLevel);
+
+                    /**
+                     * 判断参数 RiskLevel 是否已赋值
+                     * @return RiskLevel 是否已赋值
+                     * 
+                     */
+                    bool RiskLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -626,13 +664,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Yunjing UUID
+                     * Host Security UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Host ID
+                     * Host UUID
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
@@ -734,8 +772,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_detectByHasBeenSet;
 
                     /**
-                     * Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      */
                     std::string m_psTree;
                     bool m_psTreeHasBeenSet;
@@ -781,6 +818,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+                     */
+                    std::string m_cmdLineQuote;
+                    bool m_cmdLineQuoteHasBeenSet;
+
+                    /**
+                     * Risk level
+                     */
+                    uint64_t m_riskLevel;
+                    bool m_riskLevelHasBeenSet;
 
                 };
             }

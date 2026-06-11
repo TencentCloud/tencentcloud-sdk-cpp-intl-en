@@ -69,6 +69,27 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
+                     * 获取Rule ID of high frequency scan protection, returned as an output parameter.
+                     * @return Id Rule ID of high frequency scan protection, returned as an output parameter.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Rule ID of high frequency scan protection, returned as an output parameter.
+                     * @param _id Rule ID of high frequency scan protection, returned as an output parameter.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
                      * 获取The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.
                      * @return Action The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.
                      * 
@@ -180,6 +201,12 @@ namespace TencentCloud
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
+
+                    /**
+                     * Rule ID of high frequency scan protection, returned as an output parameter.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                     /**
                      * The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.

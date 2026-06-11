@@ -257,6 +257,48 @@ namespace TencentCloud
                      */
                     bool RegionInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Host example ID
+                     * @return InstanceId Host example ID
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Host example ID
+                     * @param _instanceId Host example ID
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Host type
+                     * @return MachineType Host type
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Host type
+                     * @param _machineType Host type
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -318,6 +360,18 @@ namespace TencentCloud
                      */
                     RegionInfo m_regionInfo;
                     bool m_regionInfoHasBeenSet;
+
+                    /**
+                     * Host example ID
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Host type
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
 
                 };
             }

@@ -113,23 +113,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RedirectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RedirectStatusCode Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RedirectStatusCode Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
                     /**
-                     * 设置Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _redirectStatusCode Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _redirectStatusCode Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
@@ -187,9 +187,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_redirectTypeHasBeenSet;
 
                     /**
-                     * Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Timeout Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Timeout Duration (Hours)
+                     * @return Timeout Timeout Duration (Hours)
                      * 
                      */
                     uint64_t GetTimeout() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Timeout Duration (Hours)
                      */
                     uint64_t m_timeout;
                     bool m_timeoutHasBeenSet;

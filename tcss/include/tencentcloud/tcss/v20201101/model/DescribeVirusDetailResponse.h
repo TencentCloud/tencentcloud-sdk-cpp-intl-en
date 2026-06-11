@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageId() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageName Image name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageName() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -92,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Size Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan File Size
+                     * @return Size Trojan File Size
                      * 
                      */
                     uint64_t GetSize() const;
@@ -109,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FilePath Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFilePath() const;
@@ -124,10 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilePathHasBeenSet() const;
 
                     /**
-                     * 获取Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModifyTime Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Latest creation time
+                     * @return ModifyTime Latest creation time
                      * 
                      */
                     std::string GetModifyTime() const;
@@ -141,9 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVirusName() const;
@@ -156,10 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VirusNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+                     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      * 
                      */
                     std::string GetRiskLevel() const;
@@ -173,9 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Container name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerName Container name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContainerName() const;
@@ -188,10 +170,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNameHasBeenSet() const;
 
                     /**
-                     * 获取Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerId Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container id
+                     * @return ContainerId Container id
                      * 
                      */
                     std::string GetContainerId() const;
@@ -204,10 +184,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIdHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host name
+                     * @return HostName Host name
                      * 
                      */
                     std::string GetHostName() const;
@@ -220,10 +198,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostId Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host ID
+                     * @return HostId Host ID
                      * 
                      */
                     std::string GetHostId() const;
@@ -237,9 +213,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProcessName() const;
@@ -253,9 +227,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProcessPath() const;
@@ -268,10 +240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcessMd5 Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process md5
+                     * @return ProcessMd5 Process md5
                      * 
                      */
                     std::string GetProcessMd5() const;
@@ -284,10 +254,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessMd5HasBeenSet() const;
 
                     /**
-                     * 获取Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcessId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process id
+                     * @return ProcessId Process id
                      * 
                      */
                     uint64_t GetProcessId() const;
@@ -301,9 +269,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessArgv Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProcessArgv() const;
@@ -317,9 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessChan Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProcessChan() const;
@@ -332,10 +296,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessChanHasBeenSet() const;
 
                     /**
-                     * 获取Process group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcessAccountGroup Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process Group
+                     * @return ProcessAccountGroup Process Group
                      * 
                      */
                     std::string GetProcessAccountGroup() const;
@@ -348,10 +310,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessAccountGroupHasBeenSet() const;
 
                     /**
-                     * 获取Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcessStartAccount Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取process initiator
+                     * @return ProcessStartAccount process initiator
                      * 
                      */
                     std::string GetProcessStartAccount() const;
@@ -365,9 +325,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessFileAuthority Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProcessFileAuthority() const;
@@ -380,10 +338,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessFileAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SourceType Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
+                     * @return SourceType Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
                      * 
                      */
                     int64_t GetSourceType() const;
@@ -396,10 +352,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
@@ -413,9 +367,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHarmDescribe() const;
@@ -428,10 +380,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HarmDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recommended solution
+                     * @return SuggestScheme Recommended solution
                      * 
                      */
                     std::string GetSuggestScheme() const;
@@ -445,9 +395,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Mark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMark() const;
@@ -460,10 +408,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MarkHasBeenSet() const;
 
                     /**
-                     * 获取Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileName Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk File Name
+                     * @return FileName Risk File Name
                      * 
                      */
                     std::string GetFileName() const;
@@ -476,10 +422,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File MD5
+                     * @return FileMd5 File MD5
                      * 
                      */
                     std::string GetFileMd5() const;
@@ -493,9 +437,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventType Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetEventType() const;
@@ -508,10 +450,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster name.
+                     * @return PodName Cluster name.
                      * 
                      */
                     std::string GetPodName() const;
@@ -524,26 +464,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodNameHasBeenSet() const;
 
                     /**
-                     * 获取`DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+                     * @return Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
                      * 
                      */
                     std::string GetStatus() const;
@@ -556,22 +494,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+                     * @return SubStatus Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
                      * 
                      */
                     std::string GetSubStatus() const;
@@ -584,10 +520,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private IP address
+                     * @return HostIP Private IP address
                      * 
                      */
                     std::string GetHostIP() const;
@@ -600,10 +534,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Public IP address
+                     * @return ClientIP Public IP address
                      * 
                      */
                     std::string GetClientIP() const;
@@ -616,10 +548,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClientIPHasBeenSet() const;
 
                     /**
-                     * 获取Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PProcessStartUser Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent Process Startup User
+                     * @return PProcessStartUser Parent Process Startup User
                      * 
                      */
                     std::string GetPProcessStartUser() const;
@@ -632,10 +562,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PProcessStartUserHasBeenSet() const;
 
                     /**
-                     * 获取User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PProcessUserGroup User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent process user group
+                     * @return PProcessUserGroup Parent process user group
                      * 
                      */
                     std::string GetPProcessUserGroup() const;
@@ -648,10 +576,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PProcessUserGroupHasBeenSet() const;
 
                     /**
-                     * 获取Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PProcessPath Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent process path
+                     * @return PProcessPath Parent process path
                      * 
                      */
                     std::string GetPProcessPath() const;
@@ -664,10 +590,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PProcessParam Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent Process Command Line Parameters
+                     * @return PProcessParam Parent Process Command Line Parameters
                      * 
                      */
                     std::string GetPProcessParam() const;
@@ -680,10 +604,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PProcessParamHasBeenSet() const;
 
                     /**
-                     * 获取Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AncestorProcessStartUser Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ancestor Process Startup User
+                     * @return AncestorProcessStartUser Ancestor Process Startup User
                      * 
                      */
                     std::string GetAncestorProcessStartUser() const;
@@ -696,10 +618,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AncestorProcessStartUserHasBeenSet() const;
 
                     /**
-                     * 获取Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AncestorProcessUserGroup Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ancestor Process User Group
+                     * @return AncestorProcessUserGroup Ancestor Process User Group
                      * 
                      */
                     std::string GetAncestorProcessUserGroup() const;
@@ -713,9 +633,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AncestorProcessPath Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAncestorProcessPath() const;
@@ -728,10 +646,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AncestorProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AncestorProcessParam Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ancestor Process Command Line Parameters
+                     * @return AncestorProcessParam Ancestor Process Command Line Parameters
                      * 
                      */
                     std::string GetAncestorProcessParam() const;
@@ -744,10 +660,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AncestorProcessParamHasBeenSet() const;
 
                     /**
-                     * 获取Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last Time for Event Handling
+                     * @return OperationTime Last Time for Event Handling
                      * 
                      */
                     std::string GetOperationTime() const;
@@ -761,9 +675,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerNetStatus Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContainerNetStatus() const;
@@ -776,10 +688,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetSubStatus Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container Isolation Sub-status
+                     * @return ContainerNetSubStatus Container Isolation Sub-status
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
@@ -792,10 +702,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container Isolation Operation Source
+                     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
@@ -808,20 +716,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
+                     * @return CheckPlatform detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
                      * 
                      */
                     std::vector<std::string> GetCheckPlatform() const;
@@ -834,10 +740,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckPlatformHasBeenSet() const;
 
                     /**
-                     * 获取File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileAccessTime File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File Access Time
+                     * @return FileAccessTime File Access Time
                      * 
                      */
                     std::string GetFileAccessTime() const;
@@ -850,10 +754,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileAccessTimeHasBeenSet() const;
 
                     /**
-                     * 获取File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileModifyTime File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File Modification Time
+                     * @return FileModifyTime File Modification Time
                      * 
                      */
                     std::string GetFileModifyTime() const;
@@ -1006,8 +908,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Namespace 
+                     * 获取Namespace
+                     * @return Namespace Namespace
                      * 
                      */
                     std::string GetNamespace() const;
@@ -1020,8 +922,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WorkloadType 
+                     * 获取Workload type
+                     * @return WorkloadType Workload type
                      * 
                      */
                     std::string GetWorkloadType() const;
@@ -1033,366 +935,331 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WorkloadTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Container status.
+                     * @return ContainerStatus Container status.
+                     * 
+                     */
+                    std::string GetContainerStatus() const;
+
+                    /**
+                     * 判断参数 ContainerStatus 是否已赋值
+                     * @return ContainerStatus 是否已赋值
+                     * 
+                     */
+                    bool ContainerStatusHasBeenSet() const;
+
                 private:
 
                     /**
                      * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
                      * Image name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan File Size
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
                      * Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_filePath;
                     bool m_filePathHasBeenSet;
 
                     /**
-                     * Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Latest creation time
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
                      * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_virusName;
                     bool m_virusNameHasBeenSet;
 
                     /**
-                     * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
                      * Container name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_containerName;
                     bool m_containerNameHasBeenSet;
 
                     /**
-                     * Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container id
                      */
                     std::string m_containerId;
                     bool m_containerIdHasBeenSet;
 
                     /**
-                     * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host ID
                      */
                     std::string m_hostId;
                     bool m_hostIdHasBeenSet;
 
                     /**
                      * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processName;
                     bool m_processNameHasBeenSet;
 
                     /**
                      * Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processPath;
                     bool m_processPathHasBeenSet;
 
                     /**
-                     * Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process md5
                      */
                     std::string m_processMd5;
                     bool m_processMd5HasBeenSet;
 
                     /**
-                     * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process id
                      */
                     uint64_t m_processId;
                     bool m_processIdHasBeenSet;
 
                     /**
                      * Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processArgv;
                     bool m_processArgvHasBeenSet;
 
                     /**
                      * Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processChan;
                     bool m_processChanHasBeenSet;
 
                     /**
-                     * Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process Group
                      */
                     std::string m_processAccountGroup;
                     bool m_processAccountGroupHasBeenSet;
 
                     /**
-                     * Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * process initiator
                      */
                     std::string m_processStartAccount;
                     bool m_processStartAccountHasBeenSet;
 
                     /**
                      * Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processFileAuthority;
                     bool m_processFileAuthorityHasBeenSet;
 
                     /**
-                     * Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
                      */
                     int64_t m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_harmDescribe;
                     bool m_harmDescribeHasBeenSet;
 
                     /**
-                     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recommended solution
                      */
                     std::string m_suggestScheme;
                     bool m_suggestSchemeHasBeenSet;
 
                     /**
                      * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mark;
                     bool m_markHasBeenSet;
 
                     /**
-                     * Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk File Name
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File MD5
                      */
                     std::string m_fileMd5;
                     bool m_fileMd5HasBeenSet;
 
                     /**
                      * Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster name.
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;
 
                     /**
-                     * `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
                      */
                     std::string m_subStatus;
                     bool m_subStatusHasBeenSet;
 
                     /**
-                     * Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private IP address
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Public IP address
                      */
                     std::string m_clientIP;
                     bool m_clientIPHasBeenSet;
 
                     /**
-                     * Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent Process Startup User
                      */
                     std::string m_pProcessStartUser;
                     bool m_pProcessStartUserHasBeenSet;
 
                     /**
-                     * User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent process user group
                      */
                     std::string m_pProcessUserGroup;
                     bool m_pProcessUserGroupHasBeenSet;
 
                     /**
-                     * Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent process path
                      */
                     std::string m_pProcessPath;
                     bool m_pProcessPathHasBeenSet;
 
                     /**
-                     * Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent Process Command Line Parameters
                      */
                     std::string m_pProcessParam;
                     bool m_pProcessParamHasBeenSet;
 
                     /**
-                     * Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ancestor Process Startup User
                      */
                     std::string m_ancestorProcessStartUser;
                     bool m_ancestorProcessStartUserHasBeenSet;
 
                     /**
-                     * Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ancestor Process User Group
                      */
                     std::string m_ancestorProcessUserGroup;
                     bool m_ancestorProcessUserGroupHasBeenSet;
 
                     /**
                      * Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ancestorProcessPath;
                     bool m_ancestorProcessPathHasBeenSet;
 
                     /**
-                     * Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ancestor Process Command Line Parameters
                      */
                     std::string m_ancestorProcessParam;
                     bool m_ancestorProcessParamHasBeenSet;
 
                     /**
-                     * Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last Time for Event Handling
                      */
                     std::string m_operationTime;
                     bool m_operationTimeHasBeenSet;
 
                     /**
                      * Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_containerNetStatus;
                     bool m_containerNetStatusHasBeenSet;
 
                     /**
-                     * Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container Isolation Sub-status
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container Isolation Operation Source
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
                      */
                     std::vector<std::string> m_checkPlatform;
                     bool m_checkPlatformHasBeenSet;
 
                     /**
-                     * File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File Access Time
                      */
                     std::string m_fileAccessTime;
                     bool m_fileAccessTimeHasBeenSet;
 
                     /**
-                     * File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File Modification Time
                      */
                     std::string m_fileModifyTime;
                     bool m_fileModifyTimeHasBeenSet;
@@ -1458,16 +1325,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Namespace
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * 
+                     * Workload type
                      */
                     std::string m_workloadType;
                     bool m_workloadTypeHasBeenSet;
+
+                    /**
+                     * Container status.
+                     */
+                    std::string m_containerStatus;
+                    bool m_containerStatusHasBeenSet;
 
                 };
             }

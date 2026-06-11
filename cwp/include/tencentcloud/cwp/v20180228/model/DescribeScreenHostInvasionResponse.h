@@ -90,10 +90,8 @@ namespace TencentCloud
                     bool VulHasBeenSet() const;
 
                     /**
-                     * 获取List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Baseline List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of baseline events
+                     * @return Baseline List of baseline events
                      * 
                      */
                     std::vector<ScreenBaselineInfo> GetBaseline() const;
@@ -126,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vulHasBeenSet;
 
                     /**
-                     * List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of baseline events
                      */
                     std::vector<ScreenBaselineInfo> m_baseline;
                     bool m_baselineHasBeenSet;

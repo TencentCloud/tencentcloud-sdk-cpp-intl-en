@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulTopList List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of top vulnerabilities.
+                     * @return VulTopList List of top vulnerabilities.
                      * 
                      */
                     std::vector<VulTopInfo> GetVulTopList() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of top vulnerabilities.
                      */
                     std::vector<VulTopInfo> m_vulTopList;
                     bool m_vulTopListHasBeenSet;

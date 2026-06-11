@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FieldValueRatioInfos Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Analyze statistical information
+                     * @return FieldValueRatioInfos Analyze statistical information
                      * 
                      */
                     std::vector<FieldValueRatioInfo> GetFieldValueRatioInfos() const;
@@ -77,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Analyze statistical information
                      */
                     std::vector<FieldValueRatioInfo> m_fieldValueRatioInfos;
                     bool m_fieldValueRatioInfosHasBeenSet;

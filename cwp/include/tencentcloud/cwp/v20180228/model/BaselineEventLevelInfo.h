@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEventLevel() const;
 
                     /**
                      * 设置Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventLevel(const uint64_t& _eventLevel);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEventCount() const;
 
                     /**
                      * 设置Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventCount(const uint64_t& _eventCount);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_eventLevel;
                     bool m_eventLevelHasBeenSet;
 
                     /**
                      * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_eventCount;
                     bool m_eventCountHasBeenSet;

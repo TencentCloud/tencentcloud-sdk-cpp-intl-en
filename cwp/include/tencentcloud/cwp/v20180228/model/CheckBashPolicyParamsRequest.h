@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cwp/v20180228/model/PolicyRules.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
-                     * @return CheckField Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+                     * 获取Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
+                     * @return CheckField Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
                      * 
                      */
                     std::string GetCheckField() const;
 
                     /**
-                     * 设置Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
-                     * @param _checkField Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+                     * 设置Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
+                     * @param _checkField Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
                      * 
                      */
                     void SetCheckField(const std::string& _checkField);
@@ -106,15 +127,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
-                     * @return Rule The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+                     * 获取This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
+                     * @return Rule This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
                      * 
                      */
                     std::string GetRule() const;
 
                     /**
-                     * 设置The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
-                     * @param _rule The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+                     * 设置This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
+                     * @param _rule This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
                      * 
                      */
                     void SetRule(const std::string& _rule);
@@ -147,10 +172,36 @@ namespace TencentCloud
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取Rule expression
+                     * @return Rules Rule expression
+                     * 
+                     */
+                    PolicyRules GetRules() const;
+
+                    /**
+                     * 设置Rule expression
+                     * @param _rules Rule expression
+                     * 
+                     */
+                    void SetRules(const PolicyRules& _rules);
+
+                    /**
+                     * 判断参数 Rules 是否已赋值
+                     * @return Rules 是否已赋值
+                     * 
+                     */
+                    bool RulesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+                     * Verify content field, use commas to separate if necessary to detect multiple fields
+<li>Name Policy name</li>
+<li>Process</li>
+<li>Name PProcess Parent process</li>
+<li>Name AProcess Ancestor process</li>
+
                      */
                     std::string m_checkField;
                     bool m_checkFieldHasBeenSet;
@@ -168,7 +219,8 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+                     * This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
+
                      */
                     std::string m_rule;
                     bool m_ruleHasBeenSet;
@@ -178,6 +230,12 @@ namespace TencentCloud
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Rule expression
+                     */
+                    PolicyRules m_rules;
+                    bool m_rulesHasBeenSet;
 
                 };
             }

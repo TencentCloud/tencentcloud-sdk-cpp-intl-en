@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
                      * @return GroupId Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
                      * @param _groupId Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -64,15 +68,19 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Collection configuration ID
-                     * @return ConfigId Collection configuration ID
+                     * 获取Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+                     * @return ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      * 
                      */
                     std::string GetConfigId() const;
 
                     /**
-                     * 设置Collection configuration ID
-                     * @param _configId Collection configuration ID
+                     * 设置Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+                     * @param _configId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      * 
                      */
                     void SetConfigId(const std::string& _configId);
@@ -88,12 +96,14 @@ namespace TencentCloud
 
                     /**
                      * Machine group ID
+-Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Collection configuration ID
+                     * Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;

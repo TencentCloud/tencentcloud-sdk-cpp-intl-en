@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
-                     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+                     * 获取<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+                     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
                      * 
                      */
                     std::string GetAigcType() const;
 
                     /**
-                     * 设置<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
-                     * @param _aigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+                     * 设置<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+                     * @param _aigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
                      * 
                      */
                     void SetAigcType(const std::string& _aigcType);
@@ -126,6 +126,48 @@ namespace TencentCloud
                      */
                     bool SubAppIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>API Key</p>
+                     * @return APIKey <p>API Key</p>
+                     * 
+                     */
+                    std::string GetAPIKey() const;
+
+                    /**
+                     * 设置<p>API Key</p>
+                     * @param _aPIKey <p>API Key</p>
+                     * 
+                     */
+                    void SetAPIKey(const std::string& _aPIKey);
+
+                    /**
+                     * 判断参数 APIKey 是否已赋值
+                     * @return APIKey 是否已赋值
+                     * 
+                     */
+                    bool APIKeyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>API Key</p>
+                     * @return APIKeys <p>API Key</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAPIKeys() const;
+
+                    /**
+                     * 设置<p>API Key</p>
+                     * @param _aPIKeys <p>API Key</p>
+                     * 
+                     */
+                    void SetAPIKeys(const std::vector<std::string>& _aPIKeys);
+
+                    /**
+                     * 判断参数 APIKeys 是否已赋值
+                     * @return APIKeys 是否已赋值
+                     * 
+                     */
+                    bool APIKeysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,7 +183,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+                     * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
                      */
                     std::string m_aigcType;
                     bool m_aigcTypeHasBeenSet;
@@ -151,6 +193,18 @@ namespace TencentCloud
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
+
+                    /**
+                     * <p>API Key</p>
+                     */
+                    std::string m_aPIKey;
+                    bool m_aPIKeyHasBeenSet;
+
+                    /**
+                     * <p>API Key</p>
+                     */
+                    std::vector<std::string> m_aPIKeys;
+                    bool m_aPIKeysHasBeenSet;
 
                 };
             }

@@ -181,15 +181,15 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool EncodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取The information attached when the node cache purge type is set to purge_cache_tag.
-                     * @return CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+                     * 获取The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+                     * @return CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
                      * 
                      */
                     CacheTag GetCacheTag() const;
 
                     /**
-                     * 设置The information attached when the node cache purge type is set to purge_cache_tag.
-                     * @param _cacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+                     * 设置The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+                     * @param _cacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
                      * 
                      */
                     void SetCacheTag(const CacheTag& _cacheTag);
@@ -242,7 +242,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool m_encodeUrlHasBeenSet;
 
                     /**
-                     * The information attached when the node cache purge type is set to purge_cache_tag.
+                     * The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
                      */
                     CacheTag m_cacheTag;
                     bool m_cacheTagHasBeenSet;

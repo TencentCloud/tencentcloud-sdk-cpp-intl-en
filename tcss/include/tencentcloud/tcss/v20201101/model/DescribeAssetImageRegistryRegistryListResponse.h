@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mirror repository list
-                     * @return List Mirror repository list
+                     * 获取Image repository list
+                     * @return List Image repository list
                      * 
                      */
                     std::vector<ImageRepoRegistryInfo> GetList() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total quantity
-                     * @return TotalCount Total quantity
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mirror repository list
+                     * Image repository list
                      */
                     std::vector<ImageRepoRegistryInfo> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total quantity
+                     * Total number.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

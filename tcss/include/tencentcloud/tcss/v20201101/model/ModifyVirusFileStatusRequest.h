@@ -64,43 +64,15 @@ namespace TencentCloud
                     bool EventIdSetHasBeenSet() const;
 
                     /**
-                     * 获取Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
-                     * @return Status Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+                     * 获取Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
+                     * @return Status Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
-                     * @param _status Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+                     * 设置Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
+                     * @param _status Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -163,14 +135,7 @@ namespace TencentCloud
                     bool m_eventIdSetHasBeenSet;
 
                     /**
-                     * Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+                     * Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

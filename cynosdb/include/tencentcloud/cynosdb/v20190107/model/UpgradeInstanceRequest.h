@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Database CPU
-                     * @return Cpu Database CPU
+                     * 获取Database CPU.
+                     * @return Cpu Database CPU.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Database CPU
-                     * @param _cpu Database CPU
+                     * 设置Database CPU.
+                     * @param _cpu Database CPU.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Database memory in GB
-                     * @return Memory Database memory in GB
+                     * 获取Database memory in GB.
+                     * @return Memory Database memory in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Database memory in GB
-                     * @param _memory Database memory in GB
+                     * 设置Database memory in GB.
+                     * @param _memory Database memory in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
-                     * @return UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+                     * 获取Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+                     * @return UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
-                     * @param _upgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+                     * 设置Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+                     * @param _upgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -178,15 +178,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-                     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * 获取Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+                     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
                      * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
-                     * 设置Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-                     * @param _autoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * 设置Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+                     * @param _autoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
                      * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 获取Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+                     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
                      * 
                      */
                     int64_t GetDealMode() const;
 
                     /**
-                     * 设置Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-                     * @param _dealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * 设置Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+                     * @param _dealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
                      * 
                      */
                     void SetDealMode(const int64_t& _dealMode);
@@ -262,15 +262,15 @@ namespace TencentCloud
                     bool UpgradeModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpgradeProxy 
+                     * 获取Proxy synchronous upgrade.
+                     * @return UpgradeProxy Proxy synchronous upgrade.
                      * 
                      */
                     UpgradeProxy GetUpgradeProxy() const;
 
                     /**
-                     * 设置
-                     * @param _upgradeProxy 
+                     * 设置Proxy synchronous upgrade.
+                     * @param _upgradeProxy Proxy synchronous upgrade.
                      * 
                      */
                     void SetUpgradeProxy(const UpgradeProxy& _upgradeProxy);
@@ -291,19 +291,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Database CPU
+                     * Database CPU.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Database memory in GB
+                     * Database memory in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+                     * Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;
@@ -323,7 +323,7 @@ namespace TencentCloud
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+                     * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
                      */
                     int64_t m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
@@ -335,7 +335,7 @@ namespace TencentCloud
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+                     * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
@@ -347,7 +347,7 @@ namespace TencentCloud
                     bool m_upgradeModeHasBeenSet;
 
                     /**
-                     * 
+                     * Proxy synchronous upgrade.
                      */
                     UpgradeProxy m_upgradeProxy;
                     bool m_upgradeProxyHasBeenSet;

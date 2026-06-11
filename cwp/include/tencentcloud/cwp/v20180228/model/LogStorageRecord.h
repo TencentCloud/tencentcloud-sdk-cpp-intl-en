@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Month Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Year and month.
+                     * @return Month Year and month.
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _month Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Year and month.
+                     * @param _month Year and month.
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UsedSize Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage amount, in bytes.
+                     * @return UsedSize Storage amount, in bytes.
                      * 
                      */
                     uint64_t GetUsedSize() const;
 
                     /**
-                     * 设置Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _usedSize Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Storage amount, in bytes.
+                     * @param _usedSize Storage amount, in bytes.
                      * 
                      */
                     void SetUsedSize(const uint64_t& _usedSize);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UsedSizeHasBeenSet() const;
 
                     /**
-                     * 获取Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InquireSize Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total volume, in bytes.
+                     * @return InquireSize Total volume, in bytes.
                      * 
                      */
                     uint64_t GetInquireSize() const;
 
                     /**
-                     * 设置Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _inquireSize Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total volume, in bytes.
+                     * @param _inquireSize Total volume, in bytes.
                      * 
                      */
                     void SetInquireSize(const uint64_t& _inquireSize);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Year and month.
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage amount, in bytes.
                      */
                     uint64_t m_usedSize;
                     bool m_usedSizeHasBeenSet;
 
                     /**
-                     * Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total volume, in bytes.
                      */
                     uint64_t m_inquireSize;
                     bool m_inquireSizeHasBeenSet;

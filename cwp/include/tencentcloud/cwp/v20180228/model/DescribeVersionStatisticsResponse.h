@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool UltimateVersionNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of General Discount Editions
-                     * @return GeneralVersionNum Number of General Discount Editions
+                     * 获取Number of lightweight editions
+                     * @return GeneralVersionNum Number of lightweight editions
                      * 
                      */
                     uint64_t GetGeneralVersionNum() const;
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_ultimateVersionNumHasBeenSet;
 
                     /**
-                     * Number of General Discount Editions
+                     * Number of lightweight editions
                      */
                     uint64_t m_generalVersionNum;
                     bool m_generalVersionNumHasBeenSet;

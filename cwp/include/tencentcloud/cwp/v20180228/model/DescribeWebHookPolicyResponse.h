@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Policy List
+                     * @return List Policy List
                      * 
                      */
                     std::vector<WebHookPolicy> GetList() const;
@@ -77,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Policy List
                      */
                     std::vector<WebHookPolicy> m_list;
                     bool m_listHasBeenSet;

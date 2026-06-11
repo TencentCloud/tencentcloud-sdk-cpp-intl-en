@@ -259,18 +259,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SourcePort Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<uint64_t> GetSourcePort() const;
 
                     /**
                      * 设置Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sourcePort Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSourcePort(const std::vector<uint64_t>& _sourcePort);
@@ -557,18 +553,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -644,7 +636,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<uint64_t> m_sourcePort;
                     bool m_sourcePortHasBeenSet;
@@ -729,7 +720,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

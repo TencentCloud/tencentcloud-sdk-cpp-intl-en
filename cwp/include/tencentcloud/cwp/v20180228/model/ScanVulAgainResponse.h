@@ -43,7 +43,47 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Number of successful hosts
+                     * @return SuccessCount Number of successful hosts
+                     * 
+                     */
+                    uint64_t GetSuccessCount() const;
+
+                    /**
+                     * 判断参数 SuccessCount 是否已赋值
+                     * @return SuccessCount 是否已赋值
+                     * 
+                     */
+                    bool SuccessCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of Basic Version hosts (unsupported)
+                     * @return BasicVersionCount Number of Basic Version hosts (unsupported)
+                     * 
+                     */
+                    uint64_t GetBasicVersionCount() const;
+
+                    /**
+                     * 判断参数 BasicVersionCount 是否已赋值
+                     * @return BasicVersionCount 是否已赋值
+                     * 
+                     */
+                    bool BasicVersionCountHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Number of successful hosts
+                     */
+                    uint64_t m_successCount;
+                    bool m_successCountHasBeenSet;
+
+                    /**
+                     * Number of Basic Version hosts (unsupported)
+                     */
+                    uint64_t m_basicVersionCount;
+                    bool m_basicVersionCountHasBeenSet;
 
                 };
             }

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Chart Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name: Display host ip and region. value: Number of events.
+                     * @return Chart Name: Display host ip and region. value: Number of events.
                      * 
                      */
                     std::vector<ScreenNameValue> GetChart() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name: Display host ip and region. value: Number of events.
                      */
                     std::vector<ScreenNameValue> m_chart;
                     bool m_chartHasBeenSet;

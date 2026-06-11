@@ -259,42 +259,42 @@ namespace TencentCloud
                     /**
                      * 获取Log level
                      * @return Level Log level
-                     * 
+                     * @deprecated
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Log level
                      * @param _level Log level
-                     * 
+                     * @deprecated
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取Log source
                      * @return Source Log source
-                     * 
+                     * @deprecated
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Log source
                      * @param _source Log source
-                     * 
+                     * @deprecated
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool SourceHasBeenSet() const;
 

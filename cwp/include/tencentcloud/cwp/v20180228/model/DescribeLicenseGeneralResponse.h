@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool ProVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Total number of Inclusive Edition authorizations (those of valid orders)
-                     * @return CwpVersionLicenseCnt Total number of Inclusive Edition authorizations (those of valid orders)
+                     * 获取Total number of Lite Edition authorizations (those of valid orders)
+                     * @return CwpVersionLicenseCnt Total number of Lite Edition authorizations (those of valid orders)
                      * 
                      */
                     uint64_t GetCwpVersionLicenseCnt() const;
@@ -296,8 +296,8 @@ namespace TencentCloud
                     bool DestroyOrderNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic renewal is enabled. True: enabled; false: disabled.
-                     * @return RepurchaseRenewSwitch Whether automatic renewal is enabled. True: enabled; false: disabled.
+                     * 获取Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+                     * @return RepurchaseRenewSwitch Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
                      * 
                      */
                     bool GetRepurchaseRenewSwitch() const;
@@ -308,6 +308,90 @@ namespace TencentCloud
                      * 
                      */
                     bool RepurchaseRenewSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+                     * @return AutoBindRaspSwitch Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+                     * 
+                     */
+                    bool GetAutoBindRaspSwitch() const;
+
+                    /**
+                     * 判断参数 AutoBindRaspSwitch 是否已赋值
+                     * @return AutoBindRaspSwitch 是否已赋值
+                     * 
+                     */
+                    bool AutoBindRaspSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+                     * @return AutoOpenRaspSwitch Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+                     * 
+                     */
+                    bool GetAutoOpenRaspSwitch() const;
+
+                    /**
+                     * 判断参数 AutoOpenRaspSwitch 是否已赋值
+                     * @return AutoOpenRaspSwitch 是否已赋值
+                     * 
+                     */
+                    bool AutoOpenRaspSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the automatic scaling down switch is on
+                     * @return AutoDowngradeSwitch Whether the automatic scaling down switch is on
+                     * 
+                     */
+                    bool GetAutoDowngradeSwitch() const;
+
+                    /**
+                     * 判断参数 AutoDowngradeSwitch 是否已赋值
+                     * @return AutoDowngradeSwitch 是否已赋值
+                     * 
+                     */
+                    bool AutoDowngradeSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AvailableAISecurityLicenseCnt 
+                     * 
+                     */
+                    uint64_t GetAvailableAISecurityLicenseCnt() const;
+
+                    /**
+                     * 判断参数 AvailableAISecurityLicenseCnt 是否已赋值
+                     * @return AvailableAISecurityLicenseCnt 是否已赋值
+                     * 
+                     */
+                    bool AvailableAISecurityLicenseCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AISecurityVersionLicenseCnt 
+                     * 
+                     */
+                    uint64_t GetAISecurityVersionLicenseCnt() const;
+
+                    /**
+                     * 判断参数 AISecurityVersionLicenseCnt 是否已赋值
+                     * @return AISecurityVersionLicenseCnt 是否已赋值
+                     * 
+                     */
+                    bool AISecurityVersionLicenseCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ApplicationAvailableLicenseCnt 
+                     * 
+                     */
+                    uint64_t GetApplicationAvailableLicenseCnt() const;
+
+                    /**
+                     * 判断参数 ApplicationAvailableLicenseCnt 是否已赋值
+                     * @return ApplicationAvailableLicenseCnt 是否已赋值
+                     * 
+                     */
+                    bool ApplicationAvailableLicenseCntHasBeenSet() const;
 
                 private:
 
@@ -390,7 +474,7 @@ namespace TencentCloud
                     bool m_proVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Total number of Inclusive Edition authorizations (those of valid orders)
+                     * Total number of Lite Edition authorizations (those of valid orders)
                      */
                     uint64_t m_cwpVersionLicenseCnt;
                     bool m_cwpVersionLicenseCntHasBeenSet;
@@ -420,10 +504,46 @@ namespace TencentCloud
                     bool m_destroyOrderNumHasBeenSet;
 
                     /**
-                     * Whether automatic renewal is enabled. True: enabled; false: disabled.
+                     * Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
                      */
                     bool m_repurchaseRenewSwitch;
                     bool m_repurchaseRenewSwitchHasBeenSet;
+
+                    /**
+                     * Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+                     */
+                    bool m_autoBindRaspSwitch;
+                    bool m_autoBindRaspSwitchHasBeenSet;
+
+                    /**
+                     * Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+                     */
+                    bool m_autoOpenRaspSwitch;
+                    bool m_autoOpenRaspSwitchHasBeenSet;
+
+                    /**
+                     * Whether the automatic scaling down switch is on
+                     */
+                    bool m_autoDowngradeSwitch;
+                    bool m_autoDowngradeSwitchHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_availableAISecurityLicenseCnt;
+                    bool m_availableAISecurityLicenseCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_aISecurityVersionLicenseCnt;
+                    bool m_aISecurityVersionLicenseCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_applicationAvailableLicenseCnt;
+                    bool m_applicationAvailableLicenseCntHasBeenSet;
 
                 };
             }

@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool ParentProcPathHasBeenSet() const;
 
                     /**
-                     * 获取Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
-                     * @return Status Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+                     * 获取Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
+                     * @return Status Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
-                     * @param _status Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+                     * 设置Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
+                     * @param _status Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -469,18 +469,14 @@ namespace TencentCloud
 
                     /**
                      * 获取 Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置 Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -493,19 +489,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineExtraInfoHasBeenSet() const;
 
                     /**
-                     * 获取Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process id
+                     * @return Pid Process id
                      * 
                      */
                     int64_t GetPid() const;
 
                     /**
-                     * 设置Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process id
+                     * @param _pid Process id
                      * 
                      */
                     void SetPid(const int64_t& _pid);
@@ -518,19 +510,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Threat level. 0: medium risk, 1: high risk.
+                     * @return RiskLevel Threat level. 0: medium risk, 1: high risk.
                      * 
                      */
                     uint64_t GetRiskLevel() const;
 
                     /**
-                     * 设置Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskLevel Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Threat level. 0: medium risk, 1: high risk.
+                     * @param _riskLevel Threat level. 0: medium risk, 1: high risk.
                      * 
                      */
                     void SetRiskLevel(const uint64_t& _riskLevel);
@@ -541,6 +529,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool RiskLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+                     * @return CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+                     * 
+                     */
+                    std::string GetCmdLineQuote() const;
+
+                    /**
+                     * 设置Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+                     * @param _cmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+                     * 
+                     */
+                    void SetCmdLineQuote(const std::string& _cmdLineQuote);
+
+                    /**
+                     * 判断参数 CmdLineQuote 是否已赋值
+                     * @return CmdLineQuote 是否已赋值
+                     * 
+                     */
+                    bool CmdLineQuoteHasBeenSet() const;
 
                 private:
 
@@ -635,7 +644,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_parentProcPathHasBeenSet;
 
                     /**
-                     * Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+                     * Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -666,24 +675,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      *  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
-                     * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process id
                      */
                     int64_t m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Threat level. 0: medium risk, 1: high risk.
                      */
                     uint64_t m_riskLevel;
                     bool m_riskLevelHasBeenSet;
+
+                    /**
+                     * Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+                     */
+                    std::string m_cmdLineQuote;
+                    bool m_cmdLineQuoteHasBeenSet;
 
                 };
             }

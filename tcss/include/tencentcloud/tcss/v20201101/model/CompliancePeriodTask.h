@@ -108,18 +108,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastTriggerTime Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastTriggerTime() const;
 
                     /**
                      * 设置Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lastTriggerTime Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastTriggerTime(const std::string& _lastTriggerTime);
@@ -214,7 +210,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastTriggerTime;
                     bool m_lastTriggerTimeHasBeenSet;

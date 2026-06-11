@@ -24,6 +24,7 @@ NoticeReceiver::NoticeReceiver() :
     m_receiverTypeHasBeenSet(false),
     m_receiverIdsHasBeenSet(false),
     m_receiverChannelsHasBeenSet(false),
+    m_noticeContentIdHasBeenSet(false),
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_indexHasBeenSet(false)
@@ -69,6 +70,16 @@ CoreInternalOutcome NoticeReceiver::Deserialize(const rapidjson::Value &value)
             m_receiverChannels.push_back((*itr).GetString());
         }
         m_receiverChannelsHasBeenSet = true;
+    }
+
+    if (value.HasMember("NoticeContentId") && !value["NoticeContentId"].IsNull())
+    {
+        if (!value["NoticeContentId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `NoticeReceiver.NoticeContentId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_noticeContentId = string(value["NoticeContentId"].GetString());
+        m_noticeContentIdHasBeenSet = true;
     }
 
     if (value.HasMember("StartTime") && !value["StartTime"].IsNull())
@@ -140,6 +151,14 @@ void NoticeReceiver::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_noticeContentIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NoticeContentId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_noticeContentId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_startTimeHasBeenSet)
@@ -215,6 +234,22 @@ void NoticeReceiver::SetReceiverChannels(const vector<string>& _receiverChannels
 bool NoticeReceiver::ReceiverChannelsHasBeenSet() const
 {
     return m_receiverChannelsHasBeenSet;
+}
+
+string NoticeReceiver::GetNoticeContentId() const
+{
+    return m_noticeContentId;
+}
+
+void NoticeReceiver::SetNoticeContentId(const string& _noticeContentId)
+{
+    m_noticeContentId = _noticeContentId;
+    m_noticeContentIdHasBeenSet = true;
+}
+
+bool NoticeReceiver::NoticeContentIdHasBeenSet() const
+{
+    return m_noticeContentIdHasBeenSet;
 }
 
 string NoticeReceiver::GetStartTime() const

@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ContainerIdHasBeenSet() const;
 
                     /**
-                     * 获取Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodName Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the Pod the container belongs to.
+                     * @return PodName Name of the Pod the container belongs to.
                      * 
                      */
                     std::string GetPodName() const;
 
                     /**
-                     * 设置Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _podName Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the Pod the container belongs to.
+                     * @param _podName Name of the Pod the container belongs to.
                      * 
                      */
                     void SetPodName(const std::string& _podName);
@@ -101,8 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_containerIdHasBeenSet;
 
                     /**
-                     * Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the Pod the container belongs to.
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;

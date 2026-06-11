@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DbNames 
+                     * 获取Database name.
+                     * @return DbNames Database name.
                      * 
                      */
                     std::vector<std::string> GetDbNames() const;
 
                     /**
-                     * 设置
-                     * @param _dbNames 
+                     * 设置Database name.
+                     * @param _dbNames Database name.
                      * 
                      */
                     void SetDbNames(const std::vector<std::string>& _dbNames);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * 
+                     * Database name.
                      */
                     std::vector<std::string> m_dbNames;
                     bool m_dbNamesHasBeenSet;

@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool TopicIDHasBeenSet() const;
 
                     /**
-                     * 获取Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogSetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取logset name
+                     * @return LogSetName logset name
                      * 
                      */
                     std::string GetLogSetName() const;
 
                     /**
-                     * 设置Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logSetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置logset name
+                     * @param _logSetName logset name
                      * 
                      */
                     void SetLogSetName(const std::string& _logSetName);
@@ -178,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _topicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -200,6 +192,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TopicNameHasBeenSet() const;
+
+                    /**
+                     * 获取Log type	
+                     * @return SubLogType Log type	
+                     * 
+                     */
+                    std::vector<std::string> GetSubLogType() const;
+
+                    /**
+                     * 设置Log type	
+                     * @param _subLogType Log type	
+                     * 
+                     */
+                    void SetSubLogType(const std::vector<std::string>& _subLogType);
+
+                    /**
+                     * 判断参数 SubLogType 是否已赋值
+                     * @return SubLogType 是否已赋值
+                     * 
+                     */
+                    bool SubLogTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Error message
+                     * @return ErrMsg Error message
+                     * 
+                     */
+                    std::string GetErrMsg() const;
+
+                    /**
+                     * 设置Error message
+                     * @param _errMsg Error message
+                     * 
+                     */
+                    void SetErrMsg(const std::string& _errMsg);
+
+                    /**
+                     * 判断参数 ErrMsg 是否已赋值
+                     * @return ErrMsg 是否已赋值
+                     * 
+                     */
+                    bool ErrMsgHasBeenSet() const;
 
                 private:
 
@@ -234,18 +268,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_topicIDHasBeenSet;
 
                     /**
-                     * Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * logset name
                      */
                     std::string m_logSetName;
                     bool m_logSetNameHasBeenSet;
 
                     /**
                      * Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
+
+                    /**
+                     * Log type	
+                     */
+                    std::vector<std::string> m_subLogType;
+                    bool m_subLogTypeHasBeenSet;
+
+                    /**
+                     * Error message
+                     */
+                    std::string m_errMsg;
+                    bool m_errMsgHasBeenSet;
 
                 };
             }

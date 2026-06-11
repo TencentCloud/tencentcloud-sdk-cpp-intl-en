@@ -100,7 +100,7 @@ namespace TencentCloud
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
                      * @return Filters Filter
 <li>OnlyAffectedContainer- string - Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedNewestImage-string - Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
@@ -115,7 +115,7 @@ namespace TencentCloud
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
@@ -135,7 +135,7 @@ namespace TencentCloud
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
                      * @param _filters Filter
 <li>OnlyAffectedContainer- string - Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedNewestImage-string - Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
@@ -150,7 +150,7 @@ namespace TencentCloud
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -233,7 +233,7 @@ namespace TencentCloud
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;

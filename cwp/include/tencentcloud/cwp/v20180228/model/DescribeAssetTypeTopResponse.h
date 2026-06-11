@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return User Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetUser() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Port Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetPort() const;
@@ -78,9 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Process Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetProcess() const;
@@ -94,9 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Software Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetSoftware() const;
@@ -110,9 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Database Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetDatabase() const;
@@ -125,10 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseHasBeenSet() const;
 
                     /**
-                     * 获取Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebApp Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top 5 Web Applications
+                     * @return WebApp Top 5 Web Applications
                      * 
                      */
                     std::vector<AssetKeyVal> GetWebApp() const;
@@ -141,10 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WebAppHasBeenSet() const;
 
                     /**
-                     * 获取Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebLocation Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top 5 Websites
+                     * @return WebLocation Top 5 Websites
                      * 
                      */
                     std::vector<AssetKeyVal> GetWebLocation() const;
@@ -157,10 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WebLocationHasBeenSet() const;
 
                     /**
-                     * 获取Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebFrame Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top 5 Web frameworks
+                     * @return WebFrame Top 5 Web frameworks
                      * 
                      */
                     std::vector<AssetKeyVal> GetWebFrame() const;
@@ -173,10 +157,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WebFrameHasBeenSet() const;
 
                     /**
-                     * 获取Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebService Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top 5 Web Services
+                     * @return WebService Top 5 Web Services
                      * 
                      */
                     std::vector<AssetKeyVal> GetWebService() const;
@@ -192,63 +174,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_user;
                     bool m_userHasBeenSet;
 
                     /**
                      * Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_port;
                     bool m_portHasBeenSet;
 
                     /**
                      * Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_process;
                     bool m_processHasBeenSet;
 
                     /**
                      * Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_software;
                     bool m_softwareHasBeenSet;
 
                     /**
                      * Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_database;
                     bool m_databaseHasBeenSet;
 
                     /**
-                     * Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top 5 Web Applications
                      */
                     std::vector<AssetKeyVal> m_webApp;
                     bool m_webAppHasBeenSet;
 
                     /**
-                     * Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top 5 Websites
                      */
                     std::vector<AssetKeyVal> m_webLocation;
                     bool m_webLocationHasBeenSet;
 
                     /**
-                     * Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top 5 Web frameworks
                      */
                     std::vector<AssetKeyVal> m_webFrame;
                     bool m_webFrameHasBeenSet;
 
                     /**
-                     * Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top 5 Web Services
                      */
                     std::vector<AssetKeyVal> m_webService;
                     bool m_webServiceHasBeenSet;

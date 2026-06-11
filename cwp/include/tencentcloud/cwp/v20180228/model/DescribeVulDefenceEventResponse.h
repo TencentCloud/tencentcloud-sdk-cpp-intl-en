@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Defense Event List
+                     * @return List Vulnerability Defense Event List
                      * 
                      */
                     std::vector<VulDefenceEvent> GetList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Defense Event List
                      */
                     std::vector<VulDefenceEvent> m_list;
                     bool m_listHasBeenSet;

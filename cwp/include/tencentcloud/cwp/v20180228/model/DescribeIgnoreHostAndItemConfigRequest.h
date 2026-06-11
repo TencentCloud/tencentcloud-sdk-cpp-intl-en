@@ -44,22 +44,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+                     * 获取<li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
-                     * @return Filters <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+                     * @return Filters <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+                     * 设置<li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
-                     * @param _filters <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+                     * @param _filters <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
                      * 
                      */
@@ -75,8 +75,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+                     * <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
                      */
                     std::vector<Filter> m_filters;

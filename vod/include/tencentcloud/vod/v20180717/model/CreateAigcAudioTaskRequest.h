@@ -46,6 +46,27 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取<p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+                     * @return SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+                     * 
+                     */
+                    uint64_t GetSubAppId() const;
+
+                    /**
+                     * 设置<p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+                     * @param _subAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+                     * 
+                     */
+                    void SetSubAppId(const uint64_t& _subAppId);
+
+                    /**
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
+                     * 
+                     */
+                    bool SubAppIdHasBeenSet() const;
+
+                    /**
                      * 获取<p>Model name.</p>
                      * @return ModelName <p>Model name.</p>
                      * 
@@ -88,15 +109,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Designated scenarios currently support sfx (sound effects).</p>
-                     * @return SceneType <p>Designated scenarios currently support sfx (sound effects).</p>
+                     * 获取<p>Designated scenarios currently support sfx (sound effects) and music.</p>
+                     * @return SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置<p>Designated scenarios currently support sfx (sound effects).</p>
-                     * @param _sceneType <p>Designated scenarios currently support sfx (sound effects).</p>
+                     * 设置<p>Designated scenarios currently support sfx (sound effects) and music.</p>
+                     * @param _sceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -216,6 +237,12 @@ namespace TencentCloud
                 private:
 
                     /**
+                     * <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+                     */
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
+
+                    /**
                      * <p>Model name.</p>
                      */
                     std::string m_modelName;
@@ -228,7 +255,7 @@ namespace TencentCloud
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * <p>Designated scenarios currently support sfx (sound effects).</p>
+                     * <p>Designated scenarios currently support sfx (sound effects) and music.</p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;

@@ -52,13 +52,13 @@ namespace TencentCloud
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
                      * @return ResourceName Resource name
 
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
                      * 
                      */
                     std::string GetResourceName() const;
@@ -69,13 +69,13 @@ Value is:.
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
                      * @param _resourceName Resource name
 
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
                      * 
                      */
                     void SetResourceName(const std::string& _resourceName);
@@ -137,7 +137,7 @@ Value is:.
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
                      */
                     std::string m_resourceName;
                     bool m_resourceNameHasBeenSet;

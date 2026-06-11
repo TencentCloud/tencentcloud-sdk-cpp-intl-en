@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration range of K8sApi abnormal event rules 
+                * Configuration Scope for Kubernetes API Exception Event Rules
                 */
                 class K8sApiAbnormalRuleScopeInfo : public AbstractModel
                 {
@@ -47,84 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-                     * @return Scope Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-                     * 
-                     */
-                    std::string GetScope() const;
-
-                    /**
-                     * 设置Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-                     * @param _scope Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-                     * 
-                     */
-                    void SetScope(const std::string& _scope);
-
-                    /**
-                     * 判断参数 Scope 是否已赋值
-                     * @return Scope 是否已赋值
-                     * 
-                     */
-                    bool ScopeHasBeenSet() const;
-
-                    /**
-                     * 获取Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
-                     * @return Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * 获取<p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+                     * @return Action <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
-                     * @param _action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * 设置<p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+                     * @param _action <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -137,19 +68,57 @@ USER_DEFINED: User defined
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+                     * @return Scope <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+                     * 
+                     */
+                    std::string GetScope() const;
+
+                    /**
+                     * 设置<p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+                     * @param _scope <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+                     * 
+                     */
+                    void SetScope(const std::string& _scope);
+
+                    /**
+                     * 判断参数 Scope 是否已赋值
+                     * @return Scope 是否已赋值
+                     * 
+                     */
+                    bool ScopeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether it has been deleted.</p>
+                     * @return IsDelete <p>Whether it has been deleted.</p>
+                     * 
+                     */
+                    bool GetIsDelete() const;
+
+                    /**
+                     * 设置<p>Whether it has been deleted.</p>
+                     * @param _isDelete <p>Whether it has been deleted.</p>
+                     * 
+                     */
+                    void SetIsDelete(const bool& _isDelete);
+
+                    /**
+                     * 判断参数 IsDelete 是否已赋值
+                     * @return IsDelete 是否已赋值
+                     * 
+                     */
+                    bool IsDeleteHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+                     * @return RiskLevel <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _riskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+                     * @param _riskLevel <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -162,19 +131,36 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Status Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Description of the rule type.</p>
+                     * @return RuleTypeZH <p>Description of the rule type.</p>
+                     * 
+                     */
+                    std::string GetRuleTypeZH() const;
+
+                    /**
+                     * 设置<p>Description of the rule type.</p>
+                     * @param _ruleTypeZH <p>Description of the rule type.</p>
+                     * 
+                     */
+                    void SetRuleTypeZH(const std::string& _ruleTypeZH);
+
+                    /**
+                     * 判断参数 RuleTypeZH 是否已赋值
+                     * @return RuleTypeZH 是否已赋值
+                     * 
+                     */
+                    bool RuleTypeZHHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Switch status (true: on, false: off) applicable to system rules.</p>
+                     * @return Status <p>Switch status (true: on, false: off) applicable to system rules.</p>
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _status Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Switch status (true: on, false: off) applicable to system rules.</p>
+                     * @param _status <p>Switch status (true: on, false: off) applicable to system rules.</p>
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -186,77 +172,43 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool StatusHasBeenSet() const;
 
-                    /**
-                     * 获取Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return IsDelete Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * 
-                     */
-                    bool GetIsDelete() const;
-
-                    /**
-                     * 设置Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _isDelete Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * 
-                     */
-                    void SetIsDelete(const bool& _isDelete);
-
-                    /**
-                     * 判断参数 IsDelete 是否已赋值
-                     * @return IsDelete 是否已赋值
-                     * 
-                     */
-                    bool IsDeleteHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-                     */
-                    std::string m_scope;
-                    bool m_scopeHasBeenSet;
-
-                    /**
-                     * Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+                     */
+                    std::string m_scope;
+                    bool m_scopeHasBeenSet;
+
+                    /**
+                     * <p>Whether it has been deleted.</p>
+                     */
+                    bool m_isDelete;
+                    bool m_isDeleteHasBeenSet;
+
+                    /**
+                     * <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Description of the rule type.</p>
+                     */
+                    std::string m_ruleTypeZH;
+                    bool m_ruleTypeZHHasBeenSet;
+
+                    /**
+                     * <p>Switch status (true: on, false: off) applicable to system rules.</p>
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
-
-                    /**
-                     * Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-                     */
-                    bool m_isDelete;
-                    bool m_isDeleteHasBeenSet;
 
                 };
             }

@@ -343,19 +343,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool HstsHasBeenSet() const;
 
                     /**
-                     * 获取TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TlsVersion Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
-                     * 设置TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _tlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _tlsVersion Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
@@ -450,8 +450,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_hstsHasBeenSet;
 
                     /**
-                     * TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tlsVersion;
                     bool m_tlsVersionHasBeenSet;

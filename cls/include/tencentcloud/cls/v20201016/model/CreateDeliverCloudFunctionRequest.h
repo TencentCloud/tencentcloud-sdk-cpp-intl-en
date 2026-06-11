@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic id belonging to the delivery rule
-                     * @return TopicId Topic id belonging to the delivery rule
+                     * 获取TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @return TopicId TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Topic id belonging to the delivery rule
-                     * @param _topicId Topic id belonging to the delivery rule
+                     * 设置TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @param _topicId TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,15 +72,19 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud Function name for delivery
-                     * @return FunctionName Cloud Function name for delivery
+                     * 获取Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+                     * @return FunctionName Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Cloud Function name for delivery
-                     * @param _functionName Cloud Function name for delivery
+                     * 设置Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+                     * @param _functionName Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -85,15 +97,19 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取Namespace
-                     * @return Namespace Namespace
+                     * 获取Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+                     * @return Namespace Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace
-                     * @param _namespace Namespace
+                     * 设置Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+                     * @param _namespace Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -106,15 +122,19 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Function version
-                     * @return Qualifier Function version
+                     * 获取Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+                     * @return Qualifier Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
                      * 
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Function version
-                     * @param _qualifier Function version
+                     * 设置Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+                     * @param _qualifier Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
                      * 
                      */
                     void SetQualifier(const std::string& _qualifier);
@@ -127,15 +147,15 @@ namespace TencentCloud
                     bool QualifierHasBeenSet() const;
 
                     /**
-                     * 获取Maximum waiting time for delivery. Unit: seconds
-                     * @return Timeout Maximum waiting time for delivery. Unit: seconds
+                     * 获取Maximum waiting time for delivery. Unit: seconds. Default: 60.
+                     * @return Timeout Maximum waiting time for delivery. Unit: seconds. Default: 60.
                      * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
-                     * 设置Maximum waiting time for delivery. Unit: seconds
-                     * @param _timeout Maximum waiting time for delivery. Unit: seconds
+                     * 设置Maximum waiting time for delivery. Unit: seconds. Default: 60.
+                     * @param _timeout Maximum waiting time for delivery. Unit: seconds. Default: 60.
                      * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
@@ -148,15 +168,15 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of messages to deliver
-                     * @return MaxMsgNum Maximum number of messages to deliver
+                     * 获取Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
+                     * @return MaxMsgNum Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
                      * 
                      */
                     uint64_t GetMaxMsgNum() const;
 
                     /**
-                     * 设置Maximum number of messages to deliver
-                     * @param _maxMsgNum Maximum number of messages to deliver
+                     * 设置Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
+                     * @param _maxMsgNum Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
                      * 
                      */
                     void SetMaxMsgNum(const uint64_t& _maxMsgNum);
@@ -171,37 +191,42 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Topic id belonging to the delivery rule
+                     * TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Cloud Function name for delivery
+                     * Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * Namespace
+                     * Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Function version
+                     * Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
 
                     /**
-                     * Maximum waiting time for delivery. Unit: seconds
+                     * Maximum waiting time for delivery. Unit: seconds. Default: 60.
                      */
                     uint64_t m_timeout;
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * Maximum number of messages to deliver
+                     * Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
                      */
                     uint64_t m_maxMsgNum;
                     bool m_maxMsgNumHasBeenSet;

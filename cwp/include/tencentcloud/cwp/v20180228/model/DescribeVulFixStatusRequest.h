@@ -105,6 +105,27 @@ namespace TencentCloud
                      */
                     bool QuuidHasBeenSet() const;
 
+                    /**
+                     * 获取Patch id
+                     * @return KbId Patch id
+                     * 
+                     */
+                    uint64_t GetKbId() const;
+
+                    /**
+                     * 设置Patch id
+                     * @param _kbId Patch id
+                     * 
+                     */
+                    void SetKbId(const uint64_t& _kbId);
+
+                    /**
+                     * 判断参数 KbId 是否已赋值
+                     * @return KbId 是否已赋值
+                     * 
+                     */
+                    bool KbIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +145,12 @@ namespace TencentCloud
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
+
+                    /**
+                     * Patch id
+                     */
+                    uint64_t m_kbId;
+                    bool m_kbIdHasBeenSet;
 
                 };
             }

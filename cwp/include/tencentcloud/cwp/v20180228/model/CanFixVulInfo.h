@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulId(const uint64_t& _vulId);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulName(const std::string& _vulName);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostList Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulInfoHostInfo> GetHostList() const;
 
                     /**
                      * 设置Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostList Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostList(const std::vector<VulInfoHostInfo>& _hostList);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixTag Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetFixTag() const;
 
                     /**
                      * 设置Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fixTag Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFixTag(const std::vector<std::string>& _fixTag);
@@ -148,15 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixTagHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
-                     * @return VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+                     * 获取Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
+                     * @return VulCategory Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
                      * 
                      */
                     uint64_t GetVulCategory() const;
 
                     /**
-                     * 设置Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
-                     * @param _vulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+                     * 设置Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
+                     * @param _vulCategory Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
                      * 
                      */
                     void SetVulCategory(const uint64_t& _vulCategory);
@@ -172,34 +156,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
                      * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
 
                     /**
                      * Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulInfoHostInfo> m_hostList;
                     bool m_hostListHasBeenSet;
 
                     /**
                      * Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_fixTag;
                     bool m_fixTagHasBeenSet;
 
                     /**
-                     * Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+                     * Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
                      */
                     uint64_t m_vulCategory;
                     bool m_vulCategoryHasBeenSet;

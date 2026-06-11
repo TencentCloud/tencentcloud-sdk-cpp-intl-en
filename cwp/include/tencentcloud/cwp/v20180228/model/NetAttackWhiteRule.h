@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _id Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Scope 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetScope() const;
 
                     /**
                      * 设置0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scope 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScope(const uint64_t& _scope);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDealOldEvents() const;
 
                     /**
                      * 设置Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDealOldEvents(const uint64_t& _dealOldEvents);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuids Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuids() const;
 
                     /**
                      * 设置Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuids Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuids(const std::string& _quuids);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcIP Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSrcIP() const;
 
                     /**
                      * 设置Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _srcIP Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSrcIP(const std::string& _srcIP);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -250,56 +218,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
                      * Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
                      * 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
                      * Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_dealOldEvents;
                     bool m_dealOldEventsHasBeenSet;
 
                     /**
                      * Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuids;
                     bool m_quuidsHasBeenSet;
 
                     /**
                      * Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_srcIP;
                     bool m_srcIPHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;

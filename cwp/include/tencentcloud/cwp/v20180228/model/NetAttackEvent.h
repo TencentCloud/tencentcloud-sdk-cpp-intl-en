@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cwp/v20180228/model/MachineExtraInfo.h>
+#include <tencentcloud/cwp/v20180228/model/IPAnalyse.h>
 
 
 namespace TencentCloud
@@ -217,18 +218,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -325,15 +322,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulDefenceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-                     * @return PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * 获取Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @return PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     uint64_t GetPayVersion() const;
 
                     /**
-                     * 设置Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-                     * @param _payVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * 设置Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @param _payVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     void SetPayVersion(const uint64_t& _payVersion);
@@ -408,6 +405,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool NewHasBeenSet() const;
 
+                    /**
+                     * 获取Whether application protection is enabled. 0: disabled, 1: enabled
+                     * @return RaspOpen Whether application protection is enabled. 0: disabled, 1: enabled
+                     * 
+                     */
+                    int64_t GetRaspOpen() const;
+
+                    /**
+                     * 设置Whether application protection is enabled. 0: disabled, 1: enabled
+                     * @param _raspOpen Whether application protection is enabled. 0: disabled, 1: enabled
+                     * 
+                     */
+                    void SetRaspOpen(const int64_t& _raspOpen);
+
+                    /**
+                     * 判断参数 RaspOpen 是否已赋值
+                     * @return RaspOpen 是否已赋值
+                     * 
+                     */
+                    bool RaspOpenHasBeenSet() const;
+
+                    /**
+                     * 获取ip analysis
+                     * @return IPAnalyse ip analysis
+                     * 
+                     */
+                    IPAnalyse GetIPAnalyse() const;
+
+                    /**
+                     * 设置ip analysis
+                     * @param _iPAnalyse ip analysis
+                     * 
+                     */
+                    void SetIPAnalyse(const IPAnalyse& _iPAnalyse);
+
+                    /**
+                     * 判断参数 IPAnalyse 是否已赋值
+                     * @return IPAnalyse 是否已赋值
+                     * 
+                     */
+                    bool IPAnalyseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -460,7 +499,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
@@ -490,7 +528,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vulDefenceStatusHasBeenSet;
 
                     /**
-                     * Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      */
                     uint64_t m_payVersion;
                     bool m_payVersionHasBeenSet;
@@ -512,6 +550,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_new;
                     bool m_newHasBeenSet;
+
+                    /**
+                     * Whether application protection is enabled. 0: disabled, 1: enabled
+                     */
+                    int64_t m_raspOpen;
+                    bool m_raspOpenHasBeenSet;
+
+                    /**
+                     * ip analysis
+                     */
+                    IPAnalyse m_iPAnalyse;
+                    bool m_iPAnalyseHasBeenSet;
 
                 };
             }

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Total Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Paths List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetWebLocationPath> GetPaths() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
                      * List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetWebLocationPath> m_paths;
                     bool m_pathsHasBeenSet;

@@ -1015,7 +1015,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeTawAreasOutcomeCallable DescribeTawAreasCallable(const Model::DescribeTawAreasRequest& request);
 
                 /**
-                 *This API is used to query instance information.
+                 *Query instance information.
                  * @param req DescribeTawInstancesRequest
                  * @return DescribeTawInstancesOutcome
                  */

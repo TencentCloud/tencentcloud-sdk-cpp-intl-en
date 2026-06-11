@@ -65,6 +65,8 @@
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/OthersPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
+#include <tencentcloud/cdn/v20180606/model/ParamFilter.h>
+#include <tencentcloud/cdn/v20180606/model/AutoGuard.h>
 
 
 namespace TencentCloud
@@ -1147,6 +1149,48 @@ After switching to global acceleration, configurations of the domain name will b
                      */
                     bool HttpsBillingHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the blocklist parameter.
+                     * @return ParamFilter Specifies the blocklist parameter.
+                     * 
+                     */
+                    ParamFilter GetParamFilter() const;
+
+                    /**
+                     * 设置Specifies the blocklist parameter.
+                     * @param _paramFilter Specifies the blocklist parameter.
+                     * 
+                     */
+                    void SetParamFilter(const ParamFilter& _paramFilter);
+
+                    /**
+                     * 判断参数 ParamFilter 是否已赋值
+                     * @return ParamFilter 是否已赋值
+                     * 
+                     */
+                    bool ParamFilterHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoGuard 
+                     * 
+                     */
+                    AutoGuard GetAutoGuard() const;
+
+                    /**
+                     * 设置
+                     * @param _autoGuard 
+                     * 
+                     */
+                    void SetAutoGuard(const AutoGuard& _autoGuard);
+
+                    /**
+                     * 判断参数 AutoGuard 是否已赋值
+                     * @return AutoGuard 是否已赋值
+                     * 
+                     */
+                    bool AutoGuardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1450,6 +1494,18 @@ After switching to global acceleration, configurations of the domain name will b
                      */
                     HttpsBilling m_httpsBilling;
                     bool m_httpsBillingHasBeenSet;
+
+                    /**
+                     * Specifies the blocklist parameter.
+                     */
+                    ParamFilter m_paramFilter;
+                    bool m_paramFilterHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AutoGuard m_autoGuard;
+                    bool m_autoGuardHasBeenSet;
 
                 };
             }

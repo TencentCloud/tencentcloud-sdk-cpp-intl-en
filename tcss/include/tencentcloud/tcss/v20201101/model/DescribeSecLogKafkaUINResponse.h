@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstUIN Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDstUIN() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DstUINHasBeenSet() const;
 
                     /**
-                     * 获取Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Authorization status
+                     * @return Status Authorization status
                      * 
                      */
                     bool GetStatus() const;
@@ -79,14 +75,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dstUIN;
                     bool m_dstUINHasBeenSet;
 
                     /**
-                     * Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Authorization status
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;

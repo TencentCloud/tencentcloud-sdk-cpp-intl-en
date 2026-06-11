@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/DataTransformResouceInfo.h>
+#include <tencentcloud/cls/v20201016/model/DataTransformSqlDataSource.h>
+#include <tencentcloud/cls/v20201016/model/EnvInfo.h>
 
 
 namespace TencentCloud
@@ -111,15 +113,15 @@ namespace TencentCloud
                     bool EnableFlagHasBeenSet() const;
 
                     /**
-                     * 获取Task type. Valid values: 1 (DSL) and 2 (SQL).
-                     * @return Type Task type. Valid values: 1 (DSL) and 2 (SQL).
+                     * 获取Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
+                     * @return Type Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Task type. Valid values: 1 (DSL) and 2 (SQL).
-                     * @param _type Task type. Valid values: 1 (DSL) and 2 (SQL).
+                     * 设置Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
+                     * @param _type Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -174,15 +176,19 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time
-                     * @return CreateTime Task creation time
+                     * 获取Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @return CreateTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Task creation time
-                     * @param _createTime Task creation time
+                     * 设置Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @param _createTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -195,15 +201,19 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time
-                     * @return UpdateTime Last modified time
+                     * 获取Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @return UpdateTime Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time
-                     * @param _updateTime Last modified time
+                     * 设置Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @param _updateTime Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -216,15 +226,19 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last enabled time. If you need to rebuild a cluster, modify this time.
-                     * @return LastEnableTime Last enabled time. If you need to rebuild a cluster, modify this time.
+                     * 获取Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @return LastEnableTime Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetLastEnableTime() const;
 
                     /**
-                     * 设置Last enabled time. If you need to rebuild a cluster, modify this time.
-                     * @param _lastEnableTime Last enabled time. If you need to rebuild a cluster, modify this time.
+                     * 设置Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @param _lastEnableTime Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetLastEnableTime(const std::string& _lastEnableTime);
@@ -300,15 +314,15 @@ namespace TencentCloud
                     bool DstResourcesHasBeenSet() const;
 
                     /**
-                     * 获取Logical function for data processing
-                     * @return EtlContent Logical function for data processing
+                     * 获取Processing logic function.
+                     * @return EtlContent Processing logic function.
                      * 
                      */
                     std::string GetEtlContent() const;
 
                     /**
-                     * 设置Logical function for data processing
-                     * @param _etlContent Logical function for data processing
+                     * 设置Processing logic function.
+                     * @param _etlContent Processing logic function.
                      * 
                      */
                     void SetEtlContent(const std::string& _etlContent);
@@ -319,6 +333,249 @@ namespace TencentCloud
                      * 
                      */
                     bool EtlContentHasBeenSet() const;
+
+                    /**
+                     * 获取Fallback Topic ID
+                     * @return BackupTopicID Fallback Topic ID
+                     * 
+                     */
+                    std::string GetBackupTopicID() const;
+
+                    /**
+                     * 设置Fallback Topic ID
+                     * @param _backupTopicID Fallback Topic ID
+                     * 
+                     */
+                    void SetBackupTopicID(const std::string& _backupTopicID);
+
+                    /**
+                     * 判断参数 BackupTopicID 是否已赋值
+                     * @return BackupTopicID 是否已赋值
+                     * 
+                     */
+                    bool BackupTopicIDHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to discard log data after the limit is exceeded
+                     * @return BackupGiveUpData Whether to discard log data after the limit is exceeded
+                     * 
+                     */
+                    bool GetBackupGiveUpData() const;
+
+                    /**
+                     * 设置Whether to discard log data after the limit is exceeded
+                     * @param _backupGiveUpData Whether to discard log data after the limit is exceeded
+                     * 
+                     */
+                    void SetBackupGiveUpData(const bool& _backupGiveUpData);
+
+                    /**
+                     * 判断参数 BackupGiveUpData 是否已赋值
+                     * @return BackupGiveUpData 是否已赋值
+                     * 
+                     */
+                    bool BackupGiveUpDataHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 
+                     */
+                    uint64_t GetHasServicesLog() const;
+
+                    /**
+                     * 设置Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * @param _hasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 
+                     */
+                    void SetHasServicesLog(const uint64_t& _hasServicesLog);
+
+                    /**
+                     * 判断参数 HasServicesLog 是否已赋值
+                     * @return HasServicesLog 是否已赋值
+                     * 
+                     */
+                    bool HasServicesLogHasBeenSet() const;
+
+                    /**
+                     * 获取Number of the target log topics of a task.
+                     * @return TaskDstCount Number of the target log topics of a task.
+                     * 
+                     */
+                    uint64_t GetTaskDstCount() const;
+
+                    /**
+                     * 设置Number of the target log topics of a task.
+                     * @param _taskDstCount Number of the target log topics of a task.
+                     * 
+                     */
+                    void SetTaskDstCount(const uint64_t& _taskDstCount);
+
+                    /**
+                     * 判断参数 TaskDstCount 是否已赋值
+                     * @return TaskDstCount 是否已赋值
+                     * 
+                     */
+                    bool TaskDstCountHasBeenSet() const;
+
+                    /**
+                     * 获取Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+                     * @return DataTransformType Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+                     * 
+                     */
+                    uint64_t GetDataTransformType() const;
+
+                    /**
+                     * 设置Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+                     * @param _dataTransformType Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+                     * 
+                     */
+                    void SetDataTransformType(const uint64_t& _dataTransformType);
+
+                    /**
+                     * 判断参数 DataTransformType 是否已赋值
+                     * @return DataTransformType 是否已赋值
+                     * 
+                     */
+                    bool DataTransformTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * @return KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * 
+                     */
+                    uint64_t GetKeepFailureLog() const;
+
+                    /**
+                     * 设置Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * @param _keepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * 
+                     */
+                    void SetKeepFailureLog(const uint64_t& _keepFailureLog);
+
+                    /**
+                     * 判断参数 KeepFailureLog 是否已赋值
+                     * @return KeepFailureLog 是否已赋值
+                     * 
+                     */
+                    bool KeepFailureLogHasBeenSet() const;
+
+                    /**
+                     * 获取Field name of a failed log.
+                     * @return FailureLogKey Field name of a failed log.
+                     * 
+                     */
+                    std::string GetFailureLogKey() const;
+
+                    /**
+                     * 设置Field name of a failed log.
+                     * @param _failureLogKey Field name of a failed log.
+                     * 
+                     */
+                    void SetFailureLogKey(const std::string& _failureLogKey);
+
+                    /**
+                     * 判断参数 FailureLogKey 是否已赋值
+                     * @return FailureLogKey 是否已赋值
+                     * 
+                     */
+                    bool FailureLogKeyHasBeenSet() const;
+
+                    /**
+                     * 获取Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+                     * @return ProcessFromTimestamp Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+                     * 
+                     */
+                    uint64_t GetProcessFromTimestamp() const;
+
+                    /**
+                     * 设置Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+                     * @param _processFromTimestamp Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+                     * 
+                     */
+                    void SetProcessFromTimestamp(const uint64_t& _processFromTimestamp);
+
+                    /**
+                     * 判断参数 ProcessFromTimestamp 是否已赋值
+                     * @return ProcessFromTimestamp 是否已赋值
+                     * 
+                     */
+                    bool ProcessFromTimestampHasBeenSet() const;
+
+                    /**
+                     * 获取Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+                     * @return ProcessToTimestamp Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+                     * 
+                     */
+                    uint64_t GetProcessToTimestamp() const;
+
+                    /**
+                     * 设置Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+                     * @param _processToTimestamp Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+                     * 
+                     */
+                    void SetProcessToTimestamp(const uint64_t& _processToTimestamp);
+
+                    /**
+                     * 判断参数 ProcessToTimestamp 是否已赋值
+                     * @return ProcessToTimestamp 是否已赋值
+                     * 
+                     */
+                    bool ProcessToTimestampHasBeenSet() const;
+
+                    /**
+                     * 获取sql data source information
+                     * @return DataTransformSqlDataSources sql data source information
+                     * 
+                     */
+                    std::vector<DataTransformSqlDataSource> GetDataTransformSqlDataSources() const;
+
+                    /**
+                     * 设置sql data source information
+                     * @param _dataTransformSqlDataSources sql data source information
+                     * 
+                     */
+                    void SetDataTransformSqlDataSources(const std::vector<DataTransformSqlDataSource>& _dataTransformSqlDataSources);
+
+                    /**
+                     * 判断参数 DataTransformSqlDataSources 是否已赋值
+                     * @return DataTransformSqlDataSources 是否已赋值
+                     * 
+                     */
+                    bool DataTransformSqlDataSourcesHasBeenSet() const;
+
+                    /**
+                     * 获取Environment variable.
+                     * @return EnvInfos Environment variable.
+                     * 
+                     */
+                    std::vector<EnvInfo> GetEnvInfos() const;
+
+                    /**
+                     * 设置Environment variable.
+                     * @param _envInfos Environment variable.
+                     * 
+                     */
+                    void SetEnvInfos(const std::vector<EnvInfo>& _envInfos);
+
+                    /**
+                     * 判断参数 EnvInfos 是否已赋值
+                     * @return EnvInfos 是否已赋值
+                     * 
+                     */
+                    bool EnvInfosHasBeenSet() const;
 
                 private:
 
@@ -341,7 +598,7 @@ namespace TencentCloud
                     bool m_enableFlagHasBeenSet;
 
                     /**
-                     * Task type. Valid values: 1 (DSL) and 2 (SQL).
+                     * Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
@@ -359,19 +616,22 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task creation time
+                     * Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time
+                     * Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Last enabled time. If you need to rebuild a cluster, modify this time.
+                     * Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_lastEnableTime;
                     bool m_lastEnableTimeHasBeenSet;
@@ -395,10 +655,79 @@ namespace TencentCloud
                     bool m_dstResourcesHasBeenSet;
 
                     /**
-                     * Logical function for data processing
+                     * Processing logic function.
                      */
                     std::string m_etlContent;
                     bool m_etlContentHasBeenSet;
+
+                    /**
+                     * Fallback Topic ID
+                     */
+                    std::string m_backupTopicID;
+                    bool m_backupTopicIDHasBeenSet;
+
+                    /**
+                     * Whether to discard log data after the limit is exceeded
+                     */
+                    bool m_backupGiveUpData;
+                    bool m_backupGiveUpDataHasBeenSet;
+
+                    /**
+                     * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     */
+                    uint64_t m_hasServicesLog;
+                    bool m_hasServicesLogHasBeenSet;
+
+                    /**
+                     * Number of the target log topics of a task.
+                     */
+                    uint64_t m_taskDstCount;
+                    bool m_taskDstCountHasBeenSet;
+
+                    /**
+                     * Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+                     */
+                    uint64_t m_dataTransformType;
+                    bool m_dataTransformTypeHasBeenSet;
+
+                    /**
+                     * Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     */
+                    uint64_t m_keepFailureLog;
+                    bool m_keepFailureLogHasBeenSet;
+
+                    /**
+                     * Field name of a failed log.
+                     */
+                    std::string m_failureLogKey;
+                    bool m_failureLogKeyHasBeenSet;
+
+                    /**
+                     * Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+                     */
+                    uint64_t m_processFromTimestamp;
+                    bool m_processFromTimestampHasBeenSet;
+
+                    /**
+                     * Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+                     */
+                    uint64_t m_processToTimestamp;
+                    bool m_processToTimestampHasBeenSet;
+
+                    /**
+                     * sql data source information
+                     */
+                    std::vector<DataTransformSqlDataSource> m_dataTransformSqlDataSources;
+                    bool m_dataTransformSqlDataSourcesHasBeenSet;
+
+                    /**
+                     * Environment variable.
+                     */
+                    std::vector<EnvInfo> m_envInfos;
+                    bool m_envInfosHasBeenSet;
 
                 };
             }

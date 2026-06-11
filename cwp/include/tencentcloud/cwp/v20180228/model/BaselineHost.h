@@ -70,18 +70,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -95,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostTag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostTag() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostTag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostTag(const std::string& _hostTag);
@@ -120,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -145,18 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetWanIp() const;
 
                     /**
                      * 设置Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _wanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWanIp(const std::string& _wanIp);
@@ -170,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -203,35 +183,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostTag;
                     bool m_hostTagHasBeenSet;
 
                     /**
                      * Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
                      * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_wanIp;
                     bool m_wanIpHasBeenSet;
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

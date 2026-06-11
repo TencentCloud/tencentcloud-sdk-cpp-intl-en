@@ -65,75 +65,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
-                     * @return Filters Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+                     * 获取Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
+                     * @return Filters Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
-                     * @param _filters Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+                     * 设置Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
+                     * @param _filters Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -196,22 +136,7 @@ namespace TencentCloud
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+                     * Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;

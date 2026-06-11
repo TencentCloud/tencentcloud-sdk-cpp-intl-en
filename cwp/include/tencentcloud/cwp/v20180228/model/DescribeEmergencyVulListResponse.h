@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of vulnerabilities
+                     * @return List List of vulnerabilities
                      * 
                      */
                     std::vector<EmergencyVul> GetList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -77,10 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExistsRisk Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取is there a risk?
+                     * @return ExistsRisk is there a risk?
                      * 
                      */
                     bool GetExistsRisk() const;
@@ -95,22 +89,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of vulnerabilities
                      */
                     std::vector<EmergencyVul> m_list;
                     bool m_listHasBeenSet;
 
                     /**
                      * Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * is there a risk?
                      */
                     bool m_existsRisk;
                     bool m_existsRiskHasBeenSet;

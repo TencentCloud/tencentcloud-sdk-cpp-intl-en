@@ -44,31 +44,67 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取- shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+                     * 获取-shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
-                     * @return Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
+                     * @return Filters -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置- shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+                     * 设置-shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
-                     * @param _filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
+                     * @param _filters -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -122,14 +158,44 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+                     * @return PreciseSearch Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+                     * 
+                     */
+                    uint64_t GetPreciseSearch() const;
+
+                    /**
+                     * 设置Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+                     * @param _preciseSearch Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+                     * 
+                     */
+                    void SetPreciseSearch(const uint64_t& _preciseSearch);
+
+                    /**
+                     * 判断参数 PreciseSearch 是否已赋值
+                     * @return PreciseSearch 是否已赋值
+                     * 
+                     */
+                    bool PreciseSearchHasBeenSet() const;
+
                 private:
 
                     /**
-                     * - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+                     * -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -145,6 +211,12 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+                     */
+                    uint64_t m_preciseSearch;
+                    bool m_preciseSearchHasBeenSet;
 
                 };
             }

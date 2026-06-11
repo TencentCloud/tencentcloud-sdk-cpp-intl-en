@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image id
+                     * @return ImageId Image id
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Image id
+                     * @param _imageId Image id
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistryType Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取repository type
+                     * @return RegistryType repository type
                      * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
-                     * 设置Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _registryType Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置repository type
+                     * @param _registryType repository type
                      * 
                      */
                     void SetRegistryType(const std::string& _registryType);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageRepoAddress Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageRepoAddress() const;
 
                     /**
                      * 设置Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _imageRepoAddress Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageRepoAddress(const std::string& _imageRepoAddress);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageRepoAddressHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取repository name
+                     * @return ImageName repository name
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置repository name
+                     * @param _imageName repository name
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageTag() const;
 
                     /**
                      * 设置Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _imageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageTag(const std::string& _imageTag);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageTagHasBeenSet() const;
 
                     /**
-                     * 获取Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image scan status
+                     * @return ScanStatus Image scan status
                      * 
                      */
                     std::string GetScanStatus() const;
 
                     /**
-                     * 设置Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Image scan status
+                     * @param _scanStatus Image scan status
                      * 
                      */
                     void SetScanStatus(const std::string& _scanStatus);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanStatusHasBeenSet() const;
 
                     /**
-                     * 获取CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CveProgress CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mirror cve scan progress
+                     * @return CveProgress Mirror cve scan progress
                      * 
                      */
                     uint64_t GetCveProgress() const;
 
                     /**
-                     * 设置CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cveProgress CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mirror cve scan progress
+                     * @param _cveProgress Mirror cve scan progress
                      * 
                      */
                     void SetCveProgress(const uint64_t& _cveProgress);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CveProgressHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskProgress Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mirror sensitivity scan progress
+                     * @return RiskProgress Mirror sensitivity scan progress
                      * 
                      */
                     uint64_t GetRiskProgress() const;
 
                     /**
-                     * 设置Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskProgress Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Mirror sensitivity scan progress
+                     * @param _riskProgress Mirror sensitivity scan progress
                      * 
                      */
                     void SetRiskProgress(const uint64_t& _riskProgress);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskProgressHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirusProgress Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan mirror scan progress
+                     * @return VirusProgress Trojan mirror scan progress
                      * 
                      */
                     uint64_t GetVirusProgress() const;
 
                     /**
-                     * 设置Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _virusProgress Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Trojan mirror scan progress
+                     * @param _virusProgress Trojan mirror scan progress
                      * 
                      */
                     void SetVirusProgress(const uint64_t& _virusProgress);
@@ -349,85 +301,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image id
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * repository type
                      */
                     std::string m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
                      * Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageRepoAddress;
                     bool m_imageRepoAddressHasBeenSet;
 
                     /**
-                     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
                      * Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * repository name
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
                      * Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageTag;
                     bool m_imageTagHasBeenSet;
 
                     /**
-                     * Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image scan status
                      */
                     std::string m_scanStatus;
                     bool m_scanStatusHasBeenSet;
 
                     /**
-                     * CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mirror cve scan progress
                      */
                     uint64_t m_cveProgress;
                     bool m_cveProgressHasBeenSet;
 
                     /**
-                     * Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mirror sensitivity scan progress
                      */
                     uint64_t m_riskProgress;
                     bool m_riskProgressHasBeenSet;
 
                     /**
-                     * Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan mirror scan progress
                      */
                     uint64_t m_virusProgress;
                     bool m_virusProgressHasBeenSet;

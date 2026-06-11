@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node type. 1: process, 2: network, 3: file, 4: SSH.
+                     * @return Type Node type. 1: process, 2: network, 3: file, 4: SSH.
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node type. 1: process, 2: network, 3: file, 4: SSH.
+                     * @param _type Node type. 1: process, 2: network, 3: file, 4: SSH.
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Time Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time used by each node type, in the format of 2022-11-29 00:00:00.
+                     * @return Time Time used by each node type, in the format of 2022-11-29 00:00:00.
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _time Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time used by each node type, in the format of 2022-11-29 00:00:00.
+                     * @param _time Time used by each node type, in the format of 2022-11-29 00:00:00.
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlarmInfo Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Alarm information.
+                     * @return AlarmInfo Alarm information.
                      * 
                      */
                     std::vector<AlarmInfo> GetAlarmInfo() const;
 
                     /**
-                     * 设置Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alarmInfo Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Alarm information.
+                     * @param _alarmInfo Alarm information.
                      * 
                      */
                     void SetAlarmInfo(const std::vector<AlarmInfo>& _alarmInfo);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlarmInfoHasBeenSet() const;
 
                     /**
-                     * 获取Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcName Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process name. This parameter takes effect when this node is a process.
+                     * @return ProcName Process name. This parameter takes effect when this node is a process.
                      * 
                      */
                     std::string GetProcName() const;
 
                     /**
-                     * 设置Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _procName Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process name. This parameter takes effect when this node is a process.
+                     * @param _procName Process name. This parameter takes effect when this node is a process.
                      * 
                      */
                     void SetProcName(const std::string& _procName);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcNameHasBeenSet() const;
 
                     /**
-                     * 获取Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CmdLine Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Command line. This parameter takes effect when this node is a process.
+                     * @return CmdLine Command line. This parameter takes effect when this node is a process.
                      * 
                      */
                     std::string GetCmdLine() const;
 
                     /**
-                     * 设置Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cmdLine Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Command line. This parameter takes effect when this node is a process.
+                     * @param _cmdLine Command line. This parameter takes effect when this node is a process.
                      * 
                      */
                     void SetCmdLine(const std::string& _cmdLine);
@@ -173,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CmdLineHasBeenSet() const;
 
                     /**
-                     * 获取Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Pid Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process ID. This parameter takes effect when this node is a process.
+                     * @return Pid Process ID. This parameter takes effect when this node is a process.
                      * 
                      */
                     std::string GetPid() const;
 
                     /**
-                     * 设置Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pid Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process ID. This parameter takes effect when this node is a process.
+                     * @param _pid Process ID. This parameter takes effect when this node is a process.
                      * 
                      */
                     void SetPid(const std::string& _pid);
@@ -198,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PidHasBeenSet() const;
 
                     /**
-                     * 获取File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMd5 File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File MD5. This parameter takes effect when this node is a file.
+                     * @return FileMd5 File MD5. This parameter takes effect when this node is a file.
                      * 
                      */
                     std::string GetFileMd5() const;
 
                     /**
-                     * 设置File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMd5 File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File MD5. This parameter takes effect when this node is a file.
+                     * @param _fileMd5 File MD5. This parameter takes effect when this node is a file.
                      * 
                      */
                     void SetFileMd5(const std::string& _fileMd5);
@@ -223,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileMd5HasBeenSet() const;
 
                     /**
-                     * 获取Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileContent Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File write content. This parameter takes effect when this node is a file.
+                     * @return FileContent File write content. This parameter takes effect when this node is a file.
                      * 
                      */
                     std::string GetFileContent() const;
 
                     /**
-                     * 设置Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileContent Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File write content. This parameter takes effect when this node is a file.
+                     * @param _fileContent File write content. This parameter takes effect when this node is a file.
                      * 
                      */
                     void SetFileContent(const std::string& _fileContent);
@@ -248,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileContentHasBeenSet() const;
 
                     /**
-                     * 获取File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FilePath File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File path. This parameter takes effect when this node is a file.
+                     * @return FilePath File path. This parameter takes effect when this node is a file.
                      * 
                      */
                     std::string GetFilePath() const;
 
                     /**
-                     * 设置File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _filePath File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File path. This parameter takes effect when this node is a file.
+                     * @param _filePath File path. This parameter takes effect when this node is a file.
                      * 
                      */
                     void SetFilePath(const std::string& _filePath);
@@ -273,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilePathHasBeenSet() const;
 
                     /**
-                     * 获取File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileCreateTime File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File creation time. This parameter takes effect when this node is a file.
+                     * @return FileCreateTime File creation time. This parameter takes effect when this node is a file.
                      * 
                      */
                     std::string GetFileCreateTime() const;
 
                     /**
-                     * 设置File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileCreateTime File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File creation time. This parameter takes effect when this node is a file.
+                     * @param _fileCreateTime File creation time. This parameter takes effect when this node is a file.
                      * 
                      */
                     void SetFileCreateTime(const std::string& _fileCreateTime);
@@ -298,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Request destination address. This parameter takes effect when this node is a network.
+                     * @return Address Request destination address. This parameter takes effect when this node is a network.
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Request destination address. This parameter takes effect when this node is a network.
+                     * @param _address Request destination address. This parameter takes effect when this node is a network.
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -323,19 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DstPort Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Target port. This parameter takes effect when this node is a network.
+                     * @return DstPort Target port. This parameter takes effect when this node is a network.
                      * 
                      */
                     uint64_t GetDstPort() const;
 
                     /**
-                     * 设置Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dstPort Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Target port. This parameter takes effect when this node is a network.
+                     * @param _dstPort Target port. This parameter takes effect when this node is a network.
                      * 
                      */
                     void SetDstPort(const uint64_t& _dstPort);
@@ -348,19 +300,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DstPortHasBeenSet() const;
 
                     /**
-                     * 获取Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SrcIP Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Login source IP address. This parameter takes effect when this node is ssh.
+                     * @return SrcIP Login source IP address. This parameter takes effect when this node is ssh.
                      * 
                      */
                     std::string GetSrcIP() const;
 
                     /**
-                     * 设置Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _srcIP Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Login source IP address. This parameter takes effect when this node is ssh.
+                     * @param _srcIP Login source IP address. This parameter takes effect when this node is ssh.
                      * 
                      */
                     void SetSrcIP(const std::string& _srcIP);
@@ -373,19 +321,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SrcIPHasBeenSet() const;
 
                     /**
-                     * 获取Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return User Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Login username and user group. This parameter takes effect when this node is ssh.
+                     * @return User Login username and user group. This parameter takes effect when this node is ssh.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _user Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Login username and user group. This parameter takes effect when this node is ssh.
+                     * @param _user Login username and user group. This parameter takes effect when this node is ssh.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -398,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulName Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability name. This parameter takes effect when this node is a vulnerability.
+                     * @return VulName Vulnerability name. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     std::string GetVulName() const;
 
                     /**
-                     * 设置Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulName Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability name. This parameter takes effect when this node is a vulnerability.
+                     * @param _vulName Vulnerability name. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     void SetVulName(const std::string& _vulName);
@@ -423,19 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulTime Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+                     * @return VulTime Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     std::string GetVulTime() const;
 
                     /**
-                     * 设置Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulTime Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+                     * @param _vulTime Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     void SetVulTime(const std::string& _vulTime);
@@ -448,19 +384,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulTimeHasBeenSet() const;
 
                     /**
-                     * 获取HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpContent HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取HTTP request content. This parameter takes effect when this node is a vulnerability.
+                     * @return HttpContent HTTP request content. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     std::string GetHttpContent() const;
 
                     /**
-                     * 设置HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _httpContent HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置HTTP request content. This parameter takes effect when this node is a vulnerability.
+                     * @param _httpContent HTTP request content. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     void SetHttpContent(const std::string& _httpContent);
@@ -473,19 +405,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpContentHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulSrcIP Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+                     * @return VulSrcIP Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     std::string GetVulSrcIP() const;
 
                     /**
-                     * 设置Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulSrcIP Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+                     * @param _vulSrcIP Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
                      * 
                      */
                     void SetVulSrcIP(const std::string& _vulSrcIP);
@@ -498,19 +426,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulSrcIPHasBeenSet() const;
 
                     /**
-                     * 获取Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VertexId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node ID.
+                     * @return VertexId Node ID.
                      * 
                      */
                     std::string GetVertexId() const;
 
                     /**
-                     * 设置Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vertexId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node ID.
+                     * @param _vertexId Node ID.
                      * 
                      */
                     void SetVertexId(const std::string& _vertexId);
@@ -525,134 +449,115 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node type. 1: process, 2: network, 3: file, 4: SSH.
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time used by each node type, in the format of 2022-11-29 00:00:00.
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Alarm information.
                      */
                     std::vector<AlarmInfo> m_alarmInfo;
                     bool m_alarmInfoHasBeenSet;
 
                     /**
-                     * Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process name. This parameter takes effect when this node is a process.
                      */
                     std::string m_procName;
                     bool m_procNameHasBeenSet;
 
                     /**
-                     * Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Command line. This parameter takes effect when this node is a process.
                      */
                     std::string m_cmdLine;
                     bool m_cmdLineHasBeenSet;
 
                     /**
-                     * Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process ID. This parameter takes effect when this node is a process.
                      */
                     std::string m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
-                     * File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File MD5. This parameter takes effect when this node is a file.
                      */
                     std::string m_fileMd5;
                     bool m_fileMd5HasBeenSet;
 
                     /**
-                     * Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File write content. This parameter takes effect when this node is a file.
                      */
                     std::string m_fileContent;
                     bool m_fileContentHasBeenSet;
 
                     /**
-                     * File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File path. This parameter takes effect when this node is a file.
                      */
                     std::string m_filePath;
                     bool m_filePathHasBeenSet;
 
                     /**
-                     * File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File creation time. This parameter takes effect when this node is a file.
                      */
                     std::string m_fileCreateTime;
                     bool m_fileCreateTimeHasBeenSet;
 
                     /**
-                     * Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Request destination address. This parameter takes effect when this node is a network.
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Target port. This parameter takes effect when this node is a network.
                      */
                     uint64_t m_dstPort;
                     bool m_dstPortHasBeenSet;
 
                     /**
-                     * Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Login source IP address. This parameter takes effect when this node is ssh.
                      */
                     std::string m_srcIP;
                     bool m_srcIPHasBeenSet;
 
                     /**
-                     * Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Login username and user group. This parameter takes effect when this node is ssh.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability name. This parameter takes effect when this node is a vulnerability.
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
 
                     /**
-                     * Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
                      */
                     std::string m_vulTime;
                     bool m_vulTimeHasBeenSet;
 
                     /**
-                     * HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * HTTP request content. This parameter takes effect when this node is a vulnerability.
                      */
                     std::string m_httpContent;
                     bool m_httpContentHasBeenSet;
 
                     /**
-                     * Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
                      */
                     std::string m_vulSrcIP;
                     bool m_vulSrcIPHasBeenSet;
 
                     /**
-                     * Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node ID.
                      */
                     std::string m_vertexId;
                     bool m_vertexIdHasBeenSet;

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ScreenAttackHotspot> GetList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ScreenAttackHotspot> m_list;
                     bool m_listHasBeenSet;

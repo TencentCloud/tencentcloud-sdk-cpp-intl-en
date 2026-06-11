@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pro Edition start time, not null during supplement purchase
+                     * @return StartTime Pro Edition start time, not null during supplement purchase
                      * 
                      */
                     std::string GetStartTime() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pro Edition end time, not null when supplement purchase is made
+                     * @return EndTime Pro Edition end time, not null when supplement purchase is made
                      * 
                      */
                     std::string GetEndTime() const;
@@ -105,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceId Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResourceId() const;
@@ -156,15 +150,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pro Edition start time, not null during supplement purchase
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pro Edition end time, not null when supplement purchase is made
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -183,7 +175,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

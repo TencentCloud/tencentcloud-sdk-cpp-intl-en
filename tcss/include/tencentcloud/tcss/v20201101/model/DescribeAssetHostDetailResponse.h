@@ -409,6 +409,62 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ClusterID 
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterName 
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ClusterAccessedStatus 
+                     * 
+                     */
+                    std::string GetClusterAccessedStatus() const;
+
+                    /**
+                     * 判断参数 ClusterAccessedStatus 是否已赋值
+                     * @return ClusterAccessedStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterAccessedStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Asset synchronization time.
+                     * @return AssetSyncTime Asset synchronization time.
+                     * 
+                     */
+                    std::string GetAssetSyncTime() const;
+
+                    /**
+                     * 判断参数 AssetSyncTime 是否已赋值
+                     * @return AssetSyncTime 是否已赋值
+                     * 
+                     */
+                    bool AssetSyncTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -566,6 +622,30 @@ namespace TencentCloud
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterAccessedStatus;
+                    bool m_clusterAccessedStatusHasBeenSet;
+
+                    /**
+                     * Asset synchronization time.
+                     */
+                    std::string m_assetSyncTime;
+                    bool m_assetSyncTimeHasBeenSet;
 
                 };
             }

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/Tag.h>
+#include <tencentcloud/cls/v20201016/model/TopicExtendInfo.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取<p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+                     * @return LogsetId <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置<p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+                     * @param _logsetId <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -65,15 +66,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name
-                     * @return TopicName Log topic name
+                     * 获取<p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+                     * @return TopicName <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Log topic name
-                     * @param _topicName Log topic name
+                     * 设置<p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+                     * @param _topicName <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -86,15 +87,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of log topic partitions. Default value: 1. Maximum value: 10
-                     * @return PartitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
+                     * 获取<p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+                     * @return PartitionCount <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
                      * 
                      */
                     int64_t GetPartitionCount() const;
 
                     /**
-                     * 设置Number of log topic partitions. Default value: 1. Maximum value: 10
-                     * @param _partitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
+                     * 设置<p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+                     * @param _partitionCount <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
                      * 
                      */
                     void SetPartitionCount(const int64_t& _partitionCount);
@@ -107,15 +108,15 @@ namespace TencentCloud
                     bool PartitionCountHasBeenSet() const;
 
                     /**
-                     * 获取Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
-                     * @return Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+                     * 获取<p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+                     * @return Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
-                     * @param _tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+                     * 设置<p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+                     * @param _tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -128,15 +129,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable automatic split. Default value: true
-                     * @return AutoSplit Whether to enable automatic split. Default value: true
+                     * 获取<p>Whether to enable auto-split, true by default</p>
+                     * @return AutoSplit <p>Whether to enable auto-split, true by default</p>
                      * 
                      */
                     bool GetAutoSplit() const;
 
                     /**
-                     * 设置Whether to enable automatic split. Default value: true
-                     * @param _autoSplit Whether to enable automatic split. Default value: true
+                     * 设置<p>Whether to enable auto-split, true by default</p>
+                     * @param _autoSplit <p>Whether to enable auto-split, true by default</p>
                      * 
                      */
                     void SetAutoSplit(const bool& _autoSplit);
@@ -149,15 +150,15 @@ namespace TencentCloud
                     bool AutoSplitHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
-                     * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+                     * 获取<p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+                     * @return MaxSplitPartitions <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
                      * 
                      */
                     int64_t GetMaxSplitPartitions() const;
 
                     /**
-                     * 设置Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
-                     * @param _maxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+                     * 设置<p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+                     * @param _maxSplitPartitions <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
                      * 
                      */
                     void SetMaxSplitPartitions(const int64_t& _maxSplitPartitions);
@@ -170,15 +171,15 @@ namespace TencentCloud
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-                     * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * 获取<p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+                     * @return StorageType <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-                     * @param _storageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * 设置<p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+                     * @param _storageType <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -191,15 +192,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
-                     * @return Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+                     * 获取<p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+                     * @return Period <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
-                     * @param _period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+                     * 设置<p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+                     * @param _period <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -212,15 +213,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Log topic description
-                     * @return Describes Log topic description
+                     * 获取<p>Topic description</p>
+                     * @return Describes <p>Topic description</p>
                      * 
                      */
                     std::string GetDescribes() const;
 
                     /**
-                     * 设置Log topic description
-                     * @param _describes Log topic description
+                     * 设置<p>Topic description</p>
+                     * @param _describes <p>Topic description</p>
                      * 
                      */
                     void SetDescribes(const std::string& _describes);
@@ -233,15 +234,15 @@ namespace TencentCloud
                     bool DescribesHasBeenSet() const;
 
                     /**
-                     * 获取0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
-                     * @return HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+                     * 获取<p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+                     * @return HotPeriod <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     uint64_t GetHotPeriod() const;
 
                     /**
-                     * 设置0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
-                     * @param _hotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+                     * 设置<p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+                     * @param _hotPeriod <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     void SetHotPeriod(const uint64_t& _hotPeriod);
@@ -254,15 +255,78 @@ namespace TencentCloud
                     bool HotPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
-                     * @return IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * 获取<p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+                     * @return Encryption <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+                     * 
+                     */
+                    uint64_t GetEncryption() const;
+
+                    /**
+                     * 设置<p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+                     * @param _encryption <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+                     * 
+                     */
+                    void SetEncryption(const uint64_t& _encryption);
+
+                    /**
+                     * 判断参数 Encryption 是否已赋值
+                     * @return Encryption 是否已赋值
+                     * 
+                     */
+                    bool EncryptionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+                     * @return BizType <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+                     * 
+                     */
+                    uint64_t GetBizType() const;
+
+                    /**
+                     * 设置<p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+                     * @param _bizType <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+                     * 
+                     */
+                    void SetBizType(const uint64_t& _bizType);
+
+                    /**
+                     * 判断参数 BizType 是否已赋值
+                     * @return BizType 是否已赋值
+                     * 
+                     */
+                    bool BizTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+                     * @return TopicId <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+                     * 
+                     */
+                    std::string GetTopicId() const;
+
+                    /**
+                     * 设置<p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+                     * @param _topicId <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+                     * 
+                     */
+                    void SetTopicId(const std::string& _topicId);
+
+                    /**
+                     * 判断参数 TopicId 是否已赋值
+                     * @return TopicId 是否已赋值
+                     * 
+                     */
+                    bool TopicIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+                     * @return IsWebTracking <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     bool GetIsWebTracking() const;
 
                     /**
-                     * 设置Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
-                     * @param _isWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * 设置<p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+                     * @param _isWebTracking <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
                      * 
                      */
                     void SetIsWebTracking(const bool& _isWebTracking);
@@ -274,73 +338,172 @@ namespace TencentCloud
                      */
                     bool IsWebTrackingHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Topic extended information</p>
+                     * @return Extends <p>Topic extended information</p>
+                     * 
+                     */
+                    TopicExtendInfo GetExtends() const;
+
+                    /**
+                     * 设置<p>Topic extended information</p>
+                     * @param _extends <p>Topic extended information</p>
+                     * 
+                     */
+                    void SetExtends(const TopicExtendInfo& _extends);
+
+                    /**
+                     * 判断参数 Extends 是否已赋值
+                     * @return Extends 是否已赋值
+                     * 
+                     */
+                    bool ExtendsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Enable logging of public network source IP and server receipt time</p>
+                     * @return IsSourceFrom <p>Enable logging of public network source IP and server receipt time</p>
+                     * 
+                     */
+                    bool GetIsSourceFrom() const;
+
+                    /**
+                     * 设置<p>Enable logging of public network source IP and server receipt time</p>
+                     * @param _isSourceFrom <p>Enable logging of public network source IP and server receipt time</p>
+                     * 
+                     */
+                    void SetIsSourceFrom(const bool& _isSourceFrom);
+
+                    /**
+                     * 判断参数 IsSourceFrom 是否已赋值
+                     * @return IsSourceFrom 是否已赋值
+                     * 
+                     */
+                    bool IsSourceFromHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+                     * @return BillingMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    uint64_t GetBillingMode() const;
+
+                    /**
+                     * 设置<p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+                     * @param _billingMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    void SetBillingMode(const uint64_t& _billingMode);
+
+                    /**
+                     * 判断参数 BillingMode 是否已赋值
+                     * @return BillingMode 是否已赋值
+                     * 
+                     */
+                    bool BillingModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Logset ID
+                     * <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Log topic name
+                     * <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Number of log topic partitions. Default value: 1. Maximum value: 10
+                     * <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
                      */
                     int64_t m_partitionCount;
                     bool m_partitionCountHasBeenSet;
 
                     /**
-                     * Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+                     * <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether to enable automatic split. Default value: true
+                     * <p>Whether to enable auto-split, true by default</p>
                      */
                     bool m_autoSplit;
                     bool m_autoSplitHasBeenSet;
 
                     /**
-                     * Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+                     * <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
                      */
                     int64_t m_maxSplitPartitions;
                     bool m_maxSplitPartitionsHasBeenSet;
 
                     /**
-                     * Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+                     * <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Log topic description
+                     * <p>Topic description</p>
                      */
                     std::string m_describes;
                     bool m_describesHasBeenSet;
 
                     /**
-                     * 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+                     * <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
                      */
                     uint64_t m_hotPeriod;
                     bool m_hotPeriodHasBeenSet;
 
                     /**
-                     * Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+                     * <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+                     */
+                    uint64_t m_encryption;
+                    bool m_encryptionHasBeenSet;
+
+                    /**
+                     * <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+                     */
+                    uint64_t m_bizType;
+                    bool m_bizTypeHasBeenSet;
+
+                    /**
+                     * <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+                     */
+                    std::string m_topicId;
+                    bool m_topicIdHasBeenSet;
+
+                    /**
+                     * <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
                      */
                     bool m_isWebTracking;
                     bool m_isWebTrackingHasBeenSet;
+
+                    /**
+                     * <p>Topic extended information</p>
+                     */
+                    TopicExtendInfo m_extends;
+                    bool m_extendsHasBeenSet;
+
+                    /**
+                     * <p>Enable logging of public network source IP and server receipt time</p>
+                     */
+                    bool m_isSourceFrom;
+                    bool m_isSourceFromHasBeenSet;
+
+                    /**
+                     * <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+                     */
+                    uint64_t m_billingMode;
+                    bool m_billingModeHasBeenSet;
 
                 };
             }

@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
-                     * @return Zone <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+                     * 获取<p>For AZ information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">Obtain the Purchasable Specifications of Cloud Databases</a> API to obtain the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Specify an availability zone. If no availability zone is specified, the system will automatically select one (possibly not the availability zone you want to deploy in). If you create a cloud disk-based cluster instance, leave this parameter blank and configure the availability zones for RWNode and read-only nodes with parameter ClusterTopology.</p>
+                     * @return Zone <p>For AZ information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">Obtain the Purchasable Specifications of Cloud Databases</a> API to obtain the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Specify an availability zone. If no availability zone is specified, the system will automatically select one (possibly not the availability zone you want to deploy in). If you create a cloud disk-based cluster instance, leave this parameter blank and configure the availability zones for RWNode and read-only nodes with parameter ClusterTopology.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置<p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
-                     * @param _zone <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+                     * 设置<p>For AZ information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">Obtain the Purchasable Specifications of Cloud Databases</a> API to obtain the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Specify an availability zone. If no availability zone is specified, the system will automatically select one (possibly not the availability zone you want to deploy in). If you create a cloud disk-based cluster instance, leave this parameter blank and configure the availability zones for RWNode and read-only nodes with parameter ClusterTopology.</p>
+                     * @param _zone <p>For AZ information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">Obtain the Purchasable Specifications of Cloud Databases</a> API to obtain the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Specify an availability zone. If no availability zone is specified, the system will automatically select one (possibly not the availability zone you want to deploy in). If you create a cloud disk-based cluster instance, leave this parameter blank and configure the availability zones for RWNode and read-only nodes with parameter ClusterTopology.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -572,15 +572,15 @@ namespace TencentCloud
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
-                     * @return DeviceType <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+                     * 获取<p>Instance isolation type.</p><p>Enumeration values:</p><ul><li><p>UNIVERSAL: General-purpose instance</p></li><li><p>EXCLUSIVE: Dedicated instance</p></li><li><p>CLOUD_NATIVE_CLUSTER: Standard type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Enhanced type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA: Premium type of cloud disk edition</p></li><li><p>If this parameter is not specified, it defaults to general-purpose instance.</p></li><li><p>Required if you create a cloud disk edition instance.</p></li><li><p>If you create a single-node instance, fill in this parameter as CLOUD_NATIVE_CLUSTER and specify parameter InstanceNodes equal to 1.</p></li></ul>
+                     * @return DeviceType <p>Instance isolation type.</p><p>Enumeration values:</p><ul><li><p>UNIVERSAL: General-purpose instance</p></li><li><p>EXCLUSIVE: Dedicated instance</p></li><li><p>CLOUD_NATIVE_CLUSTER: Standard type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Enhanced type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA: Premium type of cloud disk edition</p></li><li><p>If this parameter is not specified, it defaults to general-purpose instance.</p></li><li><p>Required if you create a cloud disk edition instance.</p></li><li><p>If you create a single-node instance, fill in this parameter as CLOUD_NATIVE_CLUSTER and specify parameter InstanceNodes equal to 1.</p></li></ul>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置<p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
-                     * @param _deviceType <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+                     * 设置<p>Instance isolation type.</p><p>Enumeration values:</p><ul><li><p>UNIVERSAL: General-purpose instance</p></li><li><p>EXCLUSIVE: Dedicated instance</p></li><li><p>CLOUD_NATIVE_CLUSTER: Standard type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Enhanced type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA: Premium type of cloud disk edition</p></li><li><p>If this parameter is not specified, it defaults to general-purpose instance.</p></li><li><p>Required if you create a cloud disk edition instance.</p></li><li><p>If you create a single-node instance, fill in this parameter as CLOUD_NATIVE_CLUSTER and specify parameter InstanceNodes equal to 1.</p></li></ul>
+                     * @param _deviceType <p>Instance isolation type.</p><p>Enumeration values:</p><ul><li><p>UNIVERSAL: General-purpose instance</p></li><li><p>EXCLUSIVE: Dedicated instance</p></li><li><p>CLOUD_NATIVE_CLUSTER: Standard type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Enhanced type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA: Premium type of cloud disk edition</p></li><li><p>If this parameter is not specified, it defaults to general-purpose instance.</p></li><li><p>Required if you create a cloud disk edition instance.</p></li><li><p>If you create a single-node instance, fill in this parameter as CLOUD_NATIVE_CLUSTER and specify parameter InstanceNodes equal to 1.</p></li></ul>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -635,15 +635,15 @@ namespace TencentCloud
                     bool AlarmPolicyListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
-                     * @return InstanceNodes <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * 获取<p>Number of instance nodes.</p><p>For RO and single-node instances, the default value is 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, meaning a dual-node instance will be purchased. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * @return InstanceNodes <p>Number of instance nodes.</p><p>For RO and single-node instances, the default value is 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, meaning a dual-node instance will be purchased. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      * 
                      */
                     int64_t GetInstanceNodes() const;
 
                     /**
-                     * 设置<p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
-                     * @param _instanceNodes <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * 设置<p>Number of instance nodes.</p><p>For RO and single-node instances, the default value is 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, meaning a dual-node instance will be purchased. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * @param _instanceNodes <p>Number of instance nodes.</p><p>For RO and single-node instances, the default value is 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, meaning a dual-node instance will be purchased. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      * 
                      */
                     void SetInstanceNodes(const int64_t& _instanceNodes);
@@ -887,15 +887,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
-                     * @return ClusterType <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+                     * 获取<p>ClusterType: cage-Financial Enclosure, cdc-CDB ON CDC; dedicate-dedicated cluster</p>
+                     * @return ClusterType <p>ClusterType: cage-Financial Enclosure, cdc-CDB ON CDC; dedicate-dedicated cluster</p>
                      * 
                      */
                     std::string GetClusterType() const;
 
                     /**
-                     * 设置<p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
-                     * @param _clusterType <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+                     * 设置<p>ClusterType: cage-Financial Enclosure, cdc-CDB ON CDC; dedicate-dedicated cluster</p>
+                     * @param _clusterType <p>ClusterType: cage-Financial Enclosure, cdc-CDB ON CDC; dedicate-dedicated cluster</p>
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -994,7 +994,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * <p>For availability zone information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">obtain the purchasable specifications of cloud databases</a> API to get the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Please specify an availability zone. If you do not specify one, the system will automatically select an availability zone (which may not be the one you want to deploy in). If you create a cloud disk edition instance, leave this parameter blank and configure the availability zones for read-write nodes and read-only nodes with parameter ClusterTopology.</p>
+                     * <p>For AZ information, please use the <a href="https://www.tencentcloud.com/document/api/236/17229?from_cn_redirect=1">Obtain the Purchasable Specifications of Cloud Databases</a> API to obtain the availability zones where instances can be created.</p><p>If you create a single-node, two-node, three-node, or four-node instance, this parameter is required. Specify an availability zone. If no availability zone is specified, the system will automatically select one (possibly not the availability zone you want to deploy in). If you create a cloud disk-based cluster instance, leave this parameter blank and configure the availability zones for RWNode and read-only nodes with parameter ClusterTopology.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -1102,7 +1102,7 @@ namespace TencentCloud
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * <p>Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - ONTKE single-node instance, "CLOUD_NATIVE_CLUSTER" - CLOUD disk edition standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - CLOUD disk edition enhanced. If not specified, it defaults to general-purpose instance.<br>Description: If a CLOUD disk edition instance is created, this parameter is required.</p>
+                     * <p>Instance isolation type.</p><p>Enumeration values:</p><ul><li><p>UNIVERSAL: General-purpose instance</p></li><li><p>EXCLUSIVE: Dedicated instance</p></li><li><p>CLOUD_NATIVE_CLUSTER: Standard type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Enhanced type of cloud disk edition</p></li><li><p>CLOUD_NATIVE_CLUSTER_ULTRA: Premium type of cloud disk edition</p></li><li><p>If this parameter is not specified, it defaults to general-purpose instance.</p></li><li><p>Required if you create a cloud disk edition instance.</p></li><li><p>If you create a single-node instance, fill in this parameter as CLOUD_NATIVE_CLUSTER and specify parameter InstanceNodes equal to 1.</p></li></ul>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
@@ -1120,7 +1120,7 @@ namespace TencentCloud
                     bool m_alarmPolicyListHasBeenSet;
 
                     /**
-                     * <p>Number of instance nodes.</p><p>For RO and basic edition instances, the value defaults to 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, which means purchasing a dual-node instance. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+                     * <p>Number of instance nodes.</p><p>For RO and single-node instances, the default value is 1. To purchase a three-node instance, set this value to 3 or specify the BackupZone parameter. When purchasing a primary instance without specifying this parameter or the BackupZone parameter, the default value is 2, meaning a dual-node instance will be purchased. To purchase a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
                      */
                     int64_t m_instanceNodes;
                     bool m_instanceNodesHasBeenSet;
@@ -1192,7 +1192,7 @@ namespace TencentCloud
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * <p>ClusterType: cage—Financial Enclosure, cdc—CDB ON CDC; dedicate—dedicated cluster</p>
+                     * <p>ClusterType: cage-Financial Enclosure, cdc-CDB ON CDC; dedicate-dedicated cluster</p>
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;

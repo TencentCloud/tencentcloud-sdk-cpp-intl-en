@@ -92,19 +92,15 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
                     bool PeerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NamespaceSelector Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Namespace Selector
+                     * @return NamespaceSelector Namespace Selector
                      * 
                      */
                     std::string GetNamespaceSelector() const;
 
                     /**
-                     * 设置Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _namespaceSelector Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Namespace Selector
+                     * @param _namespaceSelector Namespace Selector
                      * 
                      */
                     void SetNamespaceSelector(const std::string& _namespaceSelector);
@@ -117,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NamespaceSelectorHasBeenSet() const;
 
                     /**
-                     * 获取Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodSelector Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pod Selector
+                     * @return PodSelector Pod Selector
                      * 
                      */
                     std::string GetPodSelector() const;
 
                     /**
-                     * 设置Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _podSelector Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Pod Selector
+                     * @param _podSelector Pod Selector
                      * 
                      */
                     void SetPodSelector(const std::string& _podSelector);
@@ -142,19 +134,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodSelectorHasBeenSet() const;
 
                     /**
-                     * 获取IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IPBlock IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取IP Selector
+                     * @return IPBlock IP Selector
                      * 
                      */
                     std::string GetIPBlock() const;
 
                     /**
-                     * 设置IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iPBlock IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置IP Selector
+                     * @param _iPBlock IP Selector
                      * 
                      */
                     void SetIPBlock(const std::string& _iPBlock);
@@ -181,22 +169,19 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
                     bool m_peerTypeHasBeenSet;
 
                     /**
-                     * Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Namespace Selector
                      */
                     std::string m_namespaceSelector;
                     bool m_namespaceSelectorHasBeenSet;
 
                     /**
-                     * Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pod Selector
                      */
                     std::string m_podSelector;
                     bool m_podSelectorHasBeenSet;
 
                     /**
-                     * IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * IP Selector
                      */
                     std::string m_iPBlock;
                     bool m_iPBlockHasBeenSet;

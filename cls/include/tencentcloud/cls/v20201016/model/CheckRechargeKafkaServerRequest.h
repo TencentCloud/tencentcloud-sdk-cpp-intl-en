@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
+#include <tencentcloud/cls/v20201016/model/UserKafkaMeta.h>
 
 
 namespace TencentCloud
@@ -44,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-                     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+                     * 获取Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     uint64_t GetKafkaType() const;
 
                     /**
-                     * 设置Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-                     * @param _kafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+                     * 设置Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @param _kafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     void SetKafkaType(const uint64_t& _kafkaType);
@@ -65,15 +66,27 @@ namespace TencentCloud
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
-                     * @return KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+                     * 获取Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @return KafkaInstance Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
-                     * @param _kafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+                     * 设置Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @param _kafkaInstance Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -107,15 +120,15 @@ namespace TencentCloud
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Whether the service address uses an encrypted connection
-                     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+                     * 获取Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+                     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
                      * 
                      */
                     bool GetIsEncryptionAddr() const;
 
                     /**
-                     * 设置Whether the service address uses an encrypted connection
-                     * @param _isEncryptionAddr Whether the service address uses an encrypted connection
+                     * 设置Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+                     * @param _isEncryptionAddr Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
                      * 
                      */
                     void SetIsEncryptionAddr(const bool& _isEncryptionAddr);
@@ -128,15 +141,15 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
-                     * @return Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+                     * 获取Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+                     * @return Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
-                     * @param _protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+                     * 设置Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+                     * @param _protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -148,16 +161,40 @@ namespace TencentCloud
                      */
                     bool ProtocolHasBeenSet() const;
 
+                    /**
+                     * 获取User kafka extended information
+                     * @return UserKafkaMeta User kafka extended information
+                     * 
+                     */
+                    UserKafkaMeta GetUserKafkaMeta() const;
+
+                    /**
+                     * 设置User kafka extended information
+                     * @param _userKafkaMeta User kafka extended information
+                     * 
+                     */
+                    void SetUserKafkaMeta(const UserKafkaMeta& _userKafkaMeta);
+
+                    /**
+                     * 判断参数 UserKafkaMeta 是否已赋值
+                     * @return UserKafkaMeta 是否已赋值
+                     * 
+                     */
+                    bool UserKafkaMetaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+                     * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      */
                     uint64_t m_kafkaType;
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+                     * Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
@@ -169,16 +206,22 @@ namespace TencentCloud
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Whether the service address uses an encrypted connection
+                     * Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
                      */
                     bool m_isEncryptionAddr;
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+                     * Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;
+
+                    /**
+                     * User kafka extended information
+                     */
+                    UserKafkaMeta m_userKafkaMeta;
+                    bool m_userKafkaMetaHasBeenSet;
 
                 };
             }

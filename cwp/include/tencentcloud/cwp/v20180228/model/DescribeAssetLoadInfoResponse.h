@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取System load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CpuLoad System load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AssetLoadSummary GetCpuLoad() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuLoadHasBeenSet() const;
 
                     /**
-                     * 获取Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemLoad Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Memory usage rate
+                     * @return MemLoad Memory usage rate
                      * 
                      */
                     AssetLoadSummary GetMemLoad() const;
@@ -78,9 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskLoad Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AssetLoadSummary GetDiskLoad() const;
@@ -96,21 +90,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * System load
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AssetLoadSummary m_cpuLoad;
                     bool m_cpuLoadHasBeenSet;
 
                     /**
-                     * Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Memory usage rate
                      */
                     AssetLoadSummary m_memLoad;
                     bool m_memLoadHasBeenSet;
 
                     /**
                      * Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AssetLoadSummary m_diskLoad;
                     bool m_diskLoadHasBeenSet;

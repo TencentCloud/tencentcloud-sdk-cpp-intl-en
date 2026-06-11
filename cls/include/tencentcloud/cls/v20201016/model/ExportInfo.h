@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取<p>Log topic ID.</p>
+                     * @return TopicId <p>Log topic ID.</p>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置<p>Log topic ID.</p>
+                     * @param _topicId <p>Log topic ID.</p>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log export task ID
-                     * @return ExportId Log export task ID
+                     * 获取<p>Log export task ID</p>
+                     * @return ExportId <p>Log export task ID</p>
                      * 
                      */
                     std::string GetExportId() const;
 
                     /**
-                     * 设置Log export task ID
-                     * @param _exportId Log export task ID
+                     * 设置<p>Log export task ID</p>
+                     * @param _exportId <p>Log export task ID</p>
                      * 
                      */
                     void SetExportId(const std::string& _exportId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExportIdHasBeenSet() const;
 
                     /**
-                     * 获取Log export query statement
-                     * @return Query Log export query statement
+                     * 获取<p>Query statements of log export</p>
+                     * @return Query <p>Query statements of log export</p>
                      * 
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Log export query statement
-                     * @param _query Log export query statement
+                     * 设置<p>Query statements of log export</p>
+                     * @param _query <p>Query statements of log export</p>
                      * 
                      */
                     void SetQuery(const std::string& _query);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取Log export filename
-                     * @return FileName Log export filename
+                     * 获取<p>Filenames of exported logs</p>
+                     * @return FileName <p>Filenames of exported logs</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Log export filename
-                     * @param _fileName Log export filename
+                     * 设置<p>Filenames of exported logs</p>
+                     * @param _fileName <p>Filenames of exported logs</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Log file size
-                     * @return FileSize Log file size
+                     * 获取<p>Log file size</p><p>Unit: Byte</p>
+                     * @return FileSize <p>Log file size</p><p>Unit: Byte</p>
                      * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
-                     * 设置Log file size
-                     * @param _fileSize Log file size
+                     * 设置<p>Log file size</p><p>Unit: Byte</p>
+                     * @param _fileSize <p>Log file size</p><p>Unit: Byte</p>
                      * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Log export time sorting
-                     * @return Order Log export time sorting
+                     * 获取<p>Sorting of log export time</p>
+                     * @return Order <p>Sorting of log export time</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Log export time sorting
-                     * @param _order Log export time sorting
+                     * 设置<p>Sorting of log export time</p>
+                     * @param _order <p>Sorting of log export time</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Log export format
-                     * @return Format Log export format
+                     * 获取<p>Log export format</p>
+                     * @return Format <p>Log export format</p>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Log export format
-                     * @param _format Log export format
+                     * 设置<p>Log export format</p>
+                     * @param _format <p>Log export format</p>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Number of logs to be exported
-                     * @return Count Number of logs to be exported
+                     * 获取<p>Number of logs to be exported</p>
+                     * @return Count <p>Number of logs to be exported</p>
                      * 
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of logs to be exported
-                     * @param _count Number of logs to be exported
+                     * 设置<p>Number of logs to be exported</p>
+                     * @param _count <p>Number of logs to be exported</p>
                      * 
                      */
                     void SetCount(const uint64_t& _count);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
-                     * @return Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * 获取<p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+                     * @return Status <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
-                     * @param _status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * 设置<p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+                     * @param _status <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Log export start time
-                     * @return From Log export start time
+                     * 获取<p>Start time of log export, with a timestamp in milliseconds</p>
+                     * @return From <p>Start time of log export, with a timestamp in milliseconds</p>
                      * 
                      */
                     int64_t GetFrom() const;
 
                     /**
-                     * 设置Log export start time
-                     * @param _from Log export start time
+                     * 设置<p>Start time of log export, with a timestamp in milliseconds</p>
+                     * @param _from <p>Start time of log export, with a timestamp in milliseconds</p>
                      * 
                      */
                     void SetFrom(const int64_t& _from);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取Log export end time
-                     * @return To Log export end time
+                     * 获取<p>End time of log export, timestamp in milliseconds</p>
+                     * @return To <p>End time of log export, timestamp in milliseconds</p>
                      * 
                      */
                     int64_t GetTo() const;
 
                     /**
-                     * 设置Log export end time
-                     * @param _to Log export end time
+                     * 设置<p>End time of log export, timestamp in milliseconds</p>
+                     * @param _to <p>End time of log export, timestamp in milliseconds</p>
                      * 
                      */
                     void SetTo(const int64_t& _to);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool ToHasBeenSet() const;
 
                     /**
-                     * 获取Log export path, valid for one hour. Please download using this path as soon as possible.
-                     * @return CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
+                     * 获取<p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+                     * @return CosPath <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
                      * 
                      */
                     std::string GetCosPath() const;
 
                     /**
-                     * 设置Log export path, valid for one hour. Please download using this path as soon as possible.
-                     * @param _cosPath Log export path, valid for one hour. Please download using this path as soon as possible.
+                     * 设置<p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+                     * @param _cosPath <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
                      * 
                      */
                     void SetCosPath(const std::string& _cosPath);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool CosPathHasBeenSet() const;
 
                     /**
-                     * 获取Log export creation time
-                     * @return CreateTime Log export creation time
+                     * 获取<p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+                     * @return CreateTime <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Log export creation time
-                     * @param _createTime Log export creation time
+                     * 设置<p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _createTime <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
-                     * @return SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * 获取<p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+                     * @return SyntaxRule <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
                      * 
                      */
                     uint64_t GetSyntaxRule() const;
 
                     /**
-                     * 设置Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
-                     * @param _syntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * 设置<p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+                     * @param _syntaxRule <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
                      * 
                      */
                     void SetSyntaxRule(const uint64_t& _syntaxRule);
@@ -340,91 +340,118 @@ namespace TencentCloud
                      */
                     bool SyntaxRuleHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Export fields</p>
+                     * @return DerivedFields <p>Export fields</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDerivedFields() const;
+
+                    /**
+                     * 设置<p>Export fields</p>
+                     * @param _derivedFields <p>Export fields</p>
+                     * 
+                     */
+                    void SetDerivedFields(const std::vector<std::string>& _derivedFields);
+
+                    /**
+                     * 判断参数 DerivedFields 是否已赋值
+                     * @return DerivedFields 是否已赋值
+                     * 
+                     */
+                    bool DerivedFieldsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID
+                     * <p>Log topic ID.</p>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log export task ID
+                     * <p>Log export task ID</p>
                      */
                     std::string m_exportId;
                     bool m_exportIdHasBeenSet;
 
                     /**
-                     * Log export query statement
+                     * <p>Query statements of log export</p>
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
 
                     /**
-                     * Log export filename
+                     * <p>Filenames of exported logs</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Log file size
+                     * <p>Log file size</p><p>Unit: Byte</p>
                      */
                     uint64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Log export time sorting
+                     * <p>Sorting of log export time</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Log export format
+                     * <p>Log export format</p>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Number of logs to be exported
+                     * <p>Number of logs to be exported</p>
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Log export start time
+                     * <p>Start time of log export, with a timestamp in milliseconds</p>
                      */
                     int64_t m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * Log export end time
+                     * <p>End time of log export, timestamp in milliseconds</p>
                      */
                     int64_t m_to;
                     bool m_toHasBeenSet;
 
                     /**
-                     * Log export path, valid for one hour. Please download using this path as soon as possible.
+                     * <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
                      */
                     std::string m_cosPath;
                     bool m_cosPathHasBeenSet;
 
                     /**
-                     * Log export creation time
+                     * <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+                     * <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;
+
+                    /**
+                     * <p>Export fields</p>
+                     */
+                    std::vector<std::string> m_derivedFields;
+                    bool m_derivedFieldsHasBeenSet;
 
                 };
             }

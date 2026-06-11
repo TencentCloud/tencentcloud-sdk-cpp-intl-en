@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetBaselineId() const;
 
                     /**
                      * 设置Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _baselineId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBaselineId(const uint64_t& _baselineId);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BaselineIdHasBeenSet() const;
 
                     /**
-                     * 获取Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent id
+                     * @return ParentId Parent id
                      * 
                      */
                     uint64_t GetParentId() const;
 
                     /**
-                     * 设置Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _parentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parent id
+                     * @param _parentId Parent id
                      * 
                      */
                     void SetParentId(const uint64_t& _parentId);
@@ -125,21 +113,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_baselineId;
                     bool m_baselineIdHasBeenSet;
 
                     /**
-                     * Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent id
                      */
                     uint64_t m_parentId;
                     bool m_parentIdHasBeenSet;

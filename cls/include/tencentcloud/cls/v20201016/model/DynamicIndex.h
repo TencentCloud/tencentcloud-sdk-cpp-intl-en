@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Automatic configuration switch of the key-value index.
+                     * @return Status Automatic configuration switch of the key-value index.
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Automatic configuration switch of the key-value index.
+                     * @param _status Automatic configuration switch of the key-value index.
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Automatic configuration switch of the key-value index.
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;

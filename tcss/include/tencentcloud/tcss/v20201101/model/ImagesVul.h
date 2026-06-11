@@ -362,19 +362,15 @@ namespace TencentCloud
                     bool IsSuggestHasBeenSet() const;
 
                     /**
-                     * 获取Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Repair Version Number
+                     * @return FixedVersions Repair Version Number
                      * 
                      */
                     std::string GetFixedVersions() const;
 
                     /**
-                     * 设置Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Repair Version Number
+                     * @param _fixedVersions Repair Version Number
                      * 
                      */
                     void SetFixedVersions(const std::string& _fixedVersions);
@@ -387,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixedVersionsHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+                     * @return Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
                      * 
                      */
                     std::vector<std::string> GetTag() const;
 
                     /**
-                     * 设置Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+                     * @param _tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
                      * 
                      */
                     void SetTag(const std::vector<std::string>& _tag);
@@ -410,6 +402,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool TagHasBeenSet() const;
+
+                    /**
+                     * 获取Attack Heat
+                     * @return AttackLevel Attack Heat
+                     * 
+                     */
+                    int64_t GetAttackLevel() const;
+
+                    /**
+                     * 设置Attack Heat
+                     * @param _attackLevel Attack Heat
+                     * 
+                     */
+                    void SetAttackLevel(const int64_t& _attackLevel);
+
+                    /**
+                     * 判断参数 AttackLevel 是否已赋值
+                     * @return AttackLevel 是否已赋值
+                     * 
+                     */
+                    bool AttackLevelHasBeenSet() const;
 
                 private:
 
@@ -504,18 +517,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isSuggestHasBeenSet;
 
                     /**
-                     * Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Repair Version Number
                      */
                     std::string m_fixedVersions;
                     bool m_fixedVersionsHasBeenSet;
 
                     /**
-                     * Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
                      */
                     std::vector<std::string> m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * Attack Heat
+                     */
+                    int64_t m_attackLevel;
+                    bool m_attackLevelHasBeenSet;
 
                 };
             }

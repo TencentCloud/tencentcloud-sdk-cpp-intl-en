@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Highlighted Log Description Information
+                * Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.
                 */
                 class HighLightItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Highlighted Log Key
-                     * @return Key Highlighted Log Key
+                     * 获取Highlighted log field name.
+                     * @return Key Highlighted log field name.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Highlighted Log Key
-                     * @param _key Highlighted Log Key
+                     * 设置Highlighted log field name.
+                     * @param _key Highlighted log field name.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Highlighted Syntax
-                     * @return Values Highlighted Syntax
+                     * 获取Highlighted keywords.
+                     * @return Values Highlighted keywords.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Highlighted Syntax
-                     * @param _values Highlighted Syntax
+                     * 设置Highlighted keywords.
+                     * @param _values Highlighted keywords.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Highlighted Log Key
+                     * Highlighted log field name.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Highlighted Syntax
+                     * Highlighted keywords.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

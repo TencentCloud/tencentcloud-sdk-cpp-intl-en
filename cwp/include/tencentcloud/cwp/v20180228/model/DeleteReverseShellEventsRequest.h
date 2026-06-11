@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool IdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to delete all.
+                     * @return All Whether to delete all.
+                     * 
+                     */
+                    bool GetAll() const;
+
+                    /**
+                     * 设置Whether to delete all.
+                     * @param _all Whether to delete all.
+                     * 
+                     */
+                    void SetAll(const bool& _all);
+
+                    /**
+                     * 判断参数 All 是否已赋值
+                     * @return All 是否已赋值
+                     * 
+                     */
+                    bool AllHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;
+
+                    /**
+                     * Whether to delete all.
+                     */
+                    bool m_all;
+                    bool m_allHasBeenSet;
 
                 };
             }

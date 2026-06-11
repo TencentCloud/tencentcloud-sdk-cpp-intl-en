@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter Field
-                     * @return Filters Filter Field
+                     * 获取
+                     * @return Filters 
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter Field
-                     * @param _filters Filter Field
+                     * 设置
+                     * @param _filters 
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter Field
+                     * 
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;

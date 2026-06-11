@@ -30,7 +30,12 @@ CreateAssetImageScanSettingRequest::CreateAssetImageScanSettingRequest() :
     m_scanRiskHasBeenSet(false),
     m_scanVulHasBeenSet(false),
     m_allHasBeenSet(false),
-    m_imagesHasBeenSet(false)
+    m_imagesHasBeenSet(false),
+    m_containerRunningHasBeenSet(false),
+    m_scanScopeHasBeenSet(false),
+    m_scanEndTimeHasBeenSet(false),
+    m_excludeImagesHasBeenSet(false),
+    m_clusterIDsHasBeenSet(false)
 {
 }
 
@@ -105,6 +110,56 @@ string CreateAssetImageScanSettingRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         for (auto itr = m_images.begin(); itr != m_images.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_containerRunningHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContainerRunning";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_containerRunning, allocator);
+    }
+
+    if (m_scanScopeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScanScope";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_scanScope, allocator);
+    }
+
+    if (m_scanEndTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ScanEndTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_scanEndTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_excludeImagesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExcludeImages";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_excludeImages.begin(); itr != m_excludeImages.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_clusterIDsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterIDs";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_clusterIDs.begin(); itr != m_clusterIDs.end(); ++itr)
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
@@ -244,6 +299,86 @@ void CreateAssetImageScanSettingRequest::SetImages(const vector<string>& _images
 bool CreateAssetImageScanSettingRequest::ImagesHasBeenSet() const
 {
     return m_imagesHasBeenSet;
+}
+
+bool CreateAssetImageScanSettingRequest::GetContainerRunning() const
+{
+    return m_containerRunning;
+}
+
+void CreateAssetImageScanSettingRequest::SetContainerRunning(const bool& _containerRunning)
+{
+    m_containerRunning = _containerRunning;
+    m_containerRunningHasBeenSet = true;
+}
+
+bool CreateAssetImageScanSettingRequest::ContainerRunningHasBeenSet() const
+{
+    return m_containerRunningHasBeenSet;
+}
+
+uint64_t CreateAssetImageScanSettingRequest::GetScanScope() const
+{
+    return m_scanScope;
+}
+
+void CreateAssetImageScanSettingRequest::SetScanScope(const uint64_t& _scanScope)
+{
+    m_scanScope = _scanScope;
+    m_scanScopeHasBeenSet = true;
+}
+
+bool CreateAssetImageScanSettingRequest::ScanScopeHasBeenSet() const
+{
+    return m_scanScopeHasBeenSet;
+}
+
+string CreateAssetImageScanSettingRequest::GetScanEndTime() const
+{
+    return m_scanEndTime;
+}
+
+void CreateAssetImageScanSettingRequest::SetScanEndTime(const string& _scanEndTime)
+{
+    m_scanEndTime = _scanEndTime;
+    m_scanEndTimeHasBeenSet = true;
+}
+
+bool CreateAssetImageScanSettingRequest::ScanEndTimeHasBeenSet() const
+{
+    return m_scanEndTimeHasBeenSet;
+}
+
+vector<string> CreateAssetImageScanSettingRequest::GetExcludeImages() const
+{
+    return m_excludeImages;
+}
+
+void CreateAssetImageScanSettingRequest::SetExcludeImages(const vector<string>& _excludeImages)
+{
+    m_excludeImages = _excludeImages;
+    m_excludeImagesHasBeenSet = true;
+}
+
+bool CreateAssetImageScanSettingRequest::ExcludeImagesHasBeenSet() const
+{
+    return m_excludeImagesHasBeenSet;
+}
+
+vector<string> CreateAssetImageScanSettingRequest::GetClusterIDs() const
+{
+    return m_clusterIDs;
+}
+
+void CreateAssetImageScanSettingRequest::SetClusterIDs(const vector<string>& _clusterIDs)
+{
+    m_clusterIDs = _clusterIDs;
+    m_clusterIDsHasBeenSet = true;
+}
+
+bool CreateAssetImageScanSettingRequest::ClusterIDsHasBeenSet() const
+{
+    return m_clusterIDsHasBeenSet;
 }
 
 

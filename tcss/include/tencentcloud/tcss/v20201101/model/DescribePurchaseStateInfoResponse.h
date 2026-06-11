@@ -58,10 +58,22 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取Total number of cores
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CoresCnt Total number of cores
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AllCoresCnt 
+                     * 
+                     */
+                    uint64_t GetAllCoresCnt() const;
+
+                    /**
+                     * 判断参数 AllCoresCnt 是否已赋值
+                     * @return AllCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool AllCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+                     * @return CoresCnt Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
                      * 
                      */
                     uint64_t GetCoresCnt() const;
@@ -74,10 +86,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CoresCntHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return UndefendCoresCnt 
+                     * 
+                     */
+                    uint64_t GetUndefendCoresCnt() const;
+
+                    /**
+                     * 判断参数 UndefendCoresCnt 是否已赋值
+                     * @return UndefendCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool UndefendCoresCntHasBeenSet() const;
+
+                    /**
                      * 获取Number of purchased cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthorizedCoresCnt Number of purchased cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAuthorizedCoresCnt() const;
@@ -90,10 +114,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AuthorizedCoresCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of images
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageCnt Number of images
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of free trial cores for Pro Edition.
+                     * @return GivenAuthorizedCoresCnt Number of free trial cores for Pro Edition.
+                     * 
+                     */
+                    int64_t GetGivenAuthorizedCoresCnt() const;
+
+                    /**
+                     * 判断参数 GivenAuthorizedCoresCnt 是否已赋值
+                     * @return GivenAuthorizedCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool GivenAuthorizedCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CurrentFlexibleCoresCnt 
+                     * 
+                     */
+                    uint64_t GetCurrentFlexibleCoresCnt() const;
+
+                    /**
+                     * 判断参数 CurrentFlexibleCoresCnt 是否已赋值
+                     * @return CurrentFlexibleCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool CurrentFlexibleCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取Image count
+                     * @return ImageCnt Image count
                      * 
                      */
                     uint64_t GetImageCnt() const;
@@ -107,9 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of licensed images
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthorizedImageCnt Number of licensed images
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAuthorizedImageCnt() const;
@@ -122,26 +170,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AuthorizedImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of purchased image licenses
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PurchasedAuthorizedCnt Number of purchased image licenses
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    uint64_t GetPurchasedAuthorizedCnt() const;
-
-                    /**
-                     * 判断参数 PurchasedAuthorizedCnt 是否已赋值
-                     * @return PurchasedAuthorizedCnt 是否已赋值
-                     * 
-                     */
-                    bool PurchasedAuthorizedCntHasBeenSet() const;
-
-                    /**
                      * 获取Expiration time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpirationTime Expiration time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpirationTime() const;
@@ -154,10 +184,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpirationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `0` (initial status, which is the default value and not set by the user); `1` (auto-renewal); `2` (no auto-renewal, which is specified by the user).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AutomaticRenewal Valid values: `0` (initial status, which is the default value and not set by the user); `1` (auto-renewal); `2` (no auto-renewal, which is specified by the user).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of purchased image licenses
+                     * @return PurchasedAuthorizedCnt Number of purchased image licenses
+                     * 
+                     */
+                    uint64_t GetPurchasedAuthorizedCnt() const;
+
+                    /**
+                     * 判断参数 PurchasedAuthorizedCnt 是否已赋值
+                     * @return PurchasedAuthorizedCnt 是否已赋值
+                     * 
+                     */
+                    bool PurchasedAuthorizedCntHasBeenSet() const;
+
+                    /**
+                     * 获取0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+                     * @return AutomaticRenewal 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
                      * 
                      */
                     int64_t GetAutomaticRenewal() const;
@@ -170,10 +212,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutomaticRenewalHasBeenSet() const;
 
                     /**
-                     * 获取Number of free image licenses during the trial, which may expire.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GivenAuthorizedCnt Number of free image licenses during the trial, which may expire.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Complimentary image licenses during the trial period may expire.
+                     * @return GivenAuthorizedCnt Complimentary image licenses during the trial period may expire.
                      * 
                      */
                     uint64_t GetGivenAuthorizedCnt() const;
@@ -186,10 +226,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GivenAuthorizedCntHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BeginTime Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Start time.
+                     * @return BeginTime Start time.
                      * 
                      */
                     std::string GetBeginTime() const;
@@ -202,12 +240,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status, the meaning of which is subject to the `State` field.
-Valid values when `State` is `4`: `ISOLATE` (isolated); `DESTROED` (terminated).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubState Sub-status, the meaning of which is subject to the `State` field.
-Valid values when `State` is `4`: `ISOLATE` (isolated); `DESTROED` (terminated).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Substatus (specific meaning depending on the State field)
+Valid values when State is 4: ISOLATE, TERMINATED.
+                     * @return SubState Substatus (specific meaning depending on the State field)
+Valid values when State is 4: ISOLATE, TERMINATED.
                      * 
                      */
                     std::string GetSubState() const;
@@ -219,6 +255,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SubStateHasBeenSet() const;
 
+                    /**
+                     * 获取Billing key.
+                     * @return InquireKey Billing key.
+                     * 
+                     */
+                    std::string GetInquireKey() const;
+
+                    /**
+                     * 判断参数 InquireKey 是否已赋值
+                     * @return InquireKey 是否已赋值
+                     * 
+                     */
+                    bool InquireKeyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DefendPolicy 
+                     * 
+                     */
+                    std::string GetDefendPolicy() const;
+
+                    /**
+                     * 判断参数 DefendPolicy 是否已赋值
+                     * @return DefendPolicy 是否已赋值
+                     * 
+                     */
+                    bool DefendPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FlexibleCoresLimit 
+                     * 
+                     */
+                    uint64_t GetFlexibleCoresLimit() const;
+
+                    /**
+                     * 判断参数 FlexibleCoresLimit 是否已赋值
+                     * @return FlexibleCoresLimit 是否已赋值
+                     * 
+                     */
+                    bool FlexibleCoresLimitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DefendClusterCoresCnt 
+                     * 
+                     */
+                    uint64_t GetDefendClusterCoresCnt() const;
+
+                    /**
+                     * 判断参数 DefendClusterCoresCnt 是否已赋值
+                     * @return DefendClusterCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool DefendClusterCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DefendHostCoresCnt 
+                     * 
+                     */
+                    uint64_t GetDefendHostCoresCnt() const;
+
+                    /**
+                     * 判断参数 DefendHostCoresCnt 是否已赋值
+                     * @return DefendHostCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool DefendHostCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取Number of trial cores for Pro Edition.
+                     * @return TrialCoresCnt Number of trial cores for Pro Edition.
+                     * 
+                     */
+                    uint64_t GetTrialCoresCnt() const;
+
+                    /**
+                     * 判断参数 TrialCoresCnt 是否已赋值
+                     * @return TrialCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool TrialCoresCntHasBeenSet() const;
+
                 private:
 
                     /**
@@ -228,75 +348,125 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_stateHasBeenSet;
 
                     /**
-                     * Total number of cores
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t m_allCoresCnt;
+                    bool m_allCoresCntHasBeenSet;
+
+                    /**
+                     * Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
                      */
                     uint64_t m_coresCnt;
                     bool m_coresCntHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    uint64_t m_undefendCoresCnt;
+                    bool m_undefendCoresCntHasBeenSet;
+
+                    /**
                      * Number of purchased cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_authorizedCoresCnt;
                     bool m_authorizedCoresCntHasBeenSet;
 
                     /**
-                     * Number of images
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of free trial cores for Pro Edition.
+                     */
+                    int64_t m_givenAuthorizedCoresCnt;
+                    bool m_givenAuthorizedCoresCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_currentFlexibleCoresCnt;
+                    bool m_currentFlexibleCoresCntHasBeenSet;
+
+                    /**
+                     * Image count
                      */
                     uint64_t m_imageCnt;
                     bool m_imageCntHasBeenSet;
 
                     /**
                      * Number of licensed images
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_authorizedImageCnt;
                     bool m_authorizedImageCntHasBeenSet;
 
                     /**
-                     * Number of purchased image licenses
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    uint64_t m_purchasedAuthorizedCnt;
-                    bool m_purchasedAuthorizedCntHasBeenSet;
-
-                    /**
                      * Expiration time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expirationTime;
                     bool m_expirationTimeHasBeenSet;
 
                     /**
-                     * Valid values: `0` (initial status, which is the default value and not set by the user); `1` (auto-renewal); `2` (no auto-renewal, which is specified by the user).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of purchased image licenses
+                     */
+                    uint64_t m_purchasedAuthorizedCnt;
+                    bool m_purchasedAuthorizedCntHasBeenSet;
+
+                    /**
+                     * 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
                      */
                     int64_t m_automaticRenewal;
                     bool m_automaticRenewalHasBeenSet;
 
                     /**
-                     * Number of free image licenses during the trial, which may expire.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Complimentary image licenses during the trial period may expire.
                      */
                     uint64_t m_givenAuthorizedCnt;
                     bool m_givenAuthorizedCntHasBeenSet;
 
                     /**
-                     * Start time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Start time.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Sub-status, the meaning of which is subject to the `State` field.
-Valid values when `State` is `4`: `ISOLATE` (isolated); `DESTROED` (terminated).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Substatus (specific meaning depending on the State field)
+Valid values when State is 4: ISOLATE, TERMINATED.
                      */
                     std::string m_subState;
                     bool m_subStateHasBeenSet;
+
+                    /**
+                     * Billing key.
+                     */
+                    std::string m_inquireKey;
+                    bool m_inquireKeyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_defendPolicy;
+                    bool m_defendPolicyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_flexibleCoresLimit;
+                    bool m_flexibleCoresLimitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_defendClusterCoresCnt;
+                    bool m_defendClusterCoresCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_defendHostCoresCnt;
+                    bool m_defendHostCoresCntHasBeenSet;
+
+                    /**
+                     * Number of trial cores for Pro Edition.
+                     */
+                    uint64_t m_trialCoresCnt;
+                    bool m_trialCoresCntHasBeenSet;
 
                 };
             }

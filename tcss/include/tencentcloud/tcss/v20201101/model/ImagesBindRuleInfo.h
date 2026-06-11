@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool ContainerCntHasBeenSet() const;
 
                     /**
-                     * 获取Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleId Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Binding rule id
+                     * @return RuleId Binding rule id
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleId Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Binding rule id
+                     * @param _ruleId Binding rule id
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -136,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleName Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -160,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Image size
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取image size
+                     * @return ImageSize image size
                      * 
                      */
                     int64_t GetImageSize() const;
 
                     /**
-                     * 设置Image size
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置image size
+                     * @param _imageSize image size
                      * 
                      */
                     void SetImageSize(const int64_t& _imageSize);
@@ -186,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 设置Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanTime(const std::string& _scanTime);
@@ -230,29 +214,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_containerCntHasBeenSet;
 
                     /**
-                     * Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Binding rule id
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
                      * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * image size
                      */
                     int64_t m_imageSize;
                     bool m_imageSizeHasBeenSet;
 
                     /**
                      * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanTime;
                     bool m_scanTimeHasBeenSet;

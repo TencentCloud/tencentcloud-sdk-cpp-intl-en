@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
-                     * @return Type Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+                     * 获取Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
+                     * @return Type Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
-                     * 设置Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
-                     * @param _type Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+                     * 设置Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
+                     * @param _type Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -172,10 +172,31 @@ namespace TencentCloud
                      */
                     bool HostRangeHasBeenSet() const;
 
+                    /**
+                     * 获取Unit.
+                     * @return Unit Unit.
+                     * 
+                     */
+                    std::string GetUnit() const;
+
+                    /**
+                     * 设置Unit.
+                     * @param _unit Unit.
+                     * 
+                     */
+                    void SetUnit(const std::string& _unit);
+
+                    /**
+                     * 判断参数 Unit 是否已赋值
+                     * @return Unit 是否已赋值
+                     * 
+                     */
+                    bool UnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+                     * Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
@@ -209,6 +230,12 @@ namespace TencentCloud
                      */
                     int64_t m_hostRange;
                     bool m_hostRangeHasBeenSet;
+
+                    /**
+                     * Unit.
+                     */
+                    std::string m_unit;
+                    bool m_unitHasBeenSet;
 
                 };
             }

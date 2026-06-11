@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
-                     * @return Status 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+                     * 获取0: pending processing; 1: processed; 3: ignored; 4: deleted. 
+                     * @return Status 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
-                     * @param _status 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+                     * 设置0: pending processing; 1: processed; 3: ignored; 4: deleted. 
+                     * @param _status 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -112,7 +112,7 @@ namespace TencentCloud
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -121,7 +121,7 @@ namespace TencentCloud
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -135,7 +135,7 @@ namespace TencentCloud
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -144,7 +144,7 @@ namespace TencentCloud
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_allHasBeenSet;
 
                     /**
-                     * 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+                     * 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -206,7 +206,7 @@ namespace TencentCloud
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 

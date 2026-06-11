@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing ID
-                     * @return Uuid Yunjing ID
+                     * 获取Host UUID
+                     * @return Uuid Host UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing ID
-                     * @param _uuid Yunjing ID
+                     * 设置Host UUID
+                     * @param _uuid Host UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -300,18 +300,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExe() const;
 
                     /**
                      * 设置Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExe(const std::string& _exe);
@@ -325,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -349,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule category. 0: system rule; 1: user rule
+                     * @return RuleCategory Rule category. 0: system rule; 1: user rule
                      * 
                      */
                     uint64_t GetRuleCategory() const;
 
                     /**
-                     * 设置Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule category. 0: system rule; 1: user rule
+                     * @param _ruleCategory Rule category. 0: system rule; 1: user rule
                      * 
                      */
                     void SetRuleCategory(const uint64_t& _ruleCategory);
@@ -375,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegexBashCmd() const;
 
                     /**
                      * 设置Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _regexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegexBashCmd(const std::string& _regexBashCmd);
@@ -399,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegexBashCmdHasBeenSet() const;
 
                     /**
-                     * 获取Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PsTree Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+                     * @return PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      * 
                      */
                     std::string GetPsTree() const;
 
                     /**
-                     * 设置Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _psTree Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+                     * @param _psTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      * 
                      */
                     void SetPsTree(const std::string& _psTree);
@@ -425,18 +405,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuggestScheme Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSuggestScheme() const;
 
                     /**
                      * 设置Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _suggestScheme Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSuggestScheme(const std::string& _suggestScheme);
@@ -450,18 +426,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HarmDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHarmDescribe() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _harmDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHarmDescribe(const std::string& _harmDescribe);
@@ -474,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HarmDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tags Tag.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -500,18 +468,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return References Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetReferences() const;
 
                     /**
                      * 设置Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _references Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReferences(const std::vector<std::string>& _references);
@@ -525,18 +489,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
                      * 设置Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
@@ -549,19 +509,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
-                     * 获取Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineStatus Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host online status: OFFLINE; ONLINE
+                     * @return MachineStatus Host online status: OFFLINE; ONLINE
                      * 
                      */
                     std::string GetMachineStatus() const;
 
                     /**
-                     * 设置Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineStatus Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host online status: OFFLINE; ONLINE
+                     * @param _machineStatus Host online status: OFFLINE; ONLINE
                      * 
                      */
                     void SetMachineStatus(const std::string& _machineStatus);
@@ -575,18 +531,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return User Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _user Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -600,18 +552,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPid() const;
 
                     /**
                      * 设置Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPid(const std::string& _pid);
@@ -625,18 +573,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data source
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetectBy Data source
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDetectBy() const;
 
                     /**
                      * 设置Data source
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detectBy Data source
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetectBy(const std::string& _detectBy);
@@ -657,7 +601,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Yunjing ID
+                     * Host UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
@@ -724,98 +668,84 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_exe;
                     bool m_exeHasBeenSet;
 
                     /**
                      * Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule category. 0: system rule; 1: user rule
                      */
                     uint64_t m_ruleCategory;
                     bool m_ruleCategoryHasBeenSet;
 
                     /**
                      * Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_regexBashCmd;
                     bool m_regexBashCmdHasBeenSet;
 
                     /**
-                     * Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
                      */
                     std::string m_psTree;
                     bool m_psTreeHasBeenSet;
 
                     /**
                      * Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_suggestScheme;
                     bool m_suggestSchemeHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_harmDescribe;
                     bool m_harmDescribeHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
                      * Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_machineWanIp;
                     bool m_machineWanIpHasBeenSet;
 
                     /**
-                     * Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host online status: OFFLINE; ONLINE
                      */
                     std::string m_machineStatus;
                     bool m_machineStatusHasBeenSet;
 
                     /**
                      * Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
                      * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
                      * Data source
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_detectBy;
                     bool m_detectByHasBeenSet;

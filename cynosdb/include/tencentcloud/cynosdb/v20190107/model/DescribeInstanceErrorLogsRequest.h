@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Limit on the number of logs
-                     * @return Limit Limit on the number of logs
+                     * 获取Limit on the number of logs.
+                     * @return Limit Limit on the number of logs.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on the number of logs
-                     * @param _limit Limit on the number of logs
+                     * 设置Limit on the number of logs.
+                     * @param _limit Limit on the number of logs.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the log number
-                     * @return Offset Offset of the log number
+                     * 获取Offset of the log number.
+                     * @return Offset Offset of the log number.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of the log number
-                     * @param _offset Offset of the log number
+                     * 设置Offset of the log number.
+                     * @param _offset Offset of the log number.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _startTime Start time
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyWords 
+                     * 获取Keywords, supports fuzzy search.
+                     * @return KeyWords Keywords, supports fuzzy search.
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置
-                     * @param _keyWords 
+                     * 设置Keywords, supports fuzzy search.
+                     * @param _keyWords Keywords, supports fuzzy search.
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -234,31 +234,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Limit on the number of logs
+                     * Limit on the number of logs.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset of the log number
+                     * Offset of the log number.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -282,7 +282,7 @@ namespace TencentCloud
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * 
+                     * Keywords, supports fuzzy search.
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;

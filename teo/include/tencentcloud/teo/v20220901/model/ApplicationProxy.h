@@ -287,15 +287,15 @@ Default value: overseas.
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取The session persistence duration.
-                     * @return SessionPersistTime The session persistence duration.
+                     * 获取Session hold time, unit: seconds.
+                     * @return SessionPersistTime Session hold time, unit: seconds.
                      * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
-                     * 设置The session persistence duration.
-                     * @param _sessionPersistTime The session persistence duration.
+                     * 设置Session hold time, unit: seconds.
+                     * @param _sessionPersistTime Session hold time, unit: seconds.
                      * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
@@ -584,7 +584,7 @@ Default value: overseas.
                     bool m_accelerateTypeHasBeenSet;
 
                     /**
-                     * The session persistence duration.
+                     * Session hold time, unit: seconds.
                      */
                     uint64_t m_sessionPersistTime;
                     bool m_sessionPersistTimeHasBeenSet;

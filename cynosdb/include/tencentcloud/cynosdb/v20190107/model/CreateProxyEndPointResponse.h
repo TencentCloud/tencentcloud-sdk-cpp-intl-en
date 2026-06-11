@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取asynchronous process ID.
-                     * @return FlowId asynchronous process ID.
+                     * 获取<p>Async process ID.</p>
+                     * @return FlowId <p>Async process ID.</p>
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Asynchronous task ID.
-                     * @return TaskId Asynchronous task ID.
+                     * 获取<p>Asynchronous Task ID.</p>
+                     * @return TaskId <p>Asynchronous Task ID.</p>
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the Database proxy group.
-                     * @return ProxyGroupId ID of the Database proxy group.
+                     * 获取<p>Database Proxy Group ID.</p>
+                     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
                      * 
                      */
                     std::string GetProxyGroupId() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * asynchronous process ID.
+                     * <p>Async process ID.</p>
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Asynchronous task ID.
+                     * <p>Asynchronous Task ID.</p>
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * ID of the Database proxy group.
+                     * <p>Database Proxy Group ID.</p>
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;

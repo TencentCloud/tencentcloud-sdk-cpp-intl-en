@@ -193,6 +193,27 @@ namespace TencentCloud
                      */
                     bool VulIdHasBeenSet() const;
 
+                    /**
+                     * 获取Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+                     * @return Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+                     * @param _status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +257,12 @@ namespace TencentCloud
                      */
                     int64_t m_vulId;
                     bool m_vulIdHasBeenSet;
+
+                    /**
+                     * Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

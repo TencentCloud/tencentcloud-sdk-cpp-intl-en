@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ImageIDHasBeenSet() const;
 
                     /**
-                     * 获取Image name
-                     * @return ImageName Image name
+                     * 获取Image Name
+                     * @return ImageName Image Name
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Image name
-                     * @param _imageName Image name
+                     * 设置Image Name
+                     * @param _imageName Image Name
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Image tag
-                     * @return ImageTag Image tag
+                     * 获取Mirror version
+                     * @return ImageTag Mirror version
                      * 
                      */
                     std::string GetImageTag() const;
 
                     /**
-                     * 设置Image tag
-                     * @param _imageTag Image tag
+                     * 设置Mirror version
+                     * @param _imageTag Mirror version
                      * 
                      */
                     void SetImageTag(const std::string& _imageTag);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ImageTagHasBeenSet() const;
 
                     /**
-                     * 获取Image namespace
-                     * @return Namespace Image namespace
+                     * 获取Image Namespace
+                     * @return Namespace Image Namespace
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Image namespace
-                     * @param _namespace Image namespace
+                     * 设置Image Namespace
+                     * @param _namespace Image Namespace
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Image address
-                     * @return ImageRepoAddress Image address
+                     * 获取Image address.
+                     * @return ImageRepoAddress Image address.
                      * 
                      */
                     std::string GetImageRepoAddress() const;
 
                     /**
-                     * 设置Image address
-                     * @param _imageRepoAddress Image address
+                     * 设置Image address.
+                     * @param _imageRepoAddress Image address.
                      * 
                      */
                     void SetImageRepoAddress(const std::string& _imageRepoAddress);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ImageRepoAddressHasBeenSet() const;
 
                     /**
-                     * 获取List of components
-                     * @return ComponentList List of components
+                     * 获取Component List
+                     * @return ComponentList Component List
                      * 
                      */
                     std::vector<VulAffectedImageComponentInfo> GetComponentList() const;
 
                     /**
-                     * 设置List of components
-                     * @param _componentList List of components
+                     * 设置Component List
+                     * @param _componentList Component List
                      * 
                      */
                     void SetComponentList(const std::vector<VulAffectedImageComponentInfo>& _componentList);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ComponentListHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is the latest image tag
-                     * @return IsLatestImage Whether it is the latest image tag
+                     * 获取Whether the Latest Version of the Image
+                     * @return IsLatestImage Whether the Latest Version of the Image
                      * 
                      */
                     bool GetIsLatestImage() const;
 
                     /**
-                     * 设置Whether it is the latest image tag
-                     * @param _isLatestImage Whether it is the latest image tag
+                     * 设置Whether the Latest Version of the Image
+                     * @param _isLatestImage Whether the Latest Version of the Image
                      * 
                      */
                     void SetIsLatestImage(const bool& _isLatestImage);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool IsLatestImageHasBeenSet() const;
 
                     /**
-                     * 获取Internal image asset ID
-                     * @return ImageAssetId Internal image asset ID
+                     * 获取Internal Image Asset ID
+                     * @return ImageAssetId Internal Image Asset ID
                      * 
                      */
                     int64_t GetImageAssetId() const;
 
                     /**
-                     * 设置Internal image asset ID
-                     * @param _imageAssetId Internal image asset ID
+                     * 设置Internal Image Asset ID
+                     * @param _imageAssetId Internal Image Asset ID
                      * 
                      */
                     void SetImageAssetId(const int64_t& _imageAssetId);
@@ -224,43 +224,43 @@ namespace TencentCloud
                     bool m_imageIDHasBeenSet;
 
                     /**
-                     * Image name
+                     * Image Name
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Image tag
+                     * Mirror version
                      */
                     std::string m_imageTag;
                     bool m_imageTagHasBeenSet;
 
                     /**
-                     * Image namespace
+                     * Image Namespace
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Image address
+                     * Image address.
                      */
                     std::string m_imageRepoAddress;
                     bool m_imageRepoAddressHasBeenSet;
 
                     /**
-                     * List of components
+                     * Component List
                      */
                     std::vector<VulAffectedImageComponentInfo> m_componentList;
                     bool m_componentListHasBeenSet;
 
                     /**
-                     * Whether it is the latest image tag
+                     * Whether the Latest Version of the Image
                      */
                     bool m_isLatestImage;
                     bool m_isLatestImageHasBeenSet;
 
                     /**
-                     * Internal image asset ID
+                     * Internal Image Asset ID
                      */
                     int64_t m_imageAssetId;
                     bool m_imageAssetIdHasBeenSet;

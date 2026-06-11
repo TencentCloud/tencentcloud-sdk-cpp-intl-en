@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Statement for search and analysis, with a maximum length of 12 KB
-                     * @return QueryString Statement for search and analysis, with a maximum length of 12 KB
+                     * 获取The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
+                     * @return QueryString The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
                      * 
                      */
                     std::string GetQueryString() const;
 
                     /**
-                     * 设置Statement for search and analysis, with a maximum length of 12 KB
-                     * @param _queryString Statement for search and analysis, with a maximum length of 12 KB
+                     * 设置The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
+                     * @param _queryString The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
                      * 
                      */
                     void SetQueryString(const std::string& _queryString);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Statement for search and analysis, with a maximum length of 12 KB
+                     * The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
                      */
                     std::string m_queryString;
                     bool m_queryStringHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/K8sApiAbnormalRuleScopeInfo.h>
 
 
 namespace TencentCloud
@@ -47,6 +48,94 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+                     * @return EffectAllCluster Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+                     * 
+                     */
+                    bool GetEffectAllCluster() const;
+
+                    /**
+                     * 设置Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+                     * @param _effectAllCluster Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+                     * 
+                     */
+                    void SetEffectAllCluster(const bool& _effectAllCluster);
+
+                    /**
+                     * 判断参数 EffectAllCluster 是否已赋值
+                     * @return EffectAllCluster 是否已赋值
+                     * 
+                     */
+                    bool EffectAllClusterHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of affected clusters
+                     * @return EffectClusterCount Total number of affected clusters
+                     * 
+                     */
+                    uint64_t GetEffectClusterCount() const;
+
+                    /**
+                     * 设置Total number of affected clusters
+                     * @param _effectClusterCount Total number of affected clusters
+                     * 
+                     */
+                    void SetEffectClusterCount(const uint64_t& _effectClusterCount);
+
+                    /**
+                     * 判断参数 EffectClusterCount 是否已赋值
+                     * @return EffectClusterCount 是否已赋值
+                     * 
+                     */
+                    bool EffectClusterCountHasBeenSet() const;
+
+                    /**
+                     * 获取Edit account
+                     * @return OprUin Edit account
+                     * 
+                     */
+                    std::string GetOprUin() const;
+
+                    /**
+                     * 设置Edit account
+                     * @param _oprUin Edit account
+                     * 
+                     */
+                    void SetOprUin(const std::string& _oprUin);
+
+                    /**
+                     * 判断参数 OprUin 是否已赋值
+                     * @return OprUin 是否已赋值
+                     * 
+                     */
+                    bool OprUinHasBeenSet() const;
+
+                    /**
+                     * 获取Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleActions Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetRuleActions() const;
+
+                    /**
+                     * 设置Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _ruleActions Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRuleActions(const std::vector<std::string>& _ruleActions);
+
+                    /**
+                     * 判断参数 RuleActions 是否已赋值
+                     * @return RuleActions 是否已赋值
+                     * 
+                     */
+                    bool RuleActionsHasBeenSet() const;
+
+                    /**
                      * 获取Rule ID
                      * @return RuleID Rule ID
                      * 
@@ -66,6 +155,31 @@ namespace TencentCloud
                      * 
                      */
                     bool RuleIDHasBeenSet() const;
+
+                    /**
+                     * 获取Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleInfoList Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<K8sApiAbnormalRuleScopeInfo> GetRuleInfoList() const;
+
+                    /**
+                     * 设置Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _ruleInfoList Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetRuleInfoList(const std::vector<K8sApiAbnormalRuleScopeInfo>& _ruleInfoList);
+
+                    /**
+                     * 判断参数 RuleInfoList 是否已赋值
+                     * @return RuleInfoList 是否已赋值
+                     * 
+                     */
+                    bool RuleInfoListHasBeenSet() const;
 
                     /**
                      * 获取Rule name
@@ -118,25 +232,25 @@ RT_USER User defined
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Total number of affected clusters
-                     * @return EffectClusterCount Total number of affected clusters
+                     * 获取Status
+                     * @return Status Status
                      * 
                      */
-                    uint64_t GetEffectClusterCount() const;
+                    bool GetStatus() const;
 
                     /**
-                     * 设置Total number of affected clusters
-                     * @param _effectClusterCount Total number of affected clusters
+                     * 设置Status
+                     * @param _status Status
                      * 
                      */
-                    void SetEffectClusterCount(const uint64_t& _effectClusterCount);
+                    void SetStatus(const bool& _status);
 
                     /**
-                     * 判断参数 EffectClusterCount 是否已赋值
-                     * @return EffectClusterCount 是否已赋值
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
                      * 
                      */
-                    bool EffectClusterCountHasBeenSet() const;
+                    bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Update time
@@ -159,55 +273,45 @@ RT_USER User defined
                      */
                     bool UpdateTimeHasBeenSet() const;
 
-                    /**
-                     * 获取Edit account
-                     * @return OprUin Edit account
-                     * 
-                     */
-                    std::string GetOprUin() const;
-
-                    /**
-                     * 设置Edit account
-                     * @param _oprUin Edit account
-                     * 
-                     */
-                    void SetOprUin(const std::string& _oprUin);
-
-                    /**
-                     * 判断参数 OprUin 是否已赋值
-                     * @return OprUin 是否已赋值
-                     * 
-                     */
-                    bool OprUinHasBeenSet() const;
-
-                    /**
-                     * 获取Status
-                     * @return Status Status
-                     * 
-                     */
-                    bool GetStatus() const;
-
-                    /**
-                     * 设置Status
-                     * @param _status Status
-                     * 
-                     */
-                    void SetStatus(const bool& _status);
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     * 
-                     */
-                    bool StatusHasBeenSet() const;
-
                 private:
+
+                    /**
+                     * Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+                     */
+                    bool m_effectAllCluster;
+                    bool m_effectAllClusterHasBeenSet;
+
+                    /**
+                     * Total number of affected clusters
+                     */
+                    uint64_t m_effectClusterCount;
+                    bool m_effectClusterCountHasBeenSet;
+
+                    /**
+                     * Edit account
+                     */
+                    std::string m_oprUin;
+                    bool m_oprUinHasBeenSet;
+
+                    /**
+                     * Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_ruleActions;
+                    bool m_ruleActionsHasBeenSet;
 
                     /**
                      * Rule ID
                      */
                     std::string m_ruleID;
                     bool m_ruleIDHasBeenSet;
+
+                    /**
+                     * Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<K8sApiAbnormalRuleScopeInfo> m_ruleInfoList;
+                    bool m_ruleInfoListHasBeenSet;
 
                     /**
                      * Rule name
@@ -224,28 +328,16 @@ RT_USER User defined
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Total number of affected clusters
+                     * Status
                      */
-                    uint64_t m_effectClusterCount;
-                    bool m_effectClusterCountHasBeenSet;
+                    bool m_status;
+                    bool m_statusHasBeenSet;
 
                     /**
                      * Update time
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
-
-                    /**
-                     * Edit account
-                     */
-                    std::string m_oprUin;
-                    bool m_oprUinHasBeenSet;
-
-                    /**
-                     * Status
-                     */
-                    bool m_status;
-                    bool m_statusHasBeenSet;
 
                 };
             }

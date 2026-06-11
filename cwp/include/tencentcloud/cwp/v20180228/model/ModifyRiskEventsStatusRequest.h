@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
-                     * @return Operate Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+                     * 获取Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
+                     * @return Operate Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
                      * 
                      */
                     uint64_t GetOperate() const;
 
                     /**
-                     * 设置Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
-                     * @param _operate Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+                     * 设置Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
+                     * @param _operate Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
                      * 
                      */
                     void SetOperate(const uint64_t& _operate);
@@ -267,10 +267,35 @@ Filter criteria
                      */
                     bool FiltersHasBeenSet() const;
 
+                    /**
+                     * 获取When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+                     * @return DoClean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+                     * 
+                     */
+                    bool GetDoClean() const;
+
+                    /**
+                     * 设置When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+                     * @param _doClean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+                     * 
+                     */
+                    void SetDoClean(const bool& _doClean);
+
+                    /**
+                     * 判断参数 DoClean 是否已赋值
+                     * @return DoClean 是否已赋值
+                     * 
+                     */
+                    bool DoCleanHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+                     * Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
                      */
                     uint64_t m_operate;
                     bool m_operateHasBeenSet;
@@ -330,6 +355,13 @@ Filter criteria
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+                     */
+                    bool m_doClean;
+                    bool m_doCleanHasBeenSet;
 
                 };
             }

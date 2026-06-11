@@ -72,10 +72,8 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quuids List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Affected host quuid list
+                     * @return Quuids Affected host quuid list
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
@@ -102,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FlagshipCountHasBeenSet() const;
 
                     /**
-                     * 获取List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIds List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Affected host ID list.
+                     * @return InstanceIds Affected host ID list.
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -132,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoIncludeHasBeenSet() const;
 
                     /**
-                     * 获取List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExcludeInstanceIds List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Excluded host ID list.
+                     * @return ExcludeInstanceIds Excluded host ID list.
                      * 
                      */
                     std::vector<std::string> GetExcludeInstanceIds() const;
@@ -162,8 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Affected host quuid list
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;
@@ -175,8 +168,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_flagshipCountHasBeenSet;
 
                     /**
-                     * List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Affected host ID list.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -188,8 +180,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_autoIncludeHasBeenSet;
 
                     /**
-                     * List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Excluded host ID list.
                      */
                     std::vector<std::string> m_excludeInstanceIds;
                     bool m_excludeInstanceIdsHasBeenSet;

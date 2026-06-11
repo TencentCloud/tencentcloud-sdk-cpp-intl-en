@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterID <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterID <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -89,27 +89,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
-                     * @return Status Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+                     * 获取<p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+                     * @return Status <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
-                     * @param _status Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+                     * 设置<p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+                     * @param _status <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -122,15 +110,40 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Bound rule name
-                     * @return BindRuleName Bound rule name
+                     * 获取<p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BindRuleID <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetBindRuleID() const;
+
+                    /**
+                     * 设置<p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bindRuleID <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBindRuleID(const std::string& _bindRuleID);
+
+                    /**
+                     * 判断参数 BindRuleID 是否已赋值
+                     * @return BindRuleID 是否已赋值
+                     * 
+                     */
+                    bool BindRuleIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Binding rule name</p>
+                     * @return BindRuleName <p>Binding rule name</p>
                      * 
                      */
                     std::string GetBindRuleName() const;
 
                     /**
-                     * 设置Bound rule name
-                     * @param _bindRuleName Bound rule name
+                     * 设置<p>Binding rule name</p>
+                     * @param _bindRuleName <p>Binding rule name</p>
                      * 
                      */
                     void SetBindRuleName(const std::string& _bindRuleName);
@@ -143,27 +156,15 @@ namespace TencentCloud
                     bool BindRuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
-                     * @return ClusterType Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+                     * 获取<p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+                     * @return ClusterType <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
                      * 
                      */
                     std::string GetClusterType() const;
 
                     /**
-                     * 设置Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
-                     * @param _clusterType Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+                     * 设置<p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+                     * @param _clusterType <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -176,15 +177,15 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster version
-                     * @return ClusterVersion Cluster version
+                     * 获取<p>Cluster edition</p>
+                     * @return ClusterVersion <p>Cluster edition</p>
                      * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
-                     * 设置Cluster version
-                     * @param _clusterVersion Cluster version
+                     * 设置<p>Cluster edition</p>
+                     * @param _clusterVersion <p>Cluster edition</p>
                      * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
@@ -197,15 +198,15 @@ namespace TencentCloud
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
-                     * 获取MEM usage
-                     * @return MemLimit MEM usage
+                     * 获取<p>Memory capacity</p>
+                     * @return MemLimit <p>Memory capacity</p>
                      * 
                      */
                     int64_t GetMemLimit() const;
 
                     /**
-                     * 设置MEM usage
-                     * @param _memLimit MEM usage
+                     * 设置<p>Memory capacity</p>
+                     * @param _memLimit <p>Memory capacity</p>
                      * 
                      */
                     void SetMemLimit(const int64_t& _memLimit);
@@ -218,15 +219,15 @@ namespace TencentCloud
                     bool MemLimitHasBeenSet() const;
 
                     /**
-                     * 获取cpu
-                     * @return CpuLimit cpu
+                     * 获取<p>cpu</p>
+                     * @return CpuLimit <p>cpu</p>
                      * 
                      */
                     int64_t GetCpuLimit() const;
 
                     /**
-                     * 设置cpu
-                     * @param _cpuLimit cpu
+                     * 设置<p>cpu</p>
+                     * @param _cpuLimit <p>cpu</p>
                      * 
                      */
                     void SetCpuLimit(const int64_t& _cpuLimit);
@@ -238,61 +239,116 @@ namespace TencentCloud
                      */
                     bool CpuLimitHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+                     * @return ClusterAuditStatus <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+                     * 
+                     */
+                    std::string GetClusterAuditStatus() const;
+
+                    /**
+                     * 设置<p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+                     * @param _clusterAuditStatus <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+                     * 
+                     */
+                    void SetClusterAuditStatus(const std::string& _clusterAuditStatus);
+
+                    /**
+                     * 判断参数 ClusterAuditStatus 是否已赋值
+                     * @return ClusterAuditStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterAuditStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+                     * @return AccessedStatus <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+                     * 
+                     */
+                    std::string GetAccessedStatus() const;
+
+                    /**
+                     * 设置<p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+                     * @param _accessedStatus <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+                     * 
+                     */
+                    void SetAccessedStatus(const std::string& _accessedStatus);
+
+                    /**
+                     * 判断参数 AccessedStatus 是否已赋值
+                     * @return AccessedStatus 是否已赋值
+                     * 
+                     */
+                    bool AccessedStatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+                     * <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Bound rule name
+                     * <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_bindRuleID;
+                    bool m_bindRuleIDHasBeenSet;
+
+                    /**
+                     * <p>Binding rule name</p>
                      */
                     std::string m_bindRuleName;
                     bool m_bindRuleNameHasBeenSet;
 
                     /**
-                     * Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+                     * <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Cluster version
+                     * <p>Cluster edition</p>
                      */
                     std::string m_clusterVersion;
                     bool m_clusterVersionHasBeenSet;
 
                     /**
-                     * MEM usage
+                     * <p>Memory capacity</p>
                      */
                     int64_t m_memLimit;
                     bool m_memLimitHasBeenSet;
 
                     /**
-                     * cpu
+                     * <p>cpu</p>
                      */
                     int64_t m_cpuLimit;
                     bool m_cpuLimitHasBeenSet;
+
+                    /**
+                     * <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+                     */
+                    std::string m_clusterAuditStatus;
+                    bool m_clusterAuditStatusHasBeenSet;
+
+                    /**
+                     * <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+                     */
+                    std::string m_accessedStatus;
+                    bool m_accessedStatusHasBeenSet;
 
                 };
             }

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EmergentMsgList Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulEmergentMsgInfo> GetEmergentMsgList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulEmergentMsgInfo> m_emergentMsgList;
                     bool m_emergentMsgListHasBeenSet;

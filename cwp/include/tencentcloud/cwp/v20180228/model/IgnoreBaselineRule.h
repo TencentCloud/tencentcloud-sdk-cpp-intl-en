@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleName Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleId Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Baseline detection item id
+                     * @return RuleId Baseline detection item id
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
-                     * 设置Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleId Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Baseline detection item id
+                     * @param _ruleId Baseline detection item id
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Fix Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fixing suggestion
+                     * @return Fix Fixing suggestion
                      * 
                      */
                     std::string GetFix() const;
 
                     /**
-                     * 设置Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fix Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fixing suggestion
+                     * @param _fix Fixing suggestion
                      * 
                      */
                     void SetFix(const std::string& _fix);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EffectHostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEffectHostCount() const;
 
                     /**
                      * 设置Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _effectHostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEffectHostCount(const uint64_t& _effectHostCount);
@@ -175,35 +155,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Baseline detection item id
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
                      * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Fixing suggestion
                      */
                     std::string m_fix;
                     bool m_fixHasBeenSet;
 
                     /**
                      * Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_effectHostCount;
                     bool m_effectHostCountHasBeenSet;

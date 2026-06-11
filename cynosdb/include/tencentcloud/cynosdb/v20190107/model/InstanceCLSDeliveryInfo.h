@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance log delivery information.
                 */
                 class InstanceCLSDeliveryInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,22 +68,18 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
+                     * 获取Instance name.
 
-
-                     * @return InstanceName Instance name
-
+                     * @return InstanceName Instance name.
 
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
+                     * 设置Instance name.
 
-
-                     * @param _instanceName Instance name
-
+                     * @param _instanceName Instance name.
 
                      * 
                      */
@@ -122,15 +118,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic name
-                     * @return TopicName Log topic name
+                     * 获取Log topic name.
+                     * @return TopicName Log topic name.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Log topic name
-                     * @param _topicName Log topic name
+                     * 设置Log topic name.
+                     * @param _topicName Log topic name.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -144,18 +140,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Log set id.
-
                      * @return GroupId Log set id.
-
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Log set id.
-
                      * @param _groupId Log set id.
-
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -170,9 +162,7 @@ namespace TencentCloud
                     /**
                      * 获取Log set name.
 
-
                      * @return GroupName Log set name.
-
 
                      * 
                      */
@@ -181,9 +171,7 @@ namespace TencentCloud
                     /**
                      * 设置Log set name.
 
-
                      * @param _groupName Log set name.
-
 
                      * 
                      */
@@ -198,18 +186,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Log delivery region.
-
                      * @return Region Log delivery region.
-
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Log delivery region.
-
                      * @param _region Log delivery region.
-
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -223,18 +207,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Delivery status: creating, running, offlining, offlined.
-
                      * @return Status Delivery status: creating, running, offlining, offlined.
-
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Delivery status: creating, running, offlining, offlined.
-
                      * @param _status Delivery status: creating, running, offlining, offlined.
-
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -270,14 +250,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
-
+                     * Instance name.
 
                      */
                     std::string m_instanceName;
@@ -291,14 +270,13 @@ namespace TencentCloud
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log topic name
+                     * Log topic name.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
                      * Log set id.
-
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
@@ -306,21 +284,18 @@ namespace TencentCloud
                     /**
                      * Log set name.
 
-
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
                      * Log delivery region.
-
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
                      * Delivery status: creating, running, offlining, offlined.
-
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

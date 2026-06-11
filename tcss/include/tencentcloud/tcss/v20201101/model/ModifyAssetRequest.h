@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sync all
-                     * @return All Sync all
+                     * 获取Synchronizes all regular nodes.
+                     * @return All Synchronizes all regular nodes.
                      * 
                      */
                     bool GetAll() const;
 
                     /**
-                     * 设置Sync all
-                     * @param _all Sync all
+                     * 设置Synchronizes all regular nodes.
+                     * @param _all Synchronizes all regular nodes.
                      * 
                      */
                     void SetAll(const bool& _all);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
-                     * @return Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * 获取List of UUIDs of hosts to be synchronized. 
+                     * @return Hosts List of UUIDs of hosts to be synchronized. 
                      * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
-                     * 设置List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
-                     * @param _hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * 设置List of UUIDs of hosts to be synchronized. 
+                     * @param _hosts List of UUIDs of hosts to be synchronized. 
                      * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
@@ -84,19 +84,100 @@ namespace TencentCloud
                      */
                     bool HostsHasBeenSet() const;
 
+                    /**
+                     * 获取Synchronizes all super nodes.
+                     * @return AllSuperHost Synchronizes all super nodes.
+                     * 
+                     */
+                    bool GetAllSuperHost() const;
+
+                    /**
+                     * 设置Synchronizes all super nodes.
+                     * @param _allSuperHost Synchronizes all super nodes.
+                     * 
+                     */
+                    void SetAllSuperHost(const bool& _allSuperHost);
+
+                    /**
+                     * 判断参数 AllSuperHost 是否已赋值
+                     * @return AllSuperHost 是否已赋值
+                     * 
+                     */
+                    bool AllSuperHostHasBeenSet() const;
+
+                    /**
+                     * 获取Unique IDs of super nodes to be synchronized.
+                     * @return NodeUniqueIds Unique IDs of super nodes to be synchronized.
+                     * 
+                     */
+                    std::vector<std::string> GetNodeUniqueIds() const;
+
+                    /**
+                     * 设置Unique IDs of super nodes to be synchronized.
+                     * @param _nodeUniqueIds Unique IDs of super nodes to be synchronized.
+                     * 
+                     */
+                    void SetNodeUniqueIds(const std::vector<std::string>& _nodeUniqueIds);
+
+                    /**
+                     * 判断参数 NodeUniqueIds 是否已赋值
+                     * @return NodeUniqueIds 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Timeout (in seconds). Minimum value: 3600.
+                     * @return TimeoutSec Timeout (in seconds). Minimum value: 3600.
+                     * 
+                     */
+                    uint64_t GetTimeoutSec() const;
+
+                    /**
+                     * 设置Timeout (in seconds). Minimum value: 3600.
+                     * @param _timeoutSec Timeout (in seconds). Minimum value: 3600.
+                     * 
+                     */
+                    void SetTimeoutSec(const uint64_t& _timeoutSec);
+
+                    /**
+                     * 判断参数 TimeoutSec 是否已赋值
+                     * @return TimeoutSec 是否已赋值
+                     * 
+                     */
+                    bool TimeoutSecHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Sync all
+                     * Synchronizes all regular nodes.
                      */
                     bool m_all;
                     bool m_allHasBeenSet;
 
                     /**
-                     * List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * List of UUIDs of hosts to be synchronized. 
                      */
                     std::vector<std::string> m_hosts;
                     bool m_hostsHasBeenSet;
+
+                    /**
+                     * Synchronizes all super nodes.
+                     */
+                    bool m_allSuperHost;
+                    bool m_allSuperHostHasBeenSet;
+
+                    /**
+                     * Unique IDs of super nodes to be synchronized.
+                     */
+                    std::vector<std::string> m_nodeUniqueIds;
+                    bool m_nodeUniqueIdsHasBeenSet;
+
+                    /**
+                     * Timeout (in seconds). Minimum value: 3600.
+                     */
+                    uint64_t m_timeoutSec;
+                    bool m_timeoutSecHasBeenSet;
 
                 };
             }

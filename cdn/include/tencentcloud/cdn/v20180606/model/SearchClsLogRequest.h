@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
-                     * @return Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+                     * 获取Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
+                     * @return Query Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
                      * 
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
-                     * @param _query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+                     * 设置Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
+                     * @param _query Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
                      * 
                      */
                     void SetQuery(const std::string& _query);
@@ -270,7 +270,7 @@ namespace TencentCloud
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+                     * Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

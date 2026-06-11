@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -139,7 +135,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

@@ -252,19 +252,15 @@ namespace TencentCloud
                     bool FailedPolicyItemCountHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time.
+                     * @return LastCheckTime Last detection time.
                      * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time.
+                     * @param _lastCheckTime Last detection time.
                      * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
@@ -277,27 +273,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastCheckTimeHasBeenSet() const;
 
                     /**
-                     * 获取Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckResult Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
+                     * @return CheckResult Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
                      * 
                      */
                     std::string GetCheckResult() const;
 
                     /**
-                     * 设置Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkResult Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
+                     * @param _checkResult Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
                      * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
@@ -428,17 +420,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_failedPolicyItemCountHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time.
                      */
                     std::string m_lastCheckTime;
                     bool m_lastCheckTimeHasBeenSet;
 
                     /**
-                     * Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
                      */
                     std::string m_checkResult;
                     bool m_checkResultHasBeenSet;

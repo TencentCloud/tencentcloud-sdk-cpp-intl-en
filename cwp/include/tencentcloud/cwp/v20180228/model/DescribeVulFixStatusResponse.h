@@ -47,9 +47,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixStartTime Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFixStartTime() const;
@@ -63,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixEndTime Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFixEndTime() const;
@@ -79,9 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixSuccessCnt Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetFixSuccessCnt() const;
@@ -137,9 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotList Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulFixStatusSnapshotInfo> GetSnapshotList() const;
@@ -153,9 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulFixList Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulFixStatusInfo> GetVulFixList() const;
@@ -182,8 +172,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SnapshotProgressHasBeenSet() const;
 
                     /**
-                     * 获取Fixing progress (0-100)
-                     * @return FixProgress Fixing progress (0-100)
+                     * 获取Fixing progress (0-100).
+                     * @return FixProgress Fixing progress (0-100).
                      * 
                      */
                     uint64_t GetFixProgress() const;
@@ -224,10 +214,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsRetrySnapshotHasBeenSet() const;
 
                     /**
-                     * 获取Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotFailCnt Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Snapshot creation failures
+                     * @return SnapshotFailCnt Snapshot creation failures
                      * 
                      */
                     uint64_t GetSnapshotFailCnt() const;
@@ -240,8 +228,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SnapshotFailCntHasBeenSet() const;
 
                     /**
-                     * 获取Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsAllowRetry Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to allow retry 0: not allowed 1: allowed
+                     * @return IsAllowRetry Whether to allow retry 0: not allowed 1: allowed
                      * 
                      */
                     uint64_t GetIsAllowRetry() const;
@@ -257,21 +245,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fixStartTime;
                     bool m_fixStartTimeHasBeenSet;
 
                     /**
                      * Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fixEndTime;
                     bool m_fixEndTimeHasBeenSet;
 
                     /**
                      * Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_fixSuccessCnt;
                     bool m_fixSuccessCntHasBeenSet;
@@ -296,14 +281,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulFixStatusSnapshotInfo> m_snapshotList;
                     bool m_snapshotListHasBeenSet;
 
                     /**
                      * Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulFixStatusInfo> m_vulFixList;
                     bool m_vulFixListHasBeenSet;
@@ -315,7 +298,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_snapshotProgressHasBeenSet;
 
                     /**
-                     * Fixing progress (0-100)
+                     * Fixing progress (0-100).
                      */
                     uint64_t m_fixProgress;
                     bool m_fixProgressHasBeenSet;
@@ -333,14 +316,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isRetrySnapshotHasBeenSet;
 
                     /**
-                     * Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Snapshot creation failures
                      */
                     uint64_t m_snapshotFailCnt;
                     bool m_snapshotFailCntHasBeenSet;
 
                     /**
-                     * Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to allow retry 0: not allowed 1: allowed
                      */
                     uint64_t m_isAllowRetry;
                     bool m_isAllowRetryHasBeenSet;

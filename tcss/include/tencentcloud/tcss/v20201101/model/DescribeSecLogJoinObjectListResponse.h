@@ -72,6 +72,48 @@ namespace TencentCloud
                      */
                     bool ListHasBeenSet() const;
 
+                    /**
+                     * 获取Log node scope type. 0: specified; 1: all.
+                     * @return RangeType Log node scope type. 0: specified; 1: all.
+                     * 
+                     */
+                    int64_t GetRangeType() const;
+
+                    /**
+                     * 判断参数 RangeType 是否已赋值
+                     * @return RangeType 是否已赋值
+                     * 
+                     */
+                    bool RangeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * @return AutoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * 
+                     */
+                    bool GetAutoJoin() const;
+
+                    /**
+                     * 判断参数 AutoJoin 是否已赋值
+                     * @return AutoJoin 是否已赋值
+                     * 
+                     */
+                    bool AutoJoinHasBeenSet() const;
+
+                    /**
+                     * 获取Number of excluded nodes.
+                     * @return ExcludedCount Number of excluded nodes.
+                     * 
+                     */
+                    uint64_t GetExcludedCount() const;
+
+                    /**
+                     * 判断参数 ExcludedCount 是否已赋值
+                     * @return ExcludedCount 是否已赋值
+                     * 
+                     */
+                    bool ExcludedCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -85,6 +127,24 @@ namespace TencentCloud
                      */
                     std::vector<SecLogJoinObjectInfo> m_list;
                     bool m_listHasBeenSet;
+
+                    /**
+                     * Log node scope type. 0: specified; 1: all.
+                     */
+                    int64_t m_rangeType;
+                    bool m_rangeTypeHasBeenSet;
+
+                    /**
+                     * Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     */
+                    bool m_autoJoin;
+                    bool m_autoJoinHasBeenSet;
+
+                    /**
+                     * Number of excluded nodes.
+                     */
+                    uint64_t m_excludedCount;
+                    bool m_excludedCountHasBeenSet;
 
                 };
             }

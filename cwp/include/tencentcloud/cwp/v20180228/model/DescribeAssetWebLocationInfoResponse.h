@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebLocation Site information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Site information.
+                     * @return WebLocation Site information.
                      * 
                      */
                     AssetWebLocationInfo GetWebLocation() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Site information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Site information.
                      */
                     AssetWebLocationInfo m_webLocation;
                     bool m_webLocationHasBeenSet;

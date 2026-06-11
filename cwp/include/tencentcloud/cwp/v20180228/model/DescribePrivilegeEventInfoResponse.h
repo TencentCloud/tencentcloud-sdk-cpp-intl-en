@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivilegeEventInfo Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PrivilegeEventInfo GetPrivilegeEventInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PrivilegeEventInfo m_privilegeEventInfo;
                     bool m_privilegeEventInfoHasBeenSet;

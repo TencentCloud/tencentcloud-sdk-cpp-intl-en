@@ -47,27 +47,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-policy ID
-                     * @return RuleId Sub-policy ID
-                     * 
-                     */
-                    std::string GetRuleId() const;
-
-                    /**
-                     * 设置Sub-policy ID
-                     * @param _ruleId Sub-policy ID
-                     * 
-                     */
-                    void SetRuleId(const std::string& _ruleId);
-
-                    /**
-                     * 判断参数 RuleId 是否已赋值
-                     * @return RuleId 是否已赋值
-                     * 
-                     */
-                    bool RuleIdHasBeenSet() const;
-
-                    /**
                      * 获取Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
                      * @return IsEnable Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
                      * 
@@ -87,6 +66,27 @@ namespace TencentCloud
                      * 
                      */
                     bool IsEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Sub-policy ID
+                     * @return RuleId Sub-policy ID
+                     * 
+                     */
+                    std::string GetRuleId() const;
+
+                    /**
+                     * 设置Sub-policy ID
+                     * @param _ruleId Sub-policy ID
+                     * 
+                     */
+                    void SetRuleId(const std::string& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     * 
+                     */
+                    bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Policy mode. `RULE_MODE_RELEASE`: Allow.
@@ -167,19 +167,15 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
+                     * @return RuleLevel Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
                      * 
                      */
                     std::string GetRuleLevel() const;
 
                     /**
-                     * 设置Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
+                     * @param _ruleLevel Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
                      * 
                      */
                     void SetRuleLevel(const std::string& _ruleLevel);
@@ -194,16 +190,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sub-policy ID
-                     */
-                    std::string m_ruleId;
-                    bool m_ruleIdHasBeenSet;
-
-                    /**
                      * Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
                      */
                     bool m_isEnable;
                     bool m_isEnableHasBeenSet;
+
+                    /**
+                     * Sub-policy ID
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
 
                     /**
                      * Policy mode. `RULE_MODE_RELEASE`: Allow.
@@ -227,8 +223,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
                      */
                     std::string m_ruleLevel;
                     bool m_ruleLevelHasBeenSet;

@@ -153,18 +153,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Category Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCategory() const;
 
                     /**
                      * 设置Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _category Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCategory(const uint64_t& _category);
@@ -177,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host UUID.
+                     * @return Uuid Host UUID.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host UUID.
+                     * @param _uuid Host UUID.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -235,14 +227,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host UUID.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

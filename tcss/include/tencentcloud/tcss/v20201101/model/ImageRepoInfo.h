@@ -342,18 +342,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanVirusError() const;
 
                     /**
                      * 设置Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanVirusError(const std::string& _scanVirusError);
@@ -366,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVirusErrorHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability scan error.
+                     * @return ScanVulError Vulnerability scan error.
                      * 
                      */
                     std::string GetScanVulError() const;
 
                     /**
-                     * 设置Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability scan error.
+                     * @param _scanVulError Vulnerability scan error.
                      * 
                      */
                     void SetScanVulError(const std::string& _scanVulError);
@@ -454,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取High risk scan error
+                     * @return ScanRiskError High risk scan error
                      * 
                      */
                     std::string GetScanRiskError() const;
 
                     /**
-                     * 设置High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置High risk scan error
+                     * @param _scanRiskError High risk scan error
                      * 
                      */
                     void SetScanRiskError(const std::string& _scanRiskError);
@@ -479,19 +467,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRiskErrorHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVirusProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sensitive information scan progress
+                     * @return ScanVirusProgress Sensitive information scan progress
                      * 
                      */
                     uint64_t GetScanVirusProgress() const;
 
                     /**
-                     * 设置Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanVirusProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sensitive information scan progress
+                     * @param _scanVirusProgress Sensitive information scan progress
                      * 
                      */
                     void SetScanVirusProgress(const uint64_t& _scanVirusProgress);
@@ -504,19 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVirusProgressHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVulProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan scan progress.
+                     * @return ScanVulProgress Trojan scan progress.
                      * 
                      */
                     uint64_t GetScanVulProgress() const;
 
                     /**
-                     * 设置Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanVulProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Trojan scan progress.
+                     * @param _scanVulProgress Trojan scan progress.
                      * 
                      */
                     void SetScanVulProgress(const uint64_t& _scanVulProgress);
@@ -529,19 +509,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVulProgressHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRiskProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability scan progress.
+                     * @return ScanRiskProgress Vulnerability scan progress.
                      * 
                      */
                     uint64_t GetScanRiskProgress() const;
 
                     /**
-                     * 设置Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanRiskProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability scan progress.
+                     * @param _scanRiskProgress Vulnerability scan progress.
                      * 
                      */
                     void SetScanRiskProgress(const uint64_t& _scanRiskProgress);
@@ -554,19 +530,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRiskProgressHasBeenSet() const;
 
                     /**
-                     * 获取Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remaining scan time (seconds)
+                     * @return ScanRemainTime Remaining scan time (seconds)
                      * 
                      */
                     uint64_t GetScanRemainTime() const;
 
                     /**
-                     * 设置Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Remaining scan time (seconds)
+                     * @param _scanRemainTime Remaining scan time (seconds)
                      * 
                      */
                     void SetScanRemainTime(const uint64_t& _scanRemainTime);
@@ -579,19 +551,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRemainTimeHasBeenSet() const;
 
                     /**
-                     * 获取CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取cve scan status
+                     * @return CveStatus cve scan status
                      * 
                      */
                     std::string GetCveStatus() const;
 
                     /**
-                     * 设置CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置cve scan status
+                     * @param _cveStatus cve scan status
                      * 
                      */
                     void SetCveStatus(const std::string& _cveStatus);
@@ -604,19 +572,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CveStatusHasBeenSet() const;
 
                     /**
-                     * 获取High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取High risk scan status
+                     * @return RiskStatus High risk scan status
                      * 
                      */
                     std::string GetRiskStatus() const;
 
                     /**
-                     * 设置High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置High risk scan status
+                     * @param _riskStatus High risk scan status
                      * 
                      */
                     void SetRiskStatus(const std::string& _riskStatus);
@@ -629,19 +593,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan scan status
+                     * @return VirusStatus Trojan scan status
                      * 
                      */
                     std::string GetVirusStatus() const;
 
                     /**
-                     * 设置Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _virusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Trojan scan status
+                     * @param _virusStatus Trojan scan status
                      * 
                      */
                     void SetVirusStatus(const std::string& _virusStatus);
@@ -655,18 +615,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
                      * 设置Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -742,19 +698,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image ID.
+                     * @return ImageId Image ID.
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Image ID.
+                     * @param _imageId Image ID.
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -767,19 +719,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image Creation Time
+                     * @return ImageCreateTime Image Creation Time
                      * 
                      */
                     std::string GetImageCreateTime() const;
 
                     /**
-                     * 设置Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Image Creation Time
+                     * @param _imageCreateTime Image Creation Time
                      * 
                      */
                     void SetImageCreateTime(const std::string& _imageCreateTime);
@@ -792,19 +740,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsLatestImage Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the Latest Version of the Image
+                     * @return IsLatestImage Whether the Latest Version of the Image
                      * 
                      */
                     bool GetIsLatestImage() const;
 
                     /**
-                     * 设置Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isLatestImage Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the Latest Version of the Image
+                     * @param _isLatestImage Whether the Latest Version of the Image
                      * 
                      */
                     void SetIsLatestImage(const bool& _isLatestImage);
@@ -815,6 +759,258 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool IsLatestImageHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LowLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetLowLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _lowLevelVulCnt 
+                     * 
+                     */
+                    void SetLowLevelVulCnt(const uint64_t& _lowLevelVulCnt);
+
+                    /**
+                     * 判断参数 LowLevelVulCnt 是否已赋值
+                     * @return LowLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool LowLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MediumLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetMediumLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _mediumLevelVulCnt 
+                     * 
+                     */
+                    void SetMediumLevelVulCnt(const uint64_t& _mediumLevelVulCnt);
+
+                    /**
+                     * 判断参数 MediumLevelVulCnt 是否已赋值
+                     * @return MediumLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool MediumLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HighLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetHighLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _highLevelVulCnt 
+                     * 
+                     */
+                    void SetHighLevelVulCnt(const uint64_t& _highLevelVulCnt);
+
+                    /**
+                     * 判断参数 HighLevelVulCnt 是否已赋值
+                     * @return HighLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool HighLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CriticalLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetCriticalLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _criticalLevelVulCnt 
+                     * 
+                     */
+                    void SetCriticalLevelVulCnt(const uint64_t& _criticalLevelVulCnt);
+
+                    /**
+                     * 判断参数 CriticalLevelVulCnt 是否已赋值
+                     * @return CriticalLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool CriticalLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ContainerCnt 
+                     * 
+                     */
+                    uint64_t GetContainerCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _containerCnt 
+                     * 
+                     */
+                    void SetContainerCnt(const uint64_t& _containerCnt);
+
+                    /**
+                     * 判断参数 ContainerCnt 是否已赋值
+                     * @return ContainerCnt 是否已赋值
+                     * 
+                     */
+                    bool ContainerCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ComponentCnt 
+                     * 
+                     */
+                    uint64_t GetComponentCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _componentCnt 
+                     * 
+                     */
+                    void SetComponentCnt(const uint64_t& _componentCnt);
+
+                    /**
+                     * 判断参数 ComponentCnt 是否已赋值
+                     * @return ComponentCnt 是否已赋值
+                     * 
+                     */
+                    bool ComponentCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsRunning 
+                     * 
+                     */
+                    bool GetIsRunning() const;
+
+                    /**
+                     * 设置
+                     * @param _isRunning 
+                     * 
+                     */
+                    void SetIsRunning(const bool& _isRunning);
+
+                    /**
+                     * 判断参数 IsRunning 是否已赋值
+                     * @return IsRunning 是否已赋值
+                     * 
+                     */
+                    bool IsRunningHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HasNeedFixVul 
+                     * 
+                     */
+                    bool GetHasNeedFixVul() const;
+
+                    /**
+                     * 设置
+                     * @param _hasNeedFixVul 
+                     * 
+                     */
+                    void SetHasNeedFixVul(const bool& _hasNeedFixVul);
+
+                    /**
+                     * 判断参数 HasNeedFixVul 是否已赋值
+                     * @return HasNeedFixVul 是否已赋值
+                     * 
+                     */
+                    bool HasNeedFixVulHasBeenSet() const;
+
+                    /**
+                     * 获取Sensitive information
+                     * @return SensitiveInfoCnt Sensitive information
+                     * 
+                     */
+                    uint64_t GetSensitiveInfoCnt() const;
+
+                    /**
+                     * 设置Sensitive information
+                     * @param _sensitiveInfoCnt Sensitive information
+                     * 
+                     */
+                    void SetSensitiveInfoCnt(const uint64_t& _sensitiveInfoCnt);
+
+                    /**
+                     * 判断参数 SensitiveInfoCnt 是否已赋值
+                     * @return SensitiveInfoCnt 是否已赋值
+                     * 
+                     */
+                    bool SensitiveInfoCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecommendedFix 
+                     * 
+                     */
+                    bool GetRecommendedFix() const;
+
+                    /**
+                     * 设置
+                     * @param _recommendedFix 
+                     * 
+                     */
+                    void SetRecommendedFix(const bool& _recommendedFix);
+
+                    /**
+                     * 判断参数 RecommendedFix 是否已赋值
+                     * @return RecommendedFix 是否已赋值
+                     * 
+                     */
+                    bool RecommendedFixHasBeenSet() const;
+
+                    /**
+                     * 获取Solution
+                     * @return Solution Solution
+                     * 
+                     */
+                    std::string GetSolution() const;
+
+                    /**
+                     * 设置Solution
+                     * @param _solution Solution
+                     * 
+                     */
+                    void SetSolution(const std::string& _solution);
+
+                    /**
+                     * 判断参数 Solution 是否已赋值
+                     * @return Solution 是否已赋值
+                     * 
+                     */
+                    bool SolutionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Reason.</p>
+                     * @return Reason <p>Reason.</p>
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 设置<p>Reason.</p>
+                     * @param _reason <p>Reason.</p>
+                     * 
+                     */
+                    void SetReason(const std::string& _reason);
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
 
                 private:
 
@@ -904,14 +1100,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanVirusError;
                     bool m_scanVirusErrorHasBeenSet;
 
                     /**
-                     * Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability scan error.
                      */
                     std::string m_scanVulError;
                     bool m_scanVulErrorHasBeenSet;
@@ -935,64 +1129,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * High risk scan error
                      */
                     std::string m_scanRiskError;
                     bool m_scanRiskErrorHasBeenSet;
 
                     /**
-                     * Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sensitive information scan progress
                      */
                     uint64_t m_scanVirusProgress;
                     bool m_scanVirusProgressHasBeenSet;
 
                     /**
-                     * Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan scan progress.
                      */
                     uint64_t m_scanVulProgress;
                     bool m_scanVulProgressHasBeenSet;
 
                     /**
-                     * Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability scan progress.
                      */
                     uint64_t m_scanRiskProgress;
                     bool m_scanRiskProgressHasBeenSet;
 
                     /**
-                     * Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remaining scan time (seconds)
                      */
                     uint64_t m_scanRemainTime;
                     bool m_scanRemainTimeHasBeenSet;
 
                     /**
-                     * CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * cve scan status
                      */
                     std::string m_cveStatus;
                     bool m_cveStatusHasBeenSet;
 
                     /**
-                     * High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * High risk scan status
                      */
                     std::string m_riskStatus;
                     bool m_riskStatusHasBeenSet;
 
                     /**
-                     * Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan scan status
                      */
                     std::string m_virusStatus;
                     bool m_virusStatusHasBeenSet;
 
                     /**
                      * Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
@@ -1016,25 +1201,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image ID.
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image Creation Time
                      */
                     std::string m_imageCreateTime;
                     bool m_imageCreateTimeHasBeenSet;
 
                     /**
-                     * Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the Latest Version of the Image
                      */
                     bool m_isLatestImage;
                     bool m_isLatestImageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_lowLevelVulCnt;
+                    bool m_lowLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_mediumLevelVulCnt;
+                    bool m_mediumLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_highLevelVulCnt;
+                    bool m_highLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_criticalLevelVulCnt;
+                    bool m_criticalLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_containerCnt;
+                    bool m_containerCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_componentCnt;
+                    bool m_componentCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isRunning;
+                    bool m_isRunningHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_hasNeedFixVul;
+                    bool m_hasNeedFixVulHasBeenSet;
+
+                    /**
+                     * Sensitive information
+                     */
+                    uint64_t m_sensitiveInfoCnt;
+                    bool m_sensitiveInfoCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_recommendedFix;
+                    bool m_recommendedFixHasBeenSet;
+
+                    /**
+                     * Solution
+                     */
+                    std::string m_solution;
+                    bool m_solutionHasBeenSet;
+
+                    /**
+                     * <p>Reason.</p>
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

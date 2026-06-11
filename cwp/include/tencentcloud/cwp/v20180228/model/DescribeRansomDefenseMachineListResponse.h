@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Host list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of hosts
+                     * @return List List of hosts
                      * 
                      */
                     std::vector<RansomDefenseStrategyMachineBackupInfo> GetList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of hosts
                      */
                     std::vector<RansomDefenseStrategyMachineBackupInfo> m_list;
                     bool m_listHasBeenSet;
 
                     /**
                      * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

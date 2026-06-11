@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CopySrcRuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Event ID (for adding events to an allowlist)
-                     * @return EventID Event ID (for adding events to an allowlist)
+                     * 获取Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
+                     * @return EventID Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
                      * 
                      */
                     uint64_t GetEventID() const;
 
                     /**
-                     * 设置Event ID (for adding events to an allowlist)
-                     * @param _eventID Event ID (for adding events to an allowlist)
+                     * 设置Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
+                     * @param _eventID Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
                      * 
                      */
                     void SetEventID(const uint64_t& _eventID);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_copySrcRuleIDHasBeenSet;
 
                     /**
-                     * Event ID (for adding events to an allowlist)
+                     * Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
                      */
                     uint64_t m_eventID;
                     bool m_eventIDHasBeenSet;

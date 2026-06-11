@@ -414,19 +414,15 @@ Sensitive path mount
                     bool LatestFoundTimeHasBeenSet() const;
 
                     /**
-                     * 获取Node IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeIP Node IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取node IP
+                     * @return NodeIP node IP
                      * 
                      */
                     std::string GetNodeIP() const;
 
                     /**
-                     * 设置Node IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeIP Node IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置node IP
+                     * @param _nodeIP node IP
                      * 
                      */
                     void SetNodeIP(const std::string& _nodeIP);
@@ -439,19 +435,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIPHasBeenSet() const;
 
                     /**
-                     * 获取Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostID Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host IP address
+                     * @return HostID Host IP address
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostID Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host IP address
+                     * @param _hostID Host IP address
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -464,43 +456,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIDHasBeenSet() const;
 
                     /**
-                     * 获取Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+                     * @return ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     std::string GetContainerNetStatus() const;
 
                     /**
-                     * 设置Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+                     * @param _containerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
@@ -513,47 +501,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
+                     * @return ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
+                     * @param _containerNetSubStatus container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
                      * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
@@ -566,19 +550,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container Isolation Operation Source
+                     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
-                     * 设置Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container Isolation Operation Source
+                     * @param _containerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
@@ -913,49 +893,44 @@ Sensitive path mount
                     bool m_latestFoundTimeHasBeenSet;
 
                     /**
-                     * Node IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * node IP
                      */
                     std::string m_nodeIP;
                     bool m_nodeIPHasBeenSet;
 
                     /**
-                     * Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host IP address
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
 
                     /**
-                     * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      */
                     std::string m_containerNetStatus;
                     bool m_containerNetStatusHasBeenSet;
 
                     /**
-                     * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container Isolation Operation Source
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;

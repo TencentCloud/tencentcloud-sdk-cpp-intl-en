@@ -1,0 +1,143 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CLS_V20201016_MODEL_AUTHROLEINFO_H_
+#define TENCENTCLOUD_CLS_V20201016_MODEL_AUTHROLEINFO_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Cls
+    {
+        namespace V20201016
+        {
+            namespace Model
+            {
+                /**
+                * Configuration information of the third-party verification login role for DataSight
+                */
+                class AuthRoleInfo : public AbstractModel
+                {
+                public:
+                    AuthRoleInfo();
+                    ~AuthRoleInfo() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取<p>Auth role name</p>
+                     * @return RoleName <p>Auth role name</p>
+                     * 
+                     */
+                    std::string GetRoleName() const;
+
+                    /**
+                     * 设置<p>Auth role name</p>
+                     * @param _roleName <p>Auth role name</p>
+                     * 
+                     */
+                    void SetRoleName(const std::string& _roleName);
+
+                    /**
+                     * 判断参数 RoleName 是否已赋值
+                     * @return RoleName 是否已赋值
+                     * 
+                     */
+                    bool RoleNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>SecretId of the permission corresponding to the Auth role</p>
+                     * @return SecretId <p>SecretId of the permission corresponding to the Auth role</p>
+                     * 
+                     */
+                    std::string GetSecretId() const;
+
+                    /**
+                     * 设置<p>SecretId of the permission corresponding to the Auth role</p>
+                     * @param _secretId <p>SecretId of the permission corresponding to the Auth role</p>
+                     * 
+                     */
+                    void SetSecretId(const std::string& _secretId);
+
+                    /**
+                     * 判断参数 SecretId 是否已赋值
+                     * @return SecretId 是否已赋值
+                     * 
+                     */
+                    bool SecretIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>SecretKey of the permission corresponding to the Auth role</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SecretKey <p>SecretKey of the permission corresponding to the Auth role</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSecretKey() const;
+
+                    /**
+                     * 设置<p>SecretKey of the permission corresponding to the Auth role</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _secretKey <p>SecretKey of the permission corresponding to the Auth role</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSecretKey(const std::string& _secretKey);
+
+                    /**
+                     * 判断参数 SecretKey 是否已赋值
+                     * @return SecretKey 是否已赋值
+                     * 
+                     */
+                    bool SecretKeyHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Auth role name</p>
+                     */
+                    std::string m_roleName;
+                    bool m_roleNameHasBeenSet;
+
+                    /**
+                     * <p>SecretId of the permission corresponding to the Auth role</p>
+                     */
+                    std::string m_secretId;
+                    bool m_secretIdHasBeenSet;
+
+                    /**
+                     * <p>SecretKey of the permission corresponding to the Auth role</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_secretKey;
+                    bool m_secretKeyHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CLS_V20201016_MODEL_AUTHROLEINFO_H_

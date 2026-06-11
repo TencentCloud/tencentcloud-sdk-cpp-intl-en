@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,15 +68,23 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @return LogsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @param _logsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -85,15 +97,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Delivery Task Name
-                     * @return Name Delivery Task Name
+                     * 获取COS import task name, supports up to 128 bytes.
+                     * @return Name COS import task name, supports up to 128 bytes.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Delivery Task Name
-                     * @param _name Delivery Task Name
+                     * 设置COS import task name, supports up to 128 bytes.
+                     * @param _name COS import task name, supports up to 128 bytes.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +118,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
-                     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * 获取COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+                     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
-                     * @param _bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * 设置COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+                     * @param _bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -148,15 +168,15 @@ namespace TencentCloud
                     bool BucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取The prefix of the folder where COS files are located
-                     * @return Prefix The prefix of the folder where COS files are located
+                     * 获取The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * @return Prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
                      * 
                      */
                     std::string GetPrefix() const;
 
                     /**
-                     * 设置The prefix of the folder where COS files are located
-                     * @param _prefix The prefix of the folder where COS files are located
+                     * 设置The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * @param _prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
                      * 
                      */
                     void SetPrefix(const std::string& _prefix);
@@ -169,15 +189,15 @@ namespace TencentCloud
                     bool PrefixHasBeenSet() const;
 
                     /**
-                     * 获取Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
-                     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+                     * 获取Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
+                     * @return Compress Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
                      * 
                      */
                     std::string GetCompress() const;
 
                     /**
-                     * 设置Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
-                     * @param _compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+                     * 设置Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
+                     * @param _compress Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
                      * 
                      */
                     void SetCompress(const std::string& _compress);
@@ -192,25 +212,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic ID
+                     * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Logset ID
+                     * FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Delivery Task Name
+                     * COS import task name, supports up to 128 bytes.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
@@ -222,13 +247,13 @@ namespace TencentCloud
                     bool m_bucketRegionHasBeenSet;
 
                     /**
-                     * The prefix of the folder where COS files are located
+                     * The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;
 
                     /**
-                     * Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+                     * Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
                      */
                     std::string m_compress;
                     bool m_compressHasBeenSet;

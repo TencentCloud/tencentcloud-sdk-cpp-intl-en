@@ -45,15 +45,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Collection configuration name
-                     * @return Name Collection configuration name
+                     * 获取collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+                     * @return Name collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Collection configuration name
-                     * @param _name Collection configuration name
+                     * 设置collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+                     * @param _name collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -66,15 +74,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID (TopicId) of collection configuration
-                     * @return Output Log topic ID (TopicId) of collection configuration
+                     * 获取Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return Output Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置Log topic ID (TopicId) of collection configuration
-                     * @param _output Log topic ID (TopicId) of collection configuration
+                     * 设置Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _output Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -87,15 +99,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Log collection path containing the filename
-                     * @return Path Log collection path containing the filename
+                     * 获取Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
+                     * @return Path Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Log collection path containing the filename
-                     * @param _path Log collection path containing the filename
+                     * 设置Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
+                     * @param _path Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -224,22 +236,58 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
                      */
                     bool AdvancedConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * @return InputType Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * 
+                     */
+                    std::string GetInputType() const;
+
+                    /**
+                     * 设置Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * @param _inputType Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * 
+                     */
+                    void SetInputType(const std::string& _inputType);
+
+                    /**
+                     * 判断参数 InputType 是否已赋值
+                     * @return InputType 是否已赋值
+                     * 
+                     */
+                    bool InputTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Collection configuration name
+                     * collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Log topic ID (TopicId) of collection configuration
+                     * Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Log collection path containing the filename
+                     * Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
@@ -276,6 +324,15 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
                      */
                     std::string m_advancedConfig;
                     bool m_advancedConfigHasBeenSet;
+
+                    /**
+                     * Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     */
+                    std::string m_inputType;
+                    bool m_inputTypeHasBeenSet;
 
                 };
             }

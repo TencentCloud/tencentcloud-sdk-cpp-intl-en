@@ -344,15 +344,15 @@ namespace TencentCloud
                     bool CpuLoadHasBeenSet() const;
 
                     /**
-                     * 获取Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
-                     * @return ProtectLevel Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+                     * 获取Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @return ProtectLevel Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     uint64_t GetProtectLevel() const;
 
                     /**
-                     * 设置Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
-                     * @param _protectLevel Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+                     * 设置Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @param _protectLevel Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     void SetProtectLevel(const uint64_t& _protectLevel);
@@ -470,15 +470,15 @@ namespace TencentCloud
                     bool CoreVersionHasBeenSet() const;
 
                     /**
-                     * 获取linux/windows
-                     * @return OsType linux/windows
+                     * 获取Linux/Windows
+                     * @return OsType Linux/Windows
                      * 
                      */
                     std::string GetOsType() const;
 
                     /**
-                     * 设置linux/windows
-                     * @param _osType linux/windows
+                     * 设置Linux/Windows
+                     * @param _osType Linux/Windows
                      * 
                      */
                     void SetOsType(const std::string& _osType);
@@ -727,18 +727,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
                      * 设置Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _offlineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
@@ -752,18 +748,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -777,18 +769,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -802,18 +790,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -827,18 +811,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CpuLoadVul CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCpuLoadVul() const;
 
                     /**
                      * 设置CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cpuLoadVul CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCpuLoadVul(const std::string& _cpuLoadVul);
@@ -852,18 +832,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstTime Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
                      * 设置Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _firstTime Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -962,7 +938,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cpuLoadHasBeenSet;
 
                     /**
-                     * Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+                     * Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      */
                     uint64_t m_protectLevel;
                     bool m_protectLevelHasBeenSet;
@@ -998,7 +974,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_coreVersionHasBeenSet;
 
                     /**
-                     * linux/windows
+                     * Linux/Windows
                      */
                     std::string m_osType;
                     bool m_osTypeHasBeenSet;
@@ -1072,42 +1048,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
 
                     /**
                      * Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
                      * CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cpuLoadVul;
                     bool m_cpuLoadVulHasBeenSet;
 
                     /**
                      * Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;

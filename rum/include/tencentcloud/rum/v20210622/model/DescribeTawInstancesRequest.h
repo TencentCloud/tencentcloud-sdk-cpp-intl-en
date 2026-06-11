@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return AreaIds Region ID
+                     * 获取Region Id
+                     * @return AreaIds Region Id
                      * 
                      */
                     std::vector<int64_t> GetAreaIds() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _areaIds Region ID
+                     * 设置Region Id
+                     * @param _areaIds Region Id
                      * 
                      */
                     void SetAreaIds(const std::vector<int64_t>& _areaIds);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool AreaIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
-                     * @return InstanceStatuses Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+                     * 获取Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
+                     * @return InstanceStatuses Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
                      * @deprecated
                      */
                     std::vector<int64_t> GetInstanceStatuses() const;
 
                     /**
-                     * 设置Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
-                     * @param _instanceStatuses Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+                     * 设置Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
+                     * @param _instanceStatuses Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
                      * @deprecated
                      */
                     void SetInstanceStatuses(const std::vector<int64_t>& _instanceStatuses);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool InstanceStatusesHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceIds Instance ID
+                     * 获取Instance Id, deprecated. Please note in Filters.
+                     * @return InstanceIds Instance Id, deprecated. Please note in Filters.
                      * @deprecated
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceIds Instance ID
+                     * 设置Instance Id, deprecated. Please note in Filters.
+                     * @param _instanceIds Instance Id, deprecated. Please note in Filters.
                      * @deprecated
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter parameter
-                     * @return Filters Filter parameter
+                     * 获取Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
+                     * @return Filters Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter parameter
-                     * @param _filters Filter parameter
+                     * 设置Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
+                     * @param _filters Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is in the demo mode. `1`: Yes; `2`: No.
-                     * @return IsDemo Whether it is in the demo mode. `1`: Yes; `2`: No.
+                     * 获取Deprecated. For demo mode, please note in Filters.
+                     * @return IsDemo Deprecated. For demo mode, please note in Filters.
                      * @deprecated
                      */
                     int64_t GetIsDemo() const;
 
                     /**
-                     * 设置Whether it is in the demo mode. `1`: Yes; `2`: No.
-                     * @param _isDemo Whether it is in the demo mode. `1`: Yes; `2`: No.
+                     * 设置Deprecated. For demo mode, please note in Filters.
+                     * @param _isDemo Deprecated. For demo mode, please note in Filters.
                      * @deprecated
                      */
                     void SetIsDemo(const int64_t& _isDemo);
@@ -259,31 +259,31 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Region ID
+                     * Region Id
                      */
                     std::vector<int64_t> m_areaIds;
                     bool m_areaIdsHasBeenSet;
 
                     /**
-                     * Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+                     * Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
                      */
                     std::vector<int64_t> m_instanceStatuses;
                     bool m_instanceStatusesHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance Id, deprecated. Please note in Filters.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Filter parameter
+                     * Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Whether it is in the demo mode. `1`: Yes; `2`: No.
+                     * Deprecated. For demo mode, please note in Filters.
                      */
                     int64_t m_isDemo;
                     bool m_isDemoHasBeenSet;

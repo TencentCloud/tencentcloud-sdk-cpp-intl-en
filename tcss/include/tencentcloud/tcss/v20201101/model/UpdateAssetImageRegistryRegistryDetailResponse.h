@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HealthCheckErr Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHealthCheckErr() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HealthCheckErrHasBeenSet() const;
 
                     /**
-                     * 获取Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NameRepeatErr Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Incorrect name message
+                     * @return NameRepeatErr Incorrect name message
                      * 
                      */
                     std::string GetNameRepeatErr() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameRepeatErrHasBeenSet() const;
 
                     /**
-                     * 获取Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistryId Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取repository unique id
+                     * @return RegistryId repository unique id
                      * 
                      */
                     int64_t GetRegistryId() const;
@@ -95,21 +89,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_healthCheckErr;
                     bool m_healthCheckErrHasBeenSet;
 
                     /**
-                     * Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Incorrect name message
                      */
                     std::string m_nameRepeatErr;
                     bool m_nameRepeatErrHasBeenSet;
 
                     /**
-                     * Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * repository unique id
                      */
                     int64_t m_registryId;
                     bool m_registryIdHasBeenSet;

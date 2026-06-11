@@ -408,10 +408,8 @@ namespace TencentCloud
                     bool NetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Isolate source
+                     * @return IsolateSource Isolate source
                      * 
                      */
                     std::string GetIsolateSource() const;
@@ -425,9 +423,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolateTime() const;
@@ -780,15 +776,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_netSubStatusHasBeenSet;
 
                     /**
-                     * Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Isolate source
                      */
                     std::string m_isolateSource;
                     bool m_isolateSourceHasBeenSet;
 
                     /**
                      * Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;

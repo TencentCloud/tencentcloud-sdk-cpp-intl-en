@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RansomDefenseEvent> GetList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RansomDefenseEvent> m_list;
                     bool m_listHasBeenSet;
 
                     /**
                      * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

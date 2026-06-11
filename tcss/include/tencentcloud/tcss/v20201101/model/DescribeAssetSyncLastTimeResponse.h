@@ -57,6 +57,62 @@ namespace TencentCloud
                      */
                     bool AssetSyncLastTimeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return TaskStatus 
+                     * 
+                     */
+                    std::string GetTaskStatus() const;
+
+                    /**
+                     * 判断参数 TaskStatus 是否已赋值
+                     * @return TaskStatus 是否已赋值
+                     * 
+                     */
+                    bool TaskStatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TaskProcess 
+                     * 
+                     */
+                    int64_t GetTaskProcess() const;
+
+                    /**
+                     * 判断参数 TaskProcess 是否已赋值
+                     * @return TaskProcess 是否已赋值
+                     * 
+                     */
+                    bool TaskProcessHasBeenSet() const;
+
+                    /**
+                     * 获取Number of failed hosts.
+                     * @return FailedHostCount Number of failed hosts.
+                     * 
+                     */
+                    uint64_t GetFailedHostCount() const;
+
+                    /**
+                     * 判断参数 FailedHostCount 是否已赋值
+                     * @return FailedHostCount 是否已赋值
+                     * 
+                     */
+                    bool FailedHostCountHasBeenSet() const;
+
+                    /**
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
+                     * 
+                     */
+                    uint64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     * 
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +120,30 @@ namespace TencentCloud
                      */
                     std::string m_assetSyncLastTime;
                     bool m_assetSyncLastTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_taskStatus;
+                    bool m_taskStatusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_taskProcess;
+                    bool m_taskProcessHasBeenSet;
+
+                    /**
+                     * Number of failed hosts.
+                     */
+                    uint64_t m_failedHostCount;
+                    bool m_failedHostCountHasBeenSet;
+
+                    /**
+                     * Task ID.
+                     */
+                    uint64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

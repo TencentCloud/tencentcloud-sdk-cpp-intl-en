@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskContainerCnt Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Containers Affected by Trojans
+                     * @return RiskContainerCnt Number of Containers Affected by Trojans
                      * 
                      */
                     uint64_t GetRiskContainerCnt() const;
@@ -74,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskContainerCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskCnt Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Pending Risks
+                     * @return RiskCnt Number of Pending Risks
                      * 
                      */
                     uint64_t GetRiskCnt() const;
@@ -90,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskCntHasBeenSet() const;
 
                     /**
-                     * 获取Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirusDataBaseModifyTime Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Virus database update time
+                     * @return VirusDataBaseModifyTime Virus database update time
                      * 
                      */
                     std::string GetVirusDataBaseModifyTime() const;
@@ -106,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VirusDataBaseModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskContainerIncrease Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Increase in the Number of Containers Affected by Trojans Compared to Yesterday
+                     * @return RiskContainerIncrease Increase in the Number of Containers Affected by Trojans Compared to Yesterday
                      * 
                      */
                     int64_t GetRiskContainerIncrease() const;
@@ -122,10 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskContainerIncreaseHasBeenSet() const;
 
                     /**
-                     * 获取Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskIncrease Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Pending Risks Increased Compared to Yesterday
+                     * @return RiskIncrease Number of Pending Risks Increased Compared to Yesterday
                      * 
                      */
                     int64_t GetRiskIncrease() const;
@@ -138,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskIncreaseHasBeenSet() const;
 
                     /**
-                     * 获取Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateIncrease Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Isolation Event Count Increased Compared to Yesterday
+                     * @return IsolateIncrease Isolation Event Count Increased Compared to Yesterday
                      * 
                      */
                     int64_t GetIsolateIncrease() const;
@@ -154,10 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolateIncreaseHasBeenSet() const;
 
                     /**
-                     * 获取Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateCnt Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total Number of Isolation Events
+                     * @return IsolateCnt Total Number of Isolation Events
                      * 
                      */
                     int64_t GetIsolateCnt() const;
@@ -178,50 +164,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Containers Affected by Trojans
                      */
                     uint64_t m_riskContainerCnt;
                     bool m_riskContainerCntHasBeenSet;
 
                     /**
-                     * Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Pending Risks
                      */
                     uint64_t m_riskCnt;
                     bool m_riskCntHasBeenSet;
 
                     /**
-                     * Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Virus database update time
                      */
                     std::string m_virusDataBaseModifyTime;
                     bool m_virusDataBaseModifyTimeHasBeenSet;
 
                     /**
-                     * Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Increase in the Number of Containers Affected by Trojans Compared to Yesterday
                      */
                     int64_t m_riskContainerIncrease;
                     bool m_riskContainerIncreaseHasBeenSet;
 
                     /**
-                     * Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Pending Risks Increased Compared to Yesterday
                      */
                     int64_t m_riskIncrease;
                     bool m_riskIncreaseHasBeenSet;
 
                     /**
-                     * Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Isolation Event Count Increased Compared to Yesterday
                      */
                     int64_t m_isolateIncrease;
                     bool m_isolateIncreaseHasBeenSet;
 
                     /**
-                     * Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total Number of Isolation Events
                      */
                     int64_t m_isolateCnt;
                     bool m_isolateCntHasBeenSet;

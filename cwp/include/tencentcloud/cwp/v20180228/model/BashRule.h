@@ -299,19 +299,15 @@ namespace TencentCloud
                     bool HostipHasBeenSet() const;
 
                     /**
-                     * 获取Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uuids Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Array of UUIDs for active servers
+                     * @return Uuids Array of UUIDs for active servers
                      * 
                      */
                     std::vector<std::string> GetUuids() const;
 
                     /**
-                     * 设置Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uuids Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Array of UUIDs for active servers
+                     * @param _uuids Array of UUIDs for active servers
                      * 
                      */
                     void SetUuids(const std::vector<std::string>& _uuids);
@@ -324,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuidsHasBeenSet() const;
 
                     /**
-                     * 获取0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return White 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: blocklist 1: allowlist
+                     * @return White 0: blocklist 1: allowlist
                      * 
                      */
                     uint64_t GetWhite() const;
 
                     /**
-                     * 设置0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _white 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: blocklist 1: allowlist
+                     * @param _white 0: blocklist 1: allowlist
                      * 
                      */
                     void SetWhite(const uint64_t& _white);
@@ -350,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDealOldEvents() const;
 
                     /**
                      * 设置Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDealOldEvents(const uint64_t& _dealOldEvents);
@@ -375,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -473,29 +457,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hostipHasBeenSet;
 
                     /**
-                     * Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Array of UUIDs for active servers
                      */
                     std::vector<std::string> m_uuids;
                     bool m_uuidsHasBeenSet;
 
                     /**
-                     * 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: blocklist 1: allowlist
                      */
                     uint64_t m_white;
                     bool m_whiteHasBeenSet;
 
                     /**
                      * Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_dealOldEvents;
                     bool m_dealOldEventsHasBeenSet;
 
                     /**
                      * Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

@@ -57,6 +57,48 @@ namespace TencentCloud
                      */
                     bool TaskIDHasBeenSet() const;
 
+                    /**
+                     * 获取Last scan time
+                     * @return LastScanTime Last scan time
+                     * 
+                     */
+                    std::string GetLastScanTime() const;
+
+                    /**
+                     * 判断参数 LastScanTime 是否已赋值
+                     * @return LastScanTime 是否已赋值
+                     * 
+                     */
+                    bool LastScanTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Scanning status. Valid values: READY, SCANNING, and END.
+                     * @return Status Scanning status. Valid values: READY, SCANNING, and END.
+                     * 
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Scanning sub-status. Valid values: Success, Timeout, Cancel, and Error.
+                     * @return SubStatus Scanning sub-status. Valid values: Success, Timeout, Cancel, and Error.
+                     * 
+                     */
+                    std::string GetSubStatus() const;
+
+                    /**
+                     * 判断参数 SubStatus 是否已赋值
+                     * @return SubStatus 是否已赋值
+                     * 
+                     */
+                    bool SubStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +106,24 @@ namespace TencentCloud
                      */
                     std::string m_taskID;
                     bool m_taskIDHasBeenSet;
+
+                    /**
+                     * Last scan time
+                     */
+                    std::string m_lastScanTime;
+                    bool m_lastScanTimeHasBeenSet;
+
+                    /**
+                     * Scanning status. Valid values: READY, SCANNING, and END.
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Scanning sub-status. Valid values: Success, Timeout, Cancel, and Error.
+                     */
+                    std::string m_subStatus;
+                    bool m_subStatusHasBeenSet;
 
                 };
             }

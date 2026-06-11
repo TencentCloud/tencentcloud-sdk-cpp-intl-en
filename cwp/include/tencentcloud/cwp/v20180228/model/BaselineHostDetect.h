@@ -258,19 +258,15 @@ namespace TencentCloud
                     bool LastTimeHasBeenSet() const;
 
                     /**
-                     * 获取CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uuid CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CWP UUID
+                     * @return Uuid CWP UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uuid CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CWP UUID
+                     * @param _uuid CWP UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -284,18 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -370,15 +362,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lastTimeHasBeenSet;
 
                     /**
-                     * CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CWP UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

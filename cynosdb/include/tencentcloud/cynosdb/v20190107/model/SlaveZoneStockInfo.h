@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Standby availability zone inventory information.
                 */
                 class SlaveZoneStockInfo : public AbstractModel
                 {

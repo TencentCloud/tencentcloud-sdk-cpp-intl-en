@@ -219,6 +219,43 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool IgnoreSetCookieHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginMtimeCheckType Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetOriginMtimeCheckType() const;
+
+                    /**
+                     * 设置Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _originMtimeCheckType Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOriginMtimeCheckType(const std::string& _originMtimeCheckType);
+
+                    /**
+                     * 判断参数 OriginMtimeCheckType 是否已赋值
+                     * @return OriginMtimeCheckType 是否已赋值
+                     * 
+                     */
+                    bool OriginMtimeCheckTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -267,6 +304,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;
+
+                    /**
+                     * Whether to enable origin server mtime verification after cache expires. valid values: equal, since, none, and null. default value: equal, which validates the origin server file's mtime and length. domains created prior to 2024-09-12 18:00 default to null, with behavior remaining unchanged.
+equal: the mtime in the origin server response must match the mtime in the cache. if there is a difference in parameter values, purge the cache.
+since: purges cache if the origin server response mtime is larger than the cache mtime.
+none: when the cache expires and the file is retrieved from the origin server again to get the mtime and Length, it does not validate the mtime in the origin response. if the origin response carries a Content-Length header, the cache is updated only when the file size changes. if the origin response does not carry a Content-Length header, the cache is updated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_originMtimeCheckType;
+                    bool m_originMtimeCheckTypeHasBeenSet;
 
                 };
             }

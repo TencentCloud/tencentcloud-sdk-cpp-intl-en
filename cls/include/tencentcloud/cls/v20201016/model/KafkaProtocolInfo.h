@@ -47,19 +47,47 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+                     * @return Protocol Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+                     * @param _protocol Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -72,15 +100,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+                     * @return Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
                      * 
                      */
                     std::string GetMechanism() const;
 
                     /**
-                     * 设置Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+                     * @param _mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
                      * 
                      */
                     void SetMechanism(const std::string& _mechanism);
@@ -93,15 +145,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MechanismHasBeenSet() const;
 
                     /**
-                     * 获取UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+                     * @return UserName Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+                     * @param _userName Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -114,15 +170,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
+                     * @return Password User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
+                     * @param _password User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -137,26 +197,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
                      */
                     std::string m_mechanism;
                     bool m_mechanismHasBeenSet;
 
                     /**
-                     * UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+                     * User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

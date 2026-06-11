@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoginWhiteCombinedInfos List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<LoginWhiteCombinedInfo> GetLoginWhiteCombinedInfos() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<LoginWhiteCombinedInfo> m_loginWhiteCombinedInfos;
                     bool m_loginWhiteCombinedInfosHasBeenSet;

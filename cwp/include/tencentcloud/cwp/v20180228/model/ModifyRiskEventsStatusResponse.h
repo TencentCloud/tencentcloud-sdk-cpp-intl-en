@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by front end to check if the operation is completed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSync Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by front end to check if the operation is completed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by frontend to check if the operation is completed.
+                     * @return IsSync Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by frontend to check if the operation is completed.
                      * 
                      */
                     uint64_t GetIsSync() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by front end to check if the operation is completed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether this operation is asynchronous. 0: operation completed; 1: asynchronous operation in progress and DescribeRiskBatchStatus needs to be called by frontend to check if the operation is completed.
                      */
                     uint64_t m_isSync;
                     bool m_isSyncHasBeenSet;

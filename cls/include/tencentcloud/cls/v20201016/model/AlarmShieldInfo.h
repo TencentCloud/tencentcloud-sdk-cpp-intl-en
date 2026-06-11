@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Rule Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
+                     * @return Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
                      * 
                      */
                     std::string GetRule() const;
 
                     /**
-                     * 设置Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rule Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
+                     * @param _rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
                      * 
                      */
                     void SetRule(const std::string& _rule);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Rule Creation Time.
-                     * @return CreateTime Rule Creation Time.
+                     * 获取Rule creation time. Unix second-level timestamp (s).
+                     * @return CreateTime Rule creation time. Unix second-level timestamp (s).
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Rule Creation Time.
-                     * @param _createTime Rule Creation Time.
+                     * 设置Rule creation time. Unix second-level timestamp (s).
+                     * @param _createTime Rule creation time. Unix second-level timestamp (s).
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -286,15 +286,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule Update Time.
-                     * @return UpdateTime Rule Update Time.
+                     * 获取Rule update time. Unix second-level timestamp (s).
+                     * @return UpdateTime Rule update time. Unix second-level timestamp (s).
                      * 
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Rule Update Time.
-                     * @param _updateTime Rule Update Time.
+                     * 设置Rule update time. Unix second-level timestamp (s).
+                     * @param _updateTime Rule update time. Unix second-level timestamp (s).
                      * 
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
@@ -339,7 +339,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
                      */
                     std::string m_rule;
                     bool m_ruleHasBeenSet;
@@ -371,13 +371,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Rule Creation Time.
+                     * Rule creation time. Unix second-level timestamp (s).
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Rule Update Time.
+                     * Rule update time. Unix second-level timestamp (s).
                      */
                     uint64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

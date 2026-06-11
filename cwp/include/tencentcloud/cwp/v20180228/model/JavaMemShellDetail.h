@@ -510,19 +510,15 @@ namespace TencentCloud
                     bool SecurityAdviceHasBeenSet() const;
 
                     /**
-                     * 获取Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Host Additional Information
+                     * @return MachineExtraInfo  Host Additional Information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Host Additional Information
+                     * @param _machineExtraInfo  Host Additional Information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -535,15 +531,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineExtraInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance status: RUNNING, STOPPED, SHUTDOWN...
-                     * @return MachineState Instance status: RUNNING, STOPPED, SHUTDOWN...
+                     * 获取Agent status: OFFLINE; ONLINE.
+                     * @return MachineState Agent status: OFFLINE; ONLINE.
                      * 
                      */
                     std::string GetMachineState() const;
 
                     /**
-                     * 设置Instance status: RUNNING, STOPPED, SHUTDOWN...
-                     * @param _machineState Instance status: RUNNING, STOPPED, SHUTDOWN...
+                     * 设置Agent status: OFFLINE; ONLINE.
+                     * @param _machineState Agent status: OFFLINE; ONLINE.
                      * 
                      */
                     void SetMachineState(const std::string& _machineState);
@@ -690,14 +686,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_securityAdviceHasBeenSet;
 
                     /**
-                     * Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Host Additional Information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
-                     * Instance status: RUNNING, STOPPED, SHUTDOWN...
+                     * Agent status: OFFLINE; ONLINE.
                      */
                     std::string m_machineState;
                     bool m_machineStateHasBeenSet;

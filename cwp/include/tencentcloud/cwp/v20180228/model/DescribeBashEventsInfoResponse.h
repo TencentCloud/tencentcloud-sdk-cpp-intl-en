@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BashEventsInfo Event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BashEventsInfo GetBashEventsInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BashEventsInfo m_bashEventsInfo;
                     bool m_bashEventsInfoHasBeenSet;

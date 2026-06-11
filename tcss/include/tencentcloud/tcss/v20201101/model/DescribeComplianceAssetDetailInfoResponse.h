@@ -64,9 +64,7 @@ namespace TencentCloud
 
                     /**
                      * 获取This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerDetailInfo This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ComplianceContainerDetailInfo GetContainerDetailInfo() const;
@@ -79,10 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerDetailInfoHasBeenSet() const;
 
                     /**
-                     * 获取This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageDetailInfo This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When the asset is a mirror, return this field.
+                     * @return ImageDetailInfo When the asset is a mirror, return this field.
                      * 
                      */
                     ComplianceImageDetailInfo GetImageDetailInfo() const;
@@ -95,10 +91,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageDetailInfoHasBeenSet() const;
 
                     /**
-                     * 获取This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostDetailInfo This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取This field is returned when the asset is a host.
+                     * @return HostDetailInfo This field is returned when the asset is a host.
                      * 
                      */
                     ComplianceHostDetailInfo GetHostDetailInfo() const;
@@ -111,10 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostDetailInfoHasBeenSet() const;
 
                     /**
-                     * 获取This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return K8SDetailInfo This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When the asset is K8S, return this field.
+                     * @return K8SDetailInfo When the asset is K8S, return this field.
                      * 
                      */
                     ComplianceK8SDetailInfo GetK8SDetailInfo() const;
@@ -136,28 +128,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ComplianceContainerDetailInfo m_containerDetailInfo;
                     bool m_containerDetailInfoHasBeenSet;
 
                     /**
-                     * This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When the asset is a mirror, return this field.
                      */
                     ComplianceImageDetailInfo m_imageDetailInfo;
                     bool m_imageDetailInfoHasBeenSet;
 
                     /**
-                     * This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * This field is returned when the asset is a host.
                      */
                     ComplianceHostDetailInfo m_hostDetailInfo;
                     bool m_hostDetailInfoHasBeenSet;
 
                     /**
-                     * This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When the asset is K8S, return this field.
                      */
                     ComplianceK8SDetailInfo m_k8SDetailInfo;
                     bool m_k8SDetailInfoHasBeenSet;

@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return Switch Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Switch Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _switch Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _switch Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -108,10 +108,10 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                 private:
 
                     /**
-                     * Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

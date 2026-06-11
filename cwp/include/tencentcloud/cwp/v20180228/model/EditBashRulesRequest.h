@@ -252,6 +252,111 @@ namespace TencentCloud
                      */
                     bool DealOldEventsHasBeenSet() const;
 
+                    /**
+                     * 获取Policy description
+                     * @return Descript Policy description
+                     * 
+                     */
+                    std::string GetDescript() const;
+
+                    /**
+                     * 设置Policy description
+                     * @param _descript Policy description
+                     * 
+                     */
+                    void SetDescript(const std::string& _descript);
+
+                    /**
+                     * 判断参数 Descript 是否已赋值
+                     * @return Descript 是否已赋值
+                     * 
+                     */
+                    bool DescriptHasBeenSet() const;
+
+                    /**
+                     * 获取Effective or not [0: not effective, 1: effective]
+                     * @return Status Effective or not [0: not effective, 1: effective]
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Effective or not [0: not effective, 1: effective]
+                     * @param _status Effective or not [0: not effective, 1: effective]
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取0: alarm; 1: allowlist; 2: intercept
+                     * @return BashAction 0: alarm; 1: allowlist; 2: intercept
+                     * 
+                     */
+                    int64_t GetBashAction() const;
+
+                    /**
+                     * 设置0: alarm; 1: allowlist; 2: intercept
+                     * @param _bashAction 0: alarm; 1: allowlist; 2: intercept
+                     * 
+                     */
+                    void SetBashAction(const int64_t& _bashAction);
+
+                    /**
+                     * 判断参数 BashAction 是否已赋值
+                     * @return BashAction 是否已赋值
+                     * 
+                     */
+                    bool BashActionHasBeenSet() const;
+
+                    /**
+                     * 获取Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+                     * @return Scope Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+                     * 
+                     */
+                    int64_t GetScope() const;
+
+                    /**
+                     * 设置Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+                     * @param _scope Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+                     * 
+                     */
+                    void SetScope(const int64_t& _scope);
+
+                    /**
+                     * 判断参数 Scope 是否已赋值
+                     * @return Scope 是否已赋值
+                     * 
+                     */
+                    bool ScopeHasBeenSet() const;
+
+                    /**
+                     * 获取QUUID set for effective hosts
+                     * @return Quuids QUUID set for effective hosts
+                     * 
+                     */
+                    std::vector<std::string> GetQuuids() const;
+
+                    /**
+                     * 设置QUUID set for effective hosts
+                     * @param _quuids QUUID set for effective hosts
+                     * 
+                     */
+                    void SetQuuids(const std::vector<std::string>& _quuids);
+
+                    /**
+                     * 判断参数 Quuids 是否已赋值
+                     * @return Quuids 是否已赋值
+                     * 
+                     */
+                    bool QuuidsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +418,36 @@ namespace TencentCloud
                      */
                     uint64_t m_dealOldEvents;
                     bool m_dealOldEventsHasBeenSet;
+
+                    /**
+                     * Policy description
+                     */
+                    std::string m_descript;
+                    bool m_descriptHasBeenSet;
+
+                    /**
+                     * Effective or not [0: not effective, 1: effective]
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 0: alarm; 1: allowlist; 2: intercept
+                     */
+                    int64_t m_bashAction;
+                    bool m_bashActionHasBeenSet;
+
+                    /**
+                     * Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+                     */
+                    int64_t m_scope;
+                    bool m_scopeHasBeenSet;
+
+                    /**
+                     * QUUID set for effective hosts
+                     */
+                    std::vector<std::string> m_quuids;
+                    bool m_quuidsHasBeenSet;
 
                 };
             }

@@ -71,6 +71,20 @@ namespace TencentCloud
                      */
                     bool IsKillProgressHasBeenSet() const;
 
+                    /**
+                     * 获取Enabling status customized by the user.
+                     * @return UserAutoIsolateKillSwitch Enabling status customized by the user.
+                     * 
+                     */
+                    bool GetUserAutoIsolateKillSwitch() const;
+
+                    /**
+                     * 判断参数 UserAutoIsolateKillSwitch 是否已赋值
+                     * @return UserAutoIsolateKillSwitch 是否已赋值
+                     * 
+                     */
+                    bool UserAutoIsolateKillSwitchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -84,6 +98,12 @@ namespace TencentCloud
                      */
                     bool m_isKillProgress;
                     bool m_isKillProgressHasBeenSet;
+
+                    /**
+                     * Enabling status customized by the user.
+                     */
+                    bool m_userAutoIsolateKillSwitch;
+                    bool m_userAutoIsolateKillSwitchHasBeenSet;
 
                 };
             }

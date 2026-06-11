@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool UuidsHasBeenSet() const;
 
+                    /**
+                     * 获取0 vulnerabilities, 1 windows patch
+                     * @return EventType 0 vulnerabilities, 1 windows patch
+                     * 
+                     */
+                    uint64_t GetEventType() const;
+
+                    /**
+                     * 设置0 vulnerabilities, 1 windows patch
+                     * @param _eventType 0 vulnerabilities, 1 windows patch
+                     * 
+                     */
+                    void SetEventType(const uint64_t& _eventType);
+
+                    /**
+                     * 判断参数 EventType 是否已赋值
+                     * @return EventType 是否已赋值
+                     * 
+                     */
+                    bool EventTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     std::string m_uuids;
                     bool m_uuidsHasBeenSet;
+
+                    /**
+                     * 0 vulnerabilities, 1 windows patch
+                     */
+                    uint64_t m_eventType;
+                    bool m_eventTypeHasBeenSet;
 
                 };
             }

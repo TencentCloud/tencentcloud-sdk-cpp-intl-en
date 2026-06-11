@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsolateReasonTypes 
+                     * 获取Instance return reason type.
+                     * @return IsolateReasonTypes Instance return reason type.
                      * 
                      */
                     std::vector<int64_t> GetIsolateReasonTypes() const;
 
                     /**
-                     * 设置
-                     * @param _isolateReasonTypes 
+                     * 设置Instance return reason type.
+                     * @param _isolateReasonTypes Instance return reason type.
                      * 
                      */
                     void SetIsolateReasonTypes(const std::vector<int64_t>& _isolateReasonTypes);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IsolateReasonTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsolateReason 
+                     * 获取Instance return reason supplement.
+                     * @return IsolateReason Instance return reason supplement.
                      * 
                      */
                     std::string GetIsolateReason() const;
 
                     /**
-                     * 设置
-                     * @param _isolateReason 
+                     * 设置Instance return reason supplement.
+                     * @param _isolateReason Instance return reason supplement.
                      * 
                      */
                     void SetIsolateReason(const std::string& _isolateReason);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IsolateReasonHasBeenSet() const;
 
                     /**
-                     * 获取Retain backup, true - Retained (incur fees)
-                     * @return SaveBackup Retain backup, true - Retained (incur fees)
+                     * 获取Retain backup, true - Retained (incur fees).
+                     * @return SaveBackup Retain backup, true - Retained (incur fees).
                      * 
                      */
                     bool GetSaveBackup() const;
 
                     /**
-                     * 设置Retain backup, true - Retained (incur fees)
-                     * @param _saveBackup Retain backup, true - Retained (incur fees)
+                     * 设置Retain backup, true - Retained (incur fees).
+                     * @param _saveBackup Retain backup, true - Retained (incur fees).
                      * 
                      */
                     void SetSaveBackup(const bool& _saveBackup);
@@ -150,7 +150,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance return reason type.
                      */
                     std::vector<int64_t> m_isolateReasonTypes;
                     bool m_isolateReasonTypesHasBeenSet;
 
                     /**
-                     * 
+                     * Instance return reason supplement.
                      */
                     std::string m_isolateReason;
                     bool m_isolateReasonHasBeenSet;
 
                     /**
-                     * Retain backup, true - Retained (incur fees)
+                     * Retain backup, true - Retained (incur fees).
                      */
                     bool m_saveBackup;
                     bool m_saveBackupHasBeenSet;

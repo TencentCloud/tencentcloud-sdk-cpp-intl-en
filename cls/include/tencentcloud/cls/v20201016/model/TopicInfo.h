@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取<p>Logset ID</p>
+                     * @return LogsetId <p>Logset ID</p>
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置<p>Logset ID</p>
+                     * @param _logsetId <p>Logset ID</p>
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取 Topic ID
-                     * @return TopicId  Topic ID
+                     * 获取<p>Topic ID</p>
+                     * @return TopicId <p>Topic ID</p>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置 Topic ID
-                     * @param _topicId  Topic ID
+                     * 设置<p>Topic ID</p>
+                     * @param _topicId <p>Topic ID</p>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic Name
-                     * @return TopicName Topic Name
+                     * 获取<p>Topic name</p>
+                     * @return TopicName <p>Topic name</p>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic Name
-                     * @param _topicName Topic Name
+                     * 设置<p>Topic name</p>
+                     * @param _topicName <p>Topic name</p>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of topic partitions
-                     * @return PartitionCount Number of topic partitions
+                     * 获取<p>Topic partition count</p>
+                     * @return PartitionCount <p>Topic partition count</p>
                      * 
                      */
                     int64_t GetPartitionCount() const;
 
                     /**
-                     * 设置Number of topic partitions
-                     * @param _partitionCount Number of topic partitions
+                     * 设置<p>Topic partition count</p>
+                     * @param _partitionCount <p>Topic partition count</p>
                      * 
                      */
                     void SetPartitionCount(const int64_t& _partitionCount);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool PartitionCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether the topic has indexing enabled (the topic type must be log topic)
-                     * @return Index Whether the topic has indexing enabled (the topic type must be log topic)
+                     * 获取<p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
+                     * @return Index <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
                      * 
                      */
                     bool GetIndex() const;
 
                     /**
-                     * 设置Whether the topic has indexing enabled (the topic type must be log topic)
-                     * @param _index Whether the topic has indexing enabled (the topic type must be log topic)
+                     * 设置<p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
+                     * @param _index <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
                      * 
                      */
                     void SetIndex(const bool& _index);
@@ -154,15 +154,36 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+                     * @return AssumerUin <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+                     * 
+                     */
+                    uint64_t GetAssumerUin() const;
+
+                    /**
+                     * 设置<p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+                     * @param _assumerUin <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+                     * 
+                     */
+                    void SetAssumerUin(const uint64_t& _assumerUin);
+
+                    /**
+                     * 判断参数 AssumerUin 是否已赋值
+                     * @return AssumerUin 是否已赋值
+                     * 
+                     */
+                    bool AssumerUinHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
+                     * @return AssumerName <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
                      * 
                      */
                     std::string GetAssumerName() const;
 
                     /**
-                     * 设置Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _assumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
+                     * @param _assumerName <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
                      * 
                      */
                     void SetAssumerName(const std::string& _assumerName);
@@ -175,15 +196,15 @@ namespace TencentCloud
                     bool AssumerNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @return CreateTime <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _createTime <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -196,15 +217,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
-                     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+                     * 获取<p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
+                     * @return Status <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
-                     * @param _status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+                     * 设置<p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
+                     * @param _status <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -217,15 +238,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Tag information bound to the topic</p>
+                     * @return Tags <p>Tag information bound to the topic</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Tag information bound to the topic</p>
+                     * @param _tags <p>Tag information bound to the topic</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -238,19 +259,36 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AutoSplit Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+                     * @return RoleName <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+                     * 
+                     */
+                    std::string GetRoleName() const;
+
+                    /**
+                     * 设置<p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+                     * @param _roleName <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+                     * 
+                     */
+                    void SetRoleName(const std::string& _roleName);
+
+                    /**
+                     * 判断参数 RoleName 是否已赋值
+                     * @return RoleName 是否已赋值
+                     * 
+                     */
+                    bool RoleNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether the topic has auto-split enabled</p>
+                     * @return AutoSplit <p>Whether the topic has auto-split enabled</p>
                      * 
                      */
                     bool GetAutoSplit() const;
 
                     /**
-                     * 设置Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _autoSplit Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Whether the topic has auto-split enabled</p>
+                     * @param _autoSplit <p>Whether the topic has auto-split enabled</p>
                      * 
                      */
                     void SetAutoSplit(const bool& _autoSplit);
@@ -263,19 +301,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AutoSplitHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
+                     * @return MaxSplitPartitions <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
                      * 
                      */
                     int64_t GetMaxSplitPartitions() const;
 
                     /**
-                     * 设置Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _maxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
+                     * @param _maxSplitPartitions <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
                      * 
                      */
                     void SetMaxSplitPartitions(const int64_t& _maxSplitPartitions);
@@ -288,15 +322,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
+                     * @return StorageType <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
+                     * @param _storageType <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -309,19 +343,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
+                     * @return Period <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
                      * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
+                     * @param _period <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
                      * 
                      */
                     void SetPeriod(const int64_t& _period);
@@ -334,19 +364,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
+                     * @return SubAssumerName <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
                      * 
                      */
                     std::string GetSubAssumerName() const;
 
                     /**
-                     * 设置Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
+                     * @param _subAssumerName <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
                      * 
                      */
                     void SetSubAssumerName(const std::string& _subAssumerName);
@@ -359,19 +385,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubAssumerNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Describes Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Topic description</p>
+                     * @return Describes <p>Topic description</p>
                      * 
                      */
                     std::string GetDescribes() const;
 
                     /**
-                     * 设置Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _describes Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Topic description</p>
+                     * @param _describes <p>Topic description</p>
                      * 
                      */
                     void SetDescribes(const std::string& _describes);
@@ -384,19 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescribesHasBeenSet() const;
 
                     /**
-                     * 获取Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
+                     * @return HotPeriod <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
                      * 
                      */
                     uint64_t GetHotPeriod() const;
 
                     /**
-                     * 设置Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
+                     * @param _hotPeriod <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
                      * 
                      */
                     void SetHotPeriod(const uint64_t& _hotPeriod);
@@ -409,27 +427,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HotPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BizType Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>kms-cls service key id</p>
+                     * @return KeyId <p>kms-cls service key id</p>
+                     * 
+                     */
+                    std::string GetKeyId() const;
+
+                    /**
+                     * 设置<p>kms-cls service key id</p>
+                     * @param _keyId <p>kms-cls service key id</p>
+                     * 
+                     */
+                    void SetKeyId(const std::string& _keyId);
+
+                    /**
+                     * 判断参数 KeyId 是否已赋值
+                     * @return KeyId 是否已赋值
+                     * 
+                     */
+                    bool KeyIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
+                     * @return BizType <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
                      * 
                      */
                     uint64_t GetBizType() const;
 
                     /**
-                     * 设置Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bizType Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
+                     * @param _bizType <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
                      * 
                      */
                     void SetBizType(const uint64_t& _bizType);
@@ -442,15 +469,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BizTypeHasBeenSet() const;
 
                     /**
-                     * 获取Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
+                     * @return IsWebTracking <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
                      * 
                      */
                     bool GetIsWebTracking() const;
 
                     /**
-                     * 设置Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
+                     * @param _isWebTracking <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
                      * 
                      */
                     void SetIsWebTracking(const bool& _isWebTracking);
@@ -463,15 +490,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsWebTrackingHasBeenSet() const;
 
                     /**
-                     * 获取Log topic extended information
-                     * @return Extends Log topic extended information
+                     * 获取<p>Log topic extended information</p>
+                     * @return Extends <p>Log topic extended information</p>
                      * 
                      */
                     TopicExtendInfo GetExtends() const;
 
                     /**
-                     * 设置Log topic extended information
-                     * @param _extends Log topic extended information
+                     * 设置<p>Log topic extended information</p>
+                     * @param _extends <p>Log topic extended information</p>
                      * 
                      */
                     void SetExtends(const TopicExtendInfo& _extends);
@@ -483,130 +510,301 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExtendsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Async migration task ID</p>
+                     * @return TopicAsyncTaskID <p>Async migration task ID</p>
+                     * 
+                     */
+                    std::string GetTopicAsyncTaskID() const;
+
+                    /**
+                     * 设置<p>Async migration task ID</p>
+                     * @param _topicAsyncTaskID <p>Async migration task ID</p>
+                     * 
+                     */
+                    void SetTopicAsyncTaskID(const std::string& _topicAsyncTaskID);
+
+                    /**
+                     * 判断参数 TopicAsyncTaskID 是否已赋值
+                     * @return TopicAsyncTaskID 是否已赋值
+                     * 
+                     */
+                    bool TopicAsyncTaskIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+                     * @return MigrationStatus <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+                     * 
+                     */
+                    uint64_t GetMigrationStatus() const;
+
+                    /**
+                     * 设置<p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+                     * @param _migrationStatus <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+                     * 
+                     */
+                    void SetMigrationStatus(const uint64_t& _migrationStatus);
+
+                    /**
+                     * 判断参数 MigrationStatus 是否已赋值
+                     * @return MigrationStatus 是否已赋值
+                     * 
+                     */
+                    bool MigrationStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+                     * @return EffectiveDate <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+                     * 
+                     */
+                    std::string GetEffectiveDate() const;
+
+                    /**
+                     * 设置<p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _effectiveDate <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+                     * 
+                     */
+                    void SetEffectiveDate(const std::string& _effectiveDate);
+
+                    /**
+                     * 判断参数 EffectiveDate 是否已赋值
+                     * @return EffectiveDate 是否已赋值
+                     * 
+                     */
+                    bool EffectiveDateHasBeenSet() const;
+
+                    /**
+                     * 获取<p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+                     * @return IsSourceFrom <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+                     * 
+                     */
+                    bool GetIsSourceFrom() const;
+
+                    /**
+                     * 设置<p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+                     * @param _isSourceFrom <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+                     * 
+                     */
+                    void SetIsSourceFrom(const bool& _isSourceFrom);
+
+                    /**
+                     * 判断参数 IsSourceFrom 是否已赋值
+                     * @return IsSourceFrom 是否已赋值
+                     * 
+                     */
+                    bool IsSourceFromHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+                     * @return BillingMode <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+                     * 
+                     */
+                    uint64_t GetBillingMode() const;
+
+                    /**
+                     * 设置<p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+                     * @param _billingMode <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+                     * 
+                     */
+                    void SetBillingMode(const uint64_t& _billingMode);
+
+                    /**
+                     * 判断参数 BillingMode 是否已赋值
+                     * @return BillingMode 是否已赋值
+                     * 
+                     */
+                    bool BillingModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+                     * @return NewBillingMode <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+                     * 
+                     */
+                    uint64_t GetNewBillingMode() const;
+
+                    /**
+                     * 设置<p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+                     * @param _newBillingMode <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+                     * 
+                     */
+                    void SetNewBillingMode(const uint64_t& _newBillingMode);
+
+                    /**
+                     * 判断参数 NewBillingMode 是否已赋值
+                     * @return NewBillingMode 是否已赋值
+                     * 
+                     */
+                    bool NewBillingModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Logset ID
+                     * <p>Logset ID</p>
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     *  Topic ID
+                     * <p>Topic ID</p>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Topic Name
+                     * <p>Topic name</p>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Number of topic partitions
+                     * <p>Topic partition count</p>
                      */
                     int64_t m_partitionCount;
                     bool m_partitionCountHasBeenSet;
 
                     /**
-                     * Whether the topic has indexing enabled (the topic type must be log topic)
+                     * <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
                      */
                     bool m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+                     */
+                    uint64_t m_assumerUin;
+                    bool m_assumerUinHasBeenSet;
+
+                    /**
+                     * <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
                      */
                     std::string m_assumerName;
                     bool m_assumerNameHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+                     * <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Tag information bound to the topic</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+                     */
+                    std::string m_roleName;
+                    bool m_roleNameHasBeenSet;
+
+                    /**
+                     * <p>Whether the topic has auto-split enabled</p>
                      */
                     bool m_autoSplit;
                     bool m_autoSplitHasBeenSet;
 
                     /**
-                     * Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
                      */
                     int64_t m_maxSplitPartitions;
                     bool m_maxSplitPartitionsHasBeenSet;
 
                     /**
-                     * Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
                      */
                     std::string m_subAssumerName;
                     bool m_subAssumerNameHasBeenSet;
 
                     /**
-                     * Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Topic description</p>
                      */
                     std::string m_describes;
                     bool m_describesHasBeenSet;
 
                     /**
-                     * Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
                      */
                     uint64_t m_hotPeriod;
                     bool m_hotPeriodHasBeenSet;
 
                     /**
-                     * Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>kms-cls service key id</p>
+                     */
+                    std::string m_keyId;
+                    bool m_keyIdHasBeenSet;
+
+                    /**
+                     * <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
                      */
                     uint64_t m_bizType;
                     bool m_bizTypeHasBeenSet;
 
                     /**
-                     * Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
                      */
                     bool m_isWebTracking;
                     bool m_isWebTrackingHasBeenSet;
 
                     /**
-                     * Log topic extended information
+                     * <p>Log topic extended information</p>
                      */
                     TopicExtendInfo m_extends;
                     bool m_extendsHasBeenSet;
+
+                    /**
+                     * <p>Async migration task ID</p>
+                     */
+                    std::string m_topicAsyncTaskID;
+                    bool m_topicAsyncTaskIDHasBeenSet;
+
+                    /**
+                     * <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+                     */
+                    uint64_t m_migrationStatus;
+                    bool m_migrationStatusHasBeenSet;
+
+                    /**
+                     * <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+                     */
+                    std::string m_effectiveDate;
+                    bool m_effectiveDateHasBeenSet;
+
+                    /**
+                     * <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+                     */
+                    bool m_isSourceFrom;
+                    bool m_isSourceFromHasBeenSet;
+
+                    /**
+                     * <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+                     */
+                    uint64_t m_billingMode;
+                    bool m_billingModeHasBeenSet;
+
+                    /**
+                     * <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+                     */
+                    uint64_t m_newBillingMode;
+                    bool m_newBillingModeHasBeenSet;
 
                 };
             }

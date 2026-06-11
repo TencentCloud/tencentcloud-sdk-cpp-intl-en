@@ -98,18 +98,18 @@ Supports 301 or 302.
 
                     /**
                      * 获取Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
                      * @return RedirectUrl Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
                      * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
                      * @param _redirectUrl Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
                      * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
@@ -139,7 +139,7 @@ Supports 301 or 302.
 
                     /**
                      * Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
                      */
                     std::string m_redirectUrl;
                     bool m_redirectUrlHasBeenSet;

@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Status code
-                     * @return Status Status code
+                     * 获取Status code: Scanning; Ok; Fail.
+                     * @return Status Status code: Scanning; Ok; Fail.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status code
-                     * @param _status Status code
+                     * 设置Status code: Scanning; Ok; Fail.
+                     * @param _status Status code: Scanning; Ok; Fail.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Failure details
-                     * @return FailType Failure details
+                     * 获取Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
+                     * @return FailType Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
                      * 
                      */
                     uint64_t GetFailType() const;
 
                     /**
-                     * 设置Failure details
-                     * @param _failType Failure details
+                     * 设置Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
+                     * @param _failType Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
                      * 
                      */
                     void SetFailType(const uint64_t& _failType);
@@ -322,18 +322,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -396,7 +392,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Status code
+                     * Status code: Scanning; Ok; Fail.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -414,7 +410,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Failure details
+                     * Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
                      */
                     uint64_t m_failType;
                     bool m_failTypeHasBeenSet;
@@ -427,7 +423,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

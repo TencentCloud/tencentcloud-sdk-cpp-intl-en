@@ -184,10 +184,8 @@ namespace TencentCloud
                     bool ScanPathHasBeenSet() const;
 
                     /**
-                     * 获取Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClickTimeout Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取One-Click Detection Timeout Setting
+                     * @return ClickTimeout One-Click Detection Timeout Setting
                      * 
                      */
                     uint64_t GetClickTimeout() const;
@@ -284,8 +282,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scanPathHasBeenSet;
 
                     /**
-                     * Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * One-Click Detection Timeout Setting
                      */
                     uint64_t m_clickTimeout;
                     bool m_clickTimeoutHasBeenSet;

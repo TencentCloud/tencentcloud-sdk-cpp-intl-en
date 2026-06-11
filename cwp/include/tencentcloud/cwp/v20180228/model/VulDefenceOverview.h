@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool ExceptionCountHasBeenSet() const;
 
                     /**
-                     * 获取Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackCounts Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Daily attack trend
+                     * @return AttackCounts Daily attack trend
                      * 
                      */
                     std::vector<int64_t> GetAttackCounts() const;
 
                     /**
-                     * 设置Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackCounts Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Daily attack trend
+                     * @param _attackCounts Daily attack trend
                      * 
                      */
                     void SetAttackCounts(const std::vector<int64_t>& _attackCounts);
@@ -136,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefendCounts Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetDefendCounts() const;
 
                     /**
                      * 设置Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _defendCounts Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefendCounts(const std::vector<int64_t>& _defendCounts);
@@ -161,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Date
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Date Date
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDate() const;
 
                     /**
                      * 设置Date
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _date Date
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDate(const std::vector<std::string>& _date);
@@ -205,22 +193,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_exceptionCountHasBeenSet;
 
                     /**
-                     * Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Daily attack trend
                      */
                     std::vector<int64_t> m_attackCounts;
                     bool m_attackCountsHasBeenSet;
 
                     /**
                      * Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_defendCounts;
                     bool m_defendCountsHasBeenSet;
 
                     /**
                      * Date
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_date;
                     bool m_dateHasBeenSet;

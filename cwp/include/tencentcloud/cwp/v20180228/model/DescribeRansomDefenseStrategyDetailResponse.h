@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Strategy Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RansomDefenseStrategyDetail GetStrategy() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RansomDefenseStrategyDetail m_strategy;
                     bool m_strategyHasBeenSet;

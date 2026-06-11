@@ -142,6 +142,20 @@ namespace TencentCloud
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
+                     * 获取Cluster operation sub-status.
+                     * @return ClusterSubStatus Cluster operation sub-status.
+                     * 
+                     */
+                    std::string GetClusterSubStatus() const;
+
+                    /**
+                     * 判断参数 ClusterSubStatus 是否已赋值
+                     * @return ClusterSubStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterSubStatusHasBeenSet() const;
+
+                    /**
                      * 获取Cluster type. Valid values: `MANAGED_CLUSTER` (managed cluster); `INDEPENDENT_CLUSTER` (self-deployed cluster).
                      * @return ClusterType Cluster type. Valid values: `MANAGED_CLUSTER` (managed cluster); `INDEPENDENT_CLUSTER` (self-deployed cluster).
                      * 
@@ -393,6 +407,34 @@ namespace TencentCloud
                      */
                     bool MasterIpsHasBeenSet() const;
 
+                    /**
+                     * 获取Owner name.
+                     * @return OwnerName Owner name.
+                     * 
+                     */
+                    std::string GetOwnerName() const;
+
+                    /**
+                     * 判断参数 OwnerName 是否已赋值
+                     * @return OwnerName 是否已赋值
+                     * 
+                     */
+                    bool OwnerNameHasBeenSet() const;
+
+                    /**
+                     * 获取Check failure reasons.
+                     * @return CheckFailReason Check failure reasons.
+                     * 
+                     */
+                    std::string GetCheckFailReason() const;
+
+                    /**
+                     * 判断参数 CheckFailReason 是否已赋值
+                     * @return CheckFailReason 是否已赋值
+                     * 
+                     */
+                    bool CheckFailReasonHasBeenSet() const;
+
                 private:
 
                     /**
@@ -436,6 +478,12 @@ namespace TencentCloud
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
+
+                    /**
+                     * Cluster operation sub-status.
+                     */
+                    std::string m_clusterSubStatus;
+                    bool m_clusterSubStatusHasBeenSet;
 
                     /**
                      * Cluster type. Valid values: `MANAGED_CLUSTER` (managed cluster); `INDEPENDENT_CLUSTER` (self-deployed cluster).
@@ -544,6 +592,18 @@ namespace TencentCloud
                      */
                     std::string m_masterIps;
                     bool m_masterIpsHasBeenSet;
+
+                    /**
+                     * Owner name.
+                     */
+                    std::string m_ownerName;
+                    bool m_ownerNameHasBeenSet;
+
+                    /**
+                     * Check failure reasons.
+                     */
+                    std::string m_checkFailReason;
+                    bool m_checkFailReasonHasBeenSet;
 
                 };
             }

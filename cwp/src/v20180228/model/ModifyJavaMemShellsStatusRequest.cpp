@@ -24,7 +24,8 @@ using namespace std;
 
 ModifyJavaMemShellsStatusRequest::ModifyJavaMemShellsStatusRequest() :
     m_statusHasBeenSet(false),
-    m_idsHasBeenSet(false)
+    m_idsHasBeenSet(false),
+    m_updateAllHasBeenSet(false)
 {
 }
 
@@ -54,6 +55,14 @@ string ModifyJavaMemShellsStatusRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetUint64(*itr), allocator);
         }
+    }
+
+    if (m_updateAllHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UpdateAll";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_updateAll, allocator);
     }
 
 
@@ -94,6 +103,22 @@ void ModifyJavaMemShellsStatusRequest::SetIds(const vector<uint64_t>& _ids)
 bool ModifyJavaMemShellsStatusRequest::IdsHasBeenSet() const
 {
     return m_idsHasBeenSet;
+}
+
+bool ModifyJavaMemShellsStatusRequest::GetUpdateAll() const
+{
+    return m_updateAll;
+}
+
+void ModifyJavaMemShellsStatusRequest::SetUpdateAll(const bool& _updateAll)
+{
+    m_updateAll = _updateAll;
+    m_updateAllHasBeenSet = true;
+}
+
+bool ModifyJavaMemShellsStatusRequest::UpdateAllHasBeenSet() const
+{
+    return m_updateAllHasBeenSet;
 }
 
 

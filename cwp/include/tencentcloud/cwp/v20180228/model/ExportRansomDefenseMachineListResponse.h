@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
+                     * @return TaskId Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
                      * 
                      */
                     std::string GetTaskId() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

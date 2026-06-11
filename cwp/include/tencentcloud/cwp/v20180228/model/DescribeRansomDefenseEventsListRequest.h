@@ -160,6 +160,48 @@ namespace TencentCloud
                      */
                     bool ByHasBeenSet() const;
 
+                    /**
+                     * 获取Event Creation Start Time
+                     * @return CreateBeginTime Event Creation Start Time
+                     * 
+                     */
+                    std::string GetCreateBeginTime() const;
+
+                    /**
+                     * 设置Event Creation Start Time
+                     * @param _createBeginTime Event Creation Start Time
+                     * 
+                     */
+                    void SetCreateBeginTime(const std::string& _createBeginTime);
+
+                    /**
+                     * 判断参数 CreateBeginTime 是否已赋值
+                     * @return CreateBeginTime 是否已赋值
+                     * 
+                     */
+                    bool CreateBeginTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Incident creation end time
+                     * @return CreateEndTime Incident creation end time
+                     * 
+                     */
+                    std::string GetCreateEndTime() const;
+
+                    /**
+                     * 设置Incident creation end time
+                     * @param _createEndTime Incident creation end time
+                     * 
+                     */
+                    void SetCreateEndTime(const std::string& _createEndTime);
+
+                    /**
+                     * 判断参数 CreateEndTime 是否已赋值
+                     * @return CreateEndTime 是否已赋值
+                     * 
+                     */
+                    bool CreateEndTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -194,6 +236,18 @@ namespace TencentCloud
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
+
+                    /**
+                     * Event Creation Start Time
+                     */
+                    std::string m_createBeginTime;
+                    bool m_createBeginTimeHasBeenSet;
+
+                    /**
+                     * Incident creation end time
+                     */
+                    std::string m_createEndTime;
+                    bool m_createEndTimeHasBeenSet;
 
                 };
             }

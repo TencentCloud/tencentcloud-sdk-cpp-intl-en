@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BroadcastInfo Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Security report article details
+                     * @return BroadcastInfo Security report article details
                      * 
                      */
                     BroadcastInfo GetBroadcastInfo() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Security report article details
                      */
                     BroadcastInfo m_broadcastInfo;
                     bool m_broadcastInfoHasBeenSet;

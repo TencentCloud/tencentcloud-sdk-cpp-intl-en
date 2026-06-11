@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool EndDateHasBeenSet() const;
 
                     /**
-                     * 获取Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
-                     * @return BroadcastType Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+                     * 获取Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
+                     * @return BroadcastType Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
                      * 
                      */
                     std::string GetBroadcastType() const;
 
                     /**
-                     * 设置Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
-                     * @param _broadcastType Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+                     * 设置Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
+                     * @param _broadcastType Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
                      * 
                      */
                     void SetBroadcastType(const std::string& _broadcastType);
@@ -174,7 +174,7 @@ namespace TencentCloud
                     bool m_endDateHasBeenSet;
 
                     /**
-                     * Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+                     * Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
                      */
                     std::string m_broadcastType;
                     bool m_broadcastTypeHasBeenSet;

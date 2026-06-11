@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IncidentId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIncidentId() const;
 
                     /**
                      * 设置Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _incidentId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIncidentId(const std::string& _incidentId);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableName The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tableName The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TableNameHasBeenSet() const;
 
                     /**
-                     * 获取A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vertex A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node information list, in an array including detailed node information.
+                     * @return Vertex Node information list, in an array including detailed node information.
                      * 
                      */
                     std::vector<VertexInfo> GetVertex() const;
 
                     /**
-                     * 设置A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vertex A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node information list, in an array including detailed node information.
+                     * @param _vertex Node information list, in an array including detailed node information.
                      * 
                      */
                     void SetVertex(const std::vector<VertexInfo>& _vertex);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VertexHasBeenSet() const;
 
                     /**
-                     * 获取Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VertexCount Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of nodes.
+                     * @return VertexCount Total number of nodes.
                      * 
                      */
                     int64_t GetVertexCount() const;
 
                     /**
-                     * 设置Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vertexCount Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total number of nodes.
+                     * @param _vertexCount Total number of nodes.
                      * 
                      */
                     void SetVertexCount(const int64_t& _vertexCount);
@@ -151,28 +135,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_incidentId;
                     bool m_incidentIdHasBeenSet;
 
                     /**
                      * The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;
 
                     /**
-                     * A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node information list, in an array including detailed node information.
                      */
                     std::vector<VertexInfo> m_vertex;
                     bool m_vertexHasBeenSet;
 
                     /**
-                     * Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of nodes.
                      */
                     int64_t m_vertexCount;
                     bool m_vertexCountHasBeenSet;

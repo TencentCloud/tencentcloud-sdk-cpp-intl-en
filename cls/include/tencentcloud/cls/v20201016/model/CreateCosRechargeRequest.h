@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the log topic.
-                     * @return TopicId ID of the log topic.
+                     * 获取Log topic Id.
+
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic Id.
+
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the log topic.
-                     * @param _topicId ID of the log topic.
+                     * 设置Log topic Id.
+
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic Id.
+
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -65,15 +73,23 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the logset.
-                     * @return LogsetId ID of the logset.
+                     * 获取FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @return LogsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置ID of the logset.
-                     * @param _logsetId ID of the logset.
+                     * 设置FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @param _logsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -86,15 +102,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Shipping task name.
-                     * @return Name Shipping task name.
+                     * 获取COS import task name, supports up to 128 bytes.
+                     * @return Name COS import task name, supports up to 128 bytes.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Shipping task name.
-                     * @param _name Shipping task name.
+                     * 设置COS import task name, supports up to 128 bytes.
+                     * @param _name COS import task name, supports up to 128 bytes.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,15 +123,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
-                     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * 获取COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+                     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
-                     * @param _bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * 设置COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+                     * @param _bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -149,27 +173,6 @@ namespace TencentCloud
                     bool BucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取The prefix of the folder where COS files are located.
-                     * @return Prefix The prefix of the folder where COS files are located.
-                     * 
-                     */
-                    std::string GetPrefix() const;
-
-                    /**
-                     * 设置The prefix of the folder where COS files are located.
-                     * @param _prefix The prefix of the folder where COS files are located.
-                     * 
-                     */
-                    void SetPrefix(const std::string& _prefix);
-
-                    /**
-                     * 判断参数 Prefix 是否已赋值
-                     * @return Prefix 是否已赋值
-                     * 
-                     */
-                    bool PrefixHasBeenSet() const;
-
-                    /**
                      * 获取The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
                      * @return LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
@@ -195,15 +198,36 @@ Default value: `minimalist_log`
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
-                     * @return Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+                     * 获取The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * @return Prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * 
+                     */
+                    std::string GetPrefix() const;
+
+                    /**
+                     * 设置The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * @param _prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     * 
+                     */
+                    void SetPrefix(const std::string& _prefix);
+
+                    /**
+                     * 判断参数 Prefix 是否已赋值
+                     * @return Prefix 是否已赋值
+                     * 
+                     */
+                    bool PrefixHasBeenSet() const;
+
+                    /**
+                     * 获取Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: ""; no compression.
+                     * @return Compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: ""; no compression.
                      * 
                      */
                     std::string GetCompress() const;
 
                     /**
-                     * 设置Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
-                     * @param _compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+                     * 设置Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: ""; no compression.
+                     * @param _compress Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: ""; no compression.
                      * 
                      */
                     void SetCompress(const std::string& _compress);
@@ -236,28 +260,76 @@ Default value: `minimalist_log`
                      */
                     bool ExtractRuleInfoHasBeenSet() const;
 
+                    /**
+                     * 获取COS import task type. Valid values: 1: one-time import task (default value); 2: continuous import task.
+                     * @return TaskType COS import task type. Valid values: 1: one-time import task (default value); 2: continuous import task.
+                     * 
+                     */
+                    uint64_t GetTaskType() const;
+
+                    /**
+                     * 设置COS import task type. Valid values: 1: one-time import task (default value); 2: continuous import task.
+                     * @param _taskType COS import task type. Valid values: 1: one-time import task (default value); 2: continuous import task.
+                     * 
+                     */
+                    void SetTaskType(const uint64_t& _taskType);
+
+                    /**
+                     * 判断参数 TaskType 是否已赋值
+                     * @return TaskType 是否已赋值
+                     * 
+                     */
+                    bool TaskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Metadata.
+                     * @return Metadata Metadata.
+                     * 
+                     */
+                    std::vector<std::string> GetMetadata() const;
+
+                    /**
+                     * 设置Metadata.
+                     * @param _metadata Metadata.
+                     * 
+                     */
+                    void SetMetadata(const std::vector<std::string>& _metadata);
+
+                    /**
+                     * 判断参数 Metadata 是否已赋值
+                     * @return Metadata 是否已赋值
+                     * 
+                     */
+                    bool MetadataHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the log topic.
+                     * Log topic Id.
+
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * ID of the logset.
+                     * FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Shipping task name.
+                     * COS import task name, supports up to 128 bytes.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+                     * COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
@@ -269,12 +341,6 @@ Default value: `minimalist_log`
                     bool m_bucketRegionHasBeenSet;
 
                     /**
-                     * The prefix of the folder where COS files are located.
-                     */
-                    std::string m_prefix;
-                    bool m_prefixHasBeenSet;
-
-                    /**
                      * The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
                      */
@@ -282,7 +348,13 @@ Default value: `minimalist_log`
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
+                     * The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+                     */
+                    std::string m_prefix;
+                    bool m_prefixHasBeenSet;
+
+                    /**
+                     * Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: ""; no compression.
                      */
                     std::string m_compress;
                     bool m_compressHasBeenSet;
@@ -292,6 +364,18 @@ Default value: `minimalist_log`
                      */
                     ExtractRuleInfo m_extractRuleInfo;
                     bool m_extractRuleInfoHasBeenSet;
+
+                    /**
+                     * COS import task type. Valid values: 1: one-time import task (default value); 2: continuous import task.
+                     */
+                    uint64_t m_taskType;
+                    bool m_taskTypeHasBeenSet;
+
+                    /**
+                     * Metadata.
+                     */
+                    std::vector<std::string> m_metadata;
+                    bool m_metadataHasBeenSet;
 
                 };
             }

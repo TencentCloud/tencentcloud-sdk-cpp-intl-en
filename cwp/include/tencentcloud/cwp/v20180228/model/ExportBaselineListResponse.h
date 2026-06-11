@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DownloadUrl Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -77,7 +75,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;

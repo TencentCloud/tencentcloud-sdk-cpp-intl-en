@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @param _topicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,15 +68,19 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the partition to be split
-                     * @return PartitionId ID of the partition to be split
+                     * 获取Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
+                     * @return PartitionId Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetPartitionId() const;
 
                     /**
-                     * 设置ID of the partition to be split
-                     * @param _partitionId ID of the partition to be split
+                     * 设置Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
+                     * @param _partitionId Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
                      * 
                      */
                     void SetPartitionId(const int64_t& _partitionId);
@@ -130,12 +138,14 @@ namespace TencentCloud
 
                     /**
                      * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * ID of the partition to be split
+                     * Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
                      */
                     int64_t m_partitionId;
                     bool m_partitionIdHasBeenSet;

@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool LogsetIDHasBeenSet() const;
 
                     /**
-                     * 获取Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogsetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取logset name
+                     * @return LogsetName logset name
                      * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
-                     * 设置Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logsetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置logset name
+                     * @param _logsetName logset name
                      * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
@@ -94,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogsetNameHasBeenSet() const;
 
                     /**
-                     * 获取List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CLS Topic List
+                     * @return TopicList CLS Topic List
                      * 
                      */
                     std::vector<ClsTopicInfo> GetTopicList() const;
 
                     /**
-                     * 设置List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _topicList List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CLS Topic List
+                     * @param _topicList CLS Topic List
                      * 
                      */
                     void SetTopicList(const std::vector<ClsTopicInfo>& _topicList);
@@ -127,15 +119,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logsetIDHasBeenSet;
 
                     /**
-                     * Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * logset name
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;
 
                     /**
-                     * List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CLS Topic List
                      */
                     std::vector<ClsTopicInfo> m_topicList;
                     bool m_topicListHasBeenSet;

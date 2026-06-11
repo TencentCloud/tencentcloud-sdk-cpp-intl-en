@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log topic ID
+                     * @return TopicId Log topic ID
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _topicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Log topic ID
+                     * @param _topicId Log topic ID
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Error MessageNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Error message
+                     * @return ErrorMsg Error message
                      * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
-                     * 设置Error MessageNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errorMsg Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Error message
+                     * @param _errorMsg Error message
                      * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取Error CodeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorCodeStr Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Error code.
+                     * @return ErrorCodeStr Error code.
                      * 
                      */
                     std::string GetErrorCodeStr() const;
 
                     /**
-                     * 设置Error CodeNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errorCodeStr Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Error code.
+                     * @param _errorCodeStr Error code.
                      * 
                      */
                     void SetErrorCodeStr(const std::string& _errorCodeStr);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * Log topic ID
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+                     * Error message
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+                     * Error code.
                      */
                     std::string m_errorCodeStr;
                     bool m_errorCodeStrHasBeenSet;

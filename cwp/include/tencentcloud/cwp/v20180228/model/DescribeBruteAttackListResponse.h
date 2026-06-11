@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BruteAttackList List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BruteAttackInfo> GetBruteAttackList() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
                      * List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BruteAttackInfo> m_bruteAttackList;
                     bool m_bruteAttackListHasBeenSet;

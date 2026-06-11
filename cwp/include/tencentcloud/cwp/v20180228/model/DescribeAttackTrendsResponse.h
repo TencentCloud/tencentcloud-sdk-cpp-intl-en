@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetAttackTrend Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NetAttackTrend> GetNetAttackTrend() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetAttackTrend> m_netAttackTrend;
                     bool m_netAttackTrendHasBeenSet;

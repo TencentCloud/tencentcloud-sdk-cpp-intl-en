@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of servers
-                     * @return HostCnt Number of servers
+                     * 获取Number of hosts (includes regular nodes and super nodes).
+                     * @return HostCnt Number of hosts (includes regular nodes and super nodes).
                      * 
                      */
                     uint64_t GetHostCnt() const;
 
                     /**
-                     * 设置Number of servers
-                     * @param _hostCnt Number of servers
+                     * 设置Number of hosts (includes regular nodes and super nodes).
+                     * @param _hostCnt Number of hosts (includes regular nodes and super nodes).
                      * 
                      */
                     void SetHostCnt(const uint64_t& _hostCnt);
@@ -150,6 +150,27 @@ namespace TencentCloud
                      * 
                      */
                     bool HostCntHasBeenSet() const;
+
+                    /**
+                     * 获取Number of super nodes.
+                     * @return SuperNodeCnt Number of super nodes.
+                     * 
+                     */
+                    uint64_t GetSuperNodeCnt() const;
+
+                    /**
+                     * 设置Number of super nodes.
+                     * @param _superNodeCnt Number of super nodes.
+                     * 
+                     */
+                    void SetSuperNodeCnt(const uint64_t& _superNodeCnt);
+
+                    /**
+                     * 判断参数 SuperNodeCnt 是否已赋值
+                     * @return SuperNodeCnt 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeCntHasBeenSet() const;
 
                     /**
                      * 获取Number of containers
@@ -487,6 +508,178 @@ namespace TencentCloud
                      */
                     bool ComponentCntHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return CriticalLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetCriticalLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _criticalLevelVulCnt 
+                     * 
+                     */
+                    void SetCriticalLevelVulCnt(const uint64_t& _criticalLevelVulCnt);
+
+                    /**
+                     * 判断参数 CriticalLevelVulCnt 是否已赋值
+                     * @return CriticalLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool CriticalLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HighLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetHighLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _highLevelVulCnt 
+                     * 
+                     */
+                    void SetHighLevelVulCnt(const uint64_t& _highLevelVulCnt);
+
+                    /**
+                     * 判断参数 HighLevelVulCnt 是否已赋值
+                     * @return HighLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool HighLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MediumLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetMediumLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _mediumLevelVulCnt 
+                     * 
+                     */
+                    void SetMediumLevelVulCnt(const uint64_t& _mediumLevelVulCnt);
+
+                    /**
+                     * 判断参数 MediumLevelVulCnt 是否已赋值
+                     * @return MediumLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool MediumLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LowLevelVulCnt 
+                     * 
+                     */
+                    uint64_t GetLowLevelVulCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _lowLevelVulCnt 
+                     * 
+                     */
+                    void SetLowLevelVulCnt(const uint64_t& _lowLevelVulCnt);
+
+                    /**
+                     * 判断参数 LowLevelVulCnt 是否已赋值
+                     * @return LowLevelVulCnt 是否已赋值
+                     * 
+                     */
+                    bool LowLevelVulCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsLatestImage 
+                     * 
+                     */
+                    bool GetIsLatestImage() const;
+
+                    /**
+                     * 设置
+                     * @param _isLatestImage 
+                     * 
+                     */
+                    void SetIsLatestImage(const bool& _isLatestImage);
+
+                    /**
+                     * 判断参数 IsLatestImage 是否已赋值
+                     * @return IsLatestImage 是否已赋值
+                     * 
+                     */
+                    bool IsLatestImageHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RecommendedFix 
+                     * 
+                     */
+                    bool GetRecommendedFix() const;
+
+                    /**
+                     * 设置
+                     * @param _recommendedFix 
+                     * 
+                     */
+                    void SetRecommendedFix(const bool& _recommendedFix);
+
+                    /**
+                     * 判断参数 RecommendedFix 是否已赋值
+                     * @return RecommendedFix 是否已赋值
+                     * 
+                     */
+                    bool RecommendedFixHasBeenSet() const;
+
+                    /**
+                     * 获取Solution
+                     * @return Solution Solution
+                     * 
+                     */
+                    std::string GetSolution() const;
+
+                    /**
+                     * 设置Solution
+                     * @param _solution Solution
+                     * 
+                     */
+                    void SetSolution(const std::string& _solution);
+
+                    /**
+                     * 判断参数 Solution 是否已赋值
+                     * @return Solution 是否已赋值
+                     * 
+                     */
+                    bool SolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Reason
+
+                     * @return Reason Reason
+
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 设置Reason
+
+                     * @param _reason Reason
+
+                     * 
+                     */
+                    void SetReason(const std::string& _reason);
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
+
                 private:
 
                     /**
@@ -514,10 +707,16 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Number of servers
+                     * Number of hosts (includes regular nodes and super nodes).
                      */
                     uint64_t m_hostCnt;
                     bool m_hostCntHasBeenSet;
+
+                    /**
+                     * Number of super nodes.
+                     */
+                    uint64_t m_superNodeCnt;
+                    bool m_superNodeCntHasBeenSet;
 
                     /**
                      * Number of containers
@@ -614,6 +813,55 @@ namespace TencentCloud
                      */
                     uint64_t m_componentCnt;
                     bool m_componentCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_criticalLevelVulCnt;
+                    bool m_criticalLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_highLevelVulCnt;
+                    bool m_highLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_mediumLevelVulCnt;
+                    bool m_mediumLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_lowLevelVulCnt;
+                    bool m_lowLevelVulCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isLatestImage;
+                    bool m_isLatestImageHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_recommendedFix;
+                    bool m_recommendedFixHasBeenSet;
+
+                    /**
+                     * Solution
+                     */
+                    std::string m_solution;
+                    bool m_solutionHasBeenSet;
+
+                    /**
+                     * Reason
+
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

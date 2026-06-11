@@ -428,18 +428,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -473,19 +469,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsNew Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is newly added [0: no | 1: yes]
+                     * @return IsNew Whether it is newly added [0: no | 1: yes]
                      * 
                      */
                     int64_t GetIsNew() const;
 
                     /**
-                     * 设置Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isNew Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is newly added [0: no | 1: yes]
+                     * @param _isNew Whether it is newly added [0: no | 1: yes]
                      * 
                      */
                     void SetIsNew(const int64_t& _isNew);
@@ -498,19 +490,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsNewHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Additional information
+                     * @return MachineExtraInfo  Additional information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Additional information
+                     * @param _machineExtraInfo  Additional information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -634,7 +622,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -646,15 +633,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is newly added [0: no | 1: yes]
                      */
                     int64_t m_isNew;
                     bool m_isNewHasBeenSet;
 
                     /**
-                     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Additional information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

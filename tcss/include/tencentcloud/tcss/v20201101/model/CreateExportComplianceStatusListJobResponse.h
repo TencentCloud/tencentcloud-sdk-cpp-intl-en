@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobId ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Return to create the ID of the export task
+                     * @return JobId Return to create the ID of the export task
                      * 
                      */
                     std::string GetJobId() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Return to create the ID of the export task
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

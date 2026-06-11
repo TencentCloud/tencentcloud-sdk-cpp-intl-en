@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Blocking rule ID.
-                     * @return TaskId Blocking rule ID.
+                     * 获取Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+                     * @return TaskId Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Blocking rule ID.
-                     * @param _taskId Blocking rule ID.
+                     * 设置Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+                     * @param _taskId Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Notification channel group ID.
-                     * @return AlarmNoticeId Notification channel group ID.
+                     * 获取id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+                     * @return AlarmNoticeId id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
                      * 
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
-                     * 设置Notification channel group ID.
-                     * @param _alarmNoticeId Notification channel group ID.
+                     * 设置id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+                     * @param _alarmNoticeId id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
                      * 
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AlarmNoticeIdHasBeenSet() const;
 
                     /**
-                     * 获取Block start time (second-level timestamp).
-                     * @return StartTime Block start time (second-level timestamp).
+                     * 获取Block start time, second-level (s) timestamp.
+                     * @return StartTime Block start time, second-level (s) timestamp.
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Block start time (second-level timestamp).
-                     * @param _startTime Block start time (second-level timestamp).
+                     * 设置Block start time, second-level (s) timestamp.
+                     * @param _startTime Block start time, second-level (s) timestamp.
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -191,14 +191,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
                      * @return Status Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
                      * @param _status Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -213,19 +217,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Blocking rule ID.
+                     * Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Notification channel group ID.
+                     * id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
                      */
                     std::string m_alarmNoticeId;
                     bool m_alarmNoticeIdHasBeenSet;
 
                     /**
-                     * Block start time (second-level timestamp).
+                     * Block start time, second-level (s) timestamp.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -256,6 +260,7 @@ namespace TencentCloud
 
                     /**
                      * Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Analysis name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Analysis name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Analysis Name
+                     * @return Name Analysis Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Analysis name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Analysis name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Analysis Name
+                     * @param _name Analysis Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -73,19 +69,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Type of data being analyzed. Valid values: `query`, `field`, `original`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Type of data being analyzed. Valid values: `query`, `field`, `original`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
+
+                     * @return Type Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
+
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of data being analyzed. Valid values: `query`, `field`, `original`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Type of data being analyzed. Valid values: `query`, `field`, `original`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
+
+                     * @param _type Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
+
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -99,18 +95,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Analysis content
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Content Analysis content
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Analysis content
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _content Analysis content
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -125,68 +117,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Multi-dimensional analysis configuration.
 
-Supported when the type field of Analysis is query (custom){
-"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+When the Type field of Analysis is query (custom), support
+{
+"Key": "SyntaxRule",  // Syntax rule
+"Value": "1"  //0: Lucene syntax, 1: CQL syntax
+}
 
-Supported when the Type field of Analysis is field (top5) {
+When the Type field of Analysis is field (top5), it supports
+ {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+},{
+"Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
 },{
 "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
     "Value": "0"//0:Lucene, 1:CQL
 }       
 
-When the Type field of Analysis is original (original log), it supports
+When the Type field of Analysis is original (raw log), it supports
 {
     "Key": "Fields",
     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
 }, {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
 },{
-"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+"Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+    "Value": "2"
 },
 {
-"Key": "Limit", // Maximum number of logs    "Value": "5"
+"Key": "Limit", //Maximum number of logs
+    "Value": "5"
 },{
-"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+"Key": "SyntaxRule", // If this field is not found, it's also the old syntax
     "Value": "0"//0:Lucene, 1:CQL
 }
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConfigInfo Multi-dimensional analysis configuration.
 
-Supported when the type field of Analysis is query (custom){
-"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+When the Type field of Analysis is query (custom), support
+{
+"Key": "SyntaxRule",  // Syntax rule
+"Value": "1"  //0: Lucene syntax, 1: CQL syntax
+}
 
-Supported when the Type field of Analysis is field (top5) {
+When the Type field of Analysis is field (top5), it supports
+ {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+},{
+"Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
 },{
 "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
     "Value": "0"//0:Lucene, 1:CQL
 }       
 
-When the Type field of Analysis is original (original log), it supports
+When the Type field of Analysis is original (raw log), it supports
 {
     "Key": "Fields",
     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
 }, {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
 },{
-"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+"Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+    "Value": "2"
 },
 {
-"Key": "Limit", // Maximum number of logs    "Value": "5"
+"Key": "Limit", //Maximum number of logs
+    "Value": "5"
 },{
-"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+"Key": "SyntaxRule", // If this field is not found, it's also the old syntax
     "Value": "0"//0:Lucene, 1:CQL
 }
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AlarmAnalysisConfig> GetConfigInfo() const;
@@ -194,68 +204,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Multi-dimensional analysis configuration.
 
-Supported when the type field of Analysis is query (custom){
-"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+When the Type field of Analysis is query (custom), support
+{
+"Key": "SyntaxRule",  // Syntax rule
+"Value": "1"  //0: Lucene syntax, 1: CQL syntax
+}
 
-Supported when the Type field of Analysis is field (top5) {
+When the Type field of Analysis is field (top5), it supports
+ {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+},{
+"Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
 },{
 "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
     "Value": "0"//0:Lucene, 1:CQL
 }       
 
-When the Type field of Analysis is original (original log), it supports
+When the Type field of Analysis is original (raw log), it supports
 {
     "Key": "Fields",
     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
 }, {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
 },{
-"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+"Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+    "Value": "2"
 },
 {
-"Key": "Limit", // Maximum number of logs    "Value": "5"
+"Key": "Limit", //Maximum number of logs
+    "Value": "5"
 },{
-"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+"Key": "SyntaxRule", // If this field is not found, it's also the old syntax
     "Value": "0"//0:Lucene, 1:CQL
 }
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _configInfo Multi-dimensional analysis configuration.
 
-Supported when the type field of Analysis is query (custom){
-"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+When the Type field of Analysis is query (custom), support
+{
+"Key": "SyntaxRule",  // Syntax rule
+"Value": "1"  //0: Lucene syntax, 1: CQL syntax
+}
 
-Supported when the Type field of Analysis is field (top5) {
+When the Type field of Analysis is field (top5), it supports
+ {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+},{
+"Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
 },{
 "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
     "Value": "0"//0:Lucene, 1:CQL
 }       
 
-When the Type field of Analysis is original (original log), it supports
+When the Type field of Analysis is original (raw log), it supports
 {
     "Key": "Fields",
     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
 }, {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
 },{
-"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+"Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+    "Value": "2"
 },
 {
-"Key": "Limit", // Maximum number of logs    "Value": "5"
+"Key": "Limit", //Maximum number of logs
+    "Value": "5"
 },{
-"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+"Key": "SyntaxRule", // If this field is not found, it's also the old syntax
     "Value": "0"//0:Lucene, 1:CQL
 }
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetConfigInfo(const std::vector<AlarmAnalysisConfig>& _configInfo);
@@ -270,22 +298,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Analysis name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Analysis Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Type of data being analyzed. Valid values: `query`, `field`, `original`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
+
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Analysis content
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
@@ -293,36 +319,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Multi-dimensional analysis configuration.
 
-Supported when the type field of Analysis is query (custom){
-"Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+When the Type field of Analysis is query (custom), support
+{
+"Key": "SyntaxRule",  // Syntax rule
+"Value": "1"  //0: Lucene syntax, 1: CQL syntax
+}
 
-Supported when the Type field of Analysis is field (top5) {
+When the Type field of Analysis is field (top5), it supports
+ {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+},{
+"Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
 },{
 "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
     "Value": "0"//0:Lucene, 1:CQL
 }       
 
-When the Type field of Analysis is original (original log), it supports
+When the Type field of Analysis is original (raw log), it supports
 {
     "Key": "Fields",
     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
 }, {
     "Key": "QueryIndex",
-"Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-"Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+"Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
 },{
-"Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+"Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+    "Value": "* | select count(*) as count"
+},{
+"Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+    "Value": "2"
 },
 {
-"Key": "Limit", // Maximum number of logs    "Value": "5"
+"Key": "Limit", //Maximum number of logs
+    "Value": "5"
 },{
-"Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+"Key": "SyntaxRule", // If this field is not found, it's also the old syntax
     "Value": "0"//0:Lucene, 1:CQL
 }
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AlarmAnalysisConfig> m_configInfo;
                     bool m_configInfoHasBeenSet;

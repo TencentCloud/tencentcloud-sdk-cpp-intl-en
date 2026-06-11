@@ -45,27 +45,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Export field
-                     * @return ExportField Export field
-                     * 
-                     */
-                    std::vector<std::string> GetExportField() const;
-
-                    /**
-                     * 设置Export field
-                     * @param _exportField Export field
-                     * 
-                     */
-                    void SetExportField(const std::vector<std::string>& _exportField);
-
-                    /**
-                     * 判断参数 ExportField 是否已赋值
-                     * @return ExportField 是否已赋值
-                     * 
-                     */
-                    bool ExportFieldHasBeenSet() const;
-
-                    /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * 
@@ -158,6 +137,27 @@ namespace TencentCloud
                     bool ImageInfoHasBeenSet() const;
 
                     /**
+                     * 获取Export field
+                     * @return ExportField Export field
+                     * 
+                     */
+                    std::vector<std::string> GetExportField() const;
+
+                    /**
+                     * 设置Export field
+                     * @param _exportField Export field
+                     * 
+                     */
+                    void SetExportField(const std::vector<std::string>& _exportField);
+
+                    /**
+                     * 判断参数 ExportField 是否已赋值
+                     * @return ExportField 是否已赋值
+                     * 
+                     */
+                    bool ExportFieldHasBeenSet() const;
+
+                    /**
                      * 获取Image ID
                      * @return Id Image ID
                      * 
@@ -179,12 +179,6 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                 private:
-
-                    /**
-                     * Export field
-                     */
-                    std::vector<std::string> m_exportField;
-                    bool m_exportFieldHasBeenSet;
 
                     /**
                      * Number of results to be returned. Default value: `10`. Maximum value: `100`.
@@ -211,6 +205,12 @@ namespace TencentCloud
                      */
                     ImageInfo m_imageInfo;
                     bool m_imageInfoHasBeenSet;
+
+                    /**
+                     * Export field
+                     */
+                    std::vector<std::string> m_exportField;
+                    bool m_exportFieldHasBeenSet;
 
                     /**
                      * Image ID

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Yunjing client ID
-                     * @return Quuid Yunjing client ID
+                     * 获取Machine UUID
+                     * @return Quuid Machine UUID
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置Yunjing client ID
-                     * @param _quuid Yunjing client ID
+                     * 设置Machine UUID
+                     * @param _quuid Machine UUID
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Host ID
-                     * @return Uuid Host ID
+                     * 获取Host Security UUID
+                     * @return Uuid Host Security UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Host ID
-                     * @param _uuid Host ID
+                     * 设置Host Security UUID
+                     * @param _uuid Host Security UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -176,13 +176,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Yunjing client ID
+                     * Machine UUID
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Host ID
+                     * Host Security UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

@@ -71,6 +71,27 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
+                     * 获取Rule ID of slow attack protection, returned as an output parameter.
+                     * @return Id Rule ID of slow attack protection, returned as an output parameter.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Rule ID of slow attack protection, returned as an output parameter.
+                     * @param _id Rule ID of slow attack protection, returned as an output parameter.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
                      * 获取Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
                      * @return Action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
                      * 
@@ -140,6 +161,12 @@ namespace TencentCloud
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
+
+                    /**
+                     * Rule ID of slow attack protection, returned as an output parameter.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                     /**
                      * Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.

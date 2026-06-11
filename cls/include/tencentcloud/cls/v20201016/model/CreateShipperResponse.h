@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shipping task ID.
-                     * @return ShipperId Shipping task ID.
+                     * 获取<p>Delivery task ID</p>
+                     * @return ShipperId <p>Delivery task ID</p>
                      * 
                      */
                     std::string GetShipperId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shipping task ID.
+                     * <p>Delivery task ID</p>
                      */
                     std::string m_shipperId;
                     bool m_shipperIdHasBeenSet;

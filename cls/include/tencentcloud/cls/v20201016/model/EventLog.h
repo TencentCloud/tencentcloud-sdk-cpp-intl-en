@@ -47,18 +47,38 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event channel, supports Application, Security, Setup, System, ALL
+                     * 获取Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
-                     * @return EventChannel Event channel, supports Application, Security, Setup, System, ALL
+                     * @return EventChannel Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
                      * 
                      */
                     std::string GetEventChannel() const;
 
                     /**
-                     * 设置Event channel, supports Application, Security, Setup, System, ALL
+                     * 设置Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
-                     * @param _eventChannel Event channel, supports Application, Security, Setup, System, ALL
+                     * @param _eventChannel Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
                      * 
                      */
@@ -72,15 +92,23 @@ namespace TencentCloud
                     bool EventChannelHasBeenSet() const;
 
                     /**
-                     * 获取Time type, 1: User-defined, 2: Current time
-                     * @return TimeType Time type, 1: User-defined, 2: Current time
+                     * 获取Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+                     * @return TimeType Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
                      * 
                      */
                     uint64_t GetTimeType() const;
 
                     /**
-                     * 设置Time type, 1: User-defined, 2: Current time
-                     * @param _timeType Time type, 1: User-defined, 2: Current time
+                     * 设置Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+                     * @param _timeType Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
                      * 
                      */
                     void SetTimeType(const uint64_t& _timeType);
@@ -93,15 +121,19 @@ namespace TencentCloud
                     bool TimeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Time, when choosing custom time type, a specific time is required
-                     * @return Timestamp Time, when choosing custom time type, a specific time is required
+                     * 获取Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
+                     * @return Timestamp Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
                      * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
-                     * 设置Time, when choosing custom time type, a specific time is required
-                     * @param _timestamp Time, when choosing custom time type, a specific time is required
+                     * 设置Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
+                     * @param _timestamp Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
                      * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
@@ -115,14 +147,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
                      * @return EventIDs Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
                      * 
                      */
                     std::vector<std::string> GetEventIDs() const;
 
                     /**
                      * 设置Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
                      * @param _eventIDs Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
                      * 
                      */
                     void SetEventIDs(const std::vector<std::string>& _eventIDs);
@@ -137,26 +185,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Event channel, supports Application, Security, Setup, System, ALL
+                     * Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
                      */
                     std::string m_eventChannel;
                     bool m_eventChannelHasBeenSet;
 
                     /**
-                     * Time type, 1: User-defined, 2: Current time
+                     * Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
                      */
                     uint64_t m_timeType;
                     bool m_timeTypeHasBeenSet;
 
                     /**
-                     * Time, when choosing custom time type, a specific time is required
+                     * Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
                      */
                     uint64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
                      * Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
                      */
                     std::vector<std::string> m_eventIDs;
                     bool m_eventIDsHasBeenSet;

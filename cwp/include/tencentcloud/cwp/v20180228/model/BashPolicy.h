@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cwp/v20180228/model/PolicyRules.h>
 
 
 namespace TencentCloud
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool BashActionHasBeenSet() const;
 
                     /**
-                     * 获取Regular expression
-                     * @return Rule Regular expression
+                     * 获取Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
+                     * @return Rule Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
                      * 
                      */
                     std::string GetRule() const;
 
                     /**
-                     * 设置Regular expression
-                     * @param _rule Regular expression
+                     * 设置Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
+                     * @param _rule Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
                      * 
                      */
                     void SetRule(const std::string& _rule);
@@ -216,18 +217,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Descript Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescript() const;
 
                     /**
                      * 设置Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _descript Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescript(const std::string& _descript);
@@ -240,15 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptHasBeenSet() const;
 
                     /**
-                     * 获取When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EventId When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When it is added to the allowlist, the event ID needs to be passed in.
+                     * @return EventId When it is added to the allowlist, the event ID needs to be passed in.
                      * 
                      */
                     int64_t GetEventId() const;
 
                     /**
-                     * 设置When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eventId When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置When it is added to the allowlist, the event ID needs to be passed in.
+                     * @param _eventId When it is added to the allowlist, the event ID needs to be passed in.
                      * 
                      */
                     void SetEventId(const int64_t& _eventId);
@@ -261,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealOldEvents Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to add existing events to the allowlist. 0: no; 1: yes.
+                     * @return DealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
                      * 
                      */
                     int64_t GetDealOldEvents() const;
 
                     /**
-                     * 设置Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dealOldEvents Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to add existing events to the allowlist. 0: no; 1: yes.
+                     * @param _dealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
                      * 
                      */
                     void SetDealOldEvents(const int64_t& _dealOldEvents);
@@ -286,19 +279,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DealOldEventsHasBeenSet() const;
 
                     /**
-                     * 获取A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quuids A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取QUUID set for effective hosts
+                     * @return Quuids QUUID set for effective hosts
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
 
                     /**
-                     * 设置A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quuids A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置QUUID set for effective hosts
+                     * @param _quuids QUUID set for effective hosts
                      * 
                      */
                     void SetQuuids(const std::vector<std::string>& _quuids);
@@ -394,6 +383,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UuidsHasBeenSet() const;
 
+                    /**
+                     * 获取Rule expression
+                     * @return Rules Rule expression
+                     * 
+                     */
+                    PolicyRules GetRules() const;
+
+                    /**
+                     * 设置Rule expression
+                     * @param _rules Rule expression
+                     * 
+                     */
+                    void SetRules(const PolicyRules& _rules);
+
+                    /**
+                     * 判断参数 Rules 是否已赋值
+                     * @return Rules 是否已赋值
+                     * 
+                     */
+                    bool RulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -421,7 +431,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bashActionHasBeenSet;
 
                     /**
-                     * Regular expression
+                     * Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
                      */
                     std::string m_rule;
                     bool m_ruleHasBeenSet;
@@ -446,27 +456,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_descript;
                     bool m_descriptHasBeenSet;
 
                     /**
-                     * When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+                     * When it is added to the allowlist, the event ID needs to be passed in.
                      */
                     int64_t m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to add existing events to the allowlist. 0: no; 1: yes.
                      */
                     int64_t m_dealOldEvents;
                     bool m_dealOldEventsHasBeenSet;
 
                     /**
-                     * A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * QUUID set for effective hosts
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;
@@ -494,6 +501,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_uuids;
                     bool m_uuidsHasBeenSet;
+
+                    /**
+                     * Rule expression
+                     */
+                    PolicyRules m_rules;
+                    bool m_rulesHasBeenSet;
 
                 };
             }

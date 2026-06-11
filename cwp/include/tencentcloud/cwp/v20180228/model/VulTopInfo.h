@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability name.
+                     * @return VulName Vulnerability name.
                      * 
                      */
                     std::string GetVulName() const;
 
                     /**
-                     * 设置Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability name.
+                     * @param _vulName Vulnerability name.
                      * 
                      */
                     void SetVulName(const std::string& _vulName);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulLevel() const;
 
                     /**
                      * 设置Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulLevel(const uint64_t& _vulLevel);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulCount() const;
 
                     /**
                      * 设置Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulCount(const uint64_t& _vulCount);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulId(const uint64_t& _vulId);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability name.
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
 
                     /**
                      * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulLevel;
                     bool m_vulLevelHasBeenSet;
 
                     /**
                      * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
 
                     /**
                      * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulId;
                     bool m_vulIdHasBeenSet;

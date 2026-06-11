@@ -175,18 +175,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetectResultDesc Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDetectResultDesc() const;
 
                     /**
                      * 设置Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detectResultDesc Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetectResultDesc(const std::string& _detectResultDesc);
@@ -200,18 +196,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
                      * 设置Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -225,18 +217,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetectStatus Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDetectStatus() const;
 
                     /**
                      * 设置Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detectStatus Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetectStatus(const int64_t& _detectStatus);
@@ -250,18 +238,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostId() const;
 
                     /**
                      * 设置Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostId(const std::string& _hostId);
@@ -274,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIdHasBeenSet() const;
 
                     /**
-                     * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return HostName host name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _hostName host name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -300,18 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -325,18 +301,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetWanIp() const;
 
                     /**
                      * 设置Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _wanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWanIp(const std::string& _wanIp);
@@ -350,18 +322,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstTime First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
                      * 设置First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _firstTime First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -375,18 +343,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastTime Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
                      * 设置Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lastTime Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -400,18 +364,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CanBeFixed Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCanBeFixed() const;
 
                     /**
                      * 设置Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _canBeFixed Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCanBeFixed(const int64_t& _canBeFixed);
@@ -425,18 +385,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -450,18 +406,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -513,84 +465,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_detectResultDesc;
                     bool m_detectResultDescHasBeenSet;
 
                     /**
                      * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_detectStatus;
                     bool m_detectStatusHasBeenSet;
 
                     /**
                      * Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostId;
                     bool m_hostIdHasBeenSet;
 
                     /**
-                     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
                      * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
                      * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_wanIp;
                     bool m_wanIpHasBeenSet;
 
                     /**
                      * First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
 
                     /**
                      * Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;
 
                     /**
                      * Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_canBeFixed;
                     bool m_canBeFixedHasBeenSet;
 
                     /**
                      * Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

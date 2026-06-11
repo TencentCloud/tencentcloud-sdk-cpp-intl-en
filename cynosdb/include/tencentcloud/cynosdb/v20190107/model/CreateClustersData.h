@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Create cluster task information.
                 */
                 class CreateClustersData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Instance CPU.
+                     * @return Cpu Instance CPU.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置Instance CPU.
+                     * @param _cpu Instance CPU.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Instance memory.
+                     * @return Memory Instance memory.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Instance memory.
+                     * @param _memory Instance memory.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageLimit 
+                     * 获取Cluster storage upper limit.
+                     * @return StorageLimit Cluster storage upper limit.
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置
-                     * @param _storageLimit 
+                     * 设置Cluster storage upper limit.
+                     * @param _storageLimit Cluster storage upper limit.
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance CPU.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Instance memory.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster storage upper limit.
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;

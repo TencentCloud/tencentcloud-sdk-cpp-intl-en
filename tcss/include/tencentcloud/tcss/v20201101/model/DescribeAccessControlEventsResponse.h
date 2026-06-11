@@ -72,6 +72,34 @@ namespace TencentCloud
                      */
                     bool EventSetHasBeenSet() const;
 
+                    /**
+                     * 获取Supported kernel versions.
+                     * @return SupportCoreVersion Supported kernel versions.
+                     * 
+                     */
+                    std::string GetSupportCoreVersion() const;
+
+                    /**
+                     * 判断参数 SupportCoreVersion 是否已赋值
+                     * @return SupportCoreVersion 是否已赋值
+                     * 
+                     */
+                    bool SupportCoreVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Possible blocking failure reasons.
+                     * @return InterceptionFailureTip Possible blocking failure reasons.
+                     * 
+                     */
+                    std::string GetInterceptionFailureTip() const;
+
+                    /**
+                     * 判断参数 InterceptionFailureTip 是否已赋值
+                     * @return InterceptionFailureTip 是否已赋值
+                     * 
+                     */
+                    bool InterceptionFailureTipHasBeenSet() const;
+
                 private:
 
                     /**
@@ -85,6 +113,18 @@ namespace TencentCloud
                      */
                     std::vector<AccessControlEventInfo> m_eventSet;
                     bool m_eventSetHasBeenSet;
+
+                    /**
+                     * Supported kernel versions.
+                     */
+                    std::string m_supportCoreVersion;
+                    bool m_supportCoreVersionHasBeenSet;
+
+                    /**
+                     * Possible blocking failure reasons.
+                     */
+                    std::string m_interceptionFailureTip;
+                    bool m_interceptionFailureTipHasBeenSet;
 
                 };
             }

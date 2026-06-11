@@ -88,6 +88,27 @@ namespace TencentCloud
                      */
                     bool IncludeZoneStocksHasBeenSet() const;
 
+                    /**
+                     * 获取Instance machine type.
+                     * @return DeviceType Instance machine type.
+                     * 
+                     */
+                    std::string GetDeviceType() const;
+
+                    /**
+                     * 设置Instance machine type.
+                     * @param _deviceType Instance machine type.
+                     * 
+                     */
+                    void SetDeviceType(const std::string& _deviceType);
+
+                    /**
+                     * 判断参数 DeviceType 是否已赋值
+                     * @return DeviceType 是否已赋值
+                     * 
+                     */
+                    bool DeviceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +123,12 @@ namespace TencentCloud
                      */
                     bool m_includeZoneStocks;
                     bool m_includeZoneStocksHasBeenSet;
+
+                    /**
+                     * Instance machine type.
+                     */
+                    std::string m_deviceType;
+                    bool m_deviceTypeHasBeenSet;
 
                 };
             }

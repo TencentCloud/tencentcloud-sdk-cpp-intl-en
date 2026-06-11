@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Url Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>File URL of the transcoded video.</p>
+                     * @return Url <p>File URL of the transcoded video.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _url Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>File URL of the transcoded video.</p>
+                     * @param _url <p>File URL of the transcoded video.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -74,19 +70,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
-                     * @return Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+                     * 获取<p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+                     * @return Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
-                     * @param _definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+                     * 设置<p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+                     * @param _definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -99,19 +91,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+                     * @return Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+                     * @param _bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -124,19 +112,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Height Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Maximum value of video stream height. Unit: px.</p>
+                     * @return Height <p>Maximum value of video stream height. Unit: px.</p>
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _height Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Maximum value of video stream height. Unit: px.</p>
+                     * @param _height <p>Maximum value of video stream height. Unit: px.</p>
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -149,19 +133,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Width Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Maximum value of video stream width. Unit: px.</p>
+                     * @return Width <p>Maximum value of video stream width. Unit: px.</p>
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _width Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Maximum value of video stream width. Unit: px.</p>
+                     * @param _width <p>Maximum value of video stream width. Unit: px.</p>
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -174,19 +154,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-                     * @return Size The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+                     * 获取<p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+                     * @return Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-                     * @param _size The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+                     * 设置<p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+                     * @param _size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -199,19 +175,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Video duration, in seconds.</p>
+                     * @return Duration <p>Video duration, in seconds.</p>
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Video duration, in seconds.</p>
+                     * @param _duration <p>Video duration, in seconds.</p>
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -224,19 +196,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Md5 MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>md5 value of the video.</p>
+                     * @return Md5 <p>md5 value of the video.</p>
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _md5 MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>md5 value of the video.</p>
+                     * @param _md5 <p>md5 value of the video.</p>
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -249,19 +217,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Container type, such as m4a, mp4.</p>
+                     * @return Container <p>Container type, such as m4a, mp4.</p>
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Container type, such as m4a, mp4.</p>
+                     * @param _container <p>Container type, such as m4a, mp4.</p>
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -274,19 +238,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return VideoStreamSet Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Video stream information.</p>
+                     * @return VideoStreamSet <p>Video stream information.</p>
                      * 
                      */
                     std::vector<MediaVideoStreamItem> GetVideoStreamSet() const;
 
                     /**
-                     * 设置Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _videoStreamSet Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Video stream information.</p>
+                     * @param _videoStreamSet <p>Video stream information.</p>
                      * 
                      */
                     void SetVideoStreamSet(const std::vector<MediaVideoStreamItem>& _videoStreamSet);
@@ -299,19 +259,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool VideoStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AudioStreamSet Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Audio stream information.</p>
+                     * @return AudioStreamSet <p>Audio stream information.</p>
                      * 
                      */
                     std::vector<MediaAudioStreamItem> GetAudioStreamSet() const;
 
                     /**
-                     * 设置Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _audioStreamSet Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Audio stream information.</p>
+                     * @param _audioStreamSet <p>Audio stream information.</p>
                      * 
                      */
                     void SetAudioStreamSet(const std::vector<MediaAudioStreamItem>& _audioStreamSet);
@@ -324,23 +280,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AudioStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-                     * @return DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * 获取<p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+                     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
                      * 
                      */
                     std::string GetDigitalWatermarkType() const;
 
                     /**
-                     * 设置The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-                     * @param _digitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * 设置<p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+                     * @param _digitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
                      * 
                      */
                     void SetDigitalWatermarkType(const std::string& _digitalWatermarkType);
@@ -353,15 +301,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyRightWatermarkText 
+                     * 获取<p>Copyright information.</p>
+                     * @return CopyRightWatermarkText <p>Copyright information.</p>
                      * 
                      */
                     std::string GetCopyRightWatermarkText() const;
 
                     /**
-                     * 设置
-                     * @param _copyRightWatermarkText 
+                     * 设置<p>Copyright information.</p>
+                     * @param _copyRightWatermarkText <p>Copyright information.</p>
                      * 
                      */
                     void SetCopyRightWatermarkText(const std::string& _copyRightWatermarkText);
@@ -374,15 +322,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CopyRightWatermarkTextHasBeenSet() const;
 
                     /**
-                     * 获取Digital watermark template id.
-                     * @return BlindWatermarkDefinition Digital watermark template id.
+                     * 获取<p>Digital watermark template id.</p>
+                     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
                      * 
                      */
                     int64_t GetBlindWatermarkDefinition() const;
 
                     /**
-                     * 设置Digital watermark template id.
-                     * @param _blindWatermarkDefinition Digital watermark template id.
+                     * 设置<p>Digital watermark template id.</p>
+                     * @param _blindWatermarkDefinition <p>Digital watermark template id.</p>
                      * 
                      */
                     void SetBlindWatermarkDefinition(const int64_t& _blindWatermarkDefinition);
@@ -394,104 +342,118 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool BlindWatermarkDefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+                     * @return FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+                     * 
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 设置<p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+                     * @param _fileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+                     * 
+                     */
+                    void SetFileId(const std::string& _fileId);
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     * 
+                     */
+                    bool FileIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>File URL of the transcoded video.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+                     * <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Maximum value of video stream height. Unit: px.</p>
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Maximum value of video stream width. Unit: px.</p>
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+                     * <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Video duration, in seconds.</p>
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>md5 value of the video.</p>
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
-                     * Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Container type, such as m4a, mp4.</p>
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Video stream information.</p>
                      */
                     std::vector<MediaVideoStreamItem> m_videoStreamSet;
                     bool m_videoStreamSetHasBeenSet;
 
                     /**
-                     * Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>Audio stream information.</p>
                      */
                     std::vector<MediaAudioStreamItem> m_audioStreamSet;
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
-                     * The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+                     * <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Copyright information.</p>
                      */
                     std::string m_copyRightWatermarkText;
                     bool m_copyRightWatermarkTextHasBeenSet;
 
                     /**
-                     * Digital watermark template id.
+                     * <p>Digital watermark template id.</p>
                      */
                     int64_t m_blindWatermarkDefinition;
                     bool m_blindWatermarkDefinitionHasBeenSet;
+
+                    /**
+                     * <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
 
                 };
             }

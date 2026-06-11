@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h>
 #include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
+#include <tencentcloud/cls/v20201016/model/UserKafkaMeta.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target topic ID
-                     * @return TopicId Target topic ID
+                     * 获取Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @return TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Target topic ID
-                     * @param _topicId Target topic ID
+                     * 设置Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @param _topicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -171,15 +180,19 @@ namespace TencentCloud
                     bool LogRechargeRuleHasBeenSet() const;
 
                     /**
-                     * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 获取Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @return KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @param _kafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 设置Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @param _kafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -192,15 +205,15 @@ namespace TencentCloud
                     bool KafkaInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Service address, which is required when `KafkaType` is set to `1`
-                     * @return ServerAddr Service address, which is required when `KafkaType` is set to `1`
+                     * 获取Service address, which is required when KafkaType is 1.
+                     * @return ServerAddr Service address, which is required when KafkaType is 1.
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置Service address, which is required when `KafkaType` is set to `1`
-                     * @param _serverAddr Service address, which is required when `KafkaType` is set to `1`
+                     * 设置Service address, which is required when KafkaType is 1.
+                     * @param _serverAddr Service address, which is required when KafkaType is 1.
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -213,15 +226,15 @@ namespace TencentCloud
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
-                     * @return IsEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+                     * 获取Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+                     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      * 
                      */
                     bool GetIsEncryptionAddr() const;
 
                     /**
-                     * 设置Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
-                     * @param _isEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+                     * 设置Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+                     * @param _isEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      * 
                      */
                     void SetIsEncryptionAddr(const bool& _isEncryptionAddr);
@@ -234,15 +247,19 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-                     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * 获取Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+                     * @return Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-                     * @param _protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * 设置Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+                     * @param _protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -255,15 +272,19 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consumer group name
-                     * @return ConsumerGroupName Kafka consumer group name
+                     * 获取User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+                     * @return ConsumerGroupName User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
                      * 
                      */
                     std::string GetConsumerGroupName() const;
 
                     /**
-                     * 设置Kafka consumer group name
-                     * @param _consumerGroupName Kafka consumer group name
+                     * 设置User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+                     * @param _consumerGroupName User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
                      * 
                      */
                     void SetConsumerGroupName(const std::string& _consumerGroupName);
@@ -275,10 +296,33 @@ namespace TencentCloud
                      */
                     bool ConsumerGroupNameHasBeenSet() const;
 
+                    /**
+                     * 获取User kafka extended information
+                     * @return UserKafkaMeta User kafka extended information
+                     * 
+                     */
+                    UserKafkaMeta GetUserKafkaMeta() const;
+
+                    /**
+                     * 设置User kafka extended information
+                     * @param _userKafkaMeta User kafka extended information
+                     * 
+                     */
+                    void SetUserKafkaMeta(const UserKafkaMeta& _userKafkaMeta);
+
+                    /**
+                     * 判断参数 UserKafkaMeta 是否已赋值
+                     * @return UserKafkaMeta 是否已赋值
+                     * 
+                     */
+                    bool UserKafkaMetaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Target topic ID
+                     * Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -314,34 +358,43 @@ namespace TencentCloud
                     bool m_logRechargeRuleHasBeenSet;
 
                     /**
-                     * CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
-                     * Service address, which is required when `KafkaType` is set to `1`
+                     * Service address, which is required when KafkaType is 1.
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+                     * Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      */
                     bool m_isEncryptionAddr;
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Kafka consumer group name
+                     * User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
                      */
                     std::string m_consumerGroupName;
                     bool m_consumerGroupNameHasBeenSet;
+
+                    /**
+                     * User kafka extended information
+                     */
+                    UserKafkaMeta m_userKafkaMeta;
+                    bool m_userKafkaMetaHasBeenSet;
 
                 };
             }

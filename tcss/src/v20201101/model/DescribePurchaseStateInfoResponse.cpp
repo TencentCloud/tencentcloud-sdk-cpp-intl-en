@@ -25,16 +25,26 @@ using namespace std;
 
 DescribePurchaseStateInfoResponse::DescribePurchaseStateInfoResponse() :
     m_stateHasBeenSet(false),
+    m_allCoresCntHasBeenSet(false),
     m_coresCntHasBeenSet(false),
+    m_undefendCoresCntHasBeenSet(false),
     m_authorizedCoresCntHasBeenSet(false),
+    m_givenAuthorizedCoresCntHasBeenSet(false),
+    m_currentFlexibleCoresCntHasBeenSet(false),
     m_imageCntHasBeenSet(false),
     m_authorizedImageCntHasBeenSet(false),
-    m_purchasedAuthorizedCntHasBeenSet(false),
     m_expirationTimeHasBeenSet(false),
+    m_purchasedAuthorizedCntHasBeenSet(false),
     m_automaticRenewalHasBeenSet(false),
     m_givenAuthorizedCntHasBeenSet(false),
     m_beginTimeHasBeenSet(false),
-    m_subStateHasBeenSet(false)
+    m_subStateHasBeenSet(false),
+    m_inquireKeyHasBeenSet(false),
+    m_defendPolicyHasBeenSet(false),
+    m_flexibleCoresLimitHasBeenSet(false),
+    m_defendClusterCoresCntHasBeenSet(false),
+    m_defendHostCoresCntHasBeenSet(false),
+    m_trialCoresCntHasBeenSet(false)
 {
 }
 
@@ -82,6 +92,16 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         m_stateHasBeenSet = true;
     }
 
+    if (rsp.HasMember("AllCoresCnt") && !rsp["AllCoresCnt"].IsNull())
+    {
+        if (!rsp["AllCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AllCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_allCoresCnt = rsp["AllCoresCnt"].GetUint64();
+        m_allCoresCntHasBeenSet = true;
+    }
+
     if (rsp.HasMember("CoresCnt") && !rsp["CoresCnt"].IsNull())
     {
         if (!rsp["CoresCnt"].IsUint64())
@@ -92,6 +112,16 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         m_coresCntHasBeenSet = true;
     }
 
+    if (rsp.HasMember("UndefendCoresCnt") && !rsp["UndefendCoresCnt"].IsNull())
+    {
+        if (!rsp["UndefendCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `UndefendCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_undefendCoresCnt = rsp["UndefendCoresCnt"].GetUint64();
+        m_undefendCoresCntHasBeenSet = true;
+    }
+
     if (rsp.HasMember("AuthorizedCoresCnt") && !rsp["AuthorizedCoresCnt"].IsNull())
     {
         if (!rsp["AuthorizedCoresCnt"].IsUint64())
@@ -100,6 +130,26 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         }
         m_authorizedCoresCnt = rsp["AuthorizedCoresCnt"].GetUint64();
         m_authorizedCoresCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("GivenAuthorizedCoresCnt") && !rsp["GivenAuthorizedCoresCnt"].IsNull())
+    {
+        if (!rsp["GivenAuthorizedCoresCnt"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `GivenAuthorizedCoresCnt` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_givenAuthorizedCoresCnt = rsp["GivenAuthorizedCoresCnt"].GetInt64();
+        m_givenAuthorizedCoresCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CurrentFlexibleCoresCnt") && !rsp["CurrentFlexibleCoresCnt"].IsNull())
+    {
+        if (!rsp["CurrentFlexibleCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `CurrentFlexibleCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_currentFlexibleCoresCnt = rsp["CurrentFlexibleCoresCnt"].GetUint64();
+        m_currentFlexibleCoresCntHasBeenSet = true;
     }
 
     if (rsp.HasMember("ImageCnt") && !rsp["ImageCnt"].IsNull())
@@ -122,16 +172,6 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         m_authorizedImageCntHasBeenSet = true;
     }
 
-    if (rsp.HasMember("PurchasedAuthorizedCnt") && !rsp["PurchasedAuthorizedCnt"].IsNull())
-    {
-        if (!rsp["PurchasedAuthorizedCnt"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `PurchasedAuthorizedCnt` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_purchasedAuthorizedCnt = rsp["PurchasedAuthorizedCnt"].GetUint64();
-        m_purchasedAuthorizedCntHasBeenSet = true;
-    }
-
     if (rsp.HasMember("ExpirationTime") && !rsp["ExpirationTime"].IsNull())
     {
         if (!rsp["ExpirationTime"].IsString())
@@ -140,6 +180,16 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         }
         m_expirationTime = string(rsp["ExpirationTime"].GetString());
         m_expirationTimeHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("PurchasedAuthorizedCnt") && !rsp["PurchasedAuthorizedCnt"].IsNull())
+    {
+        if (!rsp["PurchasedAuthorizedCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PurchasedAuthorizedCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_purchasedAuthorizedCnt = rsp["PurchasedAuthorizedCnt"].GetUint64();
+        m_purchasedAuthorizedCntHasBeenSet = true;
     }
 
     if (rsp.HasMember("AutomaticRenewal") && !rsp["AutomaticRenewal"].IsNull())
@@ -182,6 +232,66 @@ CoreInternalOutcome DescribePurchaseStateInfoResponse::Deserialize(const string 
         m_subStateHasBeenSet = true;
     }
 
+    if (rsp.HasMember("InquireKey") && !rsp["InquireKey"].IsNull())
+    {
+        if (!rsp["InquireKey"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InquireKey` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_inquireKey = string(rsp["InquireKey"].GetString());
+        m_inquireKeyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DefendPolicy") && !rsp["DefendPolicy"].IsNull())
+    {
+        if (!rsp["DefendPolicy"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DefendPolicy` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_defendPolicy = string(rsp["DefendPolicy"].GetString());
+        m_defendPolicyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("FlexibleCoresLimit") && !rsp["FlexibleCoresLimit"].IsNull())
+    {
+        if (!rsp["FlexibleCoresLimit"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FlexibleCoresLimit` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_flexibleCoresLimit = rsp["FlexibleCoresLimit"].GetUint64();
+        m_flexibleCoresLimitHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DefendClusterCoresCnt") && !rsp["DefendClusterCoresCnt"].IsNull())
+    {
+        if (!rsp["DefendClusterCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DefendClusterCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_defendClusterCoresCnt = rsp["DefendClusterCoresCnt"].GetUint64();
+        m_defendClusterCoresCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("DefendHostCoresCnt") && !rsp["DefendHostCoresCnt"].IsNull())
+    {
+        if (!rsp["DefendHostCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DefendHostCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_defendHostCoresCnt = rsp["DefendHostCoresCnt"].GetUint64();
+        m_defendHostCoresCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TrialCoresCnt") && !rsp["TrialCoresCnt"].IsNull())
+    {
+        if (!rsp["TrialCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TrialCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_trialCoresCnt = rsp["TrialCoresCnt"].GetUint64();
+        m_trialCoresCntHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -200,6 +310,14 @@ string DescribePurchaseStateInfoResponse::ToJsonString() const
         value.AddMember(iKey, m_state, allocator);
     }
 
+    if (m_allCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_allCoresCnt, allocator);
+    }
+
     if (m_coresCntHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -208,12 +326,36 @@ string DescribePurchaseStateInfoResponse::ToJsonString() const
         value.AddMember(iKey, m_coresCnt, allocator);
     }
 
+    if (m_undefendCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UndefendCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_undefendCoresCnt, allocator);
+    }
+
     if (m_authorizedCoresCntHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "AuthorizedCoresCnt";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_authorizedCoresCnt, allocator);
+    }
+
+    if (m_givenAuthorizedCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GivenAuthorizedCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_givenAuthorizedCoresCnt, allocator);
+    }
+
+    if (m_currentFlexibleCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CurrentFlexibleCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_currentFlexibleCoresCnt, allocator);
     }
 
     if (m_imageCntHasBeenSet)
@@ -232,20 +374,20 @@ string DescribePurchaseStateInfoResponse::ToJsonString() const
         value.AddMember(iKey, m_authorizedImageCnt, allocator);
     }
 
-    if (m_purchasedAuthorizedCntHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PurchasedAuthorizedCnt";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_purchasedAuthorizedCnt, allocator);
-    }
-
     if (m_expirationTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "ExpirationTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_expirationTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_purchasedAuthorizedCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PurchasedAuthorizedCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_purchasedAuthorizedCnt, allocator);
     }
 
     if (m_automaticRenewalHasBeenSet)
@@ -280,6 +422,54 @@ string DescribePurchaseStateInfoResponse::ToJsonString() const
         value.AddMember(iKey, rapidjson::Value(m_subState.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_inquireKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InquireKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inquireKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_defendPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefendPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_defendPolicy.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_flexibleCoresLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FlexibleCoresLimit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_flexibleCoresLimit, allocator);
+    }
+
+    if (m_defendClusterCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefendClusterCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_defendClusterCoresCnt, allocator);
+    }
+
+    if (m_defendHostCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DefendHostCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_defendHostCoresCnt, allocator);
+    }
+
+    if (m_trialCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TrialCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_trialCoresCnt, allocator);
+    }
+
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
     iKey.SetString(key.c_str(), allocator);
@@ -302,6 +492,16 @@ bool DescribePurchaseStateInfoResponse::StateHasBeenSet() const
     return m_stateHasBeenSet;
 }
 
+uint64_t DescribePurchaseStateInfoResponse::GetAllCoresCnt() const
+{
+    return m_allCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::AllCoresCntHasBeenSet() const
+{
+    return m_allCoresCntHasBeenSet;
+}
+
 uint64_t DescribePurchaseStateInfoResponse::GetCoresCnt() const
 {
     return m_coresCnt;
@@ -312,6 +512,16 @@ bool DescribePurchaseStateInfoResponse::CoresCntHasBeenSet() const
     return m_coresCntHasBeenSet;
 }
 
+uint64_t DescribePurchaseStateInfoResponse::GetUndefendCoresCnt() const
+{
+    return m_undefendCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::UndefendCoresCntHasBeenSet() const
+{
+    return m_undefendCoresCntHasBeenSet;
+}
+
 uint64_t DescribePurchaseStateInfoResponse::GetAuthorizedCoresCnt() const
 {
     return m_authorizedCoresCnt;
@@ -320,6 +530,26 @@ uint64_t DescribePurchaseStateInfoResponse::GetAuthorizedCoresCnt() const
 bool DescribePurchaseStateInfoResponse::AuthorizedCoresCntHasBeenSet() const
 {
     return m_authorizedCoresCntHasBeenSet;
+}
+
+int64_t DescribePurchaseStateInfoResponse::GetGivenAuthorizedCoresCnt() const
+{
+    return m_givenAuthorizedCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::GivenAuthorizedCoresCntHasBeenSet() const
+{
+    return m_givenAuthorizedCoresCntHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetCurrentFlexibleCoresCnt() const
+{
+    return m_currentFlexibleCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::CurrentFlexibleCoresCntHasBeenSet() const
+{
+    return m_currentFlexibleCoresCntHasBeenSet;
 }
 
 uint64_t DescribePurchaseStateInfoResponse::GetImageCnt() const
@@ -342,16 +572,6 @@ bool DescribePurchaseStateInfoResponse::AuthorizedImageCntHasBeenSet() const
     return m_authorizedImageCntHasBeenSet;
 }
 
-uint64_t DescribePurchaseStateInfoResponse::GetPurchasedAuthorizedCnt() const
-{
-    return m_purchasedAuthorizedCnt;
-}
-
-bool DescribePurchaseStateInfoResponse::PurchasedAuthorizedCntHasBeenSet() const
-{
-    return m_purchasedAuthorizedCntHasBeenSet;
-}
-
 string DescribePurchaseStateInfoResponse::GetExpirationTime() const
 {
     return m_expirationTime;
@@ -360,6 +580,16 @@ string DescribePurchaseStateInfoResponse::GetExpirationTime() const
 bool DescribePurchaseStateInfoResponse::ExpirationTimeHasBeenSet() const
 {
     return m_expirationTimeHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetPurchasedAuthorizedCnt() const
+{
+    return m_purchasedAuthorizedCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::PurchasedAuthorizedCntHasBeenSet() const
+{
+    return m_purchasedAuthorizedCntHasBeenSet;
 }
 
 int64_t DescribePurchaseStateInfoResponse::GetAutomaticRenewal() const
@@ -400,6 +630,66 @@ string DescribePurchaseStateInfoResponse::GetSubState() const
 bool DescribePurchaseStateInfoResponse::SubStateHasBeenSet() const
 {
     return m_subStateHasBeenSet;
+}
+
+string DescribePurchaseStateInfoResponse::GetInquireKey() const
+{
+    return m_inquireKey;
+}
+
+bool DescribePurchaseStateInfoResponse::InquireKeyHasBeenSet() const
+{
+    return m_inquireKeyHasBeenSet;
+}
+
+string DescribePurchaseStateInfoResponse::GetDefendPolicy() const
+{
+    return m_defendPolicy;
+}
+
+bool DescribePurchaseStateInfoResponse::DefendPolicyHasBeenSet() const
+{
+    return m_defendPolicyHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetFlexibleCoresLimit() const
+{
+    return m_flexibleCoresLimit;
+}
+
+bool DescribePurchaseStateInfoResponse::FlexibleCoresLimitHasBeenSet() const
+{
+    return m_flexibleCoresLimitHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetDefendClusterCoresCnt() const
+{
+    return m_defendClusterCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::DefendClusterCoresCntHasBeenSet() const
+{
+    return m_defendClusterCoresCntHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetDefendHostCoresCnt() const
+{
+    return m_defendHostCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::DefendHostCoresCntHasBeenSet() const
+{
+    return m_defendHostCoresCntHasBeenSet;
+}
+
+uint64_t DescribePurchaseStateInfoResponse::GetTrialCoresCnt() const
+{
+    return m_trialCoresCnt;
+}
+
+bool DescribePurchaseStateInfoResponse::TrialCoresCntHasBeenSet() const
+{
+    return m_trialCoresCntHasBeenSet;
 }
 
 

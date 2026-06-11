@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Virtual IP Type
-                     * @return VipType Virtual IP Type
+                     * 获取Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
+                     * @return VipType Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
                      * 
                      */
                     int64_t GetVipType() const;
 
                     /**
-                     * 设置Virtual IP Type
-                     * @param _vipType Virtual IP Type
+                     * 设置Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
+                     * @param _vipType Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
                      * 
                      */
                     void SetVipType(const int64_t& _vipType);
@@ -153,14 +153,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * @return AccessType Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
                      * 设置Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * @param _accessType Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * 
                      */
                     void SetAccessType(const int64_t& _accessType);
@@ -199,13 +215,17 @@ namespace TencentCloud
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Virtual IP Type
+                     * Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
                      */
                     int64_t m_vipType;
                     bool m_vipTypeHasBeenSet;
 
                     /**
                      * Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      */
                     int64_t m_accessType;
                     bool m_accessTypeHasBeenSet;

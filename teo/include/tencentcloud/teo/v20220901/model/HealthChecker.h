@@ -118,15 +118,15 @@ Note: NoCheck means the health check policy is not enabled.
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
-                     * @return Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+                     * 获取Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
+                     * @return Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
                      * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
-                     * 设置Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
-                     * @param _interval Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+                     * 设置Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
+                     * @param _interval Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
                      * 
                      */
                     void SetInterval(const uint64_t& _interval);
@@ -382,7 +382,7 @@ Note: NoCheck means the health check policy is not enabled.
                     bool m_portHasBeenSet;
 
                     /**
-                     * Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+                     * Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;

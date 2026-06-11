@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -121,14 +113,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
                      * Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

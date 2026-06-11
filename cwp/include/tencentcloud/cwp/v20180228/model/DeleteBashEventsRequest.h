@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID array. Maximum number of IDs: 100.
-                     * @return Ids ID array. Maximum number of IDs: 100.
+                     * 获取ID array. Up to 1,000 items are allowed.
+                     * @return Ids ID array. Up to 1,000 items are allowed.
                      * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
-                     * 设置ID array. Maximum number of IDs: 100.
-                     * @param _ids ID array. Maximum number of IDs: 100.
+                     * 设置ID array. Up to 1,000 items are allowed.
+                     * @param _ids ID array. Up to 1,000 items are allowed.
                      * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
@@ -63,13 +63,40 @@ namespace TencentCloud
                      */
                     bool IdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to delete all.
+                     * @return All Whether to delete all.
+                     * 
+                     */
+                    bool GetAll() const;
+
+                    /**
+                     * 设置Whether to delete all.
+                     * @param _all Whether to delete all.
+                     * 
+                     */
+                    void SetAll(const bool& _all);
+
+                    /**
+                     * 判断参数 All 是否已赋值
+                     * @return All 是否已赋值
+                     * 
+                     */
+                    bool AllHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID array. Maximum number of IDs: 100.
+                     * ID array. Up to 1,000 items are allowed.
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;
+
+                    /**
+                     * Whether to delete all.
+                     */
+                    bool m_all;
+                    bool m_allHasBeenSet;
 
                 };
             }

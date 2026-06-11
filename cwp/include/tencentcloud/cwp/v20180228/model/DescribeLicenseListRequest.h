@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Order 
+                     * 获取ASC for ascending order; DESC for descending order.
+                     * @return Order ASC for ascending order; DESC for descending order.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置
-                     * @param _order 
+                     * 设置ASC for ascending order; DESC for descending order.
+                     * @param _order ASC for ascending order; DESC for descending order.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -186,15 +186,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return By 
+                     * 获取Number of LicenseCnt authorizations.
+                     * @return By Number of LicenseCnt authorizations.
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置
-                     * @param _by 
+                     * 设置Number of LicenseCnt authorizations.
+                     * @param _by Number of LicenseCnt authorizations.
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -242,13 +242,13 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * ASC for ascending order; DESC for descending order.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * 
+                     * Number of LicenseCnt authorizations.
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

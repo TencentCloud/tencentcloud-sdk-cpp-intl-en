@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取Username
-                     * @return Username Username
+                     * 获取Account name.
+                     * @return Username Account name.
                      * 
                      */
                     std::string GetUsername() const;
 
                     /**
-                     * 设置Username
-                     * @param _username Username
+                     * 设置Account name.
+                     * @param _username Account name.
                      * 
                      */
                     void SetUsername(const std::string& _username);
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * Username
+                     * Account name.
                      */
                     std::string m_username;
                     bool m_usernameHasBeenSet;

@@ -54,14 +54,12 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineType Machine type
 CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMachineType() const;
@@ -73,14 +71,12 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineType Machine type
 CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineType(const std::string& _machineType);
@@ -102,7 +98,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CloudFrom 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -112,7 +107,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCloudFrom() const;
@@ -127,7 +121,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cloudFrom 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -137,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCloudFrom(const uint64_t& _cloudFrom);
@@ -150,19 +142,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CloudFromHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegionList List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region list
+                     * @return RegionList Region list
                      * 
                      */
                     std::vector<RegionInfo> GetRegionList() const;
 
                     /**
-                     * 设置List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regionList List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region list
+                     * @param _regionList Region list
                      * 
                      */
                     void SetRegionList(const std::vector<RegionInfo>& _regionList);
@@ -183,7 +171,6 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
@@ -198,14 +185,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_cloudFrom;
                     bool m_cloudFromHasBeenSet;
 
                     /**
-                     * List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region list
                      */
                     std::vector<RegionInfo> m_regionList;
                     bool m_regionListHasBeenSet;

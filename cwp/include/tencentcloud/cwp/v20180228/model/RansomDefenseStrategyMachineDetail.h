@@ -156,18 +156,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
                      * 设置Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
@@ -180,19 +176,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
-                     * 获取Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cloud Tag
+                     * @return CloudTags Cloud Tag
                      * 
                      */
                     std::vector<Tag> GetCloudTags() const;
 
                     /**
-                     * 设置Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud Tag
+                     * @param _cloudTags Cloud Tag
                      * 
                      */
                     void SetCloudTags(const std::vector<Tag>& _cloudTags);
@@ -206,18 +198,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RegionInfo GetRegionInfo() const;
 
                     /**
                      * 设置Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _regionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegionInfo(const RegionInfo& _regionInfo);
@@ -230,19 +218,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionInfoHasBeenSet() const;
 
                     /**
-                     * 获取CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host security tag
+                     * @return Tag Host security tag
                      * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
-                     * 设置CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host security tag
+                     * @param _tag Host security tag
                      * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
@@ -256,18 +240,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -281,18 +261,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetStrategyId() const;
 
                     /**
                      * 设置Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _strategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStrategyId(const uint64_t& _strategyId);
@@ -307,10 +283,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskInfo() const;
@@ -318,10 +292,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskInfo(const std::string& _diskInfo);
@@ -334,15 +306,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskInfoHasBeenSet() const;
 
                     /**
-                     * 获取Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+                     * @return HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      * 
                      */
                     uint64_t GetHostVersion() const;
 
                     /**
-                     * 设置Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+                     * @param _hostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      * 
                      */
                     void SetHostVersion(const uint64_t& _hostVersion);
@@ -356,18 +328,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStrategyName() const;
 
                     /**
                      * 设置Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _strategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStrategyName(const std::string& _strategyName);
@@ -378,6 +346,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool StrategyNameHasBeenSet() const;
+
+                    /**
+                     * 获取Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+                     * @return MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+                     * @param _machineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
 
                 private:
 
@@ -413,42 +402,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_machineWanIp;
                     bool m_machineWanIpHasBeenSet;
 
                     /**
-                     * Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cloud Tag
                      */
                     std::vector<Tag> m_cloudTags;
                     bool m_cloudTagsHasBeenSet;
 
                     /**
                      * Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RegionInfo m_regionInfo;
                     bool m_regionInfoHasBeenSet;
 
                     /**
-                     * CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host security tag
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
                      * Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_strategyId;
                     bool m_strategyIdHasBeenSet;
@@ -456,23 +439,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskInfo;
                     bool m_diskInfoHasBeenSet;
 
                     /**
-                     * Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      */
                     uint64_t m_hostVersion;
                     bool m_hostVersionHasBeenSet;
 
                     /**
                      * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_strategyName;
                     bool m_strategyNameHasBeenSet;
+
+                    /**
+                     * Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
 
                 };
             }

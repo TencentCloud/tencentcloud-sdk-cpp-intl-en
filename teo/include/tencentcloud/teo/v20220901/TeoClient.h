@@ -61,6 +61,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateEdgeKVNamespaceResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionReplicaRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateFunctionReplicaResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateJustInTimeTranscodeTemplateRequest.h>
@@ -127,6 +129,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteEdgeKVNamespaceResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionReplicaRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteFunctionReplicaResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteJustInTimeTranscodeTemplatesRequest.h>
@@ -207,6 +211,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeEnvironmentsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeFunctionComponentBindingsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeFunctionComponentBindingsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionReplicasRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeFunctionReplicasResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeFunctionRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeFunctionRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeFunctionRuntimeEnvironmentRequest.h>
@@ -369,6 +375,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionComponentBindingsRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionComponentBindingsResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionReplicaRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyFunctionReplicaResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionRuleResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionRulePriorityRequest.h>
@@ -514,6 +522,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateFunctionResponse> CreateFunctionOutcome;
                 typedef std::future<CreateFunctionOutcome> CreateFunctionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateFunctionRequest&, CreateFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateFunctionReplicaResponse> CreateFunctionReplicaOutcome;
+                typedef std::future<CreateFunctionReplicaOutcome> CreateFunctionReplicaOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateFunctionReplicaRequest&, CreateFunctionReplicaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionReplicaAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateFunctionRuleResponse> CreateFunctionRuleOutcome;
                 typedef std::future<CreateFunctionRuleOutcome> CreateFunctionRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateFunctionRuleRequest&, CreateFunctionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionRuleAsyncHandler;
@@ -613,6 +624,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteFunctionResponse> DeleteFunctionOutcome;
                 typedef std::future<DeleteFunctionOutcome> DeleteFunctionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteFunctionRequest&, DeleteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteFunctionReplicaResponse> DeleteFunctionReplicaOutcome;
+                typedef std::future<DeleteFunctionReplicaOutcome> DeleteFunctionReplicaOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteFunctionReplicaRequest&, DeleteFunctionReplicaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionReplicaAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteFunctionRulesResponse> DeleteFunctionRulesOutcome;
                 typedef std::future<DeleteFunctionRulesOutcome> DeleteFunctionRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteFunctionRulesRequest&, DeleteFunctionRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionRulesAsyncHandler;
@@ -733,6 +747,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeFunctionComponentBindingsResponse> DescribeFunctionComponentBindingsOutcome;
                 typedef std::future<DescribeFunctionComponentBindingsOutcome> DescribeFunctionComponentBindingsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeFunctionComponentBindingsRequest&, DescribeFunctionComponentBindingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionComponentBindingsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFunctionReplicasResponse> DescribeFunctionReplicasOutcome;
+                typedef std::future<DescribeFunctionReplicasOutcome> DescribeFunctionReplicasOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeFunctionReplicasRequest&, DescribeFunctionReplicasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionReplicasAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeFunctionRulesResponse> DescribeFunctionRulesOutcome;
                 typedef std::future<DescribeFunctionRulesOutcome> DescribeFunctionRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeFunctionRulesRequest&, DescribeFunctionRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFunctionRulesAsyncHandler;
@@ -976,6 +993,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyFunctionComponentBindingsResponse> ModifyFunctionComponentBindingsOutcome;
                 typedef std::future<ModifyFunctionComponentBindingsOutcome> ModifyFunctionComponentBindingsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyFunctionComponentBindingsRequest&, ModifyFunctionComponentBindingsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionComponentBindingsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFunctionReplicaResponse> ModifyFunctionReplicaOutcome;
+                typedef std::future<ModifyFunctionReplicaOutcome> ModifyFunctionReplicaOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyFunctionReplicaRequest&, ModifyFunctionReplicaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionReplicaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyFunctionRuleResponse> ModifyFunctionRuleOutcome;
                 typedef std::future<ModifyFunctionRuleOutcome> ModifyFunctionRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyFunctionRuleRequest&, ModifyFunctionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionRuleAsyncHandler;
@@ -1098,7 +1118,7 @@ Step 3: Call CheckFreeCertificateVerification to verify. After verification pass
 Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
 
 The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
-description:.
+description:
 - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
 - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
 - A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
@@ -1277,6 +1297,15 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 CreateFunctionOutcomeCallable CreateFunctionCallable(const Model::CreateFunctionRequest& request);
 
                 /**
+                 *This API is used to create copies of specified edge functions. After creating copies, when client requests match configured trigger rules or the default domain name, you can access specific function copies by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
+                 * @param req CreateFunctionReplicaRequest
+                 * @return CreateFunctionReplicaOutcome
+                 */
+                CreateFunctionReplicaOutcome CreateFunctionReplica(const Model::CreateFunctionReplicaRequest &request);
+                void CreateFunctionReplicaAsync(const Model::CreateFunctionReplicaRequest& request, const CreateFunctionReplicaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateFunctionReplicaOutcomeCallable CreateFunctionReplicaCallable(const Model::CreateFunctionReplicaRequest& request);
+
+                /**
                  *This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
                  * @param req CreateFunctionRuleRequest
                  * @return CreateFunctionRuleOutcome
@@ -1408,14 +1437,14 @@ This API is used to learn about the detailed capacity of JIT transcoding. EdgeOn
                 CreatePurgeTaskOutcomeCallable CreatePurgeTaskCallable(const Model::CreatePurgeTaskRequest& request);
 
                 /**
-                 *This API is used to create a real-time log delivery task. The following limits apply.
--When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), L4 proxy logs, or edge function logs, an entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:.
--A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address;.
--A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible Cloud Object Storage;.
--When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the same combination of data delivery type (LogType) and data delivery Area.
--When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only the data delivery type (LogType) as site acceleration log (domain). Under the combination of the same site (ZoneId) and data delivery area (Area), you can only add one real-time log delivery task for EdgeOne log analysis.
+                 *This API is used to create a real-time log delivery task. The following limits apply:
+-When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), four-layer proxy logs, or edge function logs, the same entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:
+-A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address.
+-A task to push to Tencent Cloud CLS, add another task to push to S3-compatible object storage.
+-When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the combination of the same data delivery type (LogType) and data delivery area (Area).
+-When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only data delivery type (LogType) as site acceleration log (domain) or managed rule log (web-attack). Under the same site (ZoneId), same data delivery area (Area), and data combination, each data delivery type (LogType) can only add one real-time log delivery task pushed to EdgeOne log analysis.
 
-This API is used to query the real-time log delivery task list based on the entity to check whether the entity has been added to another real-time log delivery task. It is advisable to use the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.com/document/product/1552/104110?from_cn_redirect=1) API first.
+It is recommended to first query the real-time log delivery task list according to the entity via the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.com/document/product/1552/104110?from_cn_redirect=1) API, and check whether the entity has been added to another real-time log delivery task.
                  * @param req CreateRealtimeLogDeliveryTaskRequest
                  * @return CreateRealtimeLogDeliveryTaskOutcome
                  */
@@ -1587,6 +1616,15 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 DeleteFunctionOutcome DeleteFunction(const Model::DeleteFunctionRequest &request);
                 void DeleteFunctionAsync(const Model::DeleteFunctionRequest& request, const DeleteFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteFunctionOutcomeCallable DeleteFunctionCallable(const Model::DeleteFunctionRequest& request);
+
+                /**
+                 *This API is used to delete specified edge function replicas.
+                 * @param req DeleteFunctionReplicaRequest
+                 * @return DeleteFunctionReplicaOutcome
+                 */
+                DeleteFunctionReplicaOutcome DeleteFunctionReplica(const Model::DeleteFunctionReplicaRequest &request);
+                void DeleteFunctionReplicaAsync(const Model::DeleteFunctionReplicaRequest& request, const DeleteFunctionReplicaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteFunctionReplicaOutcomeCallable DeleteFunctionReplicaCallable(const Model::DeleteFunctionReplicaRequest& request);
 
                 /**
                  *This API is used to delete a trigger rule for an edge function.
@@ -1948,6 +1986,15 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeFunctionComponentBindingsOutcome DescribeFunctionComponentBindings(const Model::DescribeFunctionComponentBindingsRequest &request);
                 void DescribeFunctionComponentBindingsAsync(const Model::DescribeFunctionComponentBindingsRequest& request, const DescribeFunctionComponentBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeFunctionComponentBindingsOutcomeCallable DescribeFunctionComponentBindingsCallable(const Model::DescribeFunctionComponentBindingsRequest& request);
+
+                /**
+                 *This API is used to query the replica list of edge functions.
+                 * @param req DescribeFunctionReplicasRequest
+                 * @return DescribeFunctionReplicasOutcome
+                 */
+                DescribeFunctionReplicasOutcome DescribeFunctionReplicas(const Model::DescribeFunctionReplicasRequest &request);
+                void DescribeFunctionReplicasAsync(const Model::DescribeFunctionReplicasRequest& request, const DescribeFunctionReplicasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFunctionReplicasOutcomeCallable DescribeFunctionReplicasCallable(const Model::DescribeFunctionReplicasRequest& request);
 
                 /**
                  *This API is used to query the list of trigger rules for an edge function. It supports filtering by rule ID, function ID, rule description, and so on.
@@ -2346,8 +2393,8 @@ This API is used to return post-protection traffic request data by default. User
                 DescribeTimingL7CacheDataOutcomeCallable DescribeTimingL7CacheDataCallable(const Model::DescribeTimingL7CacheDataRequest& request);
 
                 /**
-                 *This API is used to query time series data of origin-pull for L7 domains. 
-Group aggregation can be performed by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed guide and limits, see [How to Use API to Implement Grouping Aggregation in a Single Call](https://www.tencentcloud.com/document/product/1145/77047?lang=en&pg=).
+                 *This API is used to query time series data of the layer-7 domain name business.
+You can choose to perform grouping queries by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed directions and usage limits, see [How to Implement Group Query in a Single Call Using API](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
                  * @param req DescribeTimingL7OriginPullDataRequest
                  * @return DescribeTimingL7OriginPullDataOutcome
                  */
@@ -2707,6 +2754,15 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 ModifyFunctionComponentBindingsOutcome ModifyFunctionComponentBindings(const Model::ModifyFunctionComponentBindingsRequest &request);
                 void ModifyFunctionComponentBindingsAsync(const Model::ModifyFunctionComponentBindingsRequest& request, const ModifyFunctionComponentBindingsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyFunctionComponentBindingsOutcomeCallable ModifyFunctionComponentBindingsCallable(const Model::ModifyFunctionComponentBindingsRequest& request);
+
+                /**
+                 *This API is used to modify the content and description of a specified edge function replica.
+                 * @param req ModifyFunctionReplicaRequest
+                 * @return ModifyFunctionReplicaOutcome
+                 */
+                ModifyFunctionReplicaOutcome ModifyFunctionReplica(const Model::ModifyFunctionReplicaRequest &request);
+                void ModifyFunctionReplicaAsync(const Model::ModifyFunctionReplicaRequest& request, const ModifyFunctionReplicaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFunctionReplicaOutcomeCallable ModifyFunctionReplicaCallable(const Model::ModifyFunctionReplicaRequest& request);
 
                 /**
                  *This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.

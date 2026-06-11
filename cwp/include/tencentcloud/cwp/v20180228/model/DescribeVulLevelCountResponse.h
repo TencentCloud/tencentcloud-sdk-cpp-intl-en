@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulLevelList Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Statistical Result
+                     * @return VulLevelList Statistical Result
                      * 
                      */
                     std::vector<VulLevelInfo> GetVulLevelList() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Statistical Result
                      */
                     std::vector<VulLevelInfo> m_vulLevelList;
                     bool m_vulLevelListHasBeenSet;

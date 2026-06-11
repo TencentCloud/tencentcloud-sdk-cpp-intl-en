@@ -231,27 +231,23 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckResult Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+                     * @return CheckResult detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
                      * 
                      */
                     std::string GetCheckResult() const;
 
                     /**
-                     * 设置Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkResult Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+                     * @param _checkResult detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
                      * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
@@ -264,19 +260,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckResultHasBeenSet() const;
 
                     /**
-                     * 获取Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+                     * @return WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      * 
                      */
                     uint64_t GetWhitelistId() const;
 
                     /**
-                     * 设置Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _whitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+                     * @param _whitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      * 
                      */
                     void SetWhitelistId(const uint64_t& _whitelistId);
@@ -310,19 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixSuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time.
+                     * @return LastCheckTime Last detection time.
                      * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time.
+                     * @param _lastCheckTime Last detection time.
                      * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
@@ -336,18 +324,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VerifyInfo Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVerifyInfo() const;
 
                     /**
                      * 设置Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _verifyInfo Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVerifyInfo(const std::string& _verifyInfo);
@@ -414,17 +398,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
                      */
                     std::string m_checkResult;
                     bool m_checkResultHasBeenSet;
 
                     /**
-                     * Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      */
                     uint64_t m_whitelistId;
                     bool m_whitelistIdHasBeenSet;
@@ -436,15 +418,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fixSuggestionHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time.
                      */
                     std::string m_lastCheckTime;
                     bool m_lastCheckTimeHasBeenSet;
 
                     /**
                      * Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_verifyInfo;
                     bool m_verifyInfoHasBeenSet;

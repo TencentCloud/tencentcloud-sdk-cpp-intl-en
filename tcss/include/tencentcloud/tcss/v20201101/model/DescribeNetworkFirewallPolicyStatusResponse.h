@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskResult Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取NameRepeat, K8sRuleIngressPortError, etc.
+                     * @return TaskResult NameRepeat, K8sRuleIngressPortError, etc.
                      * 
                      */
                     std::vector<std::string> GetTaskResult() const;
@@ -82,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * NameRepeat, K8sRuleIngressPortError, etc.
                      */
                     std::vector<std::string> m_taskResult;
                     bool m_taskResultHasBeenSet;

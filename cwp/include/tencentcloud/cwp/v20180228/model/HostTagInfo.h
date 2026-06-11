@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagList Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTagList() const;
 
                     /**
                      * 设置Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tagList Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagList(const std::vector<std::string>& _tagList);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIpHasBeenSet() const;
 
                     /**
-                     * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AliasName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return AliasName host name
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
-                     * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aliasName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _aliasName host name
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AliasNameHasBeenSet() const;
 
                     /**
-                     * 获取Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host public IP address.
+                     * @return MachineWanIp Host public IP address.
                      * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
-                     * 设置Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host public IP address.
+                     * @param _machineWanIp Host public IP address.
                      * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
@@ -174,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -199,18 +175,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KernelVersion Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKernelVersion() const;
 
                     /**
                      * 设置Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _kernelVersion Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKernelVersion(const std::string& _kernelVersion);
@@ -223,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineStatus Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host online status: ONLINE, OFFLINE
+                     * @return MachineStatus Host online status: ONLINE, OFFLINE
                      * 
                      */
                     std::string GetMachineStatus() const;
 
                     /**
-                     * 设置Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineStatus Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host online status: ONLINE, OFFLINE
+                     * @param _machineStatus Host online status: ONLINE, OFFLINE
                      * 
                      */
                     void SetMachineStatus(const std::string& _machineStatus);
@@ -248,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineStatusHasBeenSet() const;
 
                     /**
-                     * 获取Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
+                     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
                      * 
                      */
                     std::string GetProtectType() const;
 
                     /**
-                     * 设置Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protectType Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
+                     * @param _protectType Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
                      * 
                      */
                     void SetProtectType(const std::string& _protectType);
@@ -274,18 +238,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulNum Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetVulNum() const;
 
                     /**
                      * 设置Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulNum Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulNum(const int64_t& _vulNum);
@@ -299,18 +259,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tags> GetCloudTags() const;
 
                     /**
                      * 设置Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCloudTags(const std::vector<Tags>& _cloudTags);
@@ -324,18 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceID Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceID Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -347,91 +299,160 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceIDHasBeenSet() const;
 
+                    /**
+                     * 获取Specific host types
+                     * @return MachineType Specific host types
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Specific host types
+                     * @param _machineType Specific host types
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone name
+                     * @return RegionName Availability zone name
+                     * 
+                     */
+                    std::string GetRegionName() const;
+
+                    /**
+                     * 设置Availability zone name
+                     * @param _regionName Availability zone name
+                     * 
+                     */
+                    void SetRegionName(const std::string& _regionName);
+
+                    /**
+                     * 判断参数 RegionName 是否已赋值
+                     * @return RegionName 是否已赋值
+                     * 
+                     */
+                    bool RegionNameHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone ID.
+                     * @return RegionId Availability zone ID.
+                     * 
+                     */
+                    uint64_t GetRegionId() const;
+
+                    /**
+                     * 设置Availability zone ID.
+                     * @param _regionId Availability zone ID.
+                     * 
+                     */
+                    void SetRegionId(const uint64_t& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     * 
+                     */
+                    bool RegionIdHasBeenSet() const;
+
                 private:
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
                      * Host tag name array
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
                      * Host intranet IP
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
-                     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
 
                     /**
-                     * Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host public IP address.
                      */
                     std::string m_machineWanIp;
                     bool m_machineWanIpHasBeenSet;
 
                     /**
                      * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
                      * Kernel version number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_kernelVersion;
                     bool m_kernelVersionHasBeenSet;
 
                     /**
-                     * Host online status: ONLINE; OFFLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host online status: ONLINE, OFFLINE
                      */
                     std::string m_machineStatus;
                     bool m_machineStatusHasBeenSet;
 
                     /**
-                     * Protection version: BASIC_VERSION - Basic Edition PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Protection version: BASIC_VERSION - Basic Edition, PRO_VERSION - Professional Edition; Flagship: Ultimate Edition
                      */
                     std::string m_protectType;
                     bool m_protectTypeHasBeenSet;
 
                     /**
                      * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vulNum;
                     bool m_vulNumHasBeenSet;
 
                     /**
                      * Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tags> m_cloudTags;
                     bool m_cloudTagsHasBeenSet;
 
                     /**
                      * Host Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
+
+                    /**
+                     * Specific host types
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
+
+                    /**
+                     * Availability zone name
+                     */
+                    std::string m_regionName;
+                    bool m_regionNameHasBeenSet;
+
+                    /**
+                     * Availability zone ID.
+                     */
+                    uint64_t m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }

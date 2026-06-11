@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/AbnormalProcessRuleExtSetItem.h>
 #include <tencentcloud/tcss/v20201101/model/RuleBaseInfo.h>
 
 
@@ -45,18 +46,20 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of events
-                     * @return TotalCount Total number of events
+                     * 获取Exception process strategy extension information list (including rule content and executed action). The new frontend preferentially uses this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleExtSet Exception process strategy extension information list (including rule content and executed action). The new frontend preferentially uses this field.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    uint64_t GetTotalCount() const;
+                    std::vector<AbnormalProcessRuleExtSetItem> GetRuleExtSet() const;
 
                     /**
-                     * 判断参数 TotalCount 是否已赋值
-                     * @return TotalCount 是否已赋值
+                     * 判断参数 RuleExtSet 是否已赋值
+                     * @return RuleExtSet 是否已赋值
                      * 
                      */
-                    bool TotalCountHasBeenSet() const;
+                    bool RuleExtSetHasBeenSet() const;
 
                     /**
                      * 获取List of abnormal process policies
@@ -72,19 +75,40 @@ namespace TencentCloud
                      */
                     bool RuleSetHasBeenSet() const;
 
+                    /**
+                     * 获取Total number of events
+                     * @return TotalCount Total number of events
+                     * 
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Total number of events
+                     * Exception process strategy extension information list (including rule content and executed action). The new frontend preferentially uses this field.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    uint64_t m_totalCount;
-                    bool m_totalCountHasBeenSet;
+                    std::vector<AbnormalProcessRuleExtSetItem> m_ruleExtSet;
+                    bool m_ruleExtSetHasBeenSet;
 
                     /**
                      * List of abnormal process policies
                      */
                     std::vector<RuleBaseInfo> m_ruleSet;
                     bool m_ruleSetHasBeenSet;
+
+                    /**
+                     * Total number of events
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

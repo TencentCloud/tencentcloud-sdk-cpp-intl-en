@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Site list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Locations Site list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetWebLocationBaseInfo> GetLocations() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Site list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetWebLocationBaseInfo> m_locations;
                     bool m_locationsHasBeenSet;

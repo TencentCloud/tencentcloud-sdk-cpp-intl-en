@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取article name
+                     * @return Title article name
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置article name
+                     * @param _title article name
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -183,15 +175,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * article name
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
                      * Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;

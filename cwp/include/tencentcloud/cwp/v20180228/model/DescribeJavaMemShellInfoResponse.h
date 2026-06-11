@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Info Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     JavaMemShellDetail GetInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     JavaMemShellDetail m_info;
                     bool m_infoHasBeenSet;

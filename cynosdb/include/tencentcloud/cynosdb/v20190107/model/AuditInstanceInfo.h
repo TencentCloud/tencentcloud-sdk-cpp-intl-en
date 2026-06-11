@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audit instance details.
                 */
                 class AuditInstanceInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag information
-                     * @return TagList Tag information
+                     * 获取Tag information.
+                     * @return TagList Tag information.
                      * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
-                     * 设置Tag information
-                     * @param _tagList Tag information
+                     * 设置Tag information.
+                     * @param _tagList Tag information.
                      * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Tag information
+                     * Tag information.
                      */
                     std::vector<Tag> m_tagList;
                     bool m_tagListHasBeenSet;

@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the log topic to which the shipping rule to be created belongs
-                     * @return TopicId ID of the log topic to which the shipping rule to be created belongs
+                     * 获取<p>Log topic Id belonging to the created shipping rule.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
+                     * @return TopicId <p>Log topic Id belonging to the created shipping rule.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置ID of the log topic to which the shipping rule to be created belongs
-                     * @param _topicId ID of the log topic to which the shipping rule to be created belongs
+                     * 设置<p>Log topic Id belonging to the created shipping rule.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
+                     * @param _topicId <p>Log topic Id belonging to the created shipping rule.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Destination bucket in the shipping rule to be created
-                     * @return Bucket Destination bucket in the shipping rule to be created
+                     * 获取<p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Retrieve COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
+                     * @return Bucket <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Retrieve COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Destination bucket in the shipping rule to be created
-                     * @param _bucket Destination bucket in the shipping rule to be created
+                     * 设置<p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Retrieve COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
+                     * @param _bucket <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Retrieve COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Prefix of the shipping directory in the shipping rule to be created
-                     * @return Prefix Prefix of the shipping directory in the shipping rule to be created
+                     * 获取<p>New directory prefix delivered by the Shipping Rule.</p><ul><li>Only supports 0-9A-Za-z-_/</li><li>Supports up to 256 characters</li></ul>
+                     * @return Prefix <p>New directory prefix delivered by the Shipping Rule.</p><ul><li>Only supports 0-9A-Za-z-_/</li><li>Supports up to 256 characters</li></ul>
                      * 
                      */
                     std::string GetPrefix() const;
 
                     /**
-                     * 设置Prefix of the shipping directory in the shipping rule to be created
-                     * @param _prefix Prefix of the shipping directory in the shipping rule to be created
+                     * 设置<p>New directory prefix delivered by the Shipping Rule.</p><ul><li>Only supports 0-9A-Za-z-_/</li><li>Supports up to 256 characters</li></ul>
+                     * @param _prefix <p>New directory prefix delivered by the Shipping Rule.</p><ul><li>Only supports 0-9A-Za-z-_/</li><li>Supports up to 256 characters</li></ul>
                      * 
                      */
                     void SetPrefix(const std::string& _prefix);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool PrefixHasBeenSet() const;
 
                     /**
-                     * 获取Shipping rule name
-                     * @return ShipperName Shipping rule name
+                     * 获取<p>Shipping rule name. Supports a maximum of 255 characters.</p>
+                     * @return ShipperName <p>Shipping rule name. Supports a maximum of 255 characters.</p>
                      * 
                      */
                     std::string GetShipperName() const;
 
                     /**
-                     * 设置Shipping rule name
-                     * @param _shipperName Shipping rule name
+                     * 设置<p>Shipping rule name. Supports a maximum of 255 characters.</p>
+                     * @param _shipperName <p>Shipping rule name. Supports a maximum of 255 characters.</p>
                      * 
                      */
                     void SetShipperName(const std::string& _shipperName);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool ShipperNameHasBeenSet() const;
 
                     /**
-                     * 获取Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
-                     * @return Interval Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
+                     * 获取<p>Shipping time interval in seconds. Default: 300. Range: 300-900.</p>
+                     * @return Interval <p>Shipping time interval in seconds. Default: 300. Range: 300-900.</p>
                      * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
-                     * 设置Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
-                     * @param _interval Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
+                     * 设置<p>Shipping time interval in seconds. Default: 300. Range: 300-900.</p>
+                     * @param _interval <p>Shipping time interval in seconds. Default: 300. Range: 300-900.</p>
                      * 
                      */
                     void SetInterval(const uint64_t& _interval);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
-                     * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+                     * 获取<p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
+                     * @return MaxSize <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
-                     * @param _maxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+                     * 设置<p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
+                     * @param _maxSize <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
-                     * @return FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * 获取<p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
+                     * @return FilterRules <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
                      * 
                      */
                     std::vector<FilterRuleInfo> GetFilterRules() const;
 
                     /**
-                     * 设置Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
-                     * @param _filterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * 设置<p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
+                     * @param _filterRules <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
                      * 
                      */
                     void SetFilterRules(const std::vector<FilterRuleInfo>& _filterRules);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool FilterRulesHasBeenSet() const;
 
                     /**
-                     * 获取Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
-                     * @return Partition Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
+                     * 获取<p>Partition rules for log shipping support strftime time format representation</p>
+                     * @return Partition <p>Partition rules for log shipping support strftime time format representation</p>
                      * 
                      */
                     std::string GetPartition() const;
 
                     /**
-                     * 设置Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
-                     * @param _partition Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
+                     * 设置<p>Partition rules for log shipping support strftime time format representation</p>
+                     * @param _partition <p>Partition rules for log shipping support strftime time format representation</p>
                      * 
                      */
                     void SetPartition(const std::string& _partition);
@@ -214,15 +214,15 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Compression configuration of shipped log
-                     * @return Compress Compression configuration of shipped log
+                     * 获取<p>Compression configuration of shipped logs</p>
+                     * @return Compress <p>Compression configuration of shipped logs</p>
                      * 
                      */
                     CompressInfo GetCompress() const;
 
                     /**
-                     * 设置Compression configuration of shipped log
-                     * @param _compress Compression configuration of shipped log
+                     * 设置<p>Compression configuration of shipped logs</p>
+                     * @param _compress <p>Compression configuration of shipped logs</p>
                      * 
                      */
                     void SetCompress(const CompressInfo& _compress);
@@ -235,15 +235,15 @@ namespace TencentCloud
                     bool CompressHasBeenSet() const;
 
                     /**
-                     * 获取Format configuration of shipped log content
-                     * @return Content Format configuration of shipped log content
+                     * 获取<p>Content format configuration for shipped logs</p>
+                     * @return Content <p>Content format configuration for shipped logs</p>
                      * 
                      */
                     ContentInfo GetContent() const;
 
                     /**
-                     * 设置Format configuration of shipped log content
-                     * @param _content Format configuration of shipped log content
+                     * 设置<p>Content format configuration for shipped logs</p>
+                     * @param _content <p>Content format configuration for shipped logs</p>
                      * 
                      */
                     void SetContent(const ContentInfo& _content);
@@ -256,15 +256,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-                     * @return FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     * 获取<p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+                     * @return FilenameMode <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
                      * 
                      */
                     uint64_t GetFilenameMode() const;
 
                     /**
-                     * 设置Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-                     * @param _filenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     * 设置<p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+                     * @param _filenameMode <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
                      * 
                      */
                     void SetFilenameMode(const uint64_t& _filenameMode);
@@ -277,15 +277,15 @@ namespace TencentCloud
                     bool FilenameModeHasBeenSet() const;
 
                     /**
-                     * 获取Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
-                     * @return StartTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * 获取<p>Starting point of the data shipping range (Unix second-level timestamp). It cannot exceed the starting point of the log topic's lifecycle.<br>If not filled in by the user, it defaults to the time when the user creates the shipping task.</p>
+                     * @return StartTime <p>Starting point of the data shipping range (Unix second-level timestamp). It cannot exceed the starting point of the log topic's lifecycle.<br>If not filled in by the user, it defaults to the time when the user creates the shipping task.</p>
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
-                     * @param _startTime Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * 设置<p>Starting point of the data shipping range (Unix second-level timestamp). It cannot exceed the starting point of the log topic's lifecycle.<br>If not filled in by the user, it defaults to the time when the user creates the shipping task.</p>
+                     * @param _startTime <p>Starting point of the data shipping range (Unix second-level timestamp). It cannot exceed the starting point of the log topic's lifecycle.<br>If not filled in by the user, it defaults to the time when the user creates the shipping task.</p>
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -298,15 +298,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
-                     * @return EndTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * 获取<p>End time point of the data shipping range (unix second-level timestamp). It cannot be in the future.<br>If not filled in by the user, it defaults to continuous shipping, unlimited.</p>
+                     * @return EndTime <p>End time point of the data shipping range (unix second-level timestamp). It cannot be in the future.<br>If not filled in by the user, it defaults to continuous shipping, unlimited.</p>
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
-                     * @param _endTime End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * 设置<p>End time point of the data shipping range (unix second-level timestamp). It cannot be in the future.<br>If not filled in by the user, it defaults to continuous shipping, unlimited.</p>
+                     * @param _endTime <p>End time point of the data shipping range (unix second-level timestamp). It cannot be in the future.<br>If not filled in by the user, it defaults to continuous shipping, unlimited.</p>
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -319,15 +319,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket storage type
-                     * @return StorageType COS bucket storage type
+                     * 获取<p>The storage type of an object. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
+                     * @return StorageType <p>The storage type of an object. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置COS bucket storage type
-                     * @param _storageType COS bucket storage type
+                     * 设置<p>The storage type of an object. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
+                     * @param _storageType <p>The storage type of an object. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -339,91 +339,199 @@ namespace TencentCloud
                      */
                     bool StorageTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Role ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+                     * @return RoleArn <p>Role ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+                     * 
+                     */
+                    std::string GetRoleArn() const;
+
+                    /**
+                     * 设置<p>Role ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+                     * @param _roleArn <p>Role ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+                     * 
+                     */
+                    void SetRoleArn(const std::string& _roleArn);
+
+                    /**
+                     * 判断参数 RoleArn 是否已赋值
+                     * @return RoleArn 是否已赋值
+                     * 
+                     */
+                    bool RoleArnHasBeenSet() const;
+
+                    /**
+                     * 获取<p>External ID</p>
+                     * @return ExternalId <p>External ID</p>
+                     * 
+                     */
+                    std::string GetExternalId() const;
+
+                    /**
+                     * 设置<p>External ID</p>
+                     * @param _externalId <p>External ID</p>
+                     * 
+                     */
+                    void SetExternalId(const std::string& _externalId);
+
+                    /**
+                     * 判断参数 ExternalId 是否已赋值
+                     * @return ExternalId 是否已赋值
+                     * 
+                     */
+                    bool ExternalIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Used to generate time variables in the file path shipped to COS.</p><p>Input limit: Support the following time zone list.</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+                     * @return TimeZone <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limit: Support the following time zone list.</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+                     * 
+                     */
+                    std::string GetTimeZone() const;
+
+                    /**
+                     * 设置<p>Used to generate time variables in the file path shipped to COS.</p><p>Input limit: Support the following time zone list.</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+                     * @param _timeZone <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limit: Support the following time zone list.</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+                     * 
+                     */
+                    void SetTimeZone(const std::string& _timeZone);
+
+                    /**
+                     * 判断参数 TimeZone 是否已赋值
+                     * @return TimeZone 是否已赋值
+                     * 
+                     */
+                    bool TimeZoneHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Pre-filtering process - perform pre-filtering on the original data written to COS</p>
+                     * @return DSLFilter <p>Pre-filtering process - perform pre-filtering on the original data written to COS</p>
+                     * 
+                     */
+                    std::string GetDSLFilter() const;
+
+                    /**
+                     * 设置<p>Pre-filtering process - perform pre-filtering on the original data written to COS</p>
+                     * @param _dSLFilter <p>Pre-filtering process - perform pre-filtering on the original data written to COS</p>
+                     * 
+                     */
+                    void SetDSLFilter(const std::string& _dSLFilter);
+
+                    /**
+                     * 判断参数 DSLFilter 是否已赋值
+                     * @return DSLFilter 是否已赋值
+                     * 
+                     */
+                    bool DSLFilterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the log topic to which the shipping rule to be created belongs
+                     * <p>Log topic Id belonging to the created shipping rule.</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Destination bucket in the shipping rule to be created
+                     * <p>COS bucket, see the supported <a href="https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1">bucket naming conventions</a>.</p><ul><li>Retrieve COS buckets via <a href="https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1">GET Service (List Buckets)</a>.</li></ul>
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Prefix of the shipping directory in the shipping rule to be created
+                     * <p>New directory prefix delivered by the Shipping Rule.</p><ul><li>Only supports 0-9A-Za-z-_/</li><li>Supports up to 256 characters</li></ul>
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;
 
                     /**
-                     * Shipping rule name
+                     * <p>Shipping rule name. Supports a maximum of 255 characters.</p>
                      */
                     std::string m_shipperName;
                     bool m_shipperNameHasBeenSet;
 
                     /**
-                     * Interval between shipping tasks (in sec). Default value: 300. Value range: 300-900
+                     * <p>Shipping time interval in seconds. Default: 300. Range: 300-900.</p>
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+                     * <p>Maximum value of delivered files in MB. Default: 256. Range: 5-256.</p>
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * <p>Filter rules for log shipping. Matched logs are shipped. The relationship between the rules is and. Up to 5 rules are allowed. An empty array indicates all logs are shipped without filtering.</p>
                      */
                     std::vector<FilterRuleInfo> m_filterRules;
                     bool m_filterRulesHasBeenSet;
 
                     /**
-                     * Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
+                     * <p>Partition rules for log shipping support strftime time format representation</p>
                      */
                     std::string m_partition;
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Compression configuration of shipped log
+                     * <p>Compression configuration of shipped logs</p>
                      */
                     CompressInfo m_compress;
                     bool m_compressHasBeenSet;
 
                     /**
-                     * Format configuration of shipped log content
+                     * <p>Content format configuration for shipped logs</p>
                      */
                     ContentInfo m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     * <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
                      */
                     uint64_t m_filenameMode;
                     bool m_filenameModeHasBeenSet;
 
                     /**
-                     * Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+                     * <p>Starting point of the data shipping range (Unix second-level timestamp). It cannot exceed the starting point of the log topic's lifecycle.<br>If not filled in by the user, it defaults to the time when the user creates the shipping task.</p>
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+                     * <p>End time point of the data shipping range (unix second-level timestamp). It cannot be in the future.<br>If not filled in by the user, it defaults to continuous shipping, unlimited.</p>
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * COS bucket storage type
+                     * <p>The storage type of an object. Default value is STANDARD. For enumeration values, please refer to the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values include:</p><ul><li>STANDARD: standard storage</li><li>STANDARD_IA: infrequent storage</li><li>ARCHIVE: archive storage</li><li>DEEP_ARCHIVE: deep archive storage</li><li>MAZ_STANDARD: standard storage (multi-AZ)</li><li>MAZ_STANDARD_IA: infrequent storage (multi-AZ)</li><li>INTELLIGENT_TIERING: intelligent tiering storage</li><li>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</li></ul>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
+
+                    /**
+                     * <p>Role ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+                     */
+                    std::string m_roleArn;
+                    bool m_roleArnHasBeenSet;
+
+                    /**
+                     * <p>External ID</p>
+                     */
+                    std::string m_externalId;
+                    bool m_externalIdHasBeenSet;
+
+                    /**
+                     * <p>Used to generate time variables in the file path shipped to COS.</p><p>Input limit: Support the following time zone list.</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+                     */
+                    std::string m_timeZone;
+                    bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * <p>Pre-filtering process - perform pre-filtering on the original data written to COS</p>
+                     */
+                    std::string m_dSLFilter;
+                    bool m_dSLFilterHasBeenSet;
 
                 };
             }

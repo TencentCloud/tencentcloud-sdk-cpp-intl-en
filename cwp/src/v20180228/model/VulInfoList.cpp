@@ -46,7 +46,11 @@ VulInfoList::VulInfoList() :
     m_vulCategoryHasBeenSet(false),
     m_attackLevelHasBeenSet(false),
     m_fixNoNeedRestartHasBeenSet(false),
-    m_methodHasBeenSet(false)
+    m_methodHasBeenSet(false),
+    m_vulFixSwitchHasBeenSet(false),
+    m_latestFixTimeHasBeenSet(false),
+    m_raspOpenNodeCountHasBeenSet(false),
+    m_raspClosedNodeCountHasBeenSet(false)
 {
 }
 
@@ -315,6 +319,46 @@ CoreInternalOutcome VulInfoList::Deserialize(const rapidjson::Value &value)
         m_methodHasBeenSet = true;
     }
 
+    if (value.HasMember("VulFixSwitch") && !value["VulFixSwitch"].IsNull())
+    {
+        if (!value["VulFixSwitch"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VulInfoList.VulFixSwitch` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_vulFixSwitch = value["VulFixSwitch"].GetUint64();
+        m_vulFixSwitchHasBeenSet = true;
+    }
+
+    if (value.HasMember("LatestFixTime") && !value["LatestFixTime"].IsNull())
+    {
+        if (!value["LatestFixTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VulInfoList.LatestFixTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_latestFixTime = string(value["LatestFixTime"].GetString());
+        m_latestFixTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("RaspOpenNodeCount") && !value["RaspOpenNodeCount"].IsNull())
+    {
+        if (!value["RaspOpenNodeCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VulInfoList.RaspOpenNodeCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_raspOpenNodeCount = value["RaspOpenNodeCount"].GetInt64();
+        m_raspOpenNodeCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("RaspClosedNodeCount") && !value["RaspClosedNodeCount"].IsNull())
+    {
+        if (!value["RaspClosedNodeCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `VulInfoList.RaspClosedNodeCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_raspClosedNodeCount = value["RaspClosedNodeCount"].GetInt64();
+        m_raspClosedNodeCountHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -528,6 +572,38 @@ void VulInfoList::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "Method";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_method, allocator);
+    }
+
+    if (m_vulFixSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VulFixSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_vulFixSwitch, allocator);
+    }
+
+    if (m_latestFixTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LatestFixTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_latestFixTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_raspOpenNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RaspOpenNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_raspOpenNodeCount, allocator);
+    }
+
+    if (m_raspClosedNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RaspClosedNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_raspClosedNodeCount, allocator);
     }
 
 }
@@ -947,5 +1023,69 @@ void VulInfoList::SetMethod(const uint64_t& _method)
 bool VulInfoList::MethodHasBeenSet() const
 {
     return m_methodHasBeenSet;
+}
+
+uint64_t VulInfoList::GetVulFixSwitch() const
+{
+    return m_vulFixSwitch;
+}
+
+void VulInfoList::SetVulFixSwitch(const uint64_t& _vulFixSwitch)
+{
+    m_vulFixSwitch = _vulFixSwitch;
+    m_vulFixSwitchHasBeenSet = true;
+}
+
+bool VulInfoList::VulFixSwitchHasBeenSet() const
+{
+    return m_vulFixSwitchHasBeenSet;
+}
+
+string VulInfoList::GetLatestFixTime() const
+{
+    return m_latestFixTime;
+}
+
+void VulInfoList::SetLatestFixTime(const string& _latestFixTime)
+{
+    m_latestFixTime = _latestFixTime;
+    m_latestFixTimeHasBeenSet = true;
+}
+
+bool VulInfoList::LatestFixTimeHasBeenSet() const
+{
+    return m_latestFixTimeHasBeenSet;
+}
+
+int64_t VulInfoList::GetRaspOpenNodeCount() const
+{
+    return m_raspOpenNodeCount;
+}
+
+void VulInfoList::SetRaspOpenNodeCount(const int64_t& _raspOpenNodeCount)
+{
+    m_raspOpenNodeCount = _raspOpenNodeCount;
+    m_raspOpenNodeCountHasBeenSet = true;
+}
+
+bool VulInfoList::RaspOpenNodeCountHasBeenSet() const
+{
+    return m_raspOpenNodeCountHasBeenSet;
+}
+
+int64_t VulInfoList::GetRaspClosedNodeCount() const
+{
+    return m_raspClosedNodeCount;
+}
+
+void VulInfoList::SetRaspClosedNodeCount(const int64_t& _raspClosedNodeCount)
+{
+    m_raspClosedNodeCount = _raspClosedNodeCount;
+    m_raspClosedNodeCountHasBeenSet = true;
+}
+
+bool VulInfoList::RaspClosedNodeCountHasBeenSet() const
+{
+    return m_raspClosedNodeCountHasBeenSet;
 }
 

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Key key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _key key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _value value
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * key
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
                      * value
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

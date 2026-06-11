@@ -127,6 +127,153 @@ namespace TencentCloud
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取List of image IDs excluded from scanning.
+                     * @return ExcludeIDs List of image IDs excluded from scanning.
+                     * 
+                     */
+                    std::vector<uint64_t> GetExcludeIDs() const;
+
+                    /**
+                     * 设置List of image IDs excluded from scanning.
+                     * @param _excludeIDs List of image IDs excluded from scanning.
+                     * 
+                     */
+                    void SetExcludeIDs(const std::vector<uint64_t>& _excludeIDs);
+
+                    /**
+                     * 判断参数 ExcludeIDs 是否已赋值
+                     * @return ExcludeIDs 是否已赋值
+                     * 
+                     */
+                    bool ExcludeIDsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsLatest 
+                     * 
+                     */
+                    bool GetIsLatest() const;
+
+                    /**
+                     * 设置
+                     * @param _isLatest 
+                     * 
+                     */
+                    void SetIsLatest(const bool& _isLatest);
+
+                    /**
+                     * 判断参数 IsLatest 是否已赋值
+                     * @return IsLatest 是否已赋值
+                     * 
+                     */
+                    bool IsLatestHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ScanScope 
+                     * 
+                     */
+                    uint64_t GetScanScope() const;
+
+                    /**
+                     * 设置
+                     * @param _scanScope 
+                     * 
+                     */
+                    void SetScanScope(const uint64_t& _scanScope);
+
+                    /**
+                     * 判断参数 ScanScope 是否已赋值
+                     * @return ScanScope 是否已赋值
+                     * 
+                     */
+                    bool ScanScopeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RegistryType 
+                     * 
+                     */
+                    std::vector<std::string> GetRegistryType() const;
+
+                    /**
+                     * 设置
+                     * @param _registryType 
+                     * 
+                     */
+                    void SetRegistryType(const std::vector<std::string>& _registryType);
+
+                    /**
+                     * 判断参数 RegistryType 是否已赋值
+                     * @return RegistryType 是否已赋值
+                     * 
+                     */
+                    bool RegistryTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Namespace 
+                     * 
+                     */
+                    std::vector<std::string> GetNamespace() const;
+
+                    /**
+                     * 设置
+                     * @param _namespace 
+                     * 
+                     */
+                    void SetNamespace(const std::vector<std::string>& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ContainerRunning 
+                     * 
+                     */
+                    bool GetContainerRunning() const;
+
+                    /**
+                     * 设置
+                     * @param _containerRunning 
+                     * 
+                     */
+                    void SetContainerRunning(const bool& _containerRunning);
+
+                    /**
+                     * 判断参数 ContainerRunning 是否已赋值
+                     * @return ContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool ContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Timeout 
+                     * 
+                     */
+                    uint64_t GetTimeout() const;
+
+                    /**
+                     * 设置
+                     * @param _timeout 
+                     * 
+                     */
+                    void SetTimeout(const uint64_t& _timeout);
+
+                    /**
+                     * 判断参数 Timeout 是否已赋值
+                     * @return Timeout 是否已赋值
+                     * 
+                     */
+                    bool TimeoutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +299,48 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * List of image IDs excluded from scanning.
+                     */
+                    std::vector<uint64_t> m_excludeIDs;
+                    bool m_excludeIDsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isLatest;
+                    bool m_isLatestHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_scanScope;
+                    bool m_scanScopeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_registryType;
+                    bool m_registryTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_containerRunning;
+                    bool m_containerRunningHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_timeout;
+                    bool m_timeoutHasBeenSet;
 
                 };
             }

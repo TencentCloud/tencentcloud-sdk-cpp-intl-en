@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ConnDetectConfig.h>
 
 
 namespace TencentCloud
@@ -252,6 +253,111 @@ namespace TencentCloud
                      */
                     bool InsecureHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ConnDetectConfig 
+                     * 
+                     */
+                    std::vector<ConnDetectConfig> GetConnDetectConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _connDetectConfig 
+                     * 
+                     */
+                    void SetConnDetectConfig(const std::vector<ConnDetectConfig>& _connDetectConfig);
+
+                    /**
+                     * 判断参数 ConnDetectConfig 是否已赋值
+                     * @return ConnDetectConfig 是否已赋值
+                     * 
+                     */
+                    bool ConnDetectConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Repository unique id
+                     * @return RegistryId Repository unique id
+                     * 
+                     */
+                    int64_t GetRegistryId() const;
+
+                    /**
+                     * 设置Repository unique id
+                     * @param _registryId Repository unique id
+                     * 
+                     */
+                    void SetRegistryId(const int64_t& _registryId);
+
+                    /**
+                     * 判断参数 RegistryId 是否已赋值
+                     * @return RegistryId 是否已赋值
+                     * 
+                     */
+                    bool RegistryIdHasBeenSet() const;
+
+                    /**
+                     * 获取Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 
+                     */
+                    uint64_t GetSyncMode() const;
+
+                    /**
+                     * 设置Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * @param _syncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 
+                     */
+                    void SetSyncMode(const uint64_t& _syncMode);
+
+                    /**
+                     * 判断参数 SyncMode 是否已赋值
+                     * @return SyncMode 是否已赋值
+                     * 
+                     */
+                    bool SyncModeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+                     * @return NeedScan Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+                     * 
+                     */
+                    bool GetNeedScan() const;
+
+                    /**
+                     * 设置Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+                     * @param _needScan Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+                     * 
+                     */
+                    void SetNeedScan(const bool& _needScan);
+
+                    /**
+                     * 判断参数 NeedScan 是否已赋值
+                     * @return NeedScan 是否已赋值
+                     * 
+                     */
+                    bool NeedScanHasBeenSet() const;
+
+                    /**
+                     * 获取TCR instance ID.
+                     * @return InstanceId TCR instance ID.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置TCR instance ID.
+                     * @param _instanceId TCR instance ID.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +419,36 @@ namespace TencentCloud
                      */
                     uint64_t m_insecure;
                     bool m_insecureHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<ConnDetectConfig> m_connDetectConfig;
+                    bool m_connDetectConfigHasBeenSet;
+
+                    /**
+                     * Repository unique id
+                     */
+                    int64_t m_registryId;
+                    bool m_registryIdHasBeenSet;
+
+                    /**
+                     * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     */
+                    uint64_t m_syncMode;
+                    bool m_syncModeHasBeenSet;
+
+                    /**
+                     * Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+                     */
+                    bool m_needScan;
+                    bool m_needScanHasBeenSet;
+
+                    /**
+                     * TCR instance ID.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

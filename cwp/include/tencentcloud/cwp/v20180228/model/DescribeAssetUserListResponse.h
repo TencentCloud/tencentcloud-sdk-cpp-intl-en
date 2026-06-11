@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Account list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Users Account list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetUserBaseInfo> GetUsers() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Account list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetUserBaseInfo> m_users;
                     bool m_usersHasBeenSet;

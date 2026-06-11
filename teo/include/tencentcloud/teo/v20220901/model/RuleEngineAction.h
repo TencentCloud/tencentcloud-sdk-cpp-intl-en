@@ -50,8 +50,10 @@
 #include <tencentcloud/teo/v20220901/model/ClientIPCountryParameters.h>
 #include <tencentcloud/teo/v20220901/model/UpstreamFollowRedirectParameters.h>
 #include <tencentcloud/teo/v20220901/model/UpstreamRequestParameters.h>
+#include <tencentcloud/teo/v20220901/model/ShieldParameters.h>
 #include <tencentcloud/teo/v20220901/model/TLSConfigParameters.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginParameters.h>
+#include <tencentcloud/teo/v20220901/model/SiteFailoverParameters.h>
 #include <tencentcloud/teo/v20220901/model/HTTPUpstreamTimeoutParameters.h>
 #include <tencentcloud/teo/v20220901/model/HTTPResponseParameters.h>
 #include <tencentcloud/teo/v20220901/model/ErrorPageParameters.h>
@@ -85,167 +87,175 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
-<li>Cache: specifies the node Cache TTL.</li>.
-<Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: specifies cache pre-refresh.</li>.
-<Li>AccessURLRedirect: specifies access url redirection.</li>.
-<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+                     * 获取Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
+<li>Cache: Node caching TTL;</li>
+<li>CacheKey: custom Cache Key;</li>
+<li>CachePrefresh: cache pre-refresh;</li>
+<li>AccessURLRedirect: URL redirection;</li>
+<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
-<li>Authentication: Token Authentication;</li>.
-<li>MaxAge: specifies the browser cache TTL.</li>.
-<li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: specifies the offline cache.</li>.
-<Li>SmartRouting: specifies smart acceleration.</li>.
-<Li>RangeOriginPull: specifies range-based origin pull.</li>.
-<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
-<Li>HostHeader: specifies the host header rewrite.</li>.
-<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
-<Li>Compression: specifies the intelligent compression configuration.</li>.
+<li>Authentication: Token authentication;</li>
+<li>MaxAge: Browser cache TTL;</li>
+<li>StatusCodeCache: Status code cache TTL;</li>
+<li>OfflineCache: Offline cache;</li>
+<li>SmartRouting: Smart acceleration;</li>
+<li>RangeOriginPull: Range-based origin pull;</li>
+<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
+<li>HostHeader: Host header rewrite;</li>
+<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
+<li>HTTPS origin pull (OriginPullProtocol);</li>
+<li>Compression: Intelligent compression configuration;</li>
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
-<Li>OCSPStapling: specifies ocsp stapling.</li>.
-<Li>HTTP2: specifies http/2 integration.</li>.
-<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
-<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
-<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
-<li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modifies the origin server.</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response.</li>.
-<Li>ErrorPage: specifies the custom error page.</li>.
-<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
-<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
-<Li>SetContentIdentifier: specifies the content identifier.</li>.
-<Li>Vary: specifies the vary feature configuration.</li>.
-<Li>ContentCompression: specifies the content compression configuration.</li>.
-<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
-                     * @return Name Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
-<li>Cache: specifies the node Cache TTL.</li>.
-<Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: specifies cache pre-refresh.</li>.
-<Li>AccessURLRedirect: specifies access url redirection.</li>.
-<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
+<li>OCSPStapling: OCSP stapling;</li>
+<li>HTTP2: HTTP/2 integration;</li>
+<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
+<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
+<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
+<li>UpstreamRequest: Origin-pull request parameter;</li>
+<li>Shield: Origin server uninstallation.</li>
+<li>TLSConfig: SSL/TLS security;</li>
+<li>ModifyOrigin: Modify origin server;</li>
+<li>SiteFailover: origin server failure failover;</li>
+<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
+<li>HTTP response: HTTP response;</li>
+<li>ErrorPage: Custom error page;</li>
+<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
+<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
+<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
+<li>SetContentIdentifier: Set the content identifier.</li>
+<li>Vary: Vary feature configuration;</li>
+<li>ContentCompression: Content compression configuration;</li>
+<li>OriginAuthentication: Origin authentication configuration.</li>
+                     * @return Name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
+<li>Cache: Node caching TTL;</li>
+<li>CacheKey: custom Cache Key;</li>
+<li>CachePrefresh: cache pre-refresh;</li>
+<li>AccessURLRedirect: URL redirection;</li>
+<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
-<li>Authentication: Token Authentication;</li>.
-<li>MaxAge: specifies the browser cache TTL.</li>.
-<li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: specifies the offline cache.</li>.
-<Li>SmartRouting: specifies smart acceleration.</li>.
-<Li>RangeOriginPull: specifies range-based origin pull.</li>.
-<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
-<Li>HostHeader: specifies the host header rewrite.</li>.
-<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
-<Li>Compression: specifies the intelligent compression configuration.</li>.
+<li>Authentication: Token authentication;</li>
+<li>MaxAge: Browser cache TTL;</li>
+<li>StatusCodeCache: Status code cache TTL;</li>
+<li>OfflineCache: Offline cache;</li>
+<li>SmartRouting: Smart acceleration;</li>
+<li>RangeOriginPull: Range-based origin pull;</li>
+<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
+<li>HostHeader: Host header rewrite;</li>
+<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
+<li>HTTPS origin pull (OriginPullProtocol);</li>
+<li>Compression: Intelligent compression configuration;</li>
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
-<Li>OCSPStapling: specifies ocsp stapling.</li>.
-<Li>HTTP2: specifies http/2 integration.</li>.
-<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
-<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
-<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
-<li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modifies the origin server.</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response.</li>.
-<Li>ErrorPage: specifies the custom error page.</li>.
-<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
-<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
-<Li>SetContentIdentifier: specifies the content identifier.</li>.
-<Li>Vary: specifies the vary feature configuration.</li>.
-<Li>ContentCompression: specifies the content compression configuration.</li>.
-<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
+<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
+<li>OCSPStapling: OCSP stapling;</li>
+<li>HTTP2: HTTP/2 integration;</li>
+<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
+<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
+<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
+<li>UpstreamRequest: Origin-pull request parameter;</li>
+<li>Shield: Origin server uninstallation.</li>
+<li>TLSConfig: SSL/TLS security;</li>
+<li>ModifyOrigin: Modify origin server;</li>
+<li>SiteFailover: origin server failure failover;</li>
+<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
+<li>HTTP response: HTTP response;</li>
+<li>ErrorPage: Custom error page;</li>
+<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
+<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
+<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
+<li>SetContentIdentifier: Set the content identifier.</li>
+<li>Vary: Vary feature configuration;</li>
+<li>ContentCompression: Content compression configuration;</li>
+<li>OriginAuthentication: Origin authentication configuration.</li>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
-<li>Cache: specifies the node Cache TTL.</li>.
-<Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: specifies cache pre-refresh.</li>.
-<Li>AccessURLRedirect: specifies access url redirection.</li>.
-<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+                     * 设置Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
+<li>Cache: Node caching TTL;</li>
+<li>CacheKey: custom Cache Key;</li>
+<li>CachePrefresh: cache pre-refresh;</li>
+<li>AccessURLRedirect: URL redirection;</li>
+<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
-<li>Authentication: Token Authentication;</li>.
-<li>MaxAge: specifies the browser cache TTL.</li>.
-<li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: specifies the offline cache.</li>.
-<Li>SmartRouting: specifies smart acceleration.</li>.
-<Li>RangeOriginPull: specifies range-based origin pull.</li>.
-<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
-<Li>HostHeader: specifies the host header rewrite.</li>.
-<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
-<Li>Compression: specifies the intelligent compression configuration.</li>.
+<li>Authentication: Token authentication;</li>
+<li>MaxAge: Browser cache TTL;</li>
+<li>StatusCodeCache: Status code cache TTL;</li>
+<li>OfflineCache: Offline cache;</li>
+<li>SmartRouting: Smart acceleration;</li>
+<li>RangeOriginPull: Range-based origin pull;</li>
+<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
+<li>HostHeader: Host header rewrite;</li>
+<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
+<li>HTTPS origin pull (OriginPullProtocol);</li>
+<li>Compression: Intelligent compression configuration;</li>
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
-<Li>OCSPStapling: specifies ocsp stapling.</li>.
-<Li>HTTP2: specifies http/2 integration.</li>.
-<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
-<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
-<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
-<li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modifies the origin server.</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response.</li>.
-<Li>ErrorPage: specifies the custom error page.</li>.
-<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
-<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
-<Li>SetContentIdentifier: specifies the content identifier.</li>.
-<Li>Vary: specifies the vary feature configuration.</li>.
-<Li>ContentCompression: specifies the content compression configuration.</li>.
-<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
-                     * @param _name Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
-<li>Cache: specifies the node Cache TTL.</li>.
-<Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: specifies cache pre-refresh.</li>.
-<Li>AccessURLRedirect: specifies access url redirection.</li>.
-<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
+<li>OCSPStapling: OCSP stapling;</li>
+<li>HTTP2: HTTP/2 integration;</li>
+<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
+<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
+<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
+<li>UpstreamRequest: Origin-pull request parameter;</li>
+<li>Shield: Origin server uninstallation.</li>
+<li>TLSConfig: SSL/TLS security;</li>
+<li>ModifyOrigin: Modify origin server;</li>
+<li>SiteFailover: origin server failure failover;</li>
+<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
+<li>HTTP response: HTTP response;</li>
+<li>ErrorPage: Custom error page;</li>
+<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
+<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
+<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
+<li>SetContentIdentifier: Set the content identifier.</li>
+<li>Vary: Vary feature configuration;</li>
+<li>ContentCompression: Content compression configuration;</li>
+<li>OriginAuthentication: Origin authentication configuration.</li>
+                     * @param _name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
+<li>Cache: Node caching TTL;</li>
+<li>CacheKey: custom Cache Key;</li>
+<li>CachePrefresh: cache pre-refresh;</li>
+<li>AccessURLRedirect: URL redirection;</li>
+<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
-<li>Authentication: Token Authentication;</li>.
-<li>MaxAge: specifies the browser cache TTL.</li>.
-<li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: specifies the offline cache.</li>.
-<Li>SmartRouting: specifies smart acceleration.</li>.
-<Li>RangeOriginPull: specifies range-based origin pull.</li>.
-<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
-<Li>HostHeader: specifies the host header rewrite.</li>.
-<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
-<Li>Compression: specifies the intelligent compression configuration.</li>.
+<li>Authentication: Token authentication;</li>
+<li>MaxAge: Browser cache TTL;</li>
+<li>StatusCodeCache: Status code cache TTL;</li>
+<li>OfflineCache: Offline cache;</li>
+<li>SmartRouting: Smart acceleration;</li>
+<li>RangeOriginPull: Range-based origin pull;</li>
+<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
+<li>HostHeader: Host header rewrite;</li>
+<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
+<li>HTTPS origin pull (OriginPullProtocol);</li>
+<li>Compression: Intelligent compression configuration;</li>
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
-<Li>OCSPStapling: specifies ocsp stapling.</li>.
-<Li>HTTP2: specifies http/2 integration.</li>.
-<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
-<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
-<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
-<li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modifies the origin server.</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response.</li>.
-<Li>ErrorPage: specifies the custom error page.</li>.
-<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
-<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
-<Li>SetContentIdentifier: specifies the content identifier.</li>.
-<Li>Vary: specifies the vary feature configuration.</li>.
-<Li>ContentCompression: specifies the content compression configuration.</li>.
-<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
+<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
+<li>OCSPStapling: OCSP stapling;</li>
+<li>HTTP2: HTTP/2 integration;</li>
+<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
+<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
+<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
+<li>UpstreamRequest: Origin-pull request parameter;</li>
+<li>Shield: Origin server uninstallation.</li>
+<li>TLSConfig: SSL/TLS security;</li>
+<li>ModifyOrigin: Modify origin server;</li>
+<li>SiteFailover: origin server failure failover;</li>
+<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
+<li>HTTP response: HTTP response;</li>
+<li>ErrorPage: Custom error page;</li>
+<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
+<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
+<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
+<li>SetContentIdentifier: Set the content identifier.</li>
+<li>Vary: Vary feature configuration;</li>
+<li>ContentCompression: Content compression configuration;</li>
+<li>OriginAuthentication: Origin authentication configuration.</li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -908,6 +918,31 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool UpstreamRequestParametersHasBeenSet() const;
 
                     /**
+                     * 获取Origin server uninstallation config. When the Name value is Shield, this parameter is required.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return ShieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    ShieldParameters GetShieldParameters() const;
+
+                    /**
+                     * 设置Origin server uninstallation config. When the Name value is Shield, this parameter is required.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _shieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetShieldParameters(const ShieldParameters& _shieldParameters);
+
+                    /**
+                     * 判断参数 ShieldParameters 是否已赋值
+                     * @return ShieldParameters 是否已赋值
+                     * 
+                     */
+                    bool ShieldParametersHasBeenSet() const;
+
+                    /**
                      * 获取SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return TLSConfigParameters SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
@@ -956,6 +991,31 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      * 
                      */
                     bool ModifyOriginParametersHasBeenSet() const;
+
+                    /**
+                     * 获取Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return SiteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    SiteFailoverParameters GetSiteFailoverParameters() const;
+
+                    /**
+                     * 设置Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @param _siteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 
+                     */
+                    void SetSiteFailoverParameters(const SiteFailoverParameters& _siteFailoverParameters);
+
+                    /**
+                     * 判断参数 SiteFailoverParameters 是否已赋值
+                     * @return SiteFailoverParameters 是否已赋值
+                     * 
+                     */
+                    bool SiteFailoverParametersHasBeenSet() const;
 
                     /**
                      * 获取Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
@@ -1202,45 +1262,47 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Operation Name. the Name must correspond to the parameter structure, such as Name=Cache, then CacheParameters is required.
-<li>Cache: specifies the node Cache TTL.</li>.
-<Li>CacheKey: specifies the custom cache key.</li>.
-<Li>CachePrefresh: specifies cache pre-refresh.</li>.
-<Li>AccessURLRedirect: specifies access url redirection.</li>.
-<Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+                     * Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
+<li>Cache: Node caching TTL;</li>
+<li>CacheKey: custom Cache Key;</li>
+<li>CachePrefresh: cache pre-refresh;</li>
+<li>AccessURLRedirect: URL redirection;</li>
+<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
 <li>QUIC:QUIC;</li>
 <li>WebSocket:WebSocket;</li>
-<li>Authentication: Token Authentication;</li>.
-<li>MaxAge: specifies the browser cache TTL.</li>.
-<li>StatusCodeCache: specifies the status code cache TTL.</li>.
-<Li>OfflineCache: specifies the offline cache.</li>.
-<Li>SmartRouting: specifies smart acceleration.</li>.
-<Li>RangeOriginPull: specifies range-based origin pull.</li>.
-<Li>UpstreamHTTP2: specifies http/2 origin pull.</li>.
-<Li>HostHeader: specifies the host header rewrite.</li>.
-<Li>ForceRedirectHTTPS: specifies the forced https redirect configuration for access protocol.</li>.
-<li>OriginPullProtocol: specifies HTTPS origin pull.</li>.
-<Li>Compression: specifies the intelligent compression configuration.</li>.
+<li>Authentication: Token authentication;</li>
+<li>MaxAge: Browser cache TTL;</li>
+<li>StatusCodeCache: Status code cache TTL;</li>
+<li>OfflineCache: Offline cache;</li>
+<li>SmartRouting: Smart acceleration;</li>
+<li>RangeOriginPull: Range-based origin pull;</li>
+<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
+<li>HostHeader: Host header rewrite;</li>
+<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
+<li>HTTPS origin pull (OriginPullProtocol);</li>
+<li>Compression: Intelligent compression configuration;</li>
 <li>HSTS:HSTS;</li>
-<Li>ClientIPHeader: specifies the header information configuration for storing client request ip.</li>.
-<Li>OCSPStapling: specifies ocsp stapling.</li>.
-<Li>HTTP2: specifies http/2 integration.</li>.
-<li>PostMaxSize: specifies the maximum limit for file streaming transmission in POST request upload.</li>.
-<Li>ClientIPCountry: specifies the regional information of the client ip carried during origin-pull.</li>.
-<Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
-<Li>UpstreamRequest: specifies the origin-pull request parameters.</li>.
-<li>TLSConfig: specifies SSL/TLS security.</li>.
-<Li>ModifyOrigin: modifies the origin server.</li>.
-<Li>HTTPUpstreamTimeout: specifies the layer-7 origin-pull timeout configuration.</li>.
-<li>HttpResponse: HTTP response.</li>.
-<Li>ErrorPage: specifies the custom error page.</li>.
-<li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
-<li>ModifyRequestHeader: modifies the request header of an HTTP node.</li>.
-<Li>ResponseSpeedLimit: specifies the download speed limit for a single connection.</li>.
-<Li>SetContentIdentifier: specifies the content identifier.</li>.
-<Li>Vary: specifies the vary feature configuration.</li>.
-<Li>ContentCompression: specifies the content compression configuration.</li>.
-<Li>OriginAuthentication. specifies the origin authentication configuration.</li>.
+<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
+<li>OCSPStapling: OCSP stapling;</li>
+<li>HTTP2: HTTP/2 integration;</li>
+<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
+<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
+<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
+<li>UpstreamRequest: Origin-pull request parameter;</li>
+<li>Shield: Origin server uninstallation.</li>
+<li>TLSConfig: SSL/TLS security;</li>
+<li>ModifyOrigin: Modify origin server;</li>
+<li>SiteFailover: origin server failure failover;</li>
+<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
+<li>HTTP response: HTTP response;</li>
+<li>ErrorPage: Custom error page;</li>
+<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
+<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
+<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
+<li>SetContentIdentifier: Set the content identifier.</li>
+<li>Vary: Vary feature configuration;</li>
+<li>ContentCompression: Content compression configuration;</li>
+<li>OriginAuthentication: Origin authentication configuration.</li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -1428,6 +1490,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_upstreamRequestParametersHasBeenSet;
 
                     /**
+                     * Origin server uninstallation config. When the Name value is Shield, this parameter is required.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    ShieldParameters m_shieldParameters;
+                    bool m_shieldParametersHasBeenSet;
+
+                    /**
                      * SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
@@ -1440,6 +1509,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      */
                     ModifyOriginParameters m_modifyOriginParameters;
                     bool m_modifyOriginParametersHasBeenSet;
+
+                    /**
+                     * Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     */
+                    SiteFailoverParameters m_siteFailoverParameters;
+                    bool m_siteFailoverParametersHasBeenSet;
 
                     /**
                      * Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.

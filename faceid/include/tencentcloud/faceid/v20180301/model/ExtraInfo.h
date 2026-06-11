@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Additional details
                 */
                 class ExtraInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RetrievalLivenessExtraInfo 
+                     * 获取Full details of the hit template; return solely the template with the maximum similarity.
+                     * @return RetrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
                      * 
                      */
                     std::vector<RetrievalLivenessExtraInfo> GetRetrievalLivenessExtraInfo() const;
 
                     /**
-                     * 设置
-                     * @param _retrievalLivenessExtraInfo 
+                     * 设置Full details of the hit template; return solely the template with the maximum similarity.
+                     * @param _retrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
                      * 
                      */
                     void SetRetrievalLivenessExtraInfo(const std::vector<RetrievalLivenessExtraInfo>& _retrievalLivenessExtraInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Full details of the hit template; return solely the template with the maximum similarity.
                      */
                     std::vector<RetrievalLivenessExtraInfo> m_retrievalLivenessExtraInfo;
                     bool m_retrievalLivenessExtraInfoHasBeenSet;

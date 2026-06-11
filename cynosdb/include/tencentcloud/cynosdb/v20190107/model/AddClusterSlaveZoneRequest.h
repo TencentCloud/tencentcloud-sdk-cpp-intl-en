@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Replica AZ
-                     * @return SlaveZone Replica AZ
+                     * 获取Replica AZ.
+                     * @return SlaveZone Replica AZ.
                      * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
-                     * 设置Replica AZ
-                     * @param _slaveZone Replica AZ
+                     * 设置Replica AZ.
+                     * @param _slaveZone Replica AZ.
                      * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BinlogSyncWay 
+                     * 获取Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+                     * @return BinlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
                      * 
                      */
                     std::string GetBinlogSyncWay() const;
 
                     /**
-                     * 设置
-                     * @param _binlogSyncWay 
+                     * 设置Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+                     * @param _binlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
                      * 
                      */
                     void SetBinlogSyncWay(const std::string& _binlogSyncWay);
@@ -129,19 +129,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Replica AZ
+                     * Replica AZ.
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * 
+                     * Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
                      */
                     std::string m_binlogSyncWay;
                     bool m_binlogSyncWayHasBeenSet;

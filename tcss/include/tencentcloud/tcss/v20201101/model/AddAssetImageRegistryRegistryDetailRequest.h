@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ConnDetectConfig.h>
 
 
 namespace TencentCloud
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Repository type, which can be `harbor`.
-                     * @return RegistryType Repository type, which can be `harbor`.
+                     * 获取Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
+                     * @return RegistryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
                      * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
-                     * 设置Repository type, which can be `harbor`.
-                     * @param _registryType Repository type, which can be `harbor`.
+                     * 设置Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
+                     * @param _registryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
                      * 
                      */
                     void SetRegistryType(const std::string& _registryType);
@@ -252,6 +253,132 @@ namespace TencentCloud
                      */
                     bool InsecureHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ConnDetectConfig 
+                     * 
+                     */
+                    std::vector<ConnDetectConfig> GetConnDetectConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _connDetectConfig 
+                     * 
+                     */
+                    void SetConnDetectConfig(const std::vector<ConnDetectConfig>& _connDetectConfig);
+
+                    /**
+                     * 判断参数 ConnDetectConfig 是否已赋值
+                     * @return ConnDetectConfig 是否已赋值
+                     * 
+                     */
+                    bool ConnDetectConfigHasBeenSet() const;
+
+                    /**
+                     * 获取Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * 
+                     */
+                    bool GetNeedScan() const;
+
+                    /**
+                     * 设置Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * @param _needScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * 
+                     */
+                    void SetNeedScan(const bool& _needScan);
+
+                    /**
+                     * 判断参数 NeedScan 是否已赋值
+                     * @return NeedScan 是否已赋值
+                     * 
+                     */
+                    bool NeedScanHasBeenSet() const;
+
+                    /**
+                     * 获取Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 
+                     */
+                    uint64_t GetSyncMode() const;
+
+                    /**
+                     * 设置Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * @param _syncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 
+                     */
+                    void SetSyncMode(const uint64_t& _syncMode);
+
+                    /**
+                     * 判断参数 SyncMode 是否已赋值
+                     * @return SyncMode 是否已赋值
+                     * 
+                     */
+                    bool SyncModeHasBeenSet() const;
+
+                    /**
+                     * 获取Webhook access address.
+                     * @return WebhookUrl Webhook access address.
+                     * 
+                     */
+                    std::string GetWebhookUrl() const;
+
+                    /**
+                     * 设置Webhook access address.
+                     * @param _webhookUrl Webhook access address.
+                     * 
+                     */
+                    void SetWebhookUrl(const std::string& _webhookUrl);
+
+                    /**
+                     * 判断参数 WebhookUrl 是否已赋值
+                     * @return WebhookUrl 是否已赋值
+                     * 
+                     */
+                    bool WebhookUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Webhook access token.
+                     * @return WebhookToken Webhook access token.
+                     * 
+                     */
+                    std::string GetWebhookToken() const;
+
+                    /**
+                     * 设置Webhook access token.
+                     * @param _webhookToken Webhook access token.
+                     * 
+                     */
+                    void SetWebhookToken(const std::string& _webhookToken);
+
+                    /**
+                     * 判断参数 WebhookToken 是否已赋值
+                     * @return WebhookToken 是否已赋值
+                     * 
+                     */
+                    bool WebhookTokenHasBeenSet() const;
+
+                    /**
+                     * 获取TCR instance ID.
+                     * @return InstanceId TCR instance ID.
+                     * 
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置TCR instance ID.
+                     * @param _instanceId TCR instance ID.
+                     * 
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     * 
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -279,7 +406,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Repository type, which can be `harbor`.
+                     * Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
                      */
                     std::string m_registryType;
                     bool m_registryTypeHasBeenSet;
@@ -313,6 +440,42 @@ namespace TencentCloud
                      */
                     uint64_t m_insecure;
                     bool m_insecureHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<ConnDetectConfig> m_connDetectConfig;
+                    bool m_connDetectConfigHasBeenSet;
+
+                    /**
+                     * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     */
+                    bool m_needScan;
+                    bool m_needScanHasBeenSet;
+
+                    /**
+                     * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     */
+                    uint64_t m_syncMode;
+                    bool m_syncModeHasBeenSet;
+
+                    /**
+                     * Webhook access address.
+                     */
+                    std::string m_webhookUrl;
+                    bool m_webhookUrlHasBeenSet;
+
+                    /**
+                     * Webhook access token.
+                     */
+                    std::string m_webhookToken;
+                    bool m_webhookTokenHasBeenSet;
+
+                    /**
+                     * TCR instance ID.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

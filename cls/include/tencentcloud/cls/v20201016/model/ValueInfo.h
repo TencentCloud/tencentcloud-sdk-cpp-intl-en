@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/KeyValueInfo.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Field type. Valid values: `long`, `text`, `double`
-                     * @return Type Field type. Valid values: `long`, `text`, `double`
+                     * 获取Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
+                     * @return Type Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Field type. Valid values: `long`, `text`, `double`
-                     * @param _type Field type. Valid values: `long`, `text`, `double`
+                     * 设置Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
+                     * @param _type Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -122,19 +127,15 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                     bool SqlFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to include node data. Set this parameter to false for the long and double fields.
+                     * @return ContainZH Whether to include node data. Set this parameter to false for the long and double fields.
                      * 
                      */
                     bool GetContainZH() const;
 
                     /**
-                     * 设置Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to include node data. Set this parameter to false for the long and double fields.
+                     * @param _containZH Whether to include node data. Set this parameter to false for the long and double fields.
                      * 
                      */
                     void SetContainZH(const bool& _containZH);
@@ -146,10 +147,82 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ContainZHHasBeenSet() const;
 
+                    /**
+                     * 获取field alias
+                     * @return Alias field alias
+                     * 
+                     */
+                    std::string GetAlias() const;
+
+                    /**
+                     * 设置field alias
+                     * @param _alias field alias
+                     * 
+                     */
+                    void SetAlias(const std::string& _alias);
+
+                    /**
+                     * 判断参数 Alias 是否已赋值
+                     * @return Alias 是否已赋值
+                     * 
+                     */
+                    bool AliasHasBeenSet() const;
+
+                    /**
+                     * 获取Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+                     * @return OpenIndexForChildOnly Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+                     * 
+                     */
+                    bool GetOpenIndexForChildOnly() const;
+
+                    /**
+                     * 设置Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+                     * @param _openIndexForChildOnly Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+                     * 
+                     */
+                    void SetOpenIndexForChildOnly(const bool& _openIndexForChildOnly);
+
+                    /**
+                     * 判断参数 OpenIndexForChildOnly 是否已赋值
+                     * @return OpenIndexForChildOnly 是否已赋值
+                     * 
+                     */
+                    bool OpenIndexForChildOnlyHasBeenSet() const;
+
+                    /**
+                     * 获取subnode list
+Note: Only json type fields can configure this parameter.
+                     * @return ChildNode subnode list
+Note: Only json type fields can configure this parameter.
+                     * 
+                     */
+                    std::vector<KeyValueInfo> GetChildNode() const;
+
+                    /**
+                     * 设置subnode list
+Note: Only json type fields can configure this parameter.
+                     * @param _childNode subnode list
+Note: Only json type fields can configure this parameter.
+                     * 
+                     */
+                    void SetChildNode(const std::vector<KeyValueInfo>& _childNode);
+
+                    /**
+                     * 判断参数 ChildNode 是否已赋值
+                     * @return ChildNode 是否已赋值
+                     * 
+                     */
+                    bool ChildNodeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Field type. Valid values: `long`, `text`, `double`
+                     * Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -170,11 +243,30 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                     bool m_sqlFlagHasBeenSet;
 
                     /**
-                     * Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to include node data. Set this parameter to false for the long and double fields.
                      */
                     bool m_containZH;
                     bool m_containZHHasBeenSet;
+
+                    /**
+                     * field alias
+                     */
+                    std::string m_alias;
+                    bool m_aliasHasBeenSet;
+
+                    /**
+                     * Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+                     */
+                    bool m_openIndexForChildOnly;
+                    bool m_openIndexForChildOnlyHasBeenSet;
+
+                    /**
+                     * subnode list
+Note: Only json type fields can configure this parameter.
+                     */
+                    std::vector<KeyValueInfo> m_childNode;
+                    bool m_childNodeHasBeenSet;
 
                 };
             }

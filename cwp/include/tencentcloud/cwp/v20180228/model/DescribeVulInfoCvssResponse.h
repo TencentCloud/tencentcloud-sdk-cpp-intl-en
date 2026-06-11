@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulId() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVulName() const;
@@ -77,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulLevel() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulType Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulType() const;
@@ -109,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
@@ -125,9 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RepairPlan Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRepairPlan() const;
@@ -140,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RepairPlanHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CveId Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability CVEID
+                     * @return CveId Vulnerability CVEID
                      * 
                      */
                     std::string GetCveId() const;
@@ -157,9 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reference Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReference() const;
@@ -173,9 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVSS CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCVSS() const;
@@ -188,10 +170,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CVSSHasBeenSet() const;
 
                     /**
-                     * 获取Release date
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicDate Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Release time
+                     * @return PublicDate Release time
                      * 
                      */
                     std::string GetPublicDate() const;
@@ -205,9 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssScore CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCvssScore() const;
@@ -221,9 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CveInfo CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCveInfo() const;
@@ -237,9 +213,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssScoreFloat CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCvssScoreFloat() const;
@@ -253,9 +227,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLabels() const;
@@ -269,9 +241,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDefenseAttackCount() const;
@@ -285,9 +255,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuccessFixCount Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetSuccessFixCount() const;
@@ -301,9 +269,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixSwitch Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFixSwitch() const;
@@ -315,126 +281,129 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FixSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Support defense: 0-no support 1-support
+                     * @return SupportDefence Support defense: 0-no support 1-support
+                     * 
+                     */
+                    int64_t GetSupportDefence() const;
+
+                    /**
+                     * 判断参数 SupportDefence 是否已赋值
+                     * @return SupportDefence 是否已赋值
+                     * 
+                     */
+                    bool SupportDefenceHasBeenSet() const;
+
                 private:
 
                     /**
                      * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
                      * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
 
                     /**
                      * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulLevel;
                     bool m_vulLevelHasBeenSet;
 
                     /**
                      * Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulType;
                     bool m_vulTypeHasBeenSet;
 
                     /**
                      * Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
                      * Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_repairPlan;
                     bool m_repairPlanHasBeenSet;
 
                     /**
-                     * Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability CVEID
                      */
                     std::string m_cveId;
                     bool m_cveIdHasBeenSet;
 
                     /**
                      * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_reference;
                     bool m_referenceHasBeenSet;
 
                     /**
                      * CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cVSS;
                     bool m_cVSSHasBeenSet;
 
                     /**
-                     * Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Release time
                      */
                     std::string m_publicDate;
                     bool m_publicDateHasBeenSet;
 
                     /**
                      * CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_cvssScore;
                     bool m_cvssScoreHasBeenSet;
 
                     /**
                      * CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cveInfo;
                     bool m_cveInfoHasBeenSet;
 
                     /**
                      * CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cvssScoreFloat;
                     bool m_cvssScoreFloatHasBeenSet;
 
                     /**
                      * Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
                      * Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_defenseAttackCount;
                     bool m_defenseAttackCountHasBeenSet;
 
                     /**
                      * Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_successFixCount;
                     bool m_successFixCountHasBeenSet;
 
                     /**
                      * Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_fixSwitch;
                     bool m_fixSwitchHasBeenSet;
+
+                    /**
+                     * Support defense: 0-no support 1-support
+                     */
+                    int64_t m_supportDefence;
+                    bool m_supportDefenceHasBeenSet;
 
                 };
             }

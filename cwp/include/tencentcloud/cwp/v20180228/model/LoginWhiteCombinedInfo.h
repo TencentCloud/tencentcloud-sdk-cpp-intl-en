@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Places Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Allowlisted regions
+                     * @return Places Allowlisted regions
                      * 
                      */
                     std::vector<Place> GetPlaces() const;
 
                     /**
-                     * 设置Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _places Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Allowlisted regions
+                     * @param _places Allowlisted regions
                      * 
                      */
                     void SetPlaces(const std::vector<Place>& _places);
@@ -346,15 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Login Location
-                     * @return Locations Login Location
+                     * 获取Login location
+                     * @return Locations Login location
                      * 
                      */
                     std::string GetLocations() const;
 
                     /**
-                     * 设置Login Location
-                     * @param _locations Login Location
+                     * 设置Login location
+                     * @param _locations Login location
                      * 
                      */
                     void SetLocations(const std::string& _locations);
@@ -369,8 +365,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Allowlisted regions
                      */
                     std::vector<Place> m_places;
                     bool m_placesHasBeenSet;
@@ -454,7 +449,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Login Location
+                     * Login location
                      */
                     std::string m_locations;
                     bool m_locationsHasBeenSet;

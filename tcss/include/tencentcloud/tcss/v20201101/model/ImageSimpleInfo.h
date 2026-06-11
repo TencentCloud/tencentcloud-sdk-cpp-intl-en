@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool ContainerCntHasBeenSet() const;
 
+                    /**
+                     * 获取Associated hosts
+                     * @return HostCnt Associated hosts
+                     * 
+                     */
+                    uint64_t GetHostCnt() const;
+
+                    /**
+                     * 设置Associated hosts
+                     * @param _hostCnt Associated hosts
+                     * 
+                     */
+                    void SetHostCnt(const uint64_t& _hostCnt);
+
+                    /**
+                     * 判断参数 HostCnt 是否已赋值
+                     * @return HostCnt 是否已赋值
+                     * 
+                     */
+                    bool HostCntHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     int64_t m_containerCnt;
                     bool m_containerCntHasBeenSet;
+
+                    /**
+                     * Associated hosts
+                     */
+                    uint64_t m_hostCnt;
+                    bool m_hostCntHasBeenSet;
 
                 };
             }

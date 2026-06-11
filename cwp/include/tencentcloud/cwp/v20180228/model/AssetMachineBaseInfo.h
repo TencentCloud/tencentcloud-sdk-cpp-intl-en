@@ -364,19 +364,15 @@ namespace TencentCloud
                     bool CpuLoadHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tag Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
-                     * 设置Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tag Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
@@ -390,18 +386,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -457,18 +449,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -481,19 +469,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineExtraInfoHasBeenSet() const;
 
                     /**
-                     * 获取CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CpuLoadNum CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CPU load readings (only valid for Linux systems).
+                     * @return CpuLoadNum CPU load readings (only valid for Linux systems).
                      * 
                      */
                     std::string GetCpuLoadNum() const;
 
                     /**
-                     * 设置CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cpuLoadNum CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CPU load readings (only valid for Linux systems).
+                     * @param _cpuLoadNum CPU load readings (only valid for Linux systems).
                      * 
                      */
                     void SetCpuLoadNum(const std::string& _cpuLoadNum);
@@ -598,15 +582,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cpuLoadHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -625,14 +607,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
-                     * CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CPU load readings (only valid for Linux systems).
                      */
                     std::string m_cpuLoadNum;
                     bool m_cpuLoadNumHasBeenSet;

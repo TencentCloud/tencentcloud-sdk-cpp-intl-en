@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsRepeat Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Check for duplicates.
+                     * @return IsRepeat Check for duplicates.
                      * 
                      */
                     bool GetIsRepeat() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Check for duplicates.
                      */
                     bool m_isRepeat;
                     bool m_isRepeatHasBeenSet;

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Context You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
+                     * @return Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
                      * 
                      */
                     std::string GetContext() const;
 
                     /**
-                     * 设置You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _context You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
+                     * @param _context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
                      * 
                      */
                     void SetContext(const std::string& _context);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_periodHasBeenSet;
 
                     /**
-                     * You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Return the ID of the last compliance check task. This task is the source of the data display this time.
+                     * @return TaskId Return the ID of the last compliance check task. This task is the source of the data display this time.
                      * 
                      */
                     uint64_t GetTaskId() const;
@@ -91,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Return the ID of the last compliance check task. This task is the source of the data display this time.
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;

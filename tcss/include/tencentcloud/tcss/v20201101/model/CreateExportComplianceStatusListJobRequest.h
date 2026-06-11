@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/RunTimeFilters.h>
 
 
 namespace TencentCloud
@@ -126,6 +127,27 @@ namespace TencentCloud
                      */
                     bool IdListHasBeenSet() const;
 
+                    /**
+                     * 获取filter
+                     * @return Filters filter
+                     * 
+                     */
+                    std::vector<RunTimeFilters> GetFilters() const;
+
+                    /**
+                     * 设置filter
+                     * @param _filters filter
+                     * 
+                     */
+                    void SetFilters(const std::vector<RunTimeFilters>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +173,12 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_idList;
                     bool m_idListHasBeenSet;
+
+                    /**
+                     * filter
+                     */
+                    std::vector<RunTimeFilters> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

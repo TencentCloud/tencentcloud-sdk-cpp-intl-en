@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulInfoByCveId> GetList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulInfoByCveId> m_list;
                     bool m_listHasBeenSet;

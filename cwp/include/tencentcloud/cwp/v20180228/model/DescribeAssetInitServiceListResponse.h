@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Services List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetInitServiceBaseInfo> GetServices() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetInitServiceBaseInfo> m_services;
                     bool m_servicesHasBeenSet;

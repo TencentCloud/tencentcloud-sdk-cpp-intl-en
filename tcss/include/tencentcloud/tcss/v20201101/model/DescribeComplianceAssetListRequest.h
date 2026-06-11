@@ -44,15 +44,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of asset types
-                     * @return AssetTypeSet List of asset types
+                     * 获取Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
+                     * @return AssetTypeSet Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
                      * 
                      */
                     std::vector<std::string> GetAssetTypeSet() const;
 
                     /**
-                     * 设置List of asset types
-                     * @param _assetTypeSet List of asset types
+                     * 设置Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
+                     * @param _assetTypeSet Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
                      * 
                      */
                     void SetAssetTypeSet(const std::vector<std::string>& _assetTypeSet);
@@ -130,7 +146,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of asset types
+                     * Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
                      */
                     std::vector<std::string> m_assetTypeSet;
                     bool m_assetTypeSetHasBeenSet;

@@ -398,23 +398,19 @@ namespace TencentCloud
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
+                     * 获取 Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
+                     * @return MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
+                     * 设置 Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
+                     * @param _machineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -548,9 +544,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineWanIpHasBeenSet;
 
                     /**
-                     * Additional information
+                     *  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

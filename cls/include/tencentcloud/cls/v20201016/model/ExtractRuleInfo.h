@@ -27,6 +27,7 @@
 #include <tencentcloud/cls/v20201016/model/KeyRegexInfo.h>
 #include <tencentcloud/cls/v20201016/model/MetaTagInfo.h>
 #include <tencentcloud/cls/v20201016/model/EventLog.h>
+#include <tencentcloud/cls/v20201016/model/AdvanceFilterRuleInfo.h>
 
 
 namespace TencentCloud
@@ -50,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>key name for the time field. TimeKey and TimeFormat must appear in pairs</p>
+                     * @return TimeKey <p>key name for the time field. TimeKey and TimeFormat must appear in pairs</p>
                      * 
                      */
                     std::string GetTimeKey() const;
 
                     /**
-                     * 设置Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeKey Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>key name for the time field. TimeKey and TimeFormat must appear in pairs</p>
+                     * @param _timeKey <p>key name for the time field. TimeKey and TimeFormat must appear in pairs</p>
                      * 
                      */
                     void SetTimeKey(const std::string& _timeKey);
@@ -71,19 +72,15 @@ namespace TencentCloud
                     bool TimeKeyHasBeenSet() const;
 
                     /**
-                     * 获取Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TimeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Time field format. Refer to the strftime function in C language for time format description output parameter</p><ul><li>See <a href="https://www.tencentcloud.com/document/product/614/38614?from_cn_redirect=1">configure time format</a> document</li></ul>
+                     * @return TimeFormat <p>Time field format. Refer to the strftime function in C language for time format description output parameter</p><ul><li>See <a href="https://www.tencentcloud.com/document/product/614/38614?from_cn_redirect=1">configure time format</a> document</li></ul>
                      * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
-                     * 设置Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _timeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Time field format. Refer to the strftime function in C language for time format description output parameter</p><ul><li>See <a href="https://www.tencentcloud.com/document/product/614/38614?from_cn_redirect=1">configure time format</a> document</li></ul>
+                     * @param _timeFormat <p>Time field format. Refer to the strftime function in C language for time format description output parameter</p><ul><li>See <a href="https://www.tencentcloud.com/document/product/614/38614?from_cn_redirect=1">configure time format</a> document</li></ul>
                      * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
@@ -96,15 +93,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TimeFormatHasBeenSet() const;
 
                     /**
-                     * 获取Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Delimiter for log type. Only valid when LogType is delimiter_log</p>
+                     * @return Delimiter <p>Delimiter for log type. Only valid when LogType is delimiter_log</p>
                      * 
                      */
                     std::string GetDelimiter() const;
 
                     /**
-                     * 设置Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _delimiter Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Delimiter for log type. Only valid when LogType is delimiter_log</p>
+                     * @param _delimiter <p>Delimiter for log type. Only valid when LogType is delimiter_log</p>
                      * 
                      */
                     void SetDelimiter(const std::string& _delimiter);
@@ -117,15 +114,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DelimiterHasBeenSet() const;
 
                     /**
-                     * 获取Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The whole log matching rule is only valid when LogType is fullregex_log</p>
+                     * @return LogRegex <p>The whole log matching rule is only valid when LogType is fullregex_log</p>
                      * 
                      */
                     std::string GetLogRegex() const;
 
                     /**
-                     * 设置Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logRegex Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The whole log matching rule is only valid when LogType is fullregex_log</p>
+                     * @param _logRegex <p>The whole log matching rule is only valid when LogType is fullregex_log</p>
                      * 
                      */
                     void SetLogRegex(const std::string& _logRegex);
@@ -138,15 +135,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool LogRegexHasBeenSet() const;
 
                     /**
-                     * 获取Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return BeginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>First-line matching rule. Valid only when LogType is multiline_log or fullregex_log.</p>
+                     * @return BeginRegex <p>First-line matching rule. Valid only when LogType is multiline_log or fullregex_log.</p>
                      * 
                      */
                     std::string GetBeginRegex() const;
 
                     /**
-                     * 设置Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _beginRegex Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>First-line matching rule. Valid only when LogType is multiline_log or fullregex_log.</p>
+                     * @param _beginRegex <p>First-line matching rule. Valid only when LogType is multiline_log or fullregex_log.</p>
                      * 
                      */
                     void SetBeginRegex(const std::string& _beginRegex);
@@ -159,15 +156,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BeginRegexHasBeenSet() const;
 
                     /**
-                     * 获取Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The key name of each field. An empty key means to discard the field. Valid only when LogType is delimiter_log. For json_log, use the key in the json itself. Limited to 100.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Keys <p>The key name of each field. An empty key means to discard the field. Valid only when LogType is delimiter_log. For json_log, use the key in the json itself. Limited to 100.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
-                     * 设置Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keys Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The key name of each field. An empty key means to discard the field. Valid only when LogType is delimiter_log. For json_log, use the key in the json itself. Limited to 100.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _keys <p>The key name of each field. An empty key means to discard the field. Valid only when LogType is delimiter_log. For json_log, use the key in the json itself. Limited to 100.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
@@ -180,15 +181,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FilterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Log filtering rule list (legacy version), keys to be filtered, and corresponding regex.<br> Note: For LogListener 2.9.3 and above versions, it is recommended to use log filtering rules configuration.</p>
+                     * @return FilterKeyRegex <p>Log filtering rule list (legacy version), keys to be filtered, and corresponding regex.<br> Note: For LogListener 2.9.3 and above versions, it is recommended to use log filtering rules configuration.</p>
                      * 
                      */
                     std::vector<KeyRegexInfo> GetFilterKeyRegex() const;
 
                     /**
-                     * 设置Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _filterKeyRegex Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Log filtering rule list (legacy version), keys to be filtered, and corresponding regex.<br> Note: For LogListener 2.9.3 and above versions, it is recommended to use log filtering rules configuration.</p>
+                     * @param _filterKeyRegex <p>Log filtering rule list (legacy version), keys to be filtered, and corresponding regex.<br> Note: For LogListener 2.9.3 and above versions, it is recommended to use log filtering rules configuration.</p>
                      * 
                      */
                     void SetFilterKeyRegex(const std::vector<KeyRegexInfo>& _filterKeyRegex);
@@ -201,19 +202,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool FilterKeyRegexHasBeenSet() const;
 
                     /**
-                     * 获取Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnMatchUpLoadSwitch Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Whether to upload logs that failed to be parsed, true for upload, false for not uploading</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UnMatchUpLoadSwitch <p>Whether to upload logs that failed to be parsed, true for upload, false for not uploading</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetUnMatchUpLoadSwitch() const;
 
                     /**
-                     * 设置Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _unMatchUpLoadSwitch Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Whether to upload logs that failed to be parsed, true for upload, false for not uploading</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _unMatchUpLoadSwitch <p>Whether to upload logs that failed to be parsed, true for upload, false for not uploading</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUnMatchUpLoadSwitch(const bool& _unMatchUpLoadSwitch);
@@ -226,19 +227,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UnMatchUpLoadSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Unmatched log key
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnMatchLogKey Unmatched log key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>key of the failure log, required when UnMatchUpLoadSwitch is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UnMatchLogKey <p>key of the failure log, required when UnMatchUpLoadSwitch is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUnMatchLogKey() const;
 
                     /**
-                     * 设置Unmatched log key
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _unMatchLogKey Unmatched log key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>key of the failure log, required when UnMatchUpLoadSwitch is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _unMatchLogKey <p>key of the failure log, required when UnMatchUpLoadSwitch is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUnMatchLogKey(const std::string& _unMatchLogKey);
@@ -251,15 +252,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UnMatchLogKeyHasBeenSet() const;
 
                     /**
-                     * 获取Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Backtracking data volume in incremental collection mode. Default: -1 (full collection). Other non-negative numbers indicate incremental collection (backward collection of ${Backtracking} Byte logs from the newest position). Supports up to 1073741824 (1G).<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Backtracking <p>Backtracking data volume in incremental collection mode. Default: -1 (full collection). Other non-negative numbers indicate incremental collection (backward collection of ${Backtracking} Byte logs from the newest position). Supports up to 1073741824 (1G).<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBacktracking() const;
 
                     /**
-                     * 设置Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backtracking Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Backtracking data volume in incremental collection mode. Default: -1 (full collection). Other non-negative numbers indicate incremental collection (backward collection of ${Backtracking} Byte logs from the newest position). Supports up to 1073741824 (1G).<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _backtracking <p>Backtracking data volume in incremental collection mode. Default: -1 (full collection). Other non-negative numbers indicate incremental collection (backward collection of ${Backtracking} Byte logs from the newest position). Supports up to 1073741824 (1G).<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBacktracking(const int64_t& _backtracking);
@@ -272,19 +277,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BacktrackingHasBeenSet() const;
 
                     /**
-                     * 获取Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether it is Gbk encoding. 0: No; 1: Yes.<br>Note</p><ul><li>Currently, a value of 0 indicates UTF-8 encoding.</li><li>COS import does not support this field.</li></ul>
+                     * @return IsGBK <p>Whether it is Gbk encoding. 0: No; 1: Yes.<br>Note</p><ul><li>Currently, a value of 0 indicates UTF-8 encoding.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     int64_t GetIsGBK() const;
 
                     /**
-                     * 设置Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether it is Gbk encoding. 0: No; 1: Yes.<br>Note</p><ul><li>Currently, a value of 0 indicates UTF-8 encoding.</li><li>COS import does not support this field.</li></ul>
+                     * @param _isGBK <p>Whether it is Gbk encoding. 0: No; 1: Yes.<br>Note</p><ul><li>Currently, a value of 0 indicates UTF-8 encoding.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     void SetIsGBK(const int64_t& _isGBK);
@@ -297,18 +298,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsGBKHasBeenSet() const;
 
                     /**
-                     * 获取Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+                     * 获取<p>Whether it is standard json. 0: No; 1: Yes.</p><ul><li>Standard json means the collector uses industry-standard open-source parsers for json parsing. Non-standard json means the collector uses CLS self-developed json parsers. There is no essential difference between the two parsers. We recommend customers use standard json for parsing.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+                     * @return JsonStandard <p>Whether it is standard json. 0: No; 1: Yes.</p><ul><li>Standard json means the collector uses industry-standard open-source parsers for json parsing. Non-standard json means the collector uses CLS self-developed json parsers. There is no essential difference between the two parsers. We recommend customers use standard json for parsing.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetJsonStandard() const;
 
                     /**
-                     * 设置Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+                     * 设置<p>Whether it is standard json. 0: No; 1: Yes.</p><ul><li>Standard json means the collector uses industry-standard open-source parsers for json parsing. Non-standard json means the collector uses CLS self-developed json parsers. There is no essential difference between the two parsers. We recommend customers use standard json for parsing.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+                     * @param _jsonStandard <p>Whether it is standard json. 0: No; 1: Yes.</p><ul><li>Standard json means the collector uses industry-standard open-source parsers for json parsing. Non-standard json means the collector uses CLS self-developed json parsers. There is no essential difference between the two parsers. We recommend customers use standard json for parsing.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -322,23 +323,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JsonStandardHasBeenSet() const;
 
                     /**
-                     * 获取Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Protocol Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>syslog transport protocol, valid values: tcp, udp, this parameter is valid only when LogType is service_syslog, not required for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @return Protocol <p>syslog transport protocol, valid values: tcp, udp, this parameter is valid only when LogType is service_syslog, not required for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protocol Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>syslog transport protocol, valid values: tcp, udp, this parameter is valid only when LogType is service_syslog, not required for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @param _protocol <p>syslog transport protocol, valid values: tcp, udp, this parameter is valid only when LogType is service_syslog, not required for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -351,23 +344,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>syslog system log collection specifies the address and port listened to by the collector, format: [ip]:[port]. This parameter is valid only when LogType is service_syslog. No need to specify for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @return Address <p>syslog system log collection specifies the address and port listened to by the collector, format: [ip]:[port]. This parameter is valid only when LogType is service_syslog. No need to specify for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>syslog system log collection specifies the address and port listened to by the collector, format: [ip]:[port]. This parameter is valid only when LogType is service_syslog. No need to specify for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @param _address <p>syslog system log collection specifies the address and port listened to by the collector, format: [ip]:[port]. This parameter is valid only when LogType is service_syslog. No need to specify for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -380,31 +365,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取`rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ParseProtocol `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>rfc3164: Specify system log collection using RFC3164 protocol parsing.<br>rfc5424: Specify system log collection using RFC5424 protocol parsing.<br>auto: Automatically match either RFC3164 or RFC5424 protocol.<br>This parameter is valid only when LogType is service_syslog. Not required for other types.<br>Note:</p><ul><li>This field is applicable to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @return ParseProtocol <p>rfc3164: Specify system log collection using RFC3164 protocol parsing.<br>rfc5424: Specify system log collection using RFC5424 protocol parsing.<br>auto: Automatically match either RFC3164 or RFC5424 protocol.<br>This parameter is valid only when LogType is service_syslog. Not required for other types.<br>Note:</p><ul><li>This field is applicable to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     std::string GetParseProtocol() const;
 
                     /**
-                     * 设置`rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _parseProtocol `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>rfc3164: Specify system log collection using RFC3164 protocol parsing.<br>rfc5424: Specify system log collection using RFC5424 protocol parsing.<br>auto: Automatically match either RFC3164 or RFC5424 protocol.<br>This parameter is valid only when LogType is service_syslog. Not required for other types.<br>Note:</p><ul><li>This field is applicable to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
+                     * @param _parseProtocol <p>rfc3164: Specify system log collection using RFC3164 protocol parsing.<br>rfc5424: Specify system log collection using RFC5424 protocol parsing.<br>auto: Automatically match either RFC3164 or RFC5424 protocol.<br>This parameter is valid only when LogType is service_syslog. Not required for other types.<br>Note:</p><ul><li>This field is applicable to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     void SetParseProtocol(const std::string& _parseProtocol);
@@ -417,31 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ParseProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Metadata type. Valid values:
-0: Do not use metadata.
-1: Use machine group metadata.
-2: Use user-defined metadata.
-3: Use the collection path to extract metadata.
-                     * @return MetadataType Metadata type. Valid values:
-0: Do not use metadata.
-1: Use machine group metadata.
-2: Use user-defined metadata.
-3: Use the collection path to extract metadata.
+                     * 获取<p>Metadata type. 0: Not use metadata information; 1: Use machine group metadata; 2: Using custom metadata; 3: Use collection configuration path.<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+                     * @return MetadataType <p>Metadata type. 0: Not use metadata information; 1: Use machine group metadata; 2: Using custom metadata; 3: Use collection configuration path.<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     int64_t GetMetadataType() const;
 
                     /**
-                     * 设置Metadata type. Valid values:
-0: Do not use metadata.
-1: Use machine group metadata.
-2: Use user-defined metadata.
-3: Use the collection path to extract metadata.
-                     * @param _metadataType Metadata type. Valid values:
-0: Do not use metadata.
-1: Use machine group metadata.
-2: Use user-defined metadata.
-3: Use the collection path to extract metadata.
+                     * 设置<p>Metadata type. 0: Not use metadata information; 1: Use machine group metadata; 2: Using custom metadata; 3: Use collection configuration path.<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+                     * @param _metadataType <p>Metadata type. 0: Not use metadata information; 1: Use machine group metadata; 2: Using custom metadata; 3: Use collection configuration path.<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
                      * 
                      */
                     void SetMetadataType(const int64_t& _metadataType);
@@ -454,19 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetadataTypeHasBeenSet() const;
 
                     /**
-                     * 获取Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Collection configuration path regular expression.</p><p><pre><code>Use "()" to identify the regular expression corresponding to the target field in the path. During parsing, "()" is considered as a capture group and reported together with logs in the form of __TAG__.{i}:{target field name}, where i is the serial number of the capture group. If you do not want to use the serial number as the key name, you can define a custom key name through the named capturing group "(?&lt;{key name}&gt;{regular expression})" and report it together with logs in the form of __TAG__.{key name}:{target field name}. Supports up to 5 capture groups.</code></pre></p><p>Note:</p><ul><li>Required when MetadataType is 3.</li><li>This field is not supported in COS import.</li></ul>
+                     * @return PathRegex <p>Collection configuration path regular expression.</p><p><pre><code>Use "()" to identify the regular expression corresponding to the target field in the path. During parsing, "()" is considered as a capture group and reported together with logs in the form of __TAG__.{i}:{target field name}, where i is the serial number of the capture group. If you do not want to use the serial number as the key name, you can define a custom key name through the named capturing group "(?&lt;{key name}&gt;{regular expression})" and report it together with logs in the form of __TAG__.{key name}:{target field name}. Supports up to 5 capture groups.</code></pre></p><p>Note:</p><ul><li>Required when MetadataType is 3.</li><li>This field is not supported in COS import.</li></ul>
                      * 
                      */
                     std::string GetPathRegex() const;
 
                     /**
-                     * 设置Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pathRegex Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Collection configuration path regular expression.</p><p><pre><code>Use "()" to identify the regular expression corresponding to the target field in the path. During parsing, "()" is considered as a capture group and reported together with logs in the form of __TAG__.{i}:{target field name}, where i is the serial number of the capture group. If you do not want to use the serial number as the key name, you can define a custom key name through the named capturing group "(?&lt;{key name}&gt;{regular expression})" and report it together with logs in the form of __TAG__.{key name}:{target field name}. Supports up to 5 capture groups.</code></pre></p><p>Note:</p><ul><li>Required when MetadataType is 3.</li><li>This field is not supported in COS import.</li></ul>
+                     * @param _pathRegex <p>Collection configuration path regular expression.</p><p><pre><code>Use "()" to identify the regular expression corresponding to the target field in the path. During parsing, "()" is considered as a capture group and reported together with logs in the form of __TAG__.{i}:{target field name}, where i is the serial number of the capture group. If you do not want to use the serial number as the key name, you can define a custom key name through the named capturing group "(?&lt;{key name}&gt;{regular expression})" and report it together with logs in the form of __TAG__.{key name}:{target field name}. Supports up to 5 capture groups.</code></pre></p><p>Note:</p><ul><li>Required when MetadataType is 3.</li><li>This field is not supported in COS import.</li></ul>
                      * 
                      */
                     void SetPathRegex(const std::string& _pathRegex);
@@ -479,15 +428,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PathRegexHasBeenSet() const;
 
                     /**
-                     * 获取User-defined metadata, which is required when `MetadataType` is set to `2`.
-                     * @return MetaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * 获取<p>User-defined metadata information.<br>Note:</p><ul><li>Required when MetadataType is 2.</li><li>This field is not supported for COS import.</li></ul>
+                     * @return MetaTags <p>User-defined metadata information.<br>Note:</p><ul><li>Required when MetadataType is 2.</li><li>This field is not supported for COS import.</li></ul>
                      * 
                      */
                     std::vector<MetaTagInfo> GetMetaTags() const;
 
                     /**
-                     * 设置User-defined metadata, which is required when `MetadataType` is set to `2`.
-                     * @param _metaTags User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * 设置<p>User-defined metadata information.<br>Note:</p><ul><li>Required when MetadataType is 2.</li><li>This field is not supported for COS import.</li></ul>
+                     * @param _metaTags <p>User-defined metadata information.<br>Note:</p><ul><li>Required when MetadataType is 2.</li><li>This field is not supported for COS import.</li></ul>
                      * 
                      */
                     void SetMetaTags(const std::vector<MetaTagInfo>& _metaTags);
@@ -500,15 +449,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetaTagsHasBeenSet() const;
 
                     /**
-                     * 获取Windows event log collection
-                     * @return EventLogRules Windows event log collection
+                     * 获取<p>The Windows Event Log Collection rule is valid only when LogType is windows_event_log. No need to specify for other types.</p>
+                     * @return EventLogRules <p>The Windows Event Log Collection rule is valid only when LogType is windows_event_log. No need to specify for other types.</p>
                      * 
                      */
                     std::vector<EventLog> GetEventLogRules() const;
 
                     /**
-                     * 设置Windows event log collection
-                     * @param _eventLogRules Windows event log collection
+                     * 设置<p>The Windows Event Log Collection rule is valid only when LogType is windows_event_log. No need to specify for other types.</p>
+                     * @param _eventLogRules <p>The Windows Event Log Collection rule is valid only when LogType is windows_event_log. No need to specify for other types.</p>
                      * 
                      */
                     void SetEventLogRules(const std::vector<EventLog>& _eventLogRules);
@@ -520,139 +469,185 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EventLogRulesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Log filtering rule list (new version).<br>Note:</p><ul><li>LogListener versions below 2.9.3 do not support this. Please use FilterKeyRegex to configure log filter rules.</li><li>Self-built k8s collection configuration (CreateConfigExtra, ModifyConfigExtra) does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvanceFilterRules <p>Log filtering rule list (new version).<br>Note:</p><ul><li>LogListener versions below 2.9.3 do not support this. Please use FilterKeyRegex to configure log filter rules.</li><li>Self-built k8s collection configuration (CreateConfigExtra, ModifyConfigExtra) does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<AdvanceFilterRuleInfo> GetAdvanceFilterRules() const;
+
+                    /**
+                     * 设置<p>Log filtering rule list (new version).<br>Note:</p><ul><li>LogListener versions below 2.9.3 do not support this. Please use FilterKeyRegex to configure log filter rules.</li><li>Self-built k8s collection configuration (CreateConfigExtra, ModifyConfigExtra) does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _advanceFilterRules <p>Log filtering rule list (new version).<br>Note:</p><ul><li>LogListener versions below 2.9.3 do not support this. Please use FilterKeyRegex to configure log filter rules.</li><li>Self-built k8s collection configuration (CreateConfigExtra, ModifyConfigExtra) does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAdvanceFilterRules(const std::vector<AdvanceFilterRuleInfo>& _advanceFilterRules);
+
+                    /**
+                     * 判断参数 AdvanceFilterRules 是否已赋值
+                     * @return AdvanceFilterRules 是否已赋值
+                     * 
+                     */
+                    bool AdvanceFilterRulesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Key name of raw logs. All raw logs are uploaded with the Key name you specified, and the original log content as Value. If left empty, raw log upload is disabled.</p><ul><li>COS import does not support this field.</li></ul>
+                     * @return RawLogKey <p>Key name of raw logs. All raw logs are uploaded with the Key name you specified, and the original log content as Value. If left empty, raw log upload is disabled.</p><ul><li>COS import does not support this field.</li></ul>
+                     * 
+                     */
+                    std::string GetRawLogKey() const;
+
+                    /**
+                     * 设置<p>Key name of raw logs. All raw logs are uploaded with the Key name you specified, and the original log content as Value. If left empty, raw log upload is disabled.</p><ul><li>COS import does not support this field.</li></ul>
+                     * @param _rawLogKey <p>Key name of raw logs. All raw logs are uploaded with the Key name you specified, and the original log content as Value. If left empty, raw log upload is disabled.</p><ul><li>COS import does not support this field.</li></ul>
+                     * 
+                     */
+                    void SetRawLogKey(const std::string& _rawLogKey);
+
+                    /**
+                     * 判断参数 RawLogKey 是否已赋值
+                     * @return RawLogKey 是否已赋值
+                     * 
+                     */
+                    bool RawLogKeyHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>key name for the time field. TimeKey and TimeFormat must appear in pairs</p>
                      */
                     std::string m_timeKey;
                     bool m_timeKeyHasBeenSet;
 
                     /**
-                     * Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Time field format. Refer to the strftime function in C language for time format description output parameter</p><ul><li>See <a href="https://www.tencentcloud.com/document/product/614/38614?from_cn_redirect=1">configure time format</a> document</li></ul>
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;
 
                     /**
-                     * Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Delimiter for log type. Only valid when LogType is delimiter_log</p>
                      */
                     std::string m_delimiter;
                     bool m_delimiterHasBeenSet;
 
                     /**
-                     * Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>The whole log matching rule is only valid when LogType is fullregex_log</p>
                      */
                     std::string m_logRegex;
                     bool m_logRegexHasBeenSet;
 
                     /**
-                     * Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>First-line matching rule. Valid only when LogType is multiline_log or fullregex_log.</p>
                      */
                     std::string m_beginRegex;
                     bool m_beginRegexHasBeenSet;
 
                     /**
-                     * Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>The key name of each field. An empty key means to discard the field. Valid only when LogType is delimiter_log. For json_log, use the key in the json itself. Limited to 100.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_keys;
                     bool m_keysHasBeenSet;
 
                     /**
-                     * Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Log filtering rule list (legacy version), keys to be filtered, and corresponding regex.<br> Note: For LogListener 2.9.3 and above versions, it is recommended to use log filtering rules configuration.</p>
                      */
                     std::vector<KeyRegexInfo> m_filterKeyRegex;
                     bool m_filterKeyRegexHasBeenSet;
 
                     /**
-                     * Whether to upload the logs that failed to be parsed. Valid values: `true`: yes; `false`: no
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Whether to upload logs that failed to be parsed, true for upload, false for not uploading</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_unMatchUpLoadSwitch;
                     bool m_unMatchUpLoadSwitchHasBeenSet;
 
                     /**
-                     * Unmatched log key
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>key of the failure log, required when UnMatchUpLoadSwitch is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_unMatchLogKey;
                     bool m_unMatchLogKeyHasBeenSet;
 
                     /**
-                     * Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Backtracking data volume in incremental collection mode. Default: -1 (full collection). Other non-negative numbers indicate incremental collection (backward collection of ${Backtracking} Byte logs from the newest position). Supports up to 1073741824 (1G).<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_backtracking;
                     bool m_backtrackingHasBeenSet;
 
                     /**
-                     * Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether it is Gbk encoding. 0: No; 1: Yes.<br>Note</p><ul><li>Currently, a value of 0 indicates UTF-8 encoding.</li><li>COS import does not support this field.</li></ul>
                      */
                     int64_t m_isGBK;
                     bool m_isGBKHasBeenSet;
 
                     /**
-                     * Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+                     * <p>Whether it is standard json. 0: No; 1: Yes.</p><ul><li>Standard json means the collector uses industry-standard open-source parsers for json parsing. Non-standard json means the collector uses CLS self-developed json parsers. There is no essential difference between the two parsers. We recommend customers use standard json for parsing.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_jsonStandard;
                     bool m_jsonStandardHasBeenSet;
 
                     /**
-                     * Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>syslog transport protocol, valid values: tcp, udp, this parameter is valid only when LogType is service_syslog, not required for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>syslog system log collection specifies the address and port listened to by the collector, format: [ip]:[port]. This parameter is valid only when LogType is service_syslog. No need to specify for other types.<br>Note:</p><ul><li>This field applies to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
-This field can be used when you create or modify collection rule configurations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>rfc3164: Specify system log collection using RFC3164 protocol parsing.<br>rfc5424: Specify system log collection using RFC5424 protocol parsing.<br>auto: Automatically match either RFC3164 or RFC5424 protocol.<br>This parameter is valid only when LogType is service_syslog. Not required for other types.<br>Note:</p><ul><li>This field is applicable to: create collection rule configuration, modify collection rule configuration.</li><li>COS import does not support this field.</li></ul>
                      */
                     std::string m_parseProtocol;
                     bool m_parseProtocolHasBeenSet;
 
                     /**
-                     * Metadata type. Valid values:
-0: Do not use metadata.
-1: Use machine group metadata.
-2: Use user-defined metadata.
-3: Use the collection path to extract metadata.
+                     * <p>Metadata type. 0: Not use metadata information; 1: Use machine group metadata; 2: Using custom metadata; 3: Use collection configuration path.<br>Note:</p><ul><li>COS import does not support this field.</li></ul>
                      */
                     int64_t m_metadataType;
                     bool m_metadataTypeHasBeenSet;
 
                     /**
-                     * Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Collection configuration path regular expression.</p><p><pre><code>Use "()" to identify the regular expression corresponding to the target field in the path. During parsing, "()" is considered as a capture group and reported together with logs in the form of __TAG__.{i}:{target field name}, where i is the serial number of the capture group. If you do not want to use the serial number as the key name, you can define a custom key name through the named capturing group "(?&lt;{key name}&gt;{regular expression})" and report it together with logs in the form of __TAG__.{key name}:{target field name}. Supports up to 5 capture groups.</code></pre></p><p>Note:</p><ul><li>Required when MetadataType is 3.</li><li>This field is not supported in COS import.</li></ul>
                      */
                     std::string m_pathRegex;
                     bool m_pathRegexHasBeenSet;
 
                     /**
-                     * User-defined metadata, which is required when `MetadataType` is set to `2`.
+                     * <p>User-defined metadata information.<br>Note:</p><ul><li>Required when MetadataType is 2.</li><li>This field is not supported for COS import.</li></ul>
                      */
                     std::vector<MetaTagInfo> m_metaTags;
                     bool m_metaTagsHasBeenSet;
 
                     /**
-                     * Windows event log collection
+                     * <p>The Windows Event Log Collection rule is valid only when LogType is windows_event_log. No need to specify for other types.</p>
                      */
                     std::vector<EventLog> m_eventLogRules;
                     bool m_eventLogRulesHasBeenSet;
+
+                    /**
+                     * <p>Log filtering rule list (new version).<br>Note:</p><ul><li>LogListener versions below 2.9.3 do not support this. Please use FilterKeyRegex to configure log filter rules.</li><li>Self-built k8s collection configuration (CreateConfigExtra, ModifyConfigExtra) does not support this field.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AdvanceFilterRuleInfo> m_advanceFilterRules;
+                    bool m_advanceFilterRulesHasBeenSet;
+
+                    /**
+                     * <p>Key name of raw logs. All raw logs are uploaded with the Key name you specified, and the original log content as Value. If left empty, raw log upload is disabled.</p><ul><li>COS import does not support this field.</li></ul>
+                     */
+                    std::string m_rawLogKey;
+                    bool m_rawLogKeyHasBeenSet;
 
                 };
             }

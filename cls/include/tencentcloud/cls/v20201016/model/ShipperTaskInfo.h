@@ -194,15 +194,31 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Result of the current shipping task. Valid values: `success`, `running`, `failed`
-                     * @return Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * 获取Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
+                     * @return Status Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Result of the current shipping task. Valid values: `success`, `running`, `failed`
-                     * @param _status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * 设置Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
+                     * @param _status Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -280,7 +296,11 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

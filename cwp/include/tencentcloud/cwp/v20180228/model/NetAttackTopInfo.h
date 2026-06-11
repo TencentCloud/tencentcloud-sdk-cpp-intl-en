@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Agent Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TopInfo> GetAgent() const;
 
                     /**
                      * 设置Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _agent Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAgent(const std::vector<TopInfo>& _agent);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcIp Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TopInfo> GetSrcIp() const;
 
                     /**
                      * 设置Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _srcIp Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSrcIp(const std::vector<TopInfo>& _srcIp);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstPort Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TopInfo> GetDstPort() const;
 
                     /**
                      * 设置Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dstPort Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDstPort(const std::vector<TopInfo>& _dstPort);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vul Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TopInfo> GetVul() const;
 
                     /**
                      * 设置Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vul Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVul(const std::vector<TopInfo>& _vul);
@@ -151,28 +135,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TopInfo> m_agent;
                     bool m_agentHasBeenSet;
 
                     /**
                      * Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TopInfo> m_srcIp;
                     bool m_srcIpHasBeenSet;
 
                     /**
                      * Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TopInfo> m_dstPort;
                     bool m_dstPortHasBeenSet;
 
                     /**
                      * Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TopInfo> m_vul;
                     bool m_vulHasBeenSet;

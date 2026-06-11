@@ -194,15 +194,27 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
-                     * @return DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * 获取Protection Status 
+Defended 
+Unprotected
+Partially defended
+                     * @return DefenderStatus Protection Status 
+Defended 
+Unprotected
+Partially defended
                      * 
                      */
                     std::string GetDefenderStatus() const;
 
                     /**
-                     * 设置Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
-                     * @param _defenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * 设置Protection Status 
+Defended 
+Unprotected
+Partially defended
+                     * @param _defenderStatus Protection Status 
+Defended 
+Unprotected
+Partially defended
                      * 
                      */
                     void SetDefenderStatus(const std::string& _defenderStatus);
@@ -234,6 +246,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ClusterStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster operation sub-status.
+                     * @return ClusterSubStatus Cluster operation sub-status.
+                     * 
+                     */
+                    std::string GetClusterSubStatus() const;
+
+                    /**
+                     * 设置Cluster operation sub-status.
+                     * @param _clusterSubStatus Cluster operation sub-status.
+                     * 
+                     */
+                    void SetClusterSubStatus(const std::string& _clusterSubStatus);
+
+                    /**
+                     * 判断参数 ClusterSubStatus 是否已赋值
+                     * @return ClusterSubStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterSubStatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
@@ -466,6 +499,294 @@ namespace TencentCloud
                      */
                     bool TaskCreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+                     * @return AccessedStatus Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+                     * 
+                     */
+                    std::string GetAccessedStatus() const;
+
+                    /**
+                     * 设置Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+                     * @param _accessedStatus Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+                     * 
+                     */
+                    void SetAccessedStatus(const std::string& _accessedStatus);
+
+                    /**
+                     * 判断参数 AccessedStatus 是否已赋值
+                     * @return AccessedStatus 是否已赋值
+                     * 
+                     */
+                    bool AccessedStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Reason for Access Failure
+                     * @return AccessedSubStatus Reason for Access Failure
+                     * 
+                     */
+                    std::string GetAccessedSubStatus() const;
+
+                    /**
+                     * 设置Reason for Access Failure
+                     * @param _accessedSubStatus Reason for Access Failure
+                     * 
+                     */
+                    void SetAccessedSubStatus(const std::string& _accessedSubStatus);
+
+                    /**
+                     * 判断参数 AccessedSubStatus 是否已赋值
+                     * @return AccessedSubStatus 是否已赋值
+                     * 
+                     */
+                    bool AccessedSubStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Access/Uninstallation failure reason.
+                     * @return AccessedErrorReason Access/Uninstallation failure reason.
+                     * 
+                     */
+                    std::string GetAccessedErrorReason() const;
+
+                    /**
+                     * 设置Access/Uninstallation failure reason.
+                     * @param _accessedErrorReason Access/Uninstallation failure reason.
+                     * 
+                     */
+                    void SetAccessedErrorReason(const std::string& _accessedErrorReason);
+
+                    /**
+                     * 判断参数 AccessedErrorReason 是否已赋值
+                     * @return AccessedErrorReason 是否已赋值
+                     * 
+                     */
+                    bool AccessedErrorReasonHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of nodes
+                     * @return NodeCount Total number of nodes
+                     * 
+                     */
+                    uint64_t GetNodeCount() const;
+
+                    /**
+                     * 设置Total number of nodes
+                     * @param _nodeCount Total number of nodes
+                     * 
+                     */
+                    void SetNodeCount(const uint64_t& _nodeCount);
+
+                    /**
+                     * 判断参数 NodeCount 是否已赋值
+                     * @return NodeCount 是否已赋值
+                     * 
+                     */
+                    bool NodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Offline Node Count
+                     * @return OffLineNodeCount Offline Node Count
+                     * 
+                     */
+                    uint64_t GetOffLineNodeCount() const;
+
+                    /**
+                     * 设置Offline Node Count
+                     * @param _offLineNodeCount Offline Node Count
+                     * 
+                     */
+                    void SetOffLineNodeCount(const uint64_t& _offLineNodeCount);
+
+                    /**
+                     * 判断参数 OffLineNodeCount 是否已赋值
+                     * @return OffLineNodeCount 是否已赋值
+                     * 
+                     */
+                    bool OffLineNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of Nodes Without Agent Installed
+                     * @return UnInstallAgentNodeCount Number of Nodes Without Agent Installed
+                     * 
+                     */
+                    uint64_t GetUnInstallAgentNodeCount() const;
+
+                    /**
+                     * 设置Number of Nodes Without Agent Installed
+                     * @param _unInstallAgentNodeCount Number of Nodes Without Agent Installed
+                     * 
+                     */
+                    void SetUnInstallAgentNodeCount(const uint64_t& _unInstallAgentNodeCount);
+
+                    /**
+                     * 判断参数 UnInstallAgentNodeCount 是否已赋值
+                     * @return UnInstallAgentNodeCount 是否已赋值
+                     * 
+                     */
+                    bool UnInstallAgentNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of billing cores (elastic billing cores + regular billing cores).
+                     * @return ChargeCoresCnt Number of billing cores (elastic billing cores + regular billing cores).
+                     * 
+                     */
+                    uint64_t GetChargeCoresCnt() const;
+
+                    /**
+                     * 设置Number of billing cores (elastic billing cores + regular billing cores).
+                     * @param _chargeCoresCnt Number of billing cores (elastic billing cores + regular billing cores).
+                     * 
+                     */
+                    void SetChargeCoresCnt(const uint64_t& _chargeCoresCnt);
+
+                    /**
+                     * 判断参数 ChargeCoresCnt 是否已赋值
+                     * @return ChargeCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool ChargeCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MasterAddresses 
+                     * 
+                     */
+                    std::vector<std::string> GetMasterAddresses() const;
+
+                    /**
+                     * 设置
+                     * @param _masterAddresses 
+                     * 
+                     */
+                    void SetMasterAddresses(const std::vector<std::string>& _masterAddresses);
+
+                    /**
+                     * 判断参数 MasterAddresses 是否已赋值
+                     * @return MasterAddresses 是否已赋值
+                     * 
+                     */
+                    bool MasterAddressesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CoresCnt 
+                     * 
+                     */
+                    uint64_t GetCoresCnt() const;
+
+                    /**
+                     * 设置
+                     * @param _coresCnt 
+                     * 
+                     */
+                    void SetCoresCnt(const uint64_t& _coresCnt);
+
+                    /**
+                     * 判断参数 CoresCnt 是否已赋值
+                     * @return CoresCnt 是否已赋值
+                     * 
+                     */
+                    bool CoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+                     * @return ClusterAuditStatus Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+                     * 
+                     */
+                    std::string GetClusterAuditStatus() const;
+
+                    /**
+                     * 设置Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+                     * @param _clusterAuditStatus Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+                     * 
+                     */
+                    void SetClusterAuditStatus(const std::string& _clusterAuditStatus);
+
+                    /**
+                     * 判断参数 ClusterAuditStatus 是否已赋值
+                     * @return ClusterAuditStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterAuditStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Information on the failure to enable/disable cluster audit.
+                     * @return ClusterAuditFailedInfo Information on the failure to enable/disable cluster audit.
+                     * 
+                     */
+                    std::string GetClusterAuditFailedInfo() const;
+
+                    /**
+                     * 设置Information on the failure to enable/disable cluster audit.
+                     * @param _clusterAuditFailedInfo Information on the failure to enable/disable cluster audit.
+                     * 
+                     */
+                    void SetClusterAuditFailedInfo(const std::string& _clusterAuditFailedInfo);
+
+                    /**
+                     * 判断参数 ClusterAuditFailedInfo 是否已赋值
+                     * @return ClusterAuditFailedInfo 是否已赋值
+                     * 
+                     */
+                    bool ClusterAuditFailedInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Owner name.
+                     * @return OwnerName Owner name.
+                     * 
+                     */
+                    std::string GetOwnerName() const;
+
+                    /**
+                     * 设置Owner name.
+                     * @param _ownerName Owner name.
+                     * 
+                     */
+                    void SetOwnerName(const std::string& _ownerName);
+
+                    /**
+                     * 判断参数 OwnerName 是否已赋值
+                     * @return OwnerName 是否已赋值
+                     * 
+                     */
+                    bool OwnerNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -511,7 +832,10 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * Protection Status 
+Defended 
+Unprotected
+Partially defended
                      */
                     std::string m_defenderStatus;
                     bool m_defenderStatusHasBeenSet;
@@ -521,6 +845,12 @@ namespace TencentCloud
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
+
+                    /**
+                     * Cluster operation sub-status.
+                     */
+                    std::string m_clusterSubStatus;
+                    bool m_clusterSubStatusHasBeenSet;
 
                     /**
                      * Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
@@ -587,6 +917,87 @@ namespace TencentCloud
                      */
                     std::string m_taskCreateTime;
                     bool m_taskCreateTimeHasBeenSet;
+
+                    /**
+                     * Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+                     */
+                    std::string m_accessedStatus;
+                    bool m_accessedStatusHasBeenSet;
+
+                    /**
+                     * Reason for Access Failure
+                     */
+                    std::string m_accessedSubStatus;
+                    bool m_accessedSubStatusHasBeenSet;
+
+                    /**
+                     * Access/Uninstallation failure reason.
+                     */
+                    std::string m_accessedErrorReason;
+                    bool m_accessedErrorReasonHasBeenSet;
+
+                    /**
+                     * Total number of nodes
+                     */
+                    uint64_t m_nodeCount;
+                    bool m_nodeCountHasBeenSet;
+
+                    /**
+                     * Offline Node Count
+                     */
+                    uint64_t m_offLineNodeCount;
+                    bool m_offLineNodeCountHasBeenSet;
+
+                    /**
+                     * Number of Nodes Without Agent Installed
+                     */
+                    uint64_t m_unInstallAgentNodeCount;
+                    bool m_unInstallAgentNodeCountHasBeenSet;
+
+                    /**
+                     * Number of billing cores (elastic billing cores + regular billing cores).
+                     */
+                    uint64_t m_chargeCoresCnt;
+                    bool m_chargeCoresCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_masterAddresses;
+                    bool m_masterAddressesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_coresCnt;
+                    bool m_coresCntHasBeenSet;
+
+                    /**
+                     * Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+                     */
+                    std::string m_clusterAuditStatus;
+                    bool m_clusterAuditStatusHasBeenSet;
+
+                    /**
+                     * Information on the failure to enable/disable cluster audit.
+                     */
+                    std::string m_clusterAuditFailedInfo;
+                    bool m_clusterAuditFailedInfoHasBeenSet;
+
+                    /**
+                     * Owner name.
+                     */
+                    std::string m_ownerName;
+                    bool m_ownerNameHasBeenSet;
 
                 };
             }

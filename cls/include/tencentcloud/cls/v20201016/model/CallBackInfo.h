@@ -47,15 +47,63 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`Body` during callback
-                     * @return Body `Body` during callback
+                     * 获取Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+                     * @return Body Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
                      * 
                      */
                     std::string GetBody() const;
 
                     /**
-                     * 设置`Body` during callback
-                     * @param _body `Body` during callback
+                     * 设置Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+                     * @param _body Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
                      * 
                      */
                     void SetBody(const std::string& _body);
@@ -68,19 +116,31 @@ namespace TencentCloud
                     bool BodyHasBeenSet() const;
 
                     /**
-                     * 获取`Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Headers `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
+                     * @return Headers HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
                      * 
                      */
                     std::vector<std::string> GetHeaders() const;
 
                     /**
-                     * 设置`Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _headers `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
+                     * @param _headers HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
                      * 
                      */
                     void SetHeaders(const std::vector<std::string>& _headers);
@@ -95,14 +155,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * `Body` during callback
+                     * Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
                      */
                     std::string m_body;
                     bool m_bodyHasBeenSet;
 
                     /**
-                     * `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
                      */
                     std::vector<std::string> m_headers;
                     bool m_headersHasBeenSet;

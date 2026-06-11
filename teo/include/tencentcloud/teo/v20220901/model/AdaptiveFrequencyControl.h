@@ -69,6 +69,27 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
+                     * 获取Rule ID of adaptive frequency control, returned as an output parameter.
+                     * @return Id Rule ID of adaptive frequency control, returned as an output parameter.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Rule ID of adaptive frequency control, returned as an output parameter.
+                     * @param _id Rule ID of adaptive frequency control, returned as an output parameter.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
                      * 获取The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
                      * @return Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
                      * 
@@ -117,6 +138,12 @@ namespace TencentCloud
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
+
+                    /**
+                     * Rule ID of adaptive frequency control, returned as an output parameter.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                     /**
                      * The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Application list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Jars Application list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetJarBaseInfo> GetJars() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Application list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetJarBaseInfo> m_jars;
                     bool m_jarsHasBeenSet;

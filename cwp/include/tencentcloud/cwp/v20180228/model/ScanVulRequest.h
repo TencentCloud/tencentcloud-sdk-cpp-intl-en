@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool VulIdsHasBeenSet() const;
 
                     /**
-                     * 获取0 version comparison, 2 version comparison + poc
-                     * @return ScanMethod 0 version comparison, 2 version comparison + poc
+                     * 获取0: version comparison, 2: version comparison + POC.
+                     * @return ScanMethod 0: version comparison, 2: version comparison + POC.
                      * 
                      */
                     uint64_t GetScanMethod() const;
 
                     /**
-                     * 设置0 version comparison, 2 version comparison + poc
-                     * @param _scanMethod 0 version comparison, 2 version comparison + poc
+                     * 设置0: version comparison, 2: version comparison + POC.
+                     * @param _scanMethod 0: version comparison, 2: version comparison + POC.
                      * 
                      */
                     void SetScanMethod(const uint64_t& _scanMethod);
@@ -209,6 +209,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ScanMethodHasBeenSet() const;
+
+                    /**
+                     * 获取kb No.
+                     * @return KBNumber kb No.
+                     * 
+                     */
+                    std::vector<std::string> GetKBNumber() const;
+
+                    /**
+                     * 设置kb No.
+                     * @param _kBNumber kb No.
+                     * 
+                     */
+                    void SetKBNumber(const std::vector<std::string>& _kBNumber);
+
+                    /**
+                     * 判断参数 KBNumber 是否已赋值
+                     * @return KBNumber 是否已赋值
+                     * 
+                     */
+                    bool KBNumberHasBeenSet() const;
 
                 private:
 
@@ -255,10 +276,16 @@ namespace TencentCloud
                     bool m_vulIdsHasBeenSet;
 
                     /**
-                     * 0 version comparison, 2 version comparison + poc
+                     * 0: version comparison, 2: version comparison + POC.
                      */
                     uint64_t m_scanMethod;
                     bool m_scanMethodHasBeenSet;
+
+                    /**
+                     * kb No.
+                     */
+                    std::vector<std::string> m_kBNumber;
+                    bool m_kBNumberHasBeenSet;
 
                 };
             }

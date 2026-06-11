@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FileTamperRuleCount> GetList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FileTamperRuleCount> m_list;
                     bool m_listHasBeenSet;

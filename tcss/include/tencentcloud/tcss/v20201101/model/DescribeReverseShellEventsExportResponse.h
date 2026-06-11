@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DownloadUrl Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address for download the Excel file.
+                     * @return DownloadUrl Address for download the Excel file.
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task ID.
+                     * @return JobId Task ID.
                      * 
                      */
                     std::string GetJobId() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address for download the Excel file.
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
 
                     /**
-                     * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task ID.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

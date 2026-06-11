@@ -26,8 +26,8 @@ CreateWhiteListOrderRequest::CreateWhiteListOrderRequest() :
     m_licenseTypeHasBeenSet(false),
     m_licenseNumHasBeenSet(false),
     m_deadlineHasBeenSet(false),
-    m_ruleNameHasBeenSet(false),
     m_sourceTypeHasBeenSet(false),
+    m_ruleNameHasBeenSet(false),
     m_regionIdHasBeenSet(false),
     m_extraParamHasBeenSet(false)
 {
@@ -64,20 +64,20 @@ string CreateWhiteListOrderRequest::ToJsonString() const
         d.AddMember(iKey, m_deadline, allocator);
     }
 
-    if (m_ruleNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RuleName";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_ruleName.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_sourceTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "SourceType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_sourceType, allocator);
+    }
+
+    if (m_ruleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RuleName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_ruleName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_regionIdHasBeenSet)
@@ -152,22 +152,6 @@ bool CreateWhiteListOrderRequest::DeadlineHasBeenSet() const
     return m_deadlineHasBeenSet;
 }
 
-string CreateWhiteListOrderRequest::GetRuleName() const
-{
-    return m_ruleName;
-}
-
-void CreateWhiteListOrderRequest::SetRuleName(const string& _ruleName)
-{
-    m_ruleName = _ruleName;
-    m_ruleNameHasBeenSet = true;
-}
-
-bool CreateWhiteListOrderRequest::RuleNameHasBeenSet() const
-{
-    return m_ruleNameHasBeenSet;
-}
-
 uint64_t CreateWhiteListOrderRequest::GetSourceType() const
 {
     return m_sourceType;
@@ -182,6 +166,22 @@ void CreateWhiteListOrderRequest::SetSourceType(const uint64_t& _sourceType)
 bool CreateWhiteListOrderRequest::SourceTypeHasBeenSet() const
 {
     return m_sourceTypeHasBeenSet;
+}
+
+string CreateWhiteListOrderRequest::GetRuleName() const
+{
+    return m_ruleName;
+}
+
+void CreateWhiteListOrderRequest::SetRuleName(const string& _ruleName)
+{
+    m_ruleName = _ruleName;
+    m_ruleNameHasBeenSet = true;
+}
+
+bool CreateWhiteListOrderRequest::RuleNameHasBeenSet() const
+{
+    return m_ruleNameHasBeenSet;
 }
 
 uint64_t CreateWhiteListOrderRequest::GetRegionId() const

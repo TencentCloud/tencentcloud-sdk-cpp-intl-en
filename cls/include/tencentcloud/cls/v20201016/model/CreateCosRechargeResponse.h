@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Id cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取COS import task ID.
+                     * @return Id COS import task ID.
                      * 
                      */
                     std::string GetId() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * COS import task ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

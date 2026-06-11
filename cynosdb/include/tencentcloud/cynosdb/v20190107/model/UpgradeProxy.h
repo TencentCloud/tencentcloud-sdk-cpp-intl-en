@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * When adding or resizing an instance, synchronously upgrade the proxy.
                 */
                 class UpgradeProxy : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProxyZones 
+                     * 获取Proxy node information
+                     * @return ProxyZones Proxy node information
                      * 
                      */
                     std::vector<ProxyZone> GetProxyZones() const;
 
                     /**
-                     * 设置
-                     * @param _proxyZones 
+                     * 设置Proxy node information
+                     * @param _proxyZones Proxy node information
                      * 
                      */
                     void SetProxyZones(const std::vector<ProxyZone>& _proxyZones);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ProxyZonesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReloadBalance 
+                     * 获取Rebalance
+                     * @return ReloadBalance Rebalance
                      * 
                      */
                     std::string GetReloadBalance() const;
 
                     /**
-                     * 设置
-                     * @param _reloadBalance 
+                     * 设置Rebalance
+                     * @param _reloadBalance Rebalance
                      * 
                      */
                     void SetReloadBalance(const std::string& _reloadBalance);
@@ -146,13 +146,13 @@ namespace TencentCloud
                     bool m_memHasBeenSet;
 
                     /**
-                     * 
+                     * Proxy node information
                      */
                     std::vector<ProxyZone> m_proxyZones;
                     bool m_proxyZonesHasBeenSet;
 
                     /**
-                     * 
+                     * Rebalance
                      */
                     std::string m_reloadBalance;
                     bool m_reloadBalanceHasBeenSet;

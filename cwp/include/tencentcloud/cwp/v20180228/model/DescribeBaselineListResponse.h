@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineList List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineInfo> GetBaselineList() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BaselineListHasBeenSet() const;
 
                     /**
-                     * 获取Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of pagination query records
+                     * @return TotalCount Total number of pagination query records
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineInfo> m_baselineList;
                     bool m_baselineListHasBeenSet;
 
                     /**
-                     * Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of pagination query records
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

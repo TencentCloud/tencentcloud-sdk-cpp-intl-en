@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostInfoList Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<HostTagInfo> GetHostInfoList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<HostTagInfo> m_hostInfoList;
                     bool m_hostInfoListHasBeenSet;

@@ -449,19 +449,15 @@ namespace TencentCloud
                     bool NetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Isolate source
+                     * @return IsolateSource Isolate source
                      * 
                      */
                     std::string GetIsolateSource() const;
 
                     /**
-                     * 设置Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Isolate source
+                     * @param _isolateSource Isolate source
                      * 
                      */
                     void SetIsolateSource(const std::string& _isolateSource);
@@ -475,18 +471,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolateTime() const;
 
                     /**
                      * 设置Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsolateTime(const std::string& _isolateTime);
@@ -646,15 +638,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodMemHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Name
-                     * @return ClusterName Cluster Name
+                     * 获取
+                     * @return ClusterName 
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster Name
-                     * @param _clusterName Cluster Name
+                     * 设置
+                     * @param _clusterName 
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -667,15 +659,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取
+                     * @return ClusterID 
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置
+                     * @param _clusterID 
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -825,15 +817,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_netSubStatusHasBeenSet;
 
                     /**
-                     * Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Isolate source
                      */
                     std::string m_isolateSource;
                     bool m_isolateSourceHasBeenSet;
 
                     /**
                      * Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
@@ -881,13 +871,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_podMemHasBeenSet;
 
                     /**
-                     * Cluster Name
+                     * 
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * 
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;

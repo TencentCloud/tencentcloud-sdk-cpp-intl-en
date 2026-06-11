@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-                     * @return ParamName Parameter name
+                     * 获取Parameter name.
+                     * @return ParamName Parameter name.
                      * 
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _paramName Parameter name
+                     * 设置Parameter name.
+                     * @param _paramName Parameter name.
                      * 
                      */
                     void SetParamName(const std::string& _paramName);
@@ -84,19 +84,46 @@ namespace TencentCloud
                      */
                     bool ParamNameHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a global parameter.
+                     * @return IsGlobal Whether it is a global parameter.
+                     * 
+                     */
+                    std::string GetIsGlobal() const;
+
+                    /**
+                     * 设置Whether it is a global parameter.
+                     * @param _isGlobal Whether it is a global parameter.
+                     * 
+                     */
+                    void SetIsGlobal(const std::string& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     * 
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
+
+                    /**
+                     * Whether it is a global parameter.
+                     */
+                    std::string m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
 
                 };
             }

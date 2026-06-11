@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProvinceIdHasBeenSet() const;
 
                     /**
-                     * 获取Country ID. Currently, only 1 is supported, indicating China.
-                     * @return CountryId Country ID. Currently, only 1 is supported, indicating China.
+                     * 获取Country ID. Currently, only 1 is supported, indicating domestic.
+                     * @return CountryId Country ID. Currently, only 1 is supported, indicating domestic.
                      * 
                      */
                     uint64_t GetCountryId() const;
 
                     /**
-                     * 设置Country ID. Currently, only 1 is supported, indicating China.
-                     * @param _countryId Country ID. Currently, only 1 is supported, indicating China.
+                     * 设置Country ID. Currently, only 1 is supported, indicating domestic.
+                     * @param _countryId Country ID. Currently, only 1 is supported, indicating domestic.
                      * 
                      */
                     void SetCountryId(const uint64_t& _countryId);
@@ -145,7 +145,7 @@ namespace TencentCloud
                     bool m_provinceIdHasBeenSet;
 
                     /**
-                     * Country ID. Currently, only 1 is supported, indicating China.
+                     * Country ID. Currently, only 1 is supported, indicating domestic.
                      */
                     uint64_t m_countryId;
                     bool m_countryIdHasBeenSet;

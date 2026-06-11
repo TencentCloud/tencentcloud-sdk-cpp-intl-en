@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FileTamperRuleInfo> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FileTamperRuleInfo> m_list;
                     bool m_listHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Parameter change information.
                 */
                 class ParamItemInfo : public AbstractModel
                 {

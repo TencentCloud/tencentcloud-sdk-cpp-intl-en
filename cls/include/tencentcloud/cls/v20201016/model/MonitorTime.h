@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
-                     * @return Type Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+                     * 获取<p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+                     * @return Type <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
-                     * @param _type Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+                     * 设置<p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+                     * @param _type <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Execution interval or scheduled time point in minutes. Value range: 1–1440.
-                     * @return Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * 获取<p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+                     * @return Time <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
                      * 
                      */
                     int64_t GetTime() const;
 
                     /**
-                     * 设置Execution interval or scheduled time point in minutes. Value range: 1–1440.
-                     * @param _time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * 设置<p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+                     * @param _time <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
                      * 
                      */
                     void SetTime(const int64_t& _time);
@@ -96,21 +88,46 @@ namespace TencentCloud
                      */
                     bool TimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+                     * @return CronExpression <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+                     * 
+                     */
+                    std::string GetCronExpression() const;
+
+                    /**
+                     * 设置<p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+                     * @param _cronExpression <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+                     * 
+                     */
+                    void SetCronExpression(const std::string& _cronExpression);
+
+                    /**
+                     * 判断参数 CronExpression 是否已赋值
+                     * @return CronExpression 是否已赋值
+                     * 
+                     */
+                    bool CronExpressionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+                     * <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
                      */
                     int64_t m_time;
                     bool m_timeHasBeenSet;
+
+                    /**
+                     * <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+                     */
+                    std::string m_cronExpression;
+                    bool m_cronExpressionHasBeenSet;
 
                 };
             }

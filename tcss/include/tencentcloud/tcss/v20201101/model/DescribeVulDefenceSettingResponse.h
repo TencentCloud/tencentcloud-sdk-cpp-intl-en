@@ -100,10 +100,8 @@ namespace TencentCloud
                     bool ExceptionHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIDs Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom Vulnerability Defense Hosts
+                     * @return HostIDs Custom Vulnerability Defense Hosts
                      * 
                      */
                     std::vector<std::string> GetHostIDs() const;
@@ -116,10 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIDsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostTotalCount Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total Number of Hosts with Container Security Enabled
+                     * @return HostTotalCount Total Number of Hosts with Container Security Enabled
                      * 
                      */
                     int64_t GetHostTotalCount() const;
@@ -132,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportDefenseVulCount Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Supported Defense Vulnerability Count
+                     * @return SupportDefenseVulCount Supported Defense Vulnerability Count
                      * 
                      */
                     int64_t GetSupportDefenseVulCount() const;
@@ -244,22 +238,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_exceptionHostCountHasBeenSet;
 
                     /**
-                     * Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom Vulnerability Defense Hosts
                      */
                     std::vector<std::string> m_hostIDs;
                     bool m_hostIDsHasBeenSet;
 
                     /**
-                     * Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total Number of Hosts with Container Security Enabled
                      */
                     int64_t m_hostTotalCount;
                     bool m_hostTotalCountHasBeenSet;
 
                     /**
-                     * Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Supported Defense Vulnerability Count
                      */
                     int64_t m_supportDefenseVulCount;
                     bool m_supportDefenseVulCountHasBeenSet;

@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventLevelList List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineEventLevelInfo> GetEventLevelList() const;
 
                     /**
                      * 设置List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventLevelList List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventLevelList(const std::vector<BaselineEventLevelInfo>& _eventLevelList);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Score Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetScore() const;
 
                     /**
                      * 设置Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _score Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScore(const uint64_t& _score);
@@ -151,28 +135,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineEventLevelInfo> m_eventLevelList;
                     bool m_eventLevelListHasBeenSet;
 
                     /**
                      * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
                      * Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_score;
                     bool m_scoreHasBeenSet;

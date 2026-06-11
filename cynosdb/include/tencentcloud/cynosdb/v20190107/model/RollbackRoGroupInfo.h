@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback RO group information.
                 */
                 class RollbackRoGroupInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance group ID
-                     * @return InstanceGroupId Instance group ID
+                     * 获取Instance group ID.
+                     * @return InstanceGroupId Instance group ID.
                      * 
                      */
                     std::string GetInstanceGroupId() const;
 
                     /**
-                     * 设置Instance group ID
-                     * @param _instanceGroupId Instance group ID
+                     * 设置Instance group ID.
+                     * @param _instanceGroupId Instance group ID.
                      * 
                      */
                     void SetInstanceGroupId(const std::string& _instanceGroupId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC information
-                     * @return UniqVpcId VPC information
+                     * 获取VPC information.
+                     * @return UniqVpcId VPC information.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC information
-                     * @param _uniqVpcId VPC information
+                     * 设置VPC information.
+                     * @param _uniqVpcId VPC information.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance group ID
+                     * Instance group ID.
                      */
                     std::string m_instanceGroupId;
                     bool m_instanceGroupIdHasBeenSet;
 
                     /**
-                     * VPC information
+                     * VPC information.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;

@@ -80,27 +80,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -194,6 +194,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool RulePathsHasBeenSet() const;
 
+                    /**
+                     * 获取Remark information. supports up to 50 characters.
+                     * @return Remark Remark information. supports up to 50 characters.
+                     * 
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remark information. supports up to 50 characters.
+                     * @param _remark Remark information. supports up to 50 characters.
+                     * 
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     * 
+                     */
+                    bool RemarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,10 +227,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;
@@ -235,6 +256,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;
+
+                    /**
+                     * Remark information. supports up to 50 characters.
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
 
                 };
             }

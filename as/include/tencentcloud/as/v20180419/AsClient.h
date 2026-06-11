@@ -482,7 +482,8 @@ This API is used to set the activity start time.
                 CreateNotificationConfigurationOutcomeCallable CreateNotificationConfigurationCallable(const Model::CreateNotificationConfigurationRequest& request);
 
                 /**
-                 *This API (CreateScalingPolicy) is used to create an alarm trigger policy.
+                 *This API is used to create an alarm-triggered scaling policy.
+-The target tracking policy triggers scale-out when the specified type of metric exceeds the threshold (target value) for 3 consecutive cycles (1 minute each). It triggers auto scale-down when the specified type of metric is below the threshold (80% of the target value) for 15 consecutive cycles (1 minute each).
                  * @param req CreateScalingPolicyRequest
                  * @return CreateScalingPolicyOutcome
                  */
@@ -565,7 +566,7 @@ This API is used to set the activity start time.
                 DescribeAccountLimitsOutcomeCallable DescribeAccountLimitsCallable(const Model::DescribeAccountLimitsRequest& request);
 
                 /**
-                 *This API (DescribeAutoScalingActivities) is used to query the activity history of an auto scaling group.
+                 *This API is used to query the scaling activities of the scaling group. Currently, only scaling operations from the past two years are saved.
                  * @param req DescribeAutoScalingActivitiesRequest
                  * @return DescribeAutoScalingActivitiesOutcome
                  */

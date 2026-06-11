@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program category.
-                     * @return MNPType Mini program category.
+                     * 获取<p>Mini program category.</p>
+                     * @return MNPType <p>Mini program category.</p>
                      * 
                      */
                     std::string GetMNPType() const;
 
                     /**
-                     * 设置Mini program category.
-                     * @param _mNPType Mini program category.
+                     * 设置<p>Mini program category.</p>
+                     * @param _mNPType <p>Mini program category.</p>
                      * 
                      */
                     void SetMNPType(const std::string& _mNPType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MNPTypeHasBeenSet() const;
 
                     /**
-                     * 获取Mini program appid.
-                     * @return MNPId Mini program appid.
+                     * 获取<p>Mini program appid.</p>
+                     * @return MNPId <p>Mini program appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program appid.
-                     * @param _mNPId Mini program appid.
+                     * 设置<p>Mini program appid.</p>
+                     * @param _mNPId <p>Mini program appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name.
-                     * @return MNPName Mini program name.
+                     * 获取<p>Mini program name.</p>
+                     * @return MNPName <p>Mini program name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name.
-                     * @param _mNPName Mini program name.
+                     * 设置<p>Mini program name.</p>
+                     * @param _mNPName <p>Mini program name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program icon.
-                     * @return MNPIcon Mini program icon.
+                     * 获取<p>Mini program icon.</p>
+                     * @return MNPIcon <p>Mini program icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini program icon.
-                     * @param _mNPIcon Mini program icon.
+                     * 设置<p>Mini program icon.</p>
+                     * @param _mNPIcon <p>Mini program icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取Mini program introduction.
-                     * @return MNPIntro Mini program introduction.
+                     * 获取<p>Mini program introduction.</p>
+                     * @return MNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置Mini program introduction.
-                     * @param _mNPIntro Mini program introduction.
+                     * 设置<p>Mini program introduction.</p>
+                     * @param _mNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取Mini program description.
-                     * @return MNPDesc Mini program description.
+                     * 获取<p>Mini program description.</p>
+                     * @return MNPDesc <p>Mini program description.</p>
                      * 
                      */
                     std::string GetMNPDesc() const;
 
                     /**
-                     * 设置Mini program description.
-                     * @param _mNPDesc Mini program description.
+                     * 设置<p>Mini program description.</p>
+                     * @param _mNPDesc <p>Mini program description.</p>
                      * 
                      */
                     void SetMNPDesc(const std::string& _mNPDesc);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool MNPDescHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createTime Creation time.
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creator.
-                     * @return CreateUser Creator.
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator.
-                     * @param _createUser Creator.
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Access status. Valid values: 1: not connected; 2: connected.
-                     * @return AccessStatus Access status. Valid values: 1: not connected; 2: connected.
+                     * 获取<p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
+                     * @return AccessStatus <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
                      * 
                      */
                     int64_t GetAccessStatus() const;
 
                     /**
-                     * 设置Access status. Valid values: 1: not connected; 2: connected.
-                     * @param _accessStatus Access status. Valid values: 1: not connected; 2: connected.
+                     * 设置<p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
+                     * @param _accessStatus <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
                      * 
                      */
                     void SetAccessStatus(const int64_t& _accessStatus);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool AccessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Team name.
-                     * @return TeamName Team name.
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name.
-                     * @param _teamName Team name.
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Team ID.
-                     * @return TeamId Team ID.
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID.
-                     * @param _teamId Team ID.
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program available status. Valid values: 1: Available; 2: Removed.
-                     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
+                     * 获取<p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @return Status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Mini program available status. Valid values: 1: Available; 2: Removed.
-                     * @param _status Mini program available status. Valid values: 1: Available; 2: Removed.
+                     * 设置<p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
+                     * @param _status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The mini program name and description in multiple languages.
-                     * @return I18nList The mini program name and description in multiple languages.
+                     * 获取<p>The mini program name and description in multiple languages.</p>
+                     * @return I18nList <p>The mini program name and description in multiple languages.</p>
                      * 
                      */
                     std::vector<MNPDetailI18nVO> GetI18nList() const;
 
                     /**
-                     * 设置The mini program name and description in multiple languages.
-                     * @param _i18nList The mini program name and description in multiple languages.
+                     * 设置<p>The mini program name and description in multiple languages.</p>
+                     * @param _i18nList <p>The mini program name and description in multiple languages.</p>
                      * 
                      */
                     void SetI18nList(const std::vector<MNPDetailI18nVO>& _i18nList);
@@ -323,79 +323,79 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mini program category.
+                     * <p>Mini program category.</p>
                      */
                     std::string m_mNPType;
                     bool m_mNPTypeHasBeenSet;
 
                     /**
-                     * Mini program appid.
+                     * <p>Mini program appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program name.
+                     * <p>Mini program name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program icon.
+                     * <p>Mini program icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * Mini program introduction.
+                     * <p>Mini program introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * Mini program description.
+                     * <p>Mini program description.</p>
                      */
                     std::string m_mNPDesc;
                     bool m_mNPDescHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Creator.
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Access status. Valid values: 1: not connected; 2: connected.
+                     * <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
                      */
                     int64_t m_accessStatus;
                     bool m_accessStatusHasBeenSet;
 
                     /**
-                     * Team name.
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Team ID.
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Mini program available status. Valid values: 1: Available; 2: Removed.
+                     * <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The mini program name and description in multiple languages.
+                     * <p>The mini program name and description in multiple languages.</p>
                      */
                     std::vector<MNPDetailI18nVO> m_i18nList;
                     bool m_i18nListHasBeenSet;

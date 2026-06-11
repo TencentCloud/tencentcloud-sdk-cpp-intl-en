@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Postpay yesterday's charge
-                     * @return PostPayCost Postpay yesterday's charge
+                     * 获取Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
+                     * @return PostPayCost Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
                      * 
                      */
                     uint64_t GetPostPayCost() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool IsAutoOpenProVersionHasBeenSet() const;
 
                     /**
-                     * 获取Number of hosts with Pro Edition activated
-                     * @return ProVersionNum Number of hosts with Pro Edition activated
+                     * 获取Number of hosts with Pro Edition.
+                     * @return ProVersionNum Number of hosts with Pro Edition.
                      * 
                      */
                     uint64_t GetProVersionNum() const;
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Postpay yesterday's charge
+                     * Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
                      */
                     uint64_t m_postPayCost;
                     bool m_postPayCostHasBeenSet;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_isAutoOpenProVersionHasBeenSet;
 
                     /**
-                     * Number of hosts with Pro Edition activated
+                     * Number of hosts with Pro Edition.
                      */
                     uint64_t m_proVersionNum;
                     bool m_proVersionNumHasBeenSet;

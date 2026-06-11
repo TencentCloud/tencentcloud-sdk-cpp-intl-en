@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Record list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Machines Record list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetMachineBaseInfo> GetMachines() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Record list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetMachineBaseInfo> m_machines;
                     bool m_machinesHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Availability zone attribute item.
                 */
                 class SlaveZoneAttrItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone
-                     * @return Zone Availability zone
+                     * 获取Availability zone.
+                     * @return Zone Availability zone.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone
-                     * @param _zone Availability zone
+                     * 设置Availability zone.
+                     * @param _zone Availability zone.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone
+                     * Availability zone.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

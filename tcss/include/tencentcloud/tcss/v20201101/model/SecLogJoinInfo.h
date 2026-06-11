@@ -146,6 +146,27 @@ K8s API: "k8s_api"
                      */
                     bool LogTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Number of accessed clusters.
+                     * @return ClusterCount Number of accessed clusters.
+                     * 
+                     */
+                    uint64_t GetClusterCount() const;
+
+                    /**
+                     * 设置Number of accessed clusters.
+                     * @param _clusterCount Number of accessed clusters.
+                     * 
+                     */
+                    void SetClusterCount(const uint64_t& _clusterCount);
+
+                    /**
+                     * 判断参数 ClusterCount 是否已赋值
+                     * @return ClusterCount 是否已赋值
+                     * 
+                     */
+                    bool ClusterCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -175,6 +196,12 @@ K8s API: "k8s_api"
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
+
+                    /**
+                     * Number of accessed clusters.
+                     */
+                    uint64_t m_clusterCount;
+                    bool m_clusterCountHasBeenSet;
 
                 };
             }

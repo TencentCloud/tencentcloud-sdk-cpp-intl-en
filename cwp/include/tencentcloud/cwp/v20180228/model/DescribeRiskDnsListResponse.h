@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskDnsList Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RiskDnsList> GetRiskDnsList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RiskDnsList> m_riskDnsList;
                     bool m_riskDnsListHasBeenSet;

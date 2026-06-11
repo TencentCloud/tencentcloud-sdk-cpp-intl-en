@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemId Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetItemId() const;
 
                     /**
                      * 设置Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _itemId Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetItemId(const int64_t& _itemId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemName Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetItemName() const;
 
                     /**
                      * 设置Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _itemName Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetItemName(const std::string& _itemName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemDesc Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetItemDesc() const;
 
                     /**
                      * 设置Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _itemDesc Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetItemDesc(const std::string& _itemDesc);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixMethod Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFixMethod() const;
 
                     /**
                      * 设置Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fixMethod Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFixMethod(const std::string& _fixMethod);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleName Rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetectStatus 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetDetectStatus() const;
 
                     /**
                      * 设置0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detectStatus 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetectStatus(const int64_t& _detectStatus);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
                      * 设置Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
                      * 设置Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostCount(const int64_t& _hostCount);
@@ -248,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
                      * 设置First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _firstTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastTime Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time
+                     * @return LastTime Last detection time
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
-                     * 设置Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastTime Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time
+                     * @param _lastTime Last detection time
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastTimeHasBeenSet() const;
 
                     /**
-                     * 获取Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetectResult Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection result; JSON string.
+                     * @return DetectResult Detection result; JSON string.
                      * 
                      */
                     std::string GetDetectResult() const;
 
                     /**
-                     * 设置Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detectResult Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection result; JSON string.
+                     * @param _detectResult Detection result; JSON string.
                      * 
                      */
                     void SetDetectResult(const std::string& _detectResult);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetectResultHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleId Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule ID.
+                     * @return RuleId Rule ID.
                      * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
-                     * 设置Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleId Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule ID.
+                     * @param _ruleId Rule ID.
                      * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
@@ -347,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassedHostCount Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of servers passed.
+                     * @return PassedHostCount Number of servers passed.
                      * 
                      */
                     int64_t GetPassedHostCount() const;
 
                     /**
-                     * 设置Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passedHostCount Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of servers passed.
+                     * @param _passedHostCount Number of servers passed.
                      * 
                      */
                     void SetPassedHostCount(const int64_t& _passedHostCount);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassedHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NotPassedHostCount Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of servers failed.
+                     * @return NotPassedHostCount Number of servers failed.
                      * 
                      */
                     int64_t GetNotPassedHostCount() const;
 
                     /**
-                     * 设置Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _notPassedHostCount Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of servers failed.
+                     * @param _notPassedHostCount Number of servers failed.
                      * 
                      */
                     void SetNotPassedHostCount(const int64_t& _notPassedHostCount);
@@ -400,98 +344,84 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
                      * Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_itemName;
                     bool m_itemNameHasBeenSet;
 
                     /**
                      * Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_itemDesc;
                     bool m_itemDescHasBeenSet;
 
                     /**
                      * Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fixMethod;
                     bool m_fixMethodHasBeenSet;
 
                     /**
                      * Rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
                      * 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_detectStatus;
                     bool m_detectStatusHasBeenSet;
 
                     /**
                      * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
 
                     /**
                      * First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;
 
                     /**
-                     * Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection result; JSON string.
                      */
                     std::string m_detectResult;
                     bool m_detectResultHasBeenSet;
 
                     /**
-                     * Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule ID.
                      */
                     int64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of servers passed.
                      */
                     int64_t m_passedHostCount;
                     bool m_passedHostCountHasBeenSet;
 
                     /**
-                     * Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of servers failed.
                      */
                     int64_t m_notPassedHostCount;
                     bool m_notPassedHostCountHasBeenSet;

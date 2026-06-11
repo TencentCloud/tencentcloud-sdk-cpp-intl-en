@@ -176,18 +176,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
@@ -200,15 +196,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Database name
-                     * @return Name Database name
+                     * 获取Web application name.
+                     * @return Name Web application name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Database name
-                     * @param _name Database name
+                     * 设置Web application name.
+                     * @param _name Web application name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -368,19 +364,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsNewHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Additional information
+                     * @return MachineExtraInfo  Additional information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Additional information
+                     * @param _machineExtraInfo  Additional information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -453,13 +445,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Database name
+                     * Web application name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -507,8 +498,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isNewHasBeenSet;
 
                     /**
-                     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Additional information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

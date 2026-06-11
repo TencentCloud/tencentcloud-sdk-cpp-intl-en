@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target topic ID
-                     * @return TopicId Target topic ID
+                     * 获取<p>Log topic ID</p><ul><li>Get the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li></ul>
+                     * @return TopicId <p>Log topic ID</p><ul><li>Get the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li></ul>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Target topic ID
-                     * @param _topicId Target topic ID
+                     * 设置<p>Log topic ID</p><ul><li>Get the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li></ul>
+                     * @param _topicId <p>Log topic ID</p><ul><li>Get the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li></ul>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias
-                     * @return Alias Alias
+                     * 获取<p>Alias<br>Limitation: Cannot contain character |.</p>
+                     * @return Alias <p>Alias<br>Limitation: Cannot contain character |.</p>
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias
-                     * @param _alias Alias
+                     * 设置<p>Alias<br>Limitation: Cannot contain character |.</p>
+                     * @param _alias <p>Alias<br>Limitation: Cannot contain character |.</p>
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -88,19 +88,154 @@ namespace TencentCloud
                      */
                     bool AliasHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether it is a cross-account topic. false means it is not a cross-account topic, and true means it is a cross-account topic.</p><p>Default value: false</p>
+                     * @return IsCrossAccount <p>Whether it is a cross-account topic. false means it is not a cross-account topic, and true means it is a cross-account topic.</p><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetIsCrossAccount() const;
+
+                    /**
+                     * 设置<p>Whether it is a cross-account topic. false means it is not a cross-account topic, and true means it is a cross-account topic.</p><p>Default value: false</p>
+                     * @param _isCrossAccount <p>Whether it is a cross-account topic. false means it is not a cross-account topic, and true means it is a cross-account topic.</p><p>Default value: false</p>
+                     * 
+                     */
+                    void SetIsCrossAccount(const bool& _isCrossAccount);
+
+                    /**
+                     * 判断参数 IsCrossAccount 是否已赋值
+                     * @return IsCrossAccount 是否已赋值
+                     * 
+                     */
+                    bool IsCrossAccountHasBeenSet() const;
+
+                    /**
+                     * 获取<p>In a cross-account scenario, search for the role ARN value created by the delivery account for the shipping account in the roles of the shipping account.</p>
+                     * @return RoleARN <p>In a cross-account scenario, search for the role ARN value created by the delivery account for the shipping account in the roles of the shipping account.</p>
+                     * 
+                     */
+                    std::string GetRoleARN() const;
+
+                    /**
+                     * 设置<p>In a cross-account scenario, search for the role ARN value created by the delivery account for the shipping account in the roles of the shipping account.</p>
+                     * @param _roleARN <p>In a cross-account scenario, search for the role ARN value created by the delivery account for the shipping account in the roles of the shipping account.</p>
+                     * 
+                     */
+                    void SetRoleARN(const std::string& _roleARN);
+
+                    /**
+                     * 判断参数 RoleARN 是否已赋值
+                     * @return RoleARN 是否已赋值
+                     * 
+                     */
+                    bool RoleARNHasBeenSet() const;
+
+                    /**
+                     * 获取<p>External ID value. Can be found in the role-carrier of the shipping account.</p>
+                     * @return ExternalId <p>External ID value. Can be found in the role-carrier of the shipping account.</p>
+                     * 
+                     */
+                    std::string GetExternalId() const;
+
+                    /**
+                     * 设置<p>External ID value. Can be found in the role-carrier of the shipping account.</p>
+                     * @param _externalId <p>External ID value. Can be found in the role-carrier of the shipping account.</p>
+                     * 
+                     */
+                    void SetExternalId(const std::string& _externalId);
+
+                    /**
+                     * 判断参数 ExternalId 是否已赋值
+                     * @return ExternalId 是否已赋值
+                     * 
+                     */
+                    bool ExternalIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>topic name</p>
+                     * @return TopicName <p>topic name</p>
+                     * 
+                     */
+                    std::string GetTopicName() const;
+
+                    /**
+                     * 设置<p>topic name</p>
+                     * @param _topicName <p>topic name</p>
+                     * 
+                     */
+                    void SetTopicName(const std::string& _topicName);
+
+                    /**
+                     * 判断参数 TopicName 是否已赋值
+                     * @return TopicName 是否已赋值
+                     * 
+                     */
+                    bool TopicNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Logset name</p>
+                     * @return LogsetName <p>Logset name</p>
+                     * 
+                     */
+                    std::string GetLogsetName() const;
+
+                    /**
+                     * 设置<p>Logset name</p>
+                     * @param _logsetName <p>Logset name</p>
+                     * 
+                     */
+                    void SetLogsetName(const std::string& _logsetName);
+
+                    /**
+                     * 判断参数 LogsetName 是否已赋值
+                     * @return LogsetName 是否已赋值
+                     * 
+                     */
+                    bool LogsetNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Target topic ID
+                     * <p>Log topic ID</p><ul><li>Get the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li></ul>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Alias
+                     * <p>Alias<br>Limitation: Cannot contain character |.</p>
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
+
+                    /**
+                     * <p>Whether it is a cross-account topic. false means it is not a cross-account topic, and true means it is a cross-account topic.</p><p>Default value: false</p>
+                     */
+                    bool m_isCrossAccount;
+                    bool m_isCrossAccountHasBeenSet;
+
+                    /**
+                     * <p>In a cross-account scenario, search for the role ARN value created by the delivery account for the shipping account in the roles of the shipping account.</p>
+                     */
+                    std::string m_roleARN;
+                    bool m_roleARNHasBeenSet;
+
+                    /**
+                     * <p>External ID value. Can be found in the role-carrier of the shipping account.</p>
+                     */
+                    std::string m_externalId;
+                    bool m_externalIdHasBeenSet;
+
+                    /**
+                     * <p>topic name</p>
+                     */
+                    std::string m_topicName;
+                    bool m_topicNameHasBeenSet;
+
+                    /**
+                     * <p>Logset name</p>
+                     */
+                    std::string m_logsetName;
+                    bool m_logsetNameHasBeenSet;
 
                 };
             }

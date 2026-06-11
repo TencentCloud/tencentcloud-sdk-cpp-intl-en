@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleName Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventCount Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEventCount() const;
 
                     /**
                      * 设置Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventCount Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventCount(const uint64_t& _eventCount);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventCountHasBeenSet() const;
 
                     /**
-                     * 获取Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleId Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection item ID
+                     * @return RuleId Detection item ID
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
-                     * 设置Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleId Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection item ID
+                     * @param _ruleId Detection item ID
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -150,28 +134,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
                      * Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_eventCount;
                     bool m_eventCountHasBeenSet;
 
                     /**
-                     * Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection item ID
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;

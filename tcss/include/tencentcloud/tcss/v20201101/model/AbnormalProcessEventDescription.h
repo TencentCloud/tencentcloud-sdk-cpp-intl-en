@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event remark information
+                     * @return Remark Event remark information
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event remark information
+                     * @param _remark Event remark information
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -178,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last Time for Event Handling
+                     * @return OperationTime Last Time for Event Handling
                      * 
                      */
                     std::string GetOperationTime() const;
 
                     /**
-                     * 设置Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _operationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last Time for Event Handling
+                     * @param _operationTime Last Time for Event Handling
                      * 
                      */
                     void SetOperationTime(const std::string& _operationTime);
@@ -203,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OperationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
+                     * @return GroupName Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
+                     * @param _groupName Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -242,8 +230,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event remark information
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
@@ -267,15 +254,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last Time for Event Handling
                      */
                     std::string m_operationTime;
                     bool m_operationTimeHasBeenSet;
 
                     /**
-                     * Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;

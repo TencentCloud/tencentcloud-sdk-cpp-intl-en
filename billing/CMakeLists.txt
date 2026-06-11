@@ -24,6 +24,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeCostSummaryByProductRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeCPQBillingMappingRequest.h
   include/tencentcloud/billing/v20180709/model/ConsumptionBusinessSummaryDataItem.h
+  include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/RenewInstance.h
   include/tencentcloud/billing/v20180709/model/ModifyAllocationRuleRequest.h
   include/tencentcloud/billing/v20180709/model/DeleteAllocationRuleRequest.h
@@ -77,7 +78,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeGatherResourceRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeCostSummaryByProjectResponse.h
   include/tencentcloud/billing/v20180709/model/AnalyseProjectDetail.h
-  include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
+  include/tencentcloud/billing/v20180709/model/DescribeOrgMemberAccountBalanceData.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h
   include/tencentcloud/billing/v20180709/model/ModifyGatherRuleRequest.h
   include/tencentcloud/billing/v20180709/model/SummaryDetail.h
@@ -124,6 +125,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeRenewInstancesRequest.h
   include/tencentcloud/billing/v20180709/model/PayDealsRequest.h
   include/tencentcloud/billing/v20180709/model/SummaryTotal.h
+  include/tencentcloud/billing/v20180709/model/DescribeOrgMemberAccountBalanceRequest.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryTotal.h
   include/tencentcloud/billing/v20180709/model/DescribeAllocationBillConditionsResponse.h
   include/tencentcloud/billing/v20180709/model/CostComponentSet.h
@@ -153,6 +155,7 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/CreateInstanceRequest.h
   include/tencentcloud/billing/v20180709/model/AllocationStat.h
   include/tencentcloud/billing/v20180709/model/ModifyGatherRuleResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeOrgMemberAccountBalanceResponse.h
   include/tencentcloud/billing/v20180709/model/BillProject.h
   include/tencentcloud/billing/v20180709/model/ActionSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailForOrganizationRequest.h
@@ -241,6 +244,7 @@ set(billing_src
   src/v20180709/model/DescribeCostSummaryByProductRequest.cpp
   src/v20180709/model/DescribeCPQBillingMappingRequest.cpp
   src/v20180709/model/ConsumptionBusinessSummaryDataItem.cpp
+  src/v20180709/model/ProjectSummaryOverviewItem.cpp
   src/v20180709/model/RenewInstance.cpp
   src/v20180709/model/ModifyAllocationRuleRequest.cpp
   src/v20180709/model/DeleteAllocationRuleRequest.cpp
@@ -294,7 +298,7 @@ set(billing_src
   src/v20180709/model/DescribeGatherResourceRequest.cpp
   src/v20180709/model/DescribeCostSummaryByProjectResponse.cpp
   src/v20180709/model/AnalyseProjectDetail.cpp
-  src/v20180709/model/ProjectSummaryOverviewItem.cpp
+  src/v20180709/model/DescribeOrgMemberAccountBalanceData.cpp
   src/v20180709/model/DescribeBillSummaryByTagResponse.cpp
   src/v20180709/model/ModifyGatherRuleRequest.cpp
   src/v20180709/model/SummaryDetail.cpp
@@ -341,6 +345,7 @@ set(billing_src
   src/v20180709/model/DescribeRenewInstancesRequest.cpp
   src/v20180709/model/PayDealsRequest.cpp
   src/v20180709/model/SummaryTotal.cpp
+  src/v20180709/model/DescribeOrgMemberAccountBalanceRequest.cpp
   src/v20180709/model/BusinessSummaryTotal.cpp
   src/v20180709/model/DescribeAllocationBillConditionsResponse.cpp
   src/v20180709/model/CostComponentSet.cpp
@@ -370,6 +375,7 @@ set(billing_src
   src/v20180709/model/CreateInstanceRequest.cpp
   src/v20180709/model/AllocationStat.cpp
   src/v20180709/model/ModifyGatherRuleResponse.cpp
+  src/v20180709/model/DescribeOrgMemberAccountBalanceResponse.cpp
   src/v20180709/model/BillProject.cpp
   src/v20180709/model/ActionSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillDetailForOrganizationRequest.cpp

@@ -142,10 +142,8 @@ namespace TencentCloud
                     bool UnhandledMaliciousConnectionEventCntHasBeenSet() const;
 
                     /**
-                     * 获取Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UnhandledK8sApiEventCnt Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Unresolved Kubernetes API Events
+                     * @return UnhandledK8sApiEventCnt Unresolved Kubernetes API Events
                      * 
                      */
                     uint64_t GetUnhandledK8sApiEventCnt() const;
@@ -202,8 +200,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_unhandledMaliciousConnectionEventCntHasBeenSet;
 
                     /**
-                     * Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Unresolved Kubernetes API Events
                      */
                     uint64_t m_unhandledK8sApiEventCnt;
                     bool m_unhandledK8sApiEventCntHasBeenSet;

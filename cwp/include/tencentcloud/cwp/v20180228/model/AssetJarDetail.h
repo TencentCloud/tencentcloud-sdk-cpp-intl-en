@@ -216,19 +216,15 @@ namespace TencentCloud
                     bool OsInfoHasBeenSet() const;
 
                     /**
-                     * 获取Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Process Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reference process list.
+                     * @return Process Reference process list.
                      * 
                      */
                     std::vector<AssetAppProcessInfo> GetProcess() const;
 
                     /**
-                     * 设置Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _process Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reference process list.
+                     * @param _process Reference process list.
                      * 
                      */
                     void SetProcess(const std::vector<AssetAppProcessInfo>& _process);
@@ -241,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcessHasBeenSet() const;
 
                     /**
-                     * 获取Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Md5 Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取JAR package Md5
+                     * @return Md5 JAR package Md5
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _md5 Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置JAR package Md5
+                     * @param _md5 JAR package Md5
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -267,18 +259,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -341,22 +329,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_osInfoHasBeenSet;
 
                     /**
-                     * Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reference process list.
                      */
                     std::vector<AssetAppProcessInfo> m_process;
                     bool m_processHasBeenSet;
 
                     /**
-                     * Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * JAR package Md5
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

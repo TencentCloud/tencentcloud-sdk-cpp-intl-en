@@ -107,19 +107,19 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter list, which is supported by the `Name` field.
-RiskLevel
-                     * @return Filters Filter list, which is supported by the `Name` field.
-RiskLevel
+                     * 获取Filter list. Name field support
+RiskLevel, AppId
+                     * @return Filters Filter list. Name field support
+RiskLevel, AppId
                      * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter list, which is supported by the `Name` field.
-RiskLevel
-                     * @param _filters Filter list, which is supported by the `Name` field.
-RiskLevel
+                     * 设置Filter list. Name field support
+RiskLevel, AppId
+                     * @param _filters Filter list. Name field support
+RiskLevel, AppId
                      * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
@@ -130,6 +130,27 @@ RiskLevel
                      * 
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+                     * @return AssetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+                     * 
+                     */
+                    std::string GetAssetType() const;
+
+                    /**
+                     * 设置Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+                     * @param _assetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+                     * 
+                     */
+                    void SetAssetType(const std::string& _assetType);
+
+                    /**
+                     * 判断参数 AssetType 是否已赋值
+                     * @return AssetType 是否已赋值
+                     * 
+                     */
+                    bool AssetTypeHasBeenSet() const;
 
                 private:
 
@@ -152,11 +173,17 @@ RiskLevel
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter list, which is supported by the `Name` field.
-RiskLevel
+                     * Filter list. Name field support
+RiskLevel, AppId
                      */
                     std::vector<ComplianceFilters> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+                     */
+                    std::string m_assetType;
+                    bool m_assetTypeHasBeenSet;
 
                 };
             }

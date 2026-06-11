@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rollback instance information.
                 */
                 class RollbackInstanceInfo : public AbstractModel
                 {
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取CPU Size
-                     * @return Cpu CPU Size
+                     * 获取CPU Size.
+                     * @return Cpu CPU Size.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置CPU Size
-                     * @param _cpu CPU Size
+                     * 设置CPU Size.
+                     * @param _cpu CPU Size.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory Size
-                     * @return Mem Memory Size
+                     * 获取Memory Size.
+                     * @return Mem Memory Size.
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory Size
-                     * @param _mem Memory Size
+                     * 设置Memory Size.
+                     * @param _mem Memory Size.
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Storage size
-                     * @return StorageLimit Storage size
+                     * 获取Storage size.
+                     * @return StorageLimit Storage size.
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage size
-                     * @param _storageLimit Storage size
+                     * 设置Storage size.
+                     * @param _storageLimit Storage size.
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -337,37 +337,37 @@ namespace TencentCloud
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Status
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * CPU Size
+                     * CPU Size.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory Size
+                     * Memory Size.
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Storage size
+                     * Storage size.
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;

@@ -57,6 +57,34 @@ namespace TencentCloud
                      */
                     bool CommandHasBeenSet() const;
 
+                    /**
+                     * 获取File URL
+                     * @return URL File URL
+                     * 
+                     */
+                    std::string GetURL() const;
+
+                    /**
+                     * 判断参数 URL 是否已赋值
+                     * @return URL 是否已赋值
+                     * 
+                     */
+                    bool URLHasBeenSet() const;
+
+                    /**
+                     * 获取File content (Base64-encoded).
+                     * @return FileContent File content (Base64-encoded).
+                     * 
+                     */
+                    std::string GetFileContent() const;
+
+                    /**
+                     * 判断参数 FileContent 是否已赋值
+                     * @return FileContent 是否已赋值
+                     * 
+                     */
+                    bool FileContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +92,18 @@ namespace TencentCloud
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
+
+                    /**
+                     * File URL
+                     */
+                    std::string m_uRL;
+                    bool m_uRLHasBeenSet;
+
+                    /**
+                     * File content (Base64-encoded).
+                     */
+                    std::string m_fileContent;
+                    bool m_fileContentHasBeenSet;
 
                 };
             }

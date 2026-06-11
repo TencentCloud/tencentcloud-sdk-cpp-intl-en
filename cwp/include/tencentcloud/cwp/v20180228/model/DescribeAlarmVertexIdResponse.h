@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlarmVertexIds List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Alarm node ID list.
+                     * @return AlarmVertexIds Alarm node ID list.
                      * 
                      */
                     std::vector<std::string> GetAlarmVertexIds() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Alarm node ID list.
                      */
                     std::vector<std::string> m_alarmVertexIds;
                     bool m_alarmVertexIdsHasBeenSet;

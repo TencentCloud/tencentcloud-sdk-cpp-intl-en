@@ -44,10 +44,34 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kafka cluster accessibility. 0: Accessible.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Kafka cluster accessibility. 0: Accessible.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Accessibility status of the Kafka cluster.
+
+-0: Normal access. 
+-1: broker connection failure
+-2: sasl authentication failure
+-3: ckafka role not authorized
+-4: topic list does not exist.
+-5: No data available in the topic.
+-6: User has no ckafka permission.
+-7: The consumption group already exists.
+-8: The kafka instance does not exist or is terminated.
+-9: Broker list is empty
+-10: Incorrect Broker address format.
+-11: Broker port is not an integer.
+                     * @return Status Accessibility status of the Kafka cluster.
+
+-0: Normal access. 
+-1: broker connection failure
+-2: sasl authentication failure
+-3: ckafka role not authorized
+-4: topic list does not exist.
+-5: No data available in the topic.
+-6: User has no ckafka permission.
+-7: The consumption group already exists.
+-8: The kafka instance does not exist or is terminated.
+-9: Broker list is empty
+-10: Incorrect Broker address format.
+-11: Broker port is not an integer.
                      * 
                      */
                     int64_t GetStatus() const;
@@ -62,8 +86,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Kafka cluster accessibility. 0: Accessible.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Accessibility status of the Kafka cluster.
+
+-0: Normal access. 
+-1: broker connection failure
+-2: sasl authentication failure
+-3: ckafka role not authorized
+-4: topic list does not exist.
+-5: No data available in the topic.
+-6: User has no ckafka permission.
+-7: The consumption group already exists.
+-8: The kafka instance does not exist or is terminated.
+-9: Broker list is empty
+-10: Incorrect Broker address format.
+-11: Broker port is not an integer.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

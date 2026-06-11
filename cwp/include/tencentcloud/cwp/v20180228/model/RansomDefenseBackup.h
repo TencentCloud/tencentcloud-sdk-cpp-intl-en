@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EventStatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
-                     * @return BackupStatus Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+                     * 获取Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
+                     * @return BackupStatus Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
                      * 
                      */
                     uint64_t GetBackupStatus() const;
 
                     /**
-                     * 设置Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
-                     * @param _backupStatus Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+                     * 设置Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
+                     * @param _backupStatus Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
                      * 
                      */
                     void SetBackupStatus(const uint64_t& _backupStatus);
@@ -250,7 +250,7 @@ namespace TencentCloud
                     bool m_eventStatusHasBeenSet;
 
                     /**
-                     * Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+                     * Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
                      */
                     uint64_t m_backupStatus;
                     bool m_backupStatusHasBeenSet;

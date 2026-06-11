@@ -52,18 +52,14 @@ namespace TencentCloud
 
                     /**
                      * 获取id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _id id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -77,18 +73,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -102,18 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Events Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<WebHookEventKv> GetEvents() const;
 
                     /**
                      * 设置Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _events Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEvents(const std::vector<WebHookEventKv>& _events);
@@ -126,19 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventsHasBeenSet() const;
 
                     /**
-                     * 获取Host range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostLabels Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host scope
+                     * @return HostLabels Host scope
                      * 
                      */
                     std::vector<WebHookHostLabel> GetHostLabels() const;
 
                     /**
-                     * 设置Host range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostLabels Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host scope
+                     * @param _hostLabels Host scope
                      * 
                      */
                     void SetHostLabels(const std::vector<WebHookHostLabel>& _hostLabels);
@@ -152,18 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Receivers Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<WebHookReceiver> GetReceivers() const;
 
                     /**
                      * 设置Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _receivers Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReceivers(const std::vector<WebHookReceiver>& _receivers);
@@ -177,18 +157,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Format Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFormat() const;
 
                     /**
                      * 设置Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _format Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFormat(const int64_t& _format);
@@ -202,18 +178,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CustomFields Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<WebHookCustomField> GetCustomFields() const;
 
                     /**
                      * 设置Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _customFields Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCustomFields(const std::vector<WebHookCustomField>& _customFields);
@@ -226,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CustomFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsDisabled Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is disabled [1: disabled|0: enabled]
+                     * @return IsDisabled Whether it is disabled [1: disabled|0: enabled]
                      * 
                      */
                     int64_t GetIsDisabled() const;
 
                     /**
-                     * 设置Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isDisabled Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is disabled [1: disabled|0: enabled]
+                     * @param _isDisabled Whether it is disabled [1: disabled|0: enabled]
                      * 
                      */
                     void SetIsDisabled(const int64_t& _isDisabled);
@@ -251,19 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsDisabledHasBeenSet() const;
 
                     /**
-                     * 获取Host list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quuids Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of hosts
+                     * @return Quuids List of hosts
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
 
                     /**
-                     * 设置Host list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quuids Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of hosts
+                     * @param _quuids List of hosts
                      * 
                      */
                     void SetQuuids(const std::vector<std::string>& _quuids);
@@ -277,18 +241,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
                      * 设置Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostCount Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostCount(const int64_t& _hostCount);
@@ -300,77 +260,121 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HostCountHasBeenSet() const;
 
+                    /**
+                     * 获取List of machines to be excluded.
+                     * @return ExcludedQuuids List of machines to be excluded.
+                     * 
+                     */
+                    std::vector<std::string> GetExcludedQuuids() const;
+
+                    /**
+                     * 设置List of machines to be excluded.
+                     * @param _excludedQuuids List of machines to be excluded.
+                     * 
+                     */
+                    void SetExcludedQuuids(const std::vector<std::string>& _excludedQuuids);
+
+                    /**
+                     * 判断参数 ExcludedQuuids 是否已赋值
+                     * @return ExcludedQuuids 是否已赋值
+                     * 
+                     */
+                    bool ExcludedQuuidsHasBeenSet() const;
+
+                    /**
+                     * 获取Push language type, Chinese zh, English en	
+                     * @return MsgLanguage Push language type, Chinese zh, English en	
+                     * 
+                     */
+                    std::string GetMsgLanguage() const;
+
+                    /**
+                     * 设置Push language type, Chinese zh, English en	
+                     * @param _msgLanguage Push language type, Chinese zh, English en	
+                     * 
+                     */
+                    void SetMsgLanguage(const std::string& _msgLanguage);
+
+                    /**
+                     * 判断参数 MsgLanguage 是否已赋值
+                     * @return MsgLanguage 是否已赋值
+                     * 
+                     */
+                    bool MsgLanguageHasBeenSet() const;
+
                 private:
 
                     /**
                      * id
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
                      * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Event type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<WebHookEventKv> m_events;
                     bool m_eventsHasBeenSet;
 
                     /**
-                     * Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host scope
                      */
                     std::vector<WebHookHostLabel> m_hostLabels;
                     bool m_hostLabelsHasBeenSet;
 
                     /**
                      * Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<WebHookReceiver> m_receivers;
                     bool m_receiversHasBeenSet;
 
                     /**
                      * Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_format;
                     bool m_formatHasBeenSet;
 
                     /**
                      * Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<WebHookCustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
 
                     /**
-                     * Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is disabled [1: disabled|0: enabled]
                      */
                     int64_t m_isDisabled;
                     bool m_isDisabledHasBeenSet;
 
                     /**
-                     * Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of hosts
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;
 
                     /**
                      * Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
+
+                    /**
+                     * List of machines to be excluded.
+                     */
+                    std::vector<std::string> m_excludedQuuids;
+                    bool m_excludedQuuidsHasBeenSet;
+
+                    /**
+                     * Push language type, Chinese zh, English en	
+                     */
+                    std::string m_msgLanguage;
+                    bool m_msgLanguageHasBeenSet;
 
                 };
             }

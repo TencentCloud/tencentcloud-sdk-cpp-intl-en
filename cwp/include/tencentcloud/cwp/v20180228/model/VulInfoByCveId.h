@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
-                     * @return FixSwitch Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+                     * 获取Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
+                     * @return FixSwitch Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
                      * 
                      */
                     uint64_t GetFixSwitch() const;
 
                     /**
-                     * 设置Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
-                     * @param _fixSwitch Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+                     * 设置Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
+                     * @param _fixSwitch Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
                      * 
                      */
                     void SetFixSwitch(const uint64_t& _fixSwitch);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+                     * Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
                      */
                     uint64_t m_fixSwitch;
                     bool m_fixSwitchHasBeenSet;

@@ -194,19 +194,15 @@ namespace TencentCloud
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time
+                     * @return LastCheckTime Last detection time
                      * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time
+                     * @param _lastCheckTime Last detection time
                      * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
@@ -272,27 +268,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Check result. Valid values: `RESULT_PASSED`: Passed.
+                     * 获取Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckResult Check result. Valid values: `RESULT_PASSED`: Passed.
+RESULT_FAILED: failed
+                     * @return CheckResult Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
                      * 
                      */
                     std::string GetCheckResult() const;
 
                     /**
-                     * 设置Check result. Valid values: `RESULT_PASSED`: Passed.
+                     * 设置Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkResult Check result. Valid values: `RESULT_PASSED`: Passed.
+RESULT_FAILED: failed
+                     * @param _checkResult Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
                      * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
@@ -305,19 +297,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckResultHasBeenSet() const;
 
                     /**
-                     * 获取Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassedAssetCount Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of assets passed detection
+                     * @return PassedAssetCount Number of assets passed detection
                      * 
                      */
                     uint64_t GetPassedAssetCount() const;
 
                     /**
-                     * 设置Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passedAssetCount Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of assets passed detection
+                     * @param _passedAssetCount Number of assets passed detection
                      * 
                      */
                     void SetPassedAssetCount(const uint64_t& _passedAssetCount);
@@ -330,19 +318,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassedAssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailedAssetCount Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of assets with detection failed
+                     * @return FailedAssetCount Number of assets with detection failed
                      * 
                      */
                     uint64_t GetFailedAssetCount() const;
 
                     /**
-                     * 设置Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _failedAssetCount Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of assets with detection failed
+                     * @param _failedAssetCount Number of assets with detection failed
                      * 
                      */
                     void SetFailedAssetCount(const uint64_t& _failedAssetCount);
@@ -355,19 +339,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FailedAssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+                     * @return WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      * 
                      */
                     uint64_t GetWhitelistId() const;
 
                     /**
-                     * 设置Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _whitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+                     * @param _whitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      * 
                      */
                     void SetWhitelistId(const uint64_t& _whitelistId);
@@ -422,19 +402,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BenchmarkStandardIdHasBeenSet() const;
 
                     /**
-                     * 获取TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ApplicableVersion TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Applicable Version for Check Items
+                     * @return ApplicableVersion Applicable Version for Check Items
                      * 
                      */
                     std::string GetApplicableVersion() const;
 
                     /**
-                     * 设置TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _applicableVersion TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Applicable Version for Check Items
+                     * @param _applicableVersion Applicable Version for Check Items
                      * 
                      */
                     void SetApplicableVersion(const std::string& _applicableVersion);
@@ -445,6 +421,77 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool ApplicableVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Check Item Description
+                     * @return Description Check Item Description
+                     * 
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Check Item Description
+                     * @param _description Check Item Description
+                     * 
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     * 
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取Check Item Audit Method
+                     * @return AuditProcedure Check Item Audit Method
+                     * 
+                     */
+                    std::string GetAuditProcedure() const;
+
+                    /**
+                     * 设置Check Item Audit Method
+                     * @param _auditProcedure Check Item Audit Method
+                     * 
+                     */
+                    void SetAuditProcedure(const std::string& _auditProcedure);
+
+                    /**
+                     * 判断参数 AuditProcedure 是否已赋值
+                     * @return AuditProcedure 是否已赋值
+                     * 
+                     */
+                    bool AuditProcedureHasBeenSet() const;
+
+                    /**
+                     * 获取Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+                     * @return IsEnable Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+                     * 
+                     */
+                    uint64_t GetIsEnable() const;
+
+                    /**
+                     * 设置Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+                     * @param _isEnable Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+                     * 
+                     */
+                    void SetIsEnable(const uint64_t& _isEnable);
+
+                    /**
+                     * 判断参数 IsEnable 是否已赋值
+                     * @return IsEnable 是否已赋值
+                     * 
+                     */
+                    bool IsEnableHasBeenSet() const;
 
                 private:
 
@@ -491,8 +538,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time
                      */
                     std::string m_lastCheckTime;
                     bool m_lastCheckTimeHasBeenSet;
@@ -512,31 +558,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Check result. Valid values: `RESULT_PASSED`: Passed.
+                     * Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
                      */
                     std::string m_checkResult;
                     bool m_checkResultHasBeenSet;
 
                     /**
-                     * Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of assets passed detection
                      */
                     uint64_t m_passedAssetCount;
                     bool m_passedAssetCountHasBeenSet;
 
                     /**
-                     * Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of assets with detection failed
                      */
                     uint64_t m_failedAssetCount;
                     bool m_failedAssetCountHasBeenSet;
 
                     /**
-                     * Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
                      */
                     uint64_t m_whitelistId;
                     bool m_whitelistIdHasBeenSet;
@@ -554,11 +596,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_benchmarkStandardIdHasBeenSet;
 
                     /**
-                     * TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Applicable Version for Check Items
                      */
                     std::string m_applicableVersion;
                     bool m_applicableVersionHasBeenSet;
+
+                    /**
+                     * Check Item Description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Check Item Audit Method
+                     */
+                    std::string m_auditProcedure;
+                    bool m_auditProcedureHasBeenSet;
+
+                    /**
+                     * Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+                     */
+                    uint64_t m_isEnable;
+                    bool m_isEnableHasBeenSet;
 
                 };
             }

@@ -47,44 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-                     * @return RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-                     * 
-                     */
-                    std::string GetRuleMode() const;
-
-                    /**
-                     * 设置Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-                     * @param _ruleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-                     * 
-                     */
-                    void SetRuleMode(const std::string& _ruleMode);
-
-                    /**
-                     * 判断参数 RuleMode 是否已赋值
-                     * @return RuleMode 是否已赋值
-                     * 
-                     */
-                    bool RuleModeHasBeenSet() const;
-
-                    /**
-                     * 获取Process path
-                     * @return ProcessPath Process path
+                     * 获取<p>Process path.</p>
+                     * @return ProcessPath <p>Process path.</p>
                      * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
-                     * 设置Process path
-                     * @param _processPath Process path
+                     * 设置<p>Process path.</p>
+                     * @param _processPath <p>Process path.</p>
                      * 
                      */
                     void SetProcessPath(const std::string& _processPath);
@@ -97,15 +68,36 @@ namespace TencentCloud
                     bool ProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Accessed file path, which is valid only for access control.
-                     * @return TargetFilePath Accessed file path, which is valid only for access control.
+                     * 获取<p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+                     * @return RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+                     * 
+                     */
+                    std::string GetRuleMode() const;
+
+                    /**
+                     * 设置<p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+                     * @param _ruleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+                     * 
+                     */
+                    void SetRuleMode(const std::string& _ruleMode);
+
+                    /**
+                     * 判断参数 RuleMode 是否已赋值
+                     * @return RuleMode 是否已赋值
+                     * 
+                     */
+                    bool RuleModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Accessed file path, only effective during access control.</p>
+                     * @return TargetFilePath <p>Accessed file path, only effective during access control.</p>
                      * 
                      */
                     std::string GetTargetFilePath() const;
 
                     /**
-                     * 设置Accessed file path, which is valid only for access control.
-                     * @param _targetFilePath Accessed file path, which is valid only for access control.
+                     * 设置<p>Accessed file path, only effective during access control.</p>
+                     * @param _targetFilePath <p>Accessed file path, only effective during access control.</p>
                      * 
                      */
                     void SetTargetFilePath(const std::string& _targetFilePath);
@@ -118,19 +110,36 @@ namespace TencentCloud
                     bool TargetFilePathHasBeenSet() const;
 
                     /**
-                     * 获取Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Command line parameters.</p>
+                     * @return CmdLine <p>Command line parameters.</p>
+                     * 
+                     */
+                    std::string GetCmdLine() const;
+
+                    /**
+                     * 设置<p>Command line parameters.</p>
+                     * @param _cmdLine <p>Command line parameters.</p>
+                     * 
+                     */
+                    void SetCmdLine(const std::string& _cmdLine);
+
+                    /**
+                     * 判断参数 CmdLine 是否已赋值
+                     * @return CmdLine 是否已赋值
+                     * 
+                     */
+                    bool CmdLineHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Sub-policy ID.</p>
+                     * @return RuleId <p>Sub-policy ID.</p>
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sub-policy ID.</p>
+                     * @param _ruleId <p>Sub-policy ID.</p>
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -145,28 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-                     */
-                    std::string m_ruleMode;
-                    bool m_ruleModeHasBeenSet;
-
-                    /**
-                     * Process path
+                     * <p>Process path.</p>
                      */
                     std::string m_processPath;
                     bool m_processPathHasBeenSet;
 
                     /**
-                     * Accessed file path, which is valid only for access control.
+                     * <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+                     */
+                    std::string m_ruleMode;
+                    bool m_ruleModeHasBeenSet;
+
+                    /**
+                     * <p>Accessed file path, only effective during access control.</p>
                      */
                     std::string m_targetFilePath;
                     bool m_targetFilePathHasBeenSet;
 
                     /**
-                     * Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Command line parameters.</p>
+                     */
+                    std::string m_cmdLine;
+                    bool m_cmdLineHasBeenSet;
+
+                    /**
+                     * <p>Sub-policy ID.</p>
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;

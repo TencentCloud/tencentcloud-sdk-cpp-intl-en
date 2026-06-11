@@ -97,27 +97,15 @@ If this parameter is left empty, edge server information will be returned by def
                     bool LayerHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
-                     * @return Area Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+                     * 获取Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
+                     * @return Area Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
-                     * @param _area Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+                     * 设置Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
+                     * @param _area Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -151,15 +139,15 @@ If this parameter is left empty, edge server information will be returned by def
                     bool SegmentHasBeenSet() const;
 
                     /**
-                     * 获取whether to query node IPV6 information.
-                     * @return ShowIpv6 whether to query node IPV6 information.
+                     * 获取
+                     * @return ShowIpv6 
                      * 
                      */
                     bool GetShowIpv6() const;
 
                     /**
-                     * 设置whether to query node IPV6 information.
-                     * @param _showIpv6 whether to query node IPV6 information.
+                     * 设置
+                     * @param _showIpv6 
                      * 
                      */
                     void SetShowIpv6(const bool& _showIpv6);
@@ -210,10 +198,7 @@ If this parameter is left empty, edge server information will be returned by def
                     bool m_layerHasBeenSet;
 
                     /**
-                     * Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+                     * Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -225,7 +210,7 @@ If this parameter is left empty, edge server information will be returned by def
                     bool m_segmentHasBeenSet;
 
                     /**
-                     * whether to query node IPV6 information.
+                     * 
                      */
                     bool m_showIpv6;
                     bool m_showIpv6HasBeenSet;

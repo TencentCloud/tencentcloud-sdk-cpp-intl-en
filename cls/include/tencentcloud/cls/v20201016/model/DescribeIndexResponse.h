@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取<p>Log topic Id</p>
+                     * @return TopicId <p>Log topic Id</p>
                      * 
                      */
                     std::string GetTopicId() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether it takes effect
-                     * @return Status Whether it takes effect
+                     * 获取<p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
+                     * @return Status <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
                      * 
                      */
                     bool GetStatus() const;
@@ -73,10 +73,10 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Rule Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Index configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Rule <p>Index configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RuleInfo GetRule() const;
@@ -89,8 +89,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RuleHasBeenSet() const;
 
                     /**
-                     * 获取Index modification time. The default value is the index creation time.
-                     * @return ModifyTime Index modification time. The default value is the index creation time.
+                     * 获取<p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
+                     * @return ModifyTime <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
                      * 
                      */
                     std::string GetModifyTime() const;
@@ -103,14 +103,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
+                     * @return IncludeInternalFields <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
                      * 
                      */
                     bool GetIncludeInternalFields() const;
@@ -123,16 +117,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IncludeInternalFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
+                     * @return MetadataFlag <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
                      * 
                      */
                     uint64_t GetMetadataFlag() const;
@@ -144,51 +130,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MetadataFlagHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Custom log parsing exception storage field.</p>
+                     * @return CoverageField <p>Custom log parsing exception storage field.</p>
+                     * 
+                     */
+                    std::string GetCoverageField() const;
+
+                    /**
+                     * 判断参数 CoverageField 是否已赋值
+                     * @return CoverageField 是否已赋值
+                     * 
+                     */
+                    bool CoverageFieldHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID
+                     * <p>Log topic Id</p>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Whether it takes effect
+                     * <p>Index status. true: enabled, false: disabled<br>Once enabled, you can perform retrieval and analysis of logs, which will generate indexing traffic, index storage, and corresponding fees. <a href="https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9">Billing details</a></p>
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Index configuration information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Index configuration information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleInfo m_rule;
                     bool m_ruleHasBeenSet;
 
                     /**
-                     * Index modification time. The default value is the index creation time.
+                     * <p>Index modification time, which is initially the index creation time. Format <code>YYYY-MM-DD HH:MM:SS</code></p>
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-* `false`: Full-text indexing does not include internal fields.
-* `true`: Full-text indexing includes internal fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether the built-in reserved fields (<code>__FILENAME__</code>, <code>__HOSTNAME__</code>, and <code>__SOURCE__</code>) are included in the full-text index</p><ul><li>false: does not include</li><li>true: includes</li></ul>
                      */
                     bool m_includeInternalFields;
                     bool m_includeInternalFieldsHasBeenSet;
 
                     /**
-                     * Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-* `1`: Full-text indexing includes all metadata fields.
-* `2`: Full-text indexing does not include metadata fields.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether metadata fields (fields prefixed with <code>__TAG__</code>) are included in full-text indexing</p><ul><li>0: Contain only metadata fields with key-value index enabled</li><li>1: Include all metadata fields</li><li>2: Exclude any metadata fields</li></ul>
                      */
                     uint64_t m_metadataFlag;
                     bool m_metadataFlagHasBeenSet;
+
+                    /**
+                     * <p>Custom log parsing exception storage field.</p>
+                     */
+                    std::string m_coverageField;
+                    bool m_coverageFieldHasBeenSet;
 
                 };
             }

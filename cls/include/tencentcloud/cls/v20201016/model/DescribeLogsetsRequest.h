@@ -45,94 +45,98 @@ namespace TencentCloud
 
                     /**
                      * 获取logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * @return Filters logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * @param _filters logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -190,26 +194,27 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 
                     /**
                      * logsetName
-- Filter by **logset name**
+-Filter by [logset name].
 - Type: String
-- Required: No
-
+-Required: No
+- Obtain the logset name through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 logsetId
-- Filter by **logset ID**
+-Filter by [logset ID].
 - Type: String
-- Required: No
+-Required: No
+-Obtain the logset Id through [Get Logset List](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
 
 tagKey
-- Filter by **tag key**
+- Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
 - Type: String
-- Required: No
+-Required: No
 
-Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

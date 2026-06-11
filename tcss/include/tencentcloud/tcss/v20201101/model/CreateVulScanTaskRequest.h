@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
-                     * @return LocalImageScanType Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+                     * 获取<p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+                     * @return LocalImageScanType <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
                      * 
                      */
                     std::string GetLocalImageScanType() const;
 
                     /**
-                     * 设置Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
-                     * @param _localImageScanType Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+                     * 设置<p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+                     * @param _localImageScanType <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
                      * 
                      */
                     void SetLocalImageScanType(const std::string& _localImageScanType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LocalImageScanTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
-                     * @return LocalImageIDs Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+                     * 获取<p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+                     * @return LocalImageIDs <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
                      * 
                      */
                     std::vector<std::string> GetLocalImageIDs() const;
 
                     /**
-                     * 设置Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
-                     * @param _localImageIDs Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+                     * 设置<p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+                     * @param _localImageIDs <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
                      * 
                      */
                     void SetLocalImageIDs(const std::vector<std::string>& _localImageIDs);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LocalImageIDsHasBeenSet() const;
 
                     /**
-                     * 获取Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
-                     * @return RegistryImageScanType Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+                     * 获取<p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+                     * @return RegistryImageScanType <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
                      * 
                      */
                     std::string GetRegistryImageScanType() const;
 
                     /**
-                     * 设置Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
-                     * @param _registryImageScanType Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+                     * 设置<p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+                     * @param _registryImageScanType <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
                      * 
                      */
                     void SetRegistryImageScanType(const std::string& _registryImageScanType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool RegistryImageScanTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
-                     * @return RegistryImageIDs Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+                     * 获取<p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+                     * @return RegistryImageIDs <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
                      * 
                      */
                     std::vector<uint64_t> GetRegistryImageIDs() const;
 
                     /**
-                     * 设置Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
-                     * @param _registryImageIDs Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+                     * 设置<p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+                     * @param _registryImageIDs <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
                      * 
                      */
                     void SetRegistryImageIDs(const std::vector<uint64_t>& _registryImageIDs);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool RegistryImageIDsHasBeenSet() const;
 
                     /**
-                     * 获取ID of the task to scan local images again for vulnerabilities
-                     * @return LocalTaskID ID of the task to scan local images again for vulnerabilities
+                     * 获取<p>Task ID for local image re-vulnerability scanning</p>
+                     * @return LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
                      * 
                      */
                     int64_t GetLocalTaskID() const;
 
                     /**
-                     * 设置ID of the task to scan local images again for vulnerabilities
-                     * @param _localTaskID ID of the task to scan local images again for vulnerabilities
+                     * 设置<p>Task ID for local image re-vulnerability scanning</p>
+                     * @param _localTaskID <p>Task ID for local image re-vulnerability scanning</p>
                      * 
                      */
                     void SetLocalTaskID(const int64_t& _localTaskID);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
-                     * 获取ID of the task to scan repository images again for vulnerabilities
-                     * @return RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+                     * 获取<p>Task ID for repository image re-vulnerability scanning</p>
+                     * @return RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
                      * 
                      */
                     int64_t GetRegistryTaskID() const;
 
                     /**
-                     * 设置ID of the task to scan repository images again for vulnerabilities
-                     * @param _registryTaskID ID of the task to scan repository images again for vulnerabilities
+                     * 设置<p>Task ID for repository image re-vulnerability scanning</p>
+                     * @param _registryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
                      * 
                      */
                     void SetRegistryTaskID(const int64_t& _registryTaskID);
@@ -168,43 +168,205 @@ namespace TencentCloud
                      */
                     bool RegistryTaskIDHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Local image container runtime</p>
+                     * @return LocalImageContainerRunning <p>Local image container runtime</p>
+                     * 
+                     */
+                    bool GetLocalImageContainerRunning() const;
+
+                    /**
+                     * 设置<p>Local image container runtime</p>
+                     * @param _localImageContainerRunning <p>Local image container runtime</p>
+                     * 
+                     */
+                    void SetLocalImageContainerRunning(const bool& _localImageContainerRunning);
+
+                    /**
+                     * 判断参数 LocalImageContainerRunning 是否已赋值
+                     * @return LocalImageContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool LocalImageContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image Container in repository is running</p>
+                     * @return RegistryImageContainerRunning <p>Image Container in repository is running</p>
+                     * 
+                     */
+                    bool GetRegistryImageContainerRunning() const;
+
+                    /**
+                     * 设置<p>Image Container in repository is running</p>
+                     * @param _registryImageContainerRunning <p>Image Container in repository is running</p>
+                     * 
+                     */
+                    void SetRegistryImageContainerRunning(const bool& _registryImageContainerRunning);
+
+                    /**
+                     * 判断参数 RegistryImageContainerRunning 是否已赋值
+                     * @return RegistryImageContainerRunning 是否已赋值
+                     * 
+                     */
+                    bool RegistryImageContainerRunningHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether the repository image is the latest</p>
+                     * @return IsLatest <p>Whether the repository image is the latest</p>
+                     * 
+                     */
+                    bool GetIsLatest() const;
+
+                    /**
+                     * 设置<p>Whether the repository image is the latest</p>
+                     * @param _isLatest <p>Whether the repository image is the latest</p>
+                     * 
+                     */
+                    void SetIsLatest(const bool& _isLatest);
+
+                    /**
+                     * 判断参数 IsLatest 是否已赋值
+                     * @return IsLatest 是否已赋值
+                     * 
+                     */
+                    bool IsLatestHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Local image id to remove</p>
+                     * @return ExcludeLocalImageIDs <p>Local image id to remove</p>
+                     * 
+                     */
+                    std::vector<std::string> GetExcludeLocalImageIDs() const;
+
+                    /**
+                     * 设置<p>Local image id to remove</p>
+                     * @param _excludeLocalImageIDs <p>Local image id to remove</p>
+                     * 
+                     */
+                    void SetExcludeLocalImageIDs(const std::vector<std::string>& _excludeLocalImageIDs);
+
+                    /**
+                     * 判断参数 ExcludeLocalImageIDs 是否已赋值
+                     * @return ExcludeLocalImageIDs 是否已赋值
+                     * 
+                     */
+                    bool ExcludeLocalImageIDsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>id of the repository image to remove</p>
+                     * @return ExcludeRegistryImageIDs <p>id of the repository image to remove</p>
+                     * 
+                     */
+                    std::vector<uint64_t> GetExcludeRegistryImageIDs() const;
+
+                    /**
+                     * 设置<p>id of the repository image to remove</p>
+                     * @param _excludeRegistryImageIDs <p>id of the repository image to remove</p>
+                     * 
+                     */
+                    void SetExcludeRegistryImageIDs(const std::vector<uint64_t>& _excludeRegistryImageIDs);
+
+                    /**
+                     * 判断参数 ExcludeRegistryImageIDs 是否已赋值
+                     * @return ExcludeRegistryImageIDs 是否已赋值
+                     * 
+                     */
+                    bool ExcludeRegistryImageIDsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster ID.</p>
+                     * @return LocalClusterIDs <p>Cluster ID.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetLocalClusterIDs() const;
+
+                    /**
+                     * 设置<p>Cluster ID.</p>
+                     * @param _localClusterIDs <p>Cluster ID.</p>
+                     * 
+                     */
+                    void SetLocalClusterIDs(const std::vector<std::string>& _localClusterIDs);
+
+                    /**
+                     * 判断参数 LocalClusterIDs 是否已赋值
+                     * @return LocalClusterIDs 是否已赋值
+                     * 
+                     */
+                    bool LocalClusterIDsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+                     * <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
                      */
                     std::string m_localImageScanType;
                     bool m_localImageScanTypeHasBeenSet;
 
                     /**
-                     * Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+                     * <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
                      */
                     std::vector<std::string> m_localImageIDs;
                     bool m_localImageIDsHasBeenSet;
 
                     /**
-                     * Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+                     * <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
                      */
                     std::string m_registryImageScanType;
                     bool m_registryImageScanTypeHasBeenSet;
 
                     /**
-                     * Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+                     * <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
                      */
                     std::vector<uint64_t> m_registryImageIDs;
                     bool m_registryImageIDsHasBeenSet;
 
                     /**
-                     * ID of the task to scan local images again for vulnerabilities
+                     * <p>Task ID for local image re-vulnerability scanning</p>
                      */
                     int64_t m_localTaskID;
                     bool m_localTaskIDHasBeenSet;
 
                     /**
-                     * ID of the task to scan repository images again for vulnerabilities
+                     * <p>Task ID for repository image re-vulnerability scanning</p>
                      */
                     int64_t m_registryTaskID;
                     bool m_registryTaskIDHasBeenSet;
+
+                    /**
+                     * <p>Local image container runtime</p>
+                     */
+                    bool m_localImageContainerRunning;
+                    bool m_localImageContainerRunningHasBeenSet;
+
+                    /**
+                     * <p>Image Container in repository is running</p>
+                     */
+                    bool m_registryImageContainerRunning;
+                    bool m_registryImageContainerRunningHasBeenSet;
+
+                    /**
+                     * <p>Whether the repository image is the latest</p>
+                     */
+                    bool m_isLatest;
+                    bool m_isLatestHasBeenSet;
+
+                    /**
+                     * <p>Local image id to remove</p>
+                     */
+                    std::vector<std::string> m_excludeLocalImageIDs;
+                    bool m_excludeLocalImageIDsHasBeenSet;
+
+                    /**
+                     * <p>id of the repository image to remove</p>
+                     */
+                    std::vector<uint64_t> m_excludeRegistryImageIDs;
+                    bool m_excludeRegistryImageIDsHasBeenSet;
+
+                    /**
+                     * <p>Cluster ID.</p>
+                     */
+                    std::vector<std::string> m_localClusterIDs;
+                    bool m_localClusterIDsHasBeenSet;
 
                 };
             }

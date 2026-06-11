@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/DataTransformResouceInfo.h>
+#include <tencentcloud/cls/v20201016/model/DataTransformSqlDataSource.h>
+#include <tencentcloud/cls/v20201016/model/EnvInfo.h>
 
 
 namespace TencentCloud
@@ -45,14 +47,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
                      * @return TaskId Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
                      * @param _taskId Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -65,15 +71,39 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Data processing task name
-                     * @return Name Data processing task name
+                     * 获取Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+                     * @return Name Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Data processing task name
-                     * @param _name Data processing task name
+                     * 设置Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+                     * @param _name Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -86,15 +116,35 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Data processing statement
-                     * @return EtlContent Data processing statement
+                     * 获取Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+                     * @return EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      * 
                      */
                     std::string GetEtlContent() const;
 
                     /**
-                     * 设置Data processing statement
-                     * @param _etlContent Data processing statement
+                     * 设置Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+                     * @param _etlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      * 
                      */
                     void SetEtlContent(const std::string& _etlContent);
@@ -149,6 +199,27 @@ namespace TencentCloud
                     bool DstResourcesHasBeenSet() const;
 
                     /**
+                     * 获取Whether to discard log data after the limit is exceeded
+                     * @return BackupGiveUpData Whether to discard log data after the limit is exceeded
+                     * 
+                     */
+                    bool GetBackupGiveUpData() const;
+
+                    /**
+                     * 设置Whether to discard log data after the limit is exceeded
+                     * @param _backupGiveUpData Whether to discard log data after the limit is exceeded
+                     * 
+                     */
+                    void SetBackupGiveUpData(const bool& _backupGiveUpData);
+
+                    /**
+                     * 判断参数 BackupGiveUpData 是否已赋值
+                     * @return BackupGiveUpData 是否已赋值
+                     * 
+                     */
+                    bool BackupGiveUpDataHasBeenSet() const;
+
+                    /**
                      * 获取Whether to enable delivery service log. 1 for disabled, 2 for enabled
                      * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
                      * 
@@ -169,22 +240,118 @@ namespace TencentCloud
                      */
                     bool HasServicesLogHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * @return KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * 
+                     */
+                    uint64_t GetKeepFailureLog() const;
+
+                    /**
+                     * 设置Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * @param _keepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     * 
+                     */
+                    void SetKeepFailureLog(const uint64_t& _keepFailureLog);
+
+                    /**
+                     * 判断参数 KeepFailureLog 是否已赋值
+                     * @return KeepFailureLog 是否已赋值
+                     * 
+                     */
+                    bool KeepFailureLogHasBeenSet() const;
+
+                    /**
+                     * 获取Field name of a failed log.
+                     * @return FailureLogKey Field name of a failed log.
+                     * 
+                     */
+                    std::string GetFailureLogKey() const;
+
+                    /**
+                     * 设置Field name of a failed log.
+                     * @param _failureLogKey Field name of a failed log.
+                     * 
+                     */
+                    void SetFailureLogKey(const std::string& _failureLogKey);
+
+                    /**
+                     * 判断参数 FailureLogKey 是否已赋值
+                     * @return FailureLogKey 是否已赋值
+                     * 
+                     */
+                    bool FailureLogKeyHasBeenSet() const;
+
+                    /**
+                     * 获取External data source information
+                     * @return DataTransformSqlDataSources External data source information
+                     * 
+                     */
+                    std::vector<DataTransformSqlDataSource> GetDataTransformSqlDataSources() const;
+
+                    /**
+                     * 设置External data source information
+                     * @param _dataTransformSqlDataSources External data source information
+                     * 
+                     */
+                    void SetDataTransformSqlDataSources(const std::vector<DataTransformSqlDataSource>& _dataTransformSqlDataSources);
+
+                    /**
+                     * 判断参数 DataTransformSqlDataSources 是否已赋值
+                     * @return DataTransformSqlDataSources 是否已赋值
+                     * 
+                     */
+                    bool DataTransformSqlDataSourcesHasBeenSet() const;
+
+                    /**
+                     * 获取Set environment variable
+                     * @return EnvInfos Set environment variable
+                     * 
+                     */
+                    std::vector<EnvInfo> GetEnvInfos() const;
+
+                    /**
+                     * 设置Set environment variable
+                     * @param _envInfos Set environment variable
+                     * 
+                     */
+                    void SetEnvInfos(const std::vector<EnvInfo>& _envInfos);
+
+                    /**
+                     * 判断参数 EnvInfos 是否已赋值
+                     * @return EnvInfos 是否已赋值
+                     * 
+                     */
+                    bool EnvInfosHasBeenSet() const;
+
                 private:
 
                     /**
                      * Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Data processing task name
+                     * Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Data processing statement
+                     * Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      */
                     std::string m_etlContent;
                     bool m_etlContentHasBeenSet;
@@ -202,10 +369,40 @@ namespace TencentCloud
                     bool m_dstResourcesHasBeenSet;
 
                     /**
+                     * Whether to discard log data after the limit is exceeded
+                     */
+                    bool m_backupGiveUpData;
+                    bool m_backupGiveUpDataHasBeenSet;
+
+                    /**
                      * Whether to enable delivery service log. 1 for disabled, 2 for enabled
                      */
                     uint64_t m_hasServicesLog;
                     bool m_hasServicesLogHasBeenSet;
+
+                    /**
+                     * Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+                     */
+                    uint64_t m_keepFailureLog;
+                    bool m_keepFailureLogHasBeenSet;
+
+                    /**
+                     * Field name of a failed log.
+                     */
+                    std::string m_failureLogKey;
+                    bool m_failureLogKeyHasBeenSet;
+
+                    /**
+                     * External data source information
+                     */
+                    std::vector<DataTransformSqlDataSource> m_dataTransformSqlDataSources;
+                    bool m_dataTransformSqlDataSourcesHasBeenSet;
+
+                    /**
+                     * Set environment variable
+                     */
+                    std::vector<EnvInfo> m_envInfos;
+                    bool m_envInfosHasBeenSet;
 
                 };
             }

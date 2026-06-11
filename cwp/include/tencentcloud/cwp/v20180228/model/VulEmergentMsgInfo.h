@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability publish time
-                     * @return PublishTime Vulnerability publish time
+                     * 获取Vulnerability disclosure time
+                     * @return PublishTime Vulnerability disclosure time
                      * 
                      */
                     std::string GetPublishTime() const;
 
                     /**
-                     * 设置Vulnerability publish time
-                     * @param _publishTime Vulnerability publish time
+                     * 设置Vulnerability disclosure time
+                     * @param _publishTime Vulnerability disclosure time
                      * 
                      */
                     void SetPublishTime(const std::string& _publishTime);
@@ -109,6 +109,111 @@ namespace TencentCloud
                      */
                     bool NameHasBeenSet() const;
 
+                    /**
+                     * 获取Vulnerability name, English description
+                     * @return NameEn Vulnerability name, English description
+                     * 
+                     */
+                    std::string GetNameEn() const;
+
+                    /**
+                     * 设置Vulnerability name, English description
+                     * @param _nameEn Vulnerability name, English description
+                     * 
+                     */
+                    void SetNameEn(const std::string& _nameEn);
+
+                    /**
+                     * 判断参数 NameEn 是否已赋值
+                     * @return NameEn 是否已赋值
+                     * 
+                     */
+                    bool NameEnHasBeenSet() const;
+
+                    /**
+                     * 获取Is auto-repair supported 0: not supported >0: supported
+                     * @return SupportFix Is auto-repair supported 0: not supported >0: supported
+                     * 
+                     */
+                    int64_t GetSupportFix() const;
+
+                    /**
+                     * 设置Is auto-repair supported 0: not supported >0: supported
+                     * @param _supportFix Is auto-repair supported 0: not supported >0: supported
+                     * 
+                     */
+                    void SetSupportFix(const int64_t& _supportFix);
+
+                    /**
+                     * 判断参数 SupportFix 是否已赋值
+                     * @return SupportFix 是否已赋值
+                     * 
+                     */
+                    bool SupportFixHasBeenSet() const;
+
+                    /**
+                     * 获取Whether automatic defense is supported 0: no support 1: support
+                     * @return SupportDefense Whether automatic defense is supported 0: no support 1: support
+                     * 
+                     */
+                    int64_t GetSupportDefense() const;
+
+                    /**
+                     * 设置Whether automatic defense is supported 0: no support 1: support
+                     * @param _supportDefense Whether automatic defense is supported 0: no support 1: support
+                     * 
+                     */
+                    void SetSupportDefense(const int64_t& _supportDefense);
+
+                    /**
+                     * 判断参数 SupportDefense 是否已赋值
+                     * @return SupportDefense 是否已赋值
+                     * 
+                     */
+                    bool SupportDefenseHasBeenSet() const;
+
+                    /**
+                     * 获取KB ID
+                     * @return KbId KB ID
+                     * 
+                     */
+                    uint64_t GetKbId() const;
+
+                    /**
+                     * 设置KB ID
+                     * @param _kbId KB ID
+                     * 
+                     */
+                    void SetKbId(const uint64_t& _kbId);
+
+                    /**
+                     * 判断参数 KbId 是否已赋值
+                     * @return KbId 是否已赋值
+                     * 
+                     */
+                    bool KbIdHasBeenSet() const;
+
+                    /**
+                     * 获取KB number
+                     * @return KbNumber KB number
+                     * 
+                     */
+                    std::string GetKbNumber() const;
+
+                    /**
+                     * 设置KB number
+                     * @param _kbNumber KB number
+                     * 
+                     */
+                    void SetKbNumber(const std::string& _kbNumber);
+
+                    /**
+                     * 判断参数 KbNumber 是否已赋值
+                     * @return KbNumber 是否已赋值
+                     * 
+                     */
+                    bool KbNumberHasBeenSet() const;
+
                 private:
 
                     /**
@@ -118,7 +223,7 @@ namespace TencentCloud
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * Vulnerability publish time
+                     * Vulnerability disclosure time
                      */
                     std::string m_publishTime;
                     bool m_publishTimeHasBeenSet;
@@ -128,6 +233,36 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Vulnerability name, English description
+                     */
+                    std::string m_nameEn;
+                    bool m_nameEnHasBeenSet;
+
+                    /**
+                     * Is auto-repair supported 0: not supported >0: supported
+                     */
+                    int64_t m_supportFix;
+                    bool m_supportFixHasBeenSet;
+
+                    /**
+                     * Whether automatic defense is supported 0: no support 1: support
+                     */
+                    int64_t m_supportDefense;
+                    bool m_supportDefenseHasBeenSet;
+
+                    /**
+                     * KB ID
+                     */
+                    uint64_t m_kbId;
+                    bool m_kbIdHasBeenSet;
+
+                    /**
+                     * KB number
+                     */
+                    std::string m_kbNumber;
+                    bool m_kbNumberHasBeenSet;
 
                 };
             }

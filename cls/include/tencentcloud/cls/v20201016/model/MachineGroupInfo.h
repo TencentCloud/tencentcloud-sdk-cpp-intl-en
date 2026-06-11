@@ -113,15 +113,19 @@ namespace TencentCloud
                     bool MachineGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @return CreateTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @param _createTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -135,18 +139,14 @@ namespace TencentCloud
 
                     /**
                      * 获取List of tags bound to machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags List of tags bound to machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags bound to machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param _tags List of tags bound to machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -159,19 +159,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable automatic update for the machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AutoUpdate Whether to enable automatic update for the machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether machine group auto-update is enabled
+                     * @return AutoUpdate Whether machine group auto-update is enabled
                      * 
                      */
                     std::string GetAutoUpdate() const;
 
                     /**
-                     * 设置Whether to enable automatic update for the machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _autoUpdate Whether to enable automatic update for the machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether machine group auto-update is enabled
+                     * @param _autoUpdate Whether machine group auto-update is enabled
                      * 
                      */
                     void SetAutoUpdate(const std::string& _autoUpdate);
@@ -184,19 +180,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
-                     * 获取Update start time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss
+                     * @return UpdateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss
                      * 
                      */
                     std::string GetUpdateStartTime() const;
 
                     /**
-                     * 设置Update start time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _updateStartTime Update start time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss
+                     * @param _updateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss
                      * 
                      */
                     void SetUpdateStartTime(const std::string& _updateStartTime);
@@ -209,19 +205,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UpdateStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update end time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @return UpdateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     std::string GetUpdateEndTime() const;
 
                     /**
-                     * 设置Update end time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _updateEndTime Update end time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @param _updateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     void SetUpdateEndTime(const std::string& _updateEndTime);
@@ -234,19 +230,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UpdateEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ServiceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether service logs are enabled to record logs generated by the LogListener service itself. Once enabled, it will create an internal log set cls_service_logging, and log topics including loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges.
+                     * @return ServiceLogging Whether service logs are enabled to record logs generated by the LogListener service itself. Once enabled, it will create an internal log set cls_service_logging, and log topics including loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges.
                      * 
                      */
                     bool GetServiceLogging() const;
 
                     /**
-                     * 设置Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _serviceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether service logs are enabled to record logs generated by the LogListener service itself. Once enabled, it will create an internal log set cls_service_logging, and log topics including loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges.
+                     * @param _serviceLogging Whether service logs are enabled to record logs generated by the LogListener service itself. Once enabled, it will create an internal log set cls_service_logging, and log topics including loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges.
                      * 
                      */
                     void SetServiceLogging(const bool& _serviceLogging);
@@ -259,19 +251,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Regular cleanup time for offline machines in the machine group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DelayCleanupTime Regular cleanup time for offline machines in the machine group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Regular cleanup time for offline machines in the machine group, in days, default setting 30 days.
+                     * @return DelayCleanupTime Regular cleanup time for offline machines in the machine group, in days, default setting 30 days.
                      * 
                      */
                     int64_t GetDelayCleanupTime() const;
 
                     /**
-                     * 设置Regular cleanup time for offline machines in the machine group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _delayCleanupTime Regular cleanup time for offline machines in the machine group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Regular cleanup time for offline machines in the machine group, in days, default setting 30 days.
+                     * @param _delayCleanupTime Regular cleanup time for offline machines in the machine group, in days, default setting 30 days.
                      * 
                      */
                     void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
@@ -346,49 +334,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineGroupTypeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * List of tags bound to machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether to enable automatic update for the machine group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether machine group auto-update is enabled
                      */
                     std::string m_autoUpdate;
                     bool m_autoUpdateHasBeenSet;
 
                     /**
-                     * Update start time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss
                      */
                     std::string m_updateStartTime;
                     bool m_updateStartTimeHasBeenSet;
 
                     /**
-                     * Update end time. We recommend you update LogListener during off-peak hours.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      */
                     std::string m_updateEndTime;
                     bool m_updateEndTimeHasBeenSet;
 
                     /**
-                     * Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether service logs are enabled to record logs generated by the LogListener service itself. Once enabled, it will create an internal log set cls_service_logging, and log topics including loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges.
                      */
                     bool m_serviceLogging;
                     bool m_serviceLoggingHasBeenSet;
 
                     /**
-                     * Regular cleanup time for offline machines in the machine group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Regular cleanup time for offline machines in the machine group, in days, default setting 30 days.
                      */
                     int64_t m_delayCleanupTime;
                     bool m_delayCleanupTimeHasBeenSet;

@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineHostTopList Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineHostTopList> GetBaselineHostTopList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineHostTopList> m_baselineHostTopList;
                     bool m_baselineHostTopListHasBeenSet;

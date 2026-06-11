@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sensitive Data Encryption
                 */
                 class Encryption : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node in the database proxy group
+                * Node in the database proxy group.
                 */
                 class ProxyNodeInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database proxy node ID
-                     * @return ProxyNodeId Database proxy node ID
+                     * 获取Database proxy node ID.
+                     * @return ProxyNodeId Database proxy node ID.
                      * 
                      */
                     std::string GetProxyNodeId() const;
 
                     /**
-                     * 设置Database proxy node ID
-                     * @param _proxyNodeId Database proxy node ID
+                     * 设置Database proxy node ID.
+                     * @param _proxyNodeId Database proxy node ID.
                      * 
                      */
                     void SetProxyNodeId(const std::string& _proxyNodeId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProxyNodeConnectionsHasBeenSet() const;
 
                     /**
-                     * 获取CPU of the database proxy node
-                     * @return Cpu CPU of the database proxy node
+                     * 获取CPU of the database proxy node.
+                     * @return Cpu CPU of the database proxy node.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置CPU of the database proxy node
-                     * @param _cpu CPU of the database proxy node
+                     * 设置CPU of the database proxy node.
+                     * @param _cpu CPU of the database proxy node.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory of the database proxy node
-                     * @return Mem Memory of the database proxy node
+                     * 获取Memory of the database proxy node.
+                     * @return Mem Memory of the database proxy node.
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Memory of the database proxy node
-                     * @param _mem Memory of the database proxy node
+                     * 设置Memory of the database proxy node.
+                     * @param _mem Memory of the database proxy node.
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Status of the database proxy node
-                     * @return Status Status of the database proxy node
+                     * 获取Status of the database proxy node.
+                     * @return Status Status of the database proxy node.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the database proxy node
-                     * @param _status Status of the database proxy node
+                     * 设置Status of the database proxy node.
+                     * @param _status Status of the database proxy node.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group ID
-                     * @return ProxyGroupId Database proxy group ID
+                     * 获取Database proxy group ID.
+                     * @return ProxyGroupId Database proxy group ID.
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy group ID
-                     * @param _proxyGroupId Database proxy group ID
+                     * 设置Database proxy group ID.
+                     * @param _proxyGroupId Database proxy group ID.
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取User AppID
-                     * @return AppId User AppID
+                     * 获取User AppID.
+                     * @return AppId User AppID.
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User AppID
-                     * @param _appId User AppID
+                     * 设置User AppID.
+                     * @param _appId User AppID.
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取AZ.
+                     * @return Zone AZ.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置AZ.
+                     * @param _zone AZ.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OssProxyNodeName 
+                     * 获取Database proxy node name.
+                     * @return OssProxyNodeName Database proxy node name.
                      * 
                      */
                     std::string GetOssProxyNodeName() const;
 
                     /**
-                     * 设置
-                     * @param _ossProxyNodeName 
+                     * 设置Database proxy node name.
+                     * @param _ossProxyNodeName Database proxy node name.
                      * 
                      */
                     void SetOssProxyNodeName(const std::string& _ossProxyNodeName);
@@ -280,7 +280,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database proxy node ID
+                     * Database proxy node ID.
                      */
                     std::string m_proxyNodeId;
                     bool m_proxyNodeIdHasBeenSet;
@@ -292,55 +292,55 @@ namespace TencentCloud
                     bool m_proxyNodeConnectionsHasBeenSet;
 
                     /**
-                     * CPU of the database proxy node
+                     * CPU of the database proxy node.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory of the database proxy node
+                     * Memory of the database proxy node.
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Status of the database proxy node
+                     * Status of the database proxy node.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Database proxy group ID
+                     * Database proxy group ID.
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * User AppID
+                     * User AppID.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Region
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ
+                     * AZ.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * 
+                     * Database proxy node name.
                      */
                     std::string m_ossProxyNodeName;
                     bool m_ossProxyNodeNameHasBeenSet;

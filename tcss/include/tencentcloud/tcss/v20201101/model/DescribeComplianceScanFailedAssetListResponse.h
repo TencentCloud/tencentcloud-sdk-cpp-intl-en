@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanFailedAssetList List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Return the list of summary information for assets with various types of detection failures.
+                     * @return ScanFailedAssetList Return the list of summary information for assets with various types of detection failures.
                      * 
                      */
                     std::vector<ComplianceScanFailedAsset> GetScanFailedAssetList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Return the list of summary information for assets with various types of detection failures.
                      */
                     std::vector<ComplianceScanFailedAsset> m_scanFailedAssetList;
                     bool m_scanFailedAssetListHasBeenSet;

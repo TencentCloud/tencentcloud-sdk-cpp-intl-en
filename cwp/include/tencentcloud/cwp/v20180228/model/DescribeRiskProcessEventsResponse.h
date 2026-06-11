@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of Exceptional Processes
+                     * @return List List of Exceptional Processes
                      * 
                      */
                     std::vector<RiskProcessEvent> GetList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of Exceptional Processes
                      */
                     std::vector<RiskProcessEvent> m_list;
                     bool m_listHasBeenSet;

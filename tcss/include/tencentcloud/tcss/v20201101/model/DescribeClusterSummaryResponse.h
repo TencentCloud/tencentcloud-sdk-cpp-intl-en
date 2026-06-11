@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool ServerlessClusterCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TkeClusterCount 
+                     * 获取TKE Cluster Count
+                     * @return TkeClusterCount TKE Cluster Count
                      * 
                      */
                     uint64_t GetTkeClusterCount() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool TkeClusterCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserCreateTencentClusterCount 
+                     * 获取Number of User-Built Tencent Cloud Clusters
+                     * @return UserCreateTencentClusterCount Number of User-Built Tencent Cloud Clusters
                      * 
                      */
                     uint64_t GetUserCreateTencentClusterCount() const;
@@ -240,8 +240,8 @@ namespace TencentCloud
                     bool UserCreateTencentClusterCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserCreateHybridClusterCount 
+                     * 获取Number of User-Built Cluster Hybrid Clouds
+                     * @return UserCreateHybridClusterCount Number of User-Built Cluster Hybrid Clouds
                      * 
                      */
                     uint64_t GetUserCreateHybridClusterCount() const;
@@ -328,19 +328,19 @@ namespace TencentCloud
                     bool m_serverlessClusterCountHasBeenSet;
 
                     /**
-                     * 
+                     * TKE Cluster Count
                      */
                     uint64_t m_tkeClusterCount;
                     bool m_tkeClusterCountHasBeenSet;
 
                     /**
-                     * 
+                     * Number of User-Built Tencent Cloud Clusters
                      */
                     uint64_t m_userCreateTencentClusterCount;
                     bool m_userCreateTencentClusterCountHasBeenSet;
 
                     /**
-                     * 
+                     * Number of User-Built Cluster Hybrid Clouds
                      */
                     uint64_t m_userCreateHybridClusterCount;
                     bool m_userCreateHybridClusterCountHasBeenSet;

@@ -111,11 +111,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
                      * @return InvokeCommandResult Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
                      * 
@@ -124,11 +124,11 @@ namespace TencentCloud
 
                     /**
                      * 设置Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
                      * @param _invokeCommandResult Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
                      * 
@@ -271,7 +271,7 @@ namespace TencentCloud
 
                     /**
                      * Result of command invocation,
-<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
                      */

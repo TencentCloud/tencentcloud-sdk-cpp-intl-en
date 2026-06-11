@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance resizing task information.
                 */
                 class ModifyInstanceData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取CPU after resizing.
+                     * @return Cpu CPU after resizing.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param _cpu 
+                     * 设置CPU after resizing.
+                     * @param _cpu CPU after resizing.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Memory after resizing.
+                     * @return Memory Memory after resizing.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param _memory 
+                     * 设置Memory after resizing.
+                     * @param _memory Memory after resizing.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageLimit 
+                     * 获取Storage upper limit after resizing.
+                     * @return StorageLimit Storage upper limit after resizing.
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置
-                     * @param _storageLimit 
+                     * 设置Storage upper limit after resizing.
+                     * @param _storageLimit Storage upper limit after resizing.
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OldCpu 
+                     * 获取CPU before resizing.
+                     * @return OldCpu CPU before resizing.
                      * 
                      */
                     int64_t GetOldCpu() const;
 
                     /**
-                     * 设置
-                     * @param _oldCpu 
+                     * 设置CPU before resizing.
+                     * @param _oldCpu CPU before resizing.
                      * 
                      */
                     void SetOldCpu(const int64_t& _oldCpu);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OldCpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OldMemory 
+                     * 获取Memory before resizing.
+                     * @return OldMemory Memory before resizing.
                      * 
                      */
                     int64_t GetOldMemory() const;
 
                     /**
-                     * 设置
-                     * @param _oldMemory 
+                     * 设置Memory before resizing.
+                     * @param _oldMemory Memory before resizing.
                      * 
                      */
                     void SetOldMemory(const int64_t& _oldMemory);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OldMemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OldStorageLimit 
+                     * 获取Storage upper limit before resizing.
+                     * @return OldStorageLimit Storage upper limit before resizing.
                      * 
                      */
                     int64_t GetOldStorageLimit() const;
 
                     /**
-                     * 设置
-                     * @param _oldStorageLimit 
+                     * 设置Storage upper limit before resizing.
+                     * @param _oldStorageLimit Storage upper limit before resizing.
                      * 
                      */
                     void SetOldStorageLimit(const int64_t& _oldStorageLimit);
@@ -231,15 +231,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpgradeType 
+                     * 获取Upgrade method. Switch after upgrade completes or switch within maintenance window.
+                     * @return UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置
-                     * @param _upgradeType 
+                     * 设置Upgrade method. Switch after upgrade completes or switch within maintenance window.
+                     * @param _upgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -296,37 +296,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * CPU after resizing.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Memory after resizing.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Storage upper limit after resizing.
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * 
+                     * CPU before resizing.
                      */
                     int64_t m_oldCpu;
                     bool m_oldCpuHasBeenSet;
 
                     /**
-                     * 
+                     * Memory before resizing.
                      */
                     int64_t m_oldMemory;
                     bool m_oldMemoryHasBeenSet;
 
                     /**
-                     * 
+                     * Storage upper limit before resizing.
                      */
                     int64_t m_oldStorageLimit;
                     bool m_oldStorageLimitHasBeenSet;
@@ -348,7 +348,7 @@ namespace TencentCloud
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Upgrade method. Switch after upgrade completes or switch within maintenance window.
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;

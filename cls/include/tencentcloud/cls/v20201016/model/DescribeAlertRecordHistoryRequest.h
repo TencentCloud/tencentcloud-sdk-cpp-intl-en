@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the query range, which is a Unix timestamp in ms
-                     * @return From Start time of the query range, which is a Unix timestamp in ms
+                     * 获取Start time of the query time range, unix timestamp in milliseconds (ms)
+                     * @return From Start time of the query time range, unix timestamp in milliseconds (ms)
                      * 
                      */
                     uint64_t GetFrom() const;
 
                     /**
-                     * 设置Start time of the query range, which is a Unix timestamp in ms
-                     * @param _from Start time of the query range, which is a Unix timestamp in ms
+                     * 设置Start time of the query time range, unix timestamp in milliseconds (ms)
+                     * @param _from Start time of the query time range, unix timestamp in milliseconds (ms)
                      * 
                      */
                     void SetFrom(const uint64_t& _from);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query range, which is a Unix timestamp in ms
-                     * @return To End time of the query range, which is a Unix timestamp in ms
+                     * 获取End time of query time range, unix timestamp in milliseconds (ms)
+                     * @return To End time of query time range, unix timestamp in milliseconds (ms)
                      * 
                      */
                     uint64_t GetTo() const;
 
                     /**
-                     * 设置End time of the query range, which is a Unix timestamp in ms
-                     * @param _to End time of the query range, which is a Unix timestamp in ms
+                     * 设置End time of query time range, unix timestamp in milliseconds (ms)
+                     * @param _to End time of query time range, unix timestamp in milliseconds (ms)
                      * 
                      */
                     void SetTo(const uint64_t& _to);
@@ -171,13 +171,13 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
                 private:
 
                     /**
-                     * Start time of the query range, which is a Unix timestamp in ms
+                     * Start time of the query time range, unix timestamp in milliseconds (ms)
                      */
                     uint64_t m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * End time of the query range, which is a Unix timestamp in ms
+                     * End time of query time range, unix timestamp in milliseconds (ms)
                      */
                     uint64_t m_to;
                     bool m_toHasBeenSet;

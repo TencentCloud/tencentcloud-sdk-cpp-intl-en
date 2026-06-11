@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Policy List
+                     * @return List Policy List
                      * 
                      */
                     std::vector<RansomDefenseStrategy> GetList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Policy List
                      */
                     std::vector<RansomDefenseStrategy> m_list;
                     bool m_listHasBeenSet;
 
                     /**
                      * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

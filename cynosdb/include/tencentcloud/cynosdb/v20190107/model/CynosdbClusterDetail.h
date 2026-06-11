@@ -42,7 +42,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cluster details
+                * Cluster details.
                 */
                 class CynosdbClusterDetail : public AbstractModel
                 {
@@ -54,15 +54,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -75,15 +75,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -96,15 +96,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -117,15 +117,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取AZ.
+                     * @return Zone AZ.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置AZ.
+                     * @param _zone AZ.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -160,23 +160,23 @@ namespace TencentCloud
 
                     /**
                      * 获取Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
                      * @return Status Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
                      * 
@@ -185,23 +185,23 @@ namespace TencentCloud
 
                     /**
                      * 设置Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
                      * @param _status Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
                      * 
@@ -379,15 +379,15 @@ pausing
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取VPC name
-                     * @return VpcName VPC name
+                     * 获取VPC name.
+                     * @return VpcName VPC name.
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置VPC name
-                     * @param _vpcName VPC name
+                     * 设置VPC name.
+                     * @param _vpcName VPC name.
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -400,15 +400,15 @@ pausing
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取Unique VPC ID
-                     * @return VpcId Unique VPC ID
+                     * 获取Unique VPC ID.
+                     * @return VpcId Unique VPC ID.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Unique VPC ID
-                     * @param _vpcId Unique VPC ID
+                     * 设置Unique VPC ID.
+                     * @param _vpcId Unique VPC ID.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -421,15 +421,15 @@ pausing
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet name
-                     * @return SubnetName Subnet name
+                     * 获取Subnet name.
+                     * @return SubnetName Subnet name.
                      * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
-                     * 设置Subnet name
-                     * @param _subnetName Subnet name
+                     * 设置Subnet name.
+                     * @param _subnetName Subnet name.
                      * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
@@ -442,15 +442,15 @@ pausing
                     bool SubnetNameHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取Subnet ID.
+                     * @return SubnetId Subnet ID.
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param _subnetId Subnet ID
+                     * 设置Subnet ID.
+                     * @param _subnetId Subnet ID.
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -463,15 +463,15 @@ pausing
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Character set
-                     * @return Charset Character set
+                     * 获取Character set.
+                     * @return Charset Character set.
                      * 
                      */
                     std::string GetCharset() const;
 
                     /**
-                     * 设置Character set
-                     * @param _charset Character set
+                     * 设置Character set.
+                     * @param _charset Character set.
                      * 
                      */
                     void SetCharset(const std::string& _charset);
@@ -484,15 +484,15 @@ pausing
                     bool CharsetHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -505,15 +505,15 @@ pausing
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Database type
-                     * @return DbType Database type
+                     * 获取Database type.
+                     * @return DbType Database type.
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type
-                     * @param _dbType Database type
+                     * 设置Database type.
+                     * @param _dbType Database type.
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -547,15 +547,15 @@ pausing
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取Database version
-                     * @return DbVersion Database version
+                     * 获取Database version.
+                     * @return DbVersion Database version.
                      * 
                      */
                     std::string GetDbVersion() const;
 
                     /**
-                     * 设置Database version
-                     * @param _dbVersion Database version
+                     * 设置Database version.
+                     * @param _dbVersion Database version.
                      * 
                      */
                     void SetDbVersion(const std::string& _dbVersion);
@@ -589,15 +589,15 @@ pausing
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Used capacity
-                     * @return UsedStorage Used capacity
+                     * 获取Used capacity.
+                     * @return UsedStorage Used capacity.
                      * 
                      */
                     int64_t GetUsedStorage() const;
 
                     /**
-                     * 设置Used capacity
-                     * @param _usedStorage Used capacity
+                     * 设置Used capacity.
+                     * @param _usedStorage Used capacity.
                      * 
                      */
                     void SetUsedStorage(const int64_t& _usedStorage);
@@ -610,15 +610,15 @@ pausing
                     bool UsedStorageHasBeenSet() const;
 
                     /**
-                     * 获取VIP
-                     * @return Vip VIP
+                     * 获取VIP.
+                     * @return Vip VIP.
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置VIP
-                     * @param _vip VIP
+                     * 设置VIP.
+                     * @param _vip VIP.
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -631,15 +631,15 @@ pausing
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取vport
-                     * @return Vport vport
+                     * 获取vport.
+                     * @return Vport vport.
                      * 
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置vport
-                     * @param _vport vport
+                     * 设置vport.
+                     * @param _vport vport.
                      * 
                      */
                     void SetVport(const int64_t& _vport);
@@ -841,15 +841,15 @@ pausing
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取Instance information
-                     * @return InstanceSet Instance information
+                     * 获取Instance information.
+                     * @return InstanceSet Instance information.
                      * 
                      */
                     std::vector<ClusterInstanceDetail> GetInstanceSet() const;
 
                     /**
-                     * 设置Instance information
-                     * @param _instanceSet Instance information
+                     * 设置Instance information.
+                     * @param _instanceSet Instance information.
                      * 
                      */
                     void SetInstanceSet(const std::vector<ClusterInstanceDetail>& _instanceSet);
@@ -862,15 +862,15 @@ pausing
                     bool InstanceSetHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode
-                     * @return PayMode Billing mode
+                     * 获取Billing mode.
+                     * @return PayMode Billing mode.
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode
-                     * @param _payMode Billing mode
+                     * 设置Billing mode.
+                     * @param _payMode Billing mode.
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -883,15 +883,15 @@ pausing
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-                     * @return PeriodEndTime Expiration time
+                     * 获取Expiration time.
+                     * @return PeriodEndTime Expiration time.
                      * 
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
-                     * 设置Expiration time
-                     * @param _periodEndTime Expiration time
+                     * 设置Expiration time.
+                     * @param _periodEndTime Expiration time.
                      * 
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
@@ -904,15 +904,15 @@ pausing
                     bool PeriodEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectID Project ID
+                     * 获取Project ID.
+                     * @return ProjectID Project ID.
                      * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectID Project ID
+                     * 设置Project ID.
+                     * @param _projectID Project ID.
                      * 
                      */
                     void SetProjectID(const int64_t& _projectID);
@@ -925,15 +925,15 @@ pausing
                     bool ProjectIDHasBeenSet() const;
 
                     /**
-                     * 获取Array of tags bound to instance
-                     * @return ResourceTags Array of tags bound to instance
+                     * 获取Array of tags bound to instance.
+                     * @return ResourceTags Array of tags bound to instance.
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置Array of tags bound to instance
-                     * @param _resourceTags Array of tags bound to instance
+                     * 设置Array of tags bound to instance.
+                     * @param _resourceTags Array of tags bound to instance.
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -1317,25 +1317,25 @@ If empty, the field is invalid.
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Region
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ
+                     * AZ.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -1348,13 +1348,13 @@ If empty, the field is invalid.
 
                     /**
                      * Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
                      */
@@ -1408,43 +1408,43 @@ pausing
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * VPC name
+                     * VPC name.
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * Unique VPC ID
+                     * Unique VPC ID.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet name
+                     * Subnet name.
                      */
                     std::string m_subnetName;
                     bool m_subnetNameHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * Subnet ID.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Character set
+                     * Character set.
                      */
                     std::string m_charset;
                     bool m_charsetHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Database type
+                     * Database type.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
@@ -1456,7 +1456,7 @@ pausing
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * Database version
+                     * Database version.
                      */
                     std::string m_dbVersion;
                     bool m_dbVersionHasBeenSet;
@@ -1468,19 +1468,19 @@ pausing
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Used capacity
+                     * Used capacity.
                      */
                     int64_t m_usedStorage;
                     bool m_usedStorageHasBeenSet;
 
                     /**
-                     * VIP
+                     * VIP.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * vport
+                     * vport.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
@@ -1540,31 +1540,31 @@ pausing
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * Instance information
+                     * Instance information.
                      */
                     std::vector<ClusterInstanceDetail> m_instanceSet;
                     bool m_instanceSetHasBeenSet;
 
                     /**
-                     * Billing mode
+                     * Billing mode.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Expiration time
+                     * Expiration time.
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectID;
                     bool m_projectIDHasBeenSet;
 
                     /**
-                     * Array of tags bound to instance
+                     * Array of tags bound to instance.
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ImageScanInquireInfo.h>
 
 
 namespace TencentCloud
@@ -113,6 +114,104 @@ namespace TencentCloud
                      */
                     bool NotScannedLocalImageCntHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return TrialAuthorizedCnt 
+                     * 
+                     */
+                    uint64_t GetTrialAuthorizedCnt() const;
+
+                    /**
+                     * 判断参数 TrialAuthorizedCnt 是否已赋值
+                     * @return TrialAuthorizedCnt 是否已赋值
+                     * 
+                     */
+                    bool TrialAuthorizedCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return UsedTrialAuthorizedCnt 
+                     * 
+                     */
+                    uint64_t GetUsedTrialAuthorizedCnt() const;
+
+                    /**
+                     * 判断参数 UsedTrialAuthorizedCnt 是否已赋值
+                     * @return UsedTrialAuthorizedCnt 是否已赋值
+                     * 
+                     */
+                    bool UsedTrialAuthorizedCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return PurchasedAuthorizedCnt 
+                     * 
+                     */
+                    uint64_t GetPurchasedAuthorizedCnt() const;
+
+                    /**
+                     * 判断参数 PurchasedAuthorizedCnt 是否已赋值
+                     * @return PurchasedAuthorizedCnt 是否已赋值
+                     * 
+                     */
+                    bool PurchasedAuthorizedCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return UsedPurchasedAuthorizedCnt 
+                     * 
+                     */
+                    uint64_t GetUsedPurchasedAuthorizedCnt() const;
+
+                    /**
+                     * 判断参数 UsedPurchasedAuthorizedCnt 是否已赋值
+                     * @return UsedPurchasedAuthorizedCnt 是否已赋值
+                     * 
+                     */
+                    bool UsedPurchasedAuthorizedCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CanApplyFreeImageAuthorize 
+                     * 
+                     */
+                    bool GetCanApplyFreeImageAuthorize() const;
+
+                    /**
+                     * 判断参数 CanApplyFreeImageAuthorize 是否已赋值
+                     * @return CanApplyFreeImageAuthorize 是否已赋值
+                     * 
+                     */
+                    bool CanApplyFreeImageAuthorizeHasBeenSet() const;
+
+                    /**
+                     * 获取Image scanning billing information.
+                     * @return ImageScanInquireInfo Image scanning billing information.
+                     * 
+                     */
+                    ImageScanInquireInfo GetImageScanInquireInfo() const;
+
+                    /**
+                     * 判断参数 ImageScanInquireInfo 是否已赋值
+                     * @return ImageScanInquireInfo 是否已赋值
+                     * 
+                     */
+                    bool ImageScanInquireInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Number of duplicate images (local images and repository images).
+                     * @return RepeatImageIdCnt Number of duplicate images (local images and repository images).
+                     * 
+                     */
+                    uint64_t GetRepeatImageIdCnt() const;
+
+                    /**
+                     * 判断参数 RepeatImageIdCnt 是否已赋值
+                     * @return RepeatImageIdCnt 是否已赋值
+                     * 
+                     */
+                    bool RepeatImageIdCntHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +243,48 @@ namespace TencentCloud
                      */
                     uint64_t m_notScannedLocalImageCnt;
                     bool m_notScannedLocalImageCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_trialAuthorizedCnt;
+                    bool m_trialAuthorizedCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_usedTrialAuthorizedCnt;
+                    bool m_usedTrialAuthorizedCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_purchasedAuthorizedCnt;
+                    bool m_purchasedAuthorizedCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_usedPurchasedAuthorizedCnt;
+                    bool m_usedPurchasedAuthorizedCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_canApplyFreeImageAuthorize;
+                    bool m_canApplyFreeImageAuthorizeHasBeenSet;
+
+                    /**
+                     * Image scanning billing information.
+                     */
+                    ImageScanInquireInfo m_imageScanInquireInfo;
+                    bool m_imageScanInquireInfoHasBeenSet;
+
+                    /**
+                     * Number of duplicate images (local images and repository images).
+                     */
+                    uint64_t m_repeatImageIdCnt;
+                    bool m_repeatImageIdCntHasBeenSet;
 
                 };
             }

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image ID
-                     * @return ImageID Image ID
+                     * 获取<p>Image ID.</p>
+                     * @return ImageID <p>Image ID.</p>
                      * 
                      */
                     std::string GetImageID() const;
 
                     /**
-                     * 设置Image ID
-                     * @param _imageID Image ID
+                     * 设置<p>Image ID.</p>
+                     * @param _imageID <p>Image ID.</p>
                      * 
                      */
                     void SetImageID(const std::string& _imageID);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image ID
+                     * <p>Image ID.</p>
                      */
                     std::string m_imageID;
                     bool m_imageIDHasBeenSet;

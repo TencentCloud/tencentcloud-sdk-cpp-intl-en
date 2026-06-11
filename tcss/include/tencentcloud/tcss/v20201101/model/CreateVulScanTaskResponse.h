@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the task to scan local images again for vulnerabilities
-                     * @return LocalTaskID ID of the task to scan local images again for vulnerabilities
+                     * 获取<p>Task ID for local image re-vulnerability scanning</p>
+                     * @return LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
                      * 
                      */
                     int64_t GetLocalTaskID() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
-                     * 获取ID of the task to scan repository images again for vulnerabilities
-                     * @return RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+                     * 获取<p>Task ID for repository image re-vulnerability scanning</p>
+                     * @return RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
                      * 
                      */
                     int64_t GetRegistryTaskID() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the task to scan local images again for vulnerabilities
+                     * <p>Task ID for local image re-vulnerability scanning</p>
                      */
                     int64_t m_localTaskID;
                     bool m_localTaskIDHasBeenSet;
 
                     /**
-                     * ID of the task to scan repository images again for vulnerabilities
+                     * <p>Task ID for repository image re-vulnerability scanning</p>
                      */
                     int64_t m_registryTaskID;
                     bool m_registryTaskIDHasBeenSet;

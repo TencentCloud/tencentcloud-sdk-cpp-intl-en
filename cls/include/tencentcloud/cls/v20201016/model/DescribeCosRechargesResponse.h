@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取See CosRechargeInfo structural description.
+                     * @return Data See CosRechargeInfo structural description.
                      * 
                      */
                     std::vector<CosRechargeInfo> GetData() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * See CosRechargeInfo structural description.
                      */
                     std::vector<CosRechargeInfo> m_data;
                     bool m_dataHasBeenSet;

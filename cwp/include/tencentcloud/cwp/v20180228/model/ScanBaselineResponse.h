@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanningQuuids QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host Quuid being scanned
+                     * @return ScanningQuuids Host Quuid being scanned
                      * 
                      */
                     std::vector<std::string> GetScanningQuuids() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanningQuuidsHasBeenSet() const;
 
                     /**
-                     * 获取TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取TaskId returned upon successful task issuance
+                     * @return TaskId TaskId returned upon successful task issuance
                      * 
                      */
                     uint64_t GetTaskId() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host Quuid being scanned
                      */
                     std::vector<std::string> m_scanningQuuids;
                     bool m_scanningQuuidsHasBeenSet;
 
                     /**
-                     * TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * TaskId returned upon successful task issuance
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;

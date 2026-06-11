@@ -176,18 +176,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
@@ -494,15 +490,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Digital signature. 0: no; 1: yes; 999: null (Windows only).
-                     * @return HasSign Digital signature. 0: no; 1: yes; 999: null (Windows only).
+                     * 获取Digital signature: 0: none; 1: yes; 999: null (for Windows only).
+                     * @return HasSign Digital signature: 0: none; 1: yes; 999: null (for Windows only).
                      * 
                      */
                     uint64_t GetHasSign() const;
 
                     /**
-                     * 设置Digital signature. 0: no; 1: yes; 999: null (Windows only).
-                     * @param _hasSign Digital signature. 0: no; 1: yes; 999: null (Windows only).
+                     * 设置Digital signature: 0: none; 1: yes; 999: null (for Windows only).
+                     * @param _hasSign Digital signature: 0: none; 1: yes; 999: null (for Windows only).
                      * 
                      */
                     void SetHasSign(const uint64_t& _hasSign);
@@ -579,18 +575,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -645,23 +637,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsNewHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
+                     * 获取 Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
+                     * @return MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
+                     * 设置 Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
+                     * @param _machineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -713,7 +701,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
@@ -803,7 +790,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Digital signature. 0: no; 1: yes; 999: null (Windows only).
+                     * Digital signature: 0: none; 1: yes; 999: null (for Windows only).
                      */
                     uint64_t m_hasSign;
                     bool m_hasSignHasBeenSet;
@@ -828,7 +815,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -846,9 +832,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isNewHasBeenSet;
 
                     /**
-                     * Additional information
+                     *  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

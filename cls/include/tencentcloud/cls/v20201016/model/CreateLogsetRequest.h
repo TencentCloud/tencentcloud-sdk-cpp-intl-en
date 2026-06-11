@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Logset name, which must be unique
-                     * @return LogsetName Logset name, which must be unique
+                     * 获取Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
+                     * @return LogsetName Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
                      * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
-                     * 设置Logset name, which must be unique
-                     * @param _logsetName Logset name, which must be unique
+                     * 设置Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
+                     * @param _logsetName Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
                      * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
@@ -85,10 +93,49 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+                     * @return LogsetId Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+                     * 
+                     */
+                    std::string GetLogsetId() const;
+
+                    /**
+                     * 设置Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+                     * @param _logsetId Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+                     * 
+                     */
+                    void SetLogsetId(const std::string& _logsetId);
+
+                    /**
+                     * 判断参数 LogsetId 是否已赋值
+                     * @return LogsetId 是否已赋值
+                     * 
+                     */
+                    bool LogsetIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Logset name, which must be unique
+                     * Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;
@@ -98,6 +145,16 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+                     */
+                    std::string m_logsetId;
+                    bool m_logsetIdHasBeenSet;
 
                 };
             }

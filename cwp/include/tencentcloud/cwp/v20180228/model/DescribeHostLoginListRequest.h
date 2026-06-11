@@ -86,59 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
-                     * @return Filters Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+                     * 获取Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
+                     * @return Filters Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
-                     * @param _filters Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+                     * 设置Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
+                     * @param _filters Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -207,18 +163,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+                     * Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

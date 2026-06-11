@@ -85,15 +85,15 @@ Other: Hybrid Cloud Zone
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Machine region. For example, ap-guangzhou and ap-shanghai.
-                     * @return MachineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
+                     * 获取Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+                     * @return MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
                      * 
                      */
                     std::string GetMachineRegion() const;
 
                     /**
-                     * 设置Machine region. For example, ap-guangzhou and ap-shanghai.
-                     * @param _machineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
+                     * 设置Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+                     * @param _machineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
                      * 
                      */
                     void SetMachineRegion(const std::string& _machineRegion);
@@ -215,7 +215,7 @@ Other: Hybrid Cloud Zone
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Machine region. For example, ap-guangzhou and ap-shanghai.
+                     * Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
                      */
                     std::string m_machineRegion;
                     bool m_machineRegionHasBeenSet;

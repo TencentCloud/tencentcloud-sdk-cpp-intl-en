@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Log start time
-                     * @return StartTime Log start time
+                     * 获取Log start time.
+                     * @return StartTime Log start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Log start time
-                     * @param _startTime Log start time
+                     * 设置Log start time.
+                     * @param _startTime Log start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log end time
-                     * @return EndTime Log end time
+                     * 获取Log end time.
+                     * @return EndTime Log end time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Log end time
-                     * @param _endTime Log end time
+                     * 设置Log end time.
+                     * @param _endTime Log end time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The max number of returned results
-                     * @return Limit The max number of returned results
+                     * 获取The max number of returned results.
+                     * @return Limit The max number of returned results.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The max number of returned results
-                     * @param _limit The max number of returned results
+                     * 设置The max number of returned results.
+                     * @param _limit The max number of returned results.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param _offset Offset
+                     * 设置Offset.
+                     * @param _offset Offset.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Log level
-                     * @return LogLevels Log level
+                     * 获取Log level.
+                     * @return LogLevels Log level.
                      * 
                      */
                     std::vector<std::string> GetLogLevels() const;
 
                     /**
-                     * 设置Log level
-                     * @param _logLevels Log level
+                     * 设置Log level.
+                     * @param _logLevels Log level.
                      * 
                      */
                     void SetLogLevels(const std::vector<std::string>& _logLevels);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LogLevelsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeyWords 
+                     * 获取KeyWords.
+                     * @return KeyWords KeyWords.
                      * 
                      */
                     std::vector<std::string> GetKeyWords() const;
 
                     /**
-                     * 设置
-                     * @param _keyWords 
+                     * 设置KeyWords.
+                     * @param _keyWords KeyWords.
                      * 
                      */
                     void SetKeyWords(const std::vector<std::string>& _keyWords);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid value: `Timestamp`
-                     * @return OrderBy Valid value: `Timestamp`
+                     * 获取Valid value: `Timestamp`.
+                     * @return OrderBy Valid value: `Timestamp`.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Valid value: `Timestamp`
-                     * @param _orderBy Valid value: `Timestamp`
+                     * 设置Valid value: `Timestamp`.
+                     * @param _orderBy Valid value: `Timestamp`.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -255,43 +255,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Log start time
+                     * Log start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Log end time
+                     * Log end time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The max number of returned results
+                     * The max number of returned results.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Log level
+                     * Log level.
                      */
                     std::vector<std::string> m_logLevels;
                     bool m_logLevelsHasBeenSet;
 
                     /**
-                     * 
+                     * KeyWords.
                      */
                     std::vector<std::string> m_keyWords;
                     bool m_keyWordsHasBeenSet;
@@ -303,7 +303,7 @@ namespace TencentCloud
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Valid value: `Timestamp`
+                     * Valid value: `Timestamp`.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;

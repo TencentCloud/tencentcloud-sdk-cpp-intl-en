@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Process list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Process Process list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetAppProcessInfo> GetProcess() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Process list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetAppProcessInfo> m_process;
                     bool m_processHasBeenSet;

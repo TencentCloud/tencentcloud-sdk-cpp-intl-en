@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulEffectModuleInfo List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulEffectModuleInfo> GetVulEffectModuleInfo() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulEffectModuleInfo> m_vulEffectModuleInfo;
                     bool m_vulEffectModuleInfoHasBeenSet;

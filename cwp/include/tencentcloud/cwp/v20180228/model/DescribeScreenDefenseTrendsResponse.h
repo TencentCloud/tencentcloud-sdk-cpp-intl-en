@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TrendsChart Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ScreenTrendsChart> GetTrendsChart() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ScreenTrendsChart> m_trendsChart;
                     bool m_trendsChartHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<li>WeakPassword - string - required: no - weak password</li>
-                     * @return Filters <li>WeakPassword - string - required: no - weak password</li>
+                     * 获取<li>WeakPassword - string - required: no - weak password</li>
+                     * @return Filters <li>WeakPassword - string - required: no - weak password</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<li>WeakPassword - string - required: no - weak password</li>
-                     * @param _filters <li>WeakPassword - string - required: no - weak password</li>
+                     * 设置<li>WeakPassword - string - required: no - weak password</li>
+                     * @param _filters <li>WeakPassword - string - required: no - weak password</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order [ASC: ascending|DESC: descending]
-                     * @return Order Sorting order [ASC: ascending|DESC: descending]
+                     * 获取Sorting order [ASC: ascending|DESC: descending]
+                     * @return Order Sorting order [ASC: ascending|DESC: descending]
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order [ASC: ascending|DESC: descending]
-                     * @param _order Sorting order [ASC: ascending|DESC: descending]
+                     * 设置Sorting order [ASC: ascending|DESC: descending]
+                     * @param _order Sorting order [ASC: ascending|DESC: descending]
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sorting column [CreateTime|ModifyTime]
-                     * @return By Sorting column [CreateTime|ModifyTime]
+                     * 获取Sorting column [CreateTime|ModifyTime]
+                     * @return By Sorting column [CreateTime|ModifyTime]
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting column [CreateTime|ModifyTime]
-                     * @param _by Sorting column [CreateTime|ModifyTime]
+                     * 设置Sorting column [CreateTime|ModifyTime]
+                     * @param _by Sorting column [CreateTime|ModifyTime]
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <li>WeakPassword - string - required: no - weak password</li>
+                     * <li>WeakPassword - string - required: no - weak password</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -169,13 +169,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting order [ASC: ascending|DESC: descending]
+                     * Sorting order [ASC: ascending|DESC: descending]
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sorting column [CreateTime|ModifyTime]
+                     * Sorting column [CreateTime|ModifyTime]
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

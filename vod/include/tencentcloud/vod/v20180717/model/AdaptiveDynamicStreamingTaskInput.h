@@ -29,6 +29,7 @@
 #include <tencentcloud/vod/v20180717/model/CopyRightWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/BlindWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/SubtitleInfoInput.h>
+#include <tencentcloud/vod/v20180717/model/ThirdPartyDrmInfo.h>
 
 
 namespace TencentCloud
@@ -198,6 +199,27 @@ namespace TencentCloud
                      */
                     bool SubtitleInfoSetHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+                     * @return DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+                     * 
+                     */
+                    ThirdPartyDrmInfo GetDrmInfo() const;
+
+                    /**
+                     * 设置<p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+                     * @param _drmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+                     * 
+                     */
+                    void SetDrmInfo(const ThirdPartyDrmInfo& _drmInfo);
+
+                    /**
+                     * 判断参数 DrmInfo 是否已赋值
+                     * @return DrmInfo 是否已赋值
+                     * 
+                     */
+                    bool DrmInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -241,6 +263,12 @@ namespace TencentCloud
                      */
                     std::vector<SubtitleInfoInput> m_subtitleInfoSet;
                     bool m_subtitleInfoSetHasBeenSet;
+
+                    /**
+                     * <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+                     */
+                    ThirdPartyDrmInfo m_drmInfo;
+                    bool m_drmInfoHasBeenSet;
 
                 };
             }

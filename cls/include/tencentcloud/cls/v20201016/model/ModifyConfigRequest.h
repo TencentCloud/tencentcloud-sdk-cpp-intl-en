@@ -67,14 +67,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
                      * @return Name Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
                      * @param _name Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -175,15 +183,19 @@ namespace TencentCloud
                     bool ExcludePathsHasBeenSet() const;
 
                     /**
-                     * 获取Log topic (TopicId) associated with collection configuration
-                     * @return Output Log topic (TopicId) associated with collection configuration
+                     * 获取Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return Output Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetOutput() const;
 
                     /**
-                     * 设置Log topic (TopicId) associated with collection configuration
-                     * @param _output Log topic (TopicId) associated with collection configuration
+                     * 设置Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _output Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetOutput(const std::string& _output);
@@ -253,6 +265,39 @@ Sample:
                      */
                     bool AdvancedConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * @return InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * 
+                     */
+                    std::string GetInputType() const;
+
+                    /**
+                     * 设置Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * @param _inputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     * 
+                     */
+                    void SetInputType(const std::string& _inputType);
+
+                    /**
+                     * 判断参数 InputType 是否已赋值
+                     * @return InputType 是否已赋值
+                     * 
+                     */
+                    bool InputTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +308,8 @@ Sample:
 
                     /**
                      * Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -293,7 +340,8 @@ Sample:
                     bool m_excludePathsHasBeenSet;
 
                     /**
-                     * Log topic (TopicId) associated with collection configuration
+                     * Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;
@@ -313,6 +361,15 @@ Sample:
                      */
                     std::string m_advancedConfig;
                     bool m_advancedConfigHasBeenSet;
+
+                    /**
+                     * Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+                     */
+                    std::string m_inputType;
+                    bool m_inputTypeHasBeenSet;
 
                 };
             }

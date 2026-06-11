@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @return LogsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+                     * @param _logsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Logset name
-                     * @return LogsetName Logset name
+                     * 获取Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
+                     * @return LogsetName Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
                      * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
-                     * 设置Logset name
-                     * @param _logsetName Logset name
+                     * 设置Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
+                     * @param _logsetName Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
                      * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
@@ -109,13 +109,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Logset ID
+                     * Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Logset name
+                     * Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;

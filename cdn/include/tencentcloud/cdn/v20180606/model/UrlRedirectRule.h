@@ -110,18 +110,18 @@ namespace TencentCloud
                     bool RedirectUrlHasBeenSet() const;
 
                     /**
-                     * 获取Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+                     * 获取Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+                     * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetRedirectHost() const;
 
                     /**
-                     * 设置Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+                     * 设置Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _redirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+                     * @param _redirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
@@ -159,6 +159,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool FullMatchHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Regex 
+                     * 
+                     */
+                    bool GetRegex() const;
+
+                    /**
+                     * 设置
+                     * @param _regex 
+                     * 
+                     */
+                    void SetRegex(const bool& _regex);
+
+                    /**
+                     * 判断参数 Regex 是否已赋值
+                     * @return Regex 是否已赋值
+                     * 
+                     */
+                    bool RegexHasBeenSet() const;
+
                 private:
 
                     /**
@@ -180,7 +201,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_redirectUrlHasBeenSet;
 
                     /**
-                     * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+                     * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_redirectHost;
@@ -192,6 +213,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_fullMatch;
                     bool m_fullMatchHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_regex;
+                    bool m_regexHasBeenSet;
 
                 };
             }

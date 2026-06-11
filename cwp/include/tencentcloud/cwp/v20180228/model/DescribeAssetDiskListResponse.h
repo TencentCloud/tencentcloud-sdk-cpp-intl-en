@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Disks Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetDiskPartitionInfo> GetDisks() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetDiskPartitionInfo> m_disks;
                     bool m_disksHasBeenSet;

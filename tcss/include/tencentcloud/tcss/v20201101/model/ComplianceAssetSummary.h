@@ -151,19 +151,15 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckProgress Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
+                     * @return CheckProgress The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
                      * 
                      */
                     double GetCheckProgress() const;
 
                     /**
-                     * 设置Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkProgress Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
+                     * @param _checkProgress The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
                      * 
                      */
                     void SetCheckProgress(const double& _checkProgress);
@@ -407,19 +403,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanFailedAssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckCostTime Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Time taken for last detection, in seconds.
+                     * @return CheckCostTime Time taken for last detection, in seconds.
                      * 
                      */
                     double GetCheckCostTime() const;
 
                     /**
-                     * 设置Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkCostTime Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Time taken for last detection, in seconds.
+                     * @param _checkCostTime Time taken for last detection, in seconds.
                      * 
                      */
                     void SetCheckCostTime(const double& _checkCostTime);
@@ -432,19 +424,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckCostTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time.
+                     * @return LastCheckTime Last detection time.
                      * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time.
+                     * @param _lastCheckTime Last detection time.
                      * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
@@ -478,19 +466,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodRuleHasBeenSet() const;
 
                     /**
-                     * 获取Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpenPolicyItemCount Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total Number of Enabled Check Items
+                     * @return OpenPolicyItemCount Total Number of Enabled Check Items
                      * 
                      */
                     uint64_t GetOpenPolicyItemCount() const;
 
                     /**
-                     * 设置Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _openPolicyItemCount Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total Number of Enabled Check Items
+                     * @param _openPolicyItemCount Total Number of Enabled Check Items
                      * 
                      */
                     void SetOpenPolicyItemCount(const uint64_t& _openPolicyItemCount);
@@ -503,19 +487,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OpenPolicyItemCountHasBeenSet() const;
 
                     /**
-                     * 获取Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoredPolicyItemCount Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total Number of Ignored Check Items
+                     * @return IgnoredPolicyItemCount Total Number of Ignored Check Items
                      * 
                      */
                     uint64_t GetIgnoredPolicyItemCount() const;
 
                     /**
-                     * 设置Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ignoredPolicyItemCount Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Total Number of Ignored Check Items
+                     * @param _ignoredPolicyItemCount Total Number of Ignored Check Items
                      * 
                      */
                     void SetIgnoredPolicyItemCount(const uint64_t& _ignoredPolicyItemCount);
@@ -526,6 +506,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool IgnoredPolicyItemCountHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of detection items.
+                     * @return TotalPolicyItemCount Total number of detection items.
+                     * 
+                     */
+                    uint64_t GetTotalPolicyItemCount() const;
+
+                    /**
+                     * 设置Total number of detection items.
+                     * @param _totalPolicyItemCount Total number of detection items.
+                     * 
+                     */
+                    void SetTotalPolicyItemCount(const uint64_t& _totalPolicyItemCount);
+
+                    /**
+                     * 判断参数 TotalPolicyItemCount 是否已赋值
+                     * @return TotalPolicyItemCount 是否已赋值
+                     * 
+                     */
+                    bool TotalPolicyItemCountHasBeenSet() const;
+
+                    /**
+                     * 获取Detection hosts
+                     * @return DetectHostCount Detection hosts
+                     * 
+                     */
+                    uint64_t GetDetectHostCount() const;
+
+                    /**
+                     * 设置Detection hosts
+                     * @param _detectHostCount Detection hosts
+                     * 
+                     */
+                    void SetDetectHostCount(const uint64_t& _detectHostCount);
+
+                    /**
+                     * 判断参数 DetectHostCount 是否已赋值
+                     * @return DetectHostCount 是否已赋值
+                     * 
+                     */
+                    bool DetectHostCountHasBeenSet() const;
+
+                    /**
+                     * 获取Remaining time of the current task, in seconds.
+                     * @return LeftTime Remaining time of the current task, in seconds.
+                     * 
+                     */
+                    uint64_t GetLeftTime() const;
+
+                    /**
+                     * 设置Remaining time of the current task, in seconds.
+                     * @param _leftTime Remaining time of the current task, in seconds.
+                     * 
+                     */
+                    void SetLeftTime(const uint64_t& _leftTime);
+
+                    /**
+                     * 判断参数 LeftTime 是否已赋值
+                     * @return LeftTime 是否已赋值
+                     * 
+                     */
+                    bool LeftTimeHasBeenSet() const;
 
                 private:
 
@@ -558,8 +601,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
                      */
                     double m_checkProgress;
                     bool m_checkProgressHasBeenSet;
@@ -631,15 +673,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scanFailedAssetCountHasBeenSet;
 
                     /**
-                     * Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Time taken for last detection, in seconds.
                      */
                     double m_checkCostTime;
                     bool m_checkCostTimeHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time.
                      */
                     std::string m_lastCheckTime;
                     bool m_lastCheckTimeHasBeenSet;
@@ -651,18 +691,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_periodRuleHasBeenSet;
 
                     /**
-                     * Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total Number of Enabled Check Items
                      */
                     uint64_t m_openPolicyItemCount;
                     bool m_openPolicyItemCountHasBeenSet;
 
                     /**
-                     * Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total Number of Ignored Check Items
                      */
                     uint64_t m_ignoredPolicyItemCount;
                     bool m_ignoredPolicyItemCountHasBeenSet;
+
+                    /**
+                     * Total number of detection items.
+                     */
+                    uint64_t m_totalPolicyItemCount;
+                    bool m_totalPolicyItemCountHasBeenSet;
+
+                    /**
+                     * Detection hosts
+                     */
+                    uint64_t m_detectHostCount;
+                    bool m_detectHostCountHasBeenSet;
+
+                    /**
+                     * Remaining time of the current task, in seconds.
+                     */
+                    uint64_t m_leftTime;
+                    bool m_leftTimeHasBeenSet;
 
                 };
             }

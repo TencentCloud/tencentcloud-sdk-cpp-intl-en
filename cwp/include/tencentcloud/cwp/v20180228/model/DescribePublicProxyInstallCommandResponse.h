@@ -59,9 +59,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KeepAliveCommand Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetKeepAliveCommand() const;
@@ -83,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_keepAliveCommand;
                     bool m_keepAliveCommandHasBeenSet;

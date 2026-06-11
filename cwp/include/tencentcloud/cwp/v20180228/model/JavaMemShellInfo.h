@@ -70,18 +70,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Server name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Alias Server name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Server name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _alias Server name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -95,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -246,18 +238,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -271,18 +259,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -294,6 +278,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UuidHasBeenSet() const;
 
+                    /**
+                     * 获取Class name
+                     * @return ClassName Class name
+                     * 
+                     */
+                    std::string GetClassName() const;
+
+                    /**
+                     * 设置Class name
+                     * @param _className Class name
+                     * 
+                     */
+                    void SetClassName(const std::string& _className);
+
+                    /**
+                     * 判断参数 ClassName 是否已赋值
+                     * @return ClassName 是否已赋值
+                     * 
+                     */
+                    bool ClassNameHasBeenSet() const;
+
+                    /**
+                     * 获取Parent class name
+                     * @return SuperClassName Parent class name
+                     * 
+                     */
+                    std::string GetSuperClassName() const;
+
+                    /**
+                     * 设置Parent class name
+                     * @param _superClassName Parent class name
+                     * 
+                     */
+                    void SetSuperClassName(const std::string& _superClassName);
+
+                    /**
+                     * 判断参数 SuperClassName 是否已赋值
+                     * @return SuperClassName 是否已赋值
+                     * 
+                     */
+                    bool SuperClassNameHasBeenSet() const;
+
+                    /**
+                     * 获取Inherited API
+                     * @return Interfaces Inherited API
+                     * 
+                     */
+                    std::string GetInterfaces() const;
+
+                    /**
+                     * 设置Inherited API
+                     * @param _interfaces Inherited API
+                     * 
+                     */
+                    void SetInterfaces(const std::string& _interfaces);
+
+                    /**
+                     * 判断参数 Interfaces 是否已赋值
+                     * @return Interfaces 是否已赋值
+                     * 
+                     */
+                    bool InterfacesHasBeenSet() const;
+
+                    /**
+                     * 获取Annotation
+                     * @return Annotations Annotation
+                     * 
+                     */
+                    std::string GetAnnotations() const;
+
+                    /**
+                     * 设置Annotation
+                     * @param _annotations Annotation
+                     * 
+                     */
+                    void SetAnnotations(const std::string& _annotations);
+
+                    /**
+                     * 判断参数 Annotations 是否已赋值
+                     * @return Annotations 是否已赋值
+                     * 
+                     */
+                    bool AnnotationsHasBeenSet() const;
+
+                    /**
+                     * 获取Associated class loader.
+                     * @return LoaderClassName Associated class loader.
+                     * 
+                     */
+                    std::string GetLoaderClassName() const;
+
+                    /**
+                     * 设置Associated class loader.
+                     * @param _loaderClassName Associated class loader.
+                     * 
+                     */
+                    void SetLoaderClassName(const std::string& _loaderClassName);
+
+                    /**
+                     * 判断参数 LoaderClassName 是否已赋值
+                     * @return LoaderClassName 是否已赋值
+                     * 
+                     */
+                    bool LoaderClassNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -304,14 +393,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
                      * Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
@@ -354,17 +441,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
                      * Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
+
+                    /**
+                     * Class name
+                     */
+                    std::string m_className;
+                    bool m_classNameHasBeenSet;
+
+                    /**
+                     * Parent class name
+                     */
+                    std::string m_superClassName;
+                    bool m_superClassNameHasBeenSet;
+
+                    /**
+                     * Inherited API
+                     */
+                    std::string m_interfaces;
+                    bool m_interfacesHasBeenSet;
+
+                    /**
+                     * Annotation
+                     */
+                    std::string m_annotations;
+                    bool m_annotationsHasBeenSet;
+
+                    /**
+                     * Associated class loader.
+                     */
+                    std::string m_loaderClassName;
+                    bool m_loaderClassNameHasBeenSet;
 
                 };
             }

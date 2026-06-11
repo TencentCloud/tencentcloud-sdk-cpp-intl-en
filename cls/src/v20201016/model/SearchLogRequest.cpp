@@ -25,15 +25,19 @@ using namespace std;
 SearchLogRequest::SearchLogRequest() :
     m_fromHasBeenSet(false),
     m_toHasBeenSet(false),
-    m_queryHasBeenSet(false),
-    m_syntaxRuleHasBeenSet(false),
+    m_queryStringHasBeenSet(false),
+    m_querySyntaxHasBeenSet(false),
     m_topicIdHasBeenSet(false),
     m_topicsHasBeenSet(false),
-    m_limitHasBeenSet(false),
     m_sortHasBeenSet(false),
+    m_limitHasBeenSet(false),
+    m_offsetHasBeenSet(false),
     m_contextHasBeenSet(false),
     m_samplingRateHasBeenSet(false),
-    m_useNewAnalysisHasBeenSet(false)
+    m_useNewAnalysisHasBeenSet(false),
+    m_highLightHasBeenSet(false),
+    m_queryHasBeenSet(false),
+    m_syntaxRuleHasBeenSet(false)
 {
 }
 
@@ -60,20 +64,20 @@ string SearchLogRequest::ToJsonString() const
         d.AddMember(iKey, m_to, allocator);
     }
 
-    if (m_queryHasBeenSet)
+    if (m_queryStringHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Query";
+        string key = "QueryString";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_query.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_queryString.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_syntaxRuleHasBeenSet)
+    if (m_querySyntaxHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SyntaxRule";
+        string key = "QuerySyntax";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_syntaxRule, allocator);
+        d.AddMember(iKey, m_querySyntax, allocator);
     }
 
     if (m_topicIdHasBeenSet)
@@ -99,6 +103,14 @@ string SearchLogRequest::ToJsonString() const
         }
     }
 
+    if (m_sortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Sort";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sort.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_limitHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -107,12 +119,12 @@ string SearchLogRequest::ToJsonString() const
         d.AddMember(iKey, m_limit, allocator);
     }
 
-    if (m_sortHasBeenSet)
+    if (m_offsetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Sort";
+        string key = "Offset";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_sort.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, m_offset, allocator);
     }
 
     if (m_contextHasBeenSet)
@@ -137,6 +149,30 @@ string SearchLogRequest::ToJsonString() const
         string key = "UseNewAnalysis";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_useNewAnalysis, allocator);
+    }
+
+    if (m_highLightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HighLight";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_highLight, allocator);
+    }
+
+    if (m_queryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Query";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_query.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_syntaxRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SyntaxRule";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_syntaxRule, allocator);
     }
 
 
@@ -179,36 +215,36 @@ bool SearchLogRequest::ToHasBeenSet() const
     return m_toHasBeenSet;
 }
 
-string SearchLogRequest::GetQuery() const
+string SearchLogRequest::GetQueryString() const
 {
-    return m_query;
+    return m_queryString;
 }
 
-void SearchLogRequest::SetQuery(const string& _query)
+void SearchLogRequest::SetQueryString(const string& _queryString)
 {
-    m_query = _query;
-    m_queryHasBeenSet = true;
+    m_queryString = _queryString;
+    m_queryStringHasBeenSet = true;
 }
 
-bool SearchLogRequest::QueryHasBeenSet() const
+bool SearchLogRequest::QueryStringHasBeenSet() const
 {
-    return m_queryHasBeenSet;
+    return m_queryStringHasBeenSet;
 }
 
-uint64_t SearchLogRequest::GetSyntaxRule() const
+uint64_t SearchLogRequest::GetQuerySyntax() const
 {
-    return m_syntaxRule;
+    return m_querySyntax;
 }
 
-void SearchLogRequest::SetSyntaxRule(const uint64_t& _syntaxRule)
+void SearchLogRequest::SetQuerySyntax(const uint64_t& _querySyntax)
 {
-    m_syntaxRule = _syntaxRule;
-    m_syntaxRuleHasBeenSet = true;
+    m_querySyntax = _querySyntax;
+    m_querySyntaxHasBeenSet = true;
 }
 
-bool SearchLogRequest::SyntaxRuleHasBeenSet() const
+bool SearchLogRequest::QuerySyntaxHasBeenSet() const
 {
-    return m_syntaxRuleHasBeenSet;
+    return m_querySyntaxHasBeenSet;
 }
 
 string SearchLogRequest::GetTopicId() const
@@ -243,6 +279,22 @@ bool SearchLogRequest::TopicsHasBeenSet() const
     return m_topicsHasBeenSet;
 }
 
+string SearchLogRequest::GetSort() const
+{
+    return m_sort;
+}
+
+void SearchLogRequest::SetSort(const string& _sort)
+{
+    m_sort = _sort;
+    m_sortHasBeenSet = true;
+}
+
+bool SearchLogRequest::SortHasBeenSet() const
+{
+    return m_sortHasBeenSet;
+}
+
 int64_t SearchLogRequest::GetLimit() const
 {
     return m_limit;
@@ -259,20 +311,20 @@ bool SearchLogRequest::LimitHasBeenSet() const
     return m_limitHasBeenSet;
 }
 
-string SearchLogRequest::GetSort() const
+uint64_t SearchLogRequest::GetOffset() const
 {
-    return m_sort;
+    return m_offset;
 }
 
-void SearchLogRequest::SetSort(const string& _sort)
+void SearchLogRequest::SetOffset(const uint64_t& _offset)
 {
-    m_sort = _sort;
-    m_sortHasBeenSet = true;
+    m_offset = _offset;
+    m_offsetHasBeenSet = true;
 }
 
-bool SearchLogRequest::SortHasBeenSet() const
+bool SearchLogRequest::OffsetHasBeenSet() const
 {
-    return m_sortHasBeenSet;
+    return m_offsetHasBeenSet;
 }
 
 string SearchLogRequest::GetContext() const
@@ -321,6 +373,54 @@ void SearchLogRequest::SetUseNewAnalysis(const bool& _useNewAnalysis)
 bool SearchLogRequest::UseNewAnalysisHasBeenSet() const
 {
     return m_useNewAnalysisHasBeenSet;
+}
+
+bool SearchLogRequest::GetHighLight() const
+{
+    return m_highLight;
+}
+
+void SearchLogRequest::SetHighLight(const bool& _highLight)
+{
+    m_highLight = _highLight;
+    m_highLightHasBeenSet = true;
+}
+
+bool SearchLogRequest::HighLightHasBeenSet() const
+{
+    return m_highLightHasBeenSet;
+}
+
+string SearchLogRequest::GetQuery() const
+{
+    return m_query;
+}
+
+void SearchLogRequest::SetQuery(const string& _query)
+{
+    m_query = _query;
+    m_queryHasBeenSet = true;
+}
+
+bool SearchLogRequest::QueryHasBeenSet() const
+{
+    return m_queryHasBeenSet;
+}
+
+uint64_t SearchLogRequest::GetSyntaxRule() const
+{
+    return m_syntaxRule;
+}
+
+void SearchLogRequest::SetSyntaxRule(const uint64_t& _syntaxRule)
+{
+    m_syntaxRule = _syntaxRule;
+    m_syntaxRuleHasBeenSet = true;
+}
+
+bool SearchLogRequest::SyntaxRuleHasBeenSet() const
+{
+    return m_syntaxRuleHasBeenSet;
 }
 
 

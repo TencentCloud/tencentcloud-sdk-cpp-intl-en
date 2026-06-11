@@ -214,6 +214,60 @@ namespace TencentCloud
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * @return SyntaxRule Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * 
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * @param _syntaxRule Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     * 
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     * 
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Topic type.
+0: log topic; 1: metric topic
+                     * @return BizType Topic type.
+0: log topic; 1: metric topic
+                     * 
+                     */
+                    uint64_t GetBizType() const;
+
+                    /**
+                     * 设置Topic type.
+0: log topic; 1: metric topic
+                     * @param _bizType Topic type.
+0: log topic; 1: metric topic
+                     * 
+                     */
+                    void SetBizType(const uint64_t& _bizType);
+
+                    /**
+                     * 判断参数 BizType 是否已赋值
+                     * @return BizType 是否已赋值
+                     * 
+                     */
+                    bool BizTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +317,21 @@ namespace TencentCloud
                      */
                     int64_t m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
+
+                    /**
+                     * Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
+
+                    /**
+                     * Topic type.
+0: log topic; 1: metric topic
+                     */
+                    uint64_t m_bizType;
+                    bool m_bizTypeHasBeenSet;
 
                 };
             }

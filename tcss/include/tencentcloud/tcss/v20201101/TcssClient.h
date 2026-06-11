@@ -55,6 +55,10 @@
 #include <tencentcloud/tcss/v20201101/model/AddNetworkFirewallPolicyDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/AddNetworkFirewallPolicyYamlDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/AddNetworkFirewallPolicyYamlDetailResponse.h>
+#include <tencentcloud/tcss/v20201101/model/AddOrModifyMaliciousConnectionWhiteListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/AddOrModifyMaliciousConnectionWhiteListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/AddOrModifyVirusWhiteListRuleRequest.h>
+#include <tencentcloud/tcss/v20201101/model/AddOrModifyVirusWhiteListRuleResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CheckNetworkFirewallPolicyYamlRequest.h>
 #include <tencentcloud/tcss/v20201101/model/CheckNetworkFirewallPolicyYamlResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CheckRepeatAssetImageRegistryRequest.h>
@@ -77,6 +81,8 @@
 #include <tencentcloud/tcss/v20201101/model/CreateAssetImageVirusExportJobResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CreateCheckComponentRequest.h>
 #include <tencentcloud/tcss/v20201101/model/CreateCheckComponentResponse.h>
+#include <tencentcloud/tcss/v20201101/model/CreateClusterAccessRequest.h>
+#include <tencentcloud/tcss/v20201101/model/CreateClusterAccessResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CreateClusterCheckTaskRequest.h>
 #include <tencentcloud/tcss/v20201101/model/CreateClusterCheckTaskResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CreateComplianceTaskRequest.h>
@@ -161,6 +167,8 @@
 #include <tencentcloud/tcss/v20201101/model/DeleteMachineResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteNetworkFirewallPolicyDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteNetworkFirewallPolicyDetailResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DeleteRaspRulesRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DeleteRaspRulesResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteReverseShellEventsRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteReverseShellEventsResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteReverseShellWhiteListsRequest.h>
@@ -171,6 +179,8 @@
 #include <tencentcloud/tcss/v20201101/model/DeleteRiskSyscallWhiteListsResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteSearchTemplateRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DeleteSearchTemplateResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DeleteVirusWhiteListRuleRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DeleteVirusWhiteListRuleResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeABTestConfigRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeABTestConfigResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessDetailRequest.h>
@@ -179,16 +189,12 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessEventTendencyResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessEventsRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessEventsResponse.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessEventsExportRequest.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessEventsExportResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessLevelSummaryRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessLevelSummaryResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRuleDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRuleDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRulesRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRulesResponse.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRulesExportRequest.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAbnormalProcessRulesExportResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlEventsRequest.h>
@@ -199,8 +205,6 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlRuleDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlRulesRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAccessControlRulesResponse.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAccessControlRulesExportRequest.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAccessControlRulesExportResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAffectedClusterCountRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAffectedClusterCountResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAffectedNodeListRequest.h>
@@ -235,8 +239,6 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageHostListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageListRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageListResponse.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAssetImageListExportRequest.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeAssetImageListExportResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageRegistryAssetStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageRegistryAssetStatusResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeAssetImageRegistryDetailRequest.h>
@@ -341,8 +343,6 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeEventTendencyResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeEventTypeSummaryRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeEventTypeSummaryResponse.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeEscapeEventsExportRequest.h>
-#include <tencentcloud/tcss/v20201101/model/DescribeEscapeEventsExportResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeRuleInfoRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeRuleInfoResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeEscapeSafeStateRequest.h>
@@ -365,6 +365,18 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeImageAutoAuthorizedTaskListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeImageComponentListRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeImageComponentListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventDetailRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventDetailResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventTendencyRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyEventTendencyResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleDetailRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleDetailResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleSummaryRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeImageDenyRuleSummaryResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeImageRegistryNamespaceListRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeImageRegistryNamespaceListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeImageRegistryTimingScanTaskRequest.h>
@@ -395,6 +407,10 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeK8sApiAbnormalTendencyResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeLogStorageStatisticRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeLogStorageStatisticResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeMaliciousConnectionBlackListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeMaliciousConnectionBlackListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeMaliciousConnectionWhiteListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeMaliciousConnectionWhiteListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeNetworkFirewallAuditRecordRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeNetworkFirewallAuditRecordResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeNetworkFirewallClusterListRequest.h>
@@ -427,6 +443,10 @@
 #include <tencentcloud/tcss/v20201101/model/DescribePublicKeyResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribePurchaseStateInfoRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribePurchaseStateInfoResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeRaspRuleVulsRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeRaspRuleVulsResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeRaspRulesRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeRaspRulesResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeRefreshTaskRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeRefreshTaskResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellDetailRequest.h>
@@ -435,6 +455,10 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellEventsResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellEventsExportRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellEventsExportResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeReverseShellRegexpWhiteListRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeReverseShellRegexpWhiteListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeReverseShellRegexpWhiteListInfoRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeReverseShellRegexpWhiteListInfoResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellWhiteListDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellWhiteListDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeReverseShellWhiteListsRequest.h>
@@ -515,10 +539,14 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusManualScanEstimateTimeoutRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusManualScanEstimateTimeoutResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusMonitorConfigRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusMonitorConfigResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusMonitorSettingRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusMonitorSettingResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusSampleDownloadUrlRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusSampleDownloadUrlResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusScanConfigRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusScanConfigResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusScanSettingRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusScanSettingResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusScanTaskStatusRequest.h>
@@ -529,6 +557,8 @@
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusSummaryResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusTaskListRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVirusTaskListResponse.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusWhiteListRulesRequest.h>
+#include <tencentcloud/tcss/v20201101/model/DescribeVirusWhiteListRulesResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVulContainerListRequest.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVulContainerListResponse.h>
 #include <tencentcloud/tcss/v20201101/model/DescribeVulDefenceEventRequest.h>
@@ -599,6 +629,8 @@
 #include <tencentcloud/tcss/v20201101/model/ModifyCompliancePeriodTaskResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyContainerNetStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyContainerNetStatusResponse.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyDefendStatusRequest.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyDefendStatusResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyEscapeEventStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyEscapeEventStatusResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyEscapeRuleRequest.h>
@@ -613,8 +645,12 @@
 #include <tencentcloud/tcss/v20201101/model/ModifyK8sApiAbnormalRuleInfoResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyK8sApiAbnormalRuleStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyK8sApiAbnormalRuleStatusResponse.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyRaspRulesRequest.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyRaspRulesResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyReverseShellStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyReverseShellStatusResponse.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyRiskDnsEventStatusRequest.h>
+#include <tencentcloud/tcss/v20201101/model/ModifyRiskDnsEventStatusResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyRiskSyscallStatusRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ModifyRiskSyscallStatusResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ModifySecLogCleanSettingInfoRequest.h>
@@ -671,6 +707,8 @@
 #include <tencentcloud/tcss/v20201101/model/SwitchImageAutoAuthorizedRuleResponse.h>
 #include <tencentcloud/tcss/v20201101/model/SyncAssetImageRegistryAssetRequest.h>
 #include <tencentcloud/tcss/v20201101/model/SyncAssetImageRegistryAssetResponse.h>
+#include <tencentcloud/tcss/v20201101/model/UninstallClusterContainerSecurityRequest.h>
+#include <tencentcloud/tcss/v20201101/model/UninstallClusterContainerSecurityResponse.h>
 #include <tencentcloud/tcss/v20201101/model/UpdateAndPublishNetworkFirewallPolicyDetailRequest.h>
 #include <tencentcloud/tcss/v20201101/model/UpdateAndPublishNetworkFirewallPolicyDetailResponse.h>
 #include <tencentcloud/tcss/v20201101/model/UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest.h>
@@ -745,6 +783,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddNetworkFirewallPolicyYamlDetailResponse> AddNetworkFirewallPolicyYamlDetailOutcome;
                 typedef std::future<AddNetworkFirewallPolicyYamlDetailOutcome> AddNetworkFirewallPolicyYamlDetailOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::AddNetworkFirewallPolicyYamlDetailRequest&, AddNetworkFirewallPolicyYamlDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddNetworkFirewallPolicyYamlDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddOrModifyMaliciousConnectionWhiteListResponse> AddOrModifyMaliciousConnectionWhiteListOutcome;
+                typedef std::future<AddOrModifyMaliciousConnectionWhiteListOutcome> AddOrModifyMaliciousConnectionWhiteListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::AddOrModifyMaliciousConnectionWhiteListRequest&, AddOrModifyMaliciousConnectionWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddOrModifyMaliciousConnectionWhiteListAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddOrModifyVirusWhiteListRuleResponse> AddOrModifyVirusWhiteListRuleOutcome;
+                typedef std::future<AddOrModifyVirusWhiteListRuleOutcome> AddOrModifyVirusWhiteListRuleOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::AddOrModifyVirusWhiteListRuleRequest&, AddOrModifyVirusWhiteListRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddOrModifyVirusWhiteListRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CheckNetworkFirewallPolicyYamlResponse> CheckNetworkFirewallPolicyYamlOutcome;
                 typedef std::future<CheckNetworkFirewallPolicyYamlOutcome> CheckNetworkFirewallPolicyYamlOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::CheckNetworkFirewallPolicyYamlRequest&, CheckNetworkFirewallPolicyYamlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckNetworkFirewallPolicyYamlAsyncHandler;
@@ -778,6 +822,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCheckComponentResponse> CreateCheckComponentOutcome;
                 typedef std::future<CreateCheckComponentOutcome> CreateCheckComponentOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::CreateCheckComponentRequest&, CreateCheckComponentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCheckComponentAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateClusterAccessResponse> CreateClusterAccessOutcome;
+                typedef std::future<CreateClusterAccessOutcome> CreateClusterAccessOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::CreateClusterAccessRequest&, CreateClusterAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAccessAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClusterCheckTaskResponse> CreateClusterCheckTaskOutcome;
                 typedef std::future<CreateClusterCheckTaskOutcome> CreateClusterCheckTaskOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::CreateClusterCheckTaskRequest&, CreateClusterCheckTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterCheckTaskAsyncHandler;
@@ -904,6 +951,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteNetworkFirewallPolicyDetailResponse> DeleteNetworkFirewallPolicyDetailOutcome;
                 typedef std::future<DeleteNetworkFirewallPolicyDetailOutcome> DeleteNetworkFirewallPolicyDetailOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DeleteNetworkFirewallPolicyDetailRequest&, DeleteNetworkFirewallPolicyDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkFirewallPolicyDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRaspRulesResponse> DeleteRaspRulesOutcome;
+                typedef std::future<DeleteRaspRulesOutcome> DeleteRaspRulesOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DeleteRaspRulesRequest&, DeleteRaspRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRaspRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteReverseShellEventsResponse> DeleteReverseShellEventsOutcome;
                 typedef std::future<DeleteReverseShellEventsOutcome> DeleteReverseShellEventsOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DeleteReverseShellEventsRequest&, DeleteReverseShellEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReverseShellEventsAsyncHandler;
@@ -919,6 +969,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSearchTemplateResponse> DeleteSearchTemplateOutcome;
                 typedef std::future<DeleteSearchTemplateOutcome> DeleteSearchTemplateOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DeleteSearchTemplateRequest&, DeleteSearchTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSearchTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVirusWhiteListRuleResponse> DeleteVirusWhiteListRuleOutcome;
+                typedef std::future<DeleteVirusWhiteListRuleOutcome> DeleteVirusWhiteListRuleOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DeleteVirusWhiteListRuleRequest&, DeleteVirusWhiteListRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVirusWhiteListRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeABTestConfigResponse> DescribeABTestConfigOutcome;
                 typedef std::future<DescribeABTestConfigOutcome> DescribeABTestConfigOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeABTestConfigRequest&, DescribeABTestConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeABTestConfigAsyncHandler;
@@ -931,9 +984,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAbnormalProcessEventsResponse> DescribeAbnormalProcessEventsOutcome;
                 typedef std::future<DescribeAbnormalProcessEventsOutcome> DescribeAbnormalProcessEventsOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAbnormalProcessEventsRequest&, DescribeAbnormalProcessEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalProcessEventsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAbnormalProcessEventsExportResponse> DescribeAbnormalProcessEventsExportOutcome;
-                typedef std::future<DescribeAbnormalProcessEventsExportOutcome> DescribeAbnormalProcessEventsExportOutcomeCallable;
-                typedef std::function<void(const TcssClient*, const Model::DescribeAbnormalProcessEventsExportRequest&, DescribeAbnormalProcessEventsExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalProcessEventsExportAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAbnormalProcessLevelSummaryResponse> DescribeAbnormalProcessLevelSummaryOutcome;
                 typedef std::future<DescribeAbnormalProcessLevelSummaryOutcome> DescribeAbnormalProcessLevelSummaryOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAbnormalProcessLevelSummaryRequest&, DescribeAbnormalProcessLevelSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalProcessLevelSummaryAsyncHandler;
@@ -943,9 +993,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAbnormalProcessRulesResponse> DescribeAbnormalProcessRulesOutcome;
                 typedef std::future<DescribeAbnormalProcessRulesOutcome> DescribeAbnormalProcessRulesOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAbnormalProcessRulesRequest&, DescribeAbnormalProcessRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalProcessRulesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAbnormalProcessRulesExportResponse> DescribeAbnormalProcessRulesExportOutcome;
-                typedef std::future<DescribeAbnormalProcessRulesExportOutcome> DescribeAbnormalProcessRulesExportOutcomeCallable;
-                typedef std::function<void(const TcssClient*, const Model::DescribeAbnormalProcessRulesExportRequest&, DescribeAbnormalProcessRulesExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAbnormalProcessRulesExportAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccessControlDetailResponse> DescribeAccessControlDetailOutcome;
                 typedef std::future<DescribeAccessControlDetailOutcome> DescribeAccessControlDetailOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAccessControlDetailRequest&, DescribeAccessControlDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessControlDetailAsyncHandler;
@@ -961,9 +1008,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccessControlRulesResponse> DescribeAccessControlRulesOutcome;
                 typedef std::future<DescribeAccessControlRulesOutcome> DescribeAccessControlRulesOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAccessControlRulesRequest&, DescribeAccessControlRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessControlRulesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAccessControlRulesExportResponse> DescribeAccessControlRulesExportOutcome;
-                typedef std::future<DescribeAccessControlRulesExportOutcome> DescribeAccessControlRulesExportOutcomeCallable;
-                typedef std::function<void(const TcssClient*, const Model::DescribeAccessControlRulesExportRequest&, DescribeAccessControlRulesExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessControlRulesExportAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAffectedClusterCountResponse> DescribeAffectedClusterCountOutcome;
                 typedef std::future<DescribeAffectedClusterCountOutcome> DescribeAffectedClusterCountOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAffectedClusterCountRequest&, DescribeAffectedClusterCountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAffectedClusterCountAsyncHandler;
@@ -1015,9 +1059,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAssetImageListResponse> DescribeAssetImageListOutcome;
                 typedef std::future<DescribeAssetImageListOutcome> DescribeAssetImageListOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAssetImageListRequest&, DescribeAssetImageListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetImageListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAssetImageListExportResponse> DescribeAssetImageListExportOutcome;
-                typedef std::future<DescribeAssetImageListExportOutcome> DescribeAssetImageListExportOutcomeCallable;
-                typedef std::function<void(const TcssClient*, const Model::DescribeAssetImageListExportRequest&, DescribeAssetImageListExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetImageListExportAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAssetImageRegistryAssetStatusResponse> DescribeAssetImageRegistryAssetStatusOutcome;
                 typedef std::future<DescribeAssetImageRegistryAssetStatusOutcome> DescribeAssetImageRegistryAssetStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeAssetImageRegistryAssetStatusRequest&, DescribeAssetImageRegistryAssetStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAssetImageRegistryAssetStatusAsyncHandler;
@@ -1174,9 +1215,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEscapeEventTypeSummaryResponse> DescribeEscapeEventTypeSummaryOutcome;
                 typedef std::future<DescribeEscapeEventTypeSummaryOutcome> DescribeEscapeEventTypeSummaryOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeEscapeEventTypeSummaryRequest&, DescribeEscapeEventTypeSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEscapeEventTypeSummaryAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeEscapeEventsExportResponse> DescribeEscapeEventsExportOutcome;
-                typedef std::future<DescribeEscapeEventsExportOutcome> DescribeEscapeEventsExportOutcomeCallable;
-                typedef std::function<void(const TcssClient*, const Model::DescribeEscapeEventsExportRequest&, DescribeEscapeEventsExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEscapeEventsExportAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEscapeRuleInfoResponse> DescribeEscapeRuleInfoOutcome;
                 typedef std::future<DescribeEscapeRuleInfoOutcome> DescribeEscapeRuleInfoOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeEscapeRuleInfoRequest&, DescribeEscapeRuleInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEscapeRuleInfoAsyncHandler;
@@ -1210,6 +1248,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeImageComponentListResponse> DescribeImageComponentListOutcome;
                 typedef std::future<DescribeImageComponentListOutcome> DescribeImageComponentListOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeImageComponentListRequest&, DescribeImageComponentListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageComponentListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyEventDetailResponse> DescribeImageDenyEventDetailOutcome;
+                typedef std::future<DescribeImageDenyEventDetailOutcome> DescribeImageDenyEventDetailOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyEventDetailRequest&, DescribeImageDenyEventDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyEventDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyEventListResponse> DescribeImageDenyEventListOutcome;
+                typedef std::future<DescribeImageDenyEventListOutcome> DescribeImageDenyEventListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyEventListRequest&, DescribeImageDenyEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyEventListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyEventTendencyResponse> DescribeImageDenyEventTendencyOutcome;
+                typedef std::future<DescribeImageDenyEventTendencyOutcome> DescribeImageDenyEventTendencyOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyEventTendencyRequest&, DescribeImageDenyEventTendencyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyEventTendencyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyRuleDetailResponse> DescribeImageDenyRuleDetailOutcome;
+                typedef std::future<DescribeImageDenyRuleDetailOutcome> DescribeImageDenyRuleDetailOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyRuleDetailRequest&, DescribeImageDenyRuleDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyRuleDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyRuleListResponse> DescribeImageDenyRuleListOutcome;
+                typedef std::future<DescribeImageDenyRuleListOutcome> DescribeImageDenyRuleListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyRuleListRequest&, DescribeImageDenyRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyRuleListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageDenyRuleSummaryResponse> DescribeImageDenyRuleSummaryOutcome;
+                typedef std::future<DescribeImageDenyRuleSummaryOutcome> DescribeImageDenyRuleSummaryOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeImageDenyRuleSummaryRequest&, DescribeImageDenyRuleSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageDenyRuleSummaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImageRegistryNamespaceListResponse> DescribeImageRegistryNamespaceListOutcome;
                 typedef std::future<DescribeImageRegistryNamespaceListOutcome> DescribeImageRegistryNamespaceListOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeImageRegistryNamespaceListRequest&, DescribeImageRegistryNamespaceListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageRegistryNamespaceListAsyncHandler;
@@ -1255,6 +1311,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLogStorageStatisticResponse> DescribeLogStorageStatisticOutcome;
                 typedef std::future<DescribeLogStorageStatisticOutcome> DescribeLogStorageStatisticOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeLogStorageStatisticRequest&, DescribeLogStorageStatisticOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogStorageStatisticAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMaliciousConnectionBlackListResponse> DescribeMaliciousConnectionBlackListOutcome;
+                typedef std::future<DescribeMaliciousConnectionBlackListOutcome> DescribeMaliciousConnectionBlackListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeMaliciousConnectionBlackListRequest&, DescribeMaliciousConnectionBlackListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaliciousConnectionBlackListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMaliciousConnectionWhiteListResponse> DescribeMaliciousConnectionWhiteListOutcome;
+                typedef std::future<DescribeMaliciousConnectionWhiteListOutcome> DescribeMaliciousConnectionWhiteListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeMaliciousConnectionWhiteListRequest&, DescribeMaliciousConnectionWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMaliciousConnectionWhiteListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNetworkFirewallAuditRecordResponse> DescribeNetworkFirewallAuditRecordOutcome;
                 typedef std::future<DescribeNetworkFirewallAuditRecordOutcome> DescribeNetworkFirewallAuditRecordOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeNetworkFirewallAuditRecordRequest&, DescribeNetworkFirewallAuditRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetworkFirewallAuditRecordAsyncHandler;
@@ -1303,6 +1365,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePurchaseStateInfoResponse> DescribePurchaseStateInfoOutcome;
                 typedef std::future<DescribePurchaseStateInfoOutcome> DescribePurchaseStateInfoOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribePurchaseStateInfoRequest&, DescribePurchaseStateInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurchaseStateInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRaspRuleVulsResponse> DescribeRaspRuleVulsOutcome;
+                typedef std::future<DescribeRaspRuleVulsOutcome> DescribeRaspRuleVulsOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeRaspRuleVulsRequest&, DescribeRaspRuleVulsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRaspRuleVulsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRaspRulesResponse> DescribeRaspRulesOutcome;
+                typedef std::future<DescribeRaspRulesOutcome> DescribeRaspRulesOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeRaspRulesRequest&, DescribeRaspRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRaspRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRefreshTaskResponse> DescribeRefreshTaskOutcome;
                 typedef std::future<DescribeRefreshTaskOutcome> DescribeRefreshTaskOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeRefreshTaskRequest&, DescribeRefreshTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRefreshTaskAsyncHandler;
@@ -1315,6 +1383,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeReverseShellEventsExportResponse> DescribeReverseShellEventsExportOutcome;
                 typedef std::future<DescribeReverseShellEventsExportOutcome> DescribeReverseShellEventsExportOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeReverseShellEventsExportRequest&, DescribeReverseShellEventsExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReverseShellEventsExportAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReverseShellRegexpWhiteListResponse> DescribeReverseShellRegexpWhiteListOutcome;
+                typedef std::future<DescribeReverseShellRegexpWhiteListOutcome> DescribeReverseShellRegexpWhiteListOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeReverseShellRegexpWhiteListRequest&, DescribeReverseShellRegexpWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReverseShellRegexpWhiteListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeReverseShellRegexpWhiteListInfoResponse> DescribeReverseShellRegexpWhiteListInfoOutcome;
+                typedef std::future<DescribeReverseShellRegexpWhiteListInfoOutcome> DescribeReverseShellRegexpWhiteListInfoOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeReverseShellRegexpWhiteListInfoRequest&, DescribeReverseShellRegexpWhiteListInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReverseShellRegexpWhiteListInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeReverseShellWhiteListDetailResponse> DescribeReverseShellWhiteListDetailOutcome;
                 typedef std::future<DescribeReverseShellWhiteListDetailOutcome> DescribeReverseShellWhiteListDetailOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeReverseShellWhiteListDetailRequest&, DescribeReverseShellWhiteListDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReverseShellWhiteListDetailAsyncHandler;
@@ -1435,12 +1509,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVirusManualScanEstimateTimeoutResponse> DescribeVirusManualScanEstimateTimeoutOutcome;
                 typedef std::future<DescribeVirusManualScanEstimateTimeoutOutcome> DescribeVirusManualScanEstimateTimeoutOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVirusManualScanEstimateTimeoutRequest&, DescribeVirusManualScanEstimateTimeoutOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusManualScanEstimateTimeoutAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVirusMonitorConfigResponse> DescribeVirusMonitorConfigOutcome;
+                typedef std::future<DescribeVirusMonitorConfigOutcome> DescribeVirusMonitorConfigOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeVirusMonitorConfigRequest&, DescribeVirusMonitorConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusMonitorConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVirusMonitorSettingResponse> DescribeVirusMonitorSettingOutcome;
                 typedef std::future<DescribeVirusMonitorSettingOutcome> DescribeVirusMonitorSettingOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVirusMonitorSettingRequest&, DescribeVirusMonitorSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusMonitorSettingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVirusSampleDownloadUrlResponse> DescribeVirusSampleDownloadUrlOutcome;
                 typedef std::future<DescribeVirusSampleDownloadUrlOutcome> DescribeVirusSampleDownloadUrlOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVirusSampleDownloadUrlRequest&, DescribeVirusSampleDownloadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusSampleDownloadUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVirusScanConfigResponse> DescribeVirusScanConfigOutcome;
+                typedef std::future<DescribeVirusScanConfigOutcome> DescribeVirusScanConfigOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeVirusScanConfigRequest&, DescribeVirusScanConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusScanConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVirusScanSettingResponse> DescribeVirusScanSettingOutcome;
                 typedef std::future<DescribeVirusScanSettingOutcome> DescribeVirusScanSettingOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVirusScanSettingRequest&, DescribeVirusScanSettingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusScanSettingAsyncHandler;
@@ -1456,6 +1536,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVirusTaskListResponse> DescribeVirusTaskListOutcome;
                 typedef std::future<DescribeVirusTaskListOutcome> DescribeVirusTaskListOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVirusTaskListRequest&, DescribeVirusTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusTaskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVirusWhiteListRulesResponse> DescribeVirusWhiteListRulesOutcome;
+                typedef std::future<DescribeVirusWhiteListRulesOutcome> DescribeVirusWhiteListRulesOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::DescribeVirusWhiteListRulesRequest&, DescribeVirusWhiteListRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVirusWhiteListRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVulContainerListResponse> DescribeVulContainerListOutcome;
                 typedef std::future<DescribeVulContainerListOutcome> DescribeVulContainerListOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::DescribeVulContainerListRequest&, DescribeVulContainerListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulContainerListAsyncHandler;
@@ -1561,6 +1644,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyContainerNetStatusResponse> ModifyContainerNetStatusOutcome;
                 typedef std::future<ModifyContainerNetStatusOutcome> ModifyContainerNetStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ModifyContainerNetStatusRequest&, ModifyContainerNetStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyContainerNetStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDefendStatusResponse> ModifyDefendStatusOutcome;
+                typedef std::future<ModifyDefendStatusOutcome> ModifyDefendStatusOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::ModifyDefendStatusRequest&, ModifyDefendStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDefendStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyEscapeEventStatusResponse> ModifyEscapeEventStatusOutcome;
                 typedef std::future<ModifyEscapeEventStatusOutcome> ModifyEscapeEventStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ModifyEscapeEventStatusRequest&, ModifyEscapeEventStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyEscapeEventStatusAsyncHandler;
@@ -1582,9 +1668,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyK8sApiAbnormalRuleStatusResponse> ModifyK8sApiAbnormalRuleStatusOutcome;
                 typedef std::future<ModifyK8sApiAbnormalRuleStatusOutcome> ModifyK8sApiAbnormalRuleStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ModifyK8sApiAbnormalRuleStatusRequest&, ModifyK8sApiAbnormalRuleStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyK8sApiAbnormalRuleStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRaspRulesResponse> ModifyRaspRulesOutcome;
+                typedef std::future<ModifyRaspRulesOutcome> ModifyRaspRulesOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::ModifyRaspRulesRequest&, ModifyRaspRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRaspRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyReverseShellStatusResponse> ModifyReverseShellStatusOutcome;
                 typedef std::future<ModifyReverseShellStatusOutcome> ModifyReverseShellStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ModifyReverseShellStatusRequest&, ModifyReverseShellStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyReverseShellStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRiskDnsEventStatusResponse> ModifyRiskDnsEventStatusOutcome;
+                typedef std::future<ModifyRiskDnsEventStatusOutcome> ModifyRiskDnsEventStatusOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::ModifyRiskDnsEventStatusRequest&, ModifyRiskDnsEventStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRiskDnsEventStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRiskSyscallStatusResponse> ModifyRiskSyscallStatusOutcome;
                 typedef std::future<ModifyRiskSyscallStatusOutcome> ModifyRiskSyscallStatusOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ModifyRiskSyscallStatusRequest&, ModifyRiskSyscallStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRiskSyscallStatusAsyncHandler;
@@ -1669,6 +1761,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SyncAssetImageRegistryAssetResponse> SyncAssetImageRegistryAssetOutcome;
                 typedef std::future<SyncAssetImageRegistryAssetOutcome> SyncAssetImageRegistryAssetOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::SyncAssetImageRegistryAssetRequest&, SyncAssetImageRegistryAssetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncAssetImageRegistryAssetAsyncHandler;
+                typedef Outcome<Core::Error, Model::UninstallClusterContainerSecurityResponse> UninstallClusterContainerSecurityOutcome;
+                typedef std::future<UninstallClusterContainerSecurityOutcome> UninstallClusterContainerSecurityOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::UninstallClusterContainerSecurityRequest&, UninstallClusterContainerSecurityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UninstallClusterContainerSecurityAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateAndPublishNetworkFirewallPolicyDetailResponse> UpdateAndPublishNetworkFirewallPolicyDetailOutcome;
                 typedef std::future<UpdateAndPublishNetworkFirewallPolicyDetailOutcome> UpdateAndPublishNetworkFirewallPolicyDetailOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::UpdateAndPublishNetworkFirewallPolicyDetailRequest&, UpdateAndPublishNetworkFirewallPolicyDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAndPublishNetworkFirewallPolicyDetailAsyncHandler;
@@ -1691,7 +1786,9 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to create a task to add and publish a network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a network policy and add and distribute tasks for the container network.
                  * @param req AddAndPublishNetworkFirewallPolicyDetailRequest
                  * @return AddAndPublishNetworkFirewallPolicyDetailOutcome
                  */
@@ -1700,7 +1797,9 @@ namespace TencentCloud
                 AddAndPublishNetworkFirewallPolicyDetailOutcomeCallable AddAndPublishNetworkFirewallPolicyDetailCallable(const Model::AddAndPublishNetworkFirewallPolicyDetailRequest& request);
 
                 /**
-                 *This API is used to create a task to configure and publish a YAML network policy in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Create a YAML network policy and distribute tasks for the container network.
                  * @param req AddAndPublishNetworkFirewallPolicyYamlDetailRequest
                  * @return AddAndPublishNetworkFirewallPolicyYamlDetailOutcome
                  */
@@ -1819,7 +1918,9 @@ namespace TencentCloud
                 AddIgnoreVulOutcomeCallable AddIgnoreVulCallable(const Model::AddIgnoreVulRequest& request);
 
                 /**
-                 *This API is used to create a task to add a network policy in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and add tasks for the container network.
                  * @param req AddNetworkFirewallPolicyDetailRequest
                  * @return AddNetworkFirewallPolicyDetailOutcome
                  */
@@ -1828,7 +1929,9 @@ namespace TencentCloud
                 AddNetworkFirewallPolicyDetailOutcomeCallable AddNetworkFirewallPolicyDetailCallable(const Model::AddNetworkFirewallPolicyDetailRequest& request);
 
                 /**
-                 *This API is used to create a task to add a YAML network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a YAML network policy and add tasks for the container network.
                  * @param req AddNetworkFirewallPolicyYamlDetailRequest
                  * @return AddNetworkFirewallPolicyYamlDetailOutcome
                  */
@@ -1837,7 +1940,27 @@ namespace TencentCloud
                 AddNetworkFirewallPolicyYamlDetailOutcomeCallable AddNetworkFirewallPolicyYamlDetailCallable(const Model::AddNetworkFirewallPolicyYamlDetailRequest& request);
 
                 /**
-                 *This API is used to create a task to check a YAML network policy in the container network.
+                 *Add or modify the allowlist for malicious external connections.
+                 * @param req AddOrModifyMaliciousConnectionWhiteListRequest
+                 * @return AddOrModifyMaliciousConnectionWhiteListOutcome
+                 */
+                AddOrModifyMaliciousConnectionWhiteListOutcome AddOrModifyMaliciousConnectionWhiteList(const Model::AddOrModifyMaliciousConnectionWhiteListRequest &request);
+                void AddOrModifyMaliciousConnectionWhiteListAsync(const Model::AddOrModifyMaliciousConnectionWhiteListRequest& request, const AddOrModifyMaliciousConnectionWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddOrModifyMaliciousConnectionWhiteListOutcomeCallable AddOrModifyMaliciousConnectionWhiteListCallable(const Model::AddOrModifyMaliciousConnectionWhiteListRequest& request);
+
+                /**
+                 *This API is used to add or modify Trojan allowlist rules.
+                 * @param req AddOrModifyVirusWhiteListRuleRequest
+                 * @return AddOrModifyVirusWhiteListRuleOutcome
+                 */
+                AddOrModifyVirusWhiteListRuleOutcome AddOrModifyVirusWhiteListRule(const Model::AddOrModifyVirusWhiteListRuleRequest &request);
+                void AddOrModifyVirusWhiteListRuleAsync(const Model::AddOrModifyVirusWhiteListRuleRequest& request, const AddOrModifyVirusWhiteListRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddOrModifyVirusWhiteListRuleOutcomeCallable AddOrModifyVirusWhiteListRuleCallable(const Model::AddOrModifyVirusWhiteListRuleRequest& request);
+
+                /**
+                 *deprecated pending reconstruction
+
+Create a task of check the YAML network policy for the container network.
                  * @param req CheckNetworkFirewallPolicyYamlRequest
                  * @return CheckNetworkFirewallPolicyYamlOutcome
                  */
@@ -1855,7 +1978,9 @@ namespace TencentCloud
                 CheckRepeatAssetImageRegistryOutcomeCallable CheckRepeatAssetImageRegistryCallable(const Model::CheckRepeatAssetImageRegistryRequest& request);
 
                 /**
-                 *This API is used to create a task to confirm a network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a network policy and confirm tasks for the container network.
                  * @param req ConfirmNetworkFirewallPolicyRequest
                  * @return ConfirmNetworkFirewallPolicyOutcome
                  */
@@ -1934,6 +2059,15 @@ namespace TencentCloud
                 CreateCheckComponentOutcome CreateCheckComponent(const Model::CreateCheckComponentRequest &request);
                 void CreateCheckComponentAsync(const Model::CreateCheckComponentRequest& request, const CreateCheckComponentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateCheckComponentOutcomeCallable CreateCheckComponentCallable(const Model::CreateCheckComponentRequest& request);
+
+                /**
+                 *Create cluster access.
+                 * @param req CreateClusterAccessRequest
+                 * @return CreateClusterAccessOutcome
+                 */
+                CreateClusterAccessOutcome CreateClusterAccess(const Model::CreateClusterAccessRequest &request);
+                void CreateClusterAccessAsync(const Model::CreateClusterAccessRequest& request, const CreateClusterAccessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateClusterAccessOutcomeCallable CreateClusterAccessCallable(const Model::CreateClusterAccessRequest& request);
 
                 /**
                  *This API is used to create a cluster check task to check it for risk items.
@@ -2044,7 +2178,7 @@ namespace TencentCloud
                 CreateK8sApiAbnormalRuleExportJobOutcomeCallable CreateK8sApiAbnormalRuleExportJobCallable(const Model::CreateK8sApiAbnormalRuleExportJobRequest& request);
 
                 /**
-                 *This API is used to create K8sApi abnormal event rules.
+                 *Create a k8s API exception event RULE. The Action in RuleInfoList only supports RULE_MODE_ALERT (ALERT) and no longer supports RULE_MODE_RELEASE/PASS (allow). The EventID parameter has been removed. To add an event to the allowlist, use the ModifyK8sApiAbnormalWhitelist API.
                  * @param req CreateK8sApiAbnormalRuleInfoRequest
                  * @return CreateK8sApiAbnormalRuleInfoOutcome
                  */
@@ -2053,7 +2187,9 @@ namespace TencentCloud
                 CreateK8sApiAbnormalRuleInfoOutcomeCallable CreateK8sApiAbnormalRuleInfoCallable(const Model::CreateK8sApiAbnormalRuleInfoRequest& request);
 
                 /**
-                 *This API is used to distribute a refresh task in the container network cluster.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Distribute refresh tasks of clusters for the container network.
                  * @param req CreateNetworkFirewallClusterRefreshRequest
                  * @return CreateNetworkFirewallClusterRefreshOutcome
                  */
@@ -2062,7 +2198,9 @@ namespace TencentCloud
                 CreateNetworkFirewallClusterRefreshOutcomeCallable CreateNetworkFirewallClusterRefreshCallable(const Model::CreateNetworkFirewallClusterRefreshRequest& request);
 
                 /**
-                 *This API is used to create a task to sync a network policy from the container network cluster.
+                 *deprecated pending reconstruction
+
+Create an auto-discovery task according to the container network and cluster network policies.
                  * @param req CreateNetworkFirewallPolicyDiscoverRequest
                  * @return CreateNetworkFirewallPolicyDiscoverOutcome
                  */
@@ -2071,7 +2209,9 @@ namespace TencentCloud
                 CreateNetworkFirewallPolicyDiscoverOutcomeCallable CreateNetworkFirewallPolicyDiscoverCallable(const Model::CreateNetworkFirewallPolicyDiscoverRequest& request);
 
                 /**
-                 *This API is used to create a task to publish a network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a network policy and distribute tasks for the container network.
                  * @param req CreateNetworkFirewallPublishRequest
                  * @return CreateNetworkFirewallPublishOutcome
                  */
@@ -2080,7 +2220,9 @@ namespace TencentCloud
                 CreateNetworkFirewallPublishOutcomeCallable CreateNetworkFirewallPublishCallable(const Model::CreateNetworkFirewallPublishRequest& request);
 
                 /**
-                 *This API is used to create a task to revoke a network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a network policy and cancel tasks for the container network.
                  * @param req CreateNetworkFirewallUndoPublishRequest
                  * @return CreateNetworkFirewallUndoPublishOutcome
                  */
@@ -2261,7 +2403,9 @@ namespace TencentCloud
                 DeleteCompliancePolicyAssetSetFromWhitelistOutcomeCallable DeleteCompliancePolicyAssetSetFromWhitelistCallable(const Model::DeleteCompliancePolicyAssetSetFromWhitelistRequest& request);
 
                 /**
-                 *This API is used to remove the specified check item from the allowlist.
+                 *Product refactoring and optimization, none of these APIs are called.
+
+Remove the designated detection item from the allowlist.
                  * @param req DeleteCompliancePolicyItemFromWhitelistRequest
                  * @return DeleteCompliancePolicyItemFromWhitelistOutcome
                  */
@@ -2306,13 +2450,24 @@ namespace TencentCloud
                 DeleteMachineOutcomeCallable DeleteMachineCallable(const Model::DeleteMachineRequest& request);
 
                 /**
-                 *This API is used to create a task to delete a network policy in the container network.
+                 *deprecated pending reconstruction
+
+Create a network policy and delete tasks for the container network.
                  * @param req DeleteNetworkFirewallPolicyDetailRequest
                  * @return DeleteNetworkFirewallPolicyDetailOutcome
                  */
                 DeleteNetworkFirewallPolicyDetailOutcome DeleteNetworkFirewallPolicyDetail(const Model::DeleteNetworkFirewallPolicyDetailRequest &request);
                 void DeleteNetworkFirewallPolicyDetailAsync(const Model::DeleteNetworkFirewallPolicyDetailRequest& request, const DeleteNetworkFirewallPolicyDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteNetworkFirewallPolicyDetailOutcomeCallable DeleteNetworkFirewallPolicyDetailCallable(const Model::DeleteNetworkFirewallPolicyDetailRequest& request);
+
+                /**
+                 *Deleting Entries from the Vulnerability Defense Allowlist
+                 * @param req DeleteRaspRulesRequest
+                 * @return DeleteRaspRulesOutcome
+                 */
+                DeleteRaspRulesOutcome DeleteRaspRules(const Model::DeleteRaspRulesRequest &request);
+                void DeleteRaspRulesAsync(const Model::DeleteRaspRulesRequest& request, const DeleteRaspRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRaspRulesOutcomeCallable DeleteRaspRulesCallable(const Model::DeleteRaspRulesRequest& request);
 
                 /**
                  *This API is used to delete a reverse shell event at runtime.
@@ -2360,6 +2515,15 @@ namespace TencentCloud
                 DeleteSearchTemplateOutcomeCallable DeleteSearchTemplateCallable(const Model::DeleteSearchTemplateRequest& request);
 
                 /**
+                 *This API is used to delete Trojan allowlist rules.
+                 * @param req DeleteVirusWhiteListRuleRequest
+                 * @return DeleteVirusWhiteListRuleOutcome
+                 */
+                DeleteVirusWhiteListRuleOutcome DeleteVirusWhiteListRule(const Model::DeleteVirusWhiteListRuleRequest &request);
+                void DeleteVirusWhiteListRuleAsync(const Model::DeleteVirusWhiteListRuleRequest& request, const DeleteVirusWhiteListRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVirusWhiteListRuleOutcomeCallable DeleteVirusWhiteListRuleCallable(const Model::DeleteVirusWhiteListRuleRequest& request);
+
+                /**
                  *This API is used to get the current canary configuration of the user.
                  * @param req DescribeABTestConfigRequest
                  * @return DescribeABTestConfigOutcome
@@ -2396,17 +2560,6 @@ namespace TencentCloud
                 DescribeAbnormalProcessEventsOutcomeCallable DescribeAbnormalProcessEventsCallable(const Model::DescribeAbnormalProcessEventsRequest& request);
 
                 /**
-                 *接口已废弃
-
-This API is used to query and export the list of abnormal process events at runtime.
-                 * @param req DescribeAbnormalProcessEventsExportRequest
-                 * @return DescribeAbnormalProcessEventsExportOutcome
-                 */
-                DescribeAbnormalProcessEventsExportOutcome DescribeAbnormalProcessEventsExport(const Model::DescribeAbnormalProcessEventsExportRequest &request);
-                void DescribeAbnormalProcessEventsExportAsync(const Model::DescribeAbnormalProcessEventsExportRequest& request, const DescribeAbnormalProcessEventsExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAbnormalProcessEventsExportOutcomeCallable DescribeAbnormalProcessEventsExportCallable(const Model::DescribeAbnormalProcessEventsExportRequest& request);
-
-                /**
                  *This API is used to count the number of pending abnormal process events at each severity level.
                  * @param req DescribeAbnormalProcessLevelSummaryRequest
                  * @return DescribeAbnormalProcessLevelSummaryOutcome
@@ -2432,17 +2585,6 @@ This API is used to query and export the list of abnormal process events at runt
                 DescribeAbnormalProcessRulesOutcome DescribeAbnormalProcessRules(const Model::DescribeAbnormalProcessRulesRequest &request);
                 void DescribeAbnormalProcessRulesAsync(const Model::DescribeAbnormalProcessRulesRequest& request, const DescribeAbnormalProcessRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAbnormalProcessRulesOutcomeCallable DescribeAbnormalProcessRulesCallable(const Model::DescribeAbnormalProcessRulesRequest& request);
-
-                /**
-                 *接口已废弃
-
-This API is used to query and export the list of abnormal process policies at runtime.
-                 * @param req DescribeAbnormalProcessRulesExportRequest
-                 * @return DescribeAbnormalProcessRulesExportOutcome
-                 */
-                DescribeAbnormalProcessRulesExportOutcome DescribeAbnormalProcessRulesExport(const Model::DescribeAbnormalProcessRulesExportRequest &request);
-                void DescribeAbnormalProcessRulesExportAsync(const Model::DescribeAbnormalProcessRulesExportRequest& request, const DescribeAbnormalProcessRulesExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAbnormalProcessRulesExportOutcomeCallable DescribeAbnormalProcessRulesExportCallable(const Model::DescribeAbnormalProcessRulesExportRequest& request);
 
                 /**
                  *This API is used to query the details of an access control event at runtime.
@@ -2488,17 +2630,6 @@ This API is used to query and export the list of abnormal process policies at ru
                 DescribeAccessControlRulesOutcome DescribeAccessControlRules(const Model::DescribeAccessControlRulesRequest &request);
                 void DescribeAccessControlRulesAsync(const Model::DescribeAccessControlRulesRequest& request, const DescribeAccessControlRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAccessControlRulesOutcomeCallable DescribeAccessControlRulesCallable(const Model::DescribeAccessControlRulesRequest& request);
-
-                /**
-                 *接口已废弃
-
-This API is used to export the list of access control policies at runtime.
-                 * @param req DescribeAccessControlRulesExportRequest
-                 * @return DescribeAccessControlRulesExportOutcome
-                 */
-                DescribeAccessControlRulesExportOutcome DescribeAccessControlRulesExport(const Model::DescribeAccessControlRulesExportRequest &request);
-                void DescribeAccessControlRulesExportAsync(const Model::DescribeAccessControlRulesExportRequest& request, const DescribeAccessControlRulesExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAccessControlRulesExportOutcomeCallable DescribeAccessControlRulesExportCallable(const Model::DescribeAccessControlRulesExportRequest& request);
 
                 /**
                  *This API is used to get and return the number of affected clusters.
@@ -2652,17 +2783,6 @@ This API is used to export the list of access control policies at runtime.
                 DescribeAssetImageListOutcome DescribeAssetImageList(const Model::DescribeAssetImageListRequest &request);
                 void DescribeAssetImageListAsync(const Model::DescribeAssetImageListRequest& request, const DescribeAssetImageListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAssetImageListOutcomeCallable DescribeAssetImageListCallable(const Model::DescribeAssetImageListRequest& request);
-
-                /**
-                 *接口已废弃
-
-This API is used to export the list of images.
-                 * @param req DescribeAssetImageListExportRequest
-                 * @return DescribeAssetImageListExportOutcome
-                 */
-                DescribeAssetImageListExportOutcome DescribeAssetImageListExport(const Model::DescribeAssetImageListExportRequest &request);
-                void DescribeAssetImageListExportAsync(const Model::DescribeAssetImageListExportRequest& request, const DescribeAssetImageListExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAssetImageListExportOutcomeCallable DescribeAssetImageListExportCallable(const Model::DescribeAssetImageListExportRequest& request);
 
                 /**
                  *This API is used to view the update progress of the assets in an image repository.
@@ -3133,17 +3253,6 @@ This API is used to export the list of images.
                 DescribeEscapeEventTypeSummaryOutcomeCallable DescribeEscapeEventTypeSummaryCallable(const Model::DescribeEscapeEventTypeSummaryRequest& request);
 
                 /**
-                 *接口已废弃
-
-This API is used to export the list of container escape events.
-                 * @param req DescribeEscapeEventsExportRequest
-                 * @return DescribeEscapeEventsExportOutcome
-                 */
-                DescribeEscapeEventsExportOutcome DescribeEscapeEventsExport(const Model::DescribeEscapeEventsExportRequest &request);
-                void DescribeEscapeEventsExportAsync(const Model::DescribeEscapeEventsExportRequest& request, const DescribeEscapeEventsExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeEscapeEventsExportOutcomeCallable DescribeEscapeEventsExportCallable(const Model::DescribeEscapeEventsExportRequest& request);
-
-                /**
                  *This API is used to query the information of a container escape scan rule.
                  * @param req DescribeEscapeRuleInfoRequest
                  * @return DescribeEscapeRuleInfoOutcome
@@ -3189,7 +3298,7 @@ This API is used to export the list of container escape events.
                 DescribeExportJobManageListOutcomeCallable DescribeExportJobManageListCallable(const Model::DescribeExportJobManageListRequest& request);
 
                 /**
-                 *This API is used to query the result of an export task.
+                 *Query the progress of the export interface
                  * @param req DescribeExportJobResultRequest
                  * @return DescribeExportJobResultOutcome
                  */
@@ -3241,6 +3350,60 @@ This API is used to export the list of container escape events.
                 DescribeImageComponentListOutcome DescribeImageComponentList(const Model::DescribeImageComponentListRequest &request);
                 void DescribeImageComponentListAsync(const Model::DescribeImageComponentListRequest& request, const DescribeImageComponentListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeImageComponentListOutcomeCallable DescribeImageComponentListCallable(const Model::DescribeImageComponentListRequest& request);
+
+                /**
+                 *Query image interception event details.
+                 * @param req DescribeImageDenyEventDetailRequest
+                 * @return DescribeImageDenyEventDetailOutcome
+                 */
+                DescribeImageDenyEventDetailOutcome DescribeImageDenyEventDetail(const Model::DescribeImageDenyEventDetailRequest &request);
+                void DescribeImageDenyEventDetailAsync(const Model::DescribeImageDenyEventDetailRequest& request, const DescribeImageDenyEventDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyEventDetailOutcomeCallable DescribeImageDenyEventDetailCallable(const Model::DescribeImageDenyEventDetailRequest& request);
+
+                /**
+                 *Query the list of image interception events.
+                 * @param req DescribeImageDenyEventListRequest
+                 * @return DescribeImageDenyEventListOutcome
+                 */
+                DescribeImageDenyEventListOutcome DescribeImageDenyEventList(const Model::DescribeImageDenyEventListRequest &request);
+                void DescribeImageDenyEventListAsync(const Model::DescribeImageDenyEventListRequest& request, const DescribeImageDenyEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyEventListOutcomeCallable DescribeImageDenyEventListCallable(const Model::DescribeImageDenyEventListRequest& request);
+
+                /**
+                 *Query the trend of image interception events.
+                 * @param req DescribeImageDenyEventTendencyRequest
+                 * @return DescribeImageDenyEventTendencyOutcome
+                 */
+                DescribeImageDenyEventTendencyOutcome DescribeImageDenyEventTendency(const Model::DescribeImageDenyEventTendencyRequest &request);
+                void DescribeImageDenyEventTendencyAsync(const Model::DescribeImageDenyEventTendencyRequest& request, const DescribeImageDenyEventTendencyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyEventTendencyOutcomeCallable DescribeImageDenyEventTendencyCallable(const Model::DescribeImageDenyEventTendencyRequest& request);
+
+                /**
+                 *Query image interception rule details.
+                 * @param req DescribeImageDenyRuleDetailRequest
+                 * @return DescribeImageDenyRuleDetailOutcome
+                 */
+                DescribeImageDenyRuleDetailOutcome DescribeImageDenyRuleDetail(const Model::DescribeImageDenyRuleDetailRequest &request);
+                void DescribeImageDenyRuleDetailAsync(const Model::DescribeImageDenyRuleDetailRequest& request, const DescribeImageDenyRuleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyRuleDetailOutcomeCallable DescribeImageDenyRuleDetailCallable(const Model::DescribeImageDenyRuleDetailRequest& request);
+
+                /**
+                 *Query the image interception rule list.
+                 * @param req DescribeImageDenyRuleListRequest
+                 * @return DescribeImageDenyRuleListOutcome
+                 */
+                DescribeImageDenyRuleListOutcome DescribeImageDenyRuleList(const Model::DescribeImageDenyRuleListRequest &request);
+                void DescribeImageDenyRuleListAsync(const Model::DescribeImageDenyRuleListRequest& request, const DescribeImageDenyRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyRuleListOutcomeCallable DescribeImageDenyRuleListCallable(const Model::DescribeImageDenyRuleListRequest& request);
+
+                /**
+                 *Query image interception rule statistics.
+                 * @param req DescribeImageDenyRuleSummaryRequest
+                 * @return DescribeImageDenyRuleSummaryOutcome
+                 */
+                DescribeImageDenyRuleSummaryOutcome DescribeImageDenyRuleSummary(const Model::DescribeImageDenyRuleSummaryRequest &request);
+                void DescribeImageDenyRuleSummaryAsync(const Model::DescribeImageDenyRuleSummaryRequest& request, const DescribeImageDenyRuleSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageDenyRuleSummaryOutcomeCallable DescribeImageDenyRuleSummaryCallable(const Model::DescribeImageDenyRuleSummaryRequest& request);
 
                 /**
                  *This API is used to query the list of namespaces for an image repository.
@@ -3333,7 +3496,7 @@ This API is used to export the list of container escape events.
                 DescribeK8sApiAbnormalRuleInfoOutcomeCallable DescribeK8sApiAbnormalRuleInfoCallable(const Model::DescribeK8sApiAbnormalRuleInfoRequest& request);
 
                 /**
-                 *This API is used to the K8sApi abnormal request rule list.
+                 *This API is used to query the list of abnormal request rules for k8sapi. It supports fuzzy search by cluster name (ClusterName) and Cluster ID, with cluster rules (is_all=1) always returned. The response includes newly-added RuleInfoList (sub-rule content), RuleActions (deduplicated execution action list), and the EffectAllCluster field.
                  * @param req DescribeK8sApiAbnormalRuleListRequest
                  * @return DescribeK8sApiAbnormalRuleListOutcome
                  */
@@ -3378,7 +3541,27 @@ This API is used to export the list of container escape events.
                 DescribeLogStorageStatisticOutcomeCallable DescribeLogStorageStatisticCallable(const Model::DescribeLogStorageStatisticRequest& request);
 
                 /**
-                 *This API is used to query the list of cluster policy audits.
+                 *Query the malicious external connection blocklist.
+                 * @param req DescribeMaliciousConnectionBlackListRequest
+                 * @return DescribeMaliciousConnectionBlackListOutcome
+                 */
+                DescribeMaliciousConnectionBlackListOutcome DescribeMaliciousConnectionBlackList(const Model::DescribeMaliciousConnectionBlackListRequest &request);
+                void DescribeMaliciousConnectionBlackListAsync(const Model::DescribeMaliciousConnectionBlackListRequest& request, const DescribeMaliciousConnectionBlackListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMaliciousConnectionBlackListOutcomeCallable DescribeMaliciousConnectionBlackListCallable(const Model::DescribeMaliciousConnectionBlackListRequest& request);
+
+                /**
+                 *Query the allowlist for malicious external connections.
+                 * @param req DescribeMaliciousConnectionWhiteListRequest
+                 * @return DescribeMaliciousConnectionWhiteListOutcome
+                 */
+                DescribeMaliciousConnectionWhiteListOutcome DescribeMaliciousConnectionWhiteList(const Model::DescribeMaliciousConnectionWhiteListRequest &request);
+                void DescribeMaliciousConnectionWhiteListAsync(const Model::DescribeMaliciousConnectionWhiteListRequest& request, const DescribeMaliciousConnectionWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMaliciousConnectionWhiteListOutcomeCallable DescribeMaliciousConnectionWhiteListCallable(const Model::DescribeMaliciousConnectionWhiteListRequest& request);
+
+                /**
+                 *This feature is deprecated pending tripartite reconstruction
+
+Query the cluster policy audit list.
                  * @param req DescribeNetworkFirewallAuditRecordRequest
                  * @return DescribeNetworkFirewallAuditRecordOutcome
                  */
@@ -3387,7 +3570,7 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallAuditRecordOutcomeCallable DescribeNetworkFirewallAuditRecordCallable(const Model::DescribeNetworkFirewallAuditRecordRequest& request);
 
                 /**
-                 *This API is used to query the list of clusters.
+                 *Query the network firewall cluster policy list.
                  * @param req DescribeNetworkFirewallClusterListRequest
                  * @return DescribeNetworkFirewallClusterListOutcome
                  */
@@ -3396,7 +3579,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallClusterListOutcomeCallable DescribeNetworkFirewallClusterListCallable(const Model::DescribeNetworkFirewallClusterListRequest& request);
 
                 /**
-                 *This API is used to query the progress of the asset query task in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Query the asset task progress for the container network.
                  * @param req DescribeNetworkFirewallClusterRefreshStatusRequest
                  * @return DescribeNetworkFirewallClusterRefreshStatusOutcome
                  */
@@ -3405,7 +3590,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallClusterRefreshStatusOutcomeCallable DescribeNetworkFirewallClusterRefreshStatusCallable(const Model::DescribeNetworkFirewallClusterRefreshStatusRequest& request);
 
                 /**
-                 *This API is used to query the list of cluster network namespace labels.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Query the cluster network space tag list.
                  * @param req DescribeNetworkFirewallNamespaceLabelListRequest
                  * @return DescribeNetworkFirewallNamespaceLabelListOutcome
                  */
@@ -3414,7 +3601,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallNamespaceLabelListOutcomeCallable DescribeNetworkFirewallNamespaceLabelListCallable(const Model::DescribeNetworkFirewallNamespaceLabelListRequest& request);
 
                 /**
-                 *This API is used to query cluster network Pod labels.
+                 *deprecated pending reconstruction
+
+Query the cluster network pod tags.
                  * @param req DescribeNetworkFirewallPodLabelsListRequest
                  * @return DescribeNetworkFirewallPodLabelsListOutcome
                  */
@@ -3423,7 +3612,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallPodLabelsListOutcomeCallable DescribeNetworkFirewallPodLabelsListCallable(const Model::DescribeNetworkFirewallPodLabelsListRequest& request);
 
                 /**
-                 *This API is used to view the details of a policy in the container network cluster.
+                 *deprecated pending reconstruction
+
+View policy details of clusters for the container network.
                  * @param req DescribeNetworkFirewallPolicyDetailRequest
                  * @return DescribeNetworkFirewallPolicyDetailOutcome
                  */
@@ -3432,7 +3623,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallPolicyDetailOutcomeCallable DescribeNetworkFirewallPolicyDetailCallable(const Model::DescribeNetworkFirewallPolicyDetailRequest& request);
 
                 /**
-                 *This API is used to query the progress of a network policy sync task in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Query the auto-discovery task process of the network policy for the network policy.
                  * @param req DescribeNetworkFirewallPolicyDiscoverRequest
                  * @return DescribeNetworkFirewallPolicyDiscoverOutcome
                  */
@@ -3441,7 +3634,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallPolicyDiscoverOutcomeCallable DescribeNetworkFirewallPolicyDiscoverCallable(const Model::DescribeNetworkFirewallPolicyDiscoverRequest& request);
 
                 /**
-                 *This API is used to query the list of cluster network policies.
+                 *deprecated pending reconstruction
+
+Query the cluster network policy list.
                  * @param req DescribeNetworkFirewallPolicyListRequest
                  * @return DescribeNetworkFirewallPolicyListOutcome
                  */
@@ -3450,7 +3645,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallPolicyListOutcomeCallable DescribeNetworkFirewallPolicyListCallable(const Model::DescribeNetworkFirewallPolicyListRequest& request);
 
                 /**
-                 *This API is used to query the execution status of a network policy in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Query the network policy execution status for the container network.
                  * @param req DescribeNetworkFirewallPolicyStatusRequest
                  * @return DescribeNetworkFirewallPolicyStatusOutcome
                  */
@@ -3459,7 +3656,9 @@ This API is used to export the list of container escape events.
                 DescribeNetworkFirewallPolicyStatusOutcomeCallable DescribeNetworkFirewallPolicyStatusCallable(const Model::DescribeNetworkFirewallPolicyStatusRequest& request);
 
                 /**
-                 *This API is used to view the details of a YAML network policy in the container network cluster.
+                 *deprecated pending reconstruction
+
+View YAML network policy details of clusters for the container network.
                  * @param req DescribeNetworkFirewallPolicyYamlDetailRequest
                  * @return DescribeNetworkFirewallPolicyYamlDetailOutcome
                  */
@@ -3522,6 +3721,24 @@ This API is used to export the list of container escape events.
                 DescribePurchaseStateInfoOutcomeCallable DescribePurchaseStateInfoCallable(const Model::DescribePurchaseStateInfoRequest& request);
 
                 /**
+                 *Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
+                 * @param req DescribeRaspRuleVulsRequest
+                 * @return DescribeRaspRuleVulsOutcome
+                 */
+                DescribeRaspRuleVulsOutcome DescribeRaspRuleVuls(const Model::DescribeRaspRuleVulsRequest &request);
+                void DescribeRaspRuleVulsAsync(const Model::DescribeRaspRuleVulsRequest& request, const DescribeRaspRuleVulsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRaspRuleVulsOutcomeCallable DescribeRaspRuleVulsCallable(const Model::DescribeRaspRuleVulsRequest& request);
+
+                /**
+                 *Query the list of vulnerabilities that can be defensed.
+                 * @param req DescribeRaspRulesRequest
+                 * @return DescribeRaspRulesOutcome
+                 */
+                DescribeRaspRulesOutcome DescribeRaspRules(const Model::DescribeRaspRulesRequest &request);
+                void DescribeRaspRulesAsync(const Model::DescribeRaspRulesRequest& request, const DescribeRaspRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRaspRulesOutcomeCallable DescribeRaspRulesCallable(const Model::DescribeRaspRulesRequest& request);
+
+                /**
                  *This API is used to query a refresh task.
                  * @param req DescribeRefreshTaskRequest
                  * @return DescribeRefreshTaskOutcome
@@ -3556,6 +3773,24 @@ This API is used to export the list of container escape events.
                 DescribeReverseShellEventsExportOutcome DescribeReverseShellEventsExport(const Model::DescribeReverseShellEventsExportRequest &request);
                 void DescribeReverseShellEventsExportAsync(const Model::DescribeReverseShellEventsExportRequest& request, const DescribeReverseShellEventsExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeReverseShellEventsExportOutcomeCallable DescribeReverseShellEventsExportCallable(const Model::DescribeReverseShellEventsExportRequest& request);
+
+                /**
+                 *Query the reverse shell regular expression allowlist.
+                 * @param req DescribeReverseShellRegexpWhiteListRequest
+                 * @return DescribeReverseShellRegexpWhiteListOutcome
+                 */
+                DescribeReverseShellRegexpWhiteListOutcome DescribeReverseShellRegexpWhiteList(const Model::DescribeReverseShellRegexpWhiteListRequest &request);
+                void DescribeReverseShellRegexpWhiteListAsync(const Model::DescribeReverseShellRegexpWhiteListRequest& request, const DescribeReverseShellRegexpWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReverseShellRegexpWhiteListOutcomeCallable DescribeReverseShellRegexpWhiteListCallable(const Model::DescribeReverseShellRegexpWhiteListRequest& request);
+
+                /**
+                 *Query details of the reverse shell regular expression allowlist.
+                 * @param req DescribeReverseShellRegexpWhiteListInfoRequest
+                 * @return DescribeReverseShellRegexpWhiteListInfoOutcome
+                 */
+                DescribeReverseShellRegexpWhiteListInfoOutcome DescribeReverseShellRegexpWhiteListInfo(const Model::DescribeReverseShellRegexpWhiteListInfoRequest &request);
+                void DescribeReverseShellRegexpWhiteListInfoAsync(const Model::DescribeReverseShellRegexpWhiteListInfoRequest& request, const DescribeReverseShellRegexpWhiteListInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeReverseShellRegexpWhiteListInfoOutcomeCallable DescribeReverseShellRegexpWhiteListInfoCallable(const Model::DescribeReverseShellRegexpWhiteListInfoRequest& request);
 
                 /**
                  *This API is used to query the details of the allowlist of reverse shells at runtime.
@@ -3918,6 +4153,15 @@ This API is used to export the list of container escape events.
                 DescribeVirusManualScanEstimateTimeoutOutcomeCallable DescribeVirusManualScanEstimateTimeoutCallable(const Model::DescribeVirusManualScanEstimateTimeoutRequest& request);
 
                 /**
+                 *Query real-time monitoring settings of file scan at runtime.
+                 * @param req DescribeVirusMonitorConfigRequest
+                 * @return DescribeVirusMonitorConfigOutcome
+                 */
+                DescribeVirusMonitorConfigOutcome DescribeVirusMonitorConfig(const Model::DescribeVirusMonitorConfigRequest &request);
+                void DescribeVirusMonitorConfigAsync(const Model::DescribeVirusMonitorConfigRequest& request, const DescribeVirusMonitorConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVirusMonitorConfigOutcomeCallable DescribeVirusMonitorConfigCallable(const Model::DescribeVirusMonitorConfigRequest& request);
+
+                /**
                  *This API is used to query the real-time monitoring settings of virus scanning at runtime.
                  * @param req DescribeVirusMonitorSettingRequest
                  * @return DescribeVirusMonitorSettingOutcome
@@ -3934,6 +4178,15 @@ This API is used to export the list of container escape events.
                 DescribeVirusSampleDownloadUrlOutcome DescribeVirusSampleDownloadUrl(const Model::DescribeVirusSampleDownloadUrlRequest &request);
                 void DescribeVirusSampleDownloadUrlAsync(const Model::DescribeVirusSampleDownloadUrlRequest& request, const DescribeVirusSampleDownloadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVirusSampleDownloadUrlOutcomeCallable DescribeVirusSampleDownloadUrlCallable(const Model::DescribeVirusSampleDownloadUrlRequest& request);
+
+                /**
+                 *Query new settings of file scan at runtime.
+                 * @param req DescribeVirusScanConfigRequest
+                 * @return DescribeVirusScanConfigOutcome
+                 */
+                DescribeVirusScanConfigOutcome DescribeVirusScanConfig(const Model::DescribeVirusScanConfigRequest &request);
+                void DescribeVirusScanConfigAsync(const Model::DescribeVirusScanConfigRequest& request, const DescribeVirusScanConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVirusScanConfigOutcomeCallable DescribeVirusScanConfigCallable(const Model::DescribeVirusScanConfigRequest& request);
 
                 /**
                  *This API is used to query virus scanning settings at runtime.
@@ -3979,6 +4232,15 @@ This API is used to export the list of container escape events.
                 DescribeVirusTaskListOutcome DescribeVirusTaskList(const Model::DescribeVirusTaskListRequest &request);
                 void DescribeVirusTaskListAsync(const Model::DescribeVirusTaskListRequest& request, const DescribeVirusTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVirusTaskListOutcomeCallable DescribeVirusTaskListCallable(const Model::DescribeVirusTaskListRequest& request);
+
+                /**
+                 *This API is used to query the Trojan allowlist rule list.
+                 * @param req DescribeVirusWhiteListRulesRequest
+                 * @return DescribeVirusWhiteListRulesOutcome
+                 */
+                DescribeVirusWhiteListRulesOutcome DescribeVirusWhiteListRules(const Model::DescribeVirusWhiteListRulesRequest &request);
+                void DescribeVirusWhiteListRulesAsync(const Model::DescribeVirusWhiteListRulesRequest& request, const DescribeVirusWhiteListRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVirusWhiteListRulesOutcomeCallable DescribeVirusWhiteListRulesCallable(const Model::DescribeVirusWhiteListRulesRequest& request);
 
                 /**
                  *This API is used to query the list of containers affected by vulnerabilities.
@@ -4296,6 +4558,15 @@ This API is used to export the list of container escape events.
                 ModifyContainerNetStatusOutcomeCallable ModifyContainerNetStatusCallable(const Model::ModifyContainerNetStatusRequest& request);
 
                 /**
+                 *This API is used to modify the protection status.
+                 * @param req ModifyDefendStatusRequest
+                 * @return ModifyDefendStatusOutcome
+                 */
+                ModifyDefendStatusOutcome ModifyDefendStatus(const Model::ModifyDefendStatusRequest &request);
+                void ModifyDefendStatusAsync(const Model::ModifyDefendStatusRequest& request, const ModifyDefendStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDefendStatusOutcomeCallable ModifyDefendStatusCallable(const Model::ModifyDefendStatusRequest& request);
+
+                /**
                  *This API is used to change the status of a container escape scan event.
                  * @param req ModifyEscapeEventStatusRequest
                  * @return ModifyEscapeEventStatusOutcome
@@ -4341,7 +4612,7 @@ This API is used to export the list of container escape events.
                 ModifyK8sApiAbnormalEventStatusOutcomeCallable ModifyK8sApiAbnormalEventStatusCallable(const Model::ModifyK8sApiAbnormalEventStatusRequest& request);
 
                 /**
-                 *This API is used to modify the information of K8sApi abnormal rules.
+                 *Modify the exception rule info of k8sapi. The Action in RuleInfoList only supports RULE_MODE_ALERT and no longer supports RULE_MODE_RELEASE/PASS.
                  * @param req ModifyK8sApiAbnormalRuleInfoRequest
                  * @return ModifyK8sApiAbnormalRuleInfoOutcome
                  */
@@ -4359,6 +4630,15 @@ This API is used to export the list of container escape events.
                 ModifyK8sApiAbnormalRuleStatusOutcomeCallable ModifyK8sApiAbnormalRuleStatusCallable(const Model::ModifyK8sApiAbnormalRuleStatusRequest& request);
 
                 /**
+                 *Edit or create a java Memory Trojan allowlist
+                 * @param req ModifyRaspRulesRequest
+                 * @return ModifyRaspRulesOutcome
+                 */
+                ModifyRaspRulesOutcome ModifyRaspRules(const Model::ModifyRaspRulesRequest &request);
+                void ModifyRaspRulesAsync(const Model::ModifyRaspRulesRequest& request, const ModifyRaspRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRaspRulesOutcomeCallable ModifyRaspRulesCallable(const Model::ModifyRaspRulesRequest& request);
+
+                /**
                  *This API is used to change the status of a reverse shell event.
                  * @param req ModifyReverseShellStatusRequest
                  * @return ModifyReverseShellStatusOutcome
@@ -4366,6 +4646,15 @@ This API is used to export the list of container escape events.
                 ModifyReverseShellStatusOutcome ModifyReverseShellStatus(const Model::ModifyReverseShellStatusRequest &request);
                 void ModifyReverseShellStatusAsync(const Model::ModifyReverseShellStatusRequest& request, const ModifyReverseShellStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyReverseShellStatusOutcomeCallable ModifyReverseShellStatusCallable(const Model::ModifyReverseShellStatusRequest& request);
+
+                /**
+                 *Edit the malicious request event status.
+                 * @param req ModifyRiskDnsEventStatusRequest
+                 * @return ModifyRiskDnsEventStatusOutcome
+                 */
+                ModifyRiskDnsEventStatusOutcome ModifyRiskDnsEventStatus(const Model::ModifyRiskDnsEventStatusRequest &request);
+                void ModifyRiskDnsEventStatusAsync(const Model::ModifyRiskDnsEventStatusRequest& request, const ModifyRiskDnsEventStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRiskDnsEventStatusOutcomeCallable ModifyRiskDnsEventStatusCallable(const Model::ModifyRiskDnsEventStatusRequest& request);
 
                 /**
                  *This API is used to change the status of a high-risk syscall event.
@@ -4620,7 +4909,18 @@ This API is used to export the list of container escape events.
                 SyncAssetImageRegistryAssetOutcomeCallable SyncAssetImageRegistryAssetCallable(const Model::SyncAssetImageRegistryAssetRequest& request);
 
                 /**
-                 *This API is used to create a task to update and publish a network policy in the container network.
+                 *Uninstall cluster container security.
+                 * @param req UninstallClusterContainerSecurityRequest
+                 * @return UninstallClusterContainerSecurityOutcome
+                 */
+                UninstallClusterContainerSecurityOutcome UninstallClusterContainerSecurity(const Model::UninstallClusterContainerSecurityRequest &request);
+                void UninstallClusterContainerSecurityAsync(const Model::UninstallClusterContainerSecurityRequest& request, const UninstallClusterContainerSecurityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UninstallClusterContainerSecurityOutcomeCallable UninstallClusterContainerSecurityCallable(const Model::UninstallClusterContainerSecurityRequest& request);
+
+                /**
+                 *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and update and distribute tasks for the container network.
                  * @param req UpdateAndPublishNetworkFirewallPolicyDetailRequest
                  * @return UpdateAndPublishNetworkFirewallPolicyDetailOutcome
                  */
@@ -4629,7 +4929,9 @@ This API is used to export the list of container escape events.
                 UpdateAndPublishNetworkFirewallPolicyDetailOutcomeCallable UpdateAndPublishNetworkFirewallPolicyDetailCallable(const Model::UpdateAndPublishNetworkFirewallPolicyDetailRequest& request);
 
                 /**
-                 *This API is used to create a task to update and publish a YAML network policy in the container network.
+                 *deprecated pending reconstruction
+
+Update the YAML network policy and distribute tasks for the container network.
                  * @param req UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest
                  * @return UpdateAndPublishNetworkFirewallPolicyYamlDetailOutcome
                  */
@@ -4656,7 +4958,9 @@ This API is used to export the list of container escape events.
                 UpdateImageRegistryTimingScanTaskOutcomeCallable UpdateImageRegistryTimingScanTaskCallable(const Model::UpdateImageRegistryTimingScanTaskRequest& request);
 
                 /**
-                 *This API is used to create a task to update a network policy in the container network.
+                 *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy update task for the container network.
                  * @param req UpdateNetworkFirewallPolicyDetailRequest
                  * @return UpdateNetworkFirewallPolicyDetailOutcome
                  */
@@ -4665,7 +4969,9 @@ This API is used to export the list of container escape events.
                 UpdateNetworkFirewallPolicyDetailOutcomeCallable UpdateNetworkFirewallPolicyDetailCallable(const Model::UpdateNetworkFirewallPolicyDetailRequest& request);
 
                 /**
-                 *This API is used to create a task to update a YAML network policy in the container network.
+                 *deprecated pending reconstruction
+
+Update the YAML network policy task for the container network.
                  * @param req UpdateNetworkFirewallPolicyYamlDetailRequest
                  * @return UpdateNetworkFirewallPolicyYamlDetailOutcome
                  */

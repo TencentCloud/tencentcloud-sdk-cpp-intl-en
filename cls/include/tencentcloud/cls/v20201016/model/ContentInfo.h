@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content format. Valid values: `json`, `csv`
-                     * @return Format Content format. Valid values: `json`, `csv`
+                     * 获取Content format, support json, csv, parquet
+                     * @return Format Content format, support json, csv, parquet
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Content format. Valid values: `json`, `csv`
-                     * @param _format Content format. Valid values: `json`, `csv`
+                     * 设置Content format, support json, csv, parquet
+                     * @param _format Content format, support json, csv, parquet
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -148,7 +148,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Content format. Valid values: `json`, `csv`
+                     * Content format, support json, csv, parquet
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

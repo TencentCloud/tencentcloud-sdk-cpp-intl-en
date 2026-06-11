@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool KeyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return KeyNonExistingField Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Assigned value for parsing failure
+                     * @return KeyNonExistingField Assigned value for parsing failure
                      * 
                      */
                     std::string GetKeyNonExistingField() const;
 
                     /**
-                     * 设置Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _keyNonExistingField Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Assigned value for parsing failure
+                     * @param _keyNonExistingField Assigned value for parsing failure
                      * 
                      */
                     void SetKeyNonExistingField(const std::string& _keyNonExistingField);
@@ -128,8 +124,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_keyTypeHasBeenSet;
 
                     /**
-                     * Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Assigned value for parsing failure
                      */
                     std::string m_keyNonExistingField;
                     bool m_keyNonExistingFieldHasBeenSet;

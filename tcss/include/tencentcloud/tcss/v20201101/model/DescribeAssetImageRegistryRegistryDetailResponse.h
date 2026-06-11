@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/RegistryConnDetectResult.h>
 
 
 namespace TencentCloud
@@ -114,10 +115,8 @@ namespace TencentCloud
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取Repository version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistryVersion Repository version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取warehouse version
+                     * @return RegistryVersion warehouse version
                      * 
                      */
                     std::string GetRegistryVersion() const;
@@ -144,10 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region. Default value: `default`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistryRegion Region. Default value: `default`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region, list: default
+                     * @return RegistryRegion Region, list: default
                      * 
                      */
                     std::string GetRegistryRegion() const;
@@ -160,10 +157,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegistryRegionHasBeenSet() const;
 
                     /**
-                     * 获取Speed limit
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpeedLimit Speed limit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取rate limiting
+                     * @return SpeedLimit rate limiting
                      * 
                      */
                     uint64_t GetSpeedLimit() const;
@@ -176,10 +171,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpeedLimitHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+                     * @return Insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
                      * 
                      */
                     uint64_t GetInsecure() const;
@@ -190,6 +183,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool InsecureHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConnDetectDetail 
+                     * 
+                     */
+                    std::vector<RegistryConnDetectResult> GetConnDetectDetail() const;
+
+                    /**
+                     * 判断参数 ConnDetectDetail 是否已赋值
+                     * @return ConnDetectDetail 是否已赋值
+                     * 
+                     */
+                    bool ConnDetectDetailHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceID 
+                     * 
+                     */
+                    std::string GetInstanceID() const;
+
+                    /**
+                     * 判断参数 InstanceID 是否已赋值
+                     * @return InstanceID 是否已赋值
+                     * 
+                     */
+                    bool InstanceIDHasBeenSet() const;
+
+                    /**
+                     * 获取Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 
+                     */
+                    uint64_t GetSyncMode() const;
+
+                    /**
+                     * 判断参数 SyncMode 是否已赋值
+                     * @return SyncMode 是否已赋值
+                     * 
+                     */
+                    bool SyncModeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * 
+                     */
+                    bool GetNeedScan() const;
+
+                    /**
+                     * 判断参数 NeedScan 是否已赋值
+                     * @return NeedScan 是否已赋值
+                     * 
+                     */
+                    bool NeedScanHasBeenSet() const;
+
+                    /**
+                     * 获取Webhook access address.
+                     * @return WebhookUrl Webhook access address.
+                     * 
+                     */
+                    std::string GetWebhookUrl() const;
+
+                    /**
+                     * 判断参数 WebhookUrl 是否已赋值
+                     * @return WebhookUrl 是否已赋值
+                     * 
+                     */
+                    bool WebhookUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Webhook access token.	
+                     * @return WebhookToken Webhook access token.	
+                     * 
+                     */
+                    std::string GetWebhookToken() const;
+
+                    /**
+                     * 判断参数 WebhookToken 是否已赋值
+                     * @return WebhookToken 是否已赋值
+                     * 
+                     */
+                    bool WebhookTokenHasBeenSet() const;
 
                 private:
 
@@ -224,8 +301,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * Repository version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * warehouse version
                      */
                     std::string m_registryVersion;
                     bool m_registryVersionHasBeenSet;
@@ -237,25 +313,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * Region. Default value: `default`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region, list: default
                      */
                     std::string m_registryRegion;
                     bool m_registryRegionHasBeenSet;
 
                     /**
-                     * Speed limit
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * rate limiting
                      */
                     uint64_t m_speedLimit;
                     bool m_speedLimitHasBeenSet;
 
                     /**
-                     * Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
                      */
                     uint64_t m_insecure;
                     bool m_insecureHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<RegistryConnDetectResult> m_connDetectDetail;
+                    bool m_connDetectDetailHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceID;
+                    bool m_instanceIDHasBeenSet;
+
+                    /**
+                     * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     */
+                    uint64_t m_syncMode;
+                    bool m_syncModeHasBeenSet;
+
+                    /**
+                     * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     */
+                    bool m_needScan;
+                    bool m_needScanHasBeenSet;
+
+                    /**
+                     * Webhook access address.
+                     */
+                    std::string m_webhookUrl;
+                    bool m_webhookUrlHasBeenSet;
+
+                    /**
+                     * Webhook access token.	
+                     */
+                    std::string m_webhookToken;
+                    bool m_webhookTokenHasBeenSet;
 
                 };
             }

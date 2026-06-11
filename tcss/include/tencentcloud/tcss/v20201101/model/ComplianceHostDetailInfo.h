@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DockerVersion Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Docker version on the host.
+                     * @return DockerVersion Docker version on the host.
                      * 
                      */
                     std::string GetDockerVersion() const;
 
                     /**
-                     * 设置Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dockerVersion Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Docker version on the host.
+                     * @param _dockerVersion Docker version on the host.
                      * 
                      */
                     void SetDockerVersion(const std::string& _dockerVersion);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DockerVersionHasBeenSet() const;
 
                     /**
-                     * 获取K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return K8SVersion K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取K8S version on the host.
+                     * @return K8SVersion K8S version on the host.
                      * 
                      */
                     std::string GetK8SVersion() const;
 
                     /**
-                     * 设置K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _k8SVersion K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置K8S version on the host.
+                     * @param _k8SVersion K8S version on the host.
                      * 
                      */
                     void SetK8SVersion(const std::string& _k8SVersion);
@@ -96,21 +88,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool K8SVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Containerd Version on Host
+                     * @return ContainerdVersion Containerd Version on Host
+                     * 
+                     */
+                    std::string GetContainerdVersion() const;
+
+                    /**
+                     * 设置Containerd Version on Host
+                     * @param _containerdVersion Containerd Version on Host
+                     * 
+                     */
+                    void SetContainerdVersion(const std::string& _containerdVersion);
+
+                    /**
+                     * 判断参数 ContainerdVersion 是否已赋值
+                     * @return ContainerdVersion 是否已赋值
+                     * 
+                     */
+                    bool ContainerdVersionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Docker version on the host.
                      */
                     std::string m_dockerVersion;
                     bool m_dockerVersionHasBeenSet;
 
                     /**
-                     * K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * K8S version on the host.
                      */
                     std::string m_k8SVersion;
                     bool m_k8SVersionHasBeenSet;
+
+                    /**
+                     * Containerd Version on Host
+                     */
+                    std::string m_containerdVersion;
+                    bool m_containerdVersionHasBeenSet;
 
                 };
             }

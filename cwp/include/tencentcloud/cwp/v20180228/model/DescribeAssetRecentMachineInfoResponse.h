@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalList List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of total quantities
+                     * @return TotalList List of total quantities
                      * 
                      */
                     std::vector<AssetKeyVal> GetTotalList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LiveList List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetLiveList() const;
@@ -78,9 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OfflineList List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetOfflineList() const;
@@ -94,9 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskList List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetRiskList() const;
@@ -111,29 +103,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of total quantities
                      */
                     std::vector<AssetKeyVal> m_totalList;
                     bool m_totalListHasBeenSet;
 
                     /**
                      * List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_liveList;
                     bool m_liveListHasBeenSet;
 
                     /**
                      * List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_offlineList;
                     bool m_offlineListHasBeenSet;
 
                     /**
                      * List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_riskList;
                     bool m_riskListHasBeenSet;

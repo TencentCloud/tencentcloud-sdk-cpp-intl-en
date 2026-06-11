@@ -86,10 +86,8 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIds Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Specified hosts
+                     * @return InstanceIds Specified hosts
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -103,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExcludeInstanceIds Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetExcludeInstanceIds() const;
@@ -152,15 +148,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Specified hosts
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
                      * Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_excludeInstanceIds;
                     bool m_excludeInstanceIdsHasBeenSet;

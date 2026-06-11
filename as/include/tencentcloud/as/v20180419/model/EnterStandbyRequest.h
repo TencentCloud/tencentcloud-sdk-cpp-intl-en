@@ -72,23 +72,23 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
-                     * @return InstanceIds List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+                     * 获取List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
+                     * @return InstanceIds List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
-                     * @param _instanceIds List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+                     * 设置List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
+                     * @param _instanceIds List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -111,9 +111,9 @@ namespace TencentCloud
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+                     * List of running instances. non-running instances are not supported. you can obtain available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

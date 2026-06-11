@@ -195,18 +195,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetHostRange() const;
 
                     /**
                      * 设置Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostRange(const int64_t& _hostRange);
@@ -220,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Count Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _count Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -289,14 +281,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_hostRange;
                     bool m_hostRangeHasBeenSet;
 
                     /**
                      * Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

@@ -44,54 +44,58 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取machineGroupName
+                     * 获取Filter criteria.
+machineGroupName
 - Filter by [Machine Group Name].
 - Type: String
-- Required: No
+-Required: No
 
 machineGroupId
-- Filter by [Machine group ID].
+- Filter by [machine group ID].
 - Type: String
-- Required: No
+-Required: No
 
 osType
-- Filter by [Operating System Type].
-- Type: Int
-- Required: No
+- Filter by [Operating System Type]. 0: Linux; 1: Windows.
+-Type: Int
+-Required: No
 
 tagKey
 - Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
-- Required: No
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
+- Type: String
+-Required: No
 
 The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
-                     * @return Filters machineGroupName
+                     * @return Filters Filter criteria.
+machineGroupName
 - Filter by [Machine Group Name].
 - Type: String
-- Required: No
+-Required: No
 
 machineGroupId
-- Filter by [Machine group ID].
+- Filter by [machine group ID].
 - Type: String
-- Required: No
+-Required: No
 
 osType
-- Filter by [Operating System Type].
-- Type: Int
-- Required: No
+- Filter by [Operating System Type]. 0: Linux; 1: Windows.
+-Type: Int
+-Required: No
 
 tagKey
 - Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
-- Required: No
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
+- Type: String
+-Required: No
 
 The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
@@ -99,54 +103,58 @@ The maximum number of Filters per request is 10, and the maximum for Filter.Valu
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置machineGroupName
+                     * 设置Filter criteria.
+machineGroupName
 - Filter by [Machine Group Name].
 - Type: String
-- Required: No
+-Required: No
 
 machineGroupId
-- Filter by [Machine group ID].
+- Filter by [machine group ID].
 - Type: String
-- Required: No
+-Required: No
 
 osType
-- Filter by [Operating System Type].
-- Type: Int
-- Required: No
+- Filter by [Operating System Type]. 0: Linux; 1: Windows.
+-Type: Int
+-Required: No
 
 tagKey
 - Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
-- Required: No
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
+- Type: String
+-Required: No
 
 The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
-                     * @param _filters machineGroupName
+                     * @param _filters Filter criteria.
+machineGroupName
 - Filter by [Machine Group Name].
 - Type: String
-- Required: No
+-Required: No
 
 machineGroupId
-- Filter by [Machine group ID].
+- Filter by [machine group ID].
 - Type: String
-- Required: No
+-Required: No
 
 osType
-- Filter by [Operating System Type].
-- Type: Int
-- Required: No
+- Filter by [Operating System Type]. 0: Linux; 1: Windows.
+-Type: Int
+-Required: No
 
 tagKey
 - Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
-- Required: No
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
+- Type: String
+-Required: No
 
 The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
@@ -205,29 +213,31 @@ The maximum number of Filters per request is 10, and the maximum for Filter.Valu
                 private:
 
                     /**
-                     * machineGroupName
+                     * Filter criteria.
+machineGroupName
 - Filter by [Machine Group Name].
 - Type: String
-- Required: No
+-Required: No
 
 machineGroupId
-- Filter by [Machine group ID].
+- Filter by [machine group ID].
 - Type: String
-- Required: No
+-Required: No
 
 osType
-- Filter by [Operating System Type].
-- Type: Int
-- Required: No
+- Filter by [Operating System Type]. 0: Linux; 1: Windows.
+-Type: Int
+-Required: No
 
 tagKey
 - Filter by [Tag key].
 - Type: String
-- Required: No
+-Required: No
 
 tag:tagKey
-- Filter by [Tag key-value pair]. Replace tagKey with the specific Tag key.- Type: String
-- Required: No
+-Filter by [tag key-value pair]. Replace tagKey with a specific tag key.
+- Type: String
+-Required: No
 
 The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      */

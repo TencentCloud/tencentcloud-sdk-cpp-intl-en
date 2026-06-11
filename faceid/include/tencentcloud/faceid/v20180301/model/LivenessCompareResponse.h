@@ -100,8 +100,10 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BestFrameList 
+                     * 获取Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
+                     * @return BestFrameList Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
                      * 
                      */
                     std::vector<std::string> GetBestFrameList() const;
@@ -140,7 +142,8 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
                      */
                     std::vector<std::string> m_bestFrameList;
                     bool m_bestFrameListHasBeenSet;

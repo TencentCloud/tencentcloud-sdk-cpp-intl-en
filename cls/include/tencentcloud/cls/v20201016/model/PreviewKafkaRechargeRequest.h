@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
 #include <tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h>
+#include <tencentcloud/cls/v20201016/model/UserKafkaMeta.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Preview type. Valid values: 1 (source data preview) and 2 (result preview).
-                     * @return PreviewType Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+                     * 获取Preview type. 1: preview of source data; 2: preview of exported results.
+                     * @return PreviewType Preview type. 1: preview of source data; 2: preview of exported results.
                      * 
                      */
                     uint64_t GetPreviewType() const;
 
                     /**
-                     * 设置Preview type. Valid values: 1 (source data preview) and 2 (result preview).
-                     * @param _previewType Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+                     * 设置Preview type. 1: preview of source data; 2: preview of exported results.
+                     * @param _previewType Preview type. 1: preview of source data; 2: preview of exported results.
                      * 
                      */
                     void SetPreviewType(const uint64_t& _previewType);
@@ -66,15 +67,15 @@ namespace TencentCloud
                     bool PreviewTypeHasBeenSet() const;
 
                     /**
-                     * 获取Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-                     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * 获取Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     uint64_t GetKafkaType() const;
 
                     /**
-                     * 设置Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-                     * @param _kafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * 设置Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @param _kafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     void SetKafkaType(const uint64_t& _kafkaType);
@@ -87,15 +88,19 @@ namespace TencentCloud
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
-                     * @return UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+                     * 获取List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
+                     * @return UserKafkaTopics List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
                      * 
                      */
                     std::string GetUserKafkaTopics() const;
 
                     /**
-                     * 设置List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
-                     * @param _userKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+                     * 设置List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
+                     * @param _userKafkaTopics List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
                      * 
                      */
                     void SetUserKafkaTopics(const std::string& _userKafkaTopics);
@@ -108,15 +113,15 @@ namespace TencentCloud
                     bool UserKafkaTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
-                     * @return Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+                     * 获取Import data location. -2: earliest; -1: latest.
+                     * @return Offset Import data location. -2: earliest; -1: latest.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
-                     * @param _offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+                     * 设置Import data location. -2: earliest; -1: latest.
+                     * @param _offset Import data location. -2: earliest; -1: latest.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -129,19 +134,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
-                     * @return KafkaInstance Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+                     * 获取Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @return KafkaInstance Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
-                     * @param _kafkaInstance Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+                     * 设置Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @param _kafkaInstance Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -154,15 +159,19 @@ KafkaInstance is required when KafkaType is 0
                     bool KafkaInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Service AddressServerAddr is required when KafkaType is 1
-                     * @return ServerAddr Service AddressServerAddr is required when KafkaType is 1
+                     * 获取Service address.
+When KafkaType is 1, ServerAddr is required.
+                     * @return ServerAddr Service address.
+When KafkaType is 1, ServerAddr is required.
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置Service AddressServerAddr is required when KafkaType is 1
-                     * @param _serverAddr Service AddressServerAddr is required when KafkaType is 1
+                     * 设置Service address.
+When KafkaType is 1, ServerAddr is required.
+                     * @param _serverAddr Service address.
+When KafkaType is 1, ServerAddr is required.
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -200,15 +209,19 @@ Valid when KafkaType is 1.
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-                     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * 获取Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+                     * @return Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-                     * @param _protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * 设置Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+                     * @param _protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -221,15 +234,23 @@ Valid when KafkaType is 1.
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consumer group name
-                     * @return ConsumerGroupName Kafka consumer group name
+                     * 获取User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
+                     * @return ConsumerGroupName User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
                      * 
                      */
                     std::string GetConsumerGroupName() const;
 
                     /**
-                     * 设置Kafka consumer group name
-                     * @param _consumerGroupName Kafka consumer group name
+                     * 设置User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
+                     * @param _consumerGroupName User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
                      * 
                      */
                     void SetConsumerGroupName(const std::string& _consumerGroupName);
@@ -262,41 +283,64 @@ Valid when KafkaType is 1.
                      */
                     bool LogRechargeRuleHasBeenSet() const;
 
+                    /**
+                     * 获取User kafka extended information
+                     * @return UserKafkaMeta User kafka extended information
+                     * 
+                     */
+                    UserKafkaMeta GetUserKafkaMeta() const;
+
+                    /**
+                     * 设置User kafka extended information
+                     * @param _userKafkaMeta User kafka extended information
+                     * 
+                     */
+                    void SetUserKafkaMeta(const UserKafkaMeta& _userKafkaMeta);
+
+                    /**
+                     * 判断参数 UserKafkaMeta 是否已赋值
+                     * @return UserKafkaMeta 是否已赋值
+                     * 
+                     */
+                    bool UserKafkaMetaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+                     * Preview type. 1: preview of source data; 2: preview of exported results.
                      */
                     uint64_t m_previewType;
                     bool m_previewTypeHasBeenSet;
 
                     /**
-                     * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      */
                     uint64_t m_kafkaType;
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+                     * List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
                      */
                     std::string m_userKafkaTopics;
                     bool m_userKafkaTopicsHasBeenSet;
 
                     /**
-                     * Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+                     * Import data location. -2: earliest; -1: latest.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+                     * Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
-                     * Service AddressServerAddr is required when KafkaType is 1
+                     * Service address.
+When KafkaType is 1, ServerAddr is required.
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
@@ -309,13 +353,16 @@ Valid when KafkaType is 1.
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+                     * Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Kafka consumer group name
+                     * User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
                      */
                     std::string m_consumerGroupName;
                     bool m_consumerGroupNameHasBeenSet;
@@ -325,6 +372,12 @@ Valid when KafkaType is 1.
                      */
                     LogRechargeRuleInfo m_logRechargeRule;
                     bool m_logRechargeRuleHasBeenSet;
+
+                    /**
+                     * User kafka extended information
+                     */
+                    UserKafkaMeta m_userKafkaMeta;
+                    bool m_userKafkaMetaHasBeenSet;
 
                 };
             }

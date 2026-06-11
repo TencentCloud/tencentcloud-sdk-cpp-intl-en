@@ -71,6 +71,20 @@ namespace TencentCloud
                      */
                     bool CreateResultHasBeenSet() const;
 
+                    /**
+                     * 获取Return the ID of the created new cluster task.
+                     * @return NewTaskID Return the ID of the created new cluster task.
+                     * 
+                     */
+                    std::string GetNewTaskID() const;
+
+                    /**
+                     * 判断参数 NewTaskID 是否已赋值
+                     * @return NewTaskID 是否已赋值
+                     * 
+                     */
+                    bool NewTaskIDHasBeenSet() const;
+
                 private:
 
                     /**
@@ -84,6 +98,12 @@ namespace TencentCloud
                      */
                     std::string m_createResult;
                     bool m_createResultHasBeenSet;
+
+                    /**
+                     * Return the ID of the created new cluster task.
+                     */
+                    std::string m_newTaskID;
+                    bool m_newTaskIDHasBeenSet;
 
                 };
             }

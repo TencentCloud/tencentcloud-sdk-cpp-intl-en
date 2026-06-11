@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query statement, using PromQL syntax	
-                     * @return Query Query statement, using PromQL syntax	
+                     * 获取Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
+                     * @return Query Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
                      * 
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement, using PromQL syntax	
-                     * @param _query Query statement, using PromQL syntax	
+                     * 设置Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
+                     * @param _query Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
                      * 
                      */
                     void SetQuery(const std::string& _query);
@@ -65,14 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @return TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @param _topicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -85,15 +93,19 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Query time, Unix Timestamp in seconds	
-                     * @return Time Query time, Unix Timestamp in seconds	
+                     * 获取Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
+                     * @return Time Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
                      * 
                      */
                     uint64_t GetTime() const;
 
                     /**
-                     * 设置Query time, Unix Timestamp in seconds	
-                     * @param _time Query time, Unix Timestamp in seconds	
+                     * 设置Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
+                     * @param _time Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
                      * 
                      */
                     void SetTime(const uint64_t& _time);
@@ -108,19 +120,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query statement, using PromQL syntax	
+                     * Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
 
                     /**
                      * Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Query time, Unix Timestamp in seconds	
+                     * Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
                      */
                     uint64_t m_time;
                     bool m_timeHasBeenSet;

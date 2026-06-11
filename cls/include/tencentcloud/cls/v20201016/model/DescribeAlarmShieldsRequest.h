@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Notification Channel Group ID
-                     * @return AlarmNoticeId Notification Channel Group ID
+                     * 获取Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
+                     * @return AlarmNoticeId Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
                      * 
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
-                     * 设置Notification Channel Group ID
-                     * @param _alarmNoticeId Notification Channel Group ID
+                     * 设置Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
+                     * @param _alarmNoticeId Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
                      * 
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
@@ -138,7 +138,7 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
                 private:
 
                     /**
-                     * Notification Channel Group ID
+                     * Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
                      */
                     std::string m_alarmNoticeId;
                     bool m_alarmNoticeIdHasBeenSet;

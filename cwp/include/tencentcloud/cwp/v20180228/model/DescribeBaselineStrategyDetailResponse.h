@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PassRate Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPassRate() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStrategyName() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanCycle policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Policy scan cycle (days)
+                     * @return ScanCycle Policy scan cycle (days)
                      * 
                      */
                     std::string GetScanCycle() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanAt Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanAt() const;
@@ -108,8 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanAtHasBeenSet() const;
 
                     /**
-                     * 获取Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsGlobal Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
+                     * @return IsGlobal Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
                      * 
                      */
                     uint64_t GetIsGlobal() const;
@@ -124,18 +116,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
                      * @return MachineType Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
                      * 
                      */
                     std::string GetMachineType() const;
@@ -149,9 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Region Host region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegion() const;
@@ -164,10 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quuids IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取IDs of all user hosts under this policy
+                     * @return Quuids IDs of all user hosts under this policy
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
@@ -180,10 +166,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuuidsHasBeenSet() const;
 
                     /**
-                     * 获取IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CategoryIds IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User baseline IDs under this policy
+                     * @return CategoryIds User baseline IDs under this policy
                      * 
                      */
                     std::vector<std::string> GetCategoryIds() const;
@@ -196,8 +180,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CategoryIdsHasBeenSet() const;
 
                     /**
-                     * 获取1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IfScanned 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取1 means scanned, 0 means not scanned
+                     * @return IfScanned 1 means scanned, 0 means not scanned
                      * 
                      */
                     uint64_t GetIfScanned() const;
@@ -213,34 +197,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_passRate;
                     bool m_passRateHasBeenSet;
 
                     /**
                      * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_strategyName;
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Policy scan cycle (days)
                      */
                     std::string m_scanCycle;
                     bool m_scanCycleHasBeenSet;
 
                     /**
                      * Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanAt;
                     bool m_scanAtHasBeenSet;
 
                     /**
-                     * Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
                      */
                     uint64_t m_isGlobal;
                     bool m_isGlobalHasBeenSet;
@@ -248,38 +228,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
 
                     /**
                      * Host region
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * IDs of all user hosts under this policy
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;
 
                     /**
-                     * IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * User baseline IDs under this policy
                      */
                     std::vector<std::string> m_categoryIds;
                     bool m_categoryIdsHasBeenSet;
 
                     /**
-                     * 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 1 means scanned, 0 means not scanned
                      */
                     uint64_t m_ifScanned;
                     bool m_ifScannedHasBeenSet;

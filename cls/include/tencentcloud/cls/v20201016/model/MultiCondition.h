@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Condition Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trigger conditions
+                     * @return Condition Trigger conditions
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _condition Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Trigger conditions
+                     * @param _condition Trigger conditions
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -68,19 +68,23 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
+                     * @return AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
+                     * @param _alarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -95,14 +99,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trigger conditions
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;

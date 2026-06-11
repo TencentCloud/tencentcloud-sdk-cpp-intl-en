@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
 #include <tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h>
+#include <tencentcloud/cls/v20201016/model/UserKafkaMeta.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Kafka data import configuration ID
-                     * @return Id Kafka data import configuration ID
+                     * 获取Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+                     * @return Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Kafka data import configuration ID
-                     * @param _id Kafka data import configuration ID
+                     * 设置Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+                     * @param _id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -66,15 +75,23 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Target topic ID
-                     * @return TopicId Target topic ID
+                     * 获取Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @return TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Target topic ID
-                     * @param _topicId Target topic ID
+                     * 设置Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @param _topicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -108,15 +125,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-                     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * 获取Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     uint64_t GetKafkaType() const;
 
                     /**
-                     * 设置Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-                     * @param _kafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * 设置Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+                     * @param _kafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      * 
                      */
                     void SetKafkaType(const uint64_t& _kafkaType);
@@ -129,15 +146,19 @@ namespace TencentCloud
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 获取Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @return KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置CKafka instance ID, which is required when `KafkaType` is set to `0`
-                     * @param _kafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * 设置Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+                     * @param _kafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -150,15 +171,15 @@ namespace TencentCloud
                     bool KafkaInstanceHasBeenSet() const;
 
                     /**
-                     * 获取Service address
-                     * @return ServerAddr Service address
+                     * 获取Service address, which is required when KafkaType is 1.
+                     * @return ServerAddr Service address, which is required when KafkaType is 1.
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置Service address
-                     * @param _serverAddr Service address
+                     * 设置Service address, which is required when KafkaType is 1.
+                     * @param _serverAddr Service address, which is required when KafkaType is 1.
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -171,15 +192,15 @@ namespace TencentCloud
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Whether the service address uses an encrypted connection
-                     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+                     * 获取Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+                     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      * 
                      */
                     bool GetIsEncryptionAddr() const;
 
                     /**
-                     * 设置Whether the service address uses an encrypted connection
-                     * @param _isEncryptionAddr Whether the service address uses an encrypted connection
+                     * 设置Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+                     * @param _isEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      * 
                      */
                     void SetIsEncryptionAddr(const bool& _isEncryptionAddr);
@@ -192,15 +213,15 @@ namespace TencentCloud
                     bool IsEncryptionAddrHasBeenSet() const;
 
                     /**
-                     * 获取Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
-                     * @return Protocol Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+                     * 获取Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+                     * @return Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      * 
                      */
                     KafkaProtocolInfo GetProtocol() const;
 
                     /**
-                     * 设置Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
-                     * @param _protocol Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+                     * 设置Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+                     * @param _protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      * 
                      */
                     void SetProtocol(const KafkaProtocolInfo& _protocol);
@@ -213,15 +234,23 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取List of Kafka topics to import data from. Separate multiple topics with commas (,).
-                     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * 获取List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+                     * @return UserKafkaTopics List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      * 
                      */
                     std::string GetUserKafkaTopics() const;
 
                     /**
-                     * 设置List of Kafka topics to import data from. Separate multiple topics with commas (,).
-                     * @param _userKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * 设置List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+                     * @param _userKafkaTopics List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      * 
                      */
                     void SetUserKafkaTopics(const std::string& _userKafkaTopics);
@@ -276,15 +305,15 @@ namespace TencentCloud
                     bool LogRechargeRuleHasBeenSet() const;
 
                     /**
-                     * 获取Import control. Valid values: 1 (suspend) and 2 (resume).
-                     * @return StatusControl Import control. Valid values: 1 (suspend) and 2 (resume).
+                     * 获取Import control, 1: suspend; 2: start.
+                     * @return StatusControl Import control, 1: suspend; 2: start.
                      * 
                      */
                     uint64_t GetStatusControl() const;
 
                     /**
-                     * 设置Import control. Valid values: 1 (suspend) and 2 (resume).
-                     * @param _statusControl Import control. Valid values: 1 (suspend) and 2 (resume).
+                     * 设置Import control, 1: suspend; 2: start.
+                     * @param _statusControl Import control, 1: suspend; 2: start.
                      * 
                      */
                     void SetStatusControl(const uint64_t& _statusControl);
@@ -296,16 +325,41 @@ namespace TencentCloud
                      */
                     bool StatusControlHasBeenSet() const;
 
+                    /**
+                     * 获取User kafka extended information
+                     * @return UserKafkaMeta User kafka extended information
+                     * 
+                     */
+                    UserKafkaMeta GetUserKafkaMeta() const;
+
+                    /**
+                     * 设置User kafka extended information
+                     * @param _userKafkaMeta User kafka extended information
+                     * 
+                     */
+                    void SetUserKafkaMeta(const UserKafkaMeta& _userKafkaMeta);
+
+                    /**
+                     * 判断参数 UserKafkaMeta 是否已赋值
+                     * @return UserKafkaMeta 是否已赋值
+                     * 
+                     */
+                    bool UserKafkaMetaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Kafka data import configuration ID
+                     * Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Target topic ID
+                     * Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -317,37 +371,40 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+                     * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
                      */
                     uint64_t m_kafkaType;
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * CKafka instance ID, which is required when `KafkaType` is set to `0`
+                     * Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
-                     * Service address
+                     * Service address, which is required when KafkaType is 1.
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Whether the service address uses an encrypted connection
+                     * Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
                      */
                     bool m_isEncryptionAddr;
                     bool m_isEncryptionAddrHasBeenSet;
 
                     /**
-                     * Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+                     * Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
                      */
                     KafkaProtocolInfo m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * List of Kafka topics to import data from. Separate multiple topics with commas (,).
+                     * List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
                      */
                     std::string m_userKafkaTopics;
                     bool m_userKafkaTopicsHasBeenSet;
@@ -365,10 +422,16 @@ namespace TencentCloud
                     bool m_logRechargeRuleHasBeenSet;
 
                     /**
-                     * Import control. Valid values: 1 (suspend) and 2 (resume).
+                     * Import control, 1: suspend; 2: start.
                      */
                     uint64_t m_statusControl;
                     bool m_statusControlHasBeenSet;
+
+                    /**
+                     * User kafka extended information
+                     */
+                    UserKafkaMeta m_userKafkaMeta;
+                    bool m_userKafkaMetaHasBeenSet;
 
                 };
             }

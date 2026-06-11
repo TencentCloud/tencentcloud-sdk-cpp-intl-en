@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineRuleList Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineRuleInfo> GetBaselineRuleList() const;
@@ -75,8 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BaselineRuleListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShowRuleRemark Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to display the description column: true-yes, false-no
+                     * @return ShowRuleRemark Whether to display the description column: true-yes, false-no
                      * 
                      */
                     bool GetShowRuleRemark() const;
@@ -98,13 +96,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineRuleInfo> m_baselineRuleList;
                     bool m_baselineRuleListHasBeenSet;
 
                     /**
-                     * Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to display the description column: true-yes, false-no
                      */
                     bool m_showRuleRemark;
                     bool m_showRuleRemarkHasBeenSet;

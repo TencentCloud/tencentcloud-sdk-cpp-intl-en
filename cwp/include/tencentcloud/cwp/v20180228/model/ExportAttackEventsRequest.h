@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting value: CreateTime
-                     * @return By Sorting value: CreateTime
+                     * 获取Sorting value: CreateTime
+                     * @return By Sorting value: CreateTime
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting value: CreateTime
-                     * @param _by Sorting value: CreateTime
+                     * 设置Sorting value: CreateTime
+                     * @param _by Sorting value: CreateTime
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method: ASC, DESC
-                     * @return Order Sorting method: ASC, DESC
+                     * 获取Sorting method: ASC, DESC
+                     * @return Order Sorting method: ASC, DESC
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting method: ASC, DESC
-                     * @param _order Sorting method: ASC, DESC
+                     * 设置Sorting method: ASC, DESC
+                     * @param _order Sorting method: ASC, DESC
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -145,13 +145,13 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting value: CreateTime
+                     * Sorting value: CreateTime
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
 
                     /**
-                     * Sorting method: ASC, DESC
+                     * Sorting method: ASC, DESC
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

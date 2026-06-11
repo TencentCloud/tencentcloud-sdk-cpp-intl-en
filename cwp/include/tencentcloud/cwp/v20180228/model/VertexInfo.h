@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool IsLeafHasBeenSet() const;
 
                     /**
-                     * 获取Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcNamePrefix Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process name. This parameter is used when Type is 1.
+                     * @return ProcNamePrefix Process name. This parameter is used when Type is 1.
                      * 
                      */
                     std::string GetProcNamePrefix() const;
 
                     /**
-                     * 设置Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _procNamePrefix Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process name. This parameter is used when Type is 1.
+                     * @param _procNamePrefix Process name. This parameter is used when Type is 1.
                      * 
                      */
                     void SetProcNamePrefix(const std::string& _procNamePrefix);
@@ -156,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcNamePrefixHasBeenSet() const;
 
                     /**
-                     * 获取Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcNameMd5 Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process name MD5. This parameter is used when Type is 1.
+                     * @return ProcNameMd5 Process name MD5. This parameter is used when Type is 1.
                      * 
                      */
                     std::string GetProcNameMd5() const;
 
                     /**
-                     * 设置Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _procNameMd5 Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process name MD5. This parameter is used when Type is 1.
+                     * @param _procNameMd5 Process name MD5. This parameter is used when Type is 1.
                      * 
                      */
                     void SetProcNameMd5(const std::string& _procNameMd5);
@@ -181,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcNameMd5HasBeenSet() const;
 
                     /**
-                     * 获取Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CmdLinePrefix Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Command line. This parameter is used when Type is 1.
+                     * @return CmdLinePrefix Command line. This parameter is used when Type is 1.
                      * 
                      */
                     std::string GetCmdLinePrefix() const;
 
                     /**
-                     * 设置Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cmdLinePrefix Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Command line. This parameter is used when Type is 1.
+                     * @param _cmdLinePrefix Command line. This parameter is used when Type is 1.
                      * 
                      */
                     void SetCmdLinePrefix(const std::string& _cmdLinePrefix);
@@ -206,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CmdLinePrefixHasBeenSet() const;
 
                     /**
-                     * 获取Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CmdLineMd5 Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Command line MD5. This parameter is used when Type is 1.
+                     * @return CmdLineMd5 Command line MD5. This parameter is used when Type is 1.
                      * 
                      */
                     std::string GetCmdLineMd5() const;
 
                     /**
-                     * 设置Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cmdLineMd5 Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Command line MD5. This parameter is used when Type is 1.
+                     * @param _cmdLineMd5 Command line MD5. This parameter is used when Type is 1.
                      * 
                      */
                     void SetCmdLineMd5(const std::string& _cmdLineMd5);
@@ -231,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CmdLineMd5HasBeenSet() const;
 
                     /**
-                     * 获取File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FilePathPrefix File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File path. This parameter is used when Type is 3.
+                     * @return FilePathPrefix File path. This parameter is used when Type is 3.
                      * 
                      */
                     std::string GetFilePathPrefix() const;
 
                     /**
-                     * 设置File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _filePathPrefix File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File path. This parameter is used when Type is 3.
+                     * @param _filePathPrefix File path. This parameter is used when Type is 3.
                      * 
                      */
                     void SetFilePathPrefix(const std::string& _filePathPrefix);
@@ -256,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilePathPrefixHasBeenSet() const;
 
                     /**
-                     * 获取Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddressPrefix Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Request destination address. This parameter is used when Type is 2.
+                     * @return AddressPrefix Request destination address. This parameter is used when Type is 2.
                      * 
                      */
                     std::string GetAddressPrefix() const;
 
                     /**
-                     * 设置Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addressPrefix Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Request destination address. This parameter is used when Type is 2.
+                     * @param _addressPrefix Request destination address. This parameter is used when Type is 2.
                      * 
                      */
                     void SetAddressPrefix(const std::string& _addressPrefix);
@@ -323,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsAlarmHasBeenSet() const;
 
                     /**
-                     * 获取File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FilePathMd5 File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File path MD5. This parameter is used when Type is 3.
+                     * @return FilePathMd5 File path MD5. This parameter is used when Type is 3.
                      * 
                      */
                     std::string GetFilePathMd5() const;
 
                     /**
-                     * 设置File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _filePathMd5 File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File path MD5. This parameter is used when Type is 3.
+                     * @param _filePathMd5 File path MD5. This parameter is used when Type is 3.
                      * 
                      */
                     void SetFilePathMd5(const std::string& _filePathMd5);
@@ -348,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilePathMd5HasBeenSet() const;
 
                     /**
-                     * 获取Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddressMd5 Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Request destination address MD5. This parameter is used when Type is 2.
+                     * @return AddressMd5 Request destination address MD5. This parameter is used when Type is 2.
                      * 
                      */
                     std::string GetAddressMd5() const;
 
                     /**
-                     * 设置Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addressMd5 Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Request destination address MD5. This parameter is used when Type is 2.
+                     * @param _addressMd5 Request destination address MD5. This parameter is used when Type is 2.
                      * 
                      */
                     void SetAddressMd5(const std::string& _addressMd5);
@@ -399,43 +367,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isLeafHasBeenSet;
 
                     /**
-                     * Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process name. This parameter is used when Type is 1.
                      */
                     std::string m_procNamePrefix;
                     bool m_procNamePrefixHasBeenSet;
 
                     /**
-                     * Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process name MD5. This parameter is used when Type is 1.
                      */
                     std::string m_procNameMd5;
                     bool m_procNameMd5HasBeenSet;
 
                     /**
-                     * Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Command line. This parameter is used when Type is 1.
                      */
                     std::string m_cmdLinePrefix;
                     bool m_cmdLinePrefixHasBeenSet;
 
                     /**
-                     * Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Command line MD5. This parameter is used when Type is 1.
                      */
                     std::string m_cmdLineMd5;
                     bool m_cmdLineMd5HasBeenSet;
 
                     /**
-                     * File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File path. This parameter is used when Type is 3.
                      */
                     std::string m_filePathPrefix;
                     bool m_filePathPrefixHasBeenSet;
 
                     /**
-                     * Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Request destination address. This parameter is used when Type is 2.
                      */
                     std::string m_addressPrefix;
                     bool m_addressPrefixHasBeenSet;
@@ -453,15 +415,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isAlarmHasBeenSet;
 
                     /**
-                     * File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File path MD5. This parameter is used when Type is 3.
                      */
                     std::string m_filePathMd5;
                     bool m_filePathMd5HasBeenSet;
 
                     /**
-                     * Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Request destination address MD5. This parameter is used when Type is 2.
                      */
                     std::string m_addressMd5;
                     bool m_addressMd5HasBeenSet;

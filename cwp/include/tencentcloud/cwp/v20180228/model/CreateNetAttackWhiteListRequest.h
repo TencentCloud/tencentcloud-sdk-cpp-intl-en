@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SrcIpHasBeenSet() const;
 
                     /**
-                     * 获取QUUID list
-                     * @return QuuidList QUUID list
+                     * 获取QUUID list
+                     * @return QuuidList QUUID list
                      * 
                      */
                     std::vector<std::string> GetQuuidList() const;
 
                     /**
-                     * 设置QUUID list
-                     * @param _quuidList QUUID list
+                     * 设置QUUID list
+                     * @param _quuidList QUUID list
                      * 
                      */
                     void SetQuuidList(const std::vector<std::string>& _quuidList);
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_srcIpHasBeenSet;
 
                     /**
-                     * QUUID list
+                     * QUUID list
                      */
                     std::vector<std::string> m_quuidList;
                     bool m_quuidListHasBeenSet;

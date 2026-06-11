@@ -44,23 +44,68 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
-                     * @return Filters Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+                     * 获取Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+                     * @return By Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+                     * 
+                     */
+                    std::string GetBy() const;
+
+                    /**
+                     * 设置Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+                     * @param _by Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+                     * 
+                     */
+                    void SetBy(const std::string& _by);
+
+                    /**
+                     * 判断参数 By 是否已赋值
+                     * @return By 是否已赋值
+                     * 
+                     */
+                    bool ByHasBeenSet() const;
+
+                    /**
+                     * 获取Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+                     * @return Filters Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
                      * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
-                     * 设置Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
-                     * @param _filters Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+                     * 设置Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+                     * @param _filters Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
                      * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
@@ -135,41 +180,24 @@ namespace TencentCloud
                      */
                     bool OrderHasBeenSet() const;
 
-                    /**
-                     * 获取Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-                     * @return By Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-                     * 
-                     */
-                    std::string GetBy() const;
-
-                    /**
-                     * 设置Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-                     * @param _by Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-                     * 
-                     */
-                    void SetBy(const std::string& _by);
-
-                    /**
-                     * 判断参数 By 是否已赋值
-                     * @return By 是否已赋值
-                     * 
-                     */
-                    bool ByHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+                     * Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+                     */
+                    std::string m_by;
+                    bool m_byHasBeenSet;
+
+                    /**
+                     * Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
                      */
                     std::vector<RunTimeFilters> m_filters;
                     bool m_filtersHasBeenSet;
@@ -191,14 +219,6 @@ namespace TencentCloud
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
-
-                    /**
-                     * Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-                     */
-                    std::string m_by;
-                    bool m_byHasBeenSet;
 
                 };
             }

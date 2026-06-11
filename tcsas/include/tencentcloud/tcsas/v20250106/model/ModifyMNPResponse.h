@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response data.
-                     * @return Data Response data.
+                     * 获取<p>Response data.</p>
+                     * @return Data <p>Response data.</p>
                      * 
                      */
                     ResourceIdInfo GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response data.
+                     * <p>Response data.</p>
                      */
                     ResourceIdInfo m_data;
                     bool m_dataHasBeenSet;

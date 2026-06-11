@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EffectHostList List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineEffectHost> GetEffectHostList() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
                      * List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineEffectHost> m_effectHostList;
                     bool m_effectHostListHasBeenSet;

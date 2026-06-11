@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster Id</p>
+                     * @return ClusterId <p>Cluster Id</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster Id</p>
+                     * @param _clusterId <p>Cluster Id</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取The current AZ
-                     * @return OldZone The current AZ
+                     * 获取<p>Current availability zone</p>
+                     * @return OldZone <p>Current availability zone</p>
                      * 
                      */
                     std::string GetOldZone() const;
 
                     /**
-                     * 设置The current AZ
-                     * @param _oldZone The current AZ
+                     * 设置<p>Current availability zone</p>
+                     * @param _oldZone <p>Current availability zone</p>
                      * 
                      */
                     void SetOldZone(const std::string& _oldZone);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OldZoneHasBeenSet() const;
 
                     /**
-                     * 获取New AZ
-                     * @return NewZone New AZ
+                     * 获取<p>Availability zone to switch to</p>
+                     * @return NewZone <p>Availability zone to switch to</p>
                      * 
                      */
                     std::string GetNewZone() const;
 
                     /**
-                     * 设置New AZ
-                     * @param _newZone New AZ
+                     * 设置<p>Availability zone to switch to</p>
+                     * @param _newZone <p>Availability zone to switch to</p>
                      * 
                      */
                     void SetNewZone(const std::string& _newZone);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NewZoneHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `yes` (execute during maintenance time), `no` (execute now)
-                     * @return IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 获取<p>Execute during maintenance period - yes, immediately execute - no</p>
+                     * @return IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
                      * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
-                     * 设置Valid values: `yes` (execute during maintenance time), `no` (execute now)
-                     * @param _isInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 设置<p>Execute during maintenance period - yes, immediately execute - no</p>
+                     * @param _isInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
                      * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster Id</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * The current AZ
+                     * <p>Current availability zone</p>
                      */
                     std::string m_oldZone;
                     bool m_oldZoneHasBeenSet;
 
                     /**
-                     * New AZ
+                     * <p>Availability zone to switch to</p>
                      */
                     std::string m_newZone;
                     bool m_newZoneHasBeenSet;
 
                     /**
-                     * Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * <p>Execute during maintenance period - yes, immediately execute - no</p>
                      */
                     std::string m_isInMaintainPeriod;
                     bool m_isInMaintainPeriodHasBeenSet;

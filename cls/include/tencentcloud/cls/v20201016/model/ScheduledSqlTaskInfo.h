@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DstResourceHasBeenSet() const;
 
                     /**
-                     * 获取Creation Time
-                     * @return CreateTime Creation Time
+                     * 获取Task creation time. Format: yyyy-MM-dd HH:mm:ss
+                     * @return CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation Time
-                     * @param _createTime Creation Time
+                     * 设置Task creation time. Format: yyyy-MM-dd HH:mm:ss
+                     * @param _createTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task Update Time
-                     * @return UpdateTime Task Update Time
+                     * 获取Task update time. Format: yyyy-MM-dd HH:mm:ss
+                     * @return UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Task Update Time
-                     * @param _updateTime Task Update Time
+                     * 设置Task update time. Format: yyyy-MM-dd HH:mm:ss
+                     * @param _updateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ScheduledSqlContentHasBeenSet() const;
 
                     /**
-                     * 获取Schedule Start Time
-                     * @return ProcessStartTime Schedule Start Time
+                     * 获取Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+                     * @return ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetProcessStartTime() const;
 
                     /**
-                     * 设置Schedule Start Time
-                     * @param _processStartTime Schedule Start Time
+                     * 设置Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+                     * @param _processStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetProcessStartTime(const std::string& _processStartTime);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool ProcessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Schedule End Time, required when process_type=2
-                     * @return ProcessEndTime Schedule End Time, required when process_type=2
+                     * 获取Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+                     * @return ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
                      * 
                      */
                     std::string GetProcessEndTime() const;
 
                     /**
-                     * 设置Schedule End Time, required when process_type=2
-                     * @param _processEndTime Schedule End Time, required when process_type=2
+                     * 设置Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+                     * @param _processEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
                      * 
                      */
                     void SetProcessEndTime(const std::string& _processEndTime);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool ProcessEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling Interval (Minutes)
-                     * @return ProcessPeriod Scheduling Interval (Minutes)
+                     * 获取Scheduling cycle (minutes), 1-1440 minutes
+                     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
                      * 
                      */
                     int64_t GetProcessPeriod() const;
 
                     /**
-                     * 设置Scheduling Interval (Minutes)
-                     * @param _processPeriod Scheduling Interval (Minutes)
+                     * 设置Scheduling cycle (minutes), 1-1440 minutes
+                     * @param _processPeriod Scheduling cycle (minutes), 1-1440 minutes
                      * 
                      */
                     void SetProcessPeriod(const int64_t& _processPeriod);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool ProcessTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Execution Delay (Seconds)
-                     * @return ProcessDelay Execution Delay (Seconds)
+                     * 获取Execution delay (seconds), 0-120 seconds, default 60
+                     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
                      * 
                      */
                     int64_t GetProcessDelay() const;
 
                     /**
-                     * 设置Execution Delay (Seconds)
-                     * @param _processDelay Execution Delay (Seconds)
+                     * 设置Execution delay (seconds), 0-120 seconds, default 60
+                     * @param _processDelay Execution delay (seconds), 0-120 seconds, default 60
                      * 
                      */
                     void SetProcessDelay(const int64_t& _processDelay);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ProcessDelayHasBeenSet() const;
 
                     /**
-                     * 获取Source Topic ID Region Information
-                     * @return SrcTopicRegion Source Topic ID Region Information
+                     * 获取Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     std::string GetSrcTopicRegion() const;
 
                     /**
-                     * 设置Source Topic ID Region Information
-                     * @param _srcTopicRegion Source Topic ID Region Information
+                     * 设置Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @param _srcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     void SetSrcTopicRegion(const std::string& _srcTopicRegion);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool SrcTopicRegionHasBeenSet() const;
 
                     /**
-                     * 获取Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return SyntaxRule Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+                     * @return SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
                      * 
                      */
                     uint64_t GetSyntaxRule() const;
 
                     /**
-                     * 设置Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _syntaxRule Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+                     * @param _syntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
                      * 
                      */
                     void SetSyntaxRule(const uint64_t& _syntaxRule);
@@ -424,6 +424,48 @@ namespace TencentCloud
                      * 
                      */
                     bool SyntaxRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 
+                     */
+                    uint64_t GetHasServicesLog() const;
+
+                    /**
+                     * 设置Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * @param _hasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 
+                     */
+                    void SetHasServicesLog(const uint64_t& _hasServicesLog);
+
+                    /**
+                     * 判断参数 HasServicesLog 是否已赋值
+                     * @return HasServicesLog 是否已赋值
+                     * 
+                     */
+                    bool HasServicesLogHasBeenSet() const;
+
+                    /**
+                     * 获取Full-text search tag. 1: Off, 2: On.
+                     * @return FullQuery Full-text search tag. 1: Off, 2: On.
+                     * 
+                     */
+                    uint64_t GetFullQuery() const;
+
+                    /**
+                     * 设置Full-text search tag. 1: Off, 2: On.
+                     * @param _fullQuery Full-text search tag. 1: Off, 2: On.
+                     * 
+                     */
+                    void SetFullQuery(const uint64_t& _fullQuery);
+
+                    /**
+                     * 判断参数 FullQuery 是否已赋值
+                     * @return FullQuery 是否已赋值
+                     * 
+                     */
+                    bool FullQueryHasBeenSet() const;
 
                 private:
 
@@ -458,13 +500,13 @@ namespace TencentCloud
                     bool m_dstResourceHasBeenSet;
 
                     /**
-                     * Creation Time
+                     * Task creation time. Format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Task Update Time
+                     * Task update time. Format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -488,7 +530,7 @@ namespace TencentCloud
                     bool m_scheduledSqlContentHasBeenSet;
 
                     /**
-                     * Schedule Start Time
+                     * Schedule start time. Format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_processStartTime;
                     bool m_processStartTimeHasBeenSet;
@@ -500,13 +542,13 @@ namespace TencentCloud
                     bool m_processTypeHasBeenSet;
 
                     /**
-                     * Schedule End Time, required when process_type=2
+                     * Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
                      */
                     std::string m_processEndTime;
                     bool m_processEndTimeHasBeenSet;
 
                     /**
-                     * Scheduling Interval (Minutes)
+                     * Scheduling cycle (minutes), 1-1440 minutes
                      */
                     int64_t m_processPeriod;
                     bool m_processPeriodHasBeenSet;
@@ -518,22 +560,34 @@ namespace TencentCloud
                     bool m_processTimeWindowHasBeenSet;
 
                     /**
-                     * Execution Delay (Seconds)
+                     * Execution delay (seconds), 0-120 seconds, default 60
                      */
                     int64_t m_processDelay;
                     bool m_processDelayHasBeenSet;
 
                     /**
-                     * Source Topic ID Region Information
+                     * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      */
                     std::string m_srcTopicRegion;
                     bool m_srcTopicRegionHasBeenSet;
 
                     /**
-                     * Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+                     * Syntax rules. 0: Lucene syntax; 1: CQL syntax.
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;
+
+                    /**
+                     * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     */
+                    uint64_t m_hasServicesLog;
+                    bool m_hasServicesLogHasBeenSet;
+
+                    /**
+                     * Full-text search tag. 1: Off, 2: On.
+                     */
+                    uint64_t m_fullQuery;
+                    bool m_fullQueryHasBeenSet;
 
                 };
             }

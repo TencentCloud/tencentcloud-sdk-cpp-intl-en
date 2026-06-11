@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Plugins Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List
+                     * @return Plugins List
                      * 
                      */
                     std::vector<AssetWebAppPluginInfo> GetPlugins() const;
@@ -77,8 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List
                      */
                     std::vector<AssetWebAppPluginInfo> m_plugins;
                     bool m_pluginsHasBeenSet;

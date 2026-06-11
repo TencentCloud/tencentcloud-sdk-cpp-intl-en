@@ -44,15 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
-                     * @return Filters Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+                     * 获取Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
+                     * @return Filters Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
-                     * @param _filters Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+                     * 设置Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
+                     * @param _filters Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -106,10 +114,54 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * @return Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * 
+                     */
+                    std::string GetOrder() const;
+
+                    /**
+                     * 设置Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * @param _order Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * 
+                     */
+                    void SetOrder(const std::string& _order);
+
+                    /**
+                     * 判断参数 Order 是否已赋值
+                     * @return Order 是否已赋值
+                     * 
+                     */
+                    bool OrderHasBeenSet() const;
+
+                    /**
+                     * 获取Sort column, strictly equal: Latest detection time RecentFoundTime
+                     * @return By Sort column, strictly equal: Latest detection time RecentFoundTime
+                     * 
+                     */
+                    std::string GetBy() const;
+
+                    /**
+                     * 设置Sort column, strictly equal: Latest detection time RecentFoundTime
+                     * @param _by Sort column, strictly equal: Latest detection time RecentFoundTime
+                     * 
+                     */
+                    void SetBy(const std::string& _by);
+
+                    /**
+                     * 判断参数 By 是否已赋值
+                     * @return By 是否已赋值
+                     * 
+                     */
+                    bool ByHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+                     * Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
@@ -125,6 +177,18 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     */
+                    std::string m_order;
+                    bool m_orderHasBeenSet;
+
+                    /**
+                     * Sort column, strictly equal: Latest detection time RecentFoundTime
+                     */
+                    std::string m_by;
+                    bool m_byHasBeenSet;
 
                 };
             }

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Machine instance ID.
+                     * @return InstanceID Machine instance ID.
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Machine instance ID.
+                     * @param _instanceID Machine instance ID.
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
-                     * @return OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * 获取Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
+                     * @return OfflineTime Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
                      * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
-                     * 设置Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
-                     * @param _offlineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * 设置Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
+                     * @param _offlineTime Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
                      * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+                     * Machine instance ID.
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
@@ -256,7 +256,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;

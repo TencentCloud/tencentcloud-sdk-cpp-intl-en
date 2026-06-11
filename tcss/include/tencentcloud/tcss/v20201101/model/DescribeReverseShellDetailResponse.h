@@ -106,9 +106,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AncestorProcessInfo Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ProcessBaseInfo GetAncestorProcessInfo() const;
@@ -148,7 +146,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ProcessBaseInfo m_ancestorProcessInfo;
                     bool m_ancestorProcessInfoHasBeenSet;

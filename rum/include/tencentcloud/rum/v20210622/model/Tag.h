@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Tag
+                * Tag.
                 */
                 class Tag : public AbstractModel
                 {

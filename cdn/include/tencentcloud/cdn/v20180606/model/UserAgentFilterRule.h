@@ -113,19 +113,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取`UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return UserAgents `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UserAgents UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetUserAgents() const;
 
                     /**
-                     * 设置`UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _userAgents `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _userAgents UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUserAgents(const std::vector<std::string>& _userAgents);
@@ -183,8 +183,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_userAgents;
                     bool m_userAgentsHasBeenSet;

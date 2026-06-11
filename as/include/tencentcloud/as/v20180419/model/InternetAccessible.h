@@ -211,7 +211,7 @@ Note: The static single-line IP is only supported in some regions.
 <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/zh/document/product/213/5733).</li>. 
 If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
 
-High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).
+High quality IP the anti-ddos feature is only in beta test in some regions. if needed, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
                      * @return IPv4AddressType Specifies the public IP type.
 
 <Li>WanIP: specifies the public ip address.</li>.
@@ -219,7 +219,7 @@ High quality IP the anti-ddos feature is only in beta test in some regions. if n
 <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/zh/document/product/213/5733).</li>. 
 If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
 
-High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).
+High quality IP the anti-ddos feature is only in beta test in some regions. if needed, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
                      * 
                      */
                     std::string GetIPv4AddressType() const;
@@ -232,7 +232,7 @@ High quality IP the anti-ddos feature is only in beta test in some regions. if n
 <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/zh/document/product/213/5733).</li>. 
 If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
 
-High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).
+High quality IP the anti-ddos feature is only in beta test in some regions. if needed, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
                      * @param _iPv4AddressType Specifies the public IP type.
 
 <Li>WanIP: specifies the public ip address.</li>.
@@ -240,7 +240,7 @@ High quality IP the anti-ddos feature is only in beta test in some regions. if n
 <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/zh/document/product/213/5733).</li>. 
 If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
 
-High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).
+High quality IP the anti-ddos feature is only in beta test in some regions. if needed, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
                      * 
                      */
                     void SetIPv4AddressType(const std::string& _iPv4AddressType);
@@ -371,7 +371,7 @@ Note: The static single-line IP is only supported in some regions.
 <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/zh/document/product/213/5733).</li>. 
 If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
 
-High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).
+High quality IP the anti-ddos feature is only in beta test in some regions. if needed, [submit a ticket for consultation](https://console.cloud.tencent.com/workorder/category).
                      */
                     std::string m_iPv4AddressType;
                     bool m_iPv4AddressTypeHasBeenSet;

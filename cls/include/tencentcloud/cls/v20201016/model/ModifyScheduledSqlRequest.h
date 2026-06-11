@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+                     * @return TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID
-                     * @param _taskId Task ID
+                     * 设置Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+                     * @param _taskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Source log topic
-                     * @return SrcTopicId Source log topic
+                     * 获取Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+                     * @return SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
                      * 
                      */
                     std::string GetSrcTopicId() const;
 
                     /**
-                     * 设置Source log topic
-                     * @param _srcTopicId Source log topic
+                     * 设置Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+                     * @param _srcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
                      * 
                      */
                     void SetSrcTopicId(const std::string& _srcTopicId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ScheduledSqlContentHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling interval (minutes)
-                     * @return ProcessPeriod Scheduling interval (minutes)
+                     * 获取Scheduling cycle (minutes), 1-1440 minutes
+                     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
                      * 
                      */
                     int64_t GetProcessPeriod() const;
 
                     /**
-                     * 设置Scheduling interval (minutes)
-                     * @param _processPeriod Scheduling interval (minutes)
+                     * 设置Scheduling cycle (minutes), 1-1440 minutes
+                     * @param _processPeriod Scheduling cycle (minutes), 1-1440 minutes
                      * 
                      */
                     void SetProcessPeriod(const int64_t& _processPeriod);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool ProcessTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Execution delay (seconds)
-                     * @return ProcessDelay Execution delay (seconds)
+                     * 获取Execution delay (seconds), 0-120 seconds, default 60
+                     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
                      * 
                      */
                     int64_t GetProcessDelay() const;
 
                     /**
-                     * 设置Execution delay (seconds)
-                     * @param _processDelay Execution delay (seconds)
+                     * 设置Execution delay (seconds), 0-120 seconds, default 60
+                     * @param _processDelay Execution delay (seconds), 0-120 seconds, default 60
                      * 
                      */
                     void SetProcessDelay(const int64_t& _processDelay);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ProcessDelayHasBeenSet() const;
 
                     /**
-                     * 获取Region information of source topic ID 
-                     * @return SrcTopicRegion Region information of source topic ID 
+                     * 获取Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     std::string GetSrcTopicRegion() const;
 
                     /**
-                     * 设置Region information of source topic ID 
-                     * @param _srcTopicRegion Region information of source topic ID 
+                     * 设置Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * @param _srcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      * 
                      */
                     void SetSrcTopicRegion(const std::string& _srcTopicRegion);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool SrcTopicRegionHasBeenSet() const;
 
                     /**
-                     * 获取Task Name
-                     * @return Name Task Name
+                     * 获取Task name, 0-255 characters
+                     * @return Name Task name, 0-255 characters
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task Name
-                     * @param _name Task Name
+                     * 设置Task name, 0-255 characters
+                     * @param _name Task name, 0-255 characters
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -277,13 +277,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID
+                     * Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Source log topic
+                     * Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
                      */
                     std::string m_srcTopicId;
                     bool m_srcTopicIdHasBeenSet;
@@ -307,7 +307,7 @@ namespace TencentCloud
                     bool m_scheduledSqlContentHasBeenSet;
 
                     /**
-                     * Scheduling interval (minutes)
+                     * Scheduling cycle (minutes), 1-1440 minutes
                      */
                     int64_t m_processPeriod;
                     bool m_processPeriodHasBeenSet;
@@ -319,19 +319,19 @@ namespace TencentCloud
                     bool m_processTimeWindowHasBeenSet;
 
                     /**
-                     * Execution delay (seconds)
+                     * Execution delay (seconds), 0-120 seconds, default 60
                      */
                     int64_t m_processDelay;
                     bool m_processDelayHasBeenSet;
 
                     /**
-                     * Region information of source topic ID 
+                     * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
                      */
                     std::string m_srcTopicRegion;
                     bool m_srcTopicRegionHasBeenSet;
 
                     /**
-                     * Task Name
+                     * Task name, 0-255 characters
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

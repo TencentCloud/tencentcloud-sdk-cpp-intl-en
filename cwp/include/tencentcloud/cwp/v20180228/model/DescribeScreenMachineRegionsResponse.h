@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List List details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ScreenRegionInfo> GetList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ScreenRegionInfo> m_list;
                     bool m_listHasBeenSet;

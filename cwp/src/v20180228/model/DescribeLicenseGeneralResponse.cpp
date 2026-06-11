@@ -42,7 +42,13 @@ DescribeLicenseGeneralResponse::DescribeLicenseGeneralResponse() :
     m_autoRepurchaseSwitchHasBeenSet(false),
     m_autoRepurchaseRenewSwitchHasBeenSet(false),
     m_destroyOrderNumHasBeenSet(false),
-    m_repurchaseRenewSwitchHasBeenSet(false)
+    m_repurchaseRenewSwitchHasBeenSet(false),
+    m_autoBindRaspSwitchHasBeenSet(false),
+    m_autoOpenRaspSwitchHasBeenSet(false),
+    m_autoDowngradeSwitchHasBeenSet(false),
+    m_availableAISecurityLicenseCntHasBeenSet(false),
+    m_aISecurityVersionLicenseCntHasBeenSet(false),
+    m_applicationAvailableLicenseCntHasBeenSet(false)
 {
 }
 
@@ -270,6 +276,66 @@ CoreInternalOutcome DescribeLicenseGeneralResponse::Deserialize(const string &pa
         m_repurchaseRenewSwitchHasBeenSet = true;
     }
 
+    if (rsp.HasMember("AutoBindRaspSwitch") && !rsp["AutoBindRaspSwitch"].IsNull())
+    {
+        if (!rsp["AutoBindRaspSwitch"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoBindRaspSwitch` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoBindRaspSwitch = rsp["AutoBindRaspSwitch"].GetBool();
+        m_autoBindRaspSwitchHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AutoOpenRaspSwitch") && !rsp["AutoOpenRaspSwitch"].IsNull())
+    {
+        if (!rsp["AutoOpenRaspSwitch"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoOpenRaspSwitch` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoOpenRaspSwitch = rsp["AutoOpenRaspSwitch"].GetBool();
+        m_autoOpenRaspSwitchHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AutoDowngradeSwitch") && !rsp["AutoDowngradeSwitch"].IsNull())
+    {
+        if (!rsp["AutoDowngradeSwitch"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoDowngradeSwitch` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_autoDowngradeSwitch = rsp["AutoDowngradeSwitch"].GetBool();
+        m_autoDowngradeSwitchHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AvailableAISecurityLicenseCnt") && !rsp["AvailableAISecurityLicenseCnt"].IsNull())
+    {
+        if (!rsp["AvailableAISecurityLicenseCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AvailableAISecurityLicenseCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_availableAISecurityLicenseCnt = rsp["AvailableAISecurityLicenseCnt"].GetUint64();
+        m_availableAISecurityLicenseCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AISecurityVersionLicenseCnt") && !rsp["AISecurityVersionLicenseCnt"].IsNull())
+    {
+        if (!rsp["AISecurityVersionLicenseCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AISecurityVersionLicenseCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_aISecurityVersionLicenseCnt = rsp["AISecurityVersionLicenseCnt"].GetUint64();
+        m_aISecurityVersionLicenseCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ApplicationAvailableLicenseCnt") && !rsp["ApplicationAvailableLicenseCnt"].IsNull())
+    {
+        if (!rsp["ApplicationAvailableLicenseCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApplicationAvailableLicenseCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_applicationAvailableLicenseCnt = rsp["ApplicationAvailableLicenseCnt"].GetUint64();
+        m_applicationAvailableLicenseCntHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -430,6 +496,54 @@ string DescribeLicenseGeneralResponse::ToJsonString() const
         string key = "RepurchaseRenewSwitch";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_repurchaseRenewSwitch, allocator);
+    }
+
+    if (m_autoBindRaspSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoBindRaspSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoBindRaspSwitch, allocator);
+    }
+
+    if (m_autoOpenRaspSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoOpenRaspSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoOpenRaspSwitch, allocator);
+    }
+
+    if (m_autoDowngradeSwitchHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoDowngradeSwitch";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_autoDowngradeSwitch, allocator);
+    }
+
+    if (m_availableAISecurityLicenseCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AvailableAISecurityLicenseCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_availableAISecurityLicenseCnt, allocator);
+    }
+
+    if (m_aISecurityVersionLicenseCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AISecurityVersionLicenseCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_aISecurityVersionLicenseCnt, allocator);
+    }
+
+    if (m_applicationAvailableLicenseCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationAvailableLicenseCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_applicationAvailableLicenseCnt, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -632,6 +746,66 @@ bool DescribeLicenseGeneralResponse::GetRepurchaseRenewSwitch() const
 bool DescribeLicenseGeneralResponse::RepurchaseRenewSwitchHasBeenSet() const
 {
     return m_repurchaseRenewSwitchHasBeenSet;
+}
+
+bool DescribeLicenseGeneralResponse::GetAutoBindRaspSwitch() const
+{
+    return m_autoBindRaspSwitch;
+}
+
+bool DescribeLicenseGeneralResponse::AutoBindRaspSwitchHasBeenSet() const
+{
+    return m_autoBindRaspSwitchHasBeenSet;
+}
+
+bool DescribeLicenseGeneralResponse::GetAutoOpenRaspSwitch() const
+{
+    return m_autoOpenRaspSwitch;
+}
+
+bool DescribeLicenseGeneralResponse::AutoOpenRaspSwitchHasBeenSet() const
+{
+    return m_autoOpenRaspSwitchHasBeenSet;
+}
+
+bool DescribeLicenseGeneralResponse::GetAutoDowngradeSwitch() const
+{
+    return m_autoDowngradeSwitch;
+}
+
+bool DescribeLicenseGeneralResponse::AutoDowngradeSwitchHasBeenSet() const
+{
+    return m_autoDowngradeSwitchHasBeenSet;
+}
+
+uint64_t DescribeLicenseGeneralResponse::GetAvailableAISecurityLicenseCnt() const
+{
+    return m_availableAISecurityLicenseCnt;
+}
+
+bool DescribeLicenseGeneralResponse::AvailableAISecurityLicenseCntHasBeenSet() const
+{
+    return m_availableAISecurityLicenseCntHasBeenSet;
+}
+
+uint64_t DescribeLicenseGeneralResponse::GetAISecurityVersionLicenseCnt() const
+{
+    return m_aISecurityVersionLicenseCnt;
+}
+
+bool DescribeLicenseGeneralResponse::AISecurityVersionLicenseCntHasBeenSet() const
+{
+    return m_aISecurityVersionLicenseCntHasBeenSet;
+}
+
+uint64_t DescribeLicenseGeneralResponse::GetApplicationAvailableLicenseCnt() const
+{
+    return m_applicationAvailableLicenseCnt;
+}
+
+bool DescribeLicenseGeneralResponse::ApplicationAvailableLicenseCntHasBeenSet() const
+{
+    return m_applicationAvailableLicenseCntHasBeenSet;
 }
 
 

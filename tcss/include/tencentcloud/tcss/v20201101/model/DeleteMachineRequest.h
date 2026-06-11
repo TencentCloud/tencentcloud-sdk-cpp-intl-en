@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool UuidHasBeenSet() const;
 
+                    /**
+                     * 获取Super Node Unique ID
+                     * @return NodeUniqueIds Super Node Unique ID
+                     * 
+                     */
+                    std::vector<std::string> GetNodeUniqueIds() const;
+
+                    /**
+                     * 设置Super Node Unique ID
+                     * @param _nodeUniqueIds Super Node Unique ID
+                     * 
+                     */
+                    void SetNodeUniqueIds(const std::vector<std::string>& _nodeUniqueIds);
+
+                    /**
+                     * 判断参数 NodeUniqueIds 是否已赋值
+                     * @return NodeUniqueIds 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIdsHasBeenSet() const;
+
+                    /**
+                     * 获取UUID list
+                     * @return UUIDs UUID list
+                     * 
+                     */
+                    std::vector<std::string> GetUUIDs() const;
+
+                    /**
+                     * 设置UUID list
+                     * @param _uUIDs UUID list
+                     * 
+                     */
+                    void SetUUIDs(const std::vector<std::string>& _uUIDs);
+
+                    /**
+                     * 判断参数 UUIDs 是否已赋值
+                     * @return UUIDs 是否已赋值
+                     * 
+                     */
+                    bool UUIDsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
+
+                    /**
+                     * Super Node Unique ID
+                     */
+                    std::vector<std::string> m_nodeUniqueIds;
+                    bool m_nodeUniqueIdsHasBeenSet;
+
+                    /**
+                     * UUID list
+                     */
+                    std::vector<std::string> m_uUIDs;
+                    bool m_uUIDsHasBeenSet;
 
                 };
             }

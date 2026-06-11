@@ -44,15 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -168,10 +172,32 @@ namespace TencentCloud
                      */
                     bool MetadataFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Custom log parsing exception storage fields
+                     * @return CoverageField Custom log parsing exception storage fields
+                     * 
+                     */
+                    std::string GetCoverageField() const;
+
+                    /**
+                     * 设置Custom log parsing exception storage fields
+                     * @param _coverageField Custom log parsing exception storage fields
+                     * 
+                     */
+                    void SetCoverageField(const std::string& _coverageField);
+
+                    /**
+                     * 判断参数 CoverageField 是否已赋值
+                     * @return CoverageField 是否已赋值
+                     * 
+                     */
+                    bool CoverageFieldHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID
+                     * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -204,6 +230,12 @@ namespace TencentCloud
                      */
                     uint64_t m_metadataFlag;
                     bool m_metadataFlagHasBeenSet;
+
+                    /**
+                     * Custom log parsing exception storage fields
+                     */
+                    std::string m_coverageField;
+                    bool m_coverageFieldHasBeenSet;
 
                 };
             }

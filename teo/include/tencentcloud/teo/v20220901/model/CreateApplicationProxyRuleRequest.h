@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool SessionPersistHasBeenSet() const;
 
                     /**
-                     * 获取Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-                     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * 获取Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+                     * @return SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
                      * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
-                     * 设置Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-                     * @param _sessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * 设置Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+                     * @param _sessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
                      * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
@@ -387,7 +387,7 @@ namespace TencentCloud
                     bool m_sessionPersistHasBeenSet;
 
                     /**
-                     * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+                     * Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
                      */
                     uint64_t m_sessionPersistTime;
                     bool m_sessionPersistTimeHasBeenSet;

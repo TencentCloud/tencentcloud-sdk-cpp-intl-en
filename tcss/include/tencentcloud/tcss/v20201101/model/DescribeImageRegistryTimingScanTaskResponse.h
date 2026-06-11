@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Scheduled scan switch
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Enable Scheduled scan switch
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetEnable() const;
@@ -89,10 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Array of scan types
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanType Array of scan types
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scan type array
+                     * @return ScanType Scan type array
                      * 
                      */
                     std::vector<std::string> GetScanType() const;
@@ -119,10 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取Scan of specified images
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Images Scan of specified images
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom scan mirror
+                     * @return Images Custom scan mirror
                      * 
                      */
                     std::vector<ImageInfo> GetImages() const;
@@ -135,10 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImagesHasBeenSet() const;
 
                     /**
-                     * 获取ID of the specified image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Id ID of the specified image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Automatically scan the image ID.
+                     * @return Id Automatically scan the image ID.
                      * 
                      */
                     std::vector<uint64_t> GetId() const;
@@ -151,10 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to scan the latest image tag
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return Latest Whether to scan the latest image tag
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Whether to Scan the Latest Version of Images
+                     * @return Latest Whether to Scan the Latest Version of Images
                      * 
                      */
                     bool GetLatest() const;
@@ -167,8 +157,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool LatestHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanEndTime 
+                     * 获取Scan end time
+                     * @return ScanEndTime Scan end time
                      * 
                      */
                     std::string GetScanEndTime() const;
@@ -181,8 +171,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool ScanEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RegistryType 
+                     * 获取The registry type
+                     * @return RegistryType The registry type
                      * 
                      */
                     std::vector<std::string> GetRegistryType() const;
@@ -195,8 +185,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ContainerRunning 
+                     * 获取Is container Running
+                     * @return ContainerRunning Is container Running
                      * 
                      */
                     bool GetContainerRunning() const;
@@ -209,8 +199,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool ContainerRunningHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanScope 
+                     * 获取The scan scope
+                     * @return ScanScope The scan scope
                      * 
                      */
                     uint64_t GetScanScope() const;
@@ -223,8 +213,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool ScanScopeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Namespace 
+                     * 获取The namespace of image
+                     * @return Namespace The namespace of image
                      * 
                      */
                     std::vector<std::string> GetNamespace() const;
@@ -236,11 +226,52 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                      */
                     bool NamespaceHasBeenSet() const;
 
+                    /**
+                     * 获取IDs of excluded image assets.
+                     * @return ExcludeImageAssetIds IDs of excluded image assets.
+                     * 
+                     */
+                    std::vector<uint64_t> GetExcludeImageAssetIds() const;
+
+                    /**
+                     * 判断参数 ExcludeImageAssetIds 是否已赋值
+                     * @return ExcludeImageAssetIds 是否已赋值
+                     * 
+                     */
+                    bool ExcludeImageAssetIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Last scan time
+                     * @return LastScanTime Last scan time
+                     * 
+                     */
+                    std::string GetLastScanTime() const;
+
+                    /**
+                     * 判断参数 LastScanTime 是否已赋值
+                     * @return LastScanTime 是否已赋值
+                     * 
+                     */
+                    bool LastScanTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Scanning result. Valid values: Success, InsufficientLicense, ImageNeedIsEmpty, and InternalError.
+                     * @return ScanResult Scanning result. Valid values: Success, InsufficientLicense, ImageNeedIsEmpty, and InternalError.
+                     * 
+                     */
+                    std::string GetScanResult() const;
+
+                    /**
+                     * 判断参数 ScanResult 是否已赋值
+                     * @return ScanResult 是否已赋值
+                     * 
+                     */
+                    bool ScanResultHasBeenSet() const;
+
                 private:
 
                     /**
                      * Scheduled scan switch
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
@@ -258,8 +289,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_scanPeriodHasBeenSet;
 
                     /**
-                     * Array of scan types
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scan type array
                      */
                     std::vector<std::string> m_scanType;
                     bool m_scanTypeHasBeenSet;
@@ -271,55 +301,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_allHasBeenSet;
 
                     /**
-                     * Scan of specified images
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom scan mirror
                      */
                     std::vector<ImageInfo> m_images;
                     bool m_imagesHasBeenSet;
 
                     /**
-                     * ID of the specified image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Automatically scan the image ID.
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Whether to scan the latest image tag
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Whether to Scan the Latest Version of Images
                      */
                     bool m_latest;
                     bool m_latestHasBeenSet;
 
                     /**
-                     * 
+                     * Scan end time
                      */
                     std::string m_scanEndTime;
                     bool m_scanEndTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The registry type
                      */
                     std::vector<std::string> m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Is container Running
                      */
                     bool m_containerRunning;
                     bool m_containerRunningHasBeenSet;
 
                     /**
-                     * 
+                     * The scan scope
                      */
                     uint64_t m_scanScope;
                     bool m_scanScopeHasBeenSet;
 
                     /**
-                     * 
+                     * The namespace of image
                      */
                     std::vector<std::string> m_namespace;
                     bool m_namespaceHasBeenSet;
+
+                    /**
+                     * IDs of excluded image assets.
+                     */
+                    std::vector<uint64_t> m_excludeImageAssetIds;
+                    bool m_excludeImageAssetIdsHasBeenSet;
+
+                    /**
+                     * Last scan time
+                     */
+                    std::string m_lastScanTime;
+                    bool m_lastScanTimeHasBeenSet;
+
+                    /**
+                     * Scanning result. Valid values: Success, InsufficientLicense, ImageNeedIsEmpty, and InternalError.
+                     */
+                    std::string m_scanResult;
+                    bool m_scanResultHasBeenSet;
 
                 };
             }

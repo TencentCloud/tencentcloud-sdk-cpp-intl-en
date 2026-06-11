@@ -36,7 +36,9 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_actionListHasBeenSet(false),
     m_allowExpiredDocumentHasBeenSet(false),
     m_skipResultPageHasBeenSet(false),
-    m_cardOcrDisplayFieldsHasBeenSet(false)
+    m_cardOcrDisplayFieldsHasBeenSet(false),
+    m_retryLimitHasBeenSet(false),
+    m_enableForgeryDetectionImagesHasBeenSet(false)
 {
 }
 
@@ -167,6 +169,22 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_retryLimitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetryLimit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_retryLimit, allocator);
+    }
+
+    if (m_enableForgeryDetectionImagesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableForgeryDetectionImages";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableForgeryDetectionImages, allocator);
     }
 
 
@@ -399,6 +417,38 @@ void ApplySdkVerificationTokenRequest::SetCardOcrDisplayFields(const vector<stri
 bool ApplySdkVerificationTokenRequest::CardOcrDisplayFieldsHasBeenSet() const
 {
     return m_cardOcrDisplayFieldsHasBeenSet;
+}
+
+int64_t ApplySdkVerificationTokenRequest::GetRetryLimit() const
+{
+    return m_retryLimit;
+}
+
+void ApplySdkVerificationTokenRequest::SetRetryLimit(const int64_t& _retryLimit)
+{
+    m_retryLimit = _retryLimit;
+    m_retryLimitHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::RetryLimitHasBeenSet() const
+{
+    return m_retryLimitHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetEnableForgeryDetectionImages() const
+{
+    return m_enableForgeryDetectionImages;
+}
+
+void ApplySdkVerificationTokenRequest::SetEnableForgeryDetectionImages(const bool& _enableForgeryDetectionImages)
+{
+    m_enableForgeryDetectionImages = _enableForgeryDetectionImages;
+    m_enableForgeryDetectionImagesHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::EnableForgeryDetectionImagesHasBeenSet() const
+{
+    return m_enableForgeryDetectionImagesHasBeenSet;
 }
 
 

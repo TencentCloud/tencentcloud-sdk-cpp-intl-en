@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SoftQuotaDayDetail Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Elastic billing deduction details
+                     * @return SoftQuotaDayDetail Elastic billing deduction details
                      * 
                      */
                     std::vector<SoftQuotaDayInfo> GetSoftQuotaDayDetail() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Elastic billing deduction details
                      */
                     std::vector<SoftQuotaDayInfo> m_softQuotaDayDetail;
                     bool m_softQuotaDayDetailHasBeenSet;

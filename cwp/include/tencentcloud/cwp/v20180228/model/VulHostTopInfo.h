@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return HostName host name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _hostName host name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulLevelList Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulLevelCountInfo> GetVulLevelList() const;
 
                     /**
                      * 设置Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulLevelList Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulLevelList(const std::vector<VulLevelCountInfo>& _vulLevelList);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Score Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取top rating
+                     * @return Score top rating
                      * 
                      */
                     uint64_t GetScore() const;
 
                     /**
-                     * 设置Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _score Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置top rating
+                     * @param _score top rating
                      * 
                      */
                     void SetScore(const uint64_t& _score);
@@ -150,29 +134,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
                      * Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulLevelCountInfo> m_vulLevelList;
                     bool m_vulLevelListHasBeenSet;
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * top rating
                      */
                     uint64_t m_score;
                     bool m_scoreHasBeenSet;

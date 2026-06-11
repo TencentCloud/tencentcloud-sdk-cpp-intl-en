@@ -50,18 +50,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEventId() const;
 
                     /**
                      * 设置Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventId(const uint64_t& _eventId);
@@ -74,15 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
+                     * @return Status Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
+                     * @param _status Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -96,18 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastTime Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
                      * 设置Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lastTime Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -121,18 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -146,18 +134,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -171,18 +155,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -196,18 +176,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -221,18 +197,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
                      * 设置Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _aliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -246,18 +218,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -271,18 +239,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -295,15 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+                     * @return HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      * 
                      */
                     uint64_t GetHostVersion() const;
 
                     /**
-                     * 设置Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+                     * @param _hostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      * 
                      */
                     void SetHostVersion(const uint64_t& _hostVersion);
@@ -316,15 +280,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostVersionHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSupportAutoFix Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+                     * @return IsSupportAutoFix Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
                      * 
                      */
                     uint64_t GetIsSupportAutoFix() const;
 
                     /**
-                     * 设置Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSupportAutoFix Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+                     * @param _isSupportAutoFix Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
                      * 
                      */
                     void SetIsSupportAutoFix(const uint64_t& _isSupportAutoFix);
@@ -337,19 +301,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSupportAutoFixHasBeenSet() const;
 
                     /**
-                     * 获取Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FixStatusMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reason for failure
+                     * @return FixStatusMsg Reason for failure
                      * 
                      */
                     std::string GetFixStatusMsg() const;
 
                     /**
-                     * 设置Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fixStatusMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reason for failure
+                     * @param _fixStatusMsg Reason for failure
                      * 
                      */
                     void SetFixStatusMsg(const std::string& _fixStatusMsg);
@@ -363,18 +323,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstDiscoveryTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFirstDiscoveryTime() const;
 
                     /**
                      * 设置First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _firstDiscoveryTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFirstDiscoveryTime(const std::string& _firstDiscoveryTime);
@@ -387,15 +343,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FirstDiscoveryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceState Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
+                     * @return InstanceState Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
-                     * 设置Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceState Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
+                     * @param _instanceState Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -409,18 +365,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicIpAddresses Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPublicIpAddresses() const;
 
                     /**
                      * 设置Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _publicIpAddresses Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPublicIpAddresses(const std::string& _publicIpAddresses);
@@ -433,19 +385,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CloudTags Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cloud Tag Information
+                     * @return CloudTags Cloud Tag Information
                      * 
                      */
                     std::vector<Tags> GetCloudTags() const;
 
                     /**
-                     * 设置Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cloudTags Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud Tag Information
+                     * @param _cloudTags Cloud Tag Information
                      * 
                      */
                     void SetCloudTags(const std::vector<Tags>& _cloudTags);
@@ -458,19 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CloudTagsHasBeenSet() const;
 
                     /**
-                     * 获取Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host Additional Information
+                     * @return MachineExtraInfo Host Additional Information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host Additional Information
+                     * @param _machineExtraInfo Host Additional Information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -482,129 +426,250 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MachineExtraInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Host type
+                     * @return MachineType Host type
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Host type
+                     * @param _machineType Host type
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zone ID.
+                     * @return RegionId Availability zone ID.
+                     * 
+                     */
+                    uint64_t GetRegionId() const;
+
+                    /**
+                     * 设置Availability zone ID.
+                     * @param _regionId Availability zone ID.
+                     * 
+                     */
+                    void SetRegionId(const uint64_t& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     * 
+                     */
+                    bool RegionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to create a snapshot for the fix task: 0: not created; other: created.
+                     * @return HasSnapshot Whether to create a snapshot for the fix task: 0: not created; other: created.
+                     * 
+                     */
+                    uint64_t GetHasSnapshot() const;
+
+                    /**
+                     * 设置Whether to create a snapshot for the fix task: 0: not created; other: created.
+                     * @param _hasSnapshot Whether to create a snapshot for the fix task: 0: not created; other: created.
+                     * 
+                     */
+                    void SetHasSnapshot(const uint64_t& _hasSnapshot);
+
+                    /**
+                     * 判断参数 HasSnapshot 是否已赋值
+                     * @return HasSnapshot 是否已赋值
+                     * 
+                     */
+                    bool HasSnapshotHasBeenSet() const;
+
+                    /**
+                     * 获取Last repair time
+                     * @return LatestFixTime Last repair time
+                     * 
+                     */
+                    std::string GetLatestFixTime() const;
+
+                    /**
+                     * 设置Last repair time
+                     * @param _latestFixTime Last repair time
+                     * 
+                     */
+                    void SetLatestFixTime(const std::string& _latestFixTime);
+
+                    /**
+                     * 判断参数 LatestFixTime 是否已赋值
+                     * @return LatestFixTime 是否已赋值
+                     * 
+                     */
+                    bool LatestFixTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Description
+                     * @return DescriptionEn Description
+                     * 
+                     */
+                    std::string GetDescriptionEn() const;
+
+                    /**
+                     * 设置Description
+                     * @param _descriptionEn Description
+                     * 
+                     */
+                    void SetDescriptionEn(const std::string& _descriptionEn);
+
+                    /**
+                     * 判断参数 DescriptionEn 是否已赋值
+                     * @return DescriptionEn 是否已赋值
+                     * 
+                     */
+                    bool DescriptionEnHasBeenSet() const;
+
                 private:
 
                     /**
                      * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;
 
                     /**
                      * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
                      * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
                      * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
                      * Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
                      */
                     uint64_t m_hostVersion;
                     bool m_hostVersionHasBeenSet;
 
                     /**
-                     * Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
                      */
                     uint64_t m_isSupportAutoFix;
                     bool m_isSupportAutoFixHasBeenSet;
 
                     /**
-                     * Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reason for failure
                      */
                     std::string m_fixStatusMsg;
                     bool m_fixStatusMsgHasBeenSet;
 
                     /**
                      * First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_firstDiscoveryTime;
                     bool m_firstDiscoveryTimeHasBeenSet;
 
                     /**
-                     * Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;
 
                     /**
                      * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;
 
                     /**
-                     * Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cloud Tag Information
                      */
                     std::vector<Tags> m_cloudTags;
                     bool m_cloudTagsHasBeenSet;
 
                     /**
-                     * Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host Additional Information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
+
+                    /**
+                     * Host type
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
+
+                    /**
+                     * Availability zone ID.
+                     */
+                    uint64_t m_regionId;
+                    bool m_regionIdHasBeenSet;
+
+                    /**
+                     * Whether to create a snapshot for the fix task: 0: not created; other: created.
+                     */
+                    uint64_t m_hasSnapshot;
+                    bool m_hasSnapshotHasBeenSet;
+
+                    /**
+                     * Last repair time
+                     */
+                    std::string m_latestFixTime;
+                    bool m_latestFixTimeHasBeenSet;
+
+                    /**
+                     * Description
+                     */
+                    std::string m_descriptionEn;
+                    bool m_descriptionEnHasBeenSet;
 
                 };
             }

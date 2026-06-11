@@ -241,26 +241,26 @@ Note: When the device is paid by the tenant and inactive (not selected for month
 
                     /**
                      * 获取Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
                      * @return LicensePayMode Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
                      * 
                      */
                     int64_t GetLicensePayMode() const;
 
                     /**
                      * 设置Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
                      * @param _licensePayMode Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
                      * 
                      */
                     void SetLicensePayMode(const int64_t& _licensePayMode);
@@ -360,9 +360,9 @@ Note: When the device is paid by the tenant and inactive (not selected for month
 
                     /**
                      * Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
                      */
                     int64_t m_licensePayMode;
                     bool m_licensePayModeHasBeenSet;

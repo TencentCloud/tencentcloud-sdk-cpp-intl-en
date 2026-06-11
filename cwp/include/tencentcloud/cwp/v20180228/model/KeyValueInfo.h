@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
-                     * 获取Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KeyValues Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Information about the key-value pair that requires index creation.
+                     * @return KeyValues Information about the key-value pair that requires index creation.
                      * 
                      */
                     std::vector<KeyValueArrayInfo> GetKeyValues() const;
 
                     /**
-                     * 设置Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keyValues Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Information about the key-value pair that requires index creation.
+                     * @param _keyValues Information about the key-value pair that requires index creation.
                      * 
                      */
                     void SetKeyValues(const std::vector<KeyValueArrayInfo>& _keyValues);
@@ -102,8 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_caseSensitiveHasBeenSet;
 
                     /**
-                     * Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Information about the key-value pair that requires index creation.
                      */
                     std::vector<KeyValueArrayInfo> m_keyValues;
                     bool m_keyValuesHasBeenSet;

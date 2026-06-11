@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool BigDealIdsHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-                     * @return DealNames Order ID
+                     * 获取Order ID.
+                     * @return DealNames Order ID.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -100,7 +100,7 @@ namespace TencentCloud
                     bool m_bigDealIdsHasBeenSet;
 
                     /**
-                     * Order ID
+                     * Order ID.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of images
-                     * @return List List of images
+                     * 获取<p>Image list.</p>
+                     * @return List <p>Image list.</p>
                      * 
                      */
                     std::vector<ImagesInfo> GetList() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total number
-                     * @return TotalCount Total number
+                     * 获取<p>Total quantity.</p>
+                     * @return TotalCount <p>Total quantity.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of images
+                     * <p>Image list.</p>
                      */
                     std::vector<ImagesInfo> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total number
+                     * <p>Total quantity.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

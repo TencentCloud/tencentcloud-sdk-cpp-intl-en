@@ -70,34 +70,34 @@ namespace TencentCloud
                     /**
                      * 获取Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: cancelling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * @return TaskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: cancelling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     std::string GetTaskStatus() const;
@@ -105,34 +105,34 @@ namespace TencentCloud
                     /**
                      * 设置Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: cancelling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * @param _taskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: cancelling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -176,19 +176,19 @@ namespace TencentCloud
                     /**
                      * Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: cancelling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;

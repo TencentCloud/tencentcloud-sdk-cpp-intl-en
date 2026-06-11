@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IfExist Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIfExist() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ifExist;
                     bool m_ifExistHasBeenSet;

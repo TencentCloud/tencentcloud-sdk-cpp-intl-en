@@ -55,7 +55,11 @@ DescribeAssetImageRegistryDetailResponse::DescribeAssetImageRegistryDetailRespon
     m_imageSizeHasBeenSet(false),
     m_imageIdHasBeenSet(false),
     m_registryRegionHasBeenSet(false),
-    m_imageCreateTimeHasBeenSet(false)
+    m_imageCreateTimeHasBeenSet(false),
+    m_sensitiveInfoCntHasBeenSet(false),
+    m_idHasBeenSet(false),
+    m_solutionHasBeenSet(false),
+    m_reasonHasBeenSet(false)
 {
 }
 
@@ -413,6 +417,46 @@ CoreInternalOutcome DescribeAssetImageRegistryDetailResponse::Deserialize(const 
         m_imageCreateTimeHasBeenSet = true;
     }
 
+    if (rsp.HasMember("SensitiveInfoCnt") && !rsp["SensitiveInfoCnt"].IsNull())
+    {
+        if (!rsp["SensitiveInfoCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `SensitiveInfoCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_sensitiveInfoCnt = rsp["SensitiveInfoCnt"].GetUint64();
+        m_sensitiveInfoCntHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Id") && !rsp["Id"].IsNull())
+    {
+        if (!rsp["Id"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Id` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_id = rsp["Id"].GetUint64();
+        m_idHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Solution") && !rsp["Solution"].IsNull())
+    {
+        if (!rsp["Solution"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Solution` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_solution = string(rsp["Solution"].GetString());
+        m_solutionHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Reason") && !rsp["Reason"].IsNull())
+    {
+        if (!rsp["Reason"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Reason` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_reason = string(rsp["Reason"].GetString());
+        m_reasonHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -677,6 +721,38 @@ string DescribeAssetImageRegistryDetailResponse::ToJsonString() const
         string key = "ImageCreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_imageCreateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sensitiveInfoCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SensitiveInfoCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_sensitiveInfoCnt, allocator);
+    }
+
+    if (m_idHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Id";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_id, allocator);
+    }
+
+    if (m_solutionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Solution";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_solution.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_reasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Reason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_reason.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -1009,6 +1085,46 @@ string DescribeAssetImageRegistryDetailResponse::GetImageCreateTime() const
 bool DescribeAssetImageRegistryDetailResponse::ImageCreateTimeHasBeenSet() const
 {
     return m_imageCreateTimeHasBeenSet;
+}
+
+uint64_t DescribeAssetImageRegistryDetailResponse::GetSensitiveInfoCnt() const
+{
+    return m_sensitiveInfoCnt;
+}
+
+bool DescribeAssetImageRegistryDetailResponse::SensitiveInfoCntHasBeenSet() const
+{
+    return m_sensitiveInfoCntHasBeenSet;
+}
+
+uint64_t DescribeAssetImageRegistryDetailResponse::GetId() const
+{
+    return m_id;
+}
+
+bool DescribeAssetImageRegistryDetailResponse::IdHasBeenSet() const
+{
+    return m_idHasBeenSet;
+}
+
+string DescribeAssetImageRegistryDetailResponse::GetSolution() const
+{
+    return m_solution;
+}
+
+bool DescribeAssetImageRegistryDetailResponse::SolutionHasBeenSet() const
+{
+    return m_solutionHasBeenSet;
+}
+
+string DescribeAssetImageRegistryDetailResponse::GetReason() const
+{
+    return m_reason;
+}
+
+bool DescribeAssetImageRegistryDetailResponse::ReasonHasBeenSet() const
+{
+    return m_reasonHasBeenSet;
 }
 
 

@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order
-                     * @return Order Sorting order
+                     * 获取Sorting method. Valid values: asc and desc.
+                     * @return Order Sorting method. Valid values: asc and desc.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order
-                     * @param _order Sorting order
+                     * 设置Sorting method. Valid values: asc and desc.
+                     * @param _order Sorting method. Valid values: asc and desc.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field
-                     * @return By Sorting field
+                     * 获取Sorting field. For example, ContainerCnt.
+                     * @return By Sorting field. For example, ContainerCnt.
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting field
-                     * @param _by Sorting field
+                     * 设置Sorting field. For example, ContainerCnt.
+                     * @param _by Sorting field. For example, ContainerCnt.
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -169,13 +169,13 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting order
+                     * Sorting method. Valid values: asc and desc.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sorting field
+                     * Sorting field. For example, ContainerCnt.
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

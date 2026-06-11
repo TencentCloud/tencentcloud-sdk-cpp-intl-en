@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool LogSampleHasBeenSet() const;
 
                     /**
-                     * 获取Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogData Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log preview results
+                     * @return LogData Log preview results
                      * 
                      */
                     std::string GetLogData() const;
@@ -82,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logSampleHasBeenSet;
 
                     /**
-                     * Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log preview results
                      */
                     std::string m_logData;
                     bool m_logDataHasBeenSet;

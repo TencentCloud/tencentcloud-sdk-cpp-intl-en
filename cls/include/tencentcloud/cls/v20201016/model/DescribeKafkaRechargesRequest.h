@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,15 +68,23 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Import configuration ID
-                     * @return Id Import configuration ID
+                     * 获取Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+                     * @return Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Import configuration ID
-                     * @param _id Import configuration ID
+                     * 设置Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+                     * @param _id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -85,15 +97,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Status. Valid values: 1 (running) and 2 (suspended).
-                     * @return Status Status. Valid values: 1 (running) and 2 (suspended).
+                     * 获取Status. 1: Running, 2: Suspension, 3: Error.
+                     * @return Status Status. 1: Running, 2: Suspension, 3: Error.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status. Valid values: 1 (running) and 2 (suspended).
-                     * @param _status Status. Valid values: 1 (running) and 2 (suspended).
+                     * 设置Status. 1: Running, 2: Suspension, 3: Error.
+                     * @param _status Status. 1: Running, 2: Suspension, 3: Error.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -108,19 +120,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic ID
+                     * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Import configuration ID
+                     * Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Status. Valid values: 1 (running) and 2 (suspended).
+                     * Status. 1: Running, 2: Suspension, 3: Error.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

@@ -59,9 +59,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Err Error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetErr() const;
@@ -73,6 +71,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ErrHasBeenSet() const;
 
+                    /**
+                     * 获取Last synchronization success time.
+                     * @return LatestSyncSuccessTime Last synchronization success time.
+                     * 
+                     */
+                    std::string GetLatestSyncSuccessTime() const;
+
+                    /**
+                     * 判断参数 LatestSyncSuccessTime 是否已赋值
+                     * @return LatestSyncSuccessTime 是否已赋值
+                     * 
+                     */
+                    bool LatestSyncSuccessTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -83,10 +95,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Error message
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_err;
                     bool m_errHasBeenSet;
+
+                    /**
+                     * Last synchronization success time.
+                     */
+                    std::string m_latestSyncSuccessTime;
+                    bool m_latestSyncSuccessTimeHasBeenSet;
 
                 };
             }

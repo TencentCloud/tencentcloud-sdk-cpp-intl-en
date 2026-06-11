@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleId Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleName Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
                      * Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;

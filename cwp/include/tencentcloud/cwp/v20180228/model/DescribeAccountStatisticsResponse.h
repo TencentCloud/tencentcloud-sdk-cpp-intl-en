@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of account statistics list records
-                     * @return TotalCount Total number of account statistics list records
+                     * 获取Total number of account statistics list records.
+                     * @return TotalCount Total number of account statistics list records.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Account statistics list
-                     * @return AccountStatistics Account statistics list
+                     * 获取Account statistics list.
+                     * @return AccountStatistics Account statistics list.
                      * 
                      */
                     std::vector<AccountStatistics> GetAccountStatistics() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of account statistics list records
+                     * Total number of account statistics list records.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Account statistics list
+                     * Account statistics list.
                      */
                     std::vector<AccountStatistics> m_accountStatistics;
                     bool m_accountStatisticsHasBeenSet;

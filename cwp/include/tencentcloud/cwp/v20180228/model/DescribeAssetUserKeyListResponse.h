@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Keys Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetUserKeyInfo> GetKeys() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetUserKeyInfo> m_keys;
                     bool m_keysHasBeenSet;

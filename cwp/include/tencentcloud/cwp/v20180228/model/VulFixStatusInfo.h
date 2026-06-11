@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulId(const uint64_t& _vulId);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulName(const std::string& _vulName);
@@ -120,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostList Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulFixStatusHostInfo> GetHostList() const;
 
                     /**
                      * 设置Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostList Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostList(const std::vector<VulFixStatusHostInfo>& _hostList);
@@ -145,18 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailCnt Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetFailCnt() const;
 
                     /**
                      * 设置Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _failCnt Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFailCnt(const uint64_t& _failCnt);
@@ -169,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FailCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FixSuccessCnt Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of successful repairs
+                     * @return FixSuccessCnt Number of successful repairs
                      * 
                      */
                     uint64_t GetFixSuccessCnt() const;
 
                     /**
-                     * 设置Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fixSuccessCnt Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of successful repairs
+                     * @param _fixSuccessCnt Number of successful repairs
                      * 
                      */
                     void SetFixSuccessCnt(const uint64_t& _fixSuccessCnt);
@@ -194,15 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixSuccessCntHasBeenSet() const;
 
                     /**
-                     * 获取Repair method: 0 component update or patch installation, 1 disable service
-                     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
+                     * 获取Repair method. 0: Update components or install patches. 1: Disable service.
+                     * @return FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
                      * 
                      */
                     uint64_t GetFixMethod() const;
 
                     /**
-                     * 设置Repair method: 0 component update or patch installation, 1 disable service
-                     * @param _fixMethod Repair method: 0 component update or patch installation, 1 disable service
+                     * 设置Repair method. 0: Update components or install patches. 1: Disable service.
+                     * @param _fixMethod Repair method. 0: Update components or install patches. 1: Disable service.
                      * 
                      */
                     void SetFixMethod(const uint64_t& _fixMethod);
@@ -214,18 +194,100 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FixMethodHasBeenSet() const;
 
+                    /**
+                     * 获取kb ID
+                     * @return KbId kb ID
+                     * 
+                     */
+                    uint64_t GetKbId() const;
+
+                    /**
+                     * 设置kb ID
+                     * @param _kbId kb ID
+                     * 
+                     */
+                    void SetKbId(const uint64_t& _kbId);
+
+                    /**
+                     * 判断参数 KbId 是否已赋值
+                     * @return KbId 是否已赋值
+                     * 
+                     */
+                    bool KbIdHasBeenSet() const;
+
+                    /**
+                     * 获取kb number
+                     * @return KbNumber kb number
+                     * 
+                     */
+                    std::string GetKbNumber() const;
+
+                    /**
+                     * 设置kb number
+                     * @param _kbNumber kb number
+                     * 
+                     */
+                    void SetKbNumber(const std::string& _kbNumber);
+
+                    /**
+                     * 判断参数 KbNumber 是否已赋值
+                     * @return KbNumber 是否已赋值
+                     * 
+                     */
+                    bool KbNumberHasBeenSet() const;
+
+                    /**
+                     * 获取kb name
+                     * @return KbName kb name
+                     * 
+                     */
+                    std::string GetKbName() const;
+
+                    /**
+                     * 设置kb name
+                     * @param _kbName kb name
+                     * 
+                     */
+                    void SetKbName(const std::string& _kbName);
+
+                    /**
+                     * 判断参数 KbName 是否已赋值
+                     * @return KbName 是否已赋值
+                     * 
+                     */
+                    bool KbNameHasBeenSet() const;
+
+                    /**
+                     * 获取Pre kb list
+                     * @return PreKbList Pre kb list
+                     * 
+                     */
+                    std::vector<std::string> GetPreKbList() const;
+
+                    /**
+                     * 设置Pre kb list
+                     * @param _preKbList Pre kb list
+                     * 
+                     */
+                    void SetPreKbList(const std::vector<std::string>& _preKbList);
+
+                    /**
+                     * 判断参数 PreKbList 是否已赋值
+                     * @return PreKbList 是否已赋值
+                     * 
+                     */
+                    bool PreKbListHasBeenSet() const;
+
                 private:
 
                     /**
                      * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
                      * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
@@ -238,30 +300,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulFixStatusHostInfo> m_hostList;
                     bool m_hostListHasBeenSet;
 
                     /**
                      * Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_failCnt;
                     bool m_failCntHasBeenSet;
 
                     /**
-                     * Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of successful repairs
                      */
                     uint64_t m_fixSuccessCnt;
                     bool m_fixSuccessCntHasBeenSet;
 
                     /**
-                     * Repair method: 0 component update or patch installation, 1 disable service
+                     * Repair method. 0: Update components or install patches. 1: Disable service.
                      */
                     uint64_t m_fixMethod;
                     bool m_fixMethodHasBeenSet;
+
+                    /**
+                     * kb ID
+                     */
+                    uint64_t m_kbId;
+                    bool m_kbIdHasBeenSet;
+
+                    /**
+                     * kb number
+                     */
+                    std::string m_kbNumber;
+                    bool m_kbNumberHasBeenSet;
+
+                    /**
+                     * kb name
+                     */
+                    std::string m_kbName;
+                    bool m_kbNameHasBeenSet;
+
+                    /**
+                     * Pre kb list
+                     */
+                    std::vector<std::string> m_preKbList;
+                    bool m_preKbListHasBeenSet;
 
                 };
             }

@@ -238,18 +238,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -260,6 +256,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool MachineExtraInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+                     * @return InstanceState <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+                     * 
+                     */
+                    std::string GetInstanceState() const;
+
+                    /**
+                     * 设置<li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+                     * @param _instanceState <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+                     * 
+                     */
+                    void SetInstanceState(const std::string& _instanceState);
+
+                    /**
+                     * 判断参数 InstanceState 是否已赋值
+                     * @return InstanceState 是否已赋值
+                     * 
+                     */
+                    bool InstanceStateHasBeenSet() const;
+
+                    /**
+                     * 获取<li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+                     * @return AgentState <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+                     * 
+                     */
+                    std::string GetAgentState() const;
+
+                    /**
+                     * 设置<li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+                     * @param _agentState <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+                     * 
+                     */
+                    void SetAgentState(const std::string& _agentState);
+
+                    /**
+                     * 判断参数 AgentState 是否已赋值
+                     * @return AgentState 是否已赋值
+                     * 
+                     */
+                    bool AgentStateHasBeenSet() const;
 
                 private:
 
@@ -319,10 +373,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
+
+                    /**
+                     * <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+                     */
+                    std::string m_instanceState;
+                    bool m_instanceStateHasBeenSet;
+
+                    /**
+                     * <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+                     */
+                    std::string m_agentState;
+                    bool m_agentStateHasBeenSet;
 
                 };
             }

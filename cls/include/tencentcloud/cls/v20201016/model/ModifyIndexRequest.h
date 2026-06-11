@@ -44,15 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -65,15 +69,19 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取It does not take effect by default
-                     * @return Status It does not take effect by default
+                     * 获取Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+                     * @return Status Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置It does not take effect by default
-                     * @param _status It does not take effect by default
+                     * 设置Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+                     * @param _status Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -168,16 +176,39 @@ namespace TencentCloud
                      */
                     bool MetadataFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Custom log parsing exception storage fields
+                     * @return CoverageField Custom log parsing exception storage fields
+                     * 
+                     */
+                    std::string GetCoverageField() const;
+
+                    /**
+                     * 设置Custom log parsing exception storage fields
+                     * @param _coverageField Custom log parsing exception storage fields
+                     * 
+                     */
+                    void SetCoverageField(const std::string& _coverageField);
+
+                    /**
+                     * 判断参数 CoverageField 是否已赋值
+                     * @return CoverageField 是否已赋值
+                     * 
+                     */
+                    bool CoverageFieldHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID
+                     * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * It does not take effect by default
+                     * Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
@@ -204,6 +235,12 @@ namespace TencentCloud
                      */
                     uint64_t m_metadataFlag;
                     bool m_metadataFlagHasBeenSet;
+
+                    /**
+                     * Custom log parsing exception storage fields
+                     */
+                    std::string m_coverageField;
+                    bool m_coverageFieldHasBeenSet;
 
                 };
             }

@@ -558,6 +558,237 @@ namespace TencentCloud
                      */
                     bool ContainerStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster ID.
+                     * @return ClusterID Cluster ID.
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置Cluster ID.
+                     * @param _clusterID Cluster ID.
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * @return NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * 
+                     */
+                    std::string GetNodeType() const;
+
+                    /**
+                     * 设置Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * @param _nodeType Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * 
+                     */
+                    void SetNodeType(const std::string& _nodeType);
+
+                    /**
+                     * 判断参数 NodeType 是否已赋值
+                     * @return NodeType 是否已赋值
+                     * 
+                     */
+                    bool NodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取pod name
+                     * @return PodName pod name
+                     * 
+                     */
+                    std::string GetPodName() const;
+
+                    /**
+                     * 设置pod name
+                     * @param _podName pod name
+                     * 
+                     */
+                    void SetPodName(const std::string& _podName);
+
+                    /**
+                     * 判断参数 PodName 是否已赋值
+                     * @return PodName 是否已赋值
+                     * 
+                     */
+                    bool PodNameHasBeenSet() const;
+
+                    /**
+                     * 获取pod ip
+                     * @return PodIP pod ip
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置pod ip
+                     * @param _podIP pod ip
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node Unique ID
+                     * @return NodeUniqueID Node Unique ID
+                     * 
+                     */
+                    std::string GetNodeUniqueID() const;
+
+                    /**
+                     * 设置Node Unique ID
+                     * @param _nodeUniqueID Node Unique ID
+                     * 
+                     */
+                    void SetNodeUniqueID(const std::string& _nodeUniqueID);
+
+                    /**
+                     * 判断参数 NodeUniqueID 是否已赋值
+                     * @return NodeUniqueID 是否已赋值
+                     * 
+                     */
+                    bool NodeUniqueIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node Public IP
+                     * @return PublicIP Node Public IP
+                     * 
+                     */
+                    std::string GetPublicIP() const;
+
+                    /**
+                     * 设置Node Public IP
+                     * @param _publicIP Node Public IP
+                     * 
+                     */
+                    void SetPublicIP(const std::string& _publicIP);
+
+                    /**
+                     * 判断参数 PublicIP 是否已赋值
+                     * @return PublicIP 是否已赋值
+                     * 
+                     */
+                    bool PublicIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node name.
+                     * @return NodeName Node name.
+                     * 
+                     */
+                    std::string GetNodeName() const;
+
+                    /**
+                     * 设置Node name.
+                     * @param _nodeName Node name.
+                     * 
+                     */
+                    void SetNodeName(const std::string& _nodeName);
+
+                    /**
+                     * 判断参数 NodeName 是否已赋值
+                     * @return NodeName 是否已赋值
+                     * 
+                     */
+                    bool NodeNameHasBeenSet() const;
+
+                    /**
+                     * 获取uuid
+                     * @return HostID uuid
+                     * 
+                     */
+                    std::string GetHostID() const;
+
+                    /**
+                     * 设置uuid
+                     * @param _hostID uuid
+                     * 
+                     */
+                    void SetHostID(const std::string& _hostID);
+
+                    /**
+                     * 判断参数 HostID 是否已赋值
+                     * @return HostID 是否已赋值
+                     * 
+                     */
+                    bool HostIDHasBeenSet() const;
+
+                    /**
+                     * 获取Node private network IP.
+                     * @return HostIP Node private network IP.
+                     * 
+                     */
+                    std::string GetHostIP() const;
+
+                    /**
+                     * 设置Node private network IP.
+                     * @param _hostIP Node private network IP.
+                     * 
+                     */
+                    void SetHostIP(const std::string& _hostIP);
+
+                    /**
+                     * 判断参数 HostIP 是否已赋值
+                     * @return HostIP 是否已赋值
+                     * 
+                     */
+                    bool HostIPHasBeenSet() const;
+
+                    /**
+                     * 获取Node ID.
+                     * @return NodeID Node ID.
+                     * 
+                     */
+                    std::string GetNodeID() const;
+
+                    /**
+                     * 设置Node ID.
+                     * @param _nodeID Node ID.
+                     * 
+                     */
+                    void SetNodeID(const std::string& _nodeID);
+
+                    /**
+                     * 判断参数 NodeID 是否已赋值
+                     * @return NodeID 是否已赋值
+                     * 
+                     */
+                    bool NodeIDHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -702,6 +933,72 @@ namespace TencentCloud
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
+
+                    /**
+                     * Cluster ID.
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * Node Type. NORMAL: Common Node; SUPER: Super Node
+                     */
+                    std::string m_nodeType;
+                    bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * pod name
+                     */
+                    std::string m_podName;
+                    bool m_podNameHasBeenSet;
+
+                    /**
+                     * pod ip
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
+
+                    /**
+                     * Node Unique ID
+                     */
+                    std::string m_nodeUniqueID;
+                    bool m_nodeUniqueIDHasBeenSet;
+
+                    /**
+                     * Node Public IP
+                     */
+                    std::string m_publicIP;
+                    bool m_publicIPHasBeenSet;
+
+                    /**
+                     * Node name.
+                     */
+                    std::string m_nodeName;
+                    bool m_nodeNameHasBeenSet;
+
+                    /**
+                     * uuid
+                     */
+                    std::string m_hostID;
+                    bool m_hostIDHasBeenSet;
+
+                    /**
+                     * Node private network IP.
+                     */
+                    std::string m_hostIP;
+                    bool m_hostIPHasBeenSet;
+
+                    /**
+                     * Node ID.
+                     */
+                    std::string m_nodeID;
+                    bool m_nodeIDHasBeenSet;
+
+                    /**
+                     * Cluster name.
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
 
                 };
             }

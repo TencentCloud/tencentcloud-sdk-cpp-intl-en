@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
-                     * @return ReceiverType Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+                     * 获取Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+                     * @return ReceiverType Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
                      * 
                      */
                     std::string GetReceiverType() const;
 
                     /**
-                     * 设置Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
-                     * @param _receiverType Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+                     * 设置Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+                     * @param _receiverType Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
                      * 
                      */
                     void SetReceiverType(const std::string& _receiverType);
@@ -80,15 +80,23 @@ Currently, other recipient types are not supported.
                     bool ReceiverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Recipient
-                     * @return ReceiverIds Recipient
+                     * 获取Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+                     * @return ReceiverIds Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
                      * 
                      */
                     std::vector<int64_t> GetReceiverIds() const;
 
                     /**
-                     * 设置Recipient
-                     * @param _receiverIds Recipient
+                     * 设置Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+                     * @param _receiverIds Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
                      * 
                      */
                     void SetReceiverIds(const std::vector<int64_t>& _receiverIds);
@@ -101,31 +109,31 @@ Currently, other recipient types are not supported.
                     bool ReceiverIdsHasBeenSet() const;
 
                     /**
-                     * 获取Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
-                     * @return ReceiverChannels Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+                     * 获取Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+                     * @return ReceiverChannels Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
                      * 
                      */
                     std::vector<std::string> GetReceiverChannels() const;
 
                     /**
-                     * 设置Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
-                     * @param _receiverChannels Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+                     * 设置Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+                     * @param _receiverChannels Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
                      * 
                      */
                     void SetReceiverChannels(const std::vector<std::string>& _receiverChannels);
@@ -138,15 +146,36 @@ Currently, other recipient types are not supported.
                     bool ReceiverChannelsHasBeenSet() const;
 
                     /**
-                     * 获取Start time for allowed message receipt
-                     * @return StartTime Start time for allowed message receipt
+                     * 获取Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+                     * @return NoticeContentId Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+                     * 
+                     */
+                    std::string GetNoticeContentId() const;
+
+                    /**
+                     * 设置Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+                     * @param _noticeContentId Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+                     * 
+                     */
+                    void SetNoticeContentId(const std::string& _noticeContentId);
+
+                    /**
+                     * 判断参数 NoticeContentId 是否已赋值
+                     * @return NoticeContentId 是否已赋值
+                     * 
+                     */
+                    bool NoticeContentIdHasBeenSet() const;
+
+                    /**
+                     * 获取Start time to allow receipt of information. Format: `15:04:05`. Required.
+                     * @return StartTime Start time to allow receipt of information. Format: `15:04:05`. Required.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time for allowed message receipt
-                     * @param _startTime Start time for allowed message receipt
+                     * 设置Start time to allow receipt of information. Format: `15:04:05`. Required.
+                     * @param _startTime Start time to allow receipt of information. Format: `15:04:05`. Required.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -159,15 +188,15 @@ Currently, other recipient types are not supported.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time for allowed message receipt
-                     * @return EndTime End time for allowed message receipt
+                     * 获取Allow receipt of information end time. Format: `15:04:05`. Required
+                     * @return EndTime Allow receipt of information end time. Format: `15:04:05`. Required
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time for allowed message receipt
-                     * @param _endTime End time for allowed message receipt
+                     * 设置Allow receipt of information end time. Format: `15:04:05`. Required
+                     * @param _endTime Allow receipt of information end time. Format: `15:04:05`. Required
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -180,15 +209,27 @@ Currently, other recipient types are not supported.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Index
-                     * @return Index Index
+                     * 获取Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
+                     * @return Index Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
                      * 
                      */
                     int64_t GetIndex() const;
 
                     /**
-                     * 设置Index
-                     * @param _index Index
+                     * 设置Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
+                     * @param _index Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
                      * 
                      */
                     void SetIndex(const int64_t& _index);
@@ -203,44 +244,55 @@ Currently, other recipient types are not supported.
                 private:
 
                     /**
-                     * Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+                     * Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
                      */
                     std::string m_receiverType;
                     bool m_receiverTypeHasBeenSet;
 
                     /**
-                     * Recipient
+                     * Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
                      */
                     std::vector<int64_t> m_receiverIds;
                     bool m_receiverIdsHasBeenSet;
 
                     /**
-                     * Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+                     * Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
                      */
                     std::vector<std::string> m_receiverChannels;
                     bool m_receiverChannelsHasBeenSet;
 
                     /**
-                     * Start time for allowed message receipt
+                     * Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+                     */
+                    std::string m_noticeContentId;
+                    bool m_noticeContentIdHasBeenSet;
+
+                    /**
+                     * Start time to allow receipt of information. Format: `15:04:05`. Required.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time for allowed message receipt
+                     * Allow receipt of information end time. Format: `15:04:05`. Required
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Index
+                     * Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
                      */
                     int64_t m_index;
                     bool m_indexHasBeenSet;

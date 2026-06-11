@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool ImageInfoHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-                     * @return Id Image ID
+                     * 获取Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
+                     * @return Id Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Image ID
-                     * @param _id Image ID
+                     * 设置Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
+                     * @param _id Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -186,7 +186,7 @@ namespace TencentCloud
                     bool m_imageInfoHasBeenSet;
 
                     /**
-                     * Image ID
+                     * Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;

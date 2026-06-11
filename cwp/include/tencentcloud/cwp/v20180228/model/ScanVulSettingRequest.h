@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool EnableScanHasBeenSet() const;
 
                     /**
-                     * 获取If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
-                     * @return Uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+                     * 获取If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+                     * @return Uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
                      * 
                      */
                     std::vector<std::string> GetUuids() const;
 
                     /**
-                     * 设置If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
-                     * @param _uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+                     * 设置If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+                     * @param _uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
                      * 
                      */
                     void SetUuids(const std::vector<std::string>& _uuids);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool UuidsHasBeenSet() const;
 
                     /**
-                     * 获取0 version comparison, 2 version comparison + poc
-                     * @return ScanMethod 0 version comparison, 2 version comparison + poc
+                     * 获取0: version comparison, 2: version comparison + POC.
+                     * @return ScanMethod 0: version comparison, 2: version comparison + POC.
                      * 
                      */
                     uint64_t GetScanMethod() const;
 
                     /**
-                     * 设置0 version comparison, 2 version comparison + poc
-                     * @param _scanMethod 0 version comparison, 2 version comparison + poc
+                     * 设置0: version comparison, 2: version comparison + POC.
+                     * @param _scanMethod 0: version comparison, 2: version comparison + POC.
                      * 
                      */
                     void SetScanMethod(const uint64_t& _scanMethod);
@@ -303,13 +303,13 @@ namespace TencentCloud
                     bool m_enableScanHasBeenSet;
 
                     /**
-                     * If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+                     * If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
                      */
                     std::vector<std::string> m_uuids;
                     bool m_uuidsHasBeenSet;
 
                     /**
-                     * 0 version comparison, 2 version comparison + poc
+                     * 0: version comparison, 2: version comparison + POC.
                      */
                     uint64_t m_scanMethod;
                     bool m_scanMethodHasBeenSet;

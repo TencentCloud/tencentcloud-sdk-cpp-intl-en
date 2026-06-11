@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Collection configuration ID
-                     * @return ConfigId Collection configuration ID
+                     * 获取Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+                     * @return ConfigId Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      * 
                      */
                     std::string GetConfigId() const;
 
                     /**
-                     * 设置Collection configuration ID
-                     * @param _configId Collection configuration ID
+                     * 设置Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+                     * @param _configId Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      * 
                      */
                     void SetConfigId(const std::string& _configId);
@@ -66,7 +70,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Collection configuration ID
+                     * Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;

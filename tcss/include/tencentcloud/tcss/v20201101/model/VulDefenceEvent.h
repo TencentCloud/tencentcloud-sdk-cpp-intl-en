@@ -320,19 +320,15 @@ namespace TencentCloud
                     bool EventIDHasBeenSet() const;
 
                     /**
-                     * 获取First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取First detection time
+                     * @return CreateTime First detection time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置First detection time
+                     * @param _createTime First detection time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -391,18 +387,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MergeTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMergeTime() const;
 
                     /**
                      * 设置Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mergeTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMergeTime(const std::string& _mergeTime);
@@ -415,47 +407,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MergeTimeHasBeenSet() const;
 
                     /**
-                     * 获取Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @return ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     std::string GetContainerStatus() const;
 
                     /**
-                     * 设置Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @param _containerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
@@ -468,47 +456,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+                     * @return ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+                     * @param _containerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
@@ -521,19 +505,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container Isolation Operation Source
+                     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
-                     * 设置Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container Isolation Operation Source
+                     * @param _containerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
@@ -546,19 +526,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Host QUUID/Super Node ID
+                     * @return QUUID Host QUUID/Super Node ID
                      * 
                      */
                     std::string GetQUUID() const;
 
                     /**
-                     * 设置Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _qUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Host QUUID/Super Node ID
+                     * @param _qUUID Host QUUID/Super Node ID
                      * 
                      */
                     void SetQUUID(const std::string& _qUUID);
@@ -571,19 +547,15 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool QUUIDHasBeenSet() const;
 
                     /**
-                     * 获取Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIP Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host private IP address
+                     * @return HostIP Host private IP address
                      * 
                      */
                     std::string GetHostIP() const;
 
                     /**
-                     * 设置Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostIP Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host private IP address
+                     * @param _hostIP Host private IP address
                      * 
                      */
                     void SetHostIP(const std::string& _hostIP);
@@ -596,19 +568,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return HostName General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Host Name/Super Node Name
+                     * @return HostName Host Name/Super Node Name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _hostName General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Host Name/Super Node Name
+                     * @param _hostName Host Name/Super Node Name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -746,6 +714,48 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                      */
                     bool ClusterNameHasBeenSet() const;
 
+                    /**
+                     * 获取Pod name
+                     * @return PodName Pod name
+                     * 
+                     */
+                    std::string GetPodName() const;
+
+                    /**
+                     * 设置Pod name
+                     * @param _podName Pod name
+                     * 
+                     */
+                    void SetPodName(const std::string& _podName);
+
+                    /**
+                     * 判断参数 PodName 是否已赋值
+                     * @return PodName 是否已赋值
+                     * 
+                     */
+                    bool PodNameHasBeenSet() const;
+
+                    /**
+                     * 获取pod ip
+                     * @return PodIP pod ip
+                     * 
+                     */
+                    std::string GetPodIP() const;
+
+                    /**
+                     * 设置pod ip
+                     * @param _podIP pod ip
+                     * 
+                     */
+                    void SetPodIP(const std::string& _podIP);
+
+                    /**
+                     * 判断参数 PodIP 是否已赋值
+                     * @return PodIP 是否已赋值
+                     * 
+                     */
+                    bool PodIPHasBeenSet() const;
+
                 private:
 
                     /**
@@ -827,8 +837,7 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool m_eventIDHasBeenSet;
 
                     /**
-                     * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * First detection time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -847,63 +856,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mergeTime;
                     bool m_mergeTimeHasBeenSet;
 
                     /**
-                     * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
 
                     /**
-                     * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container Isolation Operation Source
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Host QUUID/Super Node ID
                      */
                     std::string m_qUUID;
                     bool m_qUUIDHasBeenSet;
 
                     /**
-                     * Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host private IP address
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Host Name/Super Node Name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
@@ -943,6 +945,18 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * Pod name
+                     */
+                    std::string m_podName;
+                    bool m_podNameHasBeenSet;
+
+                    /**
+                     * pod ip
+                     */
+                    std::string m_podIP;
+                    bool m_podIPHasBeenSet;
 
                 };
             }

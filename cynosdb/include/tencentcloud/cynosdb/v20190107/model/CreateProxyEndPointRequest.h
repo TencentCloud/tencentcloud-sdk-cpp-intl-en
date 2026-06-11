@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID.
-                     * @return ClusterId Cluster ID.
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID.
-                     * @param _clusterId Cluster ID.
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. By default, it remains consistent with the VPC ID of the cluster.
-                     * @return UniqueVpcId VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+                     * 获取<p>VPC ID.</p>
+                     * @return UniqueVpcId <p>VPC ID.</p>
                      * 
                      */
                     std::string GetUniqueVpcId() const;
 
                     /**
-                     * 设置VPC ID. By default, it remains consistent with the VPC ID of the cluster.
-                     * @param _uniqueVpcId VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+                     * 设置<p>VPC ID.</p>
+                     * @param _uniqueVpcId <p>VPC ID.</p>
                      * 
                      */
                     void SetUniqueVpcId(const std::string& _uniqueVpcId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool UniqueVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
-                     * @return UniqueSubnetId Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+                     * 获取<p>VPC subnet ID.</p>
+                     * @return UniqueSubnetId <p>VPC subnet ID.</p>
                      * 
                      */
                     std::string GetUniqueSubnetId() const;
 
                     /**
-                     * 设置Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
-                     * @param _uniqueSubnetId Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+                     * 设置<p>VPC subnet ID.</p>
+                     * @param _uniqueSubnetId <p>VPC subnet ID.</p>
                      * 
                      */
                     void SetUniqueSubnetId(const std::string& _uniqueSubnetId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool UniqueSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Type of connection pool: SessionConnectionPool (session-level connection pool).
-                     * @return ConnectionPoolType Type of connection pool: SessionConnectionPool (session-level connection pool).
+                     * 获取<p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
+                     * @return ConnectionPoolType <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
                      * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
-                     * 设置Type of connection pool: SessionConnectionPool (session-level connection pool).
-                     * @param _connectionPoolType Type of connection pool: SessionConnectionPool (session-level connection pool).
+                     * 设置<p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
+                     * @param _connectionPoolType <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
                      * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
@@ -128,23 +128,15 @@ namespace TencentCloud
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
-                     * @return OpenConnectionPool Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+                     * 获取<p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
+                     * @return OpenConnectionPool <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
                      * 
                      */
                     std::string GetOpenConnectionPool() const;
 
                     /**
-                     * 设置Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
-                     * @param _openConnectionPool Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+                     * 设置<p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
+                     * @param _openConnectionPool <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
                      * 
                      */
                     void SetOpenConnectionPool(const std::string& _openConnectionPool);
@@ -157,15 +149,15 @@ no: indicates not enabled.
                     bool OpenConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
-                     * @return ConnectionPoolTimeOut Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+                     * 获取<p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+                     * @return ConnectionPoolTimeOut <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
                      * 
                      */
                     int64_t GetConnectionPoolTimeOut() const;
 
                     /**
-                     * 设置Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
-                     * @param _connectionPoolTimeOut Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+                     * 设置<p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+                     * @param _connectionPoolTimeOut <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
                      * 
                      */
                     void SetConnectionPoolTimeOut(const int64_t& _connectionPoolTimeOut);
@@ -178,15 +170,15 @@ no: indicates not enabled.
                     bool ConnectionPoolTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Array of bound security group IDs.
-                     * @return SecurityGroupIds Array of bound security group IDs.
+                     * 获取<p>Bound security group ID array.</p>
+                     * @return SecurityGroupIds <p>Bound security group ID array.</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Array of bound security group IDs.
-                     * @param _securityGroupIds Array of bound security group IDs.
+                     * 设置<p>Bound security group ID array.</p>
+                     * @param _securityGroupIds <p>Bound security group ID array.</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -199,15 +191,15 @@ no: indicates not enabled.
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Description.
-                     * @return Description Description.
+                     * 获取<p>Description.</p>
+                     * @return Description <p>Description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description.
-                     * @param _description Description.
+                     * 设置<p>Description.</p>
+                     * @param _description <p>Description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -220,15 +212,15 @@ no: indicates not enabled.
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The vip information to be bound must correspond to the UniqueVpcId.
-                     * @return Vip The vip information to be bound must correspond to the UniqueVpcId.
+                     * 获取<p>vip information that should be bound must correspond to UniqueVpcId.</p>
+                     * @return Vip <p>vip information that should be bound must correspond to UniqueVpcId.</p>
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置The vip information to be bound must correspond to the UniqueVpcId.
-                     * @param _vip The vip information to be bound must correspond to the UniqueVpcId.
+                     * 设置<p>vip information that should be bound must correspond to UniqueVpcId.</p>
+                     * @param _vip <p>vip information that should be bound must correspond to UniqueVpcId.</p>
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -241,23 +233,15 @@ no: indicates not enabled.
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Weight mode:
-system: system-assigned.
-custom: custom.
-                     * @return WeightMode Weight mode:
-system: system-assigned.
-custom: custom.
+                     * 获取<p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
+                     * @return WeightMode <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
                      * 
                      */
                     std::string GetWeightMode() const;
 
                     /**
-                     * 设置Weight mode:
-system: system-assigned.
-custom: custom.
-                     * @param _weightMode Weight mode:
-system: system-assigned.
-custom: custom.
+                     * 设置<p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
+                     * @param _weightMode <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
                      * 
                      */
                     void SetWeightMode(const std::string& _weightMode);
@@ -270,23 +254,15 @@ custom: custom.
                     bool WeightModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
-                     * @return AutoAddRo Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+                     * 获取<p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
+                     * @return AutoAddRo <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
                      * 
                      */
                     std::string GetAutoAddRo() const;
 
                     /**
-                     * 设置Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
-                     * @param _autoAddRo Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+                     * 设置<p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
+                     * @param _autoAddRo <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
                      * 
                      */
                     void SetAutoAddRo(const std::string& _autoAddRo);
@@ -299,31 +275,15 @@ no: indicates not to automatically add a read-only instance.
                     bool AutoAddRoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
-                     * @return FailOver Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+                     * 获取<p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+                     * @return FailOver <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      * 
                      */
                     std::string GetFailOver() const;
 
                     /**
-                     * 设置Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
-                     * @param _failOver Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+                     * 设置<p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+                     * @param _failOver <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      * 
                      */
                     void SetFailOver(const std::string& _failOver);
@@ -336,35 +296,15 @@ Only when the value of the RwType parameter is READWRITE can this option be conf
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
-                     * @return ConsistencyType Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+                     * 获取<p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+                     * @return ConsistencyType <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      * 
                      */
                     std::string GetConsistencyType() const;
 
                     /**
-                     * 设置Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
-                     * @param _consistencyType Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+                     * 设置<p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+                     * @param _consistencyType <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      * 
                      */
                     void SetConsistencyType(const std::string& _consistencyType);
@@ -377,23 +317,15 @@ Only when the RwType parameter value is READWRITE can this option be configured.
                     bool ConsistencyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
-                     * @return RwType Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+                     * 获取<p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
+                     * @return RwType <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
                      * 
                      */
                     std::string GetRwType() const;
 
                     /**
-                     * 设置Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
-                     * @param _rwType Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+                     * 设置<p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
+                     * @param _rwType <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
                      * 
                      */
                     void SetRwType(const std::string& _rwType);
@@ -406,15 +338,15 @@ READONLY: indicates read-only.
                     bool RwTypeHasBeenSet() const;
 
                     /**
-                     * 获取The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
-                     * @return ConsistencyTimeOut The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+                     * 获取<p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
+                     * @return ConsistencyTimeOut <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
                      * 
                      */
                     int64_t GetConsistencyTimeOut() const;
 
                     /**
-                     * 设置The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
-                     * @param _consistencyTimeOut The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+                     * 设置<p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
+                     * @param _consistencyTimeOut <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
                      * 
                      */
                     void SetConsistencyTimeOut(const int64_t& _consistencyTimeOut);
@@ -427,15 +359,15 @@ READONLY: indicates read-only.
                     bool ConsistencyTimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
-                     * @return TransSplit Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+                     * 获取<p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
+                     * @return TransSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
                      * 
                      */
                     bool GetTransSplit() const;
 
                     /**
-                     * 设置Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
-                     * @param _transSplit Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+                     * 设置<p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
+                     * @param _transSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
                      * 
                      */
                     void SetTransSplit(const bool& _transSplit);
@@ -448,23 +380,15 @@ READONLY: indicates read-only.
                     bool TransSplitHasBeenSet() const;
 
                     /**
-                     * 获取Access mode:
-nearby: nearby access.
-balance: balanced allocation.
-                     * @return AccessMode Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+                     * 获取<p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+                     * @return AccessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
                      * 
                      */
                     std::string GetAccessMode() const;
 
                     /**
-                     * 设置Access mode:
-nearby: nearby access.
-balance: balanced allocation.
-                     * @param _accessMode Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+                     * 设置<p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+                     * @param _accessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
                      * 
                      */
                     void SetAccessMode(const std::string& _accessMode);
@@ -477,15 +401,15 @@ balance: balanced allocation.
                     bool AccessModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance weight.
-                     * @return InstanceWeights Instance weight.
+                     * 获取<p>Instance weight.</p>
+                     * @return InstanceWeights <p>Instance weight.</p>
                      * 
                      */
                     std::vector<ProxyInstanceWeight> GetInstanceWeights() const;
 
                     /**
-                     * 设置Instance weight.
-                     * @param _instanceWeights Instance weight.
+                     * 设置<p>Instance weight.</p>
+                     * @param _instanceWeights <p>Instance weight.</p>
                      * 
                      */
                     void SetInstanceWeights(const std::vector<ProxyInstanceWeight>& _instanceWeights);
@@ -497,134 +421,142 @@ balance: balanced allocation.
                      */
                     bool InstanceWeightsHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return LoadBalanceMode 
+                     * 
+                     */
+                    std::string GetLoadBalanceMode() const;
+
+                    /**
+                     * 设置
+                     * @param _loadBalanceMode 
+                     * 
+                     */
+                    void SetLoadBalanceMode(const std::string& _loadBalanceMode);
+
+                    /**
+                     * 判断参数 LoadBalanceMode 是否已赋值
+                     * @return LoadBalanceMode 是否已赋值
+                     * 
+                     */
+                    bool LoadBalanceModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID.
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+                     * <p>VPC ID.</p>
                      */
                     std::string m_uniqueVpcId;
                     bool m_uniqueVpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+                     * <p>VPC subnet ID.</p>
                      */
                     std::string m_uniqueSubnetId;
                     bool m_uniqueSubnetIdHasBeenSet;
 
                     /**
-                     * Type of connection pool: SessionConnectionPool (session-level connection pool).
+                     * <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
                      */
                     std::string m_connectionPoolType;
                     bool m_connectionPoolTypeHasBeenSet;
 
                     /**
-                     * Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+                     * <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
                      */
                     std::string m_openConnectionPool;
                     bool m_openConnectionPoolHasBeenSet;
 
                     /**
-                     * Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+                     * <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
                      */
                     int64_t m_connectionPoolTimeOut;
                     bool m_connectionPoolTimeOutHasBeenSet;
 
                     /**
-                     * Array of bound security group IDs.
+                     * <p>Bound security group ID array.</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Description.
+                     * <p>Description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * The vip information to be bound must correspond to the UniqueVpcId.
+                     * <p>vip information that should be bound must correspond to UniqueVpcId.</p>
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Weight mode:
-system: system-assigned.
-custom: custom.
+                     * <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
                      */
                     std::string m_weightMode;
                     bool m_weightModeHasBeenSet;
 
                     /**
-                     * Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+                     * <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
                      */
                     std::string m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;
 
                     /**
-                     * Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+                     * <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      */
                     std::string m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+                     * <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
                      */
                     std::string m_consistencyType;
                     bool m_consistencyTypeHasBeenSet;
 
                     /**
-                     * Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+                     * <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
                      */
                     std::string m_rwType;
                     bool m_rwTypeHasBeenSet;
 
                     /**
-                     * The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+                     * <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
                      */
                     int64_t m_consistencyTimeOut;
                     bool m_consistencyTimeOutHasBeenSet;
 
                     /**
-                     * Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+                     * <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
                      */
                     bool m_transSplit;
                     bool m_transSplitHasBeenSet;
 
                     /**
-                     * Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+                     * <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
                      */
                     std::string m_accessMode;
                     bool m_accessModeHasBeenSet;
 
                     /**
-                     * Instance weight.
+                     * <p>Instance weight.</p>
                      */
                     std::vector<ProxyInstanceWeight> m_instanceWeights;
                     bool m_instanceWeightsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_loadBalanceMode;
+                    bool m_loadBalanceModeHasBeenSet;
 
                 };
             }

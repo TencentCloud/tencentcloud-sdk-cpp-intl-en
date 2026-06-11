@@ -352,8 +352,8 @@ namespace TencentCloud
                     bool SuperNodeRunningCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TodayNewImageCnt 
+                     * 获取New image count added today
+                     * @return TodayNewImageCnt New image count added today
                      * 
                      */
                     uint64_t GetTodayNewImageCnt() const;
@@ -366,8 +366,8 @@ namespace TencentCloud
                     bool TodayNewImageCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TodayUnsafeImageCnt 
+                     * 获取New unsafe image count added today
+                     * @return TodayUnsafeImageCnt New unsafe image count added today
                      * 
                      */
                     uint64_t GetTodayUnsafeImageCnt() const;
@@ -380,8 +380,8 @@ namespace TencentCloud
                     bool TodayUnsafeImageCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecommendedFixImageCnt 
+                     * 获取The count of image should be fixed
+                     * @return RecommendedFixImageCnt The count of image should be fixed
                      * 
                      */
                     uint64_t GetRecommendedFixImageCnt() const;
@@ -394,8 +394,8 @@ namespace TencentCloud
                     bool RecommendedFixImageCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScannedImageCnt 
+                     * 获取The count of image scanned
+                     * @return ScannedImageCnt The count of image scanned
                      * 
                      */
                     uint64_t GetScannedImageCnt() const;
@@ -406,6 +406,20 @@ namespace TencentCloud
                      * 
                      */
                     bool ScannedImageCntHasBeenSet() const;
+
+                    /**
+                     * 获取Number of Images to Be Scanned
+                     * @return UnScannedImageCnt Number of Images to Be Scanned
+                     * 
+                     */
+                    uint64_t GetUnScannedImageCnt() const;
+
+                    /**
+                     * 判断参数 UnScannedImageCnt 是否已赋值
+                     * @return UnScannedImageCnt 是否已赋值
+                     * 
+                     */
+                    bool UnScannedImageCntHasBeenSet() const;
 
                 private:
 
@@ -542,28 +556,34 @@ namespace TencentCloud
                     bool m_superNodeRunningCntHasBeenSet;
 
                     /**
-                     * 
+                     * New image count added today
                      */
                     uint64_t m_todayNewImageCnt;
                     bool m_todayNewImageCntHasBeenSet;
 
                     /**
-                     * 
+                     * New unsafe image count added today
                      */
                     uint64_t m_todayUnsafeImageCnt;
                     bool m_todayUnsafeImageCntHasBeenSet;
 
                     /**
-                     * 
+                     * The count of image should be fixed
                      */
                     uint64_t m_recommendedFixImageCnt;
                     bool m_recommendedFixImageCntHasBeenSet;
 
                     /**
-                     * 
+                     * The count of image scanned
                      */
                     uint64_t m_scannedImageCnt;
                     bool m_scannedImageCntHasBeenSet;
+
+                    /**
+                     * Number of Images to Be Scanned
+                     */
+                    uint64_t m_unScannedImageCnt;
+                    bool m_unScannedImageCntHasBeenSet;
 
                 };
             }

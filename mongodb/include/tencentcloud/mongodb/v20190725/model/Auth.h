@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * User Permissions
                 */
                 class Auth : public AbstractModel
                 {

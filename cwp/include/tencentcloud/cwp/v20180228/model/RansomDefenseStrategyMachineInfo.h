@@ -69,18 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskInfo Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskInfo() const;
 
                     /**
                      * 设置Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _diskInfo Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskInfo(const std::string& _diskInfo);
@@ -102,7 +98,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskInfo;
                     bool m_diskInfoHasBeenSet;

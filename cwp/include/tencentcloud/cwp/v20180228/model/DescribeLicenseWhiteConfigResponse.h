@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ProfessionalHasBeenSet() const;
 
                     /**
-                     * 获取Inclusive Edition configuration information
-                     * @return PrattWhitney Inclusive Edition configuration information
+                     * 获取Lightweight Edition configuration information
+                     * @return PrattWhitney Lightweight Edition configuration information
                      * 
                      */
                     VersionWhiteConfig GetPrattWhitney() const;
@@ -85,6 +85,34 @@ namespace TencentCloud
                      * 
                      */
                     bool PrattWhitneyHasBeenSet() const;
+
+                    /**
+                     * 获取Authorization package configuration message
+                     * @return RASP Authorization package configuration message
+                     * 
+                     */
+                    VersionWhiteConfig GetRASP() const;
+
+                    /**
+                     * 判断参数 RASP 是否已赋值
+                     * @return RASP 是否已赋值
+                     * 
+                     */
+                    bool RASPHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LOG 
+                     * 
+                     */
+                    VersionWhiteConfig GetLOG() const;
+
+                    /**
+                     * 判断参数 LOG 是否已赋值
+                     * @return LOG 是否已赋值
+                     * 
+                     */
+                    bool LOGHasBeenSet() const;
 
                 private:
 
@@ -101,10 +129,22 @@ namespace TencentCloud
                     bool m_professionalHasBeenSet;
 
                     /**
-                     * Inclusive Edition configuration information
+                     * Lightweight Edition configuration information
                      */
                     VersionWhiteConfig m_prattWhitney;
                     bool m_prattWhitneyHasBeenSet;
+
+                    /**
+                     * Authorization package configuration message
+                     */
+                    VersionWhiteConfig m_rASP;
+                    bool m_rASPHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    VersionWhiteConfig m_lOG;
+                    bool m_lOGHasBeenSet;
 
                 };
             }

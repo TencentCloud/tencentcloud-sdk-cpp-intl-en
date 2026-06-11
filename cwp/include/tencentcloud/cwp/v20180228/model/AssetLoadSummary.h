@@ -98,18 +98,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Top5 Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetLoadDetail> GetTop5() const;
 
                     /**
                      * 设置Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _top5 Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTop5(const std::vector<AssetLoadDetail>& _top5);
@@ -138,7 +134,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetLoadDetail> m_top5;
                     bool m_top5HasBeenSet;

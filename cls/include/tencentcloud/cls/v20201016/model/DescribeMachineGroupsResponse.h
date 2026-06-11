@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
                      * @return MachineGroups Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MachineGroupInfo> GetMachineGroups() const;
@@ -78,7 +76,6 @@ Note: This field may return "null", indicating that no valid values can be obtai
 
                     /**
                      * Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
                      */
                     std::vector<MachineGroupInfo> m_machineGroups;
                     bool m_machineGroupsHasBeenSet;

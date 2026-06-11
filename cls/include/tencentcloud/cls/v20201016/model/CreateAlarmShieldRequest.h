@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Notification Channel Group ID
-                     * @return AlarmNoticeId Notification Channel Group ID
+                     * 获取Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+                     * @return AlarmNoticeId Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
                      * 
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
-                     * 设置Notification Channel Group ID
-                     * @param _alarmNoticeId Notification Channel Group ID
+                     * 设置Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+                     * @param _alarmNoticeId Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
                      * 
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool AlarmNoticeIdHasBeenSet() const;
 
                     /**
-                     * 获取Block start time (second-level timestamp).
-                     * @return StartTime Block start time (second-level timestamp).
+                     * 获取Block rule start time (second-level timestamp).
+                     * @return StartTime Block rule start time (second-level timestamp).
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Block start time (second-level timestamp).
-                     * @param _startTime Block start time (second-level timestamp).
+                     * 设置Block rule start time (second-level timestamp).
+                     * @param _startTime Block rule start time (second-level timestamp).
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Block end time (second-level timestamp).
-                     * @return EndTime Block end time (second-level timestamp).
+                     * 获取Block rule end time (second-level timestamp). The end time must be greater than the current time.
+                     * @return EndTime Block rule end time (second-level timestamp). The end time must be greater than the current time.
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置Block end time (second-level timestamp).
-                     * @param _endTime Block end time (second-level timestamp).
+                     * 设置Block rule end time (second-level timestamp). The end time must be greater than the current time.
+                     * @param _endTime Block rule end time (second-level timestamp). The end time must be greater than the current time.
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -171,19 +171,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Notification Channel Group ID
+                     * Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
                      */
                     std::string m_alarmNoticeId;
                     bool m_alarmNoticeIdHasBeenSet;
 
                     /**
-                     * Block start time (second-level timestamp).
+                     * Block rule start time (second-level timestamp).
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Block end time (second-level timestamp).
+                     * Block rule end time (second-level timestamp). The end time must be greater than the current time.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;

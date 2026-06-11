@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool ExportStatusHasBeenSet() const;
 
                     /**
-                     * 获取Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DownloadURL Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取return download URL
+                     * @return DownloadURL return download URL
                      * 
                      */
                     std::string GetDownloadURL() const;
@@ -74,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DownloadURLHasBeenSet() const;
 
                     /**
-                     * 获取Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExportProgress Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
+                     * @return ExportProgress When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
                      * 
                      */
                     double GetExportProgress() const;
@@ -90,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExportProgressHasBeenSet() const;
 
                     /**
-                     * 获取Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailureMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reason for failure
+                     * @return FailureMsg Reason for failure
                      * 
                      */
                     std::string GetFailureMsg() const;
@@ -114,22 +108,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_exportStatusHasBeenSet;
 
                     /**
-                     * Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * return download URL
                      */
                     std::string m_downloadURL;
                     bool m_downloadURLHasBeenSet;
 
                     /**
-                     * Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
                      */
                     double m_exportProgress;
                     bool m_exportProgressHasBeenSet;
 
                     /**
-                     * Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reason for failure
                      */
                     std::string m_failureMsg;
                     bool m_failureMsgHasBeenSet;

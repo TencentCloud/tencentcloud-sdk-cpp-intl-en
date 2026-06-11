@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return List 
+                     * 获取Result list
+                     * @return List Result list
                      * 
                      */
                     std::vector<VulAffectedRegistryImageInfo> GetList() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Result list
                      */
                     std::vector<VulAffectedRegistryImageInfo> m_list;
                     bool m_listHasBeenSet;

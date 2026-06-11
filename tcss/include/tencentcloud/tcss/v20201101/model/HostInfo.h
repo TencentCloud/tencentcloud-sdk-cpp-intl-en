@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Server ID
-                     * @return HostID Server ID
+                     * 获取<p>Host ID.</p>
+                     * @return HostID <p>Host ID.</p>
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置Server ID
-                     * @param _hostID Server ID
+                     * 设置<p>Host ID.</p>
+                     * @param _hostID <p>Host ID.</p>
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool HostIDHasBeenSet() const;
 
                     /**
-                     * 获取Server IP, which is the private IP
-                     * @return HostIP Server IP, which is the private IP
+                     * 获取<p>Host IP address, which is the private IP address.</p>
+                     * @return HostIP <p>Host IP address, which is the private IP address.</p>
                      * 
                      */
                     std::string GetHostIP() const;
 
                     /**
-                     * 设置Server IP, which is the private IP
-                     * @param _hostIP Server IP, which is the private IP
+                     * 设置<p>Host IP address, which is the private IP address.</p>
+                     * @param _hostIP <p>Host IP address, which is the private IP address.</p>
                      * 
                      */
                     void SetHostIP(const std::string& _hostIP);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-                     * @return HostName Server name
+                     * 获取<p>Host name.</p>
+                     * @return HostName <p>Host name.</p>
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-                     * @param _hostName Server name
+                     * 设置<p>Host name.</p>
+                     * @param _hostName <p>Host name.</p>
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Project
-                     * @return Group Project
+                     * 获取<p>Business group.</p>
+                     * @return Group <p>Business group.</p>
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置Project
-                     * @param _group Project
+                     * 设置<p>Business group.</p>
+                     * @param _group <p>Business group.</p>
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取Docker version
-                     * @return DockerVersion Docker version
+                     * 获取<p>Docker version.</p>
+                     * @return DockerVersion <p>Docker version.</p>
                      * 
                      */
                     std::string GetDockerVersion() const;
 
                     /**
-                     * 设置Docker version
-                     * @param _dockerVersion Docker version
+                     * 设置<p>Docker version.</p>
+                     * @param _dockerVersion <p>Docker version.</p>
                      * 
                      */
                     void SetDockerVersion(const std::string& _dockerVersion);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool DockerVersionHasBeenSet() const;
 
                     /**
-                     * 获取Docker file system type
-                     * @return DockerFileSystemDriver Docker file system type
+                     * 获取<p>Docker file system type.</p>
+                     * @return DockerFileSystemDriver <p>Docker file system type.</p>
                      * 
                      */
                     std::string GetDockerFileSystemDriver() const;
 
                     /**
-                     * 设置Docker file system type
-                     * @param _dockerFileSystemDriver Docker file system type
+                     * 设置<p>Docker file system type.</p>
+                     * @param _dockerFileSystemDriver <p>Docker file system type.</p>
                      * 
                      */
                     void SetDockerFileSystemDriver(const std::string& _dockerFileSystemDriver);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DockerFileSystemDriverHasBeenSet() const;
 
                     /**
-                     * 获取Number of images
-                     * @return ImageCnt Number of images
+                     * 获取<p>Number of images.</p>
+                     * @return ImageCnt <p>Number of images.</p>
                      * 
                      */
                     uint64_t GetImageCnt() const;
 
                     /**
-                     * 设置Number of images
-                     * @param _imageCnt Number of images
+                     * 设置<p>Number of images.</p>
+                     * @param _imageCnt <p>Number of images.</p>
                      * 
                      */
                     void SetImageCnt(const uint64_t& _imageCnt);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ImageCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of containers
-                     * @return ContainerCnt Number of containers
+                     * 获取<p>Number of containers.</p>
+                     * @return ContainerCnt <p>Number of containers.</p>
                      * 
                      */
                     uint64_t GetContainerCnt() const;
 
                     /**
-                     * 设置Number of containers
-                     * @param _containerCnt Number of containers
+                     * 设置<p>Number of containers.</p>
+                     * @param _containerCnt <p>Number of containers.</p>
                      * 
                      */
                     void SetContainerCnt(const uint64_t& _containerCnt);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool ContainerCntHasBeenSet() const;
 
                     /**
-                     * 获取Agent status
-                     * @return Status Agent status
+                     * 获取<p>Agent running status.</p>
+                     * @return Status <p>Agent running status.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Agent status
-                     * @param _status Agent status
+                     * 设置<p>Agent running status.</p>
+                     * @param _status <p>Agent running status.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is Containerd
-                     * @return IsContainerd Whether it is Containerd
+                     * 获取<p>Whether it is containerd.</p>
+                     * @return IsContainerd <p>Whether it is containerd.</p>
                      * 
                      */
                     bool GetIsContainerd() const;
 
                     /**
-                     * 设置Whether it is Containerd
-                     * @param _isContainerd Whether it is Containerd
+                     * 设置<p>Whether it is containerd.</p>
+                     * @param _isContainerd <p>Whether it is containerd.</p>
                      * 
                      */
                     void SetIsContainerd(const bool& _isContainerd);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool IsContainerdHasBeenSet() const;
 
                     /**
-                     * 获取Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
-                     * @return MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * 获取<p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+                     * @return MachineType <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
                      * 
                      */
                     std::string GetMachineType() const;
 
                     /**
-                     * 设置Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
-                     * @param _machineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * 设置<p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+                     * @param _machineType <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
                      * 
                      */
                     void SetMachineType(const std::string& _machineType);
@@ -280,15 +280,15 @@ namespace TencentCloud
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-                     * @return PublicIp Public IP
+                     * 获取<p>Public IP address.</p>
+                     * @return PublicIp <p>Public IP address.</p>
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置Public IP
-                     * @param _publicIp Public IP
+                     * 设置<p>Public IP address.</p>
+                     * @param _publicIp <p>Public IP address.</p>
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Server UUID
-                     * @return Uuid Server UUID
+                     * 获取<p>Host UUID.</p>
+                     * @return Uuid <p>Host UUID.</p>
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Server UUID
-                     * @param _uuid Server UUID
+                     * 设置<p>Host UUID.</p>
+                     * @param _uuid <p>Host UUID.</p>
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -322,15 +322,15 @@ namespace TencentCloud
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Server instance ID
-                     * @return InstanceID Server instance ID
+                     * 获取<p>Host instance ID.</p>
+                     * @return InstanceID <p>Host instance ID.</p>
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置Server instance ID
-                     * @param _instanceID Server instance ID
+                     * 设置<p>Host instance ID.</p>
+                     * @param _instanceID <p>Host instance ID.</p>
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -343,15 +343,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return RegionID Region ID
+                     * 获取<p>Region ID.</p>
+                     * @return RegionID <p>Region ID.</p>
                      * 
                      */
                     int64_t GetRegionID() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _regionID Region ID
+                     * 设置<p>Region ID.</p>
+                     * @param _regionID <p>Region ID.</p>
                      * 
                      */
                     void SetRegionID(const int64_t& _regionID);
@@ -364,19 +364,15 @@ namespace TencentCloud
                     bool RegionIDHasBeenSet() const;
 
                     /**
-                     * 获取Project
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Project Project
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Project.</p>
+                     * @return Project <p>Project.</p>
                      * 
                      */
                     ProjectInfo GetProject() const;
 
                     /**
-                     * 设置Project
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _project Project
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Project.</p>
+                     * @param _project <p>Project.</p>
                      * 
                      */
                     void SetProject(const ProjectInfo& _project);
@@ -389,19 +385,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ProjectHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Tags Tags
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Tag.</p>
+                     * @return Tags <p>Tag.</p>
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tags
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _tags Tags
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Tag.</p>
+                     * @param _tags <p>Tag.</p>
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -414,15 +406,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterID <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterID <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -435,15 +427,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Name
-                     * @return ClusterName Cluster Name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster Name
-                     * @param _clusterName Cluster Name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -456,15 +448,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster Access Status
-                     * @return ClusterAccessedStatus Cluster Access Status
+                     * 获取<p>Cluster access status.</p>
+                     * @return ClusterAccessedStatus <p>Cluster access status.</p>
                      * 
                      */
                     std::string GetClusterAccessedStatus() const;
 
                     /**
-                     * 设置Cluster Access Status
-                     * @param _clusterAccessedStatus Cluster Access Status
+                     * 设置<p>Cluster access status.</p>
+                     * @param _clusterAccessedStatus <p>Cluster access status.</p>
                      * 
                      */
                     void SetClusterAccessedStatus(const std::string& _clusterAccessedStatus);
@@ -476,129 +468,289 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool ClusterAccessedStatusHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+                     * @return ClusterAccessedSubStatus <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+                     * 
+                     */
+                    std::string GetClusterAccessedSubStatus() const;
+
+                    /**
+                     * 设置<p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+                     * @param _clusterAccessedSubStatus <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+                     * 
+                     */
+                    void SetClusterAccessedSubStatus(const std::string& _clusterAccessedSubStatus);
+
+                    /**
+                     * 判断参数 ClusterAccessedSubStatus 是否已赋值
+                     * @return ClusterAccessedSubStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterAccessedSubStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Detailed description of the failure reason.</p>
+                     * @return ClusterAccessedErrorReason <p>Detailed description of the failure reason.</p>
+                     * 
+                     */
+                    std::string GetClusterAccessedErrorReason() const;
+
+                    /**
+                     * 设置<p>Detailed description of the failure reason.</p>
+                     * @param _clusterAccessedErrorReason <p>Detailed description of the failure reason.</p>
+                     * 
+                     */
+                    void SetClusterAccessedErrorReason(const std::string& _clusterAccessedErrorReason);
+
+                    /**
+                     * 判断参数 ClusterAccessedErrorReason 是否已赋值
+                     * @return ClusterAccessedErrorReason 是否已赋值
+                     * 
+                     */
+                    bool ClusterAccessedErrorReasonHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Billable cores.</p>
+                     * @return ChargeCoresCnt <p>Billable cores.</p>
+                     * 
+                     */
+                    uint64_t GetChargeCoresCnt() const;
+
+                    /**
+                     * 设置<p>Billable cores.</p>
+                     * @param _chargeCoresCnt <p>Billable cores.</p>
+                     * 
+                     */
+                    void SetChargeCoresCnt(const uint64_t& _chargeCoresCnt);
+
+                    /**
+                     * 判断参数 ChargeCoresCnt 是否已赋值
+                     * @return ChargeCoresCnt 是否已赋值
+                     * 
+                     */
+                    bool ChargeCoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Protection status:<br>Defended<br>Undefended</p>
+                     * @return DefendStatus <p>Protection status:<br>Defended<br>Undefended</p>
+                     * 
+                     */
+                    std::string GetDefendStatus() const;
+
+                    /**
+                     * 设置<p>Protection status:<br>Defended<br>Undefended</p>
+                     * @param _defendStatus <p>Protection status:<br>Defended<br>Undefended</p>
+                     * 
+                     */
+                    void SetDefendStatus(const std::string& _defendStatus);
+
+                    /**
+                     * 判断参数 DefendStatus 是否已赋值
+                     * @return DefendStatus 是否已赋值
+                     * 
+                     */
+                    bool DefendStatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Number of cores.</p>
+                     * @return CoresCnt <p>Number of cores.</p>
+                     * 
+                     */
+                    uint64_t GetCoresCnt() const;
+
+                    /**
+                     * 设置<p>Number of cores.</p>
+                     * @param _coresCnt <p>Number of cores.</p>
+                     * 
+                     */
+                    void SetCoresCnt(const uint64_t& _coresCnt);
+
+                    /**
+                     * 判断参数 CoresCnt 是否已赋值
+                     * @return CoresCnt 是否已赋值
+                     * 
+                     */
+                    bool CoresCntHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Last online time.</p>
+                     * @return LastOnlineTime <p>Last online time.</p>
+                     * 
+                     */
+                    std::string GetLastOnlineTime() const;
+
+                    /**
+                     * 设置<p>Last online time.</p>
+                     * @param _lastOnlineTime <p>Last online time.</p>
+                     * 
+                     */
+                    void SetLastOnlineTime(const std::string& _lastOnlineTime);
+
+                    /**
+                     * 判断参数 LastOnlineTime 是否已赋值
+                     * @return LastOnlineTime 是否已赋值
+                     * 
+                     */
+                    bool LastOnlineTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Server ID
+                     * <p>Host ID.</p>
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
 
                     /**
-                     * Server IP, which is the private IP
+                     * <p>Host IP address, which is the private IP address.</p>
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Server name
+                     * <p>Host name.</p>
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Project
+                     * <p>Business group.</p>
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
-                     * Docker version
+                     * <p>Docker version.</p>
                      */
                     std::string m_dockerVersion;
                     bool m_dockerVersionHasBeenSet;
 
                     /**
-                     * Docker file system type
+                     * <p>Docker file system type.</p>
                      */
                     std::string m_dockerFileSystemDriver;
                     bool m_dockerFileSystemDriverHasBeenSet;
 
                     /**
-                     * Number of images
+                     * <p>Number of images.</p>
                      */
                     uint64_t m_imageCnt;
                     bool m_imageCntHasBeenSet;
 
                     /**
-                     * Number of containers
+                     * <p>Number of containers.</p>
                      */
                     uint64_t m_containerCnt;
                     bool m_containerCntHasBeenSet;
 
                     /**
-                     * Agent status
+                     * <p>Agent running status.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether it is Containerd
+                     * <p>Whether it is containerd.</p>
                      */
                     bool m_isContainerd;
                     bool m_isContainerdHasBeenSet;
 
                     /**
-                     * Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Public IP
+                     * <p>Public IP address.</p>
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Server UUID
+                     * <p>Host UUID.</p>
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Server instance ID
+                     * <p>Host instance ID.</p>
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Region ID
+                     * <p>Region ID.</p>
                      */
                     int64_t m_regionID;
                     bool m_regionIDHasBeenSet;
 
                     /**
-                     * Project
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Project.</p>
                      */
                     ProjectInfo m_project;
                     bool m_projectHasBeenSet;
 
                     /**
-                     * Tags
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Tag.</p>
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Cluster Name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster Access Status
+                     * <p>Cluster access status.</p>
                      */
                     std::string m_clusterAccessedStatus;
                     bool m_clusterAccessedStatusHasBeenSet;
+
+                    /**
+                     * <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+                     */
+                    std::string m_clusterAccessedSubStatus;
+                    bool m_clusterAccessedSubStatusHasBeenSet;
+
+                    /**
+                     * <p>Detailed description of the failure reason.</p>
+                     */
+                    std::string m_clusterAccessedErrorReason;
+                    bool m_clusterAccessedErrorReasonHasBeenSet;
+
+                    /**
+                     * <p>Billable cores.</p>
+                     */
+                    uint64_t m_chargeCoresCnt;
+                    bool m_chargeCoresCntHasBeenSet;
+
+                    /**
+                     * <p>Protection status:<br>Defended<br>Undefended</p>
+                     */
+                    std::string m_defendStatus;
+                    bool m_defendStatusHasBeenSet;
+
+                    /**
+                     * <p>Number of cores.</p>
+                     */
+                    uint64_t m_coresCnt;
+                    bool m_coresCntHasBeenSet;
+
+                    /**
+                     * <p>Last online time.</p>
+                     */
+                    std::string m_lastOnlineTime;
+                    bool m_lastOnlineTimeHasBeenSet;
 
                 };
             }

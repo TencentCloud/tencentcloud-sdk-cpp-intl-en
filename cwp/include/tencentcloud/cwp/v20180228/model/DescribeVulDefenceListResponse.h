@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulDefenceRangeDetail> GetList() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulDefenceRangeDetail> m_list;
                     bool m_listHasBeenSet;

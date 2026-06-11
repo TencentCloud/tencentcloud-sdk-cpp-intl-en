@@ -91,18 +91,14 @@ namespace TencentCloud
 
                     /**
                      * 获取ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
                      * 设置ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleId ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -200,18 +196,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SysRuleId System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSysRuleId() const;
 
                     /**
                      * 设置System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sysRuleId System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSysRuleId(const int64_t& _sysRuleId);
@@ -225,18 +217,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RelatedCustomRuleInfo Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineCustomRuleIdName> GetRelatedCustomRuleInfo() const;
 
                     /**
                      * 设置Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _relatedCustomRuleInfo Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRelatedCustomRuleInfo(const std::vector<BaselineCustomRuleIdName>& _relatedCustomRuleInfo);
@@ -264,7 +252,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
@@ -295,14 +282,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_sysRuleId;
                     bool m_sysRuleIdHasBeenSet;
 
                     /**
                      * Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineCustomRuleIdName> m_relatedCustomRuleInfo;
                     bool m_relatedCustomRuleInfoHasBeenSet;

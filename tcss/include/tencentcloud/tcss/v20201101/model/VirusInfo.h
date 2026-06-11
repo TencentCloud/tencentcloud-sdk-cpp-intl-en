@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filename
-                     * @return FileName Filename
+                     * 获取File name
+                     * @return FileName File name
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename
-                     * @param _fileName Filename
+                     * 设置File name
+                     * @param _fileName File name
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VirusNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ContainerNameHasBeenSet() const;
 
                     /**
-                     * 获取Container ID
-                     * @return ContainerId Container ID
+                     * 获取container id
+                     * @return ContainerId container id
                      * 
                      */
                     std::string GetContainerId() const;
 
                     /**
-                     * 设置Container ID
-                     * @param _containerId Container ID
+                     * 设置container id
+                     * @param _containerId container id
                      * 
                      */
                     void SetContainerId(const std::string& _containerId);
@@ -194,43 +194,43 @@ namespace TencentCloud
                     bool ContainerIdHasBeenSet() const;
 
                     /**
-                     * 获取Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-                     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * 获取Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @return ContainerStatus Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     std::string GetContainerStatus() const;
 
                     /**
-                     * 设置Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-                     * @param _containerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * 设置Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @param _containerStatus Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
@@ -243,15 +243,15 @@ namespace TencentCloud
                     bool ContainerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Image name
-                     * @return ImageName Image name
+                     * 获取Image Name
+                     * @return ImageName Image Name
                      * 
                      */
                     std::string GetImageName() const;
 
                     /**
-                     * 设置Image name
-                     * @param _imageName Image name
+                     * 设置Image Name
+                     * @param _imageName Image Name
                      * 
                      */
                     void SetImageName(const std::string& _imageName);
@@ -264,15 +264,15 @@ namespace TencentCloud
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-                     * @return ImageId Image ID
+                     * 获取Image id
+                     * @return ImageId Image id
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID
-                     * @param _imageId Image ID
+                     * 设置Image id
+                     * @param _imageId Image id
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -285,47 +285,47 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取`DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-                     * @return Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+                     * 获取DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+                     * @return Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置`DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-                     * @param _status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+                     * 设置DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+                     * @param _status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -380,15 +380,15 @@ namespace TencentCloud
                     bool HarmDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Solution
-                     * @return SuggestScheme Solution
+                     * 获取Recommended solution
+                     * @return SuggestScheme Recommended solution
                      * 
                      */
                     std::string GetSuggestScheme() const;
 
                     /**
-                     * 设置Solution
-                     * @param _suggestScheme Solution
+                     * 设置Recommended solution
+                     * @param _suggestScheme Recommended solution
                      * 
                      */
                     void SetSuggestScheme(const std::string& _suggestScheme);
@@ -401,59 +401,59 @@ namespace TencentCloud
                     bool SuggestSchemeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
-                     * @return SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+                     * 获取Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+                     * @return SubStatus Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
                      * 
                      */
                     std::string GetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
-                     * @param _subStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+                     * 设置Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+                     * @param _subStatus Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
                      * 
                      */
                     void SetSubStatus(const std::string& _subStatus);
@@ -466,39 +466,39 @@ namespace TencentCloud
                     bool SubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-                     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+                     * 获取Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+                     * @return ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     std::string GetContainerNetStatus() const;
 
                     /**
-                     * 设置Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-                     * @param _containerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+                     * 设置Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+                     * @param _containerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
@@ -511,43 +511,43 @@ namespace TencentCloud
                     bool ContainerNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-                     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+                     * 获取container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+                     * @return ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-                     * @param _containerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+                     * 设置container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+                     * @param _containerNetSubStatus container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
                      * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
@@ -560,15 +560,15 @@ namespace TencentCloud
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
+                     * 获取Container Isolation Operation Source
+                     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
-                     * 设置Container isolation operation source
-                     * @param _containerIsolateOperationSrc Container isolation operation source
+                     * 设置Container Isolation Operation Source
+                     * @param _containerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
@@ -581,19 +581,15 @@ namespace TencentCloud
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MD5 MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MD5 Value
+                     * @return MD5 MD5 Value
                      * 
                      */
                     std::string GetMD5() const;
 
                     /**
-                     * 设置MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mD5 MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MD5 Value
+                     * @param _mD5 MD5 Value
                      * 
                      */
                     void SetMD5(const std::string& _mD5);
@@ -606,19 +602,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MD5HasBeenSet() const;
 
                     /**
-                     * 获取Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+                     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+                     * @param _riskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -631,39 +623,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+                     * @return CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
                      * 
                      */
                     std::vector<std::string> GetCheckPlatform() const;
 
                     /**
-                     * 设置Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+                     * @param _checkPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
                      * 
                      */
                     void SetCheckPlatform(const std::vector<std::string>& _checkPlatform);
@@ -676,15 +664,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckPlatformHasBeenSet() const;
 
                     /**
-                     * 获取Node ID.
-                     * @return NodeID Node ID.
+                     * 获取Node ID
+                     * @return NodeID Node ID
                      * 
                      */
                     std::string GetNodeID() const;
 
                     /**
-                     * 设置Node ID.
-                     * @param _nodeID Node ID.
+                     * 设置Node ID
+                     * @param _nodeID Node ID
                      * 
                      */
                     void SetNodeID(const std::string& _nodeID);
@@ -697,15 +685,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIDHasBeenSet() const;
 
                     /**
-                     * 获取Node name
-                     * @return NodeName Node name
+                     * 获取Node name.
+                     * @return NodeName Node name.
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Node name
-                     * @param _nodeName Node name
+                     * 设置Node name.
+                     * @param _nodeName Node name.
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -718,15 +706,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Pod IP
-                     * @return PodIP Pod IP
+                     * 获取pod ip
+                     * @return PodIP pod ip
                      * 
                      */
                     std::string GetPodIP() const;
 
                     /**
-                     * 设置Pod IP
-                     * @param _podIP Pod IP
+                     * 设置pod ip
+                     * @param _podIP pod ip
                      * 
                      */
                     void SetPodIP(const std::string& _podIP);
@@ -739,15 +727,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodIPHasBeenSet() const;
 
                     /**
-                     * 获取Pod (instance) name
-                     * @return PodName Pod (instance) name
+                     * 获取Name of the pod (instance)
+                     * @return PodName Name of the pod (instance)
                      * 
                      */
                     std::string GetPodName() const;
 
                     /**
-                     * 设置Pod (instance) name
-                     * @param _podName Pod (instance) name
+                     * 设置Name of the pod (instance)
+                     * @param _podName Name of the pod (instance)
                      * 
                      */
                     void SetPodName(const std::string& _podName);
@@ -760,15 +748,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodNameHasBeenSet() const;
 
                     /**
-                     * 获取ID of the cluster where the node resides
-                     * @return ClusterID ID of the cluster where the node resides
+                     * 获取Node Cluster ID
+                     * @return ClusterID Node Cluster ID
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置ID of the cluster where the node resides
-                     * @param _clusterID ID of the cluster where the node resides
+                     * 设置Node Cluster ID
+                     * @param _clusterID Node Cluster ID
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -781,15 +769,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-                     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 获取Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * @return NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
                      * 
                      */
                     std::string GetNodeType() const;
 
                     /**
-                     * 设置Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-                     * @param _nodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * 设置Node Type. NORMAL: Common Node; SUPER: Super Node
+                     * @param _nodeType Node Type. NORMAL: Common Node; SUPER: Super Node
                      * 
                      */
                     void SetNodeType(const std::string& _nodeType);
@@ -823,15 +811,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublicIPHasBeenSet() const;
 
                     /**
-                     * 获取Node private IP
-                     * @return InnerIP Node private IP
+                     * 获取Node private network IP
+                     * @return InnerIP Node private network IP
                      * 
                      */
                     std::string GetInnerIP() const;
 
                     /**
-                     * 设置Node private IP
-                     * @param _innerIP Node private IP
+                     * 设置Node private network IP
+                     * @param _innerIP Node private network IP
                      * 
                      */
                     void SetInnerIP(const std::string& _innerIP);
@@ -844,15 +832,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InnerIPHasBeenSet() const;
 
                     /**
-                     * 获取UID of the node
-                     * @return NodeUniqueID UID of the node
+                     * 获取Node Unique ID
+                     * @return NodeUniqueID Node Unique ID
                      * 
                      */
                     std::string GetNodeUniqueID() const;
 
                     /**
-                     * 设置UID of the node
-                     * @param _nodeUniqueID UID of the node
+                     * 设置Node Unique ID
+                     * @param _nodeUniqueID Node Unique ID
                      * 
                      */
                     void SetNodeUniqueID(const std::string& _nodeUniqueID);
@@ -865,15 +853,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeUniqueIDHasBeenSet() const;
 
                     /**
-                     * 获取ID for the general node
-                     * @return HostID ID for the general node
+                     * 获取Common Node ID
+                     * @return HostID Common Node ID
                      * 
                      */
                     std::string GetHostID() const;
 
                     /**
-                     * 设置ID for the general node
-                     * @param _hostID ID for the general node
+                     * 设置Common Node ID
+                     * @param _hostID Common Node ID
                      * 
                      */
                     void SetHostID(const std::string& _hostID);
@@ -886,15 +874,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIDHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -906,10 +894,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterNameHasBeenSet() const;
 
+                    /**
+                     * 获取Private IP address of the node, which is the same as the value of InnerIP.
+                     * @return HostIP Private IP address of the node, which is the same as the value of InnerIP.
+                     * 
+                     */
+                    std::string GetHostIP() const;
+
+                    /**
+                     * 设置Private IP address of the node, which is the same as the value of InnerIP.
+                     * @param _hostIP Private IP address of the node, which is the same as the value of InnerIP.
+                     * 
+                     */
+                    void SetHostIP(const std::string& _hostIP);
+
+                    /**
+                     * 判断参数 HostIP 是否已赋值
+                     * @return HostIP 是否已赋值
+                     * 
+                     */
+                    bool HostIPHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Filename
+                     * File name
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
@@ -927,7 +936,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_virusNameHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -945,46 +954,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_containerNameHasBeenSet;
 
                     /**
-                     * Container ID
+                     * container id
                      */
                     std::string m_containerId;
                     bool m_containerIdHasBeenSet;
 
                     /**
-                     * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+                     * Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
 
                     /**
-                     * Image name
+                     * Image Name
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Image ID
+                     * Image id
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+                     * DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -1002,117 +1011,114 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_harmDescribeHasBeenSet;
 
                     /**
-                     * Solution
+                     * Recommended solution
                      */
                     std::string m_suggestScheme;
                     bool m_suggestSchemeHasBeenSet;
 
                     /**
-                     * Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+                     * Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
                      */
                     std::string m_subStatus;
                     bool m_subStatusHasBeenSet;
 
                     /**
-                     * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+                     * Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      */
                     std::string m_containerNetStatus;
                     bool m_containerNetStatusHasBeenSet;
 
                     /**
-                     * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+                     * container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
+                     * Container Isolation Operation Source
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MD5 Value
                      */
                     std::string m_mD5;
                     bool m_mD5HasBeenSet;
 
                     /**
-                     * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
                      */
                     std::vector<std::string> m_checkPlatform;
                     bool m_checkPlatformHasBeenSet;
 
                     /**
-                     * Node ID.
+                     * Node ID
                      */
                     std::string m_nodeID;
                     bool m_nodeIDHasBeenSet;
 
                     /**
-                     * Node name
+                     * Node name.
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Pod IP
+                     * pod ip
                      */
                     std::string m_podIP;
                     bool m_podIPHasBeenSet;
 
                     /**
-                     * Pod (instance) name
+                     * Name of the pod (instance)
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;
 
                     /**
-                     * ID of the cluster where the node resides
+                     * Node Cluster ID
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+                     * Node Type. NORMAL: Common Node; SUPER: Super Node
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
@@ -1124,28 +1130,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_publicIPHasBeenSet;
 
                     /**
-                     * Node private IP
+                     * Node private network IP
                      */
                     std::string m_innerIP;
                     bool m_innerIPHasBeenSet;
 
                     /**
-                     * UID of the node
+                     * Node Unique ID
                      */
                     std::string m_nodeUniqueID;
                     bool m_nodeUniqueIDHasBeenSet;
 
                     /**
-                     * ID for the general node
+                     * Common Node ID
                      */
                     std::string m_hostID;
                     bool m_hostIDHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * Private IP address of the node, which is the same as the value of InnerIP.
+                     */
+                    std::string m_hostIP;
+                    bool m_hostIPHasBeenSet;
 
                 };
             }

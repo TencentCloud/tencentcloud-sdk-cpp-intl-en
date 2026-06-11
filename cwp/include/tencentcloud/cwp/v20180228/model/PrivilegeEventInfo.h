@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing ID
-                     * @return Uuid Yunjing ID
+                     * 获取Host Security UUID
+                     * @return Uuid Host Security UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing ID
-                     * @param _uuid Yunjing ID
+                     * 设置Host Security UUID
+                     * @param _uuid Host Security UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Host ID
-                     * @return Quuid Host ID
+                     * 获取Host UUID
+                     * @return Quuid Host UUID
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置Host ID
-                     * @param _quuid Host ID
+                     * 设置Host UUID
+                     * @param _quuid Host UUID
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -592,6 +592,27 @@ namespace TencentCloud
                      */
                     bool ModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Alarm count
+                     * @return Count Alarm count
+                     * 
+                     */
+                    int64_t GetCount() const;
+
+                    /**
+                     * 设置Alarm count
+                     * @param _count Alarm count
+                     * 
+                     */
+                    void SetCount(const int64_t& _count);
+
+                    /**
+                     * 判断参数 Count 是否已赋值
+                     * @return Count 是否已赋值
+                     * 
+                     */
+                    bool CountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -601,13 +622,13 @@ namespace TencentCloud
                     bool m_idHasBeenSet;
 
                     /**
-                     * Yunjing ID
+                     * Host Security UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Host ID
+                     * Host UUID
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
@@ -749,6 +770,12 @@ namespace TencentCloud
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * Alarm count
+                     */
+                    int64_t m_count;
+                    bool m_countHasBeenSet;
 
                 };
             }

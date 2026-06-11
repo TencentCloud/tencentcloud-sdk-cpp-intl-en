@@ -86,31 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
-                     * @return Filters Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+                     * 获取Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+                     * @return Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
-                     * @param _filters Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+                     * 设置Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+                     * @param _filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -137,11 +121,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+                     * Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool AutoIncludeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ProductType 
+                     * 
+                     */
+                    uint64_t GetProductType() const;
+
+                    /**
+                     * 设置
+                     * @param _productType 
+                     * 
+                     */
+                    void SetProductType(const uint64_t& _productType);
+
+                    /**
+                     * 判断参数 ProductType 是否已赋值
+                     * @return ProductType 是否已赋值
+                     * 
+                     */
+                    bool ProductTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +226,12 @@ namespace TencentCloud
                      */
                     uint64_t m_autoInclude;
                     bool m_autoIncludeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_productType;
+                    bool m_productTypeHasBeenSet;
 
                 };
             }

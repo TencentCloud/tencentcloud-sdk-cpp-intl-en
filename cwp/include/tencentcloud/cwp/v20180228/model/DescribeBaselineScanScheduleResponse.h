@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Schedule Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection progress (percentage)
+                     * @return Schedule Detection progress (percentage)
                      * 
                      */
                     uint64_t GetSchedule() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection progress (percentage)
                      */
                     uint64_t m_schedule;
                     bool m_scheduleHasBeenSet;

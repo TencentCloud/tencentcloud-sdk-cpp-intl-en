@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool EnableScanHasBeenSet() const;
 
                     /**
-                     * 获取Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanPathAll Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scan all paths.
+                     * @return ScanPathAll Scan all paths.
                      * 
                      */
                     bool GetScanPathAll() const;
@@ -74,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanPathAllHasBeenSet() const;
 
                     /**
-                     * 获取Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
+                     * @return ScanPathType It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
                      * 
                      */
                     uint64_t GetScanPathType() const;
@@ -90,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanPathTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanPath Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom Excluded or Scanned Address
+                     * @return ScanPath Custom Excluded or Scanned Address
                      * 
                      */
                     std::vector<std::string> GetScanPath() const;
@@ -136,22 +130,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_enableScanHasBeenSet;
 
                     /**
-                     * Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scan all paths.
                      */
                     bool m_scanPathAll;
                     bool m_scanPathAllHasBeenSet;
 
                     /**
-                     * Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
                      */
                     uint64_t m_scanPathType;
                     bool m_scanPathTypeHasBeenSet;
 
                     /**
-                     * Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Custom Excluded or Scanned Address
                      */
                     std::vector<std::string> m_scanPath;
                     bool m_scanPathHasBeenSet;

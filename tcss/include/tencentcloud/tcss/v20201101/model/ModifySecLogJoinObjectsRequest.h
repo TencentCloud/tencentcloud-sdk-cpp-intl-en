@@ -76,15 +76,15 @@ K8s API: k8s_api
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of QUuids of bound servers
-                     * @return BindList List of QUuids of bound servers
+                     * 获取Bound list
+                     * @return BindList Bound list
                      * 
                      */
                     std::vector<std::string> GetBindList() const;
 
                     /**
-                     * 设置List of QUuids of bound servers
-                     * @param _bindList List of QUuids of bound servers
+                     * 设置Bound list
+                     * @param _bindList Bound list
                      * 
                      */
                     void SetBindList(const std::vector<std::string>& _bindList);
@@ -97,15 +97,15 @@ K8s API: k8s_api
                     bool BindListHasBeenSet() const;
 
                     /**
-                     * 获取List of QUuids of servers to be unbound
-                     * @return UnBindList List of QUuids of servers to be unbound
+                     * 获取List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
+                     * @return UnBindList List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
                      * 
                      */
                     std::vector<std::string> GetUnBindList() const;
 
                     /**
-                     * 设置List of QUuids of servers to be unbound
-                     * @param _unBindList List of QUuids of servers to be unbound
+                     * 设置List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
+                     * @param _unBindList List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
                      * 
                      */
                     void SetUnBindList(const std::vector<std::string>& _unBindList);
@@ -150,6 +150,48 @@ K8s API: k8s_api
                      */
                     bool NodeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Log node scope type. 0: specified; 1: all.
+                     * @return RangeType Log node scope type. 0: specified; 1: all.
+                     * 
+                     */
+                    int64_t GetRangeType() const;
+
+                    /**
+                     * 设置Log node scope type. 0: specified; 1: all.
+                     * @param _rangeType Log node scope type. 0: specified; 1: all.
+                     * 
+                     */
+                    void SetRangeType(const int64_t& _rangeType);
+
+                    /**
+                     * 判断参数 RangeType 是否已赋值
+                     * @return RangeType 是否已赋值
+                     * 
+                     */
+                    bool RangeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * @return AutoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * 
+                     */
+                    bool GetAutoJoin() const;
+
+                    /**
+                     * 设置Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * @param _autoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     * 
+                     */
+                    void SetAutoJoin(const bool& _autoJoin);
+
+                    /**
+                     * 判断参数 AutoJoin 是否已赋值
+                     * @return AutoJoin 是否已赋值
+                     * 
+                     */
+                    bool AutoJoinHasBeenSet() const;
+
                 private:
 
                     /**
@@ -162,13 +204,13 @@ K8s API: k8s_api
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * List of QUuids of bound servers
+                     * Bound list
                      */
                     std::vector<std::string> m_bindList;
                     bool m_bindListHasBeenSet;
 
                     /**
-                     * List of QUuids of servers to be unbound
+                     * List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
                      */
                     std::vector<std::string> m_unBindList;
                     bool m_unBindListHasBeenSet;
@@ -181,6 +223,18 @@ K8s API: k8s_api
                      */
                     std::string m_nodeType;
                     bool m_nodeTypeHasBeenSet;
+
+                    /**
+                     * Log node scope type. 0: specified; 1: all.
+                     */
+                    int64_t m_rangeType;
+                    bool m_rangeTypeHasBeenSet;
+
+                    /**
+                     * Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+                     */
+                    bool m_autoJoin;
+                    bool m_autoJoinHasBeenSet;
 
                 };
             }

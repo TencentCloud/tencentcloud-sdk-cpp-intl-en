@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Users 
+                     * 获取The list of instance accounts.
+                     * @return Users The list of instance accounts.
                      * 
                      */
                     std::vector<UserInfo> GetUsers() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The list of instance accounts.
                      */
                     std::vector<UserInfo> m_users;
                     bool m_usersHasBeenSet;

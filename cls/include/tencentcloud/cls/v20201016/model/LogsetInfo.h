@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LogsetNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取Creation time. Format `YYYY-MM-DD HH:MM:SS`
+                     * @return CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置Creation time. Format `YYYY-MM-DD HH:MM:SS`
+                     * @param _createTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -111,19 +111,36 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+                     * @return AssumerUin If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+                     * 
+                     */
+                    uint64_t GetAssumerUin() const;
+
+                    /**
+                     * 设置If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+                     * @param _assumerUin If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+                     * 
+                     */
+                    void SetAssumerUin(const uint64_t& _assumerUin);
+
+                    /**
+                     * 判断参数 AssumerUin 是否已赋值
+                     * @return AssumerUin 是否已赋值
+                     * 
+                     */
+                    bool AssumerUinHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+                     * @return AssumerName Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
                      * 
                      */
                     std::string GetAssumerName() const;
 
                     /**
-                     * 设置Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _assumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+                     * @param _assumerName Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
                      * 
                      */
                     void SetAssumerName(const std::string& _assumerName);
@@ -136,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AssumerNameHasBeenSet() const;
 
                     /**
-                     * 获取Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Tags Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Tag bound to log set
+                     * @return Tags Tag bound to log set
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _tags Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Tag bound to log set
+                     * @param _tags Tag bound to log set
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -202,6 +215,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool RoleNameHasBeenSet() const;
 
+                    /**
+                     * 获取Number of metric topics under log sets
+                     * @return MetricTopicCount Number of metric topics under log sets
+                     * 
+                     */
+                    int64_t GetMetricTopicCount() const;
+
+                    /**
+                     * 设置Number of metric topics under log sets
+                     * @param _metricTopicCount Number of metric topics under log sets
+                     * 
+                     */
+                    void SetMetricTopicCount(const int64_t& _metricTopicCount);
+
+                    /**
+                     * 判断参数 MetricTopicCount 是否已赋值
+                     * @return MetricTopicCount 是否已赋值
+                     * 
+                     */
+                    bool MetricTopicCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,21 +251,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_logsetNameHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+                     */
+                    uint64_t m_assumerUin;
+                    bool m_assumerUinHasBeenSet;
+
+                    /**
+                     * Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
                      */
                     std::string m_assumerName;
                     bool m_assumerNameHasBeenSet;
 
                     /**
-                     * Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Tag bound to log set
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -247,6 +285,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;
+
+                    /**
+                     * Number of metric topics under log sets
+                     */
+                    int64_t m_metricTopicCount;
+                    bool m_metricTopicCountHasBeenSet;
 
                 };
             }

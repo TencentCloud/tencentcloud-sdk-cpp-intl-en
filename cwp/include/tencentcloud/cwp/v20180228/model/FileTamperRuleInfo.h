@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHostCount() const;
 
                     /**
                      * 设置Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostCount(const uint64_t& _hostCount);
@@ -244,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WriteRuleCount Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of write entries for a subrule.
+                     * @return WriteRuleCount Number of write entries for a subrule.
                      * 
                      */
                     uint64_t GetWriteRuleCount() const;
 
                     /**
-                     * 设置Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _writeRuleCount Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of write entries for a subrule.
+                     * @param _writeRuleCount Number of write entries for a subrule.
                      * 
                      */
                     void SetWriteRuleCount(const uint64_t& _writeRuleCount);
@@ -269,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WriteRuleCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadRuleCount Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of read entries for a subrule.
+                     * @return ReadRuleCount Number of read entries for a subrule.
                      * 
                      */
                     uint64_t GetReadRuleCount() const;
 
                     /**
-                     * 设置Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readRuleCount Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of read entries for a subrule.
+                     * @param _readRuleCount Number of read entries for a subrule.
                      * 
                      */
                     void SetReadRuleCount(const uint64_t& _readRuleCount);
@@ -294,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReadRuleCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReadWriteRuleCount Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of read and write entries for a subrule.
+                     * @return ReadWriteRuleCount Number of read and write entries for a subrule.
                      * 
                      */
                     uint64_t GetReadWriteRuleCount() const;
 
                     /**
-                     * 设置Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _readWriteRuleCount Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of read and write entries for a subrule.
+                     * @param _readWriteRuleCount Number of read and write entries for a subrule.
                      * 
                      */
                     void SetReadWriteRuleCount(const uint64_t& _readWriteRuleCount);
@@ -323,12 +303,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFileAction() const;
@@ -338,12 +316,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileAction(const std::string& _fileAction);
@@ -357,26 +333,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * @return AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * 
                      */
                     std::string GetAddWhiteType() const;
 
                     /**
                      * 设置Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * @param _addWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * 
                      */
                     void SetAddWhiteType(const std::string& _addWhiteType);
@@ -392,7 +364,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -405,7 +376,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
@@ -447,22 +417,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of write entries for a subrule.
                      */
                     uint64_t m_writeRuleCount;
                     bool m_writeRuleCountHasBeenSet;
 
                     /**
-                     * Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of read entries for a subrule.
                      */
                     uint64_t m_readRuleCount;
                     bool m_readRuleCountHasBeenSet;
 
                     /**
-                     * Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of read and write entries for a subrule.
                      */
                     uint64_t m_readWriteRuleCount;
                     bool m_readWriteRuleCountHasBeenSet;
@@ -472,16 +439,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fileAction;
                     bool m_fileActionHasBeenSet;
 
                     /**
                      * Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      */
                     std::string m_addWhiteType;
                     bool m_addWhiteTypeHasBeenSet;

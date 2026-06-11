@@ -176,18 +176,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
@@ -516,18 +512,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -603,19 +595,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Additional information
+                     * @return MachineExtraInfo  Additional information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Additional information
+                     * @param _machineExtraInfo  Additional information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -667,7 +655,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MachineTag> m_tag;
                     bool m_tagHasBeenSet;
@@ -764,7 +751,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -788,8 +774,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Additional information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

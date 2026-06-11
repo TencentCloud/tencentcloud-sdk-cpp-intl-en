@@ -140,15 +140,15 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
-                     * @return StartTime The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+                     * 获取The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
+                     * @return StartTime The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
-                     * @param _startTime The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+                     * 设置The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
+                     * @param _startTime The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -211,7 +211,7 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+                     * The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;

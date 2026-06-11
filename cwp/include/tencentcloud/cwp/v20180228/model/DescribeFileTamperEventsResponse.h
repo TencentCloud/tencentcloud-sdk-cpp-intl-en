@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FileTamperEvent> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<FileTamperEvent> m_list;
                     bool m_listHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * List of allowed operations for the instance.
                 */
                 class InstanceAbility : public AbstractModel
                 {

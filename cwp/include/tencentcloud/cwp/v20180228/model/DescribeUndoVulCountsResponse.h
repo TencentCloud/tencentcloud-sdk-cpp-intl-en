@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UndoVulCount Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetUndoVulCount() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UndoVulCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UndoHostCount Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Unprocessed Hosts
+                     * @return UndoHostCount Number of Unprocessed Hosts
                      * 
                      */
                     int64_t GetUndoHostCount() const;
@@ -77,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NotProfessionCount Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetNotProfessionCount() const;
@@ -95,21 +89,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_undoVulCount;
                     bool m_undoVulCountHasBeenSet;
 
                     /**
-                     * Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Unprocessed Hosts
                      */
                     int64_t m_undoHostCount;
                     bool m_undoHostCountHasBeenSet;
 
                     /**
                      * Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_notProfessionCount;
                     bool m_notProfessionCountHasBeenSet;

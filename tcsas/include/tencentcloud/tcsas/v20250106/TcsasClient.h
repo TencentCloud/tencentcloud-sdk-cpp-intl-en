@@ -39,16 +39,22 @@
 #include <tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNGAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNGAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGDomainACLRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGDomainACLResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGSensitiveAPIPermissionApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNGSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNGSubscribeMessageTemplateResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNGVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLRequest.h>
@@ -57,6 +63,8 @@
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPSecretKeyResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/CreateMNPSubscribeMessageTemplateResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/CreateMNPVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/CreatePresetKeyRequest.h>
@@ -73,8 +81,12 @@
 #include <tencentcloud/tcsas/v20250106/model/DeleteGlobalDomainResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteMNGRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteMNGResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DeleteMNGSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DeleteMNGSubscribeMessageTemplateResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DeleteMNPSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DeleteMNPSubscribeMessageTemplateResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteTeamRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteTeamResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DeleteTeamMemberRequest.h>
@@ -125,6 +137,8 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingOverviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGAllStageVersionsRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGAllStageVersionsResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGCategoryRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGCategoryResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGDomainACLRequest.h>
@@ -157,6 +171,14 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionListResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPRequest.h>
@@ -169,6 +191,8 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAdvertisingDetailResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPCategoryRequest.h>
@@ -203,6 +227,14 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateLibraryRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateLibraryResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateLibraryListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateLibraryListResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailRequest.h>
@@ -237,10 +269,14 @@
 #include <tencentcloud/tcsas/v20250106/model/ModifyGlobalDomainResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNGRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNGResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyMNGAppSecretStatusRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyMNGAppSecretStatusResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNGDomainRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNGDomainResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyMNPAppSecretStatusRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ModifyMNPAppSecretStatusResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNPDomainRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyMNPDomainResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyTeamRequest.h>
@@ -261,6 +297,10 @@
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNGResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ResetMNPAppSecretRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ResetMNPAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNGVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNGVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNPVersionRequest.h>
@@ -303,6 +343,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMNGResponse> CreateMNGOutcome;
                 typedef std::future<CreateMNGOutcome> CreateMNGOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNGRequest&, CreateMNGOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNGAppSecretResponse> CreateMNGAppSecretOutcome;
+                typedef std::future<CreateMNGAppSecretOutcome> CreateMNGAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateMNGAppSecretRequest&, CreateMNGAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGAppSecretAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNGApprovalResponse> CreateMNGApprovalOutcome;
                 typedef std::future<CreateMNGApprovalOutcome> CreateMNGApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNGApprovalRequest&, CreateMNGApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGApprovalAsyncHandler;
@@ -312,12 +355,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMNGSensitiveAPIPermissionApprovalResponse> CreateMNGSensitiveAPIPermissionApprovalOutcome;
                 typedef std::future<CreateMNGSensitiveAPIPermissionApprovalOutcome> CreateMNGSensitiveAPIPermissionApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNGSensitiveAPIPermissionApprovalRequest&, CreateMNGSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNGSubscribeMessageTemplateResponse> CreateMNGSubscribeMessageTemplateOutcome;
+                typedef std::future<CreateMNGSubscribeMessageTemplateOutcome> CreateMNGSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateMNGSubscribeMessageTemplateRequest&, CreateMNGSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGSubscribeMessageTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNGVersionResponse> CreateMNGVersionOutcome;
                 typedef std::future<CreateMNGVersionOutcome> CreateMNGVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNGVersionRequest&, CreateMNGVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNGVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNPResponse> CreateMNPOutcome;
                 typedef std::future<CreateMNPOutcome> CreateMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPRequest&, CreateMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPAppSecretResponse> CreateMNPAppSecretOutcome;
+                typedef std::future<CreateMNPAppSecretOutcome> CreateMNPAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateMNPAppSecretRequest&, CreateMNPAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPAppSecretAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNPApprovalResponse> CreateMNPApprovalOutcome;
                 typedef std::future<CreateMNPApprovalOutcome> CreateMNPApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPApprovalRequest&, CreateMNPApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPApprovalAsyncHandler;
@@ -330,6 +379,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMNPSensitiveAPIPermissionApprovalResponse> CreateMNPSensitiveAPIPermissionApprovalOutcome;
                 typedef std::future<CreateMNPSensitiveAPIPermissionApprovalOutcome> CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPSensitiveAPIPermissionApprovalRequest&, CreateMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMNPSubscribeMessageTemplateResponse> CreateMNPSubscribeMessageTemplateOutcome;
+                typedef std::future<CreateMNPSubscribeMessageTemplateOutcome> CreateMNPSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::CreateMNPSubscribeMessageTemplateRequest&, CreateMNPSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPSubscribeMessageTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMNPVersionResponse> CreateMNPVersionOutcome;
                 typedef std::future<CreateMNPVersionOutcome> CreateMNPVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::CreateMNPVersionRequest&, CreateMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMNPVersionAsyncHandler;
@@ -354,9 +406,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteMNGResponse> DeleteMNGOutcome;
                 typedef std::future<DeleteMNGOutcome> DeleteMNGOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DeleteMNGRequest&, DeleteMNGOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMNGAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteMNGSubscribeMessageTemplateResponse> DeleteMNGSubscribeMessageTemplateOutcome;
+                typedef std::future<DeleteMNGSubscribeMessageTemplateOutcome> DeleteMNGSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DeleteMNGSubscribeMessageTemplateRequest&, DeleteMNGSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMNGSubscribeMessageTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteMNPResponse> DeleteMNPOutcome;
                 typedef std::future<DeleteMNPOutcome> DeleteMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DeleteMNPRequest&, DeleteMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteMNPSubscribeMessageTemplateResponse> DeleteMNPSubscribeMessageTemplateOutcome;
+                typedef std::future<DeleteMNPSubscribeMessageTemplateOutcome> DeleteMNPSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DeleteMNPSubscribeMessageTemplateRequest&, DeleteMNPSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMNPSubscribeMessageTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteTeamResponse> DeleteTeamOutcome;
                 typedef std::future<DeleteTeamOutcome> DeleteTeamOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DeleteTeamRequest&, DeleteTeamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTeamAsyncHandler;
@@ -432,6 +490,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNGAllStageVersionsResponse> DescribeMNGAllStageVersionsOutcome;
                 typedef std::future<DescribeMNGAllStageVersionsOutcome> DescribeMNGAllStageVersionsOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAllStageVersionsRequest&, DescribeMNGAllStageVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAllStageVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGAppSecretResponse> DescribeMNGAppSecretOutcome;
+                typedef std::future<DescribeMNGAppSecretOutcome> DescribeMNGAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGAppSecretRequest&, DescribeMNGAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGAppSecretAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNGCategoryResponse> DescribeMNGCategoryOutcome;
                 typedef std::future<DescribeMNGCategoryOutcome> DescribeMNGCategoryOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNGCategoryRequest&, DescribeMNGCategoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGCategoryAsyncHandler;
@@ -480,6 +541,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNGSensitiveAPIPermissionListResponse> DescribeMNGSensitiveAPIPermissionListOutcome;
                 typedef std::future<DescribeMNGSensitiveAPIPermissionListOutcome> DescribeMNGSensitiveAPIPermissionListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNGSensitiveAPIPermissionListRequest&, DescribeMNGSensitiveAPIPermissionListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGSensitiveAPIPermissionListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGSubscribeMessageTemplateResponse> DescribeMNGSubscribeMessageTemplateOutcome;
+                typedef std::future<DescribeMNGSubscribeMessageTemplateOutcome> DescribeMNGSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGSubscribeMessageTemplateRequest&, DescribeMNGSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGSubscribeMessageTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGSubscribeMessageTemplateLibraryResponse> DescribeMNGSubscribeMessageTemplateLibraryOutcome;
+                typedef std::future<DescribeMNGSubscribeMessageTemplateLibraryOutcome> DescribeMNGSubscribeMessageTemplateLibraryOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGSubscribeMessageTemplateLibraryRequest&, DescribeMNGSubscribeMessageTemplateLibraryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGSubscribeMessageTemplateLibraryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGSubscribeMessageTemplateLibraryListResponse> DescribeMNGSubscribeMessageTemplateLibraryListOutcome;
+                typedef std::future<DescribeMNGSubscribeMessageTemplateLibraryListOutcome> DescribeMNGSubscribeMessageTemplateLibraryListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGSubscribeMessageTemplateLibraryListRequest&, DescribeMNGSubscribeMessageTemplateLibraryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGSubscribeMessageTemplateLibraryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGSubscribeMessageTemplateListResponse> DescribeMNGSubscribeMessageTemplateListOutcome;
+                typedef std::future<DescribeMNGSubscribeMessageTemplateListOutcome> DescribeMNGSubscribeMessageTemplateListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGSubscribeMessageTemplateListRequest&, DescribeMNGSubscribeMessageTemplateListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGSubscribeMessageTemplateListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNGVersionResponse> DescribeMNGVersionOutcome;
                 typedef std::future<DescribeMNGVersionOutcome> DescribeMNGVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNGVersionRequest&, DescribeMNGVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGVersionAsyncHandler;
@@ -498,6 +571,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPAllStageVersionsResponse> DescribeMNPAllStageVersionsOutcome;
                 typedef std::future<DescribeMNPAllStageVersionsOutcome> DescribeMNPAllStageVersionsOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPAllStageVersionsRequest&, DescribeMNPAllStageVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAllStageVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPAppSecretResponse> DescribeMNPAppSecretOutcome;
+                typedef std::future<DescribeMNPAppSecretOutcome> DescribeMNPAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPAppSecretRequest&, DescribeMNPAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAppSecretAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPApprovalListResponse> DescribeMNPApprovalListOutcome;
                 typedef std::future<DescribeMNPApprovalListOutcome> DescribeMNPApprovalListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPApprovalListRequest&, DescribeMNPApprovalListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPApprovalListAsyncHandler;
@@ -549,6 +625,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPSensitiveAPIPermissionListResponse> DescribeMNPSensitiveAPIPermissionListOutcome;
                 typedef std::future<DescribeMNPSensitiveAPIPermissionListOutcome> DescribeMNPSensitiveAPIPermissionListOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSensitiveAPIPermissionListRequest&, DescribeMNPSensitiveAPIPermissionListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSensitiveAPIPermissionListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSubscribeMessageTemplateResponse> DescribeMNPSubscribeMessageTemplateOutcome;
+                typedef std::future<DescribeMNPSubscribeMessageTemplateOutcome> DescribeMNPSubscribeMessageTemplateOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSubscribeMessageTemplateRequest&, DescribeMNPSubscribeMessageTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSubscribeMessageTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSubscribeMessageTemplateLibraryResponse> DescribeMNPSubscribeMessageTemplateLibraryOutcome;
+                typedef std::future<DescribeMNPSubscribeMessageTemplateLibraryOutcome> DescribeMNPSubscribeMessageTemplateLibraryOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSubscribeMessageTemplateLibraryRequest&, DescribeMNPSubscribeMessageTemplateLibraryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSubscribeMessageTemplateLibraryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSubscribeMessageTemplateLibraryListResponse> DescribeMNPSubscribeMessageTemplateLibraryListOutcome;
+                typedef std::future<DescribeMNPSubscribeMessageTemplateLibraryListOutcome> DescribeMNPSubscribeMessageTemplateLibraryListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSubscribeMessageTemplateLibraryListRequest&, DescribeMNPSubscribeMessageTemplateLibraryListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSubscribeMessageTemplateLibraryListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPSubscribeMessageTemplateListResponse> DescribeMNPSubscribeMessageTemplateListOutcome;
+                typedef std::future<DescribeMNPSubscribeMessageTemplateListOutcome> DescribeMNPSubscribeMessageTemplateListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPSubscribeMessageTemplateListRequest&, DescribeMNPSubscribeMessageTemplateListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPSubscribeMessageTemplateListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPVersionResponse> DescribeMNPVersionOutcome;
                 typedef std::future<DescribeMNPVersionOutcome> DescribeMNPVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPVersionRequest&, DescribeMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAsyncHandler;
@@ -600,12 +688,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMNGResponse> ModifyMNGOutcome;
                 typedef std::future<ModifyMNGOutcome> ModifyMNGOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyMNGRequest&, ModifyMNGOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNGAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMNGAppSecretStatusResponse> ModifyMNGAppSecretStatusOutcome;
+                typedef std::future<ModifyMNGAppSecretStatusOutcome> ModifyMNGAppSecretStatusOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ModifyMNGAppSecretStatusRequest&, ModifyMNGAppSecretStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNGAppSecretStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMNGDomainResponse> ModifyMNGDomainOutcome;
                 typedef std::future<ModifyMNGDomainOutcome> ModifyMNGDomainOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyMNGDomainRequest&, ModifyMNGDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNGDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMNPResponse> ModifyMNPOutcome;
                 typedef std::future<ModifyMNPOutcome> ModifyMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyMNPRequest&, ModifyMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyMNPAppSecretStatusResponse> ModifyMNPAppSecretStatusOutcome;
+                typedef std::future<ModifyMNPAppSecretStatusOutcome> ModifyMNPAppSecretStatusOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ModifyMNPAppSecretStatusRequest&, ModifyMNPAppSecretStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPAppSecretStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyMNPDomainResponse> ModifyMNPDomainOutcome;
                 typedef std::future<ModifyMNPDomainOutcome> ModifyMNPDomainOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ModifyMNPDomainRequest&, ModifyMNPDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMNPDomainAsyncHandler;
@@ -636,6 +730,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveMNPResponse> RemoveMNPOutcome;
                 typedef std::future<RemoveMNPOutcome> RemoveMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::RemoveMNPRequest&, RemoveMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResetMNGAppSecretResponse> ResetMNGAppSecretOutcome;
+                typedef std::future<ResetMNGAppSecretOutcome> ResetMNGAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ResetMNGAppSecretRequest&, ResetMNGAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetMNGAppSecretAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResetMNPAppSecretResponse> ResetMNPAppSecretOutcome;
+                typedef std::future<ResetMNPAppSecretOutcome> ResetMNPAppSecretOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ResetMNPAppSecretRequest&, ResetMNPAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetMNPAppSecretAsyncHandler;
                 typedef Outcome<Core::Error, Model::RollbackMNGVersionResponse> RollbackMNGVersionOutcome;
                 typedef std::future<RollbackMNGVersionOutcome> RollbackMNGVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::RollbackMNGVersionRequest&, RollbackMNGVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollbackMNGVersionAsyncHandler;
@@ -718,6 +818,15 @@ namespace TencentCloud
                 CreateMNGOutcomeCallable CreateMNGCallable(const Model::CreateMNGRequest& request);
 
                 /**
+                 *This API is used to generate a mini game secret key.
+                 * @param req CreateMNGAppSecretRequest
+                 * @return CreateMNGAppSecretOutcome
+                 */
+                CreateMNGAppSecretOutcome CreateMNGAppSecret(const Model::CreateMNGAppSecretRequest &request);
+                void CreateMNGAppSecretAsync(const Model::CreateMNGAppSecretRequest& request, const CreateMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNGAppSecretOutcomeCallable CreateMNGAppSecretCallable(const Model::CreateMNGAppSecretRequest& request);
+
+                /**
                  *This API is used to create a mini game approval request.
                  * @param req CreateMNGApprovalRequest
                  * @return CreateMNGApprovalOutcome
@@ -745,6 +854,15 @@ namespace TencentCloud
                 CreateMNGSensitiveAPIPermissionApprovalOutcomeCallable CreateMNGSensitiveAPIPermissionApprovalCallable(const Model::CreateMNGSensitiveAPIPermissionApprovalRequest& request);
 
                 /**
+                 *This API is used to create a mini game subscription message template.
+                 * @param req CreateMNGSubscribeMessageTemplateRequest
+                 * @return CreateMNGSubscribeMessageTemplateOutcome
+                 */
+                CreateMNGSubscribeMessageTemplateOutcome CreateMNGSubscribeMessageTemplate(const Model::CreateMNGSubscribeMessageTemplateRequest &request);
+                void CreateMNGSubscribeMessageTemplateAsync(const Model::CreateMNGSubscribeMessageTemplateRequest& request, const CreateMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNGSubscribeMessageTemplateOutcomeCallable CreateMNGSubscribeMessageTemplateCallable(const Model::CreateMNGSubscribeMessageTemplateRequest& request);
+
+                /**
                  *This API is used to create a mini game version.
                  * @param req CreateMNGVersionRequest
                  * @return CreateMNGVersionOutcome
@@ -761,6 +879,15 @@ namespace TencentCloud
                 CreateMNPOutcome CreateMNP(const Model::CreateMNPRequest &request);
                 void CreateMNPAsync(const Model::CreateMNPRequest& request, const CreateMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMNPOutcomeCallable CreateMNPCallable(const Model::CreateMNPRequest& request);
+
+                /**
+                 *This API is used to generate a mini program secret key.
+                 * @param req CreateMNPAppSecretRequest
+                 * @return CreateMNPAppSecretOutcome
+                 */
+                CreateMNPAppSecretOutcome CreateMNPAppSecret(const Model::CreateMNPAppSecretRequest &request);
+                void CreateMNPAppSecretAsync(const Model::CreateMNPAppSecretRequest& request, const CreateMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPAppSecretOutcomeCallable CreateMNPAppSecretCallable(const Model::CreateMNPAppSecretRequest& request);
 
                 /**
                  *This API is used to create a mini program approval request.
@@ -797,6 +924,15 @@ namespace TencentCloud
                 CreateMNPSensitiveAPIPermissionApprovalOutcome CreateMNPSensitiveAPIPermissionApproval(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest &request);
                 void CreateMNPSensitiveAPIPermissionApprovalAsync(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest& request, const CreateMNPSensitiveAPIPermissionApprovalAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable CreateMNPSensitiveAPIPermissionApprovalCallable(const Model::CreateMNPSensitiveAPIPermissionApprovalRequest& request);
+
+                /**
+                 *This API is used to create a mini program subscription message template.
+                 * @param req CreateMNPSubscribeMessageTemplateRequest
+                 * @return CreateMNPSubscribeMessageTemplateOutcome
+                 */
+                CreateMNPSubscribeMessageTemplateOutcome CreateMNPSubscribeMessageTemplate(const Model::CreateMNPSubscribeMessageTemplateRequest &request);
+                void CreateMNPSubscribeMessageTemplateAsync(const Model::CreateMNPSubscribeMessageTemplateRequest& request, const CreateMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMNPSubscribeMessageTemplateOutcomeCallable CreateMNPSubscribeMessageTemplateCallable(const Model::CreateMNPSubscribeMessageTemplateRequest& request);
 
                 /**
                  *This API is used to create a mini program version.
@@ -871,6 +1007,15 @@ namespace TencentCloud
                 DeleteMNGOutcomeCallable DeleteMNGCallable(const Model::DeleteMNGRequest& request);
 
                 /**
+                 *This API is used to delete a mini game subscription message template.
+                 * @param req DeleteMNGSubscribeMessageTemplateRequest
+                 * @return DeleteMNGSubscribeMessageTemplateOutcome
+                 */
+                DeleteMNGSubscribeMessageTemplateOutcome DeleteMNGSubscribeMessageTemplate(const Model::DeleteMNGSubscribeMessageTemplateRequest &request);
+                void DeleteMNGSubscribeMessageTemplateAsync(const Model::DeleteMNGSubscribeMessageTemplateRequest& request, const DeleteMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteMNGSubscribeMessageTemplateOutcomeCallable DeleteMNGSubscribeMessageTemplateCallable(const Model::DeleteMNGSubscribeMessageTemplateRequest& request);
+
+                /**
                  *This API is used to delete a mini program.
                  * @param req DeleteMNPRequest
                  * @return DeleteMNPOutcome
@@ -878,6 +1023,15 @@ namespace TencentCloud
                 DeleteMNPOutcome DeleteMNP(const Model::DeleteMNPRequest &request);
                 void DeleteMNPAsync(const Model::DeleteMNPRequest& request, const DeleteMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteMNPOutcomeCallable DeleteMNPCallable(const Model::DeleteMNPRequest& request);
+
+                /**
+                 *This API is used to delete a mini program subscription message template.
+                 * @param req DeleteMNPSubscribeMessageTemplateRequest
+                 * @return DeleteMNPSubscribeMessageTemplateOutcome
+                 */
+                DeleteMNPSubscribeMessageTemplateOutcome DeleteMNPSubscribeMessageTemplate(const Model::DeleteMNPSubscribeMessageTemplateRequest &request);
+                void DeleteMNPSubscribeMessageTemplateAsync(const Model::DeleteMNPSubscribeMessageTemplateRequest& request, const DeleteMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteMNPSubscribeMessageTemplateOutcomeCallable DeleteMNPSubscribeMessageTemplateCallable(const Model::DeleteMNPSubscribeMessageTemplateRequest& request);
 
                 /**
                  *This API is used to deletes a team.
@@ -1096,13 +1250,22 @@ namespace TencentCloud
                 DescribeMNGAdvertisingOverviewOutcomeCallable DescribeMNGAdvertisingOverviewCallable(const Model::DescribeMNGAdvertisingOverviewRequest& request);
 
                 /**
-                 *This API is used to query the mini game version information.
+                 *This API is used to query mini game version information across all phases.
                  * @param req DescribeMNGAllStageVersionsRequest
                  * @return DescribeMNGAllStageVersionsOutcome
                  */
                 DescribeMNGAllStageVersionsOutcome DescribeMNGAllStageVersions(const Model::DescribeMNGAllStageVersionsRequest &request);
                 void DescribeMNGAllStageVersionsAsync(const Model::DescribeMNGAllStageVersionsRequest& request, const DescribeMNGAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNGAllStageVersionsOutcomeCallable DescribeMNGAllStageVersionsCallable(const Model::DescribeMNGAllStageVersionsRequest& request);
+
+                /**
+                 *This API is used to query mini game secret keys.
+                 * @param req DescribeMNGAppSecretRequest
+                 * @return DescribeMNGAppSecretOutcome
+                 */
+                DescribeMNGAppSecretOutcome DescribeMNGAppSecret(const Model::DescribeMNGAppSecretRequest &request);
+                void DescribeMNGAppSecretAsync(const Model::DescribeMNGAppSecretRequest& request, const DescribeMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGAppSecretOutcomeCallable DescribeMNGAppSecretCallable(const Model::DescribeMNGAppSecretRequest& request);
 
                 /**
                  *This API is used to query the mini game categories.
@@ -1249,6 +1412,42 @@ namespace TencentCloud
                 DescribeMNGSensitiveAPIPermissionListOutcomeCallable DescribeMNGSensitiveAPIPermissionListCallable(const Model::DescribeMNGSensitiveAPIPermissionListRequest& request);
 
                 /**
+                 *This API is used to query mini game subscription message template details.
+                 * @param req DescribeMNGSubscribeMessageTemplateRequest
+                 * @return DescribeMNGSubscribeMessageTemplateOutcome
+                 */
+                DescribeMNGSubscribeMessageTemplateOutcome DescribeMNGSubscribeMessageTemplate(const Model::DescribeMNGSubscribeMessageTemplateRequest &request);
+                void DescribeMNGSubscribeMessageTemplateAsync(const Model::DescribeMNGSubscribeMessageTemplateRequest& request, const DescribeMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGSubscribeMessageTemplateOutcomeCallable DescribeMNGSubscribeMessageTemplateCallable(const Model::DescribeMNGSubscribeMessageTemplateRequest& request);
+
+                /**
+                 *This API is used to query mini game subscription message template library details.
+                 * @param req DescribeMNGSubscribeMessageTemplateLibraryRequest
+                 * @return DescribeMNGSubscribeMessageTemplateLibraryOutcome
+                 */
+                DescribeMNGSubscribeMessageTemplateLibraryOutcome DescribeMNGSubscribeMessageTemplateLibrary(const Model::DescribeMNGSubscribeMessageTemplateLibraryRequest &request);
+                void DescribeMNGSubscribeMessageTemplateLibraryAsync(const Model::DescribeMNGSubscribeMessageTemplateLibraryRequest& request, const DescribeMNGSubscribeMessageTemplateLibraryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGSubscribeMessageTemplateLibraryOutcomeCallable DescribeMNGSubscribeMessageTemplateLibraryCallable(const Model::DescribeMNGSubscribeMessageTemplateLibraryRequest& request);
+
+                /**
+                 *This API is used to query the mini game subscription message template library list.
+                 * @param req DescribeMNGSubscribeMessageTemplateLibraryListRequest
+                 * @return DescribeMNGSubscribeMessageTemplateLibraryListOutcome
+                 */
+                DescribeMNGSubscribeMessageTemplateLibraryListOutcome DescribeMNGSubscribeMessageTemplateLibraryList(const Model::DescribeMNGSubscribeMessageTemplateLibraryListRequest &request);
+                void DescribeMNGSubscribeMessageTemplateLibraryListAsync(const Model::DescribeMNGSubscribeMessageTemplateLibraryListRequest& request, const DescribeMNGSubscribeMessageTemplateLibraryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGSubscribeMessageTemplateLibraryListOutcomeCallable DescribeMNGSubscribeMessageTemplateLibraryListCallable(const Model::DescribeMNGSubscribeMessageTemplateLibraryListRequest& request);
+
+                /**
+                 *This API is used to query the mini game subscription message template list.
+                 * @param req DescribeMNGSubscribeMessageTemplateListRequest
+                 * @return DescribeMNGSubscribeMessageTemplateListOutcome
+                 */
+                DescribeMNGSubscribeMessageTemplateListOutcome DescribeMNGSubscribeMessageTemplateList(const Model::DescribeMNGSubscribeMessageTemplateListRequest &request);
+                void DescribeMNGSubscribeMessageTemplateListAsync(const Model::DescribeMNGSubscribeMessageTemplateListRequest& request, const DescribeMNGSubscribeMessageTemplateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGSubscribeMessageTemplateListOutcomeCallable DescribeMNGSubscribeMessageTemplateListCallable(const Model::DescribeMNGSubscribeMessageTemplateListRequest& request);
+
+                /**
                  *This API is used to query the mini game version creation results.
                  * @param req DescribeMNGVersionRequest
                  * @return DescribeMNGVersionOutcome
@@ -1294,13 +1493,22 @@ namespace TencentCloud
                 DescribeMNPAdvertisingDetailOutcomeCallable DescribeMNPAdvertisingDetailCallable(const Model::DescribeMNPAdvertisingDetailRequest& request);
 
                 /**
-                 *This API is used to query versions of a mini program across all stages.
+                 *This API is used to query mini program version information across all phases.
                  * @param req DescribeMNPAllStageVersionsRequest
                  * @return DescribeMNPAllStageVersionsOutcome
                  */
                 DescribeMNPAllStageVersionsOutcome DescribeMNPAllStageVersions(const Model::DescribeMNPAllStageVersionsRequest &request);
                 void DescribeMNPAllStageVersionsAsync(const Model::DescribeMNPAllStageVersionsRequest& request, const DescribeMNPAllStageVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMNPAllStageVersionsOutcomeCallable DescribeMNPAllStageVersionsCallable(const Model::DescribeMNPAllStageVersionsRequest& request);
+
+                /**
+                 *This API is used to query mini program secret keys.
+                 * @param req DescribeMNPAppSecretRequest
+                 * @return DescribeMNPAppSecretOutcome
+                 */
+                DescribeMNPAppSecretOutcome DescribeMNPAppSecret(const Model::DescribeMNPAppSecretRequest &request);
+                void DescribeMNPAppSecretAsync(const Model::DescribeMNPAppSecretRequest& request, const DescribeMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPAppSecretOutcomeCallable DescribeMNPAppSecretCallable(const Model::DescribeMNPAppSecretRequest& request);
 
                 /**
                  *This API is used to query a list of approval requests related with a mini program.
@@ -1456,6 +1664,42 @@ namespace TencentCloud
                 DescribeMNPSensitiveAPIPermissionListOutcomeCallable DescribeMNPSensitiveAPIPermissionListCallable(const Model::DescribeMNPSensitiveAPIPermissionListRequest& request);
 
                 /**
+                 *This API is used to query mini program subscription message template details.
+                 * @param req DescribeMNPSubscribeMessageTemplateRequest
+                 * @return DescribeMNPSubscribeMessageTemplateOutcome
+                 */
+                DescribeMNPSubscribeMessageTemplateOutcome DescribeMNPSubscribeMessageTemplate(const Model::DescribeMNPSubscribeMessageTemplateRequest &request);
+                void DescribeMNPSubscribeMessageTemplateAsync(const Model::DescribeMNPSubscribeMessageTemplateRequest& request, const DescribeMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSubscribeMessageTemplateOutcomeCallable DescribeMNPSubscribeMessageTemplateCallable(const Model::DescribeMNPSubscribeMessageTemplateRequest& request);
+
+                /**
+                 *This API is used to query mini program subscription message template library details.
+                 * @param req DescribeMNPSubscribeMessageTemplateLibraryRequest
+                 * @return DescribeMNPSubscribeMessageTemplateLibraryOutcome
+                 */
+                DescribeMNPSubscribeMessageTemplateLibraryOutcome DescribeMNPSubscribeMessageTemplateLibrary(const Model::DescribeMNPSubscribeMessageTemplateLibraryRequest &request);
+                void DescribeMNPSubscribeMessageTemplateLibraryAsync(const Model::DescribeMNPSubscribeMessageTemplateLibraryRequest& request, const DescribeMNPSubscribeMessageTemplateLibraryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSubscribeMessageTemplateLibraryOutcomeCallable DescribeMNPSubscribeMessageTemplateLibraryCallable(const Model::DescribeMNPSubscribeMessageTemplateLibraryRequest& request);
+
+                /**
+                 *This API is used to query the mini program subscription message template library list.
+                 * @param req DescribeMNPSubscribeMessageTemplateLibraryListRequest
+                 * @return DescribeMNPSubscribeMessageTemplateLibraryListOutcome
+                 */
+                DescribeMNPSubscribeMessageTemplateLibraryListOutcome DescribeMNPSubscribeMessageTemplateLibraryList(const Model::DescribeMNPSubscribeMessageTemplateLibraryListRequest &request);
+                void DescribeMNPSubscribeMessageTemplateLibraryListAsync(const Model::DescribeMNPSubscribeMessageTemplateLibraryListRequest& request, const DescribeMNPSubscribeMessageTemplateLibraryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSubscribeMessageTemplateLibraryListOutcomeCallable DescribeMNPSubscribeMessageTemplateLibraryListCallable(const Model::DescribeMNPSubscribeMessageTemplateLibraryListRequest& request);
+
+                /**
+                 *This API is used to query the mini program subscription message template list.
+                 * @param req DescribeMNPSubscribeMessageTemplateListRequest
+                 * @return DescribeMNPSubscribeMessageTemplateListOutcome
+                 */
+                DescribeMNPSubscribeMessageTemplateListOutcome DescribeMNPSubscribeMessageTemplateList(const Model::DescribeMNPSubscribeMessageTemplateListRequest &request);
+                void DescribeMNPSubscribeMessageTemplateListAsync(const Model::DescribeMNPSubscribeMessageTemplateListRequest& request, const DescribeMNPSubscribeMessageTemplateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPSubscribeMessageTemplateListOutcomeCallable DescribeMNPSubscribeMessageTemplateListCallable(const Model::DescribeMNPSubscribeMessageTemplateListRequest& request);
+
+                /**
                  *This API is used to query the mini program version creation results.
                  * @param req DescribeMNPVersionRequest
                  * @return DescribeMNPVersionOutcome
@@ -1609,6 +1853,15 @@ namespace TencentCloud
                 ModifyMNGOutcomeCallable ModifyMNGCallable(const Model::ModifyMNGRequest& request);
 
                 /**
+                 *This API is used to modify the secret key status of a mini game.
+                 * @param req ModifyMNGAppSecretStatusRequest
+                 * @return ModifyMNGAppSecretStatusOutcome
+                 */
+                ModifyMNGAppSecretStatusOutcome ModifyMNGAppSecretStatus(const Model::ModifyMNGAppSecretStatusRequest &request);
+                void ModifyMNGAppSecretStatusAsync(const Model::ModifyMNGAppSecretStatusRequest& request, const ModifyMNGAppSecretStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMNGAppSecretStatusOutcomeCallable ModifyMNGAppSecretStatusCallable(const Model::ModifyMNGAppSecretStatusRequest& request);
+
+                /**
                  *This API is used to edit the mini game domain information.
                  * @param req ModifyMNGDomainRequest
                  * @return ModifyMNGDomainOutcome
@@ -1625,6 +1878,15 @@ namespace TencentCloud
                 ModifyMNPOutcome ModifyMNP(const Model::ModifyMNPRequest &request);
                 void ModifyMNPAsync(const Model::ModifyMNPRequest& request, const ModifyMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMNPOutcomeCallable ModifyMNPCallable(const Model::ModifyMNPRequest& request);
+
+                /**
+                 *This API is used to modify the secret key status of a mini program.
+                 * @param req ModifyMNPAppSecretStatusRequest
+                 * @return ModifyMNPAppSecretStatusOutcome
+                 */
+                ModifyMNPAppSecretStatusOutcome ModifyMNPAppSecretStatus(const Model::ModifyMNPAppSecretStatusRequest &request);
+                void ModifyMNPAppSecretStatusAsync(const Model::ModifyMNPAppSecretStatusRequest& request, const ModifyMNPAppSecretStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyMNPAppSecretStatusOutcomeCallable ModifyMNPAppSecretStatusCallable(const Model::ModifyMNPAppSecretStatusRequest& request);
 
                 /**
                  *This API is used to edit the mini program domain information.
@@ -1715,6 +1977,24 @@ namespace TencentCloud
                 RemoveMNPOutcome RemoveMNP(const Model::RemoveMNPRequest &request);
                 void RemoveMNPAsync(const Model::RemoveMNPRequest& request, const RemoveMNPAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveMNPOutcomeCallable RemoveMNPCallable(const Model::RemoveMNPRequest& request);
+
+                /**
+                 *This API is used to reset a mini game secret key.
+                 * @param req ResetMNGAppSecretRequest
+                 * @return ResetMNGAppSecretOutcome
+                 */
+                ResetMNGAppSecretOutcome ResetMNGAppSecret(const Model::ResetMNGAppSecretRequest &request);
+                void ResetMNGAppSecretAsync(const Model::ResetMNGAppSecretRequest& request, const ResetMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetMNGAppSecretOutcomeCallable ResetMNGAppSecretCallable(const Model::ResetMNGAppSecretRequest& request);
+
+                /**
+                 *This API is used to reset a mini program secret key.
+                 * @param req ResetMNPAppSecretRequest
+                 * @return ResetMNPAppSecretOutcome
+                 */
+                ResetMNPAppSecretOutcome ResetMNPAppSecret(const Model::ResetMNPAppSecretRequest &request);
+                void ResetMNPAppSecretAsync(const Model::ResetMNPAppSecretRequest& request, const ResetMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetMNPAppSecretOutcomeCallable ResetMNPAppSecretCallable(const Model::ResetMNPAppSecretRequest& request);
 
                 /**
                  *This API is used to roll back the released version of a mini game to a specified version.

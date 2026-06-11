@@ -69,6 +69,27 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
+                     * 获取Rule ID of traffic anti-fraud, returned as an output parameter.
+                     * @return Id Rule ID of traffic anti-fraud, returned as an output parameter.
+                     * 
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Rule ID of traffic anti-fraud, returned as an output parameter.
+                     * @param _id Rule ID of traffic anti-fraud, returned as an output parameter.
+                     * 
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
                      * 获取Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
                      * @return Action Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
                      * 
@@ -96,6 +117,12 @@ namespace TencentCloud
                      */
                     std::string m_enabled;
                     bool m_enabledHasBeenSet;
+
+                    /**
+                     * Rule ID of traffic anti-fraud, returned as an output parameter.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
 
                     /**
                      * Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.

@@ -115,9 +115,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Scan start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanBeginTime Scan start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanBeginTime() const;
@@ -131,9 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskEventCount Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRiskEventCount() const;
@@ -147,9 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Scan end time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanEndTime Scan end time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanEndTime() const;
@@ -160,6 +154,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool ScanEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Task scan KB No.
+                     * @return KBNumber Task scan KB No.
+                     * 
+                     */
+                    std::vector<std::string> GetKBNumber() const;
+
+                    /**
+                     * 判断参数 KBNumber 是否已赋值
+                     * @return KBNumber 是否已赋值
+                     * 
+                     */
+                    bool KBNumberHasBeenSet() const;
 
                 private:
 
@@ -195,24 +203,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Scan start time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanBeginTime;
                     bool m_scanBeginTimeHasBeenSet;
 
                     /**
                      * Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_riskEventCount;
                     bool m_riskEventCountHasBeenSet;
 
                     /**
                      * Scan end time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanEndTime;
                     bool m_scanEndTimeHasBeenSet;
+
+                    /**
+                     * Task scan KB No.
+                     */
+                    std::vector<std::string> m_kBNumber;
+                    bool m_kBNumberHasBeenSet;
 
                 };
             }

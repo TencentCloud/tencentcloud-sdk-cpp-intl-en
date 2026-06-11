@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
-                     * @return Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+                     * 获取<li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+                     * @return Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
-                     * @param _filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+                     * 设置<li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+                     * @param _filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+                     * <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

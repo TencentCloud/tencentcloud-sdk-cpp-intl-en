@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Apps Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of all software applications.
+                     * @return Apps Number of all software applications.
                      * 
                      */
                     std::vector<AssetKeyVal> GetApps() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of all software applications.
                      */
                     std::vector<AssetKeyVal> m_apps;
                     bool m_appsHasBeenSet;

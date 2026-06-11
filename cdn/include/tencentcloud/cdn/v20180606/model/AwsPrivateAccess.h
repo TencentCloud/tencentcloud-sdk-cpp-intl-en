@@ -101,19 +101,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return SecretKey Key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SecretKey Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _secretKey Key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _secretKey Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -193,8 +193,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Key.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

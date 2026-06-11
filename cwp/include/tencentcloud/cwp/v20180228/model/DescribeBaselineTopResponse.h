@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleTopList List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of Top check items
+                     * @return RuleTopList List of Top check items
                      * 
                      */
                     std::vector<BaselineRuleTopInfo> GetRuleTopList() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of Top check items
                      */
                     std::vector<BaselineRuleTopInfo> m_ruleTopList;
                     bool m_ruleTopListHasBeenSet;

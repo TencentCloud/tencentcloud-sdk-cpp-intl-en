@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Policy Description
+                     * @return Description Network Policy Description
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Network Policy Description
+                     * @param _description Network Policy Description
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -270,19 +266,15 @@ cilium: Cilium
                     bool NetworkPolicyPluginHasBeenSet() const;
 
                     /**
-                     * 获取Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Policy Distribution Result
+                     * @return PublishResult Policy Distribution Result
                      * 
                      */
                     std::string GetPublishResult() const;
 
                     /**
-                     * 设置Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Policy Distribution Result
+                     * @param _publishResult Policy Distribution Result
                      * 
                      */
                     void SetPublishResult(const std::string& _publishResult);
@@ -385,19 +377,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ToPolicyRuleHasBeenSet() const;
 
                     /**
-                     * 获取Object
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodSelector Object
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Target Object
+                     * @return PodSelector Target Object
                      * 
                      */
                     std::string GetPodSelector() const;
 
                     /**
-                     * 设置Object
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _podSelector Object
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Target Object
+                     * @param _podSelector Target Object
                      * 
                      */
                     void SetPodSelector(const std::string& _podSelector);
@@ -439,8 +427,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Policy Description
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -494,8 +481,7 @@ cilium: Cilium
                     bool m_networkPolicyPluginHasBeenSet;
 
                     /**
-                     * Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Policy Distribution Result
                      */
                     std::string m_publishResult;
                     bool m_publishResultHasBeenSet;
@@ -525,8 +511,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_toPolicyRuleHasBeenSet;
 
                     /**
-                     * Object
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Target Object
                      */
                     std::string m_podSelector;
                     bool m_podSelectorHasBeenSet;

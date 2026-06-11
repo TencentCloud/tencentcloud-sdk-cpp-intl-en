@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageDigest Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image Digest
+                     * @return ImageDigest Image Digest
                      * 
                      */
                     std::string GetImageDigest() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageDigestHasBeenSet() const;
 
                     /**
-                     * 获取Image address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageRepoAddress Image address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image address.
+                     * @return ImageRepoAddress Image address.
                      * 
                      */
                     std::string GetImageRepoAddress() const;
@@ -77,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistryType Image type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegistryType() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageName() const;
@@ -108,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mirror version
+                     * @return ImageTag Mirror version
                      * 
                      */
                     std::string GetImageTag() const;
@@ -125,9 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanTime Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanTime() const;
@@ -140,10 +128,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanStatus Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取scan status
+                     * @return ScanStatus scan status
                      * 
                      */
                     std::string GetScanStatus() const;
@@ -156,10 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanStatusHasBeenSet() const;
 
                     /**
-                     * 获取Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulCnt Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of security vulnerabilities
+                     * @return VulCnt Number of security vulnerabilities
                      * 
                      */
                     uint64_t GetVulCnt() const;
@@ -172,10 +156,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirusCnt Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Trojan viruses
+                     * @return VirusCnt Number of Trojan viruses
                      * 
                      */
                     uint64_t GetVirusCnt() const;
@@ -189,9 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskCnt Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRiskCnt() const;
@@ -205,9 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SentiveInfoCnt Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     uint64_t GetSentiveInfoCnt() const;
@@ -220,10 +198,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SentiveInfoCntHasBeenSet() const;
 
                     /**
-                     * 获取Image system
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OsName Image system
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image system.
+                     * @return OsName Image system.
                      * 
                      */
                     std::string GetOsName() const;
@@ -237,9 +213,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanVirusError() const;
@@ -252,10 +226,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVirusErrorHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability scanning error
+                     * @return ScanVulError Vulnerability scanning error
                      * 
                      */
                     std::string GetScanVulError() const;
@@ -269,9 +241,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LayerInfo Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLayerInfo() const;
@@ -284,10 +254,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LayerInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -300,10 +268,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
@@ -317,9 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNamespace() const;
@@ -332,10 +296,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取High risk scan error
+                     * @return ScanRiskError High risk scan error
                      * 
                      */
                     std::string GetScanRiskError() const;
@@ -348,10 +310,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRiskErrorHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVirusProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan information scan progress
+                     * @return ScanVirusProgress Trojan information scan progress
                      * 
                      */
                     uint64_t GetScanVirusProgress() const;
@@ -364,10 +324,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVirusProgressHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanVulProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability scan progress.
+                     * @return ScanVulProgress Vulnerability scan progress.
                      * 
                      */
                     uint64_t GetScanVulProgress() const;
@@ -380,10 +338,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanVulProgressHasBeenSet() const;
 
                     /**
-                     * 获取Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRiskProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sensitive scanning progress
+                     * @return ScanRiskProgress Sensitive scanning progress
                      * 
                      */
                     uint64_t GetScanRiskProgress() const;
@@ -396,10 +352,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRiskProgressHasBeenSet() const;
 
                     /**
-                     * 获取Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Remaining scan time (seconds)
+                     * @return ScanRemainTime Remaining scan time (seconds)
                      * 
                      */
                     uint64_t GetScanRemainTime() const;
@@ -412,10 +366,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanRemainTimeHasBeenSet() const;
 
                     /**
-                     * 获取CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取cve scan status
+                     * @return CveStatus cve scan status
                      * 
                      */
                     std::string GetCveStatus() const;
@@ -428,10 +380,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CveStatusHasBeenSet() const;
 
                     /**
-                     * 获取High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取High risk scan status
+                     * @return RiskStatus High risk scan status
                      * 
                      */
                     std::string GetRiskStatus() const;
@@ -444,10 +394,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VirusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Trojan scan status
+                     * @return VirusStatus Trojan scan status
                      * 
                      */
                     std::string GetVirusStatus() const;
@@ -461,9 +409,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetProgress() const;
@@ -476,10 +422,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsAuthorized Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Authorization status
+                     * @return IsAuthorized Authorization status
                      * 
                      */
                     uint64_t GetIsAuthorized() const;
@@ -493,9 +437,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetImageSize() const;
@@ -508,10 +450,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageSizeHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image ID.
+                     * @return ImageId Image ID.
                      * 
                      */
                     std::string GetImageId() const;
@@ -524,10 +464,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Image region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistryRegion Image region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image Zone
+                     * @return RegistryRegion Image Zone
                      * 
                      */
                     std::string GetRegistryRegion() const;
@@ -540,10 +478,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegistryRegionHasBeenSet() const;
 
                     /**
-                     * 获取Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image Creation Time
+                     * @return ImageCreateTime Image Creation Time
                      * 
                      */
                     std::string GetImageCreateTime() const;
@@ -555,231 +491,279 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ImageCreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Number of sensitive data items
+                     * @return SensitiveInfoCnt Number of sensitive data items
+                     * 
+                     */
+                    uint64_t GetSensitiveInfoCnt() const;
+
+                    /**
+                     * 判断参数 SensitiveInfoCnt 是否已赋值
+                     * @return SensitiveInfoCnt 是否已赋值
+                     * 
+                     */
+                    bool SensitiveInfoCntHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Id 
+                     * 
+                     */
+                    uint64_t GetId() const;
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     * 
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Solution
+                     * @return Solution Solution
+                     * 
+                     */
+                    std::string GetSolution() const;
+
+                    /**
+                     * 判断参数 Solution 是否已赋值
+                     * @return Solution 是否已赋值
+                     * 
+                     */
+                    bool SolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Reason
+                     * @return Reason Reason
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Image digest
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image Digest
                      */
                     std::string m_imageDigest;
                     bool m_imageDigestHasBeenSet;
 
                     /**
-                     * Image address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image address.
                      */
                     std::string m_imageRepoAddress;
                     bool m_imageRepoAddressHasBeenSet;
 
                     /**
                      * Image type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
                      * Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mirror version
                      */
                     std::string m_imageTag;
                     bool m_imageTagHasBeenSet;
 
                     /**
                      * Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanTime;
                     bool m_scanTimeHasBeenSet;
 
                     /**
-                     * Scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * scan status
                      */
                     std::string m_scanStatus;
                     bool m_scanStatusHasBeenSet;
 
                     /**
-                     * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of security vulnerabilities
                      */
                     uint64_t m_vulCnt;
                     bool m_vulCntHasBeenSet;
 
                     /**
-                     * Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Trojan viruses
                      */
                     uint64_t m_virusCnt;
                     bool m_virusCntHasBeenSet;
 
                     /**
                      * Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_riskCnt;
                     bool m_riskCntHasBeenSet;
 
                     /**
                      * Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sentiveInfoCnt;
                     bool m_sentiveInfoCntHasBeenSet;
 
                     /**
-                     * Image system
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image system.
                      */
                     std::string m_osName;
                     bool m_osNameHasBeenSet;
 
                     /**
                      * Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanVirusError;
                     bool m_scanVirusErrorHasBeenSet;
 
                     /**
-                     * Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability scanning error
                      */
                     std::string m_scanVulError;
                     bool m_scanVulErrorHasBeenSet;
 
                     /**
                      * Layer file information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_layerInfo;
                     bool m_layerInfoHasBeenSet;
 
                     /**
-                     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
                      * Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * High risk scan error
                      */
                     std::string m_scanRiskError;
                     bool m_scanRiskErrorHasBeenSet;
 
                     /**
-                     * Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan information scan progress
                      */
                     uint64_t m_scanVirusProgress;
                     bool m_scanVirusProgressHasBeenSet;
 
                     /**
-                     * Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability scan progress.
                      */
                     uint64_t m_scanVulProgress;
                     bool m_scanVulProgressHasBeenSet;
 
                     /**
-                     * Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sensitive scanning progress
                      */
                     uint64_t m_scanRiskProgress;
                     bool m_scanRiskProgressHasBeenSet;
 
                     /**
-                     * Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Remaining scan time (seconds)
                      */
                     uint64_t m_scanRemainTime;
                     bool m_scanRemainTimeHasBeenSet;
 
                     /**
-                     * CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * cve scan status
                      */
                     std::string m_cveStatus;
                     bool m_cveStatusHasBeenSet;
 
                     /**
-                     * High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * High risk scan status
                      */
                     std::string m_riskStatus;
                     bool m_riskStatusHasBeenSet;
 
                     /**
-                     * Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Trojan scan status
                      */
                     std::string m_virusStatus;
                     bool m_virusStatusHasBeenSet;
 
                     /**
                      * Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Authorization status
                      */
                     uint64_t m_isAuthorized;
                     bool m_isAuthorizedHasBeenSet;
 
                     /**
                      * Image size
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_imageSize;
                     bool m_imageSizeHasBeenSet;
 
                     /**
-                     * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image ID.
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Image region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image Zone
                      */
                     std::string m_registryRegion;
                     bool m_registryRegionHasBeenSet;
 
                     /**
-                     * Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image Creation Time
                      */
                     std::string m_imageCreateTime;
                     bool m_imageCreateTimeHasBeenSet;
+
+                    /**
+                     * Number of sensitive data items
+                     */
+                    uint64_t m_sensitiveInfoCnt;
+                    bool m_sensitiveInfoCntHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Solution
+                     */
+                    std::string m_solution;
+                    bool m_solutionHasBeenSet;
+
+                    /**
+                     * Reason
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

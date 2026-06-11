@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool TriggerCountHasBeenSet() const;
 
                     /**
-                     * 获取Alarm notification frequency (minutes)
-                     * @return AlarmPeriod Alarm notification frequency (minutes)
+                     * 获取Alert notification sent frequency, in minutes
+                     * @return AlarmPeriod Alert notification sent frequency, in minutes
                      * 
                      */
                     int64_t GetAlarmPeriod() const;
 
                     /**
-                     * 设置Alarm notification frequency (minutes)
-                     * @param _alarmPeriod Alarm notification frequency (minutes)
+                     * 设置Alert notification sent frequency, in minutes
+                     * @param _alarmPeriod Alert notification sent frequency, in minutes
                      * 
                      */
                     void SetAlarmPeriod(const int64_t& _alarmPeriod);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool NoticesHasBeenSet() const;
 
                     /**
-                     * 获取Alarm duration (minutes)
-                     * @return Duration Alarm duration (minutes)
+                     * 获取Duration of the alarm in minutes
+                     * @return Duration Duration of the alarm in minutes
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置Alarm duration (minutes)
-                     * @param _duration Alarm duration (minutes)
+                     * 设置Duration of the alarm in minutes
+                     * @param _duration Duration of the alarm in minutes
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -301,15 +301,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Alarm generation time, which is a Unix timestamp in ms
-                     * @return CreateTime Alarm generation time, which is a Unix timestamp in ms
+                     * 获取Alarm occurrence time, Unix timestamp in milliseconds (ms)
+                     * @return CreateTime Alarm occurrence time, Unix timestamp in milliseconds (ms)
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Alarm generation time, which is a Unix timestamp in ms
-                     * @param _createTime Alarm generation time, which is a Unix timestamp in ms
+                     * 设置Alarm occurrence time, Unix timestamp in milliseconds (ms)
+                     * @param _createTime Alarm occurrence time, Unix timestamp in milliseconds (ms)
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -322,19 +322,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupTriggerCondition Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Corresponding group information when alarm grouping is triggered
+                     * @return GroupTriggerCondition Corresponding group information when alarm grouping is triggered
                      * 
                      */
                     std::vector<GroupTriggerConditionInfo> GetGroupTriggerCondition() const;
 
                     /**
-                     * 设置Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _groupTriggerCondition Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Corresponding group information when alarm grouping is triggered
+                     * @param _groupTriggerCondition Corresponding group information when alarm grouping is triggered
                      * 
                      */
                     void SetGroupTriggerCondition(const std::vector<GroupTriggerConditionInfo>& _groupTriggerCondition);
@@ -347,19 +343,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupTriggerConditionHasBeenSet() const;
 
                     /**
-                     * 获取Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AlarmLevel Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+                     * @return AlarmLevel Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _alarmLevel Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+                     * @param _alarmLevel Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -372,23 +364,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonitorObjectType Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+                     * @return MonitorObjectType Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
                      * 
                      */
                     uint64_t GetMonitorObjectType() const;
 
                     /**
-                     * 设置Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _monitorObjectType Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+                     * @param _monitorObjectType Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
                      * 
                      */
                     void SetMonitorObjectType(const uint64_t& _monitorObjectType);
@@ -399,6 +387,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool MonitorObjectTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+                     * @return SendType Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+                     * 
+                     */
+                    uint64_t GetSendType() const;
+
+                    /**
+                     * 设置Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+                     * @param _sendType Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+                     * 
+                     */
+                    void SetSendType(const uint64_t& _sendType);
+
+                    /**
+                     * 判断参数 SendType 是否已赋值
+                     * @return SendType 是否已赋值
+                     * 
+                     */
+                    bool SendTypeHasBeenSet() const;
 
                 private:
 
@@ -451,7 +460,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_triggerCountHasBeenSet;
 
                     /**
-                     * Alarm notification frequency (minutes)
+                     * Alert notification sent frequency, in minutes
                      */
                     int64_t m_alarmPeriod;
                     bool m_alarmPeriodHasBeenSet;
@@ -463,7 +472,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_noticesHasBeenSet;
 
                     /**
-                     * Alarm duration (minutes)
+                     * Duration of the alarm in minutes
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;
@@ -475,32 +484,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Alarm generation time, which is a Unix timestamp in ms
+                     * Alarm occurrence time, Unix timestamp in milliseconds (ms)
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Corresponding group information when alarm grouping is triggered
                      */
                     std::vector<GroupTriggerConditionInfo> m_groupTriggerCondition;
                     bool m_groupTriggerConditionHasBeenSet;
 
                     /**
-                     * Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
                      */
                     uint64_t m_monitorObjectType;
                     bool m_monitorObjectTypeHasBeenSet;
+
+                    /**
+                     * Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+                     */
+                    uint64_t m_sendType;
+                    bool m_sendTypeHasBeenSet;
 
                 };
             }

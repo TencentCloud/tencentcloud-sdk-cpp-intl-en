@@ -23,11 +23,11 @@ using namespace TencentCloud::Tcss::V20201101::Model;
 using namespace std;
 
 DescribeAssetImageRegistryRiskListExportRequest::DescribeAssetImageRegistryRiskListExportRequest() :
-    m_exportFieldHasBeenSet(false),
     m_limitHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_filtersHasBeenSet(false),
     m_imageInfoHasBeenSet(false),
+    m_exportFieldHasBeenSet(false),
     m_idHasBeenSet(false)
 {
 }
@@ -38,19 +38,6 @@ string DescribeAssetImageRegistryRiskListExportRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
-
-    if (m_exportFieldHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ExportField";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_exportField.begin(); itr != m_exportField.end(); ++itr)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
 
     if (m_limitHasBeenSet)
     {
@@ -92,6 +79,19 @@ string DescribeAssetImageRegistryRiskListExportRequest::ToJsonString() const
         m_imageInfo.ToJsonObject(d[key.c_str()], allocator);
     }
 
+    if (m_exportFieldHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExportField";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_exportField.begin(); itr != m_exportField.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
     if (m_idHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -107,22 +107,6 @@ string DescribeAssetImageRegistryRiskListExportRequest::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<string> DescribeAssetImageRegistryRiskListExportRequest::GetExportField() const
-{
-    return m_exportField;
-}
-
-void DescribeAssetImageRegistryRiskListExportRequest::SetExportField(const vector<string>& _exportField)
-{
-    m_exportField = _exportField;
-    m_exportFieldHasBeenSet = true;
-}
-
-bool DescribeAssetImageRegistryRiskListExportRequest::ExportFieldHasBeenSet() const
-{
-    return m_exportFieldHasBeenSet;
-}
 
 uint64_t DescribeAssetImageRegistryRiskListExportRequest::GetLimit() const
 {
@@ -186,6 +170,22 @@ void DescribeAssetImageRegistryRiskListExportRequest::SetImageInfo(const ImageIn
 bool DescribeAssetImageRegistryRiskListExportRequest::ImageInfoHasBeenSet() const
 {
     return m_imageInfoHasBeenSet;
+}
+
+vector<string> DescribeAssetImageRegistryRiskListExportRequest::GetExportField() const
+{
+    return m_exportField;
+}
+
+void DescribeAssetImageRegistryRiskListExportRequest::SetExportField(const vector<string>& _exportField)
+{
+    m_exportField = _exportField;
+    m_exportFieldHasBeenSet = true;
+}
+
+bool DescribeAssetImageRegistryRiskListExportRequest::ExportFieldHasBeenSet() const
+{
+    return m_exportFieldHasBeenSet;
 }
 
 uint64_t DescribeAssetImageRegistryRiskListExportRequest::GetId() const

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * EKYC Document OCR Result Modification Details
                 */
                 class EditDetail : public AbstractModel
                 {

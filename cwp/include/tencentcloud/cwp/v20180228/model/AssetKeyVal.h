@@ -90,18 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Description information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Desc Description information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _desc Description information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -114,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewCount Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of new key-value pairs today
+                     * @return NewCount Number of new key-value pairs today
                      * 
                      */
                     int64_t GetNewCount() const;
 
                     /**
-                     * 设置Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newCount Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of new key-value pairs today
+                     * @param _newCount Number of new key-value pairs today
                      * 
                      */
                     void SetNewCount(const int64_t& _newCount);
@@ -154,14 +146,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Description information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of new key-value pairs today
                      */
                     int64_t m_newCount;
                     bool m_newCountHasBeenSet;

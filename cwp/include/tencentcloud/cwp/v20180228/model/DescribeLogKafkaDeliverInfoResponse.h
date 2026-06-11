@@ -227,8 +227,8 @@ namespace TencentCloud
                     bool UsernameHasBeenSet() const;
 
                     /**
-                     * 获取xx
-                     * @return DeliverTypeDetails xx
+                     * 获取Shipping type details.
+                     * @return DeliverTypeDetails Shipping type details.
                      * 
                      */
                     std::vector<DeliverTypeDetails> GetDeliverTypeDetails() const;
@@ -321,7 +321,7 @@ namespace TencentCloud
                     bool m_usernameHasBeenSet;
 
                     /**
-                     * xx
+                     * Shipping type details.
                      */
                     std::vector<DeliverTypeDetails> m_deliverTypeDetails;
                     bool m_deliverTypeDetailsHasBeenSet;

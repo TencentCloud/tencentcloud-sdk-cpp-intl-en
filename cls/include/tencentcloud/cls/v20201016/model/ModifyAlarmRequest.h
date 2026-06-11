@@ -28,6 +28,7 @@
 #include <tencentcloud/cls/v20201016/model/AnalysisDimensional.h>
 #include <tencentcloud/cls/v20201016/model/Tag.h>
 #include <tencentcloud/cls/v20201016/model/AlarmClassification.h>
+#include <tencentcloud/cls/v20201016/model/MonitorNotice.h>
 
 
 namespace TencentCloud
@@ -50,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm policy ID
-                     * @return AlarmId Alarm policy ID
+                     * 获取<p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+                     * @return AlarmId <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
                      * 
                      */
                     std::string GetAlarmId() const;
 
                     /**
-                     * 设置Alarm policy ID
-                     * @param _alarmId Alarm policy ID
+                     * 设置<p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+                     * @param _alarmId <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
                      * 
                      */
                     void SetAlarmId(const std::string& _alarmId);
@@ -71,15 +72,15 @@ namespace TencentCloud
                     bool AlarmIdHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy name
-                     * @return Name Alarm policy name
+                     * 获取<p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+                     * @return Name <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Alarm policy name
-                     * @param _name Alarm policy name
+                     * 设置<p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+                     * @param _name <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,15 +93,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring task running time point
-                     * @return MonitorTime Monitoring task running time point
+                     * 获取<p>Monitoring task execution time point.</p>
+                     * @return MonitorTime <p>Monitoring task execution time point.</p>
                      * 
                      */
                     MonitorTime GetMonitorTime() const;
 
                     /**
-                     * 设置Monitoring task running time point
-                     * @param _monitorTime Monitoring task running time point
+                     * 设置<p>Monitoring task execution time point.</p>
+                     * @param _monitorTime <p>Monitoring task execution time point.</p>
                      * 
                      */
                     void SetMonitorTime(const MonitorTime& _monitorTime);
@@ -113,15 +114,15 @@ namespace TencentCloud
                     bool MonitorTimeHasBeenSet() const;
 
                     /**
-                     * 获取Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @return Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 获取<p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+                     * @return Condition <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @param _condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 设置<p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+                     * @param _condition <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -134,23 +135,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @return AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 获取<p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+                     * @return AlarmLevel <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
                      * 
                      */
                     uint64_t GetAlarmLevel() const;
 
                     /**
-                     * 设置Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @param _alarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 设置<p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+                     * @param _alarmLevel <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
                      * 
                      */
                     void SetAlarmLevel(const uint64_t& _alarmLevel);
@@ -163,15 +156,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool AlarmLevelHasBeenSet() const;
 
                     /**
-                     * 获取Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @return MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 获取<p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+                     * @return MultiConditions <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
                      * 
                      */
                     std::vector<MultiCondition> GetMultiConditions() const;
 
                     /**
-                     * 设置Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-                     * @param _multiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * 设置<p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+                     * @param _multiConditions <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
                      * 
                      */
                     void SetMultiConditions(const std::vector<MultiCondition>& _multiConditions);
@@ -184,15 +177,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool MultiConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
-                     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+                     * 获取<p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+                     * @return TriggerCount <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
                      * 
                      */
                     int64_t GetTriggerCount() const;
 
                     /**
-                     * 设置Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
-                     * @param _triggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+                     * 设置<p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+                     * @param _triggerCount <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
                      * 
                      */
                     void SetTriggerCount(const int64_t& _triggerCount);
@@ -205,15 +198,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool TriggerCountHasBeenSet() const;
 
                     /**
-                     * 获取Repeated alarm interval in minutes. Value range: 0 to 1440
-                     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
+                     * 获取<p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+                     * @return AlarmPeriod <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
                      * 
                      */
                     int64_t GetAlarmPeriod() const;
 
                     /**
-                     * 设置Repeated alarm interval in minutes. Value range: 0 to 1440
-                     * @param _alarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
+                     * 设置<p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+                     * @param _alarmPeriod <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
                      * 
                      */
                     void SetAlarmPeriod(const int64_t& _alarmPeriod);
@@ -226,36 +219,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool AlarmPeriodHasBeenSet() const;
 
                     /**
-                     * 获取List of associated alarm notification templates
-                     * @return AlarmNoticeIds List of associated alarm notification templates
-                     * 
-                     */
-                    std::vector<std::string> GetAlarmNoticeIds() const;
-
-                    /**
-                     * 设置List of associated alarm notification templates
-                     * @param _alarmNoticeIds List of associated alarm notification templates
-                     * 
-                     */
-                    void SetAlarmNoticeIds(const std::vector<std::string>& _alarmNoticeIds);
-
-                    /**
-                     * 判断参数 AlarmNoticeIds 是否已赋值
-                     * @return AlarmNoticeIds 是否已赋值
-                     * 
-                     */
-                    bool AlarmNoticeIdsHasBeenSet() const;
-
-                    /**
-                     * 获取Monitoring object list
-                     * @return AlarmTargets Monitoring object list
+                     * 获取<p>Monitoring object list.</p>
+                     * @return AlarmTargets <p>Monitoring object list.</p>
                      * 
                      */
                     std::vector<AlarmTarget> GetAlarmTargets() const;
 
                     /**
-                     * 设置Monitoring object list
-                     * @param _alarmTargets Monitoring object list
+                     * 设置<p>Monitoring object list.</p>
+                     * @param _alarmTargets <p>Monitoring object list.</p>
                      * 
                      */
                     void SetAlarmTargets(const std::vector<AlarmTarget>& _alarmTargets);
@@ -268,15 +240,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool AlarmTargetsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the alarm policy
-                     * @return Status Whether to enable the alarm policy
+                     * 获取<p>Whether to enable alarm policy.</p>
+                     * @return Status <p>Whether to enable alarm policy.</p>
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Whether to enable the alarm policy
-                     * @param _status Whether to enable the alarm policy
+                     * 设置<p>Whether to enable alarm policy.</p>
+                     * @param _status <p>Whether to enable alarm policy.</p>
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -289,36 +261,36 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-                     * @return Enable This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-                     * 
+                     * 获取<p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+                     * @return Enable <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+                     * @deprecated
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-                     * @param _enable This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-                     * 
+                     * 设置<p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+                     * @param _enable <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+                     * @deprecated
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Custom alarm content
-                     * @return MessageTemplate Custom alarm content
+                     * 获取<p>User-defined alarm content</p>
+                     * @return MessageTemplate <p>User-defined alarm content</p>
                      * 
                      */
                     std::string GetMessageTemplate() const;
 
                     /**
-                     * 设置Custom alarm content
-                     * @param _messageTemplate Custom alarm content
+                     * 设置<p>User-defined alarm content</p>
+                     * @param _messageTemplate <p>User-defined alarm content</p>
                      * 
                      */
                     void SetMessageTemplate(const std::string& _messageTemplate);
@@ -331,15 +303,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool MessageTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Custom callback
-                     * @return CallBack Custom callback
+                     * 获取<p>user-defined callback</p>
+                     * @return CallBack <p>user-defined callback</p>
                      * 
                      */
                     CallBackInfo GetCallBack() const;
 
                     /**
-                     * 设置Custom callback
-                     * @param _callBack Custom callback
+                     * 设置<p>user-defined callback</p>
+                     * @param _callBack <p>user-defined callback</p>
                      * 
                      */
                     void SetCallBack(const CallBackInfo& _callBack);
@@ -352,15 +324,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool CallBackHasBeenSet() const;
 
                     /**
-                     * 获取Multi-Dimensional analysis
-                     * @return Analysis Multi-Dimensional analysis
+                     * 获取<p>Multi-dimensional analysis</p>
+                     * @return Analysis <p>Multi-dimensional analysis</p>
                      * 
                      */
                     std::vector<AnalysisDimensional> GetAnalysis() const;
 
                     /**
-                     * 设置Multi-Dimensional analysis
-                     * @param _analysis Multi-Dimensional analysis
+                     * 设置<p>Multi-dimensional analysis</p>
+                     * @param _analysis <p>Multi-dimensional analysis</p>
                      * 
                      */
                     void SetAnalysis(const std::vector<AnalysisDimensional>& _analysis);
@@ -373,15 +345,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool AnalysisHasBeenSet() const;
 
                     /**
-                     * 获取Group trigger status. true: enabled; false: disabled (default)
-                     * @return GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
+                     * 获取<p>Group trigger status. true: enabled, false: disabled (default)</p>
+                     * @return GroupTriggerStatus <p>Group trigger status. true: enabled, false: disabled (default)</p>
                      * 
                      */
                     bool GetGroupTriggerStatus() const;
 
                     /**
-                     * 设置Group trigger status. true: enabled; false: disabled (default)
-                     * @param _groupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
+                     * 设置<p>Group trigger status. true: enabled, false: disabled (default)</p>
+                     * @param _groupTriggerStatus <p>Group trigger status. true: enabled, false: disabled (default)</p>
                      * 
                      */
                     void SetGroupTriggerStatus(const bool& _groupTriggerStatus);
@@ -394,15 +366,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool GroupTriggerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Grouping trigger conditions.
-                     * @return GroupTriggerCondition Grouping trigger conditions.
+                     * 获取<p>Group trigger conditions.</p>
+                     * @return GroupTriggerCondition <p>Group trigger conditions.</p>
                      * 
                      */
                     std::vector<std::string> GetGroupTriggerCondition() const;
 
                     /**
-                     * 设置Grouping trigger conditions.
-                     * @param _groupTriggerCondition Grouping trigger conditions.
+                     * 设置<p>Group trigger conditions.</p>
+                     * @param _groupTriggerCondition <p>Group trigger conditions.</p>
                      * 
                      */
                     void SetGroupTriggerCondition(const std::vector<std::string>& _groupTriggerCondition);
@@ -415,15 +387,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool GroupTriggerConditionHasBeenSet() const;
 
                     /**
-                     * 获取Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
-                     * @return Tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+                     * 获取<p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+                     * @return Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
-                     * @param _tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+                     * 设置<p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+                     * @param _tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -436,19 +408,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
-                     * @return MonitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+                     * 获取<p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+                     * @return MonitorObjectType <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
                      * 
                      */
                     uint64_t GetMonitorObjectType() const;
 
                     /**
-                     * 设置Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
-                     * @param _monitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+                     * 设置<p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+                     * @param _monitorObjectType <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
                      * 
                      */
                     void SetMonitorObjectType(const uint64_t& _monitorObjectType);
@@ -461,19 +429,15 @@ Note: - Condition and AlarmLevel are one set of configurations, MultiConditions 
                     bool MonitorObjectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
-                     * @return Classifications Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+                     * 获取<p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+                     * @return Classifications <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
                      * 
                      */
                     std::vector<AlarmClassification> GetClassifications() const;
 
                     /**
-                     * 设置Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
-                     * @param _classifications Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+                     * 设置<p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+                     * @param _classifications <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
                      * 
                      */
                     void SetClassifications(const std::vector<AlarmClassification>& _classifications);
@@ -485,131 +449,175 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
                      */
                     bool ClassificationsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+                     * @return AlarmNoticeIds <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAlarmNoticeIds() const;
+
+                    /**
+                     * 设置<p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+                     * @param _alarmNoticeIds <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+                     * 
+                     */
+                    void SetAlarmNoticeIds(const std::vector<std::string>& _alarmNoticeIds);
+
+                    /**
+                     * 判断参数 AlarmNoticeIds 是否已赋值
+                     * @return AlarmNoticeIds 是否已赋值
+                     * 
+                     */
+                    bool AlarmNoticeIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+                     * @return MonitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+                     * 
+                     */
+                    MonitorNotice GetMonitorNotice() const;
+
+                    /**
+                     * 设置<p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+                     * @param _monitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+                     * 
+                     */
+                    void SetMonitorNotice(const MonitorNotice& _monitorNotice);
+
+                    /**
+                     * 判断参数 MonitorNotice 是否已赋值
+                     * @return MonitorNotice 是否已赋值
+                     * 
+                     */
+                    bool MonitorNoticeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Alarm policy ID
+                     * <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
                      */
                     std::string m_alarmId;
                     bool m_alarmIdHasBeenSet;
 
                     /**
-                     * Alarm policy name
+                     * <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Monitoring task running time point
+                     * <p>Monitoring task execution time point.</p>
                      */
                     MonitorTime m_monitorTime;
                     bool m_monitorTimeHasBeenSet;
 
                     /**
-                     * Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
                      */
                     uint64_t m_alarmLevel;
                     bool m_alarmLevelHasBeenSet;
 
                     /**
-                     * Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+                     * <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
                      */
                     std::vector<MultiCondition> m_multiConditions;
                     bool m_multiConditionsHasBeenSet;
 
                     /**
-                     * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+                     * <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
                      */
                     int64_t m_triggerCount;
                     bool m_triggerCountHasBeenSet;
 
                     /**
-                     * Repeated alarm interval in minutes. Value range: 0 to 1440
+                     * <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
                      */
                     int64_t m_alarmPeriod;
                     bool m_alarmPeriodHasBeenSet;
 
                     /**
-                     * List of associated alarm notification templates
-                     */
-                    std::vector<std::string> m_alarmNoticeIds;
-                    bool m_alarmNoticeIdsHasBeenSet;
-
-                    /**
-                     * Monitoring object list
+                     * <p>Monitoring object list.</p>
                      */
                     std::vector<AlarmTarget> m_alarmTargets;
                     bool m_alarmTargetsHasBeenSet;
 
                     /**
-                     * Whether to enable the alarm policy
+                     * <p>Whether to enable alarm policy.</p>
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+                     * <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Custom alarm content
+                     * <p>User-defined alarm content</p>
                      */
                     std::string m_messageTemplate;
                     bool m_messageTemplateHasBeenSet;
 
                     /**
-                     * Custom callback
+                     * <p>user-defined callback</p>
                      */
                     CallBackInfo m_callBack;
                     bool m_callBackHasBeenSet;
 
                     /**
-                     * Multi-Dimensional analysis
+                     * <p>Multi-dimensional analysis</p>
                      */
                     std::vector<AnalysisDimensional> m_analysis;
                     bool m_analysisHasBeenSet;
 
                     /**
-                     * Group trigger status. true: enabled; false: disabled (default)
+                     * <p>Group trigger status. true: enabled, false: disabled (default)</p>
                      */
                     bool m_groupTriggerStatus;
                     bool m_groupTriggerStatusHasBeenSet;
 
                     /**
-                     * Grouping trigger conditions.
+                     * <p>Group trigger conditions.</p>
                      */
                     std::vector<std::string> m_groupTriggerCondition;
                     bool m_groupTriggerConditionHasBeenSet;
 
                     /**
-                     * Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+                     * <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+                     * <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
                      */
                     uint64_t m_monitorObjectType;
                     bool m_monitorObjectTypeHasBeenSet;
 
                     /**
-                     * Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+                     * <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
                      */
                     std::vector<AlarmClassification> m_classifications;
                     bool m_classificationsHasBeenSet;
+
+                    /**
+                     * <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+                     */
+                    std::vector<std::string> m_alarmNoticeIds;
+                    bool m_alarmNoticeIdsHasBeenSet;
+
+                    /**
+                     * <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+                     */
+                    MonitorNotice m_monitorNotice;
+                    bool m_monitorNoticeHasBeenSet;
 
                 };
             }

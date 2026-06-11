@@ -126,6 +126,132 @@ namespace TencentCloud
                      */
                     bool IsModifyHasBeenSet() const;
 
+                    /**
+                     * 获取Type
+                     * @return Type Type
+                     * 
+                     */
+                    uint64_t GetType() const;
+
+                    /**
+                     * 设置Type
+                     * @param _type Type
+                     * 
+                     */
+                    void SetType(const uint64_t& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     * 
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取target region
+                     * @return SCFRegion target region
+                     * 
+                     */
+                    std::string GetSCFRegion() const;
+
+                    /**
+                     * 设置target region
+                     * @param _sCFRegion target region
+                     * 
+                     */
+                    void SetSCFRegion(const std::string& _sCFRegion);
+
+                    /**
+                     * 判断参数 SCFRegion 是否已赋值
+                     * @return SCFRegion 是否已赋值
+                     * 
+                     */
+                    bool SCFRegionHasBeenSet() const;
+
+                    /**
+                     * 获取Namespace
+                     * @return Namespace Namespace
+                     * 
+                     */
+                    std::string GetNamespace() const;
+
+                    /**
+                     * 设置Namespace
+                     * @param _namespace Namespace
+                     * 
+                     */
+                    void SetNamespace(const std::string& _namespace);
+
+                    /**
+                     * 判断参数 Namespace 是否已赋值
+                     * @return Namespace 是否已赋值
+                     * 
+                     */
+                    bool NamespaceHasBeenSet() const;
+
+                    /**
+                     * 获取function name
+                     * @return FunctionName function name
+                     * 
+                     */
+                    std::string GetFunctionName() const;
+
+                    /**
+                     * 设置function name
+                     * @param _functionName function name
+                     * 
+                     */
+                    void SetFunctionName(const std::string& _functionName);
+
+                    /**
+                     * 判断参数 FunctionName 是否已赋值
+                     * @return FunctionName 是否已赋值
+                     * 
+                     */
+                    bool FunctionNameHasBeenSet() const;
+
+                    /**
+                     * 获取Function version
+                     * @return FunctionVersion Function version
+                     * 
+                     */
+                    std::string GetFunctionVersion() const;
+
+                    /**
+                     * 设置Function version
+                     * @param _functionVersion Function version
+                     * 
+                     */
+                    void SetFunctionVersion(const std::string& _functionVersion);
+
+                    /**
+                     * 判断参数 FunctionVersion 是否已赋值
+                     * @return FunctionVersion 是否已赋值
+                     * 
+                     */
+                    bool FunctionVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Alias
+                     * @return Alias Alias
+                     * 
+                     */
+                    std::string GetAlias() const;
+
+                    /**
+                     * 设置Alias
+                     * @param _alias Alias
+                     * 
+                     */
+                    void SetAlias(const std::string& _alias);
+
+                    /**
+                     * 判断参数 Alias 是否已赋值
+                     * @return Alias 是否已赋值
+                     * 
+                     */
+                    bool AliasHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +277,42 @@ namespace TencentCloud
                      */
                     bool m_isModify;
                     bool m_isModifyHasBeenSet;
+
+                    /**
+                     * Type
+                     */
+                    uint64_t m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * target region
+                     */
+                    std::string m_sCFRegion;
+                    bool m_sCFRegionHasBeenSet;
+
+                    /**
+                     * Namespace
+                     */
+                    std::string m_namespace;
+                    bool m_namespaceHasBeenSet;
+
+                    /**
+                     * function name
+                     */
+                    std::string m_functionName;
+                    bool m_functionNameHasBeenSet;
+
+                    /**
+                     * Function version
+                     */
+                    std::string m_functionVersion;
+                    bool m_functionVersionHasBeenSet;
+
+                    /**
+                     * Alias
+                     */
+                    std::string m_alias;
+                    bool m_aliasHasBeenSet;
 
                 };
             }

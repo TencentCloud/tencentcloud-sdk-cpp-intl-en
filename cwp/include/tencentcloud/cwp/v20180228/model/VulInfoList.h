@@ -215,19 +215,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return From This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obsolete
+                     * @return From Obsolete
                      * 
                      */
                     uint64_t GetFrom() const;
 
                     /**
-                     * 设置This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _from This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Obsolete
+                     * @param _from Obsolete
                      * 
                      */
                     void SetFrom(const uint64_t& _from);
@@ -241,18 +237,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Descript Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescript() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _descript Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescript(const std::string& _descript);
@@ -265,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptHasBeenSet() const;
 
                     /**
-                     * 获取This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublishTimeWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obsolete
+                     * @return PublishTimeWisteria Obsolete
                      * 
                      */
                     std::string GetPublishTimeWisteria() const;
 
                     /**
-                     * 设置This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publishTimeWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Obsolete
+                     * @param _publishTimeWisteria Obsolete
                      * 
                      */
                     void SetPublishTimeWisteria(const std::string& _publishTimeWisteria);
@@ -290,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublishTimeWisteriaHasBeenSet() const;
 
                     /**
-                     * 获取This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NameWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obsolete
+                     * @return NameWisteria Obsolete
                      * 
                      */
                     std::string GetNameWisteria() const;
 
                     /**
-                     * 设置This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nameWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Obsolete
+                     * @param _nameWisteria Obsolete
                      * 
                      */
                     void SetNameWisteria(const std::string& _nameWisteria);
@@ -315,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameWisteriaHasBeenSet() const;
 
                     /**
-                     * 获取This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DescriptWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obsolete
+                     * @return DescriptWisteria Obsolete
                      * 
                      */
                     std::string GetDescriptWisteria() const;
 
                     /**
-                     * 设置This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _descriptWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Obsolete
+                     * @param _descriptWisteria Obsolete
                      * 
                      */
                     void SetDescriptWisteria(const std::string& _descriptWisteria);
@@ -341,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusStr Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatusStr() const;
 
                     /**
                      * 设置Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _statusStr Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatusStr(const std::string& _statusStr);
@@ -366,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCveId() const;
 
                     /**
                      * 设置CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCveId(const std::string& _cveId);
@@ -391,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCvssScore() const;
 
                     /**
                      * 设置CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCvssScore(const double& _cvssScore);
@@ -415,19 +383,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CvssScoreHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Labels Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+                     * @return Labels Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
                      * 
                      */
                     std::string GetLabels() const;
 
                     /**
-                     * 设置Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _labels Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+                     * @param _labels Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
                      * 
                      */
                     void SetLabels(const std::string& _labels);
@@ -440,15 +436,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+                     * @return FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
                      * 
                      */
                     uint64_t GetFixSwitch() const;
 
                     /**
-                     * 设置Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fixSwitch Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+                     * @param _fixSwitch Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
                      * 
                      */
                     void SetFixSwitch(const uint64_t& _fixSwitch);
@@ -461,19 +457,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixSwitchHasBeenSet() const;
 
                     /**
-                     * 获取ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取id of the last scan task
+                     * @return TaskId id of the last scan task
                      * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
-                     * 设置ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置id of the last scan task
+                     * @param _taskId id of the last scan task
                      * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
@@ -486,15 +478,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSupportDefense Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Support defense, 0: no support 1: support
+                     * @return IsSupportDefense Support defense, 0: no support 1: support
                      * 
                      */
                     uint64_t GetIsSupportDefense() const;
 
                     /**
-                     * 设置Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSupportDefense Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Support defense, 0: no support 1: support
+                     * @param _isSupportDefense Support defense, 0: no support 1: support
                      * 
                      */
                     void SetIsSupportDefense(const uint64_t& _isSupportDefense);
@@ -507,19 +499,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsSupportDefenseHasBeenSet() const;
 
                     /**
-                     * 获取Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefenseAttackCount Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Attacks Defended
+                     * @return DefenseAttackCount Number of Attacks Defended
                      * 
                      */
                     uint64_t GetDefenseAttackCount() const;
 
                     /**
-                     * 设置Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defenseAttackCount Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Attacks Defended
+                     * @param _defenseAttackCount Number of Attacks Defended
                      * 
                      */
                     void SetDefenseAttackCount(const uint64_t& _defenseAttackCount);
@@ -532,19 +520,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DefenseAttackCountHasBeenSet() const;
 
                     /**
-                     * 获取First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FirstAppearTime First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取first occurrence time
+                     * @return FirstAppearTime first occurrence time
                      * 
                      */
                     std::string GetFirstAppearTime() const;
 
                     /**
-                     * 设置First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _firstAppearTime First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置first occurrence time
+                     * @param _firstAppearTime first occurrence time
                      * 
                      */
                     void SetFirstAppearTime(const std::string& _firstAppearTime);
@@ -557,15 +541,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FirstAppearTimeHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulCategory Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+                     * @return VulCategory Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
                      * 
                      */
                     uint64_t GetVulCategory() const;
 
                     /**
-                     * 设置Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulCategory Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+                     * @param _vulCategory Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
                      * 
                      */
                     void SetVulCategory(const uint64_t& _vulCategory);
@@ -578,19 +562,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackLevel Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Attack intensity level.
+                     * @return AttackLevel Attack intensity level.
                      * 
                      */
                     uint64_t GetAttackLevel() const;
 
                     /**
-                     * 设置Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackLevel Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Attack intensity level.
+                     * @param _attackLevel Attack intensity level.
                      * 
                      */
                     void SetAttackLevel(const uint64_t& _attackLevel);
@@ -603,19 +583,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AttackLevelHasBeenSet() const;
 
                     /**
-                     * 获取Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FixNoNeedRestart Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether a restart is required after vulnerability repair.
+                     * @return FixNoNeedRestart Whether a restart is required after vulnerability repair.
                      * 
                      */
                     bool GetFixNoNeedRestart() const;
 
                     /**
-                     * 设置Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fixNoNeedRestart Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether a restart is required after vulnerability repair.
+                     * @param _fixNoNeedRestart Whether a restart is required after vulnerability repair.
                      * 
                      */
                     void SetFixNoNeedRestart(const bool& _fixNoNeedRestart);
@@ -628,15 +604,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixNoNeedRestartHasBeenSet() const;
 
                     /**
-                     * 获取Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Method Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection method. 0: version comparison, 1: POC verification.
+                     * @return Method Detection method. 0: version comparison, 1: POC verification.
                      * 
                      */
                     uint64_t GetMethod() const;
 
                     /**
-                     * 设置Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _method Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection method. 0: version comparison, 1: POC verification.
+                     * @param _method Detection method. 0: version comparison, 1: POC verification.
                      * 
                      */
                     void SetMethod(const uint64_t& _method);
@@ -647,6 +623,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool MethodHasBeenSet() const;
+
+                    /**
+                     * 获取Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+                     * @return VulFixSwitch Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+                     * 
+                     */
+                    uint64_t GetVulFixSwitch() const;
+
+                    /**
+                     * 设置Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+                     * @param _vulFixSwitch Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+                     * 
+                     */
+                    void SetVulFixSwitch(const uint64_t& _vulFixSwitch);
+
+                    /**
+                     * 判断参数 VulFixSwitch 是否已赋值
+                     * @return VulFixSwitch 是否已赋值
+                     * 
+                     */
+                    bool VulFixSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Latest remediation time
+                     * @return LatestFixTime Latest remediation time
+                     * 
+                     */
+                    std::string GetLatestFixTime() const;
+
+                    /**
+                     * 设置Latest remediation time
+                     * @param _latestFixTime Latest remediation time
+                     * 
+                     */
+                    void SetLatestFixTime(const std::string& _latestFixTime);
+
+                    /**
+                     * 判断参数 LatestFixTime 是否已赋值
+                     * @return LatestFixTime 是否已赋值
+                     * 
+                     */
+                    bool LatestFixTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of application protection activations for machines with vulnerability correspondence
+                     * @return RaspOpenNodeCount Number of application protection activations for machines with vulnerability correspondence
+                     * 
+                     */
+                    int64_t GetRaspOpenNodeCount() const;
+
+                    /**
+                     * 设置Number of application protection activations for machines with vulnerability correspondence
+                     * @param _raspOpenNodeCount Number of application protection activations for machines with vulnerability correspondence
+                     * 
+                     */
+                    void SetRaspOpenNodeCount(const int64_t& _raspOpenNodeCount);
+
+                    /**
+                     * 判断参数 RaspOpenNodeCount 是否已赋值
+                     * @return RaspOpenNodeCount 是否已赋值
+                     * 
+                     */
+                    bool RaspOpenNodeCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of application protection deactivations for machines with vulnerability correspondence
+                     * @return RaspClosedNodeCount Number of application protection deactivations for machines with vulnerability correspondence
+                     * 
+                     */
+                    int64_t GetRaspClosedNodeCount() const;
+
+                    /**
+                     * 设置Number of application protection deactivations for machines with vulnerability correspondence
+                     * @param _raspClosedNodeCount Number of application protection deactivations for machines with vulnerability correspondence
+                     * 
+                     */
+                    void SetRaspClosedNodeCount(const int64_t& _raspClosedNodeCount);
+
+                    /**
+                     * 判断参数 RaspClosedNodeCount 是否已赋值
+                     * @return RaspClosedNodeCount 是否已赋值
+                     * 
+                     */
+                    bool RaspClosedNodeCountHasBeenSet() const;
 
                 private:
 
@@ -699,126 +759,144 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_levelHasBeenSet;
 
                     /**
-                     * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obsolete
                      */
                     uint64_t m_from;
                     bool m_fromHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_descript;
                     bool m_descriptHasBeenSet;
 
                     /**
-                     * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obsolete
                      */
                     std::string m_publishTimeWisteria;
                     bool m_publishTimeWisteriaHasBeenSet;
 
                     /**
-                     * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obsolete
                      */
                     std::string m_nameWisteria;
                     bool m_nameWisteriaHasBeenSet;
 
                     /**
-                     * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obsolete
                      */
                     std::string m_descriptWisteria;
                     bool m_descriptWisteriaHasBeenSet;
 
                     /**
                      * Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusStr;
                     bool m_statusStrHasBeenSet;
 
                     /**
                      * CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cveId;
                     bool m_cveIdHasBeenSet;
 
                     /**
                      * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cvssScore;
                     bool m_cvssScoreHasBeenSet;
 
                     /**
-                     * Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
                      */
                     std::string m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
                      */
                     uint64_t m_fixSwitch;
                     bool m_fixSwitchHasBeenSet;
 
                     /**
-                     * ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * id of the last scan task
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Support defense, 0: no support 1: support
                      */
                     uint64_t m_isSupportDefense;
                     bool m_isSupportDefenseHasBeenSet;
 
                     /**
-                     * Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Attacks Defended
                      */
                     uint64_t m_defenseAttackCount;
                     bool m_defenseAttackCountHasBeenSet;
 
                     /**
-                     * First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * first occurrence time
                      */
                     std::string m_firstAppearTime;
                     bool m_firstAppearTimeHasBeenSet;
 
                     /**
-                     * Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
                      */
                     uint64_t m_vulCategory;
                     bool m_vulCategoryHasBeenSet;
 
                     /**
-                     * Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Attack intensity level.
                      */
                     uint64_t m_attackLevel;
                     bool m_attackLevelHasBeenSet;
 
                     /**
-                     * Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether a restart is required after vulnerability repair.
                      */
                     bool m_fixNoNeedRestart;
                     bool m_fixNoNeedRestartHasBeenSet;
 
                     /**
-                     * Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection method. 0: version comparison, 1: POC verification.
                      */
                     uint64_t m_method;
                     bool m_methodHasBeenSet;
+
+                    /**
+                     * Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+                     */
+                    uint64_t m_vulFixSwitch;
+                    bool m_vulFixSwitchHasBeenSet;
+
+                    /**
+                     * Latest remediation time
+                     */
+                    std::string m_latestFixTime;
+                    bool m_latestFixTimeHasBeenSet;
+
+                    /**
+                     * Number of application protection activations for machines with vulnerability correspondence
+                     */
+                    int64_t m_raspOpenNodeCount;
+                    bool m_raspOpenNodeCountHasBeenSet;
+
+                    /**
+                     * Number of application protection deactivations for machines with vulnerability correspondence
+                     */
+                    int64_t m_raspClosedNodeCount;
+                    bool m_raspClosedNodeCountHasBeenSet;
 
                 };
             }

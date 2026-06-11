@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulInfo Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CanFixVulInfo> GetVulInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CanFixVulInfo> m_vulInfo;
                     bool m_vulInfoHasBeenSet;

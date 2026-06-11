@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Cache Key configuration parameters.
+                * Custom Cache Key config.
                 */
                 class CacheKeyParameters : public AbstractModel
                 {

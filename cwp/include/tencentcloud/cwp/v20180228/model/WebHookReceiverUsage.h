@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReceiverId Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recipient ID.
+                     * @return ReceiverId Recipient ID.
                      * 
                      */
                     int64_t GetReceiverId() const;
 
                     /**
-                     * 设置Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _receiverId Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Recipient ID.
+                     * @param _receiverId Recipient ID.
                      * 
                      */
                     void SetReceiverId(const int64_t& _receiverId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
-                     * 获取Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReceiverName Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Receiver name
+                     * @return ReceiverName Receiver name
                      * 
                      */
                     std::string GetReceiverName() const;
 
                     /**
-                     * 设置Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _receiverName Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Receiver name
+                     * @param _receiverName Receiver name
                      * 
                      */
                     void SetReceiverName(const std::string& _receiverName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _policyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recipient ID.
                      */
                     int64_t m_receiverId;
                     bool m_receiverIdHasBeenSet;
 
                     /**
-                     * Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Receiver name
                      */
                     std::string m_receiverName;
                     bool m_receiverNameHasBeenSet;
 
                     /**
                      * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;

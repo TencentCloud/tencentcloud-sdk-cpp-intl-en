@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone
-                     * @return Zone Availability zone
+                     * 获取Availability zone.
+                     * @return Zone Availability zone.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone
-                     * @param _zone Availability zone
+                     * 设置Availability zone.
+                     * @param _zone Availability zone.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool DbVersionHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Project ID.
+                     * @return ProjectId Project ID.
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param _projectId Project ID
+                     * 设置Project ID.
+                     * @param _projectId Project ID.
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -178,15 +178,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
-                     * @return AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+                     * 获取Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+                     * @return AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
                      * 
                      */
                     std::string GetAdminPassword() const;
 
                     /**
-                     * 设置Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
-                     * @param _adminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+                     * 设置Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+                     * @param _adminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
                      * 
                      */
                     void SetAdminPassword(const std::string& _adminPassword);
@@ -721,7 +721,7 @@ Rollback and clone do not support monthly subscription storage.
                 private:
 
                     /**
-                     * Availability zone
+                     * Availability zone.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -746,7 +746,7 @@ Rollback and clone do not support monthly subscription storage.
                     bool m_dbVersionHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -758,7 +758,7 @@ Rollback and clone do not support monthly subscription storage.
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+                     * Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
                      */
                     std::string m_adminPassword;
                     bool m_adminPasswordHasBeenSet;

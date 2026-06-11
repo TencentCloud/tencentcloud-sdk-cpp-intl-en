@@ -132,19 +132,15 @@ namespace TencentCloud
                     bool FixMessageHasBeenSet() const;
 
                     /**
-                     * 获取Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Additional Information on Machine
+                     * @return MachineExtraInfo Additional Information on Machine
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Additional Information on Machine
+                     * @param _machineExtraInfo Additional Information on Machine
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -183,8 +179,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fixMessageHasBeenSet;
 
                     /**
-                     * Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Additional Information on Machine
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

@@ -47,25 +47,25 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: `true` (default policy); `false` (custom policy).
-                     * @return IsDefault Valid values: `true` (default policy); `false` (custom policy).
+                     * 获取Name of the editing user
+                     * @return EditUserName Name of the editing user
                      * 
                      */
-                    bool GetIsDefault() const;
+                    std::string GetEditUserName() const;
 
                     /**
-                     * 设置Valid values: `true` (default policy); `false` (custom policy).
-                     * @param _isDefault Valid values: `true` (default policy); `false` (custom policy).
+                     * 设置Name of the editing user
+                     * @param _editUserName Name of the editing user
                      * 
                      */
-                    void SetIsDefault(const bool& _isDefault);
+                    void SetEditUserName(const std::string& _editUserName);
 
                     /**
-                     * 判断参数 IsDefault 是否已赋值
-                     * @return IsDefault 是否已赋值
+                     * 判断参数 EditUserName 是否已赋值
+                     * @return EditUserName 是否已赋值
                      * 
                      */
-                    bool IsDefaultHasBeenSet() const;
+                    bool EditUserNameHasBeenSet() const;
 
                     /**
                      * 获取Number of associated images
@@ -89,6 +89,69 @@ namespace TencentCloud
                     bool EffectImageCountHasBeenSet() const;
 
                     /**
+                     * 获取Valid values: `true` (default policy); `false` (custom policy).
+                     * @return IsDefault Valid values: `true` (default policy); `false` (custom policy).
+                     * 
+                     */
+                    bool GetIsDefault() const;
+
+                    /**
+                     * 设置Valid values: `true` (default policy); `false` (custom policy).
+                     * @param _isDefault Valid values: `true` (default policy); `false` (custom policy).
+                     * 
+                     */
+                    void SetIsDefault(const bool& _isDefault);
+
+                    /**
+                     * 判断参数 IsDefault 是否已赋值
+                     * @return IsDefault 是否已赋值
+                     * 
+                     */
+                    bool IsDefaultHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the rule applies to all images. true indicates it takes effect for all images.
+                     * @return IsGlobal Whether the rule applies to all images. true indicates it takes effect for all images.
+                     * 
+                     */
+                    bool GetIsGlobal() const;
+
+                    /**
+                     * 设置Whether the rule applies to all images. true indicates it takes effect for all images.
+                     * @param _isGlobal Whether the rule applies to all images. true indicates it takes effect for all images.
+                     * 
+                     */
+                    void SetIsGlobal(const bool& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     * 
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
+                    /**
+                     * 获取Valid values: `true` (enable the policy); `false` (disable the policy).
+                     * @return IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
+                     * 
+                     */
+                    bool GetIsEnable() const;
+
+                    /**
+                     * 设置Valid values: `true` (enable the policy); `false` (disable the policy).
+                     * @param _isEnable Valid values: `true` (enable the policy); `false` (disable the policy).
+                     * 
+                     */
+                    void SetIsEnable(const bool& _isEnable);
+
+                    /**
+                     * 判断参数 IsEnable 是否已赋值
+                     * @return IsEnable 是否已赋值
+                     * 
+                     */
+                    bool IsEnableHasBeenSet() const;
+
+                    /**
                      * 获取Policy ID
                      * @return RuleId Policy ID
                      * 
@@ -108,31 +171,6 @@ namespace TencentCloud
                      * 
                      */
                     bool RuleIdHasBeenSet() const;
-
-                    /**
-                     * 获取Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    std::string GetUpdateTime() const;
-
-                    /**
-                     * 设置Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
-                     */
-                    void SetUpdateTime(const std::string& _updateTime);
-
-                    /**
-                     * 判断参数 UpdateTime 是否已赋值
-                     * @return UpdateTime 是否已赋值
-                     * 
-                     */
-                    bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Policy name
@@ -156,79 +194,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the editing user
-                     * @return EditUserName Name of the editing user
+                     * 获取Policy update time. Can be empty.
+                     * @return UpdateTime Policy update time. Can be empty.
                      * 
                      */
-                    std::string GetEditUserName() const;
+                    std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Name of the editing user
-                     * @param _editUserName Name of the editing user
+                     * 设置Policy update time. Can be empty.
+                     * @param _updateTime Policy update time. Can be empty.
                      * 
                      */
-                    void SetEditUserName(const std::string& _editUserName);
+                    void SetUpdateTime(const std::string& _updateTime);
 
                     /**
-                     * 判断参数 EditUserName 是否已赋值
-                     * @return EditUserName 是否已赋值
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
                      * 
                      */
-                    bool EditUserNameHasBeenSet() const;
-
-                    /**
-                     * 获取Valid values: `true` (enable the policy); `false` (disable the policy).
-                     * @return IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
-                     * 
-                     */
-                    bool GetIsEnable() const;
-
-                    /**
-                     * 设置Valid values: `true` (enable the policy); `false` (disable the policy).
-                     * @param _isEnable Valid values: `true` (enable the policy); `false` (disable the policy).
-                     * 
-                     */
-                    void SetIsEnable(const bool& _isEnable);
-
-                    /**
-                     * 判断参数 IsEnable 是否已赋值
-                     * @return IsEnable 是否已赋值
-                     * 
-                     */
-                    bool IsEnableHasBeenSet() const;
+                    bool UpdateTimeHasBeenSet() const;
 
                 private:
-
-                    /**
-                     * Valid values: `true` (default policy); `false` (custom policy).
-                     */
-                    bool m_isDefault;
-                    bool m_isDefaultHasBeenSet;
-
-                    /**
-                     * Number of associated images
-                     */
-                    uint64_t m_effectImageCount;
-                    bool m_effectImageCountHasBeenSet;
-
-                    /**
-                     * Policy ID
-                     */
-                    std::string m_ruleId;
-                    bool m_ruleIdHasBeenSet;
-
-                    /**
-                     * Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_updateTime;
-                    bool m_updateTimeHasBeenSet;
-
-                    /**
-                     * Policy name
-                     */
-                    std::string m_ruleName;
-                    bool m_ruleNameHasBeenSet;
 
                     /**
                      * Name of the editing user
@@ -237,10 +223,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_editUserNameHasBeenSet;
 
                     /**
+                     * Number of associated images
+                     */
+                    uint64_t m_effectImageCount;
+                    bool m_effectImageCountHasBeenSet;
+
+                    /**
+                     * Valid values: `true` (default policy); `false` (custom policy).
+                     */
+                    bool m_isDefault;
+                    bool m_isDefaultHasBeenSet;
+
+                    /**
+                     * Whether the rule applies to all images. true indicates it takes effect for all images.
+                     */
+                    bool m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
+
+                    /**
                      * Valid values: `true` (enable the policy); `false` (disable the policy).
                      */
                     bool m_isEnable;
                     bool m_isEnableHasBeenSet;
+
+                    /**
+                     * Policy ID
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * Policy name
+                     */
+                    std::string m_ruleName;
+                    bool m_ruleNameHasBeenSet;
+
+                    /**
+                     * Policy update time. Can be empty.
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
 
                 };
             }

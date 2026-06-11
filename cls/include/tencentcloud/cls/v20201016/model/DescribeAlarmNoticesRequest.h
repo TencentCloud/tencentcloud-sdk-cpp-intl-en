@@ -44,79 +44,123 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+                     * 获取name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
-                     * @return Filters <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+                     * @return Filters name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
+Required: No
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+                     * 设置name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
-                     * @param _filters <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+                     * @param _filters name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
+Required: No
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -170,26 +214,66 @@ Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+                     * @return HasAlarmShieldCount Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+                     * 
+                     */
+                    bool GetHasAlarmShieldCount() const;
+
+                    /**
+                     * 设置Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+                     * @param _hasAlarmShieldCount Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+                     * 
+                     */
+                    void SetHasAlarmShieldCount(const bool& _hasAlarmShieldCount);
+
+                    /**
+                     * 判断参数 HasAlarmShieldCount 是否已赋值
+                     * @return HasAlarmShieldCount 是否已赋值
+                     * 
+                     */
+                    bool HasAlarmShieldCountHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <li> name
-Filter by Notification Channel Group Name.Type: String
-Required: No</li>
-<li> alarmNoticeId
-Filter by Notification Channel Group ID.Type: String
-Required: No</li>
-<li> uid
-Filter by Receiving User ID.Type: String
-Required: No</li>
-<li> groupId
-Filter by Receiving User Group ID.Type: String
-Required: No</li>
-
-<li> deliverFlag
-Filter by Delivery Status.Type: String
+                     * name
+Filter by [notification channel group name].
+Type: String
+"Filters":[{"Key":"name","Values":["test-notice"]}]
 Required: No
-Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+alarmNoticeId
+Filter by [notification channel group ID].
+Type: String
+"Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+Required: No
+uid
+Filter by [recipient user ID].
+Type: String
+"Filters": [{Key: "uid", Values: ["1137546"]}]
+Required: No
+groupId
+Filter by [recipient user group ID].
+Type: String
+"Filters": [{Key: "groupId", Values: ["344098"]}]
+Required: No
+
+deliverFlag
+Filter by [delivery status].
+Type: String
+Required: No
+Available values: "1": disabled, "2": enabled, "3": delivery exception
+"Filters":[{"Key":"deliverFlag","Values":["2"]}]
+The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -205,6 +289,14 @@ Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+- true: Need to return.
+- false: do not return (default false).
+                     */
+                    bool m_hasAlarmShieldCount;
+                    bool m_hasAlarmShieldCountHasBeenSet;
 
                 };
             }

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Package name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PackageName Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取package name
+                     * @return PackageName package name
                      * 
                      */
                     std::string GetPackageName() const;
 
                     /**
-                     * 设置Package name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _packageName Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置package name
+                     * @param _packageName package name
                      * 
                      */
                     void SetPackageName(const std::string& _packageName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PackageNameHasBeenSet() const;
 
                     /**
-                     * 获取Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parent id
+                     * @return ParentId Parent id
                      * 
                      */
                     uint64_t GetParentId() const;
 
                     /**
-                     * 设置Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _parentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parent id
+                     * @param _parentId Parent id
                      * 
                      */
                     void SetParentId(const uint64_t& _parentId);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -175,35 +155,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
                      * Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * package name
                      */
                     std::string m_packageName;
                     bool m_packageNameHasBeenSet;
 
                     /**
-                     * Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parent id
                      */
                     uint64_t m_parentId;
                     bool m_parentIdHasBeenSet;
 
                     /**
                      * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

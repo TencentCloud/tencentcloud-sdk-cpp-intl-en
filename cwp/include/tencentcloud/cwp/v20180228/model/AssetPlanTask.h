@@ -259,18 +259,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -346,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Additional information
+                     * @return MachineExtraInfo  Additional information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Additional information
+                     * @param _machineExtraInfo  Additional information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -434,7 +426,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -458,8 +449,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineWanIpHasBeenSet;
 
                     /**
-                     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Additional information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

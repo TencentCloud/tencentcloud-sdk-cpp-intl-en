@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool LatestHasBeenSet() const;
 
                     /**
-                     * 获取Whether running containers exist
-                     * @return ContainerRunning Whether running containers exist
+                     * 获取
+                     * @return ContainerRunning 
                      * 
                      */
                     bool GetContainerRunning() const;
 
                     /**
-                     * 设置Whether running containers exist
-                     * @param _containerRunning Whether running containers exist
+                     * 设置
+                     * @param _containerRunning 
                      * 
                      */
                     void SetContainerRunning(const bool& _containerRunning);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool ContainerRunningHasBeenSet() const;
 
                     /**
-                     * 获取Scan End Time
-                     * @return ScanEndTime Scan End Time
+                     * 获取
+                     * @return ScanEndTime 
                      * 
                      */
                     std::string GetScanEndTime() const;
 
                     /**
-                     * 设置Scan End Time
-                     * @param _scanEndTime Scan End Time
+                     * 设置
+                     * @param _scanEndTime 
                      * 
                      */
                     void SetScanEndTime(const std::string& _scanEndTime);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool ScanEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
-                     * @return ScanScope Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+                     * 获取
+                     * @return ScanScope 
                      * 
                      */
                     uint64_t GetScanScope() const;
 
                     /**
-                     * 设置Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
-                     * @param _scanScope Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+                     * 设置
+                     * @param _scanScope 
                      * 
                      */
                     void SetScanScope(const uint64_t& _scanScope);
@@ -275,15 +275,15 @@ namespace TencentCloud
                     bool ScanScopeHasBeenSet() const;
 
                     /**
-                     * 获取Repository Type tcr,ccr,harbor
-                     * @return RegistryType Repository Type tcr,ccr,harbor
+                     * 获取
+                     * @return RegistryType 
                      * 
                      */
                     std::vector<std::string> GetRegistryType() const;
 
                     /**
-                     * 设置Repository Type tcr,ccr,harbor
-                     * @param _registryType Repository Type tcr,ccr,harbor
+                     * 设置
+                     * @param _registryType 
                      * 
                      */
                     void SetRegistryType(const std::vector<std::string>& _registryType);
@@ -296,15 +296,15 @@ namespace TencentCloud
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取Namespace
-                     * @return Namespace Namespace
+                     * 获取
+                     * @return Namespace 
                      * 
                      */
                     std::vector<std::string> GetNamespace() const;
 
                     /**
-                     * 设置Namespace
-                     * @param _namespace Namespace
+                     * 设置
+                     * @param _namespace 
                      * 
                      */
                     void SetNamespace(const std::vector<std::string>& _namespace);
@@ -367,31 +367,31 @@ namespace TencentCloud
                     bool m_latestHasBeenSet;
 
                     /**
-                     * Whether running containers exist
+                     * 
                      */
                     bool m_containerRunning;
                     bool m_containerRunningHasBeenSet;
 
                     /**
-                     * Scan End Time
+                     * 
                      */
                     std::string m_scanEndTime;
                     bool m_scanEndTimeHasBeenSet;
 
                     /**
-                     * Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+                     * 
                      */
                     uint64_t m_scanScope;
                     bool m_scanScopeHasBeenSet;
 
                     /**
-                     * Repository Type tcr,ccr,harbor
+                     * 
                      */
                     std::vector<std::string> m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * Namespace
+                     * 
                      */
                     std::vector<std::string> m_namespace;
                     bool m_namespaceHasBeenSet;

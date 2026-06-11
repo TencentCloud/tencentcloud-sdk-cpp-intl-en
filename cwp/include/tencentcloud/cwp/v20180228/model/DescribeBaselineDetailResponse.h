@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BaselineDetail Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BaselineDetail GetBaselineDetail() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BaselineDetail m_baselineDetail;
                     bool m_baselineDetailHasBeenSet;

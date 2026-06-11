@@ -340,6 +340,27 @@ namespace TencentCloud
                      */
                     bool NodeNameHasBeenSet() const;
 
+                    /**
+                     * 获取Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+                     * @return ContainerStatus Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+                     * 
+                     */
+                    std::string GetContainerStatus() const;
+
+                    /**
+                     * 设置Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+                     * @param _containerStatus Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+                     * 
+                     */
+                    void SetContainerStatus(const std::string& _containerStatus);
+
+                    /**
+                     * 判断参数 ContainerStatus 是否已赋值
+                     * @return ContainerStatus 是否已赋值
+                     * 
+                     */
+                    bool ContainerStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -425,6 +446,12 @@ namespace TencentCloud
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
+
+                    /**
+                     * Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+                     */
+                    std::string m_containerStatus;
+                    bool m_containerStatusHasBeenSet;
 
                 };
             }

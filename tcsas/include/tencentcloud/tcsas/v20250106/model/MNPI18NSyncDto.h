@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The mini program name and description in multiple languages.
+                * Mini program information in multiple languages.
                 */
                 class MNPI18NSyncDto : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
-                     * @return Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+                     * 获取Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
+                     * @return Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
                      * 
                      */
                     std::string GetLang() const;
 
                     /**
-                     * 设置Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
-                     * @param _lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+                     * 设置Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
+                     * @param _lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
                      * 
                      */
                     void SetLang(const std::string& _lang);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LangHasBeenSet() const;
 
                     /**
-                     * 获取Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
-                     * @return IsDefault Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+                     * 获取<p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+                     * @return IsDefault <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
                      * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
-                     * 设置Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
-                     * @param _isDefault Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+                     * 设置<p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+                     * @param _isDefault <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
                      * 
                      */
                     void SetIsDefault(const int64_t& _isDefault);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool IsDefaultHasBeenSet() const;
 
                     /**
-                     * 获取Mini program name.
-                     * @return MNPName Mini program name.
+                     * 获取<p>Mini program name.</p>
+                     * @return MNPName <p>Mini program name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program name.
-                     * @param _mNPName Mini program name.
+                     * 设置<p>Mini program name.</p>
+                     * @param _mNPName <p>Mini program name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program introduction.
-                     * @return MNPIntro Mini program introduction.
+                     * 获取<p>Mini program introduction.</p>
+                     * @return MNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置Mini program introduction.
-                     * @param _mNPIntro Mini program introduction.
+                     * 设置<p>Mini program introduction.</p>
+                     * @param _mNPIntro <p>Mini program introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+                     * Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese.
                      */
                     std::string m_lang;
                     bool m_langHasBeenSet;
 
                     /**
-                     * Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+                     * <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
                      */
                     int64_t m_isDefault;
                     bool m_isDefaultHasBeenSet;
 
                     /**
-                     * Mini program name.
+                     * <p>Mini program name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program introduction.
+                     * <p>Mini program introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;

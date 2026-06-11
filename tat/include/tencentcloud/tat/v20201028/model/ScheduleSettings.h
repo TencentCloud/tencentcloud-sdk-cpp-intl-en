@@ -49,12 +49,12 @@ namespace TencentCloud
                     /**
                      * 获取Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
                      * @return Policy Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
                      * 
                      */
                     std::string GetPolicy() const;
@@ -62,12 +62,12 @@ namespace TencentCloud
                     /**
                      * 设置Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
                      * @param _policy Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
                      * 
                      */
                     void SetPolicy(const std::string& _policy);
@@ -134,8 +134,8 @@ The time format is YYYY-MM-DDThh:MM:ssZ.
                     /**
                      * Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
                      */
                     std::string m_policy;
                     bool m_policyHasBeenSet;

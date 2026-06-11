@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool ImageTagHasBeenSet() const;
 
                     /**
-                     * 获取Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Repository Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Path of the remote repository where the mirror resides.
+                     * @return Repository Path of the remote repository where the mirror resides.
                      * 
                      */
                     std::string GetRepository() const;
 
                     /**
-                     * 设置Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _repository Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Path of the remote repository where the mirror resides.
+                     * @param _repository Path of the remote repository where the mirror resides.
                      * 
                      */
                     void SetRepository(const std::string& _repository);
@@ -155,8 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_imageTagHasBeenSet;
 
                     /**
-                     * Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Path of the remote repository where the mirror resides.
                      */
                     std::string m_repository;
                     bool m_repositoryHasBeenSet;

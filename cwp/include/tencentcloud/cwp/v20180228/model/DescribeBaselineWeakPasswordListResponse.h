@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取None
-                     * @return List None
+                     * 获取List
+                     * @return List List
                      * 
                      */
                     std::vector<BaselineWeakPassword> GetList() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * None
+                     * List
                      */
                     std::vector<BaselineWeakPassword> m_list;
                     bool m_listHasBeenSet;

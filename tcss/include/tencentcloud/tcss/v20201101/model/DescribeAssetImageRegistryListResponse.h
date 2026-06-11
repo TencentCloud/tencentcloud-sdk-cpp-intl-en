@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Image repository list.</p>
+                     * @return List <p>Image repository list.</p>
                      * 
                      */
                     std::vector<ImageRepoInfo> GetList() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Total quantity.</p>
+                     * @return TotalCount <p>Total quantity.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Image repository list.</p>
                      */
                     std::vector<ImageRepoInfo> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Total quantity.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

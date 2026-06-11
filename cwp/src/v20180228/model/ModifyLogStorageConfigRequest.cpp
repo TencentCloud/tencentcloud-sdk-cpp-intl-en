@@ -25,7 +25,9 @@ using namespace std;
 ModifyLogStorageConfigRequest::ModifyLogStorageConfigRequest() :
     m_isModifyPeriodHasBeenSet(false),
     m_typeHasBeenSet(false),
-    m_periodHasBeenSet(false)
+    m_periodHasBeenSet(false),
+    m_granularityHasBeenSet(false),
+    m_msgLanguageHasBeenSet(false)
 {
 }
 
@@ -63,6 +65,22 @@ string ModifyLogStorageConfigRequest::ToJsonString() const
         string key = "Period";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_period, allocator);
+    }
+
+    if (m_granularityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Granularity";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_granularity.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_msgLanguageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MsgLanguage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_msgLanguage.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -119,6 +137,38 @@ void ModifyLogStorageConfigRequest::SetPeriod(const int64_t& _period)
 bool ModifyLogStorageConfigRequest::PeriodHasBeenSet() const
 {
     return m_periodHasBeenSet;
+}
+
+string ModifyLogStorageConfigRequest::GetGranularity() const
+{
+    return m_granularity;
+}
+
+void ModifyLogStorageConfigRequest::SetGranularity(const string& _granularity)
+{
+    m_granularity = _granularity;
+    m_granularityHasBeenSet = true;
+}
+
+bool ModifyLogStorageConfigRequest::GranularityHasBeenSet() const
+{
+    return m_granularityHasBeenSet;
+}
+
+string ModifyLogStorageConfigRequest::GetMsgLanguage() const
+{
+    return m_msgLanguage;
+}
+
+void ModifyLogStorageConfigRequest::SetMsgLanguage(const string& _msgLanguage)
+{
+    m_msgLanguage = _msgLanguage;
+    m_msgLanguageHasBeenSet = true;
+}
+
+bool ModifyLogStorageConfigRequest::MsgLanguageHasBeenSet() const
+{
+    return m_msgLanguageHasBeenSet;
 }
 
 

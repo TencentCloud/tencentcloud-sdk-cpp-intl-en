@@ -114,34 +114,34 @@ namespace TencentCloud
                     /**
                      * 获取Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * @return TaskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     std::string GetTaskStatus() const;
@@ -149,34 +149,34 @@ namespace TencentCloud
                     /**
                      * 设置Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * @param _taskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -367,12 +367,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * @return InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * 
                      */
                     std::string GetInvocationSource() const;
@@ -380,12 +380,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * @param _invocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * 
                      */
                     void SetInvocationSource(const std::string& _invocationSource);
@@ -441,19 +441,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -511,8 +511,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      */
                     std::string m_invocationSource;
                     bool m_invocationSourceHasBeenSet;

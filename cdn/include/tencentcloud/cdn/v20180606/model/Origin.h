@@ -278,31 +278,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool CosPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return OriginPullProtocol Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginPullProtocol Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOriginPullProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _originPullProtocol Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _originPullProtocol Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
@@ -344,55 +344,51 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool BackupOriginsHasBeenSet() const;
 
                     /**
-                     * 获取Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return BackupOriginType Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupOriginType Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBackupOriginType() const;
 
                     /**
-                     * 设置Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _backupOriginType Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _backupOriginType Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBackupOriginType(const std::string& _backupOriginType);
@@ -668,11 +664,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_cosPrivateAccessHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
@@ -686,17 +682,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_backupOriginsHasBeenSet;
 
                     /**
-                     * Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_backupOriginType;
                     bool m_backupOriginTypeHasBeenSet;

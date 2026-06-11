@@ -113,18 +113,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CKafkaTopicInfo> GetTopicList() const;
 
                     /**
                      * 设置Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _topicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicList(const std::vector<CKafkaTopicInfo>& _topicList);
@@ -326,7 +322,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CKafkaTopicInfo> m_topicList;
                     bool m_topicListHasBeenSet;

@@ -127,6 +127,27 @@ namespace TencentCloud
                     bool VideoIdHasBeenSet() const;
 
                     /**
+                     * 获取<p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+                     * @return DisableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+                     * 
+                     */
+                    std::string GetDisableModeration() const;
+
+                    /**
+                     * 设置<p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+                     * @param _disableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+                     * 
+                     */
+                    void SetDisableModeration(const std::string& _disableModeration);
+
+                    /**
+                     * 判断参数 DisableModeration 是否已赋值
+                     * @return DisableModeration 是否已赋值
+                     * 
+                     */
+                    bool DisableModerationHasBeenSet() const;
+
+                    /**
                      * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
@@ -214,6 +235,12 @@ namespace TencentCloud
                      */
                     std::string m_videoId;
                     bool m_videoIdHasBeenSet;
+
+                    /**
+                     * <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+                     */
+                    std::string m_disableModeration;
+                    bool m_disableModerationHasBeenSet;
 
                     /**
                      * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>

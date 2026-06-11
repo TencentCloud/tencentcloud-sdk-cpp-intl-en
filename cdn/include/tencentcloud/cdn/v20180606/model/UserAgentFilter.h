@@ -81,19 +81,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return FilterRules UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FilterRules Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<UserAgentFilterRule> GetFilterRules() const;
 
                     /**
-                     * 设置UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _filterRules UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _filterRules Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFilterRules(const std::vector<UserAgentFilterRule>& _filterRules);
@@ -117,8 +117,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_switchHasBeenSet;
 
                     /**
-                     * UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<UserAgentFilterRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image vulnerability list
+                     * @return List Image vulnerability list
                      * 
                      */
                     std::vector<ImageVul> GetList() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Total number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image vulnerability list
                      */
                     std::vector<ImageVul> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

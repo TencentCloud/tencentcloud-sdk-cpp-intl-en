@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log type
-                     * @return LogType Log type
+                     * 获取Security log module.
+                     * @return LogType Security log module.
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type
-                     * @param _logType Log type
+                     * 设置Security log module.
+                     * @param _logType Security log module.
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -90,18 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _topicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -134,10 +130,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StateHasBeenSet() const;
 
+                    /**
+                     * 获取Log type
+                     * @return SubLogType Log type
+                     * 
+                     */
+                    std::vector<std::string> GetSubLogType() const;
+
+                    /**
+                     * 设置Log type
+                     * @param _subLogType Log type
+                     * 
+                     */
+                    void SetSubLogType(const std::vector<std::string>& _subLogType);
+
+                    /**
+                     * 判断参数 SubLogType 是否已赋值
+                     * @return SubLogType 是否已赋值
+                     * 
+                     */
+                    bool SubLogTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Error message
+                     * @return ErrMsg Error message
+                     * 
+                     */
+                    std::string GetErrMsg() const;
+
+                    /**
+                     * 设置Error message
+                     * @param _errMsg Error message
+                     * 
+                     */
+                    void SetErrMsg(const std::string& _errMsg);
+
+                    /**
+                     * 判断参数 ErrMsg 是否已赋值
+                     * @return ErrMsg 是否已赋值
+                     * 
+                     */
+                    bool ErrMsgHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log type
+                     * Security log module.
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
@@ -150,7 +188,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
@@ -160,6 +197,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_state;
                     bool m_stateHasBeenSet;
+
+                    /**
+                     * Log type
+                     */
+                    std::vector<std::string> m_subLogType;
+                    bool m_subLogTypeHasBeenSet;
+
+                    /**
+                     * Error message
+                     */
+                    std::string m_errMsg;
+                    bool m_errMsgHasBeenSet;
 
                 };
             }

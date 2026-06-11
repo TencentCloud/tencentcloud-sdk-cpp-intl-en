@@ -74,9 +74,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNamespace() const;
@@ -118,9 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CustomPolicy Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NetworkCustomPolicy> GetCustomPolicy() const;
@@ -148,9 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
@@ -191,10 +185,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PolicySourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NetworkPolicyPlugin Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Plugins Corresponding to Network Policies
+                     * @return NetworkPolicyPlugin Network Plugins Corresponding to Network Policies
                      * 
                      */
                     std::string GetNetworkPolicyPlugin() const;
@@ -221,10 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PublishStatusHasBeenSet() const;
 
                     /**
-                     * 获取Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Distribution Result
+                     * @return PublishResult Network Distribution Result
                      * 
                      */
                     std::string GetPublishResult() const;
@@ -252,7 +242,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
@@ -271,7 +260,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetworkCustomPolicy> m_customPolicy;
                     bool m_customPolicyHasBeenSet;
@@ -284,7 +272,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -302,8 +289,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_policySourceTypeHasBeenSet;
 
                     /**
-                     * Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Plugins Corresponding to Network Policies
                      */
                     std::string m_networkPolicyPlugin;
                     bool m_networkPolicyPluginHasBeenSet;
@@ -315,8 +301,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_publishStatusHasBeenSet;
 
                     /**
-                     * Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Distribution Result
                      */
                     std::string m_publishResult;
                     bool m_publishResultHasBeenSet;

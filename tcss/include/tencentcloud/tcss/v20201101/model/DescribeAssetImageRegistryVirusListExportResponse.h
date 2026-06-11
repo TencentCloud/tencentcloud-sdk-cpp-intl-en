@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Excel file download URL
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DownloadUrl Excel file download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取excel file download link
+                     * @return DownloadUrl excel file download link
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -59,14 +57,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DownloadUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Export task ID.
+                     * @return JobId Export task ID.
+                     * 
+                     */
+                    std::string GetJobId() const;
+
+                    /**
+                     * 判断参数 JobId 是否已赋值
+                     * @return JobId 是否已赋值
+                     * 
+                     */
+                    bool JobIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Excel file download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * excel file download link
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
+
+                    /**
+                     * Export task ID.
+                     */
+                    std::string m_jobId;
+                    bool m_jobIdHasBeenSet;
 
                 };
             }

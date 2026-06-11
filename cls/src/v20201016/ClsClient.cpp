@@ -140,6 +140,106 @@ ClsClient::ApplyConfigToMachineGroupOutcomeCallable ClsClient::ApplyConfigToMach
     return prom->get_future();
 }
 
+ClsClient::CancelRebuildIndexTaskOutcome ClsClient::CancelRebuildIndexTask(const CancelRebuildIndexTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CancelRebuildIndexTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CancelRebuildIndexTaskResponse rsp = CancelRebuildIndexTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CancelRebuildIndexTaskOutcome(rsp);
+        else
+            return CancelRebuildIndexTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CancelRebuildIndexTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CancelRebuildIndexTaskAsync(const CancelRebuildIndexTaskRequest& request, const CancelRebuildIndexTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CancelRebuildIndexTaskRequest&;
+    using Resp = CancelRebuildIndexTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CancelRebuildIndexTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CancelRebuildIndexTaskOutcomeCallable ClsClient::CancelRebuildIndexTaskCallable(const CancelRebuildIndexTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CancelRebuildIndexTaskOutcome>>();
+    CancelRebuildIndexTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CancelRebuildIndexTaskRequest&,
+        CancelRebuildIndexTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ChatCompletionsOutcome ClsClient::ChatCompletions(const ChatCompletionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChatCompletions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChatCompletionsResponse rsp = ChatCompletionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChatCompletionsOutcome(rsp);
+        else
+            return ChatCompletionsOutcome(o.GetError());
+    }
+    else
+    {
+        return ChatCompletionsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ChatCompletionsAsync(const ChatCompletionsRequest& request, const ChatCompletionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ChatCompletionsRequest&;
+    using Resp = ChatCompletionsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ChatCompletions", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ChatCompletionsOutcomeCallable ClsClient::ChatCompletionsCallable(const ChatCompletionsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ChatCompletionsOutcome>>();
+    ChatCompletionsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ChatCompletionsRequest&,
+        ChatCompletionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CheckFunctionOutcome ClsClient::CheckFunction(const CheckFunctionRequest &request)
 {
     auto outcome = MakeRequest(request, "CheckFunction");
@@ -282,6 +382,56 @@ ClsClient::CloseKafkaConsumerOutcomeCallable ClsClient::CloseKafkaConsumerCallab
         const ClsClient*,
         const CloseKafkaConsumerRequest&,
         CloseKafkaConsumerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CommitConsumerOffsetsOutcome ClsClient::CommitConsumerOffsets(const CommitConsumerOffsetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CommitConsumerOffsets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CommitConsumerOffsetsResponse rsp = CommitConsumerOffsetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CommitConsumerOffsetsOutcome(rsp);
+        else
+            return CommitConsumerOffsetsOutcome(o.GetError());
+    }
+    else
+    {
+        return CommitConsumerOffsetsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CommitConsumerOffsetsAsync(const CommitConsumerOffsetsRequest& request, const CommitConsumerOffsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CommitConsumerOffsetsRequest&;
+    using Resp = CommitConsumerOffsetsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CommitConsumerOffsets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CommitConsumerOffsetsOutcomeCallable ClsClient::CommitConsumerOffsetsCallable(const CommitConsumerOffsetsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CommitConsumerOffsetsOutcome>>();
+    CommitConsumerOffsetsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CommitConsumerOffsetsRequest&,
+        CommitConsumerOffsetsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -440,6 +590,56 @@ ClsClient::CreateAlarmShieldOutcomeCallable ClsClient::CreateAlarmShieldCallable
     return prom->get_future();
 }
 
+ClsClient::CreateCloudProductLogCollectionOutcome ClsClient::CreateCloudProductLogCollection(const CreateCloudProductLogCollectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateCloudProductLogCollection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateCloudProductLogCollectionResponse rsp = CreateCloudProductLogCollectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateCloudProductLogCollectionOutcome(rsp);
+        else
+            return CreateCloudProductLogCollectionOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateCloudProductLogCollectionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateCloudProductLogCollectionAsync(const CreateCloudProductLogCollectionRequest& request, const CreateCloudProductLogCollectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateCloudProductLogCollectionRequest&;
+    using Resp = CreateCloudProductLogCollectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateCloudProductLogCollection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateCloudProductLogCollectionOutcomeCallable ClsClient::CreateCloudProductLogCollectionCallable(const CreateCloudProductLogCollectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateCloudProductLogCollectionOutcome>>();
+    CreateCloudProductLogCollectionAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateCloudProductLogCollectionRequest&,
+        CreateCloudProductLogCollectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateConfigOutcome ClsClient::CreateConfig(const CreateConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateConfig");
@@ -482,6 +682,56 @@ ClsClient::CreateConfigOutcomeCallable ClsClient::CreateConfigCallable(const Cre
         const ClsClient*,
         const CreateConfigRequest&,
         CreateConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateConsoleOutcome ClsClient::CreateConsole(const CreateConsoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateConsole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateConsoleResponse rsp = CreateConsoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateConsoleOutcome(rsp);
+        else
+            return CreateConsoleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateConsoleOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateConsoleAsync(const CreateConsoleRequest& request, const CreateConsoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateConsoleRequest&;
+    using Resp = CreateConsoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateConsole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateConsoleOutcomeCallable ClsClient::CreateConsoleCallable(const CreateConsoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateConsoleOutcome>>();
+    CreateConsoleAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateConsoleRequest&,
+        CreateConsoleOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -540,6 +790,56 @@ ClsClient::CreateConsumerOutcomeCallable ClsClient::CreateConsumerCallable(const
     return prom->get_future();
 }
 
+ClsClient::CreateConsumerGroupOutcome ClsClient::CreateConsumerGroup(const CreateConsumerGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateConsumerGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateConsumerGroupResponse rsp = CreateConsumerGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateConsumerGroupOutcome(rsp);
+        else
+            return CreateConsumerGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateConsumerGroupOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateConsumerGroupAsync(const CreateConsumerGroupRequest& request, const CreateConsumerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateConsumerGroupRequest&;
+    using Resp = CreateConsumerGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateConsumerGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateConsumerGroupOutcomeCallable ClsClient::CreateConsumerGroupCallable(const CreateConsumerGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateConsumerGroupOutcome>>();
+    CreateConsumerGroupAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateConsumerGroupRequest&,
+        CreateConsumerGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateCosRechargeOutcome ClsClient::CreateCosRecharge(const CreateCosRechargeRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateCosRecharge");
@@ -582,6 +882,106 @@ ClsClient::CreateCosRechargeOutcomeCallable ClsClient::CreateCosRechargeCallable
         const ClsClient*,
         const CreateCosRechargeRequest&,
         CreateCosRechargeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateDashboardOutcome ClsClient::CreateDashboard(const CreateDashboardRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDashboard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDashboardResponse rsp = CreateDashboardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDashboardOutcome(rsp);
+        else
+            return CreateDashboardOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDashboardOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateDashboardAsync(const CreateDashboardRequest& request, const CreateDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDashboardRequest&;
+    using Resp = CreateDashboardResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDashboard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateDashboardOutcomeCallable ClsClient::CreateDashboardCallable(const CreateDashboardRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDashboardOutcome>>();
+    CreateDashboardAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateDashboardRequest&,
+        CreateDashboardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateDashboardSubscribeOutcome ClsClient::CreateDashboardSubscribe(const CreateDashboardSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDashboardSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDashboardSubscribeResponse rsp = CreateDashboardSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDashboardSubscribeOutcome(rsp);
+        else
+            return CreateDashboardSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDashboardSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateDashboardSubscribeAsync(const CreateDashboardSubscribeRequest& request, const CreateDashboardSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDashboardSubscribeRequest&;
+    using Resp = CreateDashboardSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDashboardSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateDashboardSubscribeOutcomeCallable ClsClient::CreateDashboardSubscribeCallable(const CreateDashboardSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDashboardSubscribeOutcome>>();
+    CreateDashboardSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateDashboardSubscribeRequest&,
+        CreateDashboardSubscribeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -690,6 +1090,106 @@ ClsClient::CreateDeliverCloudFunctionOutcomeCallable ClsClient::CreateDeliverClo
     return prom->get_future();
 }
 
+ClsClient::CreateDlcDeliverOutcome ClsClient::CreateDlcDeliver(const CreateDlcDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDlcDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDlcDeliverResponse rsp = CreateDlcDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDlcDeliverOutcome(rsp);
+        else
+            return CreateDlcDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDlcDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateDlcDeliverAsync(const CreateDlcDeliverRequest& request, const CreateDlcDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDlcDeliverRequest&;
+    using Resp = CreateDlcDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDlcDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateDlcDeliverOutcomeCallable ClsClient::CreateDlcDeliverCallable(const CreateDlcDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDlcDeliverOutcome>>();
+    CreateDlcDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateDlcDeliverRequest&,
+        CreateDlcDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateEsRechargeOutcome ClsClient::CreateEsRecharge(const CreateEsRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateEsRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateEsRechargeResponse rsp = CreateEsRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateEsRechargeOutcome(rsp);
+        else
+            return CreateEsRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateEsRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateEsRechargeAsync(const CreateEsRechargeRequest& request, const CreateEsRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateEsRechargeRequest&;
+    using Resp = CreateEsRechargeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateEsRecharge", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateEsRechargeOutcomeCallable ClsClient::CreateEsRechargeCallable(const CreateEsRechargeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateEsRechargeOutcome>>();
+    CreateEsRechargeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateEsRechargeRequest&,
+        CreateEsRechargeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateExportOutcome ClsClient::CreateExport(const CreateExportRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateExport");
@@ -732,6 +1232,56 @@ ClsClient::CreateExportOutcomeCallable ClsClient::CreateExportCallable(const Cre
         const ClsClient*,
         const CreateExportRequest&,
         CreateExportOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateHostMetricConfigOutcome ClsClient::CreateHostMetricConfig(const CreateHostMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateHostMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateHostMetricConfigResponse rsp = CreateHostMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateHostMetricConfigOutcome(rsp);
+        else
+            return CreateHostMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateHostMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateHostMetricConfigAsync(const CreateHostMetricConfigRequest& request, const CreateHostMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateHostMetricConfigRequest&;
+    using Resp = CreateHostMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateHostMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateHostMetricConfigOutcomeCallable ClsClient::CreateHostMetricConfigCallable(const CreateHostMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateHostMetricConfigOutcome>>();
+    CreateHostMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateHostMetricConfigRequest&,
+        CreateHostMetricConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -940,6 +1490,356 @@ ClsClient::CreateMachineGroupOutcomeCallable ClsClient::CreateMachineGroupCallab
     return prom->get_future();
 }
 
+ClsClient::CreateMetricConfigOutcome ClsClient::CreateMetricConfig(const CreateMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMetricConfigResponse rsp = CreateMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMetricConfigOutcome(rsp);
+        else
+            return CreateMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateMetricConfigAsync(const CreateMetricConfigRequest& request, const CreateMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMetricConfigRequest&;
+    using Resp = CreateMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateMetricConfigOutcomeCallable ClsClient::CreateMetricConfigCallable(const CreateMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMetricConfigOutcome>>();
+    CreateMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateMetricConfigRequest&,
+        CreateMetricConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateMetricSubscribeOutcome ClsClient::CreateMetricSubscribe(const CreateMetricSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMetricSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMetricSubscribeResponse rsp = CreateMetricSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMetricSubscribeOutcome(rsp);
+        else
+            return CreateMetricSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMetricSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateMetricSubscribeAsync(const CreateMetricSubscribeRequest& request, const CreateMetricSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMetricSubscribeRequest&;
+    using Resp = CreateMetricSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMetricSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateMetricSubscribeOutcomeCallable ClsClient::CreateMetricSubscribeCallable(const CreateMetricSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMetricSubscribeOutcome>>();
+    CreateMetricSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateMetricSubscribeRequest&,
+        CreateMetricSubscribeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateNetworkApplicationOutcome ClsClient::CreateNetworkApplication(const CreateNetworkApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNetworkApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNetworkApplicationResponse rsp = CreateNetworkApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNetworkApplicationOutcome(rsp);
+        else
+            return CreateNetworkApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNetworkApplicationOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateNetworkApplicationAsync(const CreateNetworkApplicationRequest& request, const CreateNetworkApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateNetworkApplicationRequest&;
+    using Resp = CreateNetworkApplicationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateNetworkApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateNetworkApplicationOutcomeCallable ClsClient::CreateNetworkApplicationCallable(const CreateNetworkApplicationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateNetworkApplicationOutcome>>();
+    CreateNetworkApplicationAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateNetworkApplicationRequest&,
+        CreateNetworkApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateNoticeContentOutcome ClsClient::CreateNoticeContent(const CreateNoticeContentRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNoticeContent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNoticeContentResponse rsp = CreateNoticeContentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNoticeContentOutcome(rsp);
+        else
+            return CreateNoticeContentOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNoticeContentOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateNoticeContentAsync(const CreateNoticeContentRequest& request, const CreateNoticeContentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateNoticeContentRequest&;
+    using Resp = CreateNoticeContentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateNoticeContent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateNoticeContentOutcomeCallable ClsClient::CreateNoticeContentCallable(const CreateNoticeContentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateNoticeContentOutcome>>();
+    CreateNoticeContentAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateNoticeContentRequest&,
+        CreateNoticeContentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateRebuildIndexTaskOutcome ClsClient::CreateRebuildIndexTask(const CreateRebuildIndexTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRebuildIndexTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRebuildIndexTaskResponse rsp = CreateRebuildIndexTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRebuildIndexTaskOutcome(rsp);
+        else
+            return CreateRebuildIndexTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRebuildIndexTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateRebuildIndexTaskAsync(const CreateRebuildIndexTaskRequest& request, const CreateRebuildIndexTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRebuildIndexTaskRequest&;
+    using Resp = CreateRebuildIndexTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRebuildIndexTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateRebuildIndexTaskOutcomeCallable ClsClient::CreateRebuildIndexTaskCallable(const CreateRebuildIndexTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRebuildIndexTaskOutcome>>();
+    CreateRebuildIndexTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateRebuildIndexTaskRequest&,
+        CreateRebuildIndexTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateRecordingRuleTaskOutcome ClsClient::CreateRecordingRuleTask(const CreateRecordingRuleTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRecordingRuleTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRecordingRuleTaskResponse rsp = CreateRecordingRuleTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRecordingRuleTaskOutcome(rsp);
+        else
+            return CreateRecordingRuleTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRecordingRuleTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateRecordingRuleTaskAsync(const CreateRecordingRuleTaskRequest& request, const CreateRecordingRuleTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRecordingRuleTaskRequest&;
+    using Resp = CreateRecordingRuleTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRecordingRuleTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateRecordingRuleTaskOutcomeCallable ClsClient::CreateRecordingRuleTaskCallable(const CreateRecordingRuleTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRecordingRuleTaskOutcome>>();
+    CreateRecordingRuleTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateRecordingRuleTaskRequest&,
+        CreateRecordingRuleTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateRecordingRuleYamlTaskOutcome ClsClient::CreateRecordingRuleYamlTask(const CreateRecordingRuleYamlTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRecordingRuleYamlTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRecordingRuleYamlTaskResponse rsp = CreateRecordingRuleYamlTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRecordingRuleYamlTaskOutcome(rsp);
+        else
+            return CreateRecordingRuleYamlTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRecordingRuleYamlTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateRecordingRuleYamlTaskAsync(const CreateRecordingRuleYamlTaskRequest& request, const CreateRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRecordingRuleYamlTaskRequest&;
+    using Resp = CreateRecordingRuleYamlTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRecordingRuleYamlTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateRecordingRuleYamlTaskOutcomeCallable ClsClient::CreateRecordingRuleYamlTaskCallable(const CreateRecordingRuleYamlTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRecordingRuleYamlTaskOutcome>>();
+    CreateRecordingRuleYamlTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateRecordingRuleYamlTaskRequest&,
+        CreateRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateScheduledSqlOutcome ClsClient::CreateScheduledSql(const CreateScheduledSqlRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateScheduledSql");
@@ -982,6 +1882,56 @@ ClsClient::CreateScheduledSqlOutcomeCallable ClsClient::CreateScheduledSqlCallab
         const ClsClient*,
         const CreateScheduledSqlRequest&,
         CreateScheduledSqlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateSearchViewOutcome ClsClient::CreateSearchView(const CreateSearchViewRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSearchView");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSearchViewResponse rsp = CreateSearchViewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSearchViewOutcome(rsp);
+        else
+            return CreateSearchViewOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSearchViewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateSearchViewAsync(const CreateSearchViewRequest& request, const CreateSearchViewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSearchViewRequest&;
+    using Resp = CreateSearchViewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSearchView", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateSearchViewOutcomeCallable ClsClient::CreateSearchViewCallable(const CreateSearchViewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSearchViewOutcome>>();
+    CreateSearchViewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateSearchViewRequest&,
+        CreateSearchViewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1040,6 +1990,56 @@ ClsClient::CreateShipperOutcomeCallable ClsClient::CreateShipperCallable(const C
     return prom->get_future();
 }
 
+ClsClient::CreateSplunkDeliverOutcome ClsClient::CreateSplunkDeliver(const CreateSplunkDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSplunkDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSplunkDeliverResponse rsp = CreateSplunkDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSplunkDeliverOutcome(rsp);
+        else
+            return CreateSplunkDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSplunkDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateSplunkDeliverAsync(const CreateSplunkDeliverRequest& request, const CreateSplunkDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSplunkDeliverRequest&;
+    using Resp = CreateSplunkDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSplunkDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateSplunkDeliverOutcomeCallable ClsClient::CreateSplunkDeliverCallable(const CreateSplunkDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSplunkDeliverOutcome>>();
+    CreateSplunkDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateSplunkDeliverRequest&,
+        CreateSplunkDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateTopicOutcome ClsClient::CreateTopic(const CreateTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateTopic");
@@ -1082,6 +2082,56 @@ ClsClient::CreateTopicOutcomeCallable ClsClient::CreateTopicCallable(const Creat
         const ClsClient*,
         const CreateTopicRequest&,
         CreateTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::CreateWebCallbackOutcome ClsClient::CreateWebCallback(const CreateWebCallbackRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateWebCallback");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateWebCallbackResponse rsp = CreateWebCallbackResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateWebCallbackOutcome(rsp);
+        else
+            return CreateWebCallbackOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateWebCallbackOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateWebCallbackAsync(const CreateWebCallbackRequest& request, const CreateWebCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateWebCallbackRequest&;
+    using Resp = CreateWebCallbackResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateWebCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateWebCallbackOutcomeCallable ClsClient::CreateWebCallbackCallable(const CreateWebCallbackRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateWebCallbackOutcome>>();
+    CreateWebCallbackAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateWebCallbackRequest&,
+        CreateWebCallbackOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1240,6 +2290,56 @@ ClsClient::DeleteAlarmShieldOutcomeCallable ClsClient::DeleteAlarmShieldCallable
     return prom->get_future();
 }
 
+ClsClient::DeleteCloudProductLogCollectionOutcome ClsClient::DeleteCloudProductLogCollection(const DeleteCloudProductLogCollectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCloudProductLogCollection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCloudProductLogCollectionResponse rsp = DeleteCloudProductLogCollectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCloudProductLogCollectionOutcome(rsp);
+        else
+            return DeleteCloudProductLogCollectionOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCloudProductLogCollectionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteCloudProductLogCollectionAsync(const DeleteCloudProductLogCollectionRequest& request, const DeleteCloudProductLogCollectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCloudProductLogCollectionRequest&;
+    using Resp = DeleteCloudProductLogCollectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCloudProductLogCollection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteCloudProductLogCollectionOutcomeCallable ClsClient::DeleteCloudProductLogCollectionCallable(const DeleteCloudProductLogCollectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCloudProductLogCollectionOutcome>>();
+    DeleteCloudProductLogCollectionAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteCloudProductLogCollectionRequest&,
+        DeleteCloudProductLogCollectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DeleteConfigOutcome ClsClient::DeleteConfig(const DeleteConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteConfig");
@@ -1340,6 +2440,56 @@ ClsClient::DeleteConfigFromMachineGroupOutcomeCallable ClsClient::DeleteConfigFr
     return prom->get_future();
 }
 
+ClsClient::DeleteConsoleOutcome ClsClient::DeleteConsole(const DeleteConsoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteConsole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteConsoleResponse rsp = DeleteConsoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteConsoleOutcome(rsp);
+        else
+            return DeleteConsoleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteConsoleOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteConsoleAsync(const DeleteConsoleRequest& request, const DeleteConsoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteConsoleRequest&;
+    using Resp = DeleteConsoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteConsole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteConsoleOutcomeCallable ClsClient::DeleteConsoleCallable(const DeleteConsoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteConsoleOutcome>>();
+    DeleteConsoleAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteConsoleRequest&,
+        DeleteConsoleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DeleteConsumerOutcome ClsClient::DeleteConsumer(const DeleteConsumerRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteConsumer");
@@ -1382,6 +2532,206 @@ ClsClient::DeleteConsumerOutcomeCallable ClsClient::DeleteConsumerCallable(const
         const ClsClient*,
         const DeleteConsumerRequest&,
         DeleteConsumerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteConsumerGroupOutcome ClsClient::DeleteConsumerGroup(const DeleteConsumerGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteConsumerGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteConsumerGroupResponse rsp = DeleteConsumerGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteConsumerGroupOutcome(rsp);
+        else
+            return DeleteConsumerGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteConsumerGroupOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteConsumerGroupAsync(const DeleteConsumerGroupRequest& request, const DeleteConsumerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteConsumerGroupRequest&;
+    using Resp = DeleteConsumerGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteConsumerGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteConsumerGroupOutcomeCallable ClsClient::DeleteConsumerGroupCallable(const DeleteConsumerGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteConsumerGroupOutcome>>();
+    DeleteConsumerGroupAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteConsumerGroupRequest&,
+        DeleteConsumerGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteCosRechargeOutcome ClsClient::DeleteCosRecharge(const DeleteCosRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteCosRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteCosRechargeResponse rsp = DeleteCosRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteCosRechargeOutcome(rsp);
+        else
+            return DeleteCosRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteCosRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteCosRechargeAsync(const DeleteCosRechargeRequest& request, const DeleteCosRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteCosRechargeRequest&;
+    using Resp = DeleteCosRechargeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteCosRecharge", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteCosRechargeOutcomeCallable ClsClient::DeleteCosRechargeCallable(const DeleteCosRechargeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteCosRechargeOutcome>>();
+    DeleteCosRechargeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteCosRechargeRequest&,
+        DeleteCosRechargeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteDashboardOutcome ClsClient::DeleteDashboard(const DeleteDashboardRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDashboard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDashboardResponse rsp = DeleteDashboardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDashboardOutcome(rsp);
+        else
+            return DeleteDashboardOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDashboardOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteDashboardAsync(const DeleteDashboardRequest& request, const DeleteDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDashboardRequest&;
+    using Resp = DeleteDashboardResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDashboard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteDashboardOutcomeCallable ClsClient::DeleteDashboardCallable(const DeleteDashboardRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDashboardOutcome>>();
+    DeleteDashboardAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteDashboardRequest&,
+        DeleteDashboardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteDashboardSubscribeOutcome ClsClient::DeleteDashboardSubscribe(const DeleteDashboardSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDashboardSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDashboardSubscribeResponse rsp = DeleteDashboardSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDashboardSubscribeOutcome(rsp);
+        else
+            return DeleteDashboardSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDashboardSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteDashboardSubscribeAsync(const DeleteDashboardSubscribeRequest& request, const DeleteDashboardSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDashboardSubscribeRequest&;
+    using Resp = DeleteDashboardSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDashboardSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteDashboardSubscribeOutcomeCallable ClsClient::DeleteDashboardSubscribeCallable(const DeleteDashboardSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDashboardSubscribeOutcome>>();
+    DeleteDashboardSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteDashboardSubscribeRequest&,
+        DeleteDashboardSubscribeOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1440,6 +2790,106 @@ ClsClient::DeleteDataTransformOutcomeCallable ClsClient::DeleteDataTransformCall
     return prom->get_future();
 }
 
+ClsClient::DeleteDlcDeliverOutcome ClsClient::DeleteDlcDeliver(const DeleteDlcDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDlcDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDlcDeliverResponse rsp = DeleteDlcDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDlcDeliverOutcome(rsp);
+        else
+            return DeleteDlcDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDlcDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteDlcDeliverAsync(const DeleteDlcDeliverRequest& request, const DeleteDlcDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteDlcDeliverRequest&;
+    using Resp = DeleteDlcDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteDlcDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteDlcDeliverOutcomeCallable ClsClient::DeleteDlcDeliverCallable(const DeleteDlcDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteDlcDeliverOutcome>>();
+    DeleteDlcDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteDlcDeliverRequest&,
+        DeleteDlcDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteEsRechargeOutcome ClsClient::DeleteEsRecharge(const DeleteEsRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteEsRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteEsRechargeResponse rsp = DeleteEsRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteEsRechargeOutcome(rsp);
+        else
+            return DeleteEsRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteEsRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteEsRechargeAsync(const DeleteEsRechargeRequest& request, const DeleteEsRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteEsRechargeRequest&;
+    using Resp = DeleteEsRechargeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteEsRecharge", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteEsRechargeOutcomeCallable ClsClient::DeleteEsRechargeCallable(const DeleteEsRechargeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteEsRechargeOutcome>>();
+    DeleteEsRechargeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteEsRechargeRequest&,
+        DeleteEsRechargeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DeleteExportOutcome ClsClient::DeleteExport(const DeleteExportRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteExport");
@@ -1482,6 +2932,56 @@ ClsClient::DeleteExportOutcomeCallable ClsClient::DeleteExportCallable(const Del
         const ClsClient*,
         const DeleteExportRequest&,
         DeleteExportOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteHostMetricConfigOutcome ClsClient::DeleteHostMetricConfig(const DeleteHostMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteHostMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteHostMetricConfigResponse rsp = DeleteHostMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteHostMetricConfigOutcome(rsp);
+        else
+            return DeleteHostMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteHostMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteHostMetricConfigAsync(const DeleteHostMetricConfigRequest& request, const DeleteHostMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteHostMetricConfigRequest&;
+    using Resp = DeleteHostMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteHostMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteHostMetricConfigOutcomeCallable ClsClient::DeleteHostMetricConfigCallable(const DeleteHostMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteHostMetricConfigOutcome>>();
+    DeleteHostMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteHostMetricConfigRequest&,
+        DeleteHostMetricConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1740,6 +3240,306 @@ ClsClient::DeleteMachineGroupInfoOutcomeCallable ClsClient::DeleteMachineGroupIn
     return prom->get_future();
 }
 
+ClsClient::DeleteMetricConfigOutcome ClsClient::DeleteMetricConfig(const DeleteMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteMetricConfigResponse rsp = DeleteMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteMetricConfigOutcome(rsp);
+        else
+            return DeleteMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteMetricConfigAsync(const DeleteMetricConfigRequest& request, const DeleteMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteMetricConfigRequest&;
+    using Resp = DeleteMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteMetricConfigOutcomeCallable ClsClient::DeleteMetricConfigCallable(const DeleteMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteMetricConfigOutcome>>();
+    DeleteMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteMetricConfigRequest&,
+        DeleteMetricConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteMetricSubscribeOutcome ClsClient::DeleteMetricSubscribe(const DeleteMetricSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteMetricSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteMetricSubscribeResponse rsp = DeleteMetricSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteMetricSubscribeOutcome(rsp);
+        else
+            return DeleteMetricSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteMetricSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteMetricSubscribeAsync(const DeleteMetricSubscribeRequest& request, const DeleteMetricSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteMetricSubscribeRequest&;
+    using Resp = DeleteMetricSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteMetricSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteMetricSubscribeOutcomeCallable ClsClient::DeleteMetricSubscribeCallable(const DeleteMetricSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteMetricSubscribeOutcome>>();
+    DeleteMetricSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteMetricSubscribeRequest&,
+        DeleteMetricSubscribeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteNetworkApplicationOutcome ClsClient::DeleteNetworkApplication(const DeleteNetworkApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNetworkApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNetworkApplicationResponse rsp = DeleteNetworkApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNetworkApplicationOutcome(rsp);
+        else
+            return DeleteNetworkApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNetworkApplicationOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteNetworkApplicationAsync(const DeleteNetworkApplicationRequest& request, const DeleteNetworkApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteNetworkApplicationRequest&;
+    using Resp = DeleteNetworkApplicationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteNetworkApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteNetworkApplicationOutcomeCallable ClsClient::DeleteNetworkApplicationCallable(const DeleteNetworkApplicationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteNetworkApplicationOutcome>>();
+    DeleteNetworkApplicationAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteNetworkApplicationRequest&,
+        DeleteNetworkApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteNoticeContentOutcome ClsClient::DeleteNoticeContent(const DeleteNoticeContentRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNoticeContent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNoticeContentResponse rsp = DeleteNoticeContentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNoticeContentOutcome(rsp);
+        else
+            return DeleteNoticeContentOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNoticeContentOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteNoticeContentAsync(const DeleteNoticeContentRequest& request, const DeleteNoticeContentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteNoticeContentRequest&;
+    using Resp = DeleteNoticeContentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteNoticeContent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteNoticeContentOutcomeCallable ClsClient::DeleteNoticeContentCallable(const DeleteNoticeContentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteNoticeContentOutcome>>();
+    DeleteNoticeContentAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteNoticeContentRequest&,
+        DeleteNoticeContentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteRecordingRuleTaskOutcome ClsClient::DeleteRecordingRuleTask(const DeleteRecordingRuleTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordingRuleTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordingRuleTaskResponse rsp = DeleteRecordingRuleTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordingRuleTaskOutcome(rsp);
+        else
+            return DeleteRecordingRuleTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordingRuleTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteRecordingRuleTaskAsync(const DeleteRecordingRuleTaskRequest& request, const DeleteRecordingRuleTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordingRuleTaskRequest&;
+    using Resp = DeleteRecordingRuleTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordingRuleTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteRecordingRuleTaskOutcomeCallable ClsClient::DeleteRecordingRuleTaskCallable(const DeleteRecordingRuleTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordingRuleTaskOutcome>>();
+    DeleteRecordingRuleTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteRecordingRuleTaskRequest&,
+        DeleteRecordingRuleTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteRecordingRuleYamlTaskOutcome ClsClient::DeleteRecordingRuleYamlTask(const DeleteRecordingRuleYamlTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordingRuleYamlTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordingRuleYamlTaskResponse rsp = DeleteRecordingRuleYamlTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordingRuleYamlTaskOutcome(rsp);
+        else
+            return DeleteRecordingRuleYamlTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordingRuleYamlTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteRecordingRuleYamlTaskAsync(const DeleteRecordingRuleYamlTaskRequest& request, const DeleteRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRecordingRuleYamlTaskRequest&;
+    using Resp = DeleteRecordingRuleYamlTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRecordingRuleYamlTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteRecordingRuleYamlTaskOutcomeCallable ClsClient::DeleteRecordingRuleYamlTaskCallable(const DeleteRecordingRuleYamlTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRecordingRuleYamlTaskOutcome>>();
+    DeleteRecordingRuleYamlTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteRecordingRuleYamlTaskRequest&,
+        DeleteRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DeleteScheduledSqlOutcome ClsClient::DeleteScheduledSql(const DeleteScheduledSqlRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteScheduledSql");
@@ -1782,6 +3582,56 @@ ClsClient::DeleteScheduledSqlOutcomeCallable ClsClient::DeleteScheduledSqlCallab
         const ClsClient*,
         const DeleteScheduledSqlRequest&,
         DeleteScheduledSqlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteSearchViewOutcome ClsClient::DeleteSearchView(const DeleteSearchViewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSearchView");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSearchViewResponse rsp = DeleteSearchViewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSearchViewOutcome(rsp);
+        else
+            return DeleteSearchViewOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSearchViewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteSearchViewAsync(const DeleteSearchViewRequest& request, const DeleteSearchViewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteSearchViewRequest&;
+    using Resp = DeleteSearchViewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteSearchView", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteSearchViewOutcomeCallable ClsClient::DeleteSearchViewCallable(const DeleteSearchViewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteSearchViewOutcome>>();
+    DeleteSearchViewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteSearchViewRequest&,
+        DeleteSearchViewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1840,6 +3690,56 @@ ClsClient::DeleteShipperOutcomeCallable ClsClient::DeleteShipperCallable(const D
     return prom->get_future();
 }
 
+ClsClient::DeleteSplunkDeliverOutcome ClsClient::DeleteSplunkDeliver(const DeleteSplunkDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSplunkDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSplunkDeliverResponse rsp = DeleteSplunkDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSplunkDeliverOutcome(rsp);
+        else
+            return DeleteSplunkDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSplunkDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteSplunkDeliverAsync(const DeleteSplunkDeliverRequest& request, const DeleteSplunkDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteSplunkDeliverRequest&;
+    using Resp = DeleteSplunkDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteSplunkDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteSplunkDeliverOutcomeCallable ClsClient::DeleteSplunkDeliverCallable(const DeleteSplunkDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteSplunkDeliverOutcome>>();
+    DeleteSplunkDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteSplunkDeliverRequest&,
+        DeleteSplunkDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DeleteTopicOutcome ClsClient::DeleteTopic(const DeleteTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteTopic");
@@ -1882,6 +3782,56 @@ ClsClient::DeleteTopicOutcomeCallable ClsClient::DeleteTopicCallable(const Delet
         const ClsClient*,
         const DeleteTopicRequest&,
         DeleteTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteWebCallbackOutcome ClsClient::DeleteWebCallback(const DeleteWebCallbackRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteWebCallback");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteWebCallbackResponse rsp = DeleteWebCallbackResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteWebCallbackOutcome(rsp);
+        else
+            return DeleteWebCallbackOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteWebCallbackOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteWebCallbackAsync(const DeleteWebCallbackRequest& request, const DeleteWebCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteWebCallbackRequest&;
+    using Resp = DeleteWebCallbackResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteWebCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteWebCallbackOutcomeCallable ClsClient::DeleteWebCallbackCallable(const DeleteWebCallbackRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteWebCallbackOutcome>>();
+    DeleteWebCallbackAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteWebCallbackRequest&,
+        DeleteWebCallbackOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2090,6 +4040,156 @@ ClsClient::DescribeAlertRecordHistoryOutcomeCallable ClsClient::DescribeAlertRec
     return prom->get_future();
 }
 
+ClsClient::DescribeCloudProductLogTasksOutcome ClsClient::DescribeCloudProductLogTasks(const DescribeCloudProductLogTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCloudProductLogTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCloudProductLogTasksResponse rsp = DescribeCloudProductLogTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCloudProductLogTasksOutcome(rsp);
+        else
+            return DescribeCloudProductLogTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCloudProductLogTasksOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeCloudProductLogTasksAsync(const DescribeCloudProductLogTasksRequest& request, const DescribeCloudProductLogTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCloudProductLogTasksRequest&;
+    using Resp = DescribeCloudProductLogTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCloudProductLogTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeCloudProductLogTasksOutcomeCallable ClsClient::DescribeCloudProductLogTasksCallable(const DescribeCloudProductLogTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCloudProductLogTasksOutcome>>();
+    DescribeCloudProductLogTasksAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeCloudProductLogTasksRequest&,
+        DescribeCloudProductLogTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeClusterBaseMetricConfigsOutcome ClsClient::DescribeClusterBaseMetricConfigs(const DescribeClusterBaseMetricConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterBaseMetricConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterBaseMetricConfigsResponse rsp = DescribeClusterBaseMetricConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterBaseMetricConfigsOutcome(rsp);
+        else
+            return DescribeClusterBaseMetricConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterBaseMetricConfigsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeClusterBaseMetricConfigsAsync(const DescribeClusterBaseMetricConfigsRequest& request, const DescribeClusterBaseMetricConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeClusterBaseMetricConfigsRequest&;
+    using Resp = DescribeClusterBaseMetricConfigsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterBaseMetricConfigs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeClusterBaseMetricConfigsOutcomeCallable ClsClient::DescribeClusterBaseMetricConfigsCallable(const DescribeClusterBaseMetricConfigsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeClusterBaseMetricConfigsOutcome>>();
+    DescribeClusterBaseMetricConfigsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeClusterBaseMetricConfigsRequest&,
+        DescribeClusterBaseMetricConfigsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeClusterMetricConfigsOutcome ClsClient::DescribeClusterMetricConfigs(const DescribeClusterMetricConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterMetricConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterMetricConfigsResponse rsp = DescribeClusterMetricConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterMetricConfigsOutcome(rsp);
+        else
+            return DescribeClusterMetricConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterMetricConfigsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeClusterMetricConfigsAsync(const DescribeClusterMetricConfigsRequest& request, const DescribeClusterMetricConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeClusterMetricConfigsRequest&;
+    using Resp = DescribeClusterMetricConfigsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterMetricConfigs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeClusterMetricConfigsOutcomeCallable ClsClient::DescribeClusterMetricConfigsCallable(const DescribeClusterMetricConfigsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeClusterMetricConfigsOutcome>>();
+    DescribeClusterMetricConfigsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeClusterMetricConfigsRequest&,
+        DescribeClusterMetricConfigsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeConfigMachineGroupsOutcome ClsClient::DescribeConfigMachineGroups(const DescribeConfigMachineGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConfigMachineGroups");
@@ -2190,6 +4290,56 @@ ClsClient::DescribeConfigsOutcomeCallable ClsClient::DescribeConfigsCallable(con
     return prom->get_future();
 }
 
+ClsClient::DescribeConsolesOutcome ClsClient::DescribeConsoles(const DescribeConsolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsolesResponse rsp = DescribeConsolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsolesOutcome(rsp);
+        else
+            return DescribeConsolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsolesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeConsolesAsync(const DescribeConsolesRequest& request, const DescribeConsolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsolesRequest&;
+    using Resp = DescribeConsolesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsoles", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeConsolesOutcomeCallable ClsClient::DescribeConsolesCallable(const DescribeConsolesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsolesOutcome>>();
+    DescribeConsolesAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeConsolesRequest&,
+        DescribeConsolesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeConsumerOutcome ClsClient::DescribeConsumer(const DescribeConsumerRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConsumer");
@@ -2232,6 +4382,206 @@ ClsClient::DescribeConsumerOutcomeCallable ClsClient::DescribeConsumerCallable(c
         const ClsClient*,
         const DescribeConsumerRequest&,
         DescribeConsumerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeConsumerGroupsOutcome ClsClient::DescribeConsumerGroups(const DescribeConsumerGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsumerGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsumerGroupsResponse rsp = DescribeConsumerGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsumerGroupsOutcome(rsp);
+        else
+            return DescribeConsumerGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsumerGroupsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeConsumerGroupsAsync(const DescribeConsumerGroupsRequest& request, const DescribeConsumerGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsumerGroupsRequest&;
+    using Resp = DescribeConsumerGroupsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsumerGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeConsumerGroupsOutcomeCallable ClsClient::DescribeConsumerGroupsCallable(const DescribeConsumerGroupsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsumerGroupsOutcome>>();
+    DescribeConsumerGroupsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeConsumerGroupsRequest&,
+        DescribeConsumerGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeConsumerOffsetsOutcome ClsClient::DescribeConsumerOffsets(const DescribeConsumerOffsetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsumerOffsets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsumerOffsetsResponse rsp = DescribeConsumerOffsetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsumerOffsetsOutcome(rsp);
+        else
+            return DescribeConsumerOffsetsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsumerOffsetsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeConsumerOffsetsAsync(const DescribeConsumerOffsetsRequest& request, const DescribeConsumerOffsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsumerOffsetsRequest&;
+    using Resp = DescribeConsumerOffsetsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsumerOffsets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeConsumerOffsetsOutcomeCallable ClsClient::DescribeConsumerOffsetsCallable(const DescribeConsumerOffsetsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsumerOffsetsOutcome>>();
+    DescribeConsumerOffsetsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeConsumerOffsetsRequest&,
+        DescribeConsumerOffsetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeConsumerPreviewOutcome ClsClient::DescribeConsumerPreview(const DescribeConsumerPreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsumerPreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsumerPreviewResponse rsp = DescribeConsumerPreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsumerPreviewOutcome(rsp);
+        else
+            return DescribeConsumerPreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsumerPreviewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeConsumerPreviewAsync(const DescribeConsumerPreviewRequest& request, const DescribeConsumerPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsumerPreviewRequest&;
+    using Resp = DescribeConsumerPreviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsumerPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeConsumerPreviewOutcomeCallable ClsClient::DescribeConsumerPreviewCallable(const DescribeConsumerPreviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsumerPreviewOutcome>>();
+    DescribeConsumerPreviewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeConsumerPreviewRequest&,
+        DescribeConsumerPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeConsumersOutcome ClsClient::DescribeConsumers(const DescribeConsumersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConsumers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConsumersResponse rsp = DescribeConsumersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConsumersOutcome(rsp);
+        else
+            return DescribeConsumersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConsumersOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeConsumersAsync(const DescribeConsumersRequest& request, const DescribeConsumersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConsumersRequest&;
+    using Resp = DescribeConsumersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConsumers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeConsumersOutcomeCallable ClsClient::DescribeConsumersCallable(const DescribeConsumersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConsumersOutcome>>();
+    DescribeConsumersAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeConsumersRequest&,
+        DescribeConsumersOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2290,6 +4640,56 @@ ClsClient::DescribeCosRechargesOutcomeCallable ClsClient::DescribeCosRechargesCa
     return prom->get_future();
 }
 
+ClsClient::DescribeDashboardSubscribesOutcome ClsClient::DescribeDashboardSubscribes(const DescribeDashboardSubscribesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDashboardSubscribes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDashboardSubscribesResponse rsp = DescribeDashboardSubscribesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDashboardSubscribesOutcome(rsp);
+        else
+            return DescribeDashboardSubscribesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDashboardSubscribesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeDashboardSubscribesAsync(const DescribeDashboardSubscribesRequest& request, const DescribeDashboardSubscribesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDashboardSubscribesRequest&;
+    using Resp = DescribeDashboardSubscribesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDashboardSubscribes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeDashboardSubscribesOutcomeCallable ClsClient::DescribeDashboardSubscribesCallable(const DescribeDashboardSubscribesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDashboardSubscribesOutcome>>();
+    DescribeDashboardSubscribesAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeDashboardSubscribesRequest&,
+        DescribeDashboardSubscribesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeDataTransformInfoOutcome ClsClient::DescribeDataTransformInfo(const DescribeDataTransformInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDataTransformInfo");
@@ -2340,6 +4740,156 @@ ClsClient::DescribeDataTransformInfoOutcomeCallable ClsClient::DescribeDataTrans
     return prom->get_future();
 }
 
+ClsClient::DescribeDlcDeliversOutcome ClsClient::DescribeDlcDelivers(const DescribeDlcDeliversRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDlcDelivers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDlcDeliversResponse rsp = DescribeDlcDeliversResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDlcDeliversOutcome(rsp);
+        else
+            return DescribeDlcDeliversOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDlcDeliversOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeDlcDeliversAsync(const DescribeDlcDeliversRequest& request, const DescribeDlcDeliversAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDlcDeliversRequest&;
+    using Resp = DescribeDlcDeliversResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDlcDelivers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeDlcDeliversOutcomeCallable ClsClient::DescribeDlcDeliversCallable(const DescribeDlcDeliversRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDlcDeliversOutcome>>();
+    DescribeDlcDeliversAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeDlcDeliversRequest&,
+        DescribeDlcDeliversOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeEsRechargePreviewOutcome ClsClient::DescribeEsRechargePreview(const DescribeEsRechargePreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEsRechargePreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEsRechargePreviewResponse rsp = DescribeEsRechargePreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEsRechargePreviewOutcome(rsp);
+        else
+            return DescribeEsRechargePreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEsRechargePreviewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeEsRechargePreviewAsync(const DescribeEsRechargePreviewRequest& request, const DescribeEsRechargePreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeEsRechargePreviewRequest&;
+    using Resp = DescribeEsRechargePreviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeEsRechargePreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeEsRechargePreviewOutcomeCallable ClsClient::DescribeEsRechargePreviewCallable(const DescribeEsRechargePreviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeEsRechargePreviewOutcome>>();
+    DescribeEsRechargePreviewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeEsRechargePreviewRequest&,
+        DescribeEsRechargePreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeEsRechargesOutcome ClsClient::DescribeEsRecharges(const DescribeEsRechargesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEsRecharges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEsRechargesResponse rsp = DescribeEsRechargesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEsRechargesOutcome(rsp);
+        else
+            return DescribeEsRechargesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEsRechargesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeEsRechargesAsync(const DescribeEsRechargesRequest& request, const DescribeEsRechargesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeEsRechargesRequest&;
+    using Resp = DescribeEsRechargesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeEsRecharges", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeEsRechargesOutcomeCallable ClsClient::DescribeEsRechargesCallable(const DescribeEsRechargesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeEsRechargesOutcome>>();
+    DescribeEsRechargesAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeEsRechargesRequest&,
+        DescribeEsRechargesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeExportsOutcome ClsClient::DescribeExports(const DescribeExportsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeExports");
@@ -2382,6 +4932,56 @@ ClsClient::DescribeExportsOutcomeCallable ClsClient::DescribeExportsCallable(con
         const ClsClient*,
         const DescribeExportsRequest&,
         DescribeExportsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeHostMetricConfigsOutcome ClsClient::DescribeHostMetricConfigs(const DescribeHostMetricConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostMetricConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostMetricConfigsResponse rsp = DescribeHostMetricConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostMetricConfigsOutcome(rsp);
+        else
+            return DescribeHostMetricConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostMetricConfigsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeHostMetricConfigsAsync(const DescribeHostMetricConfigsRequest& request, const DescribeHostMetricConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostMetricConfigsRequest&;
+    using Resp = DescribeHostMetricConfigsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostMetricConfigs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeHostMetricConfigsOutcomeCallable ClsClient::DescribeHostMetricConfigsCallable(const DescribeHostMetricConfigsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostMetricConfigsOutcome>>();
+    DescribeHostMetricConfigsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeHostMetricConfigsRequest&,
+        DescribeHostMetricConfigsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2482,6 +5082,206 @@ ClsClient::DescribeKafkaConsumerOutcomeCallable ClsClient::DescribeKafkaConsumer
         const ClsClient*,
         const DescribeKafkaConsumerRequest&,
         DescribeKafkaConsumerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeKafkaConsumerGroupDetailOutcome ClsClient::DescribeKafkaConsumerGroupDetail(const DescribeKafkaConsumerGroupDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaConsumerGroupDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaConsumerGroupDetailResponse rsp = DescribeKafkaConsumerGroupDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaConsumerGroupDetailOutcome(rsp);
+        else
+            return DescribeKafkaConsumerGroupDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaConsumerGroupDetailOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaConsumerGroupDetailAsync(const DescribeKafkaConsumerGroupDetailRequest& request, const DescribeKafkaConsumerGroupDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKafkaConsumerGroupDetailRequest&;
+    using Resp = DescribeKafkaConsumerGroupDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKafkaConsumerGroupDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeKafkaConsumerGroupDetailOutcomeCallable ClsClient::DescribeKafkaConsumerGroupDetailCallable(const DescribeKafkaConsumerGroupDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKafkaConsumerGroupDetailOutcome>>();
+    DescribeKafkaConsumerGroupDetailAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeKafkaConsumerGroupDetailRequest&,
+        DescribeKafkaConsumerGroupDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeKafkaConsumerGroupListOutcome ClsClient::DescribeKafkaConsumerGroupList(const DescribeKafkaConsumerGroupListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaConsumerGroupList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaConsumerGroupListResponse rsp = DescribeKafkaConsumerGroupListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaConsumerGroupListOutcome(rsp);
+        else
+            return DescribeKafkaConsumerGroupListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaConsumerGroupListOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaConsumerGroupListAsync(const DescribeKafkaConsumerGroupListRequest& request, const DescribeKafkaConsumerGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKafkaConsumerGroupListRequest&;
+    using Resp = DescribeKafkaConsumerGroupListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKafkaConsumerGroupList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeKafkaConsumerGroupListOutcomeCallable ClsClient::DescribeKafkaConsumerGroupListCallable(const DescribeKafkaConsumerGroupListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKafkaConsumerGroupListOutcome>>();
+    DescribeKafkaConsumerGroupListAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeKafkaConsumerGroupListRequest&,
+        DescribeKafkaConsumerGroupListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeKafkaConsumerPreviewOutcome ClsClient::DescribeKafkaConsumerPreview(const DescribeKafkaConsumerPreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaConsumerPreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaConsumerPreviewResponse rsp = DescribeKafkaConsumerPreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaConsumerPreviewOutcome(rsp);
+        else
+            return DescribeKafkaConsumerPreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaConsumerPreviewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaConsumerPreviewAsync(const DescribeKafkaConsumerPreviewRequest& request, const DescribeKafkaConsumerPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKafkaConsumerPreviewRequest&;
+    using Resp = DescribeKafkaConsumerPreviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKafkaConsumerPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeKafkaConsumerPreviewOutcomeCallable ClsClient::DescribeKafkaConsumerPreviewCallable(const DescribeKafkaConsumerPreviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKafkaConsumerPreviewOutcome>>();
+    DescribeKafkaConsumerPreviewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeKafkaConsumerPreviewRequest&,
+        DescribeKafkaConsumerPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeKafkaConsumerTopicsOutcome ClsClient::DescribeKafkaConsumerTopics(const DescribeKafkaConsumerTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKafkaConsumerTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKafkaConsumerTopicsResponse rsp = DescribeKafkaConsumerTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKafkaConsumerTopicsOutcome(rsp);
+        else
+            return DescribeKafkaConsumerTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKafkaConsumerTopicsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeKafkaConsumerTopicsAsync(const DescribeKafkaConsumerTopicsRequest& request, const DescribeKafkaConsumerTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKafkaConsumerTopicsRequest&;
+    using Resp = DescribeKafkaConsumerTopicsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKafkaConsumerTopics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeKafkaConsumerTopicsOutcomeCallable ClsClient::DescribeKafkaConsumerTopicsCallable(const DescribeKafkaConsumerTopicsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKafkaConsumerTopicsOutcome>>();
+    DescribeKafkaConsumerTopicsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeKafkaConsumerTopicsRequest&,
+        DescribeKafkaConsumerTopicsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2840,6 +5640,306 @@ ClsClient::DescribeMachinesOutcomeCallable ClsClient::DescribeMachinesCallable(c
     return prom->get_future();
 }
 
+ClsClient::DescribeMetricCorrectDimensionOutcome ClsClient::DescribeMetricCorrectDimension(const DescribeMetricCorrectDimensionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMetricCorrectDimension");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMetricCorrectDimensionResponse rsp = DescribeMetricCorrectDimensionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMetricCorrectDimensionOutcome(rsp);
+        else
+            return DescribeMetricCorrectDimensionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMetricCorrectDimensionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeMetricCorrectDimensionAsync(const DescribeMetricCorrectDimensionRequest& request, const DescribeMetricCorrectDimensionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMetricCorrectDimensionRequest&;
+    using Resp = DescribeMetricCorrectDimensionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMetricCorrectDimension", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeMetricCorrectDimensionOutcomeCallable ClsClient::DescribeMetricCorrectDimensionCallable(const DescribeMetricCorrectDimensionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMetricCorrectDimensionOutcome>>();
+    DescribeMetricCorrectDimensionAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeMetricCorrectDimensionRequest&,
+        DescribeMetricCorrectDimensionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeMetricSubscribePreviewOutcome ClsClient::DescribeMetricSubscribePreview(const DescribeMetricSubscribePreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMetricSubscribePreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMetricSubscribePreviewResponse rsp = DescribeMetricSubscribePreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMetricSubscribePreviewOutcome(rsp);
+        else
+            return DescribeMetricSubscribePreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMetricSubscribePreviewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeMetricSubscribePreviewAsync(const DescribeMetricSubscribePreviewRequest& request, const DescribeMetricSubscribePreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMetricSubscribePreviewRequest&;
+    using Resp = DescribeMetricSubscribePreviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMetricSubscribePreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeMetricSubscribePreviewOutcomeCallable ClsClient::DescribeMetricSubscribePreviewCallable(const DescribeMetricSubscribePreviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMetricSubscribePreviewOutcome>>();
+    DescribeMetricSubscribePreviewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeMetricSubscribePreviewRequest&,
+        DescribeMetricSubscribePreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeMetricSubscribesOutcome ClsClient::DescribeMetricSubscribes(const DescribeMetricSubscribesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMetricSubscribes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMetricSubscribesResponse rsp = DescribeMetricSubscribesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMetricSubscribesOutcome(rsp);
+        else
+            return DescribeMetricSubscribesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMetricSubscribesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeMetricSubscribesAsync(const DescribeMetricSubscribesRequest& request, const DescribeMetricSubscribesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMetricSubscribesRequest&;
+    using Resp = DescribeMetricSubscribesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMetricSubscribes", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeMetricSubscribesOutcomeCallable ClsClient::DescribeMetricSubscribesCallable(const DescribeMetricSubscribesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMetricSubscribesOutcome>>();
+    DescribeMetricSubscribesAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeMetricSubscribesRequest&,
+        DescribeMetricSubscribesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeNetworkApplicationDetailOutcome ClsClient::DescribeNetworkApplicationDetail(const DescribeNetworkApplicationDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNetworkApplicationDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNetworkApplicationDetailResponse rsp = DescribeNetworkApplicationDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNetworkApplicationDetailOutcome(rsp);
+        else
+            return DescribeNetworkApplicationDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNetworkApplicationDetailOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeNetworkApplicationDetailAsync(const DescribeNetworkApplicationDetailRequest& request, const DescribeNetworkApplicationDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeNetworkApplicationDetailRequest&;
+    using Resp = DescribeNetworkApplicationDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeNetworkApplicationDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeNetworkApplicationDetailOutcomeCallable ClsClient::DescribeNetworkApplicationDetailCallable(const DescribeNetworkApplicationDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeNetworkApplicationDetailOutcome>>();
+    DescribeNetworkApplicationDetailAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeNetworkApplicationDetailRequest&,
+        DescribeNetworkApplicationDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeNetworkApplicationsOutcome ClsClient::DescribeNetworkApplications(const DescribeNetworkApplicationsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNetworkApplications");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNetworkApplicationsResponse rsp = DescribeNetworkApplicationsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNetworkApplicationsOutcome(rsp);
+        else
+            return DescribeNetworkApplicationsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNetworkApplicationsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeNetworkApplicationsAsync(const DescribeNetworkApplicationsRequest& request, const DescribeNetworkApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeNetworkApplicationsRequest&;
+    using Resp = DescribeNetworkApplicationsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeNetworkApplications", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeNetworkApplicationsOutcomeCallable ClsClient::DescribeNetworkApplicationsCallable(const DescribeNetworkApplicationsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeNetworkApplicationsOutcome>>();
+    DescribeNetworkApplicationsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeNetworkApplicationsRequest&,
+        DescribeNetworkApplicationsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeNoticeContentsOutcome ClsClient::DescribeNoticeContents(const DescribeNoticeContentsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNoticeContents");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNoticeContentsResponse rsp = DescribeNoticeContentsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNoticeContentsOutcome(rsp);
+        else
+            return DescribeNoticeContentsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNoticeContentsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeNoticeContentsAsync(const DescribeNoticeContentsRequest& request, const DescribeNoticeContentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeNoticeContentsRequest&;
+    using Resp = DescribeNoticeContentsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeNoticeContents", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeNoticeContentsOutcomeCallable ClsClient::DescribeNoticeContentsCallable(const DescribeNoticeContentsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeNoticeContentsOutcome>>();
+    DescribeNoticeContentsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeNoticeContentsRequest&,
+        DescribeNoticeContentsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribePartitionsOutcome ClsClient::DescribePartitions(const DescribePartitionsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribePartitions");
@@ -2890,6 +5990,156 @@ ClsClient::DescribePartitionsOutcomeCallable ClsClient::DescribePartitionsCallab
     return prom->get_future();
 }
 
+ClsClient::DescribeRebuildIndexTasksOutcome ClsClient::DescribeRebuildIndexTasks(const DescribeRebuildIndexTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRebuildIndexTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRebuildIndexTasksResponse rsp = DescribeRebuildIndexTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRebuildIndexTasksOutcome(rsp);
+        else
+            return DescribeRebuildIndexTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRebuildIndexTasksOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeRebuildIndexTasksAsync(const DescribeRebuildIndexTasksRequest& request, const DescribeRebuildIndexTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRebuildIndexTasksRequest&;
+    using Resp = DescribeRebuildIndexTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRebuildIndexTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeRebuildIndexTasksOutcomeCallable ClsClient::DescribeRebuildIndexTasksCallable(const DescribeRebuildIndexTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRebuildIndexTasksOutcome>>();
+    DescribeRebuildIndexTasksAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeRebuildIndexTasksRequest&,
+        DescribeRebuildIndexTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeRecordingRuleTaskOutcome ClsClient::DescribeRecordingRuleTask(const DescribeRecordingRuleTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordingRuleTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordingRuleTaskResponse rsp = DescribeRecordingRuleTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordingRuleTaskOutcome(rsp);
+        else
+            return DescribeRecordingRuleTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordingRuleTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeRecordingRuleTaskAsync(const DescribeRecordingRuleTaskRequest& request, const DescribeRecordingRuleTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordingRuleTaskRequest&;
+    using Resp = DescribeRecordingRuleTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordingRuleTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeRecordingRuleTaskOutcomeCallable ClsClient::DescribeRecordingRuleTaskCallable(const DescribeRecordingRuleTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordingRuleTaskOutcome>>();
+    DescribeRecordingRuleTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeRecordingRuleTaskRequest&,
+        DescribeRecordingRuleTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeRecordingRuleYamlTaskOutcome ClsClient::DescribeRecordingRuleYamlTask(const DescribeRecordingRuleYamlTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordingRuleYamlTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordingRuleYamlTaskResponse rsp = DescribeRecordingRuleYamlTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordingRuleYamlTaskOutcome(rsp);
+        else
+            return DescribeRecordingRuleYamlTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordingRuleYamlTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeRecordingRuleYamlTaskAsync(const DescribeRecordingRuleYamlTaskRequest& request, const DescribeRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRecordingRuleYamlTaskRequest&;
+    using Resp = DescribeRecordingRuleYamlTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRecordingRuleYamlTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeRecordingRuleYamlTaskOutcomeCallable ClsClient::DescribeRecordingRuleYamlTaskCallable(const DescribeRecordingRuleYamlTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRecordingRuleYamlTaskOutcome>>();
+    DescribeRecordingRuleYamlTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeRecordingRuleYamlTaskRequest&,
+        DescribeRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeScheduledSqlInfoOutcome ClsClient::DescribeScheduledSqlInfo(const DescribeScheduledSqlInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeScheduledSqlInfo");
@@ -2932,6 +6182,56 @@ ClsClient::DescribeScheduledSqlInfoOutcomeCallable ClsClient::DescribeScheduledS
         const ClsClient*,
         const DescribeScheduledSqlInfoRequest&,
         DescribeScheduledSqlInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeSearchViewsOutcome ClsClient::DescribeSearchViews(const DescribeSearchViewsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSearchViews");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSearchViewsResponse rsp = DescribeSearchViewsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSearchViewsOutcome(rsp);
+        else
+            return DescribeSearchViewsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSearchViewsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeSearchViewsAsync(const DescribeSearchViewsRequest& request, const DescribeSearchViewsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSearchViewsRequest&;
+    using Resp = DescribeSearchViewsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSearchViews", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeSearchViewsOutcomeCallable ClsClient::DescribeSearchViewsCallable(const DescribeSearchViewsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSearchViewsOutcome>>();
+    DescribeSearchViewsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeSearchViewsRequest&,
+        DescribeSearchViewsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3040,6 +6340,206 @@ ClsClient::DescribeShippersOutcomeCallable ClsClient::DescribeShippersCallable(c
     return prom->get_future();
 }
 
+ClsClient::DescribeSplunkDeliversOutcome ClsClient::DescribeSplunkDelivers(const DescribeSplunkDeliversRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSplunkDelivers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSplunkDeliversResponse rsp = DescribeSplunkDeliversResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSplunkDeliversOutcome(rsp);
+        else
+            return DescribeSplunkDeliversOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSplunkDeliversOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeSplunkDeliversAsync(const DescribeSplunkDeliversRequest& request, const DescribeSplunkDeliversAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSplunkDeliversRequest&;
+    using Resp = DescribeSplunkDeliversResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSplunkDelivers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeSplunkDeliversOutcomeCallable ClsClient::DescribeSplunkDeliversCallable(const DescribeSplunkDeliversRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSplunkDeliversOutcome>>();
+    DescribeSplunkDeliversAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeSplunkDeliversRequest&,
+        DescribeSplunkDeliversOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeSplunkPreviewOutcome ClsClient::DescribeSplunkPreview(const DescribeSplunkPreviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSplunkPreview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSplunkPreviewResponse rsp = DescribeSplunkPreviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSplunkPreviewOutcome(rsp);
+        else
+            return DescribeSplunkPreviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSplunkPreviewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeSplunkPreviewAsync(const DescribeSplunkPreviewRequest& request, const DescribeSplunkPreviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSplunkPreviewRequest&;
+    using Resp = DescribeSplunkPreviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSplunkPreview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeSplunkPreviewOutcomeCallable ClsClient::DescribeSplunkPreviewCallable(const DescribeSplunkPreviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSplunkPreviewOutcome>>();
+    DescribeSplunkPreviewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeSplunkPreviewRequest&,
+        DescribeSplunkPreviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeTopicBaseMetricConfigsOutcome ClsClient::DescribeTopicBaseMetricConfigs(const DescribeTopicBaseMetricConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopicBaseMetricConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopicBaseMetricConfigsResponse rsp = DescribeTopicBaseMetricConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopicBaseMetricConfigsOutcome(rsp);
+        else
+            return DescribeTopicBaseMetricConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopicBaseMetricConfigsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeTopicBaseMetricConfigsAsync(const DescribeTopicBaseMetricConfigsRequest& request, const DescribeTopicBaseMetricConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTopicBaseMetricConfigsRequest&;
+    using Resp = DescribeTopicBaseMetricConfigsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopicBaseMetricConfigs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeTopicBaseMetricConfigsOutcomeCallable ClsClient::DescribeTopicBaseMetricConfigsCallable(const DescribeTopicBaseMetricConfigsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTopicBaseMetricConfigsOutcome>>();
+    DescribeTopicBaseMetricConfigsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeTopicBaseMetricConfigsRequest&,
+        DescribeTopicBaseMetricConfigsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DescribeTopicMetricConfigsOutcome ClsClient::DescribeTopicMetricConfigs(const DescribeTopicMetricConfigsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopicMetricConfigs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopicMetricConfigsResponse rsp = DescribeTopicMetricConfigsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopicMetricConfigsOutcome(rsp);
+        else
+            return DescribeTopicMetricConfigsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopicMetricConfigsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeTopicMetricConfigsAsync(const DescribeTopicMetricConfigsRequest& request, const DescribeTopicMetricConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTopicMetricConfigsRequest&;
+    using Resp = DescribeTopicMetricConfigsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopicMetricConfigs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeTopicMetricConfigsOutcomeCallable ClsClient::DescribeTopicMetricConfigsCallable(const DescribeTopicMetricConfigsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTopicMetricConfigsOutcome>>();
+    DescribeTopicMetricConfigsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeTopicMetricConfigsRequest&,
+        DescribeTopicMetricConfigsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeTopicsOutcome ClsClient::DescribeTopics(const DescribeTopicsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTopics");
@@ -3090,6 +6590,106 @@ ClsClient::DescribeTopicsOutcomeCallable ClsClient::DescribeTopicsCallable(const
     return prom->get_future();
 }
 
+ClsClient::DescribeWebCallbacksOutcome ClsClient::DescribeWebCallbacks(const DescribeWebCallbacksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeWebCallbacks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeWebCallbacksResponse rsp = DescribeWebCallbacksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeWebCallbacksOutcome(rsp);
+        else
+            return DescribeWebCallbacksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeWebCallbacksOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeWebCallbacksAsync(const DescribeWebCallbacksRequest& request, const DescribeWebCallbacksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeWebCallbacksRequest&;
+    using Resp = DescribeWebCallbacksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeWebCallbacks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeWebCallbacksOutcomeCallable ClsClient::DescribeWebCallbacksCallable(const DescribeWebCallbacksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeWebCallbacksOutcome>>();
+    DescribeWebCallbacksAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeWebCallbacksRequest&,
+        DescribeWebCallbacksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::EstimateRebuildIndexTaskOutcome ClsClient::EstimateRebuildIndexTask(const EstimateRebuildIndexTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "EstimateRebuildIndexTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EstimateRebuildIndexTaskResponse rsp = EstimateRebuildIndexTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EstimateRebuildIndexTaskOutcome(rsp);
+        else
+            return EstimateRebuildIndexTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return EstimateRebuildIndexTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::EstimateRebuildIndexTaskAsync(const EstimateRebuildIndexTaskRequest& request, const EstimateRebuildIndexTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const EstimateRebuildIndexTaskRequest&;
+    using Resp = EstimateRebuildIndexTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "EstimateRebuildIndexTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::EstimateRebuildIndexTaskOutcomeCallable ClsClient::EstimateRebuildIndexTaskCallable(const EstimateRebuildIndexTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<EstimateRebuildIndexTaskOutcome>>();
+    EstimateRebuildIndexTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const EstimateRebuildIndexTaskRequest&,
+        EstimateRebuildIndexTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::GetAlarmLogOutcome ClsClient::GetAlarmLog(const GetAlarmLogRequest &request)
 {
     auto outcome = MakeRequest(request, "GetAlarmLog");
@@ -3132,6 +6732,106 @@ ClsClient::GetAlarmLogOutcomeCallable ClsClient::GetAlarmLogCallable(const GetAl
         const ClsClient*,
         const GetAlarmLogRequest&,
         GetAlarmLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::GetClsServiceOutcome ClsClient::GetClsService(const GetClsServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetClsService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetClsServiceResponse rsp = GetClsServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetClsServiceOutcome(rsp);
+        else
+            return GetClsServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return GetClsServiceOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::GetClsServiceAsync(const GetClsServiceRequest& request, const GetClsServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetClsServiceRequest&;
+    using Resp = GetClsServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetClsService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::GetClsServiceOutcomeCallable ClsClient::GetClsServiceCallable(const GetClsServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetClsServiceOutcome>>();
+    GetClsServiceAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const GetClsServiceRequest&,
+        GetClsServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::GetMetricLabelValuesOutcome ClsClient::GetMetricLabelValues(const GetMetricLabelValuesRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetMetricLabelValues");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetMetricLabelValuesResponse rsp = GetMetricLabelValuesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetMetricLabelValuesOutcome(rsp);
+        else
+            return GetMetricLabelValuesOutcome(o.GetError());
+    }
+    else
+    {
+        return GetMetricLabelValuesOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::GetMetricLabelValuesAsync(const GetMetricLabelValuesRequest& request, const GetMetricLabelValuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetMetricLabelValuesRequest&;
+    using Resp = GetMetricLabelValuesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetMetricLabelValues", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::GetMetricLabelValuesOutcomeCallable ClsClient::GetMetricLabelValuesCallable(const GetMetricLabelValuesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetMetricLabelValuesOutcome>>();
+    GetMetricLabelValuesAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const GetMetricLabelValuesRequest&,
+        GetMetricLabelValuesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3340,6 +7040,56 @@ ClsClient::ModifyAlarmShieldOutcomeCallable ClsClient::ModifyAlarmShieldCallable
     return prom->get_future();
 }
 
+ClsClient::ModifyCloudProductLogCollectionOutcome ClsClient::ModifyCloudProductLogCollection(const ModifyCloudProductLogCollectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyCloudProductLogCollection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyCloudProductLogCollectionResponse rsp = ModifyCloudProductLogCollectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyCloudProductLogCollectionOutcome(rsp);
+        else
+            return ModifyCloudProductLogCollectionOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyCloudProductLogCollectionOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyCloudProductLogCollectionAsync(const ModifyCloudProductLogCollectionRequest& request, const ModifyCloudProductLogCollectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyCloudProductLogCollectionRequest&;
+    using Resp = ModifyCloudProductLogCollectionResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyCloudProductLogCollection", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyCloudProductLogCollectionOutcomeCallable ClsClient::ModifyCloudProductLogCollectionCallable(const ModifyCloudProductLogCollectionRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyCloudProductLogCollectionOutcome>>();
+    ModifyCloudProductLogCollectionAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyCloudProductLogCollectionRequest&,
+        ModifyCloudProductLogCollectionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::ModifyConfigOutcome ClsClient::ModifyConfig(const ModifyConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyConfig");
@@ -3382,6 +7132,56 @@ ClsClient::ModifyConfigOutcomeCallable ClsClient::ModifyConfigCallable(const Mod
         const ClsClient*,
         const ModifyConfigRequest&,
         ModifyConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyConsoleOutcome ClsClient::ModifyConsole(const ModifyConsoleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyConsole");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyConsoleResponse rsp = ModifyConsoleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyConsoleOutcome(rsp);
+        else
+            return ModifyConsoleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyConsoleOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyConsoleAsync(const ModifyConsoleRequest& request, const ModifyConsoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyConsoleRequest&;
+    using Resp = ModifyConsoleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyConsole", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyConsoleOutcomeCallable ClsClient::ModifyConsoleCallable(const ModifyConsoleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyConsoleOutcome>>();
+    ModifyConsoleAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyConsoleRequest&,
+        ModifyConsoleOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3440,6 +7240,56 @@ ClsClient::ModifyConsumerOutcomeCallable ClsClient::ModifyConsumerCallable(const
     return prom->get_future();
 }
 
+ClsClient::ModifyConsumerGroupOutcome ClsClient::ModifyConsumerGroup(const ModifyConsumerGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyConsumerGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyConsumerGroupResponse rsp = ModifyConsumerGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyConsumerGroupOutcome(rsp);
+        else
+            return ModifyConsumerGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyConsumerGroupOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyConsumerGroupAsync(const ModifyConsumerGroupRequest& request, const ModifyConsumerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyConsumerGroupRequest&;
+    using Resp = ModifyConsumerGroupResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyConsumerGroup", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyConsumerGroupOutcomeCallable ClsClient::ModifyConsumerGroupCallable(const ModifyConsumerGroupRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyConsumerGroupOutcome>>();
+    ModifyConsumerGroupAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyConsumerGroupRequest&,
+        ModifyConsumerGroupOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::ModifyCosRechargeOutcome ClsClient::ModifyCosRecharge(const ModifyCosRechargeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyCosRecharge");
@@ -3490,6 +7340,106 @@ ClsClient::ModifyCosRechargeOutcomeCallable ClsClient::ModifyCosRechargeCallable
     return prom->get_future();
 }
 
+ClsClient::ModifyDashboardOutcome ClsClient::ModifyDashboard(const ModifyDashboardRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDashboard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDashboardResponse rsp = ModifyDashboardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDashboardOutcome(rsp);
+        else
+            return ModifyDashboardOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDashboardOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyDashboardAsync(const ModifyDashboardRequest& request, const ModifyDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDashboardRequest&;
+    using Resp = ModifyDashboardResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDashboard", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyDashboardOutcomeCallable ClsClient::ModifyDashboardCallable(const ModifyDashboardRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDashboardOutcome>>();
+    ModifyDashboardAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyDashboardRequest&,
+        ModifyDashboardOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyDashboardSubscribeOutcome ClsClient::ModifyDashboardSubscribe(const ModifyDashboardSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDashboardSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDashboardSubscribeResponse rsp = ModifyDashboardSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDashboardSubscribeOutcome(rsp);
+        else
+            return ModifyDashboardSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDashboardSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyDashboardSubscribeAsync(const ModifyDashboardSubscribeRequest& request, const ModifyDashboardSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDashboardSubscribeRequest&;
+    using Resp = ModifyDashboardSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDashboardSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyDashboardSubscribeOutcomeCallable ClsClient::ModifyDashboardSubscribeCallable(const ModifyDashboardSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDashboardSubscribeOutcome>>();
+    ModifyDashboardSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyDashboardSubscribeRequest&,
+        ModifyDashboardSubscribeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::ModifyDataTransformOutcome ClsClient::ModifyDataTransform(const ModifyDataTransformRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDataTransform");
@@ -3532,6 +7482,156 @@ ClsClient::ModifyDataTransformOutcomeCallable ClsClient::ModifyDataTransformCall
         const ClsClient*,
         const ModifyDataTransformRequest&,
         ModifyDataTransformOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyDlcDeliverOutcome ClsClient::ModifyDlcDeliver(const ModifyDlcDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDlcDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDlcDeliverResponse rsp = ModifyDlcDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDlcDeliverOutcome(rsp);
+        else
+            return ModifyDlcDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDlcDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyDlcDeliverAsync(const ModifyDlcDeliverRequest& request, const ModifyDlcDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDlcDeliverRequest&;
+    using Resp = ModifyDlcDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDlcDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyDlcDeliverOutcomeCallable ClsClient::ModifyDlcDeliverCallable(const ModifyDlcDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDlcDeliverOutcome>>();
+    ModifyDlcDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyDlcDeliverRequest&,
+        ModifyDlcDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyEsRechargeOutcome ClsClient::ModifyEsRecharge(const ModifyEsRechargeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyEsRecharge");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyEsRechargeResponse rsp = ModifyEsRechargeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyEsRechargeOutcome(rsp);
+        else
+            return ModifyEsRechargeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyEsRechargeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyEsRechargeAsync(const ModifyEsRechargeRequest& request, const ModifyEsRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyEsRechargeRequest&;
+    using Resp = ModifyEsRechargeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyEsRecharge", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyEsRechargeOutcomeCallable ClsClient::ModifyEsRechargeCallable(const ModifyEsRechargeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyEsRechargeOutcome>>();
+    ModifyEsRechargeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyEsRechargeRequest&,
+        ModifyEsRechargeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyHostMetricConfigOutcome ClsClient::ModifyHostMetricConfig(const ModifyHostMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyHostMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyHostMetricConfigResponse rsp = ModifyHostMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyHostMetricConfigOutcome(rsp);
+        else
+            return ModifyHostMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyHostMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyHostMetricConfigAsync(const ModifyHostMetricConfigRequest& request, const ModifyHostMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyHostMetricConfigRequest&;
+    using Resp = ModifyHostMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyHostMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyHostMetricConfigOutcomeCallable ClsClient::ModifyHostMetricConfigCallable(const ModifyHostMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyHostMetricConfigOutcome>>();
+    ModifyHostMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyHostMetricConfigRequest&,
+        ModifyHostMetricConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3632,6 +7732,56 @@ ClsClient::ModifyKafkaConsumerOutcomeCallable ClsClient::ModifyKafkaConsumerCall
         const ClsClient*,
         const ModifyKafkaConsumerRequest&,
         ModifyKafkaConsumerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyKafkaConsumerGroupOffsetOutcome ClsClient::ModifyKafkaConsumerGroupOffset(const ModifyKafkaConsumerGroupOffsetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyKafkaConsumerGroupOffset");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyKafkaConsumerGroupOffsetResponse rsp = ModifyKafkaConsumerGroupOffsetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyKafkaConsumerGroupOffsetOutcome(rsp);
+        else
+            return ModifyKafkaConsumerGroupOffsetOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyKafkaConsumerGroupOffsetOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyKafkaConsumerGroupOffsetAsync(const ModifyKafkaConsumerGroupOffsetRequest& request, const ModifyKafkaConsumerGroupOffsetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyKafkaConsumerGroupOffsetRequest&;
+    using Resp = ModifyKafkaConsumerGroupOffsetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyKafkaConsumerGroupOffset", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyKafkaConsumerGroupOffsetOutcomeCallable ClsClient::ModifyKafkaConsumerGroupOffsetCallable(const ModifyKafkaConsumerGroupOffsetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyKafkaConsumerGroupOffsetOutcome>>();
+    ModifyKafkaConsumerGroupOffsetAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyKafkaConsumerGroupOffsetRequest&,
+        ModifyKafkaConsumerGroupOffsetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3790,6 +7940,306 @@ ClsClient::ModifyMachineGroupOutcomeCallable ClsClient::ModifyMachineGroupCallab
     return prom->get_future();
 }
 
+ClsClient::ModifyMetricConfigOutcome ClsClient::ModifyMetricConfig(const ModifyMetricConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMetricConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMetricConfigResponse rsp = ModifyMetricConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMetricConfigOutcome(rsp);
+        else
+            return ModifyMetricConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMetricConfigOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyMetricConfigAsync(const ModifyMetricConfigRequest& request, const ModifyMetricConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMetricConfigRequest&;
+    using Resp = ModifyMetricConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMetricConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyMetricConfigOutcomeCallable ClsClient::ModifyMetricConfigCallable(const ModifyMetricConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMetricConfigOutcome>>();
+    ModifyMetricConfigAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyMetricConfigRequest&,
+        ModifyMetricConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyMetricSubscribeOutcome ClsClient::ModifyMetricSubscribe(const ModifyMetricSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMetricSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMetricSubscribeResponse rsp = ModifyMetricSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMetricSubscribeOutcome(rsp);
+        else
+            return ModifyMetricSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMetricSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyMetricSubscribeAsync(const ModifyMetricSubscribeRequest& request, const ModifyMetricSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMetricSubscribeRequest&;
+    using Resp = ModifyMetricSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMetricSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyMetricSubscribeOutcomeCallable ClsClient::ModifyMetricSubscribeCallable(const ModifyMetricSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMetricSubscribeOutcome>>();
+    ModifyMetricSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyMetricSubscribeRequest&,
+        ModifyMetricSubscribeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyNetworkApplicationOutcome ClsClient::ModifyNetworkApplication(const ModifyNetworkApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNetworkApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNetworkApplicationResponse rsp = ModifyNetworkApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNetworkApplicationOutcome(rsp);
+        else
+            return ModifyNetworkApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNetworkApplicationOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyNetworkApplicationAsync(const ModifyNetworkApplicationRequest& request, const ModifyNetworkApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyNetworkApplicationRequest&;
+    using Resp = ModifyNetworkApplicationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyNetworkApplication", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyNetworkApplicationOutcomeCallable ClsClient::ModifyNetworkApplicationCallable(const ModifyNetworkApplicationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyNetworkApplicationOutcome>>();
+    ModifyNetworkApplicationAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyNetworkApplicationRequest&,
+        ModifyNetworkApplicationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyNoticeContentOutcome ClsClient::ModifyNoticeContent(const ModifyNoticeContentRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNoticeContent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNoticeContentResponse rsp = ModifyNoticeContentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNoticeContentOutcome(rsp);
+        else
+            return ModifyNoticeContentOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNoticeContentOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyNoticeContentAsync(const ModifyNoticeContentRequest& request, const ModifyNoticeContentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyNoticeContentRequest&;
+    using Resp = ModifyNoticeContentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyNoticeContent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyNoticeContentOutcomeCallable ClsClient::ModifyNoticeContentCallable(const ModifyNoticeContentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyNoticeContentOutcome>>();
+    ModifyNoticeContentAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyNoticeContentRequest&,
+        ModifyNoticeContentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyRecordingRuleTaskOutcome ClsClient::ModifyRecordingRuleTask(const ModifyRecordingRuleTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordingRuleTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordingRuleTaskResponse rsp = ModifyRecordingRuleTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordingRuleTaskOutcome(rsp);
+        else
+            return ModifyRecordingRuleTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordingRuleTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyRecordingRuleTaskAsync(const ModifyRecordingRuleTaskRequest& request, const ModifyRecordingRuleTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRecordingRuleTaskRequest&;
+    using Resp = ModifyRecordingRuleTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRecordingRuleTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyRecordingRuleTaskOutcomeCallable ClsClient::ModifyRecordingRuleTaskCallable(const ModifyRecordingRuleTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRecordingRuleTaskOutcome>>();
+    ModifyRecordingRuleTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyRecordingRuleTaskRequest&,
+        ModifyRecordingRuleTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyRecordingRuleYamlTaskOutcome ClsClient::ModifyRecordingRuleYamlTask(const ModifyRecordingRuleYamlTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordingRuleYamlTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordingRuleYamlTaskResponse rsp = ModifyRecordingRuleYamlTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordingRuleYamlTaskOutcome(rsp);
+        else
+            return ModifyRecordingRuleYamlTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordingRuleYamlTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyRecordingRuleYamlTaskAsync(const ModifyRecordingRuleYamlTaskRequest& request, const ModifyRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRecordingRuleYamlTaskRequest&;
+    using Resp = ModifyRecordingRuleYamlTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRecordingRuleYamlTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyRecordingRuleYamlTaskOutcomeCallable ClsClient::ModifyRecordingRuleYamlTaskCallable(const ModifyRecordingRuleYamlTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRecordingRuleYamlTaskOutcome>>();
+    ModifyRecordingRuleYamlTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyRecordingRuleYamlTaskRequest&,
+        ModifyRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::ModifyScheduledSqlOutcome ClsClient::ModifyScheduledSql(const ModifyScheduledSqlRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyScheduledSql");
@@ -3832,6 +8282,56 @@ ClsClient::ModifyScheduledSqlOutcomeCallable ClsClient::ModifyScheduledSqlCallab
         const ClsClient*,
         const ModifyScheduledSqlRequest&,
         ModifyScheduledSqlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifySearchViewOutcome ClsClient::ModifySearchView(const ModifySearchViewRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySearchView");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySearchViewResponse rsp = ModifySearchViewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySearchViewOutcome(rsp);
+        else
+            return ModifySearchViewOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySearchViewOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifySearchViewAsync(const ModifySearchViewRequest& request, const ModifySearchViewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifySearchViewRequest&;
+    using Resp = ModifySearchViewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifySearchView", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifySearchViewOutcomeCallable ClsClient::ModifySearchViewCallable(const ModifySearchViewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifySearchViewOutcome>>();
+    ModifySearchViewAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifySearchViewRequest&,
+        ModifySearchViewOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3890,6 +8390,56 @@ ClsClient::ModifyShipperOutcomeCallable ClsClient::ModifyShipperCallable(const M
     return prom->get_future();
 }
 
+ClsClient::ModifySplunkDeliverOutcome ClsClient::ModifySplunkDeliver(const ModifySplunkDeliverRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifySplunkDeliver");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifySplunkDeliverResponse rsp = ModifySplunkDeliverResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifySplunkDeliverOutcome(rsp);
+        else
+            return ModifySplunkDeliverOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifySplunkDeliverOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifySplunkDeliverAsync(const ModifySplunkDeliverRequest& request, const ModifySplunkDeliverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifySplunkDeliverRequest&;
+    using Resp = ModifySplunkDeliverResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifySplunkDeliver", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifySplunkDeliverOutcomeCallable ClsClient::ModifySplunkDeliverCallable(const ModifySplunkDeliverRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifySplunkDeliverOutcome>>();
+    ModifySplunkDeliverAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifySplunkDeliverRequest&,
+        ModifySplunkDeliverOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::ModifyTopicOutcome ClsClient::ModifyTopic(const ModifyTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyTopic");
@@ -3932,6 +8482,156 @@ ClsClient::ModifyTopicOutcomeCallable ClsClient::ModifyTopicCallable(const Modif
         const ClsClient*,
         const ModifyTopicRequest&,
         ModifyTopicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyWebCallbackOutcome ClsClient::ModifyWebCallback(const ModifyWebCallbackRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyWebCallback");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyWebCallbackResponse rsp = ModifyWebCallbackResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyWebCallbackOutcome(rsp);
+        else
+            return ModifyWebCallbackOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyWebCallbackOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyWebCallbackAsync(const ModifyWebCallbackRequest& request, const ModifyWebCallbackAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyWebCallbackRequest&;
+    using Resp = ModifyWebCallbackResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyWebCallback", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyWebCallbackOutcomeCallable ClsClient::ModifyWebCallbackCallable(const ModifyWebCallbackRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyWebCallbackOutcome>>();
+    ModifyWebCallbackAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyWebCallbackRequest&,
+        ModifyWebCallbackOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::OpenClawServiceOutcome ClsClient::OpenClawService(const OpenClawServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenClawService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenClawServiceResponse rsp = OpenClawServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenClawServiceOutcome(rsp);
+        else
+            return OpenClawServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenClawServiceOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::OpenClawServiceAsync(const OpenClawServiceRequest& request, const OpenClawServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const OpenClawServiceRequest&;
+    using Resp = OpenClawServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "OpenClawService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::OpenClawServiceOutcomeCallable ClsClient::OpenClawServiceCallable(const OpenClawServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<OpenClawServiceOutcome>>();
+    OpenClawServiceAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const OpenClawServiceRequest&,
+        OpenClawServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::OpenClsServiceOutcome ClsClient::OpenClsService(const OpenClsServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenClsService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenClsServiceResponse rsp = OpenClsServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenClsServiceOutcome(rsp);
+        else
+            return OpenClsServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenClsServiceOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::OpenClsServiceAsync(const OpenClsServiceRequest& request, const OpenClsServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const OpenClsServiceRequest&;
+    using Resp = OpenClsServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "OpenClsService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::OpenClsServiceOutcomeCallable ClsClient::OpenClsServiceCallable(const OpenClsServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<OpenClsServiceOutcome>>();
+    OpenClsServiceAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const OpenClsServiceRequest&,
+        OpenClsServiceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4240,6 +8940,56 @@ ClsClient::SearchCosRechargeInfoOutcomeCallable ClsClient::SearchCosRechargeInfo
     return prom->get_future();
 }
 
+ClsClient::SearchDashboardSubscribeOutcome ClsClient::SearchDashboardSubscribe(const SearchDashboardSubscribeRequest &request)
+{
+    auto outcome = MakeRequest(request, "SearchDashboardSubscribe");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SearchDashboardSubscribeResponse rsp = SearchDashboardSubscribeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SearchDashboardSubscribeOutcome(rsp);
+        else
+            return SearchDashboardSubscribeOutcome(o.GetError());
+    }
+    else
+    {
+        return SearchDashboardSubscribeOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::SearchDashboardSubscribeAsync(const SearchDashboardSubscribeRequest& request, const SearchDashboardSubscribeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SearchDashboardSubscribeRequest&;
+    using Resp = SearchDashboardSubscribeResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SearchDashboardSubscribe", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::SearchDashboardSubscribeOutcomeCallable ClsClient::SearchDashboardSubscribeCallable(const SearchDashboardSubscribeRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SearchDashboardSubscribeOutcome>>();
+    SearchDashboardSubscribeAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const SearchDashboardSubscribeRequest&,
+        SearchDashboardSubscribeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::SearchLogOutcome ClsClient::SearchLog(const SearchLogRequest &request)
 {
     auto outcome = MakeRequest(request, "SearchLog");
@@ -4282,6 +9032,56 @@ ClsClient::SearchLogOutcomeCallable ClsClient::SearchLogCallable(const SearchLog
         const ClsClient*,
         const SearchLogRequest&,
         SearchLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::SendConsumerHeartbeatOutcome ClsClient::SendConsumerHeartbeat(const SendConsumerHeartbeatRequest &request)
+{
+    auto outcome = MakeRequest(request, "SendConsumerHeartbeat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SendConsumerHeartbeatResponse rsp = SendConsumerHeartbeatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SendConsumerHeartbeatOutcome(rsp);
+        else
+            return SendConsumerHeartbeatOutcome(o.GetError());
+    }
+    else
+    {
+        return SendConsumerHeartbeatOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::SendConsumerHeartbeatAsync(const SendConsumerHeartbeatRequest& request, const SendConsumerHeartbeatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SendConsumerHeartbeatRequest&;
+    using Resp = SendConsumerHeartbeatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SendConsumerHeartbeat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::SendConsumerHeartbeatOutcomeCallable ClsClient::SendConsumerHeartbeatCallable(const SendConsumerHeartbeatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SendConsumerHeartbeatOutcome>>();
+    SendConsumerHeartbeatAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const SendConsumerHeartbeatRequest&,
+        SendConsumerHeartbeatOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage type. The value is an array of strings.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Storage type. The value is an array of strings.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage type: string array
+                     * @return Type Storage type: string array
                      * 
                      */
                     std::vector<std::string> GetType() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Log retention days. The value 3640 means the retention days are not limited.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Period Log retention days. The value 3640 means the retention days are not limited.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log retention time. The value 3640 indicates that the time is unlimited.
+                     * @return Period Log retention time. The value 3640 indicates that the time is unlimited.
                      * 
                      */
                     int64_t GetPeriod() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Count of period changes in this month
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PeriodModifyCount Count of period changes in this month
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of modifications made to Period this month.
+                     * @return PeriodModifyCount Number of modifications made to Period this month.
                      * 
                      */
                     int64_t GetPeriodModifyCount() const;
@@ -91,28 +85,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PeriodModifyCountHasBeenSet() const;
 
+                    /**
+                     * 获取Log storage duration unit: year/month/day
+                     * @return Granularity Log storage duration unit: year/month/day
+                     * 
+                     */
+                    std::string GetGranularity() const;
+
+                    /**
+                     * 判断参数 Granularity 是否已赋值
+                     * @return Granularity 是否已赋值
+                     * 
+                     */
+                    bool GranularityHasBeenSet() const;
+
+                    /**
+                     * 获取Language type
+                     * @return MsgLanguage Language type
+                     * 
+                     */
+                    std::string GetMsgLanguage() const;
+
+                    /**
+                     * 判断参数 MsgLanguage 是否已赋值
+                     * @return MsgLanguage 是否已赋值
+                     * 
+                     */
+                    bool MsgLanguageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Storage type. The value is an array of strings.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage type: string array
                      */
                     std::vector<std::string> m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Log retention days. The value 3640 means the retention days are not limited.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log retention time. The value 3640 indicates that the time is unlimited.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Count of period changes in this month
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of modifications made to Period this month.
                      */
                     int64_t m_periodModifyCount;
                     bool m_periodModifyCountHasBeenSet;
+
+                    /**
+                     * Log storage duration unit: year/month/day
+                     */
+                    std::string m_granularity;
+                    bool m_granularityHasBeenSet;
+
+                    /**
+                     * Language type
+                     */
+                    std::string m_msgLanguage;
+                    bool m_msgLanguageHasBeenSet;
 
                 };
             }

@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
-                     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+                     * 获取Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+                     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      * 
                      */
                     uint64_t GetUserType() const;
 
                     /**
-                     * 设置Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
-                     * @param _userType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+                     * 设置Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+                     * @param _userType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      * 
                      */
                     void SetUserType(const uint64_t& _userType);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool UserTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
-                     * @return IsDomain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+                     * 获取Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
+                     * @return IsDomain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
                      * 
                      */
                     uint64_t GetIsDomain() const;
 
                     /**
-                     * 设置Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
-                     * @param _isDomain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+                     * 设置Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
+                     * @param _isDomain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
                      * 
                      */
                     void SetIsDomain(const uint64_t& _isDomain);
@@ -574,18 +574,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -640,19 +636,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsNewHasBeenSet() const;
 
                     /**
-                     * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取 Additional information
+                     * @return MachineExtraInfo  Additional information
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
-                     * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置 Additional information
+                     * @param _machineExtraInfo  Additional information
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -751,13 +743,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+                     * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      */
                     uint64_t m_userType;
                     bool m_userTypeHasBeenSet;
 
                     /**
-                     * Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+                     * Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
                      */
                     uint64_t m_isDomain;
                     bool m_isDomainHasBeenSet;
@@ -818,7 +810,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -836,8 +827,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isNewHasBeenSet;
 
                     /**
-                     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     *  Additional information
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

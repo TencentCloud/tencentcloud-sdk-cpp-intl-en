@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -158,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuids Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetUuids() const;
 
                     /**
                      * 设置Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuids Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuids(const std::vector<std::string>& _uuids);
@@ -266,27 +258,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuidTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
+                     * @return AddWhiteType Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * 
                      */
                     std::string GetAddWhiteType() const;
 
                     /**
-                     * 设置Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
+                     * @param _addWhiteType Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      * 
                      */
                     void SetAddWhiteType(const std::string& _addWhiteType);
@@ -302,7 +290,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -333,7 +320,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_uuids;
                     bool m_uuidsHasBeenSet;
@@ -363,10 +349,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_uuidTotalCountHasBeenSet;
 
                     /**
-                     * Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
                      */
                     std::string m_addWhiteType;
                     bool m_addWhiteTypeHasBeenSet;

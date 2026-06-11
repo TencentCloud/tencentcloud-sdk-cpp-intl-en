@@ -45,18 +45,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
                      * @return Filters Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
                      * @param _filters Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -72,7 +72,7 @@ namespace TencentCloud
 
                     /**
                      * Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

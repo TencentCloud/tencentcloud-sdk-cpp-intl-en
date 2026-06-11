@@ -117,6 +117,8 @@
 #include <tencentcloud/billing/v20180709/model/DescribeGatherResourceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeGatherRuleDetailResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeOrgMemberAccountBalanceRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeOrgMemberAccountBalanceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeRenewInstancesRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeRenewInstancesResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeTagListRequest.h>
@@ -294,6 +296,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGatherRuleDetailResponse> DescribeGatherRuleDetailOutcome;
                 typedef std::future<DescribeGatherRuleDetailOutcome> DescribeGatherRuleDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeGatherRuleDetailRequest&, DescribeGatherRuleDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatherRuleDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrgMemberAccountBalanceResponse> DescribeOrgMemberAccountBalanceOutcome;
+                typedef std::future<DescribeOrgMemberAccountBalanceOutcome> DescribeOrgMemberAccountBalanceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeOrgMemberAccountBalanceRequest&, DescribeOrgMemberAccountBalanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrgMemberAccountBalanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRenewInstancesResponse> DescribeRenewInstancesOutcome;
                 typedef std::future<DescribeRenewInstancesOutcome> DescribeRenewInstancesOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeRenewInstancesRequest&, DescribeRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRenewInstancesAsyncHandler;
@@ -760,6 +765,15 @@ For customers with large-scale consumption detail (for example, monthly consumpt
                 DescribeGatherRuleDetailOutcome DescribeGatherRuleDetail(const Model::DescribeGatherRuleDetailRequest &request);
                 void DescribeGatherRuleDetailAsync(const Model::DescribeGatherRuleDetailRequest& request, const DescribeGatherRuleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeGatherRuleDetailOutcomeCallable DescribeGatherRuleDetailCallable(const Model::DescribeGatherRuleDetailRequest& request);
+
+                /**
+                 *Query member available balance in batches
+                 * @param req DescribeOrgMemberAccountBalanceRequest
+                 * @return DescribeOrgMemberAccountBalanceOutcome
+                 */
+                DescribeOrgMemberAccountBalanceOutcome DescribeOrgMemberAccountBalance(const Model::DescribeOrgMemberAccountBalanceRequest &request);
+                void DescribeOrgMemberAccountBalanceAsync(const Model::DescribeOrgMemberAccountBalanceRequest& request, const DescribeOrgMemberAccountBalanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrgMemberAccountBalanceOutcomeCallable DescribeOrgMemberAccountBalanceCallable(const Model::DescribeOrgMemberAccountBalanceRequest& request);
 
                 /**
                  *Notes:

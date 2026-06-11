@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReverseShellEventInfo Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ReverseShellEventInfo GetReverseShellEventInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReverseShellEventInfo m_reverseShellEventInfo;
                     bool m_reverseShellEventInfoHasBeenSet;

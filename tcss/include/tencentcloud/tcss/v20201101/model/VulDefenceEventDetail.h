@@ -490,18 +490,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PID Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPID() const;
 
                     /**
                      * 设置Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _pID Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPID(const int64_t& _pID);
@@ -514,19 +510,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PIDHasBeenSet() const;
 
                     /**
-                     * 获取Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MainClass Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Main class name of process
+                     * @return MainClass Main class name of process
                      * 
                      */
                     std::string GetMainClass() const;
 
                     /**
-                     * 设置Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mainClass Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Main class name of process
+                     * @param _mainClass Main class name of process
                      * 
                      */
                     void SetMainClass(const std::string& _mainClass);
@@ -540,18 +532,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StackTrace Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStackTrace() const;
 
                     /**
                      * 设置Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _stackTrace Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStackTrace(const std::string& _stackTrace);
@@ -564,19 +552,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StackTraceHasBeenSet() const;
 
                     /**
-                     * 获取Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServerAccount Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Listen to account
+                     * @return ServerAccount Listen to account
                      * 
                      */
                     std::string GetServerAccount() const;
 
                     /**
-                     * 设置Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serverAccount Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Listen to account
+                     * @param _serverAccount Listen to account
                      * 
                      */
                     void SetServerAccount(const std::string& _serverAccount);
@@ -589,19 +573,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerAccountHasBeenSet() const;
 
                     /**
-                     * 获取Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServerPort Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Listening port
+                     * @return ServerPort Listening port
                      * 
                      */
                     std::string GetServerPort() const;
 
                     /**
-                     * 设置Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _serverPort Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Listening port
+                     * @param _serverPort Listening port
                      * 
                      */
                     void SetServerPort(const std::string& _serverPort);
@@ -615,18 +595,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerExe Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServerExe() const;
 
                     /**
                      * 设置Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serverExe Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerExe(const std::string& _serverExe);
@@ -640,18 +616,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerArg Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServerArg() const;
 
                     /**
                      * 设置Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serverArg Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerArg(const std::string& _serverArg);
@@ -664,19 +636,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerArgHasBeenSet() const;
 
                     /**
-                     * 获取Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Host QUUID/Super Node ID
+                     * @return QUUID Host QUUID/Super Node ID
                      * 
                      */
                     std::string GetQUUID() const;
 
                     /**
-                     * 设置Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _qUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Host QUUID/Super Node ID
+                     * @param _qUUID Host QUUID/Super Node ID
                      * 
                      */
                     void SetQUUID(const std::string& _qUUID);
@@ -690,42 +658,38 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
                     /**
                      * 获取Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * @return ContainerNetStatus Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     std::string GetContainerNetStatus() const;
 
                     /**
                      * 设置Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * @param _containerNetStatus Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
@@ -738,47 +702,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetStatusHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+                     * @return ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
                     /**
-                     * 设置Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+                     * @param _containerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
@@ -791,19 +751,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
-                     * 获取Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container Isolation Operation Source
+                     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
-                     * 设置Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container Isolation Operation Source
+                     * @param _containerIsolateOperationSrc Container Isolation Operation Source
                      * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
@@ -816,47 +772,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
                     /**
-                     * 获取Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @return ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     std::string GetContainerStatus() const;
 
                     /**
-                     * 设置Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _containerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+                     * @param _containerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
@@ -870,18 +822,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取API URL
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JNDIUrl API URL
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetJNDIUrl() const;
 
                     /**
                      * 设置API URL
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _jNDIUrl API URL
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetJNDIUrl(const std::string& _jNDIUrl);
@@ -894,19 +842,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JNDIUrlHasBeenSet() const;
 
                     /**
-                     * 获取RASP details
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return RaspDetail RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取rasp detail
+                     * @return RaspDetail rasp detail
                      * 
                      */
                     std::vector<RaspInfo> GetRaspDetail() const;
 
                     /**
-                     * 设置RASP details
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _raspDetail RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置rasp detail
+                     * @param _raspDetail rasp detail
                      * 
                      */
                     void SetRaspDetail(const std::vector<RaspInfo>& _raspDetail);
@@ -1108,15 +1052,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Namespace
-                     * @return Namespace Namespace
+                     * 获取
+                     * @return Namespace 
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace
-                     * @param _namespace Namespace
+                     * 设置
+                     * @param _namespace 
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -1129,15 +1073,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Workload
-                     * @return WorkloadType Workload
+                     * 获取
+                     * @return WorkloadType 
                      * 
                      */
                     std::string GetWorkloadType() const;
 
                     /**
-                     * 设置Workload
-                     * @param _workloadType Workload
+                     * 设置
+                     * @param _workloadType 
                      * 
                      */
                     void SetWorkloadType(const std::string& _workloadType);
@@ -1279,118 +1223,104 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_pID;
                     bool m_pIDHasBeenSet;
 
                     /**
-                     * Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Main class name of process
                      */
                     std::string m_mainClass;
                     bool m_mainClassHasBeenSet;
 
                     /**
                      * Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_stackTrace;
                     bool m_stackTraceHasBeenSet;
 
                     /**
-                     * Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Listen to account
                      */
                     std::string m_serverAccount;
                     bool m_serverAccountHasBeenSet;
 
                     /**
-                     * Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Listening port
                      */
                     std::string m_serverPort;
                     bool m_serverPortHasBeenSet;
 
                     /**
                      * Process path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverExe;
                     bool m_serverExeHasBeenSet;
 
                     /**
                      * Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverArg;
                     bool m_serverArgHasBeenSet;
 
                     /**
-                     * Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Host QUUID/Super Node ID
                      */
                     std::string m_qUUID;
                     bool m_qUUIDHasBeenSet;
 
                     /**
                      * Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
                      */
                     std::string m_containerNetStatus;
                     bool m_containerNetStatusHasBeenSet;
 
                     /**
-                     * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
                      */
                     std::string m_containerNetSubStatus;
                     bool m_containerNetSubStatusHasBeenSet;
 
                     /**
-                     * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container Isolation Operation Source
                      */
                     std::string m_containerIsolateOperationSrc;
                     bool m_containerIsolateOperationSrcHasBeenSet;
 
                     /**
-                     * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
                      */
                     std::string m_containerStatus;
                     bool m_containerStatusHasBeenSet;
 
                     /**
                      * API URL
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_jNDIUrl;
                     bool m_jNDIUrlHasBeenSet;
 
                     /**
-                     * RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+                     * rasp detail
                      */
                     std::vector<RaspInfo> m_raspDetail;
                     bool m_raspDetailHasBeenSet;
@@ -1450,13 +1380,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Namespace
+                     * 
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Workload
+                     * 
                      */
                     std::string m_workloadType;
                     bool m_workloadTypeHasBeenSet;

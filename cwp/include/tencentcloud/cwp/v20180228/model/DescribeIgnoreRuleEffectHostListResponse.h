@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreRuleEffectHostList List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<IgnoreRuleEffectHostInfo> GetIgnoreRuleEffectHostList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<IgnoreRuleEffectHostInfo> m_ignoreRuleEffectHostList;
                     bool m_ignoreRuleEffectHostListHasBeenSet;

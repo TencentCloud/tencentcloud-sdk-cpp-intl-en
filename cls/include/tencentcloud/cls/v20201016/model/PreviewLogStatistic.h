@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LogContentHasBeenSet() const;
 
                     /**
-                     * 获取Line number
-                     * @return LineNum Line number
+                     * 获取Line number. Starts from 0.
+                     * @return LineNum Line number. Starts from 0.
                      * 
                      */
                     int64_t GetLineNum() const;
 
                     /**
-                     * 设置Line number
-                     * @param _lineNum Line number
+                     * 设置Line number. Starts from 0.
+                     * @param _lineNum Line number. Starts from 0.
                      * 
                      */
                     void SetLineNum(const int64_t& _lineNum);
@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool LineNumHasBeenSet() const;
 
                     /**
-                     * 获取Target log topic
-                     * @return DstTopicId Target log topic
+                     * 获取target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return DstTopicId target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDstTopicId() const;
 
                     /**
-                     * 设置Target log topic
-                     * @param _dstTopicId Target log topic
+                     * 设置target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _dstTopicId target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetDstTopicId(const std::string& _dstTopicId);
@@ -110,15 +114,15 @@ namespace TencentCloud
                     bool DstTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string "" indicates no error.
-                     * @return FailReason Error code. An empty string "" indicates no error.
+                     * 获取Error message for failure. A null string "" indicates normal.
+                     * @return FailReason Error message for failure. A null string "" indicates normal.
                      * 
                      */
                     std::string GetFailReason() const;
 
                     /**
-                     * 设置Error code. An empty string "" indicates no error.
-                     * @param _failReason Error code. An empty string "" indicates no error.
+                     * 设置Error message for failure. A null string "" indicates normal.
+                     * @param _failReason Error message for failure. A null string "" indicates normal.
                      * 
                      */
                     void SetFailReason(const std::string& _failReason);
@@ -131,15 +135,27 @@ namespace TencentCloud
                     bool FailReasonHasBeenSet() const;
 
                     /**
-                     * 获取Log timestamp
-                     * @return Time Log timestamp
+                     * 获取Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
+                     * @return Time Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Log timestamp
-                     * @param _time Log timestamp
+                     * 设置Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
+                     * @param _time Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -156,7 +172,7 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstTopicName Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetDstTopicName() const;
 
@@ -165,14 +181,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dstTopicName Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     void SetDstTopicName(const std::string& _dstTopicName);
 
                     /**
                      * 判断参数 DstTopicName 是否已赋值
                      * @return DstTopicName 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DstTopicNameHasBeenSet() const;
 
@@ -185,25 +201,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logContentHasBeenSet;
 
                     /**
-                     * Line number
+                     * Line number. Starts from 0.
                      */
                     int64_t m_lineNum;
                     bool m_lineNumHasBeenSet;
 
                     /**
-                     * Target log topic
+                     * target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_dstTopicId;
                     bool m_dstTopicIdHasBeenSet;
 
                     /**
-                     * Error code. An empty string "" indicates no error.
+                     * Error message for failure. A null string "" indicates normal.
                      */
                     std::string m_failReason;
                     bool m_failReasonHasBeenSet;
 
                     /**
-                     * Log timestamp
+                     * Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;

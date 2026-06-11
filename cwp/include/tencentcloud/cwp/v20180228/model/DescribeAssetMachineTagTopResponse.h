@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AssetKeyVal> GetTags() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssetKeyVal> m_tags;
                     bool m_tagsHasBeenSet;

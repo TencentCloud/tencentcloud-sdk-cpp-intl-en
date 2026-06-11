@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Malicious request event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Info Malicious request event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     RiskDnsEvent GetInfo() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Malicious request event details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RiskDnsEvent m_info;
                     bool m_infoHasBeenSet;

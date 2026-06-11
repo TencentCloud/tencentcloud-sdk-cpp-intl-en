@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/KafkaProtocolInfo.h>
 #include <tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h>
+#include <tencentcloud/cls/v20201016/model/UserKafkaMeta.h>
 
 
 namespace TencentCloud
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of Kafka data subscription configuration.
+                     * @return Id ID of Kafka data subscription configuration.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of Kafka data subscription configuration.
+                     * @param _id ID of Kafka data subscription configuration.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -71,18 +72,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicId Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _topicId Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -95,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name of the Kafka import task
+                     * @return Name Name of the Kafka import task
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name of the Kafka import task
+                     * @param _name Name of the Kafka import task
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -120,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+                     * @return KafkaType Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
                      * 
                      */
                     uint64_t GetKafkaType() const;
 
                     /**
-                     * 设置Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+                     * @param _kafkaType Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
                      * 
                      */
                     void SetKafkaType(const uint64_t& _kafkaType);
@@ -145,19 +134,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KafkaTypeHasBeenSet() const;
 
                     /**
-                     * 获取CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CKafka instance ID of cloud platform, required when KafkaType is 0.
+                     * @return KafkaInstance CKafka instance ID of cloud platform, required when KafkaType is 0.
                      * 
                      */
                     std::string GetKafkaInstance() const;
 
                     /**
-                     * 设置CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CKafka instance ID of cloud platform, required when KafkaType is 0.
+                     * @param _kafkaInstance CKafka instance ID of cloud platform, required when KafkaType is 0.
                      * 
                      */
                     void SetKafkaInstance(const std::string& _kafkaInstance);
@@ -171,18 +156,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Service address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerAddr Service address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
                      * 设置Service address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serverAddr Service address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -195,19 +176,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsEncryptionAddr Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether ServerAddr is an encrypted connection	
+                     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection	
                      * 
                      */
                     bool GetIsEncryptionAddr() const;
 
                     /**
-                     * 设置Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isEncryptionAddr Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether ServerAddr is an encrypted connection	
+                     * @param _isEncryptionAddr Whether ServerAddr is an encrypted connection	
                      * 
                      */
                     void SetIsEncryptionAddr(const bool& _isEncryptionAddr);
@@ -241,19 +218,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+                     * @return UserKafkaTopics The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
                      * 
                      */
                     std::string GetUserKafkaTopics() const;
 
                     /**
-                     * 设置List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+                     * @param _userKafkaTopics The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
                      * 
                      */
                     void SetUserKafkaTopics(const std::string& _userKafkaTopics);
@@ -266,19 +239,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserKafkaTopicsHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConsumerGroupName Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Kafka consumer group name of the user	
+                     * @return ConsumerGroupName Kafka consumer group name of the user	
                      * 
                      */
                     std::string GetConsumerGroupName() const;
 
                     /**
-                     * 设置Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _consumerGroupName Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Kafka consumer group name of the user	
+                     * @param _consumerGroupName Kafka consumer group name of the user	
                      * 
                      */
                     void SetConsumerGroupName(const std::string& _consumerGroupName);
@@ -291,15 +260,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConsumerGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status. 1: Running; 2: Suspension.
+                     * @return Status Status. 1: Running; 2: Suspension.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status. 1: Running; 2: Suspension.
+                     * @param _status Status. 1: Running; 2: Suspension.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -312,15 +281,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data import position. -2: earliest (default); -1: latest
+                     * @return Offset Data import position. -2: earliest (default); -1: latest
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Data import position. -2: earliest (default); -1: latest
+                     * @param _offset Data import position. -2: earliest (default); -1: latest
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -333,19 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time. Format `YYYY-MM-DD HH:MM:SS`
+                     * @return CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time. Format `YYYY-MM-DD HH:MM:SS`
+                     * @param _createTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -358,19 +323,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update time. Format: `YYYY-MM-DD HH:MM:SS`
+                     * @return UpdateTime Update time. Format: `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update time. Format: `YYYY-MM-DD HH:MM:SS`
+                     * @param _updateTime Update time. Format: `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -384,18 +345,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogRechargeRule Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LogRechargeRuleInfo GetLogRechargeRule() const;
 
                     /**
                      * 设置Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _logRechargeRule Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLogRechargeRule(const LogRechargeRuleInfo& _logRechargeRule);
@@ -407,52 +364,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LogRechargeRuleHasBeenSet() const;
 
+                    /**
+                     * 获取User kafka extended information
+                     * @return UserKafkaMeta User kafka extended information
+                     * 
+                     */
+                    UserKafkaMeta GetUserKafkaMeta() const;
+
+                    /**
+                     * 设置User kafka extended information
+                     * @param _userKafkaMeta User kafka extended information
+                     * 
+                     */
+                    void SetUserKafkaMeta(const UserKafkaMeta& _userKafkaMeta);
+
+                    /**
+                     * 判断参数 UserKafkaMeta 是否已赋值
+                     * @return UserKafkaMeta 是否已赋值
+                     * 
+                     */
+                    bool UserKafkaMetaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of Kafka data subscription configuration.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
                      * Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name of the Kafka import task
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
                      */
                     uint64_t m_kafkaType;
                     bool m_kafkaTypeHasBeenSet;
 
                     /**
-                     * CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CKafka instance ID of cloud platform, required when KafkaType is 0.
                      */
                     std::string m_kafkaInstance;
                     bool m_kafkaInstanceHasBeenSet;
 
                     /**
                      * Service address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether ServerAddr is an encrypted connection	
                      */
                     bool m_isEncryptionAddr;
                     bool m_isEncryptionAddrHasBeenSet;
@@ -464,51 +436,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
                      */
                     std::string m_userKafkaTopics;
                     bool m_userKafkaTopicsHasBeenSet;
 
                     /**
-                     * Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Kafka consumer group name of the user	
                      */
                     std::string m_consumerGroupName;
                     bool m_consumerGroupNameHasBeenSet;
 
                     /**
-                     * Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status. 1: Running; 2: Suspension.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+                     * Data import position. -2: earliest (default); -1: latest
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation time. Format `YYYY-MM-DD HH:MM:SS`
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update time. Format: `YYYY-MM-DD HH:MM:SS`
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LogRechargeRuleInfo m_logRechargeRule;
                     bool m_logRechargeRuleHasBeenSet;
+
+                    /**
+                     * User kafka extended information
+                     */
+                    UserKafkaMeta m_userKafkaMeta;
+                    bool m_userKafkaMetaHasBeenSet;
 
                 };
             }

@@ -68,18 +68,38 @@ namespace TencentCloud
                     bool EnableTagHasBeenSet() const;
 
                     /**
-                     * 获取List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * 获取Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * @return MetaFields Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
-                     * 设置List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * 设置Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _metaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * @param _metaFields Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -93,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetaFieldsHasBeenSet() const;
 
                     /**
-                     * 获取JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
+                     * @return JsonType JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
                      * 
                      */
                     int64_t GetJsonType() const;
 
                     /**
-                     * 设置JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _jsonType JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
+                     * @param _jsonType JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
                      * 
                      */
                     void SetJsonType(const int64_t& _jsonType);
@@ -126,15 +142,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_enableTagHasBeenSet;
 
                     /**
-                     * List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;
 
                     /**
-                     * JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
                      */
                     int64_t m_jsonType;
                     bool m_jsonTypeHasBeenSet;

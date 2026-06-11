@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取Stage: Develop, preview, released.
-                     * @return Phase Stage: Develop, preview, released.
+                     * 获取Phase: Valid values: Develop; Platform; Online.
+                     * @return Phase Phase: Valid values: Develop; Platform; Online.
                      * 
                      */
                     std::string GetPhase() const;
 
                     /**
-                     * 设置Stage: Develop, preview, released.
-                     * @param _phase Stage: Develop, preview, released.
+                     * 设置Phase: Valid values: Develop; Platform; Online.
+                     * @param _phase Phase: Valid values: Develop; Platform; Online.
                      * 
                      */
                     void SetPhase(const std::string& _phase);
@@ -493,7 +493,7 @@ namespace TencentCloud
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * Stage: Develop, preview, released.
+                     * Phase: Valid values: Develop; Platform; Online.
                      */
                     std::string m_phase;
                     bool m_phaseHasBeenSet;

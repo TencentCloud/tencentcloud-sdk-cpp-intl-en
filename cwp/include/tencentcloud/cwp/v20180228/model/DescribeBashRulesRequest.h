@@ -108,18 +108,42 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
                      * @return Filters Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
                      * @param _filters Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -153,7 +177,13 @@ namespace TencentCloud
 
                     /**
                      * Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

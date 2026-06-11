@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shipping rule ID
-                     * @return ShipperId Shipping rule ID
+                     * 获取Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @return ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     std::string GetShipperId() const;
 
                     /**
-                     * 设置Shipping rule ID
-                     * @param _shipperId Shipping rule ID
+                     * 设置Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @param _shipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     void SetShipperId(const std::string& _shipperId);
@@ -64,15 +72,23 @@ namespace TencentCloud
                     bool ShipperIdHasBeenSet() const;
 
                     /**
-                     * 获取Shipping task ID
-                     * @return TaskId Shipping task ID
+                     * 获取Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @return TaskId Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Shipping task ID
-                     * @param _taskId Shipping task ID
+                     * 设置Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @param _taskId Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -87,13 +103,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shipping rule ID
+                     * Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      */
                     std::string m_shipperId;
                     bool m_shipperIdHasBeenSet;
 
                     /**
-                     * Shipping task ID
+                     * Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

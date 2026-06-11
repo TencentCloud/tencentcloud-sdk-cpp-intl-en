@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hit rule name
-                     * @return MatchRuleName Hit rule name
+                     * 获取<p>Hit rule name.</p>
+                     * @return MatchRuleName <p>Hit rule name.</p>
                      * 
                      */
                     std::string GetMatchRuleName() const;
 
                     /**
-                     * 设置Hit rule name
-                     * @param _matchRuleName Hit rule name
+                     * 设置<p>Hit rule name.</p>
+                     * @param _matchRuleName <p>Hit rule name.</p>
                      * 
                      */
                     void SetMatchRuleName(const std::string& _matchRuleName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MatchRuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Hit rule type
-                     * @return MatchRuleType Hit rule type
+                     * 获取<p>Hit rule type.</p>
+                     * @return MatchRuleType <p>Hit rule type.</p>
                      * 
                      */
                     std::string GetMatchRuleType() const;
 
                     /**
-                     * 设置Hit rule type
-                     * @param _matchRuleType Hit rule type
+                     * 设置<p>Hit rule type.</p>
+                     * @param _matchRuleType <p>Hit rule type.</p>
                      * 
                      */
                     void SetMatchRuleType(const std::string& _matchRuleType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MatchRuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level
-                     * @return RiskLevel Alarm level
+                     * 获取<p>Alarm level.</p>
+                     * @return RiskLevel <p>Alarm level.</p>
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Alarm level
-                     * @param _riskLevel Alarm level
+                     * 设置<p>Alarm level.</p>
+                     * @param _riskLevel <p>Alarm level.</p>
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterID Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterID <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterID Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterID <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-                     * @return ClusterName Cluster name
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-                     * @param _clusterName Cluster name
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Cluster running status
-                     * @return ClusterRunningStatus Cluster running status
+                     * 获取<p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+                     * @return ClusterRunningStatus <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
                      * 
                      */
                     std::string GetClusterRunningStatus() const;
 
                     /**
-                     * 设置Cluster running status
-                     * @param _clusterRunningStatus Cluster running status
+                     * 设置<p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+                     * @param _clusterRunningStatus <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
                      * 
                      */
                     void SetClusterRunningStatus(const std::string& _clusterRunningStatus);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ClusterRunningStatusHasBeenSet() const;
 
                     /**
-                     * 获取First creation time
-                     * @return FirstCreateTime First creation time
+                     * 获取<p>Initial generation time.</p>
+                     * @return FirstCreateTime <p>Initial generation time.</p>
                      * 
                      */
                     std::string GetFirstCreateTime() const;
 
                     /**
-                     * 设置First creation time
-                     * @param _firstCreateTime First creation time
+                     * 设置<p>Initial generation time.</p>
+                     * @param _firstCreateTime <p>Initial generation time.</p>
                      * 
                      */
                     void SetFirstCreateTime(const std::string& _firstCreateTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool FirstCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last creation time
-                     * @return LastCreateTime Last creation time
+                     * 获取<p>Last generation time.</p>
+                     * @return LastCreateTime <p>Last generation time.</p>
                      * 
                      */
                     std::string GetLastCreateTime() const;
 
                     /**
-                     * 设置Last creation time
-                     * @param _lastCreateTime Last creation time
+                     * 设置<p>Last generation time.</p>
+                     * @param _lastCreateTime <p>Last generation time.</p>
                      * 
                      */
                     void SetLastCreateTime(const std::string& _lastCreateTime);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool LastCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of alarms
-                     * @return AlarmCount Number of alarms
+                     * 获取<p>Number of alarms.</p>
+                     * @return AlarmCount <p>Number of alarms.</p>
                      * 
                      */
                     uint64_t GetAlarmCount() const;
 
                     /**
-                     * 设置Number of alarms
-                     * @param _alarmCount Number of alarms
+                     * 设置<p>Number of alarms.</p>
+                     * @param _alarmCount <p>Number of alarms.</p>
                      * 
                      */
                     void SetAlarmCount(const uint64_t& _alarmCount);
@@ -237,35 +237,15 @@ namespace TencentCloud
                     bool AlarmCountHasBeenSet() const;
 
                     /**
-                     * 获取Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
-                     * @return Status Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+                     * 获取<p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+                     * @return Status <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
-                     * @param _status Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+                     * 设置<p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+                     * @param _status <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -278,15 +258,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The master IP of a cluster
-                     * @return ClusterMasterIP The master IP of a cluster
+                     * 获取<p>Cluster master IP address.</p>
+                     * @return ClusterMasterIP <p>Cluster master IP address.</p>
                      * 
                      */
                     std::string GetClusterMasterIP() const;
 
                     /**
-                     * 设置The master IP of a cluster
-                     * @param _clusterMasterIP The master IP of a cluster
+                     * 设置<p>Cluster master IP address.</p>
+                     * @param _clusterMasterIP <p>Cluster master IP address.</p>
                      * 
                      */
                     void SetClusterMasterIP(const std::string& _clusterMasterIP);
@@ -299,15 +279,15 @@ namespace TencentCloud
                     bool ClusterMasterIPHasBeenSet() const;
 
                     /**
-                     * 获取K8s version
-                     * @return K8sVersion K8s version
+                     * 获取<p>K8s version.</p>
+                     * @return K8sVersion <p>K8s version.</p>
                      * 
                      */
                     std::string GetK8sVersion() const;
 
                     /**
-                     * 设置K8s version
-                     * @param _k8sVersion K8s version
+                     * 设置<p>K8s version.</p>
+                     * @param _k8sVersion <p>K8s version.</p>
                      * 
                      */
                     void SetK8sVersion(const std::string& _k8sVersion);
@@ -320,15 +300,15 @@ namespace TencentCloud
                     bool K8sVersionHasBeenSet() const;
 
                     /**
-                     * 获取Runtime component
-                     * @return RunningComponent Runtime component
+                     * 获取<p>Runtime component.</p>
+                     * @return RunningComponent <p>Runtime component.</p>
                      * 
                      */
                     std::vector<std::string> GetRunningComponent() const;
 
                     /**
-                     * 设置Runtime component
-                     * @param _runningComponent Runtime component
+                     * 设置<p>Runtime component.</p>
+                     * @param _runningComponent <p>Runtime component.</p>
                      * 
                      */
                     void SetRunningComponent(const std::vector<std::string>& _runningComponent);
@@ -341,15 +321,15 @@ namespace TencentCloud
                     bool RunningComponentHasBeenSet() const;
 
                     /**
-                     * 获取Description
-                     * @return Desc Description
+                     * 获取<p>Description.</p>
+                     * @return Desc <p>Description.</p>
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置Description
-                     * @param _desc Description
+                     * 设置<p>Description.</p>
+                     * @param _desc <p>Description.</p>
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -362,15 +342,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion
-                     * @return Suggestion Suggestion
+                     * 获取<p>Suggestion.</p>
+                     * @return Suggestion <p>Suggestion.</p>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion
-                     * @param _suggestion Suggestion
+                     * 设置<p>Suggestion.</p>
+                     * @param _suggestion <p>Suggestion.</p>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -383,15 +363,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Request information
-                     * @return Info Request information
+                     * 获取<p>Request information.</p>
+                     * @return Info <p>Request information.</p>
                      * 
                      */
                     std::string GetInfo() const;
 
                     /**
-                     * 设置Request information
-                     * @param _info Request information
+                     * 设置<p>Request information.</p>
+                     * @param _info <p>Request information.</p>
                      * 
                      */
                     void SetInfo(const std::string& _info);
@@ -404,15 +384,15 @@ namespace TencentCloud
                     bool InfoHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID
-                     * @return MatchRuleID Rule ID
+                     * 获取<p>Rule ID.</p>
+                     * @return MatchRuleID <p>Rule ID.</p>
                      * 
                      */
                     std::string GetMatchRuleID() const;
 
                     /**
-                     * 设置Rule ID
-                     * @param _matchRuleID Rule ID
+                     * 设置<p>Rule ID.</p>
+                     * @param _matchRuleID <p>Rule ID.</p>
                      * 
                      */
                     void SetMatchRuleID(const std::string& _matchRuleID);
@@ -425,15 +405,15 @@ namespace TencentCloud
                     bool MatchRuleIDHasBeenSet() const;
 
                     /**
-                     * 获取An array of highlighted fields
-                     * @return HighLightFields An array of highlighted fields
+                     * 获取<p>Array of highlighted fields.</p>
+                     * @return HighLightFields <p>Array of highlighted fields.</p>
                      * 
                      */
                     std::vector<std::string> GetHighLightFields() const;
 
                     /**
-                     * 设置An array of highlighted fields
-                     * @param _highLightFields An array of highlighted fields
+                     * 设置<p>Array of highlighted fields.</p>
+                     * @param _highLightFields <p>Array of highlighted fields.</p>
                      * 
                      */
                     void SetHighLightFields(const std::vector<std::string>& _highLightFields);
@@ -446,15 +426,15 @@ namespace TencentCloud
                     bool HighLightFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Hit rule
-                     * @return MatchRule Hit rule
+                     * 获取<p>Hit rule.</p>
+                     * @return MatchRule <p>Hit rule.</p>
                      * 
                      */
                     K8sApiAbnormalRuleScopeInfo GetMatchRule() const;
 
                     /**
-                     * 设置Hit rule
-                     * @param _matchRule Hit rule
+                     * 设置<p>Hit rule.</p>
+                     * @param _matchRule <p>Hit rule.</p>
                      * 
                      */
                     void SetMatchRule(const K8sApiAbnormalRuleScopeInfo& _matchRule);
@@ -466,126 +446,175 @@ namespace TencentCloud
                      */
                     bool MatchRuleHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+                     * @return HighLightFieldsVal <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+                     * 
+                     */
+                    std::string GetHighLightFieldsVal() const;
+
+                    /**
+                     * 设置<p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+                     * @param _highLightFieldsVal <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+                     * 
+                     */
+                    void SetHighLightFieldsVal(const std::string& _highLightFieldsVal);
+
+                    /**
+                     * 判断参数 HighLightFieldsVal 是否已赋值
+                     * @return HighLightFieldsVal 是否已赋值
+                     * 
+                     */
+                    bool HighLightFieldsValHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Rule type.</p>
+                     * @return RuleTypeZH <p>Rule type.</p>
+                     * 
+                     */
+                    std::string GetRuleTypeZH() const;
+
+                    /**
+                     * 设置<p>Rule type.</p>
+                     * @param _ruleTypeZH <p>Rule type.</p>
+                     * 
+                     */
+                    void SetRuleTypeZH(const std::string& _ruleTypeZH);
+
+                    /**
+                     * 判断参数 RuleTypeZH 是否已赋值
+                     * @return RuleTypeZH 是否已赋值
+                     * 
+                     */
+                    bool RuleTypeZHHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Hit rule name
+                     * <p>Hit rule name.</p>
                      */
                     std::string m_matchRuleName;
                     bool m_matchRuleNameHasBeenSet;
 
                     /**
-                     * Hit rule type
+                     * <p>Hit rule type.</p>
                      */
                     std::string m_matchRuleType;
                     bool m_matchRuleTypeHasBeenSet;
 
                     /**
-                     * Alarm level
+                     * <p>Alarm level.</p>
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Cluster name
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Cluster running status
+                     * <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
                      */
                     std::string m_clusterRunningStatus;
                     bool m_clusterRunningStatusHasBeenSet;
 
                     /**
-                     * First creation time
+                     * <p>Initial generation time.</p>
                      */
                     std::string m_firstCreateTime;
                     bool m_firstCreateTimeHasBeenSet;
 
                     /**
-                     * Last creation time
+                     * <p>Last generation time.</p>
                      */
                     std::string m_lastCreateTime;
                     bool m_lastCreateTimeHasBeenSet;
 
                     /**
-                     * Number of alarms
+                     * <p>Number of alarms.</p>
                      */
                     uint64_t m_alarmCount;
                     bool m_alarmCountHasBeenSet;
 
                     /**
-                     * Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+                     * <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The master IP of a cluster
+                     * <p>Cluster master IP address.</p>
                      */
                     std::string m_clusterMasterIP;
                     bool m_clusterMasterIPHasBeenSet;
 
                     /**
-                     * K8s version
+                     * <p>K8s version.</p>
                      */
                     std::string m_k8sVersion;
                     bool m_k8sVersionHasBeenSet;
 
                     /**
-                     * Runtime component
+                     * <p>Runtime component.</p>
                      */
                     std::vector<std::string> m_runningComponent;
                     bool m_runningComponentHasBeenSet;
 
                     /**
-                     * Description
+                     * <p>Description.</p>
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Suggestion
+                     * <p>Suggestion.</p>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Request information
+                     * <p>Request information.</p>
                      */
                     std::string m_info;
                     bool m_infoHasBeenSet;
 
                     /**
-                     * Rule ID
+                     * <p>Rule ID.</p>
                      */
                     std::string m_matchRuleID;
                     bool m_matchRuleIDHasBeenSet;
 
                     /**
-                     * An array of highlighted fields
+                     * <p>Array of highlighted fields.</p>
                      */
                     std::vector<std::string> m_highLightFields;
                     bool m_highLightFieldsHasBeenSet;
 
                     /**
-                     * Hit rule
+                     * <p>Hit rule.</p>
                      */
                     K8sApiAbnormalRuleScopeInfo m_matchRule;
                     bool m_matchRuleHasBeenSet;
+
+                    /**
+                     * <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+                     */
+                    std::string m_highLightFieldsVal;
+                    bool m_highLightFieldsValHasBeenSet;
+
+                    /**
+                     * <p>Rule type.</p>
+                     */
+                    std::string m_ruleTypeZH;
+                    bool m_ruleTypeZHHasBeenSet;
 
                 };
             }

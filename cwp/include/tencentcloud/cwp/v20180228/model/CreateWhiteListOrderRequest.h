@@ -106,27 +106,6 @@ namespace TencentCloud
                     bool DeadlineHasBeenSet() const;
 
                     /**
-                     * 获取Rule name, big asset center: asset_center
-                     * @return RuleName Rule name, big asset center: asset_center
-                     * 
-                     */
-                    std::string GetRuleName() const;
-
-                    /**
-                     * 设置Rule name, big asset center: asset_center
-                     * @param _ruleName Rule name, big asset center: asset_center
-                     * 
-                     */
-                    void SetRuleName(const std::string& _ruleName);
-
-                    /**
-                     * 判断参数 RuleName 是否已赋值
-                     * @return RuleName 是否已赋值
-                     * 
-                     */
-                    bool RuleNameHasBeenSet() const;
-
-                    /**
                      * 获取Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
                      * @return SourceType Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
                      * 
@@ -146,6 +125,27 @@ namespace TencentCloud
                      * 
                      */
                     bool SourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Rule name, big asset center: asset_center
+                     * @return RuleName Rule name, big asset center: asset_center
+                     * 
+                     */
+                    std::string GetRuleName() const;
+
+                    /**
+                     * 设置Rule name, big asset center: asset_center
+                     * @param _ruleName Rule name, big asset center: asset_center
+                     * 
+                     */
+                    void SetRuleName(const std::string& _ruleName);
+
+                    /**
+                     * 判断参数 RuleName 是否已赋值
+                     * @return RuleName 是否已赋值
+                     * 
+                     */
+                    bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
@@ -210,16 +210,16 @@ namespace TencentCloud
                     bool m_deadlineHasBeenSet;
 
                     /**
-                     * Rule name, big asset center: asset_center
-                     */
-                    std::string m_ruleName;
-                    bool m_ruleNameHasBeenSet;
-
-                    /**
                      * Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
                      */
                     uint64_t m_sourceType;
                     bool m_sourceTypeHasBeenSet;
+
+                    /**
+                     * Rule name, big asset center: asset_center
+                     */
+                    std::string m_ruleName;
+                    bool m_ruleNameHasBeenSet;
 
                     /**
                      * Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.

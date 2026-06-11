@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckItemId Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique Check Item ID
+                     * @return CheckItemId Unique Check Item ID
                      * 
                      */
                     int64_t GetCheckItemId() const;
 
                     /**
-                     * 设置Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkItemId Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique Check Item ID
+                     * @param _checkItemId Unique Check Item ID
                      * 
                      */
                     void SetCheckItemId(const int64_t& _checkItemId);
@@ -93,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ItemDetail Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Check Item Details
+                     * @return ItemDetail Check Item Details
                      * 
                      */
                     std::string GetItemDetail() const;
 
                     /**
-                     * 设置Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _itemDetail Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Check Item Details
+                     * @param _itemDetail Check Item Details
                      * 
                      */
                     void SetItemDetail(const std::string& _itemDetail);
@@ -118,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ItemDetailHasBeenSet() const;
 
                     /**
-                     * 获取Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Threat Level: Serious, High, Medium, Hint
+                     * @return RiskLevel Threat Level: Serious, High, Medium, Hint
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskLevel Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Threat Level: Serious, High, Medium, Hint
+                     * @param _riskLevel Threat Level: Serious, High, Medium, Hint
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -143,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskTarget Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+                     * @return RiskTarget Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
                      * 
                      */
                     std::string GetRiskTarget() const;
 
                     /**
-                     * 设置Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskTarget Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+                     * @param _riskTarget Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
                      * 
                      */
                     void SetRiskTarget(const std::string& _riskTarget);
@@ -168,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskTargetHasBeenSet() const;
 
                     /**
-                     * 获取Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskType Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+                     * @return RiskType Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
                      * 
                      */
                     std::string GetRiskType() const;
 
                     /**
-                     * 设置Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskType Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+                     * @param _riskType Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
                      * 
                      */
                     void SetRiskType(const std::string& _riskType);
@@ -193,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskAttribute Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+                     * @return RiskAttribute Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
                      * 
                      */
                     std::string GetRiskAttribute() const;
 
                     /**
-                     * 设置Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskAttribute Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+                     * @param _riskAttribute Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
                      * 
                      */
                     void SetRiskAttribute(const std::string& _riskAttribute);
@@ -218,19 +194,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskAttributeHasBeenSet() const;
 
                     /**
-                     * 获取Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskProperty Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+                     * @return RiskProperty Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
                      * 
                      */
                     std::string GetRiskProperty() const;
 
                     /**
-                     * 设置Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskProperty Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+                     * @param _riskProperty Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
                      * 
                      */
                     void SetRiskProperty(const std::string& _riskProperty);
@@ -243,19 +247,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskPropertyHasBeenSet() const;
 
                     /**
-                     * 获取CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CVENumber CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CVE id
+                     * @return CVENumber CVE id
                      * 
                      */
                     std::string GetCVENumber() const;
 
                     /**
-                     * 设置CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cVENumber CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CVE id
+                     * @param _cVENumber CVE id
                      * 
                      */
                     void SetCVENumber(const std::string& _cVENumber);
@@ -269,18 +269,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiscoverTime Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiscoverTime() const;
 
                     /**
                      * 设置Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _discoverTime Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiscoverTime(const std::string& _discoverTime);
@@ -294,18 +290,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSolution(const std::string& _solution);
@@ -318,19 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SolutionHasBeenSet() const;
 
                     /**
-                     * 获取CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CVSS CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CVSS Information, Used for Drawing
+                     * @return CVSS CVSS Information, Used for Drawing
                      * 
                      */
                     std::string GetCVSS() const;
 
                     /**
-                     * 设置CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cVSS CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CVSS Information, Used for Drawing
+                     * @param _cVSS CVSS Information, Used for Drawing
                      * 
                      */
                     void SetCVSS(const std::string& _cVSS);
@@ -344,18 +332,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCVSSScore() const;
 
                     /**
                      * 设置CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCVSSScore(const std::string& _cVSSScore);
@@ -369,18 +353,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RelateLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRelateLink() const;
 
                     /**
                      * 设置Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _relateLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRelateLink(const std::string& _relateLink);
@@ -393,19 +373,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RelateLinkHasBeenSet() const;
 
                     /**
-                     * 获取Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AffectedType Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Impact Type: Node or Workload
+                     * @return AffectedType Impact Type: Node or Workload
                      * 
                      */
                     std::string GetAffectedType() const;
 
                     /**
-                     * 设置Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _affectedType Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Impact Type: Node or Workload
+                     * @param _affectedType Impact Type: Node or Workload
                      * 
                      */
                     void SetAffectedType(const std::string& _affectedType);
@@ -418,19 +394,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AffectedTypeHasBeenSet() const;
 
                     /**
-                     * 获取Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AffectedVersion Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Affected Version Information
+                     * @return AffectedVersion Affected Version Information
                      * 
                      */
                     std::string GetAffectedVersion() const;
 
                     /**
-                     * 设置Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _affectedVersion Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Affected Version Information
+                     * @param _affectedVersion Affected Version Information
                      * 
                      */
                     void SetAffectedVersion(const std::string& _affectedVersion);
@@ -443,19 +415,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AffectedVersionHasBeenSet() const;
 
                     /**
-                     * 获取Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoredAssetNum Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Ignored Assets
+                     * @return IgnoredAssetNum Number of Ignored Assets
                      * 
                      */
                     int64_t GetIgnoredAssetNum() const;
 
                     /**
-                     * 设置Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ignoredAssetNum Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Ignored Assets
+                     * @param _ignoredAssetNum Number of Ignored Assets
                      * 
                      */
                     void SetIgnoredAssetNum(const int64_t& _ignoredAssetNum);
@@ -468,19 +436,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IgnoredAssetNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsIgnored Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to Ignore the Check Item
+                     * @return IsIgnored Whether to Ignore the Check Item
                      * 
                      */
                     bool GetIsIgnored() const;
 
                     /**
-                     * 设置Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isIgnored Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to Ignore the Check Item
+                     * @param _isIgnored Whether to Ignore the Check Item
                      * 
                      */
                     void SetIsIgnored(const bool& _isIgnored);
@@ -493,19 +457,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsIgnoredHasBeenSet() const;
 
                     /**
-                     * 获取Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskAssessment Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Affected Critique
+                     * @return RiskAssessment Affected Critique
                      * 
                      */
                     std::string GetRiskAssessment() const;
 
                     /**
-                     * 设置Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskAssessment Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Affected Critique
+                     * @param _riskAssessment Affected Critique
                      * 
                      */
                     void SetRiskAssessment(const std::string& _riskAssessment);
@@ -520,8 +480,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique Check Item ID
                      */
                     int64_t m_checkItemId;
                     bool m_checkItemIdHasBeenSet;
@@ -533,120 +492,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Check Item Details
                      */
                     std::string m_itemDetail;
                     bool m_itemDetailHasBeenSet;
 
                     /**
-                     * Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Threat Level: Serious, High, Medium, Hint
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
                      */
                     std::string m_riskTarget;
                     bool m_riskTargetHasBeenSet;
 
                     /**
-                     * Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
                      */
                     std::string m_riskType;
                     bool m_riskTypeHasBeenSet;
 
                     /**
-                     * Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
                      */
                     std::string m_riskAttribute;
                     bool m_riskAttributeHasBeenSet;
 
                     /**
-                     * Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
                      */
                     std::string m_riskProperty;
                     bool m_riskPropertyHasBeenSet;
 
                     /**
-                     * CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CVE id
                      */
                     std::string m_cVENumber;
                     bool m_cVENumberHasBeenSet;
 
                     /**
                      * Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_discoverTime;
                     bool m_discoverTimeHasBeenSet;
 
                     /**
                      * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_solution;
                     bool m_solutionHasBeenSet;
 
                     /**
-                     * CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CVSS Information, Used for Drawing
                      */
                     std::string m_cVSS;
                     bool m_cVSSHasBeenSet;
 
                     /**
                      * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cVSSScore;
                     bool m_cVSSScoreHasBeenSet;
 
                     /**
                      * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_relateLink;
                     bool m_relateLinkHasBeenSet;
 
                     /**
-                     * Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Impact Type: Node or Workload
                      */
                     std::string m_affectedType;
                     bool m_affectedTypeHasBeenSet;
 
                     /**
-                     * Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Affected Version Information
                      */
                     std::string m_affectedVersion;
                     bool m_affectedVersionHasBeenSet;
 
                     /**
-                     * Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Ignored Assets
                      */
                     int64_t m_ignoredAssetNum;
                     bool m_ignoredAssetNumHasBeenSet;
 
                     /**
-                     * Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to Ignore the Check Item
                      */
                     bool m_isIgnored;
                     bool m_isIgnoredHasBeenSet;
 
                     /**
-                     * Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Affected Critique
                      */
                     std::string m_riskAssessment;
                     bool m_riskAssessmentHasBeenSet;

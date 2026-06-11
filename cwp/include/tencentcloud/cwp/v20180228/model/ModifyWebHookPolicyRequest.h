@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool QuuidsHasBeenSet() const;
 
                     /**
-                     * 获取Machines to be excluded
-                     * @return ExcludedQuuids Machines to be excluded
+                     * 获取List of machines to be excluded.	
+                     * @return ExcludedQuuids List of machines to be excluded.	
                      * 
                      */
                     std::vector<std::string> GetExcludedQuuids() const;
 
                     /**
-                     * 设置Machines to be excluded
-                     * @param _excludedQuuids Machines to be excluded
+                     * 设置List of machines to be excluded.	
+                     * @param _excludedQuuids List of machines to be excluded.	
                      * 
                      */
                     void SetExcludedQuuids(const std::vector<std::string>& _excludedQuuids);
@@ -255,6 +255,27 @@ namespace TencentCloud
                      * 
                      */
                     bool ExcludedQuuidsHasBeenSet() const;
+
+                    /**
+                     * 获取Push language type, Chinese zh, English en
+                     * @return MsgLanguage Push language type, Chinese zh, English en
+                     * 
+                     */
+                    std::string GetMsgLanguage() const;
+
+                    /**
+                     * 设置Push language type, Chinese zh, English en
+                     * @param _msgLanguage Push language type, Chinese zh, English en
+                     * 
+                     */
+                    void SetMsgLanguage(const std::string& _msgLanguage);
+
+                    /**
+                     * 判断参数 MsgLanguage 是否已赋值
+                     * @return MsgLanguage 是否已赋值
+                     * 
+                     */
+                    bool MsgLanguageHasBeenSet() const;
 
                 private:
 
@@ -313,10 +334,16 @@ namespace TencentCloud
                     bool m_quuidsHasBeenSet;
 
                     /**
-                     * Machines to be excluded
+                     * List of machines to be excluded.	
                      */
                     std::vector<std::string> m_excludedQuuids;
                     bool m_excludedQuuidsHasBeenSet;
+
+                    /**
+                     * Push language type, Chinese zh, English en
+                     */
+                    std::string m_msgLanguage;
+                    bool m_msgLanguageHasBeenSet;
 
                 };
             }

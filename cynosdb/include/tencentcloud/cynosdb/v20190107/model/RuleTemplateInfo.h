@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Rule template content.
                 */
                 class RuleTemplateInfo : public AbstractModel
                 {

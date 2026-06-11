@@ -199,9 +199,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FlagshipMachineCnt Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetFlagshipMachineCnt() const;
@@ -214,10 +212,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FlagshipMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProtectDays Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取protection days
+                     * @return ProtectDays protection days
                      * 
                      */
                     uint64_t GetProtectDays() const;
@@ -231,9 +227,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddedOnTheFifteen Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAddedOnTheFifteen() const;
@@ -315,21 +309,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_flagshipMachineCnt;
                     bool m_flagshipMachineCntHasBeenSet;
 
                     /**
-                     * Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * protection days
                      */
                     uint64_t m_protectDays;
                     bool m_protectDaysHasBeenSet;
 
                     /**
                      * Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_addedOnTheFifteen;
                     bool m_addedOnTheFifteenHasBeenSet;

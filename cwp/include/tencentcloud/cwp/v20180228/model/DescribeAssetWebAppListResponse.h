@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebApps Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List
+                     * @return WebApps List
                      * 
                      */
                     std::vector<AssetWebAppBaseInfo> GetWebApps() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List
                      */
                     std::vector<AssetWebAppBaseInfo> m_webApps;
                     bool m_webAppsHasBeenSet;

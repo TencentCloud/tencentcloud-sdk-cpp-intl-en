@@ -145,11 +145,11 @@ namespace TencentCloud
                      * 获取Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
                      * @return ClusterType Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
                      * 
                      */
                     std::string GetClusterType() const;
@@ -158,11 +158,11 @@ namespace TencentCloud
                      * 设置Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
                      * @param _clusterType Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -197,22 +197,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
                      * @return TplType Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
                      * 
                      */
                     std::string GetTplType() const;
 
                     /**
                      * 设置Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
                      * @param _tplType Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
                      * 
                      */
                     void SetTplType(const std::string& _tplType);
@@ -256,7 +256,7 @@ namespace TencentCloud
                      * Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
@@ -269,8 +269,8 @@ namespace TencentCloud
 
                     /**
                      * Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
                      */
                     std::string m_tplType;
                     bool m_tplTypeHasBeenSet;

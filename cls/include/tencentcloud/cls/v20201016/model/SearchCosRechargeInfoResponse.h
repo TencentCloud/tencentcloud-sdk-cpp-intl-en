@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取First few lines of data from a certain file under the matched bucket
+                     * @return Data First few lines of data from a certain file under the matched bucket
                      * 
                      */
                     std::vector<std::string> GetData() const;
@@ -73,9 +73,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Path Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPath() const;
@@ -88,8 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Msg Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reason for preview data fetch failure
+                     * @return Msg Reason for preview data fetch failure
                      * 
                      */
                     std::string GetMsg() const;
@@ -102,8 +100,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+                     * @return Status Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
                      * 
                      */
                     int64_t GetStatus() const;
@@ -118,7 +134,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
+                     * First few lines of data from a certain file under the matched bucket
                      */
                     std::vector<std::string> m_data;
                     bool m_dataHasBeenSet;
@@ -131,19 +147,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
+                     * Reason for preview data fetch failure
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * Status
+                     * Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

@@ -1,0 +1,166 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CLS_V20201016_MODEL_MESSAGE_H_
+#define TENCENTCLOUD_CLS_V20201016_MODEL_MESSAGE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/ToolCall.h>
+
+
+namespace TencentCloud
+{
+    namespace Cls
+    {
+        namespace V20201016
+        {
+            namespace Model
+            {
+                /**
+                * session content
+                */
+                class Message : public AbstractModel
+                {
+                public:
+                    Message();
+                    ~Message() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取<p>Role</p><p>Enumeration value:</p><ul><li>user: User</li><li>assistant: AI assistant</li></ul>
+                     * @return Role <p>Role</p><p>Enumeration value:</p><ul><li>user: User</li><li>assistant: AI assistant</li></ul>
+                     * 
+                     */
+                    std::string GetRole() const;
+
+                    /**
+                     * 设置<p>Role</p><p>Enumeration value:</p><ul><li>user: User</li><li>assistant: AI assistant</li></ul>
+                     * @param _role <p>Role</p><p>Enumeration value:</p><ul><li>user: User</li><li>assistant: AI assistant</li></ul>
+                     * 
+                     */
+                    void SetRole(const std::string& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     * 
+                     */
+                    bool RoleHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Text content</p>
+                     * @return Content <p>Text content</p>
+                     * 
+                     */
+                    std::string GetContent() const;
+
+                    /**
+                     * 设置<p>Text content</p>
+                     * @param _content <p>Text content</p>
+                     * 
+                     */
+                    void SetContent(const std::string& _content);
+
+                    /**
+                     * 判断参数 Content 是否已赋值
+                     * @return Content 是否已赋值
+                     * 
+                     */
+                    bool ContentHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Thought chain content.<br>Used to show the model thinking process, only available in deep thinking mode. Returned as an output parameter only. No need to import it into the input parameter during multi-round dialogue.</p>
+                     * @return ReasoningContent <p>Thought chain content.<br>Used to show the model thinking process, only available in deep thinking mode. Returned as an output parameter only. No need to import it into the input parameter during multi-round dialogue.</p>
+                     * 
+                     */
+                    std::string GetReasoningContent() const;
+
+                    /**
+                     * 设置<p>Thought chain content.<br>Used to show the model thinking process, only available in deep thinking mode. Returned as an output parameter only. No need to import it into the input parameter during multi-round dialogue.</p>
+                     * @param _reasoningContent <p>Thought chain content.<br>Used to show the model thinking process, only available in deep thinking mode. Returned as an output parameter only. No need to import it into the input parameter during multi-round dialogue.</p>
+                     * 
+                     */
+                    void SetReasoningContent(const std::string& _reasoningContent);
+
+                    /**
+                     * 判断参数 ReasoningContent 是否已赋值
+                     * @return ReasoningContent 是否已赋值
+                     * 
+                     */
+                    bool ReasoningContentHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Tool call generated by the model. Only support output parameter return.</p>
+                     * @return ToolCalls <p>Tool call generated by the model. Only support output parameter return.</p>
+                     * 
+                     */
+                    std::vector<ToolCall> GetToolCalls() const;
+
+                    /**
+                     * 设置<p>Tool call generated by the model. Only support output parameter return.</p>
+                     * @param _toolCalls <p>Tool call generated by the model. Only support output parameter return.</p>
+                     * 
+                     */
+                    void SetToolCalls(const std::vector<ToolCall>& _toolCalls);
+
+                    /**
+                     * 判断参数 ToolCalls 是否已赋值
+                     * @return ToolCalls 是否已赋值
+                     * 
+                     */
+                    bool ToolCallsHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Role</p><p>Enumeration value:</p><ul><li>user: User</li><li>assistant: AI assistant</li></ul>
+                     */
+                    std::string m_role;
+                    bool m_roleHasBeenSet;
+
+                    /**
+                     * <p>Text content</p>
+                     */
+                    std::string m_content;
+                    bool m_contentHasBeenSet;
+
+                    /**
+                     * <p>Thought chain content.<br>Used to show the model thinking process, only available in deep thinking mode. Returned as an output parameter only. No need to import it into the input parameter during multi-round dialogue.</p>
+                     */
+                    std::string m_reasoningContent;
+                    bool m_reasoningContentHasBeenSet;
+
+                    /**
+                     * <p>Tool call generated by the model. Only support output parameter return.</p>
+                     */
+                    std::vector<ToolCall> m_toolCalls;
+                    bool m_toolCallsHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CLS_V20201016_MODEL_MESSAGE_H_

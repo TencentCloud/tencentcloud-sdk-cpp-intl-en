@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log export ID
-                     * @return ExportId Log export ID
+                     * 获取Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
+                     * @return ExportId Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
                      * 
                      */
                     std::string GetExportId() const;
 
                     /**
-                     * 设置Log export ID
-                     * @param _exportId Log export ID
+                     * 设置Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
+                     * @param _exportId Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
                      * 
                      */
                     void SetExportId(const std::string& _exportId);
@@ -66,7 +74,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log export ID
+                     * Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
                      */
                     std::string m_exportId;
                     bool m_exportIdHasBeenSet;

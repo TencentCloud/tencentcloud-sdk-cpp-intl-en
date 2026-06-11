@@ -658,18 +658,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TargetModifyTime Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetModifyTime() const;
 
                     /**
                      * 设置Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _targetModifyTime Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTargetModifyTime(const std::string& _targetModifyTime);
@@ -683,18 +679,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TargetCreatTime Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTargetCreatTime() const;
 
                     /**
                      * 设置Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _targetCreatTime Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTargetCreatTime(const std::string& _targetCreatTime);
@@ -792,18 +784,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExeName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExeName() const;
 
                     /**
                      * 设置Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _exeName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExeName(const std::string& _exeName);
@@ -817,18 +805,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取 Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置 Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -844,11 +828,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileAction File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFileAction() const;
@@ -857,11 +839,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileAction File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileAction(const std::string& _fileAction);
@@ -1051,14 +1031,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetModifyTime;
                     bool m_targetModifyTimeHasBeenSet;
 
                     /**
                      * Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_targetCreatTime;
                     bool m_targetCreatTimeHasBeenSet;
@@ -1089,14 +1067,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_exeName;
                     bool m_exeNameHasBeenSet;
 
                     /**
                      *  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
@@ -1105,7 +1081,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fileAction;
                     bool m_fileActionHasBeenSet;

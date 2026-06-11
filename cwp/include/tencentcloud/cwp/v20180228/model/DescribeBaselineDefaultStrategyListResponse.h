@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyList List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DefaultStrategyInfo> GetStrategyList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DefaultStrategyInfo> m_strategyList;
                     bool m_strategyListHasBeenSet;

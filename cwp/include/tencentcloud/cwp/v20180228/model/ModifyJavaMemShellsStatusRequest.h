@@ -84,6 +84,27 @@ namespace TencentCloud
                      */
                     bool IdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+                     * @return UpdateAll Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+                     * 
+                     */
+                    bool GetUpdateAll() const;
+
+                    /**
+                     * 设置Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+                     * @param _updateAll Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+                     * 
+                     */
+                    void SetUpdateAll(const bool& _updateAll);
+
+                    /**
+                     * 判断参数 UpdateAll 是否已赋值
+                     * @return UpdateAll 是否已赋值
+                     * 
+                     */
+                    bool UpdateAllHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +118,12 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;
+
+                    /**
+                     * Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+                     */
+                    bool m_updateAll;
+                    bool m_updateAllHasBeenSet;
 
                 };
             }

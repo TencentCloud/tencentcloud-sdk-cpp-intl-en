@@ -132,18 +132,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanDuration Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetScanDuration() const;
 
                     /**
                      * 设置Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanDuration Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanDuration(const double& _scanDuration);
@@ -351,7 +347,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_scanDuration;
                     bool m_scanDurationHasBeenSet;

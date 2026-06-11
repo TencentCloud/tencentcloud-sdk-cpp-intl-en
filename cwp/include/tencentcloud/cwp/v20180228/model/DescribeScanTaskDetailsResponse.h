@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cwp/v20180228/model/ScanTaskDetails.h>
 #include <tencentcloud/cwp/v20180228/model/VulDetailInfo.h>
+#include <tencentcloud/cwp/v20180228/model/PatchInfoDetail.h>
 
 
 namespace TencentCloud
@@ -187,9 +188,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulInfo Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulDetailInfo> GetVulInfo() const;
@@ -203,9 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of risk events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskEventCount Number of risk events
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRiskEventCount() const;
@@ -218,8 +215,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskEventCountHasBeenSet() const;
 
                     /**
-                     * 获取0: one-click scan; 1: scheduled scan.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type 0: one-click scan; 1: scheduled scan.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0 - one-click detection; 1 - regular detection
+                     * @return Type 0 - one-click detection; 1 - regular detection
                      * 
                      */
                     uint64_t GetType() const;
@@ -232,8 +229,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether all tasks are being stopped. true: yes.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StoppingAll Whether all tasks are being stopped. true: yes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取whether all tasks are being stopped (true: yes)
+                     * @return StoppingAll whether all tasks are being stopped (true: yes)
                      * 
                      */
                     bool GetStoppingAll() const;
@@ -247,9 +244,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulCount Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetVulCount() const;
@@ -260,6 +255,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool VulCountHasBeenSet() const;
+
+                    /**
+                     * 获取Scan info when scanning kb separately
+                     * @return PatchInfo Scan info when scanning kb separately
+                     * 
+                     */
+                    std::vector<PatchInfoDetail> GetPatchInfo() const;
+
+                    /**
+                     * 判断参数 PatchInfo 是否已赋值
+                     * @return PatchInfo 是否已赋值
+                     * 
+                     */
+                    bool PatchInfoHasBeenSet() const;
 
                 private:
 
@@ -325,36 +334,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulDetailInfo> m_vulInfo;
                     bool m_vulInfoHasBeenSet;
 
                     /**
                      * Number of risk events
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_riskEventCount;
                     bool m_riskEventCountHasBeenSet;
 
                     /**
-                     * 0: one-click scan; 1: scheduled scan.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0 - one-click detection; 1 - regular detection
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether all tasks are being stopped. true: yes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * whether all tasks are being stopped (true: yes)
                      */
                     bool m_stoppingAll;
                     bool m_stoppingAllHasBeenSet;
 
                     /**
                      * Number of vulnerabilities scanned
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
+
+                    /**
+                     * Scan info when scanning kb separately
+                     */
+                    std::vector<PatchInfoDetail> m_patchInfo;
+                    bool m_patchInfoHasBeenSet;
 
                 };
             }

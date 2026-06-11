@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取<p>The mini game name and description in multiple languages.	</p>
-                     * @return I18nList <p>The mini game name and description in multiple languages.	</p>
+                     * 获取<p>Mini game name and introduction in multiple languages.</p>
+                     * @return I18nList <p>Mini game name and introduction in multiple languages.</p>
                      * 
                      */
                     std::vector<MNPI18NSyncDto> GetI18nList() const;
 
                     /**
-                     * 设置<p>The mini game name and description in multiple languages.	</p>
-                     * @param _i18nList <p>The mini game name and description in multiple languages.	</p>
+                     * 设置<p>Mini game name and introduction in multiple languages.</p>
+                     * @param _i18nList <p>Mini game name and introduction in multiple languages.</p>
                      * 
                      */
                     void SetI18nList(const std::vector<MNPI18NSyncDto>& _i18nList);
@@ -256,7 +256,7 @@ namespace TencentCloud
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * <p>The mini game name and description in multiple languages.	</p>
+                     * <p>Mini game name and introduction in multiple languages.</p>
                      */
                     std::vector<MNPI18NSyncDto> m_i18nList;
                     bool m_i18nListHasBeenSet;

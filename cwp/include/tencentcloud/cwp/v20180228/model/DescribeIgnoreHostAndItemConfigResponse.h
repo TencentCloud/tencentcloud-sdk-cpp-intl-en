@@ -47,9 +47,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemSet Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineItemInfo> GetItemSet() const;
@@ -63,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostSet Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<BaselineHost> GetHostSet() const;
@@ -81,14 +77,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineItemInfo> m_itemSet;
                     bool m_itemSetHasBeenSet;
 
                     /**
                      * Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BaselineHost> m_hostSet;
                     bool m_hostSetHasBeenSet;

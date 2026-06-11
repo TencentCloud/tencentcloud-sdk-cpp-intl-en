@@ -195,19 +195,15 @@ namespace TencentCloud
                     bool ModulesHasBeenSet() const;
 
                     /**
-                     * 获取Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Params Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameter information.
+                     * @return Params Parameter information.
                      * 
                      */
                     std::vector<AssetCoreModuleParam> GetParams() const;
 
                     /**
-                     * 设置Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _params Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameter information.
+                     * @param _params Parameter information.
                      * 
                      */
                     void SetParams(const std::vector<AssetCoreModuleParam>& _params);
@@ -221,18 +217,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -289,15 +281,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_modulesHasBeenSet;
 
                     /**
-                     * Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parameter information.
                      */
                     std::vector<AssetCoreModuleParam> m_params;
                     bool m_paramsHasBeenSet;
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

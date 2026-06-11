@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WebFrames Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List
+                     * @return WebFrames List
                      * 
                      */
                     std::vector<AssetWebFrameBaseInfo> GetWebFrames() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List
                      */
                     std::vector<AssetWebFrameBaseInfo> m_webFrames;
                     bool m_webFramesHasBeenSet;

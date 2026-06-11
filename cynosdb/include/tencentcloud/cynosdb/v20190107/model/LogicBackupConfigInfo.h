@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Logical backup configuration information.
                 */
                 class LogicBackupConfigInfo : public AbstractModel
                 {
@@ -161,15 +161,15 @@ Valid values: ON/OFF.
                     bool LogicCrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogicCrossRegions 
+                     * 获取Regions covered by logical backup.
+                     * @return LogicCrossRegions Regions covered by logical backup.
                      * 
                      */
                     std::vector<std::string> GetLogicCrossRegions() const;
 
                     /**
-                     * 设置
-                     * @param _logicCrossRegions 
+                     * 设置Regions covered by logical backup.
+                     * @param _logicCrossRegions Regions covered by logical backup.
                      * 
                      */
                     void SetLogicCrossRegions(const std::vector<std::string>& _logicCrossRegions);
@@ -237,7 +237,7 @@ Valid values: ON/OFF.
                     bool m_logicCrossRegionsEnableHasBeenSet;
 
                     /**
-                     * 
+                     * Regions covered by logical backup.
                      */
                     std::vector<std::string> m_logicCrossRegions;
                     bool m_logicCrossRegionsHasBeenSet;

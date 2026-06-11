@@ -216,18 +216,14 @@ namespace TencentCloud
 
                     /**
                      * 获取CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCveId() const;
 
                     /**
                      * 设置CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCveId(const std::string& _cveId);
@@ -241,18 +237,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCvssScore() const;
 
                     /**
                      * 设置CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCvssScore(const double& _cvssScore);
@@ -266,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLabels() const;
 
                     /**
                      * 设置Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLabels(const std::string& _labels);
@@ -291,18 +279,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHostCount() const;
 
                     /**
                      * 设置Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostCount Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostCount(const uint64_t& _hostCount);
@@ -315,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSupportDefense Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Support defense: 0-no support 1-support
+                     * @return IsSupportDefense Support defense: 0-no support 1-support
                      * 
                      */
                     uint64_t GetIsSupportDefense() const;
 
                     /**
-                     * 设置Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSupportDefense Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Support defense: 0-no support 1-support
+                     * @param _isSupportDefense Support defense: 0-no support 1-support
                      * 
                      */
                     void SetIsSupportDefense(const uint64_t& _isSupportDefense);
@@ -341,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDefenseAttackCount() const;
 
                     /**
                      * 设置Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _defenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDefenseAttackCount(const uint64_t& _defenseAttackCount);
@@ -365,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DefenseAttackCountHasBeenSet() const;
 
                     /**
-                     * 获取Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Method Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection rule. 0: version comparison, 1: POC verification.
+                     * @return Method Detection rule. 0: version comparison, 1: POC verification.
                      * 
                      */
                     uint64_t GetMethod() const;
 
                     /**
-                     * 设置Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _method Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection rule. 0: version comparison, 1: POC verification.
+                     * @param _method Detection rule. 0: version comparison, 1: POC verification.
                      * 
                      */
                     void SetMethod(const uint64_t& _method);
@@ -390,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackLevel Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Attack intensity level.
+                     * @return AttackLevel Attack intensity level.
                      * 
                      */
                     uint64_t GetAttackLevel() const;
 
                     /**
-                     * 设置Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackLevel Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Attack intensity level.
+                     * @param _attackLevel Attack intensity level.
                      * 
                      */
                     void SetAttackLevel(const uint64_t& _attackLevel);
@@ -415,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AttackLevelHasBeenSet() const;
 
                     /**
-                     * 获取Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DefenseState Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether vulnerable hosts are enabled with vulnerability defense.
+                     * @return DefenseState Whether vulnerable hosts are enabled with vulnerability defense.
                      * 
                      */
                     bool GetDefenseState() const;
 
                     /**
-                     * 设置Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _defenseState Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether vulnerable hosts are enabled with vulnerability defense.
+                     * @param _defenseState Whether vulnerable hosts are enabled with vulnerability defense.
                      * 
                      */
                     void SetDefenseState(const bool& _defenseState);
@@ -491,63 +455,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cveId;
                     bool m_cveIdHasBeenSet;
 
                     /**
                      * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cvssScore;
                     bool m_cvssScoreHasBeenSet;
 
                     /**
                      * Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
                      * Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
 
                     /**
-                     * Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Support defense: 0-no support 1-support
                      */
                     uint64_t m_isSupportDefense;
                     bool m_isSupportDefenseHasBeenSet;
 
                     /**
                      * Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_defenseAttackCount;
                     bool m_defenseAttackCountHasBeenSet;
 
                     /**
-                     * Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection rule. 0: version comparison, 1: POC verification.
                      */
                     uint64_t m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Attack intensity level.
                      */
                     uint64_t m_attackLevel;
                     bool m_attackLevelHasBeenSet;
 
                     /**
-                     * Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether vulnerable hosts are enabled with vulnerability defense.
                      */
                     bool m_defenseState;
                     bool m_defenseStateHasBeenSet;

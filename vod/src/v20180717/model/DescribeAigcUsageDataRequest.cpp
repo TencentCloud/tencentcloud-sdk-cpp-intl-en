@@ -26,7 +26,9 @@ DescribeAigcUsageDataRequest::DescribeAigcUsageDataRequest() :
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_aigcTypeHasBeenSet(false),
-    m_subAppIdHasBeenSet(false)
+    m_subAppIdHasBeenSet(false),
+    m_aPIKeyHasBeenSet(false),
+    m_aPIKeysHasBeenSet(false)
 {
 }
 
@@ -67,6 +69,27 @@ string DescribeAigcUsageDataRequest::ToJsonString() const
         string key = "SubAppId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_subAppId, allocator);
+    }
+
+    if (m_aPIKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "APIKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_aPIKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_aPIKeysHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "APIKeys";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_aPIKeys.begin(); itr != m_aPIKeys.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -139,6 +162,38 @@ void DescribeAigcUsageDataRequest::SetSubAppId(const uint64_t& _subAppId)
 bool DescribeAigcUsageDataRequest::SubAppIdHasBeenSet() const
 {
     return m_subAppIdHasBeenSet;
+}
+
+string DescribeAigcUsageDataRequest::GetAPIKey() const
+{
+    return m_aPIKey;
+}
+
+void DescribeAigcUsageDataRequest::SetAPIKey(const string& _aPIKey)
+{
+    m_aPIKey = _aPIKey;
+    m_aPIKeyHasBeenSet = true;
+}
+
+bool DescribeAigcUsageDataRequest::APIKeyHasBeenSet() const
+{
+    return m_aPIKeyHasBeenSet;
+}
+
+vector<string> DescribeAigcUsageDataRequest::GetAPIKeys() const
+{
+    return m_aPIKeys;
+}
+
+void DescribeAigcUsageDataRequest::SetAPIKeys(const vector<string>& _aPIKeys)
+{
+    m_aPIKeys = _aPIKeys;
+    m_aPIKeysHasBeenSet = true;
+}
+
+bool DescribeAigcUsageDataRequest::APIKeysHasBeenSet() const
+{
+    return m_aPIKeysHasBeenSet;
 }
 
 

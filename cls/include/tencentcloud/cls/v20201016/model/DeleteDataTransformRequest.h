@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data processing task ID
-                     * @return TaskId Data processing task ID
+                     * 获取Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+                     * @return TaskId Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Data processing task ID
-                     * @param _taskId Data processing task ID
+                     * 设置Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+                     * @param _taskId Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data processing task ID
+                     * Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

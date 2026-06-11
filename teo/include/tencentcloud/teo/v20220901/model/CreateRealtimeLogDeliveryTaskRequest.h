@@ -70,6 +70,48 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
+                     * 获取Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+                     * @return Area Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+                     * 
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+                     * @param _area Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+                     * 
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     * 
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+                     * @return LogType Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+                     * 
+                     */
+                    std::string GetLogType() const;
+
+                    /**
+                     * 设置Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+                     * @param _logType Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+                     * 
+                     */
+                    void SetLogType(const std::string& _logType);
+
+                    /**
+                     * 判断参数 LogType 是否已赋值
+                     * @return LogType 是否已赋值
+                     * 
+                     */
+                    bool LogTypeHasBeenSet() const;
+
+                    /**
                      * 获取Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      * @return TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      * 
@@ -91,31 +133,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
-                     * @return TaskType Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+                     * 获取Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
+                     * @return TaskType Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
-                     * @param _taskType Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+                     * 设置Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
+                     * @param _taskType Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -128,27 +154,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
-                     * @return EntityList Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+                     * 获取List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
+                     * @return EntityList List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
                      * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
-                     * 设置Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
-                     * @param _entityList Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+                     * 设置List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
+                     * @param _entityList List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
                      * 
                      */
                     void SetEntityList(const std::vector<std::string>& _entityList);
@@ -161,105 +175,15 @@ namespace TencentCloud
                     bool EntityListHasBeenSet() const;
 
                     /**
-                     * 获取Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-                     * @return LogType Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-                     * 
-                     */
-                    std::string GetLogType() const;
-
-                    /**
-                     * 设置Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-                     * @param _logType Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-                     * 
-                     */
-                    void SetLogType(const std::string& _logType);
-
-                    /**
-                     * 判断参数 LogType 是否已赋值
-                     * @return LogType 是否已赋值
-                     * 
-                     */
-                    bool LogTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-                     * @return Area Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-                     * 
-                     */
-                    std::string GetArea() const;
-
-                    /**
-                     * 设置Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-                     * @param _area Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-                     * 
-                     */
-                    void SetArea(const std::string& _area);
-
-                    /**
-                     * 判断参数 Area 是否已赋值
-                     * @return Area 是否已赋值
-                     * 
-                     */
-                    bool AreaHasBeenSet() const;
-
-                    /**
-                     * 获取Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
-                     * @return Fields Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+                     * 获取Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
+                     * @return Fields Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
                      * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
-                     * 设置Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
-                     * @param _fields Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+                     * 设置Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
+                     * @param _fields Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
                      * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
@@ -335,23 +259,15 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
-                     * 获取Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
-                     * @return LogFormat Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+                     * 获取Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * @return LogFormat Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
                      * 
                      */
                     LogFormat GetLogFormat() const;
 
                     /**
-                     * 设置Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
-                     * @param _logFormat Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+                     * 设置Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+                     * @param _logFormat Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
                      * 
                      */
                     void SetLogFormat(const LogFormat& _logFormat);
@@ -435,56 +351,37 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
+                     * Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+                     */
+                    std::string m_logType;
+                    bool m_logTypeHasBeenSet;
+
+                    /**
                      * Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+                     * Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+                     * List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
                      */
                     std::vector<std::string> m_entityList;
                     bool m_entityListHasBeenSet;
 
                     /**
-                     * Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-                     */
-                    std::string m_logType;
-                    bool m_logTypeHasBeenSet;
-
-                    /**
-                     * Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-                     */
-                    std::string m_area;
-                    bool m_areaHasBeenSet;
-
-                    /**
-                     * Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+                     * Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
                      */
                     std::vector<std::string> m_fields;
                     bool m_fieldsHasBeenSet;
@@ -508,9 +405,7 @@ namespace TencentCloud
                     bool m_sampleHasBeenSet;
 
                     /**
-                     * Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+                     * Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
                      */
                     LogFormat m_logFormat;
                     bool m_logFormatHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Trend data value.
+                * Data analysis API response value object. key is the data time, and number is the data value.
                 */
                 class AnalysisData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data time.
-                     * @return DataTime Data time.
+                     * 获取<p>Data time.</p>
+                     * @return DataTime <p>Data time.</p>
                      * 
                      */
                     std::string GetDataTime() const;
 
                     /**
-                     * 设置Data time.
-                     * @param _dataTime Data time.
+                     * 设置<p>Data time.</p>
+                     * @param _dataTime <p>Data time.</p>
                      * 
                      */
                     void SetDataTime(const std::string& _dataTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DataTimeHasBeenSet() const;
 
                     /**
-                     * 获取Data value.
-                     * @return Number Data value.
+                     * 获取<p>Data value.</p>
+                     * @return Number <p>Data value.</p>
                      * 
                      */
                     std::string GetNumber() const;
 
                     /**
-                     * 设置Data value.
-                     * @param _number Data value.
+                     * 设置<p>Data value.</p>
+                     * @param _number <p>Data value.</p>
                      * 
                      */
                     void SetNumber(const std::string& _number);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data time.
+                     * <p>Data time.</p>
                      */
                     std::string m_dataTime;
                     bool m_dataTimeHasBeenSet;
 
                     /**
-                     * Data value.
+                     * <p>Data value.</p>
                      */
                     std::string m_number;
                     bool m_numberHasBeenSet;

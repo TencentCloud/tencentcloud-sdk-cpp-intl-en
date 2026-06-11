@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<NetAttackEvent> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetAttackEvent> m_list;
                     bool m_listHasBeenSet;

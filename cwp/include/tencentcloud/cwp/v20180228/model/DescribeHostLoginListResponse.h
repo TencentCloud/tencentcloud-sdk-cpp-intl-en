@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostLoginList Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obtaining the List of Abnormal Logins
+                     * @return HostLoginList Obtaining the List of Abnormal Logins
                      * 
                      */
                     std::vector<HostLoginList> GetHostLoginList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obtaining the List of Abnormal Logins
                      */
                     std::vector<HostLoginList> m_hostLoginList;
                     bool m_hostLoginListHasBeenSet;

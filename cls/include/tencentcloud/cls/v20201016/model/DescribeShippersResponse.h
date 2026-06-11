@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Shippers Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ShipperInfo> GetShippers() const;
@@ -78,7 +76,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ShipperInfo> m_shippers;
                     bool m_shippersHasBeenSet;

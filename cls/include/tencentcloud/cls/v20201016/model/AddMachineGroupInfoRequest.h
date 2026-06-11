@@ -44,15 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Machine group ID
-                     * @return GroupId Machine group ID
+                     * 获取Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+                     * @return GroupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Machine group ID
-                     * @param _groupId Machine group ID
+                     * 设置Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+                     * @param _groupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -92,7 +96,8 @@ Supported types: `ip` and `label`
                 private:
 
                     /**
-                     * Machine group ID
+                     * Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

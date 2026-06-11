@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TagIdsHasBeenSet() const;
 
                     /**
-                     * 获取Command validity period, required for non-Tencent Cloud instances
-                     * @return ExpireDate Command validity period, required for non-Tencent Cloud instances
+                     * 获取Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
+                     * @return ExpireDate Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
                      * 
                      */
                     std::string GetExpireDate() const;
 
                     /**
-                     * 设置Command validity period, required for non-Tencent Cloud instances
-                     * @param _expireDate Command validity period, required for non-Tencent Cloud instances
+                     * 设置Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
+                     * @param _expireDate Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
                      * 
                      */
                     void SetExpireDate(const std::string& _expireDate);
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_tagIdsHasBeenSet;
 
                     /**
-                     * Command validity period, required for non-Tencent Cloud instances
+                     * Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
                      */
                     std::string m_expireDate;
                     bool m_expireDateHasBeenSet;

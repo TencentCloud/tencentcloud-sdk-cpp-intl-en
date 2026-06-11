@@ -44,14 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Blocking enabling status:
-0: disabled 
-1: advanced blocking
-2: basic blocking (block only malicious IP addresses in the intelligence database)
-                     * @return Status Blocking enabling status:
-0: disabled 
-1: advanced blocking
-2: basic blocking (block only malicious IP addresses in the intelligence database)
+                     * 获取(Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
+                     * @return Status (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -91,13 +85,52 @@ namespace TencentCloud
                      */
                     bool OpenSmartModeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether intelligence IP blocking is enabled
+                     * @return BanBlackIp Whether intelligence IP blocking is enabled
+                     * 
+                     */
+                    bool GetBanBlackIp() const;
+
+                    /**
+                     * 判断参数 BanBlackIp 是否已赋值
+                     * @return BanBlackIp 是否已赋值
+                     * 
+                     */
+                    bool BanBlackIpHasBeenSet() const;
+
+                    /**
+                     * 获取Whether vulnerability IP blocking is enabled
+                     * @return BanVulIp Whether vulnerability IP blocking is enabled
+                     * 
+                     */
+                    bool GetBanVulIp() const;
+
+                    /**
+                     * 判断参数 BanVulIp 是否已赋值
+                     * @return BanVulIp 是否已赋值
+                     * 
+                     */
+                    bool BanVulIpHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable rule blocking
+                     * @return BanByRule Whether to enable rule blocking
+                     * 
+                     */
+                    bool GetBanByRule() const;
+
+                    /**
+                     * 判断参数 BanByRule 是否已赋值
+                     * @return BanByRule 是否已赋值
+                     * 
+                     */
+                    bool BanByRuleHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Blocking enabling status:
-0: disabled 
-1: advanced blocking
-2: basic blocking (block only malicious IP addresses in the intelligence database)
+                     * (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -113,6 +146,24 @@ namespace TencentCloud
                      */
                     bool m_openSmartMode;
                     bool m_openSmartModeHasBeenSet;
+
+                    /**
+                     * Whether intelligence IP blocking is enabled
+                     */
+                    bool m_banBlackIp;
+                    bool m_banBlackIpHasBeenSet;
+
+                    /**
+                     * Whether vulnerability IP blocking is enabled
+                     */
+                    bool m_banVulIp;
+                    bool m_banVulIpHasBeenSet;
+
+                    /**
+                     * Whether to enable rule blocking
+                     */
+                    bool m_banByRule;
+                    bool m_banByRuleHasBeenSet;
 
                 };
             }

@@ -28,10 +28,12 @@ CreateCosRechargeRequest::CreateCosRechargeRequest() :
     m_nameHasBeenSet(false),
     m_bucketHasBeenSet(false),
     m_bucketRegionHasBeenSet(false),
-    m_prefixHasBeenSet(false),
     m_logTypeHasBeenSet(false),
+    m_prefixHasBeenSet(false),
     m_compressHasBeenSet(false),
-    m_extractRuleInfoHasBeenSet(false)
+    m_extractRuleInfoHasBeenSet(false),
+    m_taskTypeHasBeenSet(false),
+    m_metadataHasBeenSet(false)
 {
 }
 
@@ -82,20 +84,20 @@ string CreateCosRechargeRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_bucketRegion.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_prefixHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Prefix";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_prefix.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_logTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "LogType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_logType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_prefixHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Prefix";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_prefix.c_str(), allocator).Move(), allocator);
     }
 
     if (m_compressHasBeenSet)
@@ -113,6 +115,27 @@ string CreateCosRechargeRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_extractRuleInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_taskTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_taskType, allocator);
+    }
+
+    if (m_metadataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Metadata";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_metadata.begin(); itr != m_metadata.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -203,22 +226,6 @@ bool CreateCosRechargeRequest::BucketRegionHasBeenSet() const
     return m_bucketRegionHasBeenSet;
 }
 
-string CreateCosRechargeRequest::GetPrefix() const
-{
-    return m_prefix;
-}
-
-void CreateCosRechargeRequest::SetPrefix(const string& _prefix)
-{
-    m_prefix = _prefix;
-    m_prefixHasBeenSet = true;
-}
-
-bool CreateCosRechargeRequest::PrefixHasBeenSet() const
-{
-    return m_prefixHasBeenSet;
-}
-
 string CreateCosRechargeRequest::GetLogType() const
 {
     return m_logType;
@@ -233,6 +240,22 @@ void CreateCosRechargeRequest::SetLogType(const string& _logType)
 bool CreateCosRechargeRequest::LogTypeHasBeenSet() const
 {
     return m_logTypeHasBeenSet;
+}
+
+string CreateCosRechargeRequest::GetPrefix() const
+{
+    return m_prefix;
+}
+
+void CreateCosRechargeRequest::SetPrefix(const string& _prefix)
+{
+    m_prefix = _prefix;
+    m_prefixHasBeenSet = true;
+}
+
+bool CreateCosRechargeRequest::PrefixHasBeenSet() const
+{
+    return m_prefixHasBeenSet;
 }
 
 string CreateCosRechargeRequest::GetCompress() const
@@ -265,6 +288,38 @@ void CreateCosRechargeRequest::SetExtractRuleInfo(const ExtractRuleInfo& _extrac
 bool CreateCosRechargeRequest::ExtractRuleInfoHasBeenSet() const
 {
     return m_extractRuleInfoHasBeenSet;
+}
+
+uint64_t CreateCosRechargeRequest::GetTaskType() const
+{
+    return m_taskType;
+}
+
+void CreateCosRechargeRequest::SetTaskType(const uint64_t& _taskType)
+{
+    m_taskType = _taskType;
+    m_taskTypeHasBeenSet = true;
+}
+
+bool CreateCosRechargeRequest::TaskTypeHasBeenSet() const
+{
+    return m_taskTypeHasBeenSet;
+}
+
+vector<string> CreateCosRechargeRequest::GetMetadata() const
+{
+    return m_metadata;
+}
+
+void CreateCosRechargeRequest::SetMetadata(const vector<string>& _metadata)
+{
+    m_metadata = _metadata;
+    m_metadataHasBeenSet = true;
+}
+
+bool CreateCosRechargeRequest::MetadataHasBeenSet() const
+{
+    return m_metadataHasBeenSet;
 }
 
 

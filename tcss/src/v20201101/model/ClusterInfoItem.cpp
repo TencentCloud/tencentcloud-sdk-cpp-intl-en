@@ -30,6 +30,7 @@ ClusterInfoItem::ClusterInfoItem() :
     m_regionHasBeenSet(false),
     m_defenderStatusHasBeenSet(false),
     m_clusterStatusHasBeenSet(false),
+    m_clusterSubStatusHasBeenSet(false),
     m_clusterCheckModeHasBeenSet(false),
     m_clusterAutoCheckHasBeenSet(false),
     m_defenderErrorReasonHasBeenSet(false),
@@ -40,7 +41,19 @@ ClusterInfoItem::ClusterInfoItem() :
     m_hintRiskCountHasBeenSet(false),
     m_checkFailReasonHasBeenSet(false),
     m_checkStatusHasBeenSet(false),
-    m_taskCreateTimeHasBeenSet(false)
+    m_taskCreateTimeHasBeenSet(false),
+    m_accessedStatusHasBeenSet(false),
+    m_accessedSubStatusHasBeenSet(false),
+    m_accessedErrorReasonHasBeenSet(false),
+    m_nodeCountHasBeenSet(false),
+    m_offLineNodeCountHasBeenSet(false),
+    m_unInstallAgentNodeCountHasBeenSet(false),
+    m_chargeCoresCntHasBeenSet(false),
+    m_masterAddressesHasBeenSet(false),
+    m_coresCntHasBeenSet(false),
+    m_clusterAuditStatusHasBeenSet(false),
+    m_clusterAuditFailedInfoHasBeenSet(false),
+    m_ownerNameHasBeenSet(false)
 {
 }
 
@@ -137,6 +150,16 @@ CoreInternalOutcome ClusterInfoItem::Deserialize(const rapidjson::Value &value)
         }
         m_clusterStatus = string(value["ClusterStatus"].GetString());
         m_clusterStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterSubStatus") && !value["ClusterSubStatus"].IsNull())
+    {
+        if (!value["ClusterSubStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.ClusterSubStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterSubStatus = string(value["ClusterSubStatus"].GetString());
+        m_clusterSubStatusHasBeenSet = true;
     }
 
     if (value.HasMember("ClusterCheckMode") && !value["ClusterCheckMode"].IsNull())
@@ -249,6 +272,129 @@ CoreInternalOutcome ClusterInfoItem::Deserialize(const rapidjson::Value &value)
         m_taskCreateTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("AccessedStatus") && !value["AccessedStatus"].IsNull())
+    {
+        if (!value["AccessedStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.AccessedStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_accessedStatus = string(value["AccessedStatus"].GetString());
+        m_accessedStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("AccessedSubStatus") && !value["AccessedSubStatus"].IsNull())
+    {
+        if (!value["AccessedSubStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.AccessedSubStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_accessedSubStatus = string(value["AccessedSubStatus"].GetString());
+        m_accessedSubStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("AccessedErrorReason") && !value["AccessedErrorReason"].IsNull())
+    {
+        if (!value["AccessedErrorReason"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.AccessedErrorReason` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_accessedErrorReason = string(value["AccessedErrorReason"].GetString());
+        m_accessedErrorReasonHasBeenSet = true;
+    }
+
+    if (value.HasMember("NodeCount") && !value["NodeCount"].IsNull())
+    {
+        if (!value["NodeCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.NodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_nodeCount = value["NodeCount"].GetUint64();
+        m_nodeCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("OffLineNodeCount") && !value["OffLineNodeCount"].IsNull())
+    {
+        if (!value["OffLineNodeCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.OffLineNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_offLineNodeCount = value["OffLineNodeCount"].GetUint64();
+        m_offLineNodeCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("UnInstallAgentNodeCount") && !value["UnInstallAgentNodeCount"].IsNull())
+    {
+        if (!value["UnInstallAgentNodeCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.UnInstallAgentNodeCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_unInstallAgentNodeCount = value["UnInstallAgentNodeCount"].GetUint64();
+        m_unInstallAgentNodeCountHasBeenSet = true;
+    }
+
+    if (value.HasMember("ChargeCoresCnt") && !value["ChargeCoresCnt"].IsNull())
+    {
+        if (!value["ChargeCoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.ChargeCoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_chargeCoresCnt = value["ChargeCoresCnt"].GetUint64();
+        m_chargeCoresCntHasBeenSet = true;
+    }
+
+    if (value.HasMember("MasterAddresses") && !value["MasterAddresses"].IsNull())
+    {
+        if (!value["MasterAddresses"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.MasterAddresses` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["MasterAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_masterAddresses.push_back((*itr).GetString());
+        }
+        m_masterAddressesHasBeenSet = true;
+    }
+
+    if (value.HasMember("CoresCnt") && !value["CoresCnt"].IsNull())
+    {
+        if (!value["CoresCnt"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.CoresCnt` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_coresCnt = value["CoresCnt"].GetUint64();
+        m_coresCntHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterAuditStatus") && !value["ClusterAuditStatus"].IsNull())
+    {
+        if (!value["ClusterAuditStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.ClusterAuditStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterAuditStatus = string(value["ClusterAuditStatus"].GetString());
+        m_clusterAuditStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("ClusterAuditFailedInfo") && !value["ClusterAuditFailedInfo"].IsNull())
+    {
+        if (!value["ClusterAuditFailedInfo"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.ClusterAuditFailedInfo` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterAuditFailedInfo = string(value["ClusterAuditFailedInfo"].GetString());
+        m_clusterAuditFailedInfoHasBeenSet = true;
+    }
+
+    if (value.HasMember("OwnerName") && !value["OwnerName"].IsNull())
+    {
+        if (!value["OwnerName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterInfoItem.OwnerName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_ownerName = string(value["OwnerName"].GetString());
+        m_ownerNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -326,6 +472,14 @@ void ClusterInfoItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "ClusterStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_clusterStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterSubStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterSubStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterSubStatus.c_str(), allocator).Move(), allocator);
     }
 
     if (m_clusterCheckModeHasBeenSet)
@@ -414,6 +568,107 @@ void ClusterInfoItem::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "TaskCreateTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_taskCreateTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_accessedStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessedStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessedStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_accessedSubStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessedSubStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessedSubStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_accessedErrorReasonHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccessedErrorReason";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_accessedErrorReason.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_nodeCount, allocator);
+    }
+
+    if (m_offLineNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OffLineNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_offLineNodeCount, allocator);
+    }
+
+    if (m_unInstallAgentNodeCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnInstallAgentNodeCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_unInstallAgentNodeCount, allocator);
+    }
+
+    if (m_chargeCoresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChargeCoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_chargeCoresCnt, allocator);
+    }
+
+    if (m_masterAddressesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MasterAddresses";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_masterAddresses.begin(); itr != m_masterAddresses.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_coresCntHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CoresCnt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_coresCnt, allocator);
+    }
+
+    if (m_clusterAuditStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterAuditStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterAuditStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterAuditFailedInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterAuditFailedInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterAuditFailedInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ownerNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OwnerName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_ownerName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -561,6 +816,22 @@ void ClusterInfoItem::SetClusterStatus(const string& _clusterStatus)
 bool ClusterInfoItem::ClusterStatusHasBeenSet() const
 {
     return m_clusterStatusHasBeenSet;
+}
+
+string ClusterInfoItem::GetClusterSubStatus() const
+{
+    return m_clusterSubStatus;
+}
+
+void ClusterInfoItem::SetClusterSubStatus(const string& _clusterSubStatus)
+{
+    m_clusterSubStatus = _clusterSubStatus;
+    m_clusterSubStatusHasBeenSet = true;
+}
+
+bool ClusterInfoItem::ClusterSubStatusHasBeenSet() const
+{
+    return m_clusterSubStatusHasBeenSet;
 }
 
 string ClusterInfoItem::GetClusterCheckMode() const
@@ -737,5 +1008,197 @@ void ClusterInfoItem::SetTaskCreateTime(const string& _taskCreateTime)
 bool ClusterInfoItem::TaskCreateTimeHasBeenSet() const
 {
     return m_taskCreateTimeHasBeenSet;
+}
+
+string ClusterInfoItem::GetAccessedStatus() const
+{
+    return m_accessedStatus;
+}
+
+void ClusterInfoItem::SetAccessedStatus(const string& _accessedStatus)
+{
+    m_accessedStatus = _accessedStatus;
+    m_accessedStatusHasBeenSet = true;
+}
+
+bool ClusterInfoItem::AccessedStatusHasBeenSet() const
+{
+    return m_accessedStatusHasBeenSet;
+}
+
+string ClusterInfoItem::GetAccessedSubStatus() const
+{
+    return m_accessedSubStatus;
+}
+
+void ClusterInfoItem::SetAccessedSubStatus(const string& _accessedSubStatus)
+{
+    m_accessedSubStatus = _accessedSubStatus;
+    m_accessedSubStatusHasBeenSet = true;
+}
+
+bool ClusterInfoItem::AccessedSubStatusHasBeenSet() const
+{
+    return m_accessedSubStatusHasBeenSet;
+}
+
+string ClusterInfoItem::GetAccessedErrorReason() const
+{
+    return m_accessedErrorReason;
+}
+
+void ClusterInfoItem::SetAccessedErrorReason(const string& _accessedErrorReason)
+{
+    m_accessedErrorReason = _accessedErrorReason;
+    m_accessedErrorReasonHasBeenSet = true;
+}
+
+bool ClusterInfoItem::AccessedErrorReasonHasBeenSet() const
+{
+    return m_accessedErrorReasonHasBeenSet;
+}
+
+uint64_t ClusterInfoItem::GetNodeCount() const
+{
+    return m_nodeCount;
+}
+
+void ClusterInfoItem::SetNodeCount(const uint64_t& _nodeCount)
+{
+    m_nodeCount = _nodeCount;
+    m_nodeCountHasBeenSet = true;
+}
+
+bool ClusterInfoItem::NodeCountHasBeenSet() const
+{
+    return m_nodeCountHasBeenSet;
+}
+
+uint64_t ClusterInfoItem::GetOffLineNodeCount() const
+{
+    return m_offLineNodeCount;
+}
+
+void ClusterInfoItem::SetOffLineNodeCount(const uint64_t& _offLineNodeCount)
+{
+    m_offLineNodeCount = _offLineNodeCount;
+    m_offLineNodeCountHasBeenSet = true;
+}
+
+bool ClusterInfoItem::OffLineNodeCountHasBeenSet() const
+{
+    return m_offLineNodeCountHasBeenSet;
+}
+
+uint64_t ClusterInfoItem::GetUnInstallAgentNodeCount() const
+{
+    return m_unInstallAgentNodeCount;
+}
+
+void ClusterInfoItem::SetUnInstallAgentNodeCount(const uint64_t& _unInstallAgentNodeCount)
+{
+    m_unInstallAgentNodeCount = _unInstallAgentNodeCount;
+    m_unInstallAgentNodeCountHasBeenSet = true;
+}
+
+bool ClusterInfoItem::UnInstallAgentNodeCountHasBeenSet() const
+{
+    return m_unInstallAgentNodeCountHasBeenSet;
+}
+
+uint64_t ClusterInfoItem::GetChargeCoresCnt() const
+{
+    return m_chargeCoresCnt;
+}
+
+void ClusterInfoItem::SetChargeCoresCnt(const uint64_t& _chargeCoresCnt)
+{
+    m_chargeCoresCnt = _chargeCoresCnt;
+    m_chargeCoresCntHasBeenSet = true;
+}
+
+bool ClusterInfoItem::ChargeCoresCntHasBeenSet() const
+{
+    return m_chargeCoresCntHasBeenSet;
+}
+
+vector<string> ClusterInfoItem::GetMasterAddresses() const
+{
+    return m_masterAddresses;
+}
+
+void ClusterInfoItem::SetMasterAddresses(const vector<string>& _masterAddresses)
+{
+    m_masterAddresses = _masterAddresses;
+    m_masterAddressesHasBeenSet = true;
+}
+
+bool ClusterInfoItem::MasterAddressesHasBeenSet() const
+{
+    return m_masterAddressesHasBeenSet;
+}
+
+uint64_t ClusterInfoItem::GetCoresCnt() const
+{
+    return m_coresCnt;
+}
+
+void ClusterInfoItem::SetCoresCnt(const uint64_t& _coresCnt)
+{
+    m_coresCnt = _coresCnt;
+    m_coresCntHasBeenSet = true;
+}
+
+bool ClusterInfoItem::CoresCntHasBeenSet() const
+{
+    return m_coresCntHasBeenSet;
+}
+
+string ClusterInfoItem::GetClusterAuditStatus() const
+{
+    return m_clusterAuditStatus;
+}
+
+void ClusterInfoItem::SetClusterAuditStatus(const string& _clusterAuditStatus)
+{
+    m_clusterAuditStatus = _clusterAuditStatus;
+    m_clusterAuditStatusHasBeenSet = true;
+}
+
+bool ClusterInfoItem::ClusterAuditStatusHasBeenSet() const
+{
+    return m_clusterAuditStatusHasBeenSet;
+}
+
+string ClusterInfoItem::GetClusterAuditFailedInfo() const
+{
+    return m_clusterAuditFailedInfo;
+}
+
+void ClusterInfoItem::SetClusterAuditFailedInfo(const string& _clusterAuditFailedInfo)
+{
+    m_clusterAuditFailedInfo = _clusterAuditFailedInfo;
+    m_clusterAuditFailedInfoHasBeenSet = true;
+}
+
+bool ClusterInfoItem::ClusterAuditFailedInfoHasBeenSet() const
+{
+    return m_clusterAuditFailedInfoHasBeenSet;
+}
+
+string ClusterInfoItem::GetOwnerName() const
+{
+    return m_ownerName;
+}
+
+void ClusterInfoItem::SetOwnerName(const string& _ownerName)
+{
+    m_ownerName = _ownerName;
+    m_ownerNameHasBeenSet = true;
+}
+
+bool ClusterInfoItem::OwnerNameHasBeenSet() const
+{
+    return m_ownerNameHasBeenSet;
 }
 

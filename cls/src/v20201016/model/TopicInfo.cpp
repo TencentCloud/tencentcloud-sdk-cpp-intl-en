@@ -26,10 +26,12 @@ TopicInfo::TopicInfo() :
     m_topicNameHasBeenSet(false),
     m_partitionCountHasBeenSet(false),
     m_indexHasBeenSet(false),
+    m_assumerUinHasBeenSet(false),
     m_assumerNameHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_tagsHasBeenSet(false),
+    m_roleNameHasBeenSet(false),
     m_autoSplitHasBeenSet(false),
     m_maxSplitPartitionsHasBeenSet(false),
     m_storageTypeHasBeenSet(false),
@@ -37,9 +39,16 @@ TopicInfo::TopicInfo() :
     m_subAssumerNameHasBeenSet(false),
     m_describesHasBeenSet(false),
     m_hotPeriodHasBeenSet(false),
+    m_keyIdHasBeenSet(false),
     m_bizTypeHasBeenSet(false),
     m_isWebTrackingHasBeenSet(false),
-    m_extendsHasBeenSet(false)
+    m_extendsHasBeenSet(false),
+    m_topicAsyncTaskIDHasBeenSet(false),
+    m_migrationStatusHasBeenSet(false),
+    m_effectiveDateHasBeenSet(false),
+    m_isSourceFromHasBeenSet(false),
+    m_billingModeHasBeenSet(false),
+    m_newBillingModeHasBeenSet(false)
 {
 }
 
@@ -98,6 +107,16 @@ CoreInternalOutcome TopicInfo::Deserialize(const rapidjson::Value &value)
         m_indexHasBeenSet = true;
     }
 
+    if (value.HasMember("AssumerUin") && !value["AssumerUin"].IsNull())
+    {
+        if (!value["AssumerUin"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.AssumerUin` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_assumerUin = value["AssumerUin"].GetUint64();
+        m_assumerUinHasBeenSet = true;
+    }
+
     if (value.HasMember("AssumerName") && !value["AssumerName"].IsNull())
     {
         if (!value["AssumerName"].IsString())
@@ -146,6 +165,16 @@ CoreInternalOutcome TopicInfo::Deserialize(const rapidjson::Value &value)
             m_tags.push_back(item);
         }
         m_tagsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RoleName") && !value["RoleName"].IsNull())
+    {
+        if (!value["RoleName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.RoleName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_roleName = string(value["RoleName"].GetString());
+        m_roleNameHasBeenSet = true;
     }
 
     if (value.HasMember("AutoSplit") && !value["AutoSplit"].IsNull())
@@ -218,6 +247,16 @@ CoreInternalOutcome TopicInfo::Deserialize(const rapidjson::Value &value)
         m_hotPeriodHasBeenSet = true;
     }
 
+    if (value.HasMember("KeyId") && !value["KeyId"].IsNull())
+    {
+        if (!value["KeyId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.KeyId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_keyId = string(value["KeyId"].GetString());
+        m_keyIdHasBeenSet = true;
+    }
+
     if (value.HasMember("BizType") && !value["BizType"].IsNull())
     {
         if (!value["BizType"].IsUint64())
@@ -253,6 +292,66 @@ CoreInternalOutcome TopicInfo::Deserialize(const rapidjson::Value &value)
         }
 
         m_extendsHasBeenSet = true;
+    }
+
+    if (value.HasMember("TopicAsyncTaskID") && !value["TopicAsyncTaskID"].IsNull())
+    {
+        if (!value["TopicAsyncTaskID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.TopicAsyncTaskID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_topicAsyncTaskID = string(value["TopicAsyncTaskID"].GetString());
+        m_topicAsyncTaskIDHasBeenSet = true;
+    }
+
+    if (value.HasMember("MigrationStatus") && !value["MigrationStatus"].IsNull())
+    {
+        if (!value["MigrationStatus"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.MigrationStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_migrationStatus = value["MigrationStatus"].GetUint64();
+        m_migrationStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("EffectiveDate") && !value["EffectiveDate"].IsNull())
+    {
+        if (!value["EffectiveDate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.EffectiveDate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_effectiveDate = string(value["EffectiveDate"].GetString());
+        m_effectiveDateHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsSourceFrom") && !value["IsSourceFrom"].IsNull())
+    {
+        if (!value["IsSourceFrom"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.IsSourceFrom` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isSourceFrom = value["IsSourceFrom"].GetBool();
+        m_isSourceFromHasBeenSet = true;
+    }
+
+    if (value.HasMember("BillingMode") && !value["BillingMode"].IsNull())
+    {
+        if (!value["BillingMode"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.BillingMode` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_billingMode = value["BillingMode"].GetUint64();
+        m_billingModeHasBeenSet = true;
+    }
+
+    if (value.HasMember("NewBillingMode") && !value["NewBillingMode"].IsNull())
+    {
+        if (!value["NewBillingMode"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TopicInfo.NewBillingMode` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_newBillingMode = value["NewBillingMode"].GetUint64();
+        m_newBillingModeHasBeenSet = true;
     }
 
 
@@ -302,6 +401,14 @@ void TopicInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         value.AddMember(iKey, m_index, allocator);
     }
 
+    if (m_assumerUinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AssumerUin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_assumerUin, allocator);
+    }
+
     if (m_assumerNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -339,6 +446,14 @@ void TopicInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_roleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_roleName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_autoSplitHasBeenSet)
@@ -397,6 +512,14 @@ void TopicInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         value.AddMember(iKey, m_hotPeriod, allocator);
     }
 
+    if (m_keyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyId.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_bizTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -420,6 +543,54 @@ void TopicInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_extends.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_topicAsyncTaskIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TopicAsyncTaskID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_topicAsyncTaskID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_migrationStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MigrationStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_migrationStatus, allocator);
+    }
+
+    if (m_effectiveDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EffectiveDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_effectiveDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isSourceFromHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSourceFrom";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isSourceFrom, allocator);
+    }
+
+    if (m_billingModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BillingMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_billingMode, allocator);
+    }
+
+    if (m_newBillingModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NewBillingMode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_newBillingMode, allocator);
     }
 
 }
@@ -505,6 +676,22 @@ bool TopicInfo::IndexHasBeenSet() const
     return m_indexHasBeenSet;
 }
 
+uint64_t TopicInfo::GetAssumerUin() const
+{
+    return m_assumerUin;
+}
+
+void TopicInfo::SetAssumerUin(const uint64_t& _assumerUin)
+{
+    m_assumerUin = _assumerUin;
+    m_assumerUinHasBeenSet = true;
+}
+
+bool TopicInfo::AssumerUinHasBeenSet() const
+{
+    return m_assumerUinHasBeenSet;
+}
+
 string TopicInfo::GetAssumerName() const
 {
     return m_assumerName;
@@ -567,6 +754,22 @@ void TopicInfo::SetTags(const vector<Tag>& _tags)
 bool TopicInfo::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+string TopicInfo::GetRoleName() const
+{
+    return m_roleName;
+}
+
+void TopicInfo::SetRoleName(const string& _roleName)
+{
+    m_roleName = _roleName;
+    m_roleNameHasBeenSet = true;
+}
+
+bool TopicInfo::RoleNameHasBeenSet() const
+{
+    return m_roleNameHasBeenSet;
 }
 
 bool TopicInfo::GetAutoSplit() const
@@ -681,6 +884,22 @@ bool TopicInfo::HotPeriodHasBeenSet() const
     return m_hotPeriodHasBeenSet;
 }
 
+string TopicInfo::GetKeyId() const
+{
+    return m_keyId;
+}
+
+void TopicInfo::SetKeyId(const string& _keyId)
+{
+    m_keyId = _keyId;
+    m_keyIdHasBeenSet = true;
+}
+
+bool TopicInfo::KeyIdHasBeenSet() const
+{
+    return m_keyIdHasBeenSet;
+}
+
 uint64_t TopicInfo::GetBizType() const
 {
     return m_bizType;
@@ -727,5 +946,101 @@ void TopicInfo::SetExtends(const TopicExtendInfo& _extends)
 bool TopicInfo::ExtendsHasBeenSet() const
 {
     return m_extendsHasBeenSet;
+}
+
+string TopicInfo::GetTopicAsyncTaskID() const
+{
+    return m_topicAsyncTaskID;
+}
+
+void TopicInfo::SetTopicAsyncTaskID(const string& _topicAsyncTaskID)
+{
+    m_topicAsyncTaskID = _topicAsyncTaskID;
+    m_topicAsyncTaskIDHasBeenSet = true;
+}
+
+bool TopicInfo::TopicAsyncTaskIDHasBeenSet() const
+{
+    return m_topicAsyncTaskIDHasBeenSet;
+}
+
+uint64_t TopicInfo::GetMigrationStatus() const
+{
+    return m_migrationStatus;
+}
+
+void TopicInfo::SetMigrationStatus(const uint64_t& _migrationStatus)
+{
+    m_migrationStatus = _migrationStatus;
+    m_migrationStatusHasBeenSet = true;
+}
+
+bool TopicInfo::MigrationStatusHasBeenSet() const
+{
+    return m_migrationStatusHasBeenSet;
+}
+
+string TopicInfo::GetEffectiveDate() const
+{
+    return m_effectiveDate;
+}
+
+void TopicInfo::SetEffectiveDate(const string& _effectiveDate)
+{
+    m_effectiveDate = _effectiveDate;
+    m_effectiveDateHasBeenSet = true;
+}
+
+bool TopicInfo::EffectiveDateHasBeenSet() const
+{
+    return m_effectiveDateHasBeenSet;
+}
+
+bool TopicInfo::GetIsSourceFrom() const
+{
+    return m_isSourceFrom;
+}
+
+void TopicInfo::SetIsSourceFrom(const bool& _isSourceFrom)
+{
+    m_isSourceFrom = _isSourceFrom;
+    m_isSourceFromHasBeenSet = true;
+}
+
+bool TopicInfo::IsSourceFromHasBeenSet() const
+{
+    return m_isSourceFromHasBeenSet;
+}
+
+uint64_t TopicInfo::GetBillingMode() const
+{
+    return m_billingMode;
+}
+
+void TopicInfo::SetBillingMode(const uint64_t& _billingMode)
+{
+    m_billingMode = _billingMode;
+    m_billingModeHasBeenSet = true;
+}
+
+bool TopicInfo::BillingModeHasBeenSet() const
+{
+    return m_billingModeHasBeenSet;
+}
+
+uint64_t TopicInfo::GetNewBillingMode() const
+{
+    return m_newBillingMode;
+}
+
+void TopicInfo::SetNewBillingMode(const uint64_t& _newBillingMode)
+{
+    m_newBillingMode = _newBillingMode;
+    m_newBillingModeHasBeenSet = true;
+}
+
+bool TopicInfo::NewBillingModeHasBeenSet() const
+{
+    return m_newBillingModeHasBeenSet;
 }
 

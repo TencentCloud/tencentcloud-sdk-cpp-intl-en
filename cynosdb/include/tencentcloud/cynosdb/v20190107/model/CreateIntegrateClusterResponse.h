@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Order ID
-                     * @return DealNames Order ID
+                     * 获取Order ID.
+                     * @return DealNames Order ID.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -126,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * Order ID
+                     * Order ID.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

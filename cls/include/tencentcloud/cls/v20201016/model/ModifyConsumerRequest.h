@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/ConsumerContent.h>
 #include <tencentcloud/cls/v20201016/model/Ckafka.h>
+#include <tencentcloud/cls/v20201016/model/AdvancedConsumerConfiguration.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID bound to the task
-                     * @return TopicId Log topic ID bound to the task
+                     * 获取Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @return TopicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID bound to the task
-                     * @param _topicId Log topic ID bound to the task
+                     * 设置Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @param _topicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -170,10 +179,75 @@ namespace TencentCloud
                      */
                     bool CompressionHasBeenSet() const;
 
+                    /**
+                     * 获取ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+                     * @return RoleArn ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+                     * 
+                     */
+                    std::string GetRoleArn() const;
+
+                    /**
+                     * 设置ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+                     * @param _roleArn ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+                     * 
+                     */
+                    void SetRoleArn(const std::string& _roleArn);
+
+                    /**
+                     * 判断参数 RoleArn 是否已赋值
+                     * @return RoleArn 是否已赋值
+                     * 
+                     */
+                    bool RoleArnHasBeenSet() const;
+
+                    /**
+                     * 获取external ID
+                     * @return ExternalId external ID
+                     * 
+                     */
+                    std::string GetExternalId() const;
+
+                    /**
+                     * 设置external ID
+                     * @param _externalId external ID
+                     * 
+                     */
+                    void SetExternalId(const std::string& _externalId);
+
+                    /**
+                     * 判断参数 ExternalId 是否已赋值
+                     * @return ExternalId 是否已赋值
+                     * 
+                     */
+                    bool ExternalIdHasBeenSet() const;
+
+                    /**
+                     * 获取Advanced configuration
+                     * @return AdvancedConfig Advanced configuration
+                     * 
+                     */
+                    AdvancedConsumerConfiguration GetAdvancedConfig() const;
+
+                    /**
+                     * 设置Advanced configuration
+                     * @param _advancedConfig Advanced configuration
+                     * 
+                     */
+                    void SetAdvancedConfig(const AdvancedConsumerConfiguration& _advancedConfig);
+
+                    /**
+                     * 判断参数 AdvancedConfig 是否已赋值
+                     * @return AdvancedConfig 是否已赋值
+                     * 
+                     */
+                    bool AdvancedConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID bound to the task
+                     * Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -207,6 +281,24 @@ namespace TencentCloud
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;
+
+                    /**
+                     * ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+                     */
+                    std::string m_roleArn;
+                    bool m_roleArnHasBeenSet;
+
+                    /**
+                     * external ID
+                     */
+                    std::string m_externalId;
+                    bool m_externalIdHasBeenSet;
+
+                    /**
+                     * Advanced configuration
+                     */
+                    AdvancedConsumerConfiguration m_advancedConfig;
+                    bool m_advancedConfigHasBeenSet;
 
                 };
             }

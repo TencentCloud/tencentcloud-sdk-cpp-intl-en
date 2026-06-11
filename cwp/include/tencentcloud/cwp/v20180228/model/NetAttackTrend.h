@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DateTime Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDateTime() const;
 
                     /**
                      * 设置Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dateTime Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDateTime(const std::string& _dateTime);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackCount Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Attack count
+                     * @return AttackCount Attack count
                      * 
                      */
                     uint64_t GetAttackCount() const;
 
                     /**
-                     * 设置Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackCount Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Attack count
+                     * @param _attackCount Attack count
                      * 
                      */
                     void SetAttackCount(const uint64_t& _attackCount);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TryAttackCount Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTryAttackCount() const;
 
                     /**
                      * 设置Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tryAttackCount Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTryAttackCount(const uint64_t& _tryAttackCount);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuccAttackCount Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetSuccAttackCount() const;
 
                     /**
                      * 设置Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _succAttackCount Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSuccAttackCount(const uint64_t& _succAttackCount);
@@ -150,28 +134,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dateTime;
                     bool m_dateTimeHasBeenSet;
 
                     /**
-                     * Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Attack count
                      */
                     uint64_t m_attackCount;
                     bool m_attackCountHasBeenSet;
 
                     /**
                      * Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_tryAttackCount;
                     bool m_tryAttackCountHasBeenSet;
 
                     /**
                      * Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_succAttackCount;
                     bool m_succAttackCountHasBeenSet;

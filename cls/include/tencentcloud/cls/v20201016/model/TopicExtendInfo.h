@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log topic extended information
+                * Log topic extension information.
                 */
                 class TopicExtendInfo : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic authentication-free configuration information
-                     * @return AnonymousAccess Log topic authentication-free configuration information
+                     * 获取Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AnonymousAccess Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AnonymousInfo GetAnonymousAccess() const;
 
                     /**
-                     * 设置Log topic authentication-free configuration information
-                     * @param _anonymousAccess Log topic authentication-free configuration information
+                     * 设置Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _anonymousAccess Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAnonymousAccess(const AnonymousInfo& _anonymousAccess);
@@ -71,7 +75,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic authentication-free configuration information
+                     * Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AnonymousInfo m_anonymousAccess;
                     bool m_anonymousAccessHasBeenSet;

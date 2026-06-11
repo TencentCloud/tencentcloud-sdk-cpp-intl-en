@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTaskId() const;
@@ -59,14 +57,53 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TaskIdHasBeenSet() const;
 
+                    /**
+                     * 获取Selected host includes basic version count
+                     * @return BasicVersionCount Selected host includes basic version count
+                     * 
+                     */
+                    uint64_t GetBasicVersionCount() const;
+
+                    /**
+                     * 判断参数 BasicVersionCount 是否已赋值
+                     * @return BasicVersionCount 是否已赋值
+                     * 
+                     */
+                    bool BasicVersionCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of machines for scan task creation
+                     * @return SuccessCount Number of machines for scan task creation
+                     * 
+                     */
+                    uint64_t GetSuccessCount() const;
+
+                    /**
+                     * 判断参数 SuccessCount 是否已赋值
+                     * @return SuccessCount 是否已赋值
+                     * 
+                     */
+                    bool SuccessCountHasBeenSet() const;
+
                 private:
 
                     /**
                      * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;
+
+                    /**
+                     * Selected host includes basic version count
+                     */
+                    uint64_t m_basicVersionCount;
+                    bool m_basicVersionCountHasBeenSet;
+
+                    /**
+                     * Number of machines for scan task creation
+                     */
+                    uint64_t m_successCount;
+                    bool m_successCountHasBeenSet;
 
                 };
             }

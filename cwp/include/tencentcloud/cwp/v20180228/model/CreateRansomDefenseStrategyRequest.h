@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool ExcludeDirHasBeenSet() const;
 
                     /**
-                     * 获取Backup pattern: 0 weekly, 1 daily.
-                     * @return BackupType Backup pattern: 0 weekly, 1 daily.
+                     * 获取Backup mode: 0 weekly, 1 daily, 2 do not backup.
+                     * @return BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      * 
                      */
                     uint64_t GetBackupType() const;
 
                     /**
-                     * 设置Backup pattern: 0 weekly, 1 daily.
-                     * @param _backupType Backup pattern: 0 weekly, 1 daily.
+                     * 设置Backup mode: 0 weekly, 1 daily, 2 do not backup.
+                     * @param _backupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      * 
                      */
                     void SetBackupType(const uint64_t& _backupType);
@@ -346,7 +346,7 @@ namespace TencentCloud
                     bool m_excludeDirHasBeenSet;
 
                     /**
-                     * Backup pattern: 0 weekly, 1 daily.
+                     * Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      */
                     uint64_t m_backupType;
                     bool m_backupTypeHasBeenSet;

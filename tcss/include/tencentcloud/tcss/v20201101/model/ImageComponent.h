@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulCount Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of Component Vulnerabilities
+                     * @return VulCount Number of Component Vulnerabilities
                      * 
                      */
                     uint64_t GetVulCount() const;
 
                     /**
-                     * 设置Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vulCount Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of Component Vulnerabilities
+                     * @param _vulCount Number of Component Vulnerabilities
                      * 
                      */
                     void SetVulCount(const uint64_t& _vulCount);
@@ -157,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageID Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _imageID Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetImageID(const std::string& _imageID);
@@ -207,15 +199,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of Component Vulnerabilities
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
 
                     /**
                      * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_imageID;
                     bool m_imageIDHasBeenSet;

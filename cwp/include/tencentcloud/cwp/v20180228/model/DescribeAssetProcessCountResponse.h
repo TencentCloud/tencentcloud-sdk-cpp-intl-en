@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Process Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of processes
+                     * @return Process Number of processes
                      * 
                      */
                     std::vector<AssetKeyVal> GetProcess() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of processes
                      */
                     std::vector<AssetKeyVal> m_process;
                     bool m_processHasBeenSet;

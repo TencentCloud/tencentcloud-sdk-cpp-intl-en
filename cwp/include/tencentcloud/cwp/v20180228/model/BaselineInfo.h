@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleCount Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRuleCount() const;
 
                     /**
                      * 设置Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleCount Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleCount(const uint64_t& _ruleCount);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHostCount() const;
 
                     /**
                      * 设置Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostCount(const uint64_t& _hostCount);
@@ -147,15 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostCountHasBeenSet() const;
 
                     /**
-                     * 获取Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pass status: 0: Failed, 1: Approved
+                     * @return Status Pass status: 0: Failed, 1: Approved
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Pass status: 0: Failed, 1: Approved
+                     * @param _status Pass status: 0: Failed, 1: Approved
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -169,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCategoryId() const;
 
                     /**
                      * 设置Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _categoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCategoryId(const uint64_t& _categoryId);
@@ -193,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CategoryIdHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time
+                     * @return LastScanTime Last detection time
                      * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time
+                     * @param _lastScanTime Last detection time
                      * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
@@ -218,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxStatus 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取5: detecting
+                     * @return MaxStatus 5: detecting
                      * 
                      */
                     uint64_t GetMaxStatus() const;
 
                     /**
-                     * 设置5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxStatus 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置5: detecting
+                     * @param _maxStatus 5: detecting
                      * 
                      */
                     void SetMaxStatus(const uint64_t& _maxStatus);
@@ -243,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxStatusHasBeenSet() const;
 
                     /**
-                     * 获取Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Baseline risk items
+                     * @return BaselineFailCount Baseline risk items
                      * 
                      */
                     uint64_t GetBaselineFailCount() const;
 
                     /**
-                     * 设置Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _baselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Baseline risk items
+                     * @param _baselineFailCount Baseline risk items
                      * 
                      */
                     void SetBaselineFailCount(const uint64_t& _baselineFailCount);
@@ -271,62 +239,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ruleCount;
                     bool m_ruleCountHasBeenSet;
 
                     /**
                      * Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
 
                     /**
-                     * Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pass status: 0: Failed, 1: Approved
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_categoryId;
                     bool m_categoryIdHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time
                      */
                     std::string m_lastScanTime;
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 5: detecting
                      */
                     uint64_t m_maxStatus;
                     bool m_maxStatusHasBeenSet;
 
                     /**
-                     * Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Baseline risk items
                      */
                     uint64_t m_baselineFailCount;
                     bool m_baselineFailCountHasBeenSet;

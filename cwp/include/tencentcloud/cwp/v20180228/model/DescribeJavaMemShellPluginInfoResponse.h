@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<JavaMemShellPluginInfo> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<JavaMemShellPluginInfo> m_list;
                     bool m_listHasBeenSet;

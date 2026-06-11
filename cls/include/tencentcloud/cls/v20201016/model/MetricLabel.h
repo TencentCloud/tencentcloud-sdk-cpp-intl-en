@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Metric NameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Metric name
+                     * @return Key Metric name
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Metric NameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Metric name
+                     * @param _key Metric name
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Metric content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Metric content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Metric content.
+                     * @return Value Metric content.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Metric content Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Metric content Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Metric content.
+                     * @param _value Metric content.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Metric name
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Metric content Note: This field may return null, indicating that no valid values can be obtained.
+                     * Metric content.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

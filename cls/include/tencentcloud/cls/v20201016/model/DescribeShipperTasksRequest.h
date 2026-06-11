@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shipping rule ID
-                     * @return ShipperId Shipping rule ID
+                     * 获取Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @return ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     std::string GetShipperId() const;
 
                     /**
-                     * 设置Shipping rule ID
-                     * @param _shipperId Shipping rule ID
+                     * 设置Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+                     * @param _shipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      * 
                      */
                     void SetShipperId(const std::string& _shipperId);
@@ -64,15 +72,19 @@ namespace TencentCloud
                     bool ShipperIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start timestamp in milliseconds, which can be within the last three days
-                     * @return StartTime Query start timestamp in milliseconds, which can be within the last three days
+                     * 获取Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+                     * @return StartTime Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Query start timestamp in milliseconds, which can be within the last three days
-                     * @param _startTime Query start timestamp in milliseconds, which can be within the last three days
+                     * 设置Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+                     * @param _startTime Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -85,15 +97,19 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end timestamp in milliseconds
-                     * @return EndTime Query end timestamp in milliseconds
+                     * 获取Query end timestamp, in ms.
+StartTime must be less than EndTime
+                     * @return EndTime Query end timestamp, in ms.
+StartTime must be less than EndTime
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置Query end timestamp in milliseconds
-                     * @param _endTime Query end timestamp in milliseconds
+                     * 设置Query end timestamp, in ms.
+StartTime must be less than EndTime
+                     * @param _endTime Query end timestamp, in ms.
+StartTime must be less than EndTime
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -108,19 +124,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shipping rule ID
+                     * Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
                      */
                     std::string m_shipperId;
                     bool m_shipperIdHasBeenSet;
 
                     /**
-                     * Query start timestamp in milliseconds, which can be within the last three days
+                     * Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end timestamp in milliseconds
+                     * Query end timestamp, in ms.
+StartTime must be less than EndTime
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;

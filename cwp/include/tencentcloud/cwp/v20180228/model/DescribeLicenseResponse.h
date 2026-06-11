@@ -43,7 +43,27 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Supported Features
+                     * @return FunctionsEn Supported Features
+                     * 
+                     */
+                    std::vector<std::string> GetFunctionsEn() const;
+
+                    /**
+                     * 判断参数 FunctionsEn 是否已赋值
+                     * @return FunctionsEn 是否已赋值
+                     * 
+                     */
+                    bool FunctionsEnHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Supported Features
+                     */
+                    std::vector<std::string> m_functionsEn;
+                    bool m_functionsEnHasBeenSet;
 
                 };
             }

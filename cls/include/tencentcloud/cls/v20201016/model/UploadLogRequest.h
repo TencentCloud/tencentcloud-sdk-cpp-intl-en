@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic ID
-                     * @return TopicId Topic ID
+                     * 获取Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return TopicId Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Topic ID
-                     * @param _topicId Topic ID
+                     * 设置Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _topicId Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,36 +68,44 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Topic partition where data will be written into by `HashKey` 
-                     * @return HashKey Topic partition where data will be written into by `HashKey` 
-                     * 
+                     * 获取This parameter has been deprecated and should not be used.
+                     * @return HashKey This parameter has been deprecated and should not be used.
+                     * @deprecated
                      */
                     std::string GetHashKey() const;
 
                     /**
-                     * 设置Topic partition where data will be written into by `HashKey` 
-                     * @param _hashKey Topic partition where data will be written into by `HashKey` 
-                     * 
+                     * 设置This parameter has been deprecated and should not be used.
+                     * @param _hashKey This parameter has been deprecated and should not be used.
+                     * @deprecated
                      */
                     void SetHashKey(const std::string& _hashKey);
 
                     /**
                      * 判断参数 HashKey 是否已赋值
                      * @return HashKey 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool HashKeyHasBeenSet() const;
 
                     /**
-                     * 获取Compression type
-                     * @return CompressType Compression type
+                     * 获取Compression method. Currently supports
+- lz4
+- zstd
+                     * @return CompressType Compression method. Currently supports
+- lz4
+- zstd
                      * 
                      */
                     std::string GetCompressType() const;
 
                     /**
-                     * 设置Compression type
-                     * @param _compressType Compression type
+                     * 设置Compression method. Currently supports
+- lz4
+- zstd
+                     * @param _compressType Compression method. Currently supports
+- lz4
+- zstd
                      * 
                      */
                     void SetCompressType(const std::string& _compressType);
@@ -108,19 +120,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Topic ID
+                     * Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Topic partition where data will be written into by `HashKey` 
+                     * This parameter has been deprecated and should not be used.
                      */
                     std::string m_hashKey;
                     bool m_hashKeyHasBeenSet;
 
                     /**
-                     * Compression type
+                     * Compression method. Currently supports
+- lz4
+- zstd
                      */
                     std::string m_compressType;
                     bool m_compressTypeHasBeenSet;

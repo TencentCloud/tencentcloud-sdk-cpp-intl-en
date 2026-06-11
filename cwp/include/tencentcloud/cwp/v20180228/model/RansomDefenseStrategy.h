@@ -69,18 +69,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uin Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uin Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -115,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _description Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -182,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IncludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIncludeDir() const;
 
                     /**
                      * 设置Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _includeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIncludeDir(const std::string& _includeDir);
@@ -207,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExcludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExcludeDir() const;
 
                     /**
                      * 设置Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _excludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExcludeDir(const std::string& _excludeDir);
@@ -231,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExcludeDirHasBeenSet() const;
 
                     /**
-                     * 获取Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupType Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup mode: 0 weekly, 1 daily, 2 do not backup.
+                     * @return BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      * 
                      */
                     uint64_t GetBackupType() const;
 
                     /**
-                     * 设置Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupType Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Backup mode: 0 weekly, 1 daily, 2 do not backup.
+                     * @param _backupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      * 
                      */
                     void SetBackupType(const uint64_t& _backupType);
@@ -257,18 +237,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Weekday Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetWeekday() const;
 
                     /**
                      * 设置Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _weekday Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWeekday(const std::string& _weekday);
@@ -324,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -349,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -374,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineCount Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetMachineCount() const;
 
                     /**
                      * 设置Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineCount Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineCount(const uint64_t& _machineCount);
@@ -407,7 +371,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -420,7 +383,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -439,28 +401,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_includeDir;
                     bool m_includeDirHasBeenSet;
 
                     /**
                      * Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_excludeDir;
                     bool m_excludeDirHasBeenSet;
 
                     /**
-                     * Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup mode: 0 weekly, 1 daily, 2 do not backup.
                      */
                     uint64_t m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
                      * Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_weekday;
                     bool m_weekdayHasBeenSet;
@@ -479,21 +437,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
                      * Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_machineCount;
                     bool m_machineCountHasBeenSet;

@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MachineOsHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 获取CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @param _uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 设置CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @param _uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -493,18 +493,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -531,7 +527,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineOsHasBeenSet;
 
                     /**
-                     * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
@@ -646,7 +642,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;

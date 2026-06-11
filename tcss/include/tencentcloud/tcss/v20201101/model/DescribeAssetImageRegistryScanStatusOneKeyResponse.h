@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool ImageScanCntHasBeenSet() const;
 
                     /**
-                     * 获取Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageStatus Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scan progress list
+                     * @return ImageStatus Scan progress list
                      * 
                      */
                     std::vector<ImageProgress> GetImageStatus() const;
@@ -146,9 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanRemainTime Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetScanRemainTime() const;
@@ -175,8 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_imageScanCntHasBeenSet;
 
                     /**
-                     * Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scan progress list
                      */
                     std::vector<ImageProgress> m_imageStatus;
                     bool m_imageStatusHasBeenSet;
@@ -207,7 +202,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_scanRemainTime;
                     bool m_scanRemainTimeHasBeenSet;

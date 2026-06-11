@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @return TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @param _topicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -65,14 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
                      * @return Query Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
                      * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
                      * @param _query Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
                      * 
                      */
                     void SetQuery(const std::string& _query);
@@ -151,12 +159,14 @@ namespace TencentCloud
 
                     /**
                      * Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
                      * Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

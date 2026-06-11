@@ -320,19 +320,15 @@ namespace TencentCloud
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetectBy 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: bash log; 1: real-time monitoring (Thunder Edition)
+                     * @return DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
                      * 
                      */
                     uint64_t GetDetectBy() const;
 
                     /**
-                     * 设置0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _detectBy 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: bash log; 1: real-time monitoring (Thunder Edition)
+                     * @param _detectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
                      * 
                      */
                     void SetDetectBy(const uint64_t& _detectBy);
@@ -345,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DetectByHasBeenSet() const;
 
                     /**
-                     * 获取Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Process id
+                     * @return Pid Process id
                      * 
                      */
                     std::string GetPid() const;
 
                     /**
-                     * 设置Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Process id
+                     * @param _pid Process id
                      * 
                      */
                     void SetPid(const std::string& _pid);
@@ -371,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExe() const;
 
                     /**
                      * 设置Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExe(const std::string& _exe);
@@ -396,18 +384,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -420,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule category. 0: system rule; 1: user rule
+                     * @return RuleCategory Rule category. 0: system rule; 1: user rule
                      * 
                      */
                     uint64_t GetRuleCategory() const;
 
                     /**
-                     * 设置Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ruleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule category. 0: system rule; 1: user rule
+                     * @param _ruleCategory Rule category. 0: system rule; 1: user rule
                      * 
                      */
                     void SetRuleCategory(const uint64_t& _ruleCategory);
@@ -445,15 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegexBashCmd Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Automatically generated regular expression
+                     * @return RegexBashCmd Automatically generated regular expression
                      * 
                      */
                     std::string GetRegexBashCmd() const;
 
                     /**
-                     * 设置Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _regexBashCmd Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Automatically generated regular expression
+                     * @param _regexBashCmd Automatically generated regular expression
                      * 
                      */
                     void SetRegexBashCmd(const std::string& _regexBashCmd);
@@ -466,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegexBashCmdHasBeenSet() const;
 
                     /**
-                     * 获取Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host name.
+                     * @return HostName Host name.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host name.
+                     * @param _hostName Host name.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -571,49 +547,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: bash log; 1: real-time monitoring (Thunder Edition)
                      */
                     uint64_t m_detectBy;
                     bool m_detectByHasBeenSet;
 
                     /**
-                     * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Process id
                      */
                     std::string m_pid;
                     bool m_pidHasBeenSet;
 
                     /**
                      * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_exe;
                     bool m_exeHasBeenSet;
 
                     /**
                      * Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule category. 0: system rule; 1: user rule
                      */
                     uint64_t m_ruleCategory;
                     bool m_ruleCategoryHasBeenSet;
 
                     /**
-                     * Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+                     * Automatically generated regular expression
                      */
                     std::string m_regexBashCmd;
                     bool m_regexBashCmdHasBeenSet;
 
                     /**
-                     * Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host name.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;

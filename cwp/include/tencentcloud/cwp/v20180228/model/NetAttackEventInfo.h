@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cwp/v20180228/model/MachineExtraInfo.h>
+#include <tencentcloud/cwp/v20180228/model/IPAnalyse.h>
 
 
 namespace TencentCloud
@@ -343,18 +344,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -409,15 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-                     * @return PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * 获取Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @return PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     uint64_t GetPayVersion() const;
 
                     /**
-                     * 设置Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-                     * @param _payVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * 设置Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+                     * @param _payVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      * 
                      */
                     void SetPayVersion(const uint64_t& _payVersion);
@@ -431,18 +428,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -456,18 +449,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MergeTime Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMergeTime() const;
 
                     /**
                      * 设置Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _mergeTime Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMergeTime(const std::string& _mergeTime);
@@ -481,18 +470,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -506,18 +491,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostOpType 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetHostOpType() const;
 
                     /**
                      * 设置0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostOpType 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostOpType(const uint64_t& _hostOpType);
@@ -531,18 +512,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostOpProcessTree Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostOpProcessTree() const;
 
                     /**
                      * 设置Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostOpProcessTree Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostOpProcessTree(const std::string& _hostOpProcessTree);
@@ -553,6 +530,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool HostOpProcessTreeHasBeenSet() const;
+
+                    /**
+                     * 获取IP analysis
+                     * @return IPAnalyse IP analysis
+                     * 
+                     */
+                    IPAnalyse GetIPAnalyse() const;
+
+                    /**
+                     * 设置IP analysis
+                     * @param _iPAnalyse IP analysis
+                     * 
+                     */
+                    void SetIPAnalyse(const IPAnalyse& _iPAnalyse);
+
+                    /**
+                     * 判断参数 IPAnalyse 是否已赋值
+                     * @return IPAnalyse 是否已赋值
+                     * 
+                     */
+                    bool IPAnalyseHasBeenSet() const;
+
+                    /**
+                     * 获取Response packet base64 encoded
+                     * @return NetResponsePayload Response packet base64 encoded
+                     * 
+                     */
+                    std::string GetNetResponsePayload() const;
+
+                    /**
+                     * 设置Response packet base64 encoded
+                     * @param _netResponsePayload Response packet base64 encoded
+                     * 
+                     */
+                    void SetNetResponsePayload(const std::string& _netResponsePayload);
+
+                    /**
+                     * 判断参数 NetResponsePayload 是否已赋值
+                     * @return NetResponsePayload 是否已赋值
+                     * 
+                     */
+                    bool NetResponsePayloadHasBeenSet() const;
 
                 private:
 
@@ -642,7 +661,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
@@ -660,45 +678,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_countHasBeenSet;
 
                     /**
-                     * Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+                     * Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
                      */
                     uint64_t m_payVersion;
                     bool m_payVersionHasBeenSet;
 
                     /**
                      * cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
                      * Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mergeTime;
                     bool m_mergeTimeHasBeenSet;
 
                     /**
                      * 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_hostOpType;
                     bool m_hostOpTypeHasBeenSet;
 
                     /**
                      * Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostOpProcessTree;
                     bool m_hostOpProcessTreeHasBeenSet;
+
+                    /**
+                     * IP analysis
+                     */
+                    IPAnalyse m_iPAnalyse;
+                    bool m_iPAnalyseHasBeenSet;
+
+                    /**
+                     * Response packet base64 encoded
+                     */
+                    std::string m_netResponsePayload;
+                    bool m_netResponsePayloadHasBeenSet;
 
                 };
             }

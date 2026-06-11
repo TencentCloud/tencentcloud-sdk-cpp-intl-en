@@ -440,6 +440,56 @@ TcsasClient::CreateMNGOutcomeCallable TcsasClient::CreateMNGCallable(const Creat
     return prom->get_future();
 }
 
+TcsasClient::CreateMNGAppSecretOutcome TcsasClient::CreateMNGAppSecret(const CreateMNGAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNGAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNGAppSecretResponse rsp = CreateMNGAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNGAppSecretOutcome(rsp);
+        else
+            return CreateMNGAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNGAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateMNGAppSecretAsync(const CreateMNGAppSecretRequest& request, const CreateMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMNGAppSecretRequest&;
+    using Resp = CreateMNGAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMNGAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateMNGAppSecretOutcomeCallable TcsasClient::CreateMNGAppSecretCallable(const CreateMNGAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMNGAppSecretOutcome>>();
+    CreateMNGAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNGAppSecretRequest&,
+        CreateMNGAppSecretOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::CreateMNGApprovalOutcome TcsasClient::CreateMNGApproval(const CreateMNGApprovalRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMNGApproval");
@@ -590,6 +640,56 @@ TcsasClient::CreateMNGSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient:
     return prom->get_future();
 }
 
+TcsasClient::CreateMNGSubscribeMessageTemplateOutcome TcsasClient::CreateMNGSubscribeMessageTemplate(const CreateMNGSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNGSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNGSubscribeMessageTemplateResponse rsp = CreateMNGSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNGSubscribeMessageTemplateOutcome(rsp);
+        else
+            return CreateMNGSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNGSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateMNGSubscribeMessageTemplateAsync(const CreateMNGSubscribeMessageTemplateRequest& request, const CreateMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMNGSubscribeMessageTemplateRequest&;
+    using Resp = CreateMNGSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMNGSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateMNGSubscribeMessageTemplateOutcomeCallable TcsasClient::CreateMNGSubscribeMessageTemplateCallable(const CreateMNGSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMNGSubscribeMessageTemplateOutcome>>();
+    CreateMNGSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNGSubscribeMessageTemplateRequest&,
+        CreateMNGSubscribeMessageTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::CreateMNGVersionOutcome TcsasClient::CreateMNGVersion(const CreateMNGVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMNGVersion");
@@ -682,6 +782,56 @@ TcsasClient::CreateMNPOutcomeCallable TcsasClient::CreateMNPCallable(const Creat
         const TcsasClient*,
         const CreateMNPRequest&,
         CreateMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::CreateMNPAppSecretOutcome TcsasClient::CreateMNPAppSecret(const CreateMNPAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPAppSecretResponse rsp = CreateMNPAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPAppSecretOutcome(rsp);
+        else
+            return CreateMNPAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateMNPAppSecretAsync(const CreateMNPAppSecretRequest& request, const CreateMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMNPAppSecretRequest&;
+    using Resp = CreateMNPAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateMNPAppSecretOutcomeCallable TcsasClient::CreateMNPAppSecretCallable(const CreateMNPAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMNPAppSecretOutcome>>();
+    CreateMNPAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPAppSecretRequest&,
+        CreateMNPAppSecretOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -882,6 +1032,56 @@ TcsasClient::CreateMNPSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient:
         const TcsasClient*,
         const CreateMNPSensitiveAPIPermissionApprovalRequest&,
         CreateMNPSensitiveAPIPermissionApprovalOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::CreateMNPSubscribeMessageTemplateOutcome TcsasClient::CreateMNPSubscribeMessageTemplate(const CreateMNPSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateMNPSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateMNPSubscribeMessageTemplateResponse rsp = CreateMNPSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateMNPSubscribeMessageTemplateOutcome(rsp);
+        else
+            return CreateMNPSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateMNPSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::CreateMNPSubscribeMessageTemplateAsync(const CreateMNPSubscribeMessageTemplateRequest& request, const CreateMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateMNPSubscribeMessageTemplateRequest&;
+    using Resp = CreateMNPSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateMNPSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::CreateMNPSubscribeMessageTemplateOutcomeCallable TcsasClient::CreateMNPSubscribeMessageTemplateCallable(const CreateMNPSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateMNPSubscribeMessageTemplateOutcome>>();
+    CreateMNPSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const CreateMNPSubscribeMessageTemplateRequest&,
+        CreateMNPSubscribeMessageTemplateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1290,6 +1490,56 @@ TcsasClient::DeleteMNGOutcomeCallable TcsasClient::DeleteMNGCallable(const Delet
     return prom->get_future();
 }
 
+TcsasClient::DeleteMNGSubscribeMessageTemplateOutcome TcsasClient::DeleteMNGSubscribeMessageTemplate(const DeleteMNGSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteMNGSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteMNGSubscribeMessageTemplateResponse rsp = DeleteMNGSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteMNGSubscribeMessageTemplateOutcome(rsp);
+        else
+            return DeleteMNGSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteMNGSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DeleteMNGSubscribeMessageTemplateAsync(const DeleteMNGSubscribeMessageTemplateRequest& request, const DeleteMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteMNGSubscribeMessageTemplateRequest&;
+    using Resp = DeleteMNGSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteMNGSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DeleteMNGSubscribeMessageTemplateOutcomeCallable TcsasClient::DeleteMNGSubscribeMessageTemplateCallable(const DeleteMNGSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteMNGSubscribeMessageTemplateOutcome>>();
+    DeleteMNGSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteMNGSubscribeMessageTemplateRequest&,
+        DeleteMNGSubscribeMessageTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DeleteMNPOutcome TcsasClient::DeleteMNP(const DeleteMNPRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteMNP");
@@ -1332,6 +1582,56 @@ TcsasClient::DeleteMNPOutcomeCallable TcsasClient::DeleteMNPCallable(const Delet
         const TcsasClient*,
         const DeleteMNPRequest&,
         DeleteMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DeleteMNPSubscribeMessageTemplateOutcome TcsasClient::DeleteMNPSubscribeMessageTemplate(const DeleteMNPSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteMNPSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteMNPSubscribeMessageTemplateResponse rsp = DeleteMNPSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteMNPSubscribeMessageTemplateOutcome(rsp);
+        else
+            return DeleteMNPSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteMNPSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DeleteMNPSubscribeMessageTemplateAsync(const DeleteMNPSubscribeMessageTemplateRequest& request, const DeleteMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteMNPSubscribeMessageTemplateRequest&;
+    using Resp = DeleteMNPSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteMNPSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DeleteMNPSubscribeMessageTemplateOutcomeCallable TcsasClient::DeleteMNPSubscribeMessageTemplateCallable(const DeleteMNPSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteMNPSubscribeMessageTemplateOutcome>>();
+    DeleteMNPSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DeleteMNPSubscribeMessageTemplateRequest&,
+        DeleteMNPSubscribeMessageTemplateOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2590,6 +2890,56 @@ TcsasClient::DescribeMNGAllStageVersionsOutcomeCallable TcsasClient::DescribeMNG
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNGAppSecretOutcome TcsasClient::DescribeMNGAppSecret(const DescribeMNGAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGAppSecretResponse rsp = DescribeMNGAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGAppSecretOutcome(rsp);
+        else
+            return DescribeMNGAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGAppSecretAsync(const DescribeMNGAppSecretRequest& request, const DescribeMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGAppSecretRequest&;
+    using Resp = DescribeMNGAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGAppSecretOutcomeCallable TcsasClient::DescribeMNGAppSecretCallable(const DescribeMNGAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGAppSecretOutcome>>();
+    DescribeMNGAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGAppSecretRequest&,
+        DescribeMNGAppSecretOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNGCategoryOutcome TcsasClient::DescribeMNGCategory(const DescribeMNGCategoryRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNGCategory");
@@ -3390,6 +3740,206 @@ TcsasClient::DescribeMNGSensitiveAPIPermissionListOutcomeCallable TcsasClient::D
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNGSubscribeMessageTemplateOutcome TcsasClient::DescribeMNGSubscribeMessageTemplate(const DescribeMNGSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGSubscribeMessageTemplateResponse rsp = DescribeMNGSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGSubscribeMessageTemplateOutcome(rsp);
+        else
+            return DescribeMNGSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGSubscribeMessageTemplateAsync(const DescribeMNGSubscribeMessageTemplateRequest& request, const DescribeMNGSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGSubscribeMessageTemplateRequest&;
+    using Resp = DescribeMNGSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateOutcomeCallable TcsasClient::DescribeMNGSubscribeMessageTemplateCallable(const DescribeMNGSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGSubscribeMessageTemplateOutcome>>();
+    DescribeMNGSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGSubscribeMessageTemplateRequest&,
+        DescribeMNGSubscribeMessageTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryOutcome TcsasClient::DescribeMNGSubscribeMessageTemplateLibrary(const DescribeMNGSubscribeMessageTemplateLibraryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGSubscribeMessageTemplateLibrary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGSubscribeMessageTemplateLibraryResponse rsp = DescribeMNGSubscribeMessageTemplateLibraryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGSubscribeMessageTemplateLibraryOutcome(rsp);
+        else
+            return DescribeMNGSubscribeMessageTemplateLibraryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGSubscribeMessageTemplateLibraryOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryAsync(const DescribeMNGSubscribeMessageTemplateLibraryRequest& request, const DescribeMNGSubscribeMessageTemplateLibraryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGSubscribeMessageTemplateLibraryRequest&;
+    using Resp = DescribeMNGSubscribeMessageTemplateLibraryResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGSubscribeMessageTemplateLibrary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryOutcomeCallable TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryCallable(const DescribeMNGSubscribeMessageTemplateLibraryRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGSubscribeMessageTemplateLibraryOutcome>>();
+    DescribeMNGSubscribeMessageTemplateLibraryAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGSubscribeMessageTemplateLibraryRequest&,
+        DescribeMNGSubscribeMessageTemplateLibraryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryListOutcome TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryList(const DescribeMNGSubscribeMessageTemplateLibraryListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGSubscribeMessageTemplateLibraryList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGSubscribeMessageTemplateLibraryListResponse rsp = DescribeMNGSubscribeMessageTemplateLibraryListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGSubscribeMessageTemplateLibraryListOutcome(rsp);
+        else
+            return DescribeMNGSubscribeMessageTemplateLibraryListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGSubscribeMessageTemplateLibraryListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryListAsync(const DescribeMNGSubscribeMessageTemplateLibraryListRequest& request, const DescribeMNGSubscribeMessageTemplateLibraryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGSubscribeMessageTemplateLibraryListRequest&;
+    using Resp = DescribeMNGSubscribeMessageTemplateLibraryListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGSubscribeMessageTemplateLibraryList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryListOutcomeCallable TcsasClient::DescribeMNGSubscribeMessageTemplateLibraryListCallable(const DescribeMNGSubscribeMessageTemplateLibraryListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGSubscribeMessageTemplateLibraryListOutcome>>();
+    DescribeMNGSubscribeMessageTemplateLibraryListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGSubscribeMessageTemplateLibraryListRequest&,
+        DescribeMNGSubscribeMessageTemplateLibraryListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateListOutcome TcsasClient::DescribeMNGSubscribeMessageTemplateList(const DescribeMNGSubscribeMessageTemplateListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGSubscribeMessageTemplateList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGSubscribeMessageTemplateListResponse rsp = DescribeMNGSubscribeMessageTemplateListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGSubscribeMessageTemplateListOutcome(rsp);
+        else
+            return DescribeMNGSubscribeMessageTemplateListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGSubscribeMessageTemplateListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGSubscribeMessageTemplateListAsync(const DescribeMNGSubscribeMessageTemplateListRequest& request, const DescribeMNGSubscribeMessageTemplateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGSubscribeMessageTemplateListRequest&;
+    using Resp = DescribeMNGSubscribeMessageTemplateListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGSubscribeMessageTemplateList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGSubscribeMessageTemplateListOutcomeCallable TcsasClient::DescribeMNGSubscribeMessageTemplateListCallable(const DescribeMNGSubscribeMessageTemplateListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGSubscribeMessageTemplateListOutcome>>();
+    DescribeMNGSubscribeMessageTemplateListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGSubscribeMessageTemplateListRequest&,
+        DescribeMNGSubscribeMessageTemplateListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNGVersionOutcome TcsasClient::DescribeMNGVersion(const DescribeMNGVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNGVersion");
@@ -3682,6 +4232,56 @@ TcsasClient::DescribeMNPAllStageVersionsOutcomeCallable TcsasClient::DescribeMNP
         const TcsasClient*,
         const DescribeMNPAllStageVersionsRequest&,
         DescribeMNPAllStageVersionsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPAppSecretOutcome TcsasClient::DescribeMNPAppSecret(const DescribeMNPAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPAppSecretResponse rsp = DescribeMNPAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPAppSecretOutcome(rsp);
+        else
+            return DescribeMNPAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPAppSecretAsync(const DescribeMNPAppSecretRequest& request, const DescribeMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPAppSecretRequest&;
+    using Resp = DescribeMNPAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPAppSecretOutcomeCallable TcsasClient::DescribeMNPAppSecretCallable(const DescribeMNPAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPAppSecretOutcome>>();
+    DescribeMNPAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPAppSecretRequest&,
+        DescribeMNPAppSecretOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4540,6 +5140,206 @@ TcsasClient::DescribeMNPSensitiveAPIPermissionListOutcomeCallable TcsasClient::D
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNPSubscribeMessageTemplateOutcome TcsasClient::DescribeMNPSubscribeMessageTemplate(const DescribeMNPSubscribeMessageTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSubscribeMessageTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSubscribeMessageTemplateResponse rsp = DescribeMNPSubscribeMessageTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSubscribeMessageTemplateOutcome(rsp);
+        else
+            return DescribeMNPSubscribeMessageTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSubscribeMessageTemplateOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPSubscribeMessageTemplateAsync(const DescribeMNPSubscribeMessageTemplateRequest& request, const DescribeMNPSubscribeMessageTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPSubscribeMessageTemplateRequest&;
+    using Resp = DescribeMNPSubscribeMessageTemplateResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSubscribeMessageTemplate", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateOutcomeCallable TcsasClient::DescribeMNPSubscribeMessageTemplateCallable(const DescribeMNPSubscribeMessageTemplateRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPSubscribeMessageTemplateOutcome>>();
+    DescribeMNPSubscribeMessageTemplateAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSubscribeMessageTemplateRequest&,
+        DescribeMNPSubscribeMessageTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryOutcome TcsasClient::DescribeMNPSubscribeMessageTemplateLibrary(const DescribeMNPSubscribeMessageTemplateLibraryRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSubscribeMessageTemplateLibrary");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSubscribeMessageTemplateLibraryResponse rsp = DescribeMNPSubscribeMessageTemplateLibraryResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSubscribeMessageTemplateLibraryOutcome(rsp);
+        else
+            return DescribeMNPSubscribeMessageTemplateLibraryOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSubscribeMessageTemplateLibraryOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryAsync(const DescribeMNPSubscribeMessageTemplateLibraryRequest& request, const DescribeMNPSubscribeMessageTemplateLibraryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPSubscribeMessageTemplateLibraryRequest&;
+    using Resp = DescribeMNPSubscribeMessageTemplateLibraryResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSubscribeMessageTemplateLibrary", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryOutcomeCallable TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryCallable(const DescribeMNPSubscribeMessageTemplateLibraryRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPSubscribeMessageTemplateLibraryOutcome>>();
+    DescribeMNPSubscribeMessageTemplateLibraryAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSubscribeMessageTemplateLibraryRequest&,
+        DescribeMNPSubscribeMessageTemplateLibraryOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryListOutcome TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryList(const DescribeMNPSubscribeMessageTemplateLibraryListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSubscribeMessageTemplateLibraryList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSubscribeMessageTemplateLibraryListResponse rsp = DescribeMNPSubscribeMessageTemplateLibraryListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSubscribeMessageTemplateLibraryListOutcome(rsp);
+        else
+            return DescribeMNPSubscribeMessageTemplateLibraryListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSubscribeMessageTemplateLibraryListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryListAsync(const DescribeMNPSubscribeMessageTemplateLibraryListRequest& request, const DescribeMNPSubscribeMessageTemplateLibraryListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPSubscribeMessageTemplateLibraryListRequest&;
+    using Resp = DescribeMNPSubscribeMessageTemplateLibraryListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSubscribeMessageTemplateLibraryList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryListOutcomeCallable TcsasClient::DescribeMNPSubscribeMessageTemplateLibraryListCallable(const DescribeMNPSubscribeMessageTemplateLibraryListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPSubscribeMessageTemplateLibraryListOutcome>>();
+    DescribeMNPSubscribeMessageTemplateLibraryListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSubscribeMessageTemplateLibraryListRequest&,
+        DescribeMNPSubscribeMessageTemplateLibraryListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateListOutcome TcsasClient::DescribeMNPSubscribeMessageTemplateList(const DescribeMNPSubscribeMessageTemplateListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPSubscribeMessageTemplateList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPSubscribeMessageTemplateListResponse rsp = DescribeMNPSubscribeMessageTemplateListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPSubscribeMessageTemplateListOutcome(rsp);
+        else
+            return DescribeMNPSubscribeMessageTemplateListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPSubscribeMessageTemplateListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPSubscribeMessageTemplateListAsync(const DescribeMNPSubscribeMessageTemplateListRequest& request, const DescribeMNPSubscribeMessageTemplateListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPSubscribeMessageTemplateListRequest&;
+    using Resp = DescribeMNPSubscribeMessageTemplateListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPSubscribeMessageTemplateList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPSubscribeMessageTemplateListOutcomeCallable TcsasClient::DescribeMNPSubscribeMessageTemplateListCallable(const DescribeMNPSubscribeMessageTemplateListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPSubscribeMessageTemplateListOutcome>>();
+    DescribeMNPSubscribeMessageTemplateListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPSubscribeMessageTemplateListRequest&,
+        DescribeMNPSubscribeMessageTemplateListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNPVersionOutcome TcsasClient::DescribeMNPVersion(const DescribeMNPVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPVersion");
@@ -5390,6 +6190,56 @@ TcsasClient::ModifyMNGOutcomeCallable TcsasClient::ModifyMNGCallable(const Modif
     return prom->get_future();
 }
 
+TcsasClient::ModifyMNGAppSecretStatusOutcome TcsasClient::ModifyMNGAppSecretStatus(const ModifyMNGAppSecretStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMNGAppSecretStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMNGAppSecretStatusResponse rsp = ModifyMNGAppSecretStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMNGAppSecretStatusOutcome(rsp);
+        else
+            return ModifyMNGAppSecretStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMNGAppSecretStatusOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ModifyMNGAppSecretStatusAsync(const ModifyMNGAppSecretStatusRequest& request, const ModifyMNGAppSecretStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMNGAppSecretStatusRequest&;
+    using Resp = ModifyMNGAppSecretStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNGAppSecretStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ModifyMNGAppSecretStatusOutcomeCallable TcsasClient::ModifyMNGAppSecretStatusCallable(const ModifyMNGAppSecretStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMNGAppSecretStatusOutcome>>();
+    ModifyMNGAppSecretStatusAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyMNGAppSecretStatusRequest&,
+        ModifyMNGAppSecretStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::ModifyMNGDomainOutcome TcsasClient::ModifyMNGDomain(const ModifyMNGDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyMNGDomain");
@@ -5482,6 +6332,56 @@ TcsasClient::ModifyMNPOutcomeCallable TcsasClient::ModifyMNPCallable(const Modif
         const TcsasClient*,
         const ModifyMNPRequest&,
         ModifyMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ModifyMNPAppSecretStatusOutcome TcsasClient::ModifyMNPAppSecretStatus(const ModifyMNPAppSecretStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyMNPAppSecretStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyMNPAppSecretStatusResponse rsp = ModifyMNPAppSecretStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyMNPAppSecretStatusOutcome(rsp);
+        else
+            return ModifyMNPAppSecretStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyMNPAppSecretStatusOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ModifyMNPAppSecretStatusAsync(const ModifyMNPAppSecretStatusRequest& request, const ModifyMNPAppSecretStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyMNPAppSecretStatusRequest&;
+    using Resp = ModifyMNPAppSecretStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyMNPAppSecretStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ModifyMNPAppSecretStatusOutcomeCallable TcsasClient::ModifyMNPAppSecretStatusCallable(const ModifyMNPAppSecretStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyMNPAppSecretStatusOutcome>>();
+    ModifyMNPAppSecretStatusAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ModifyMNPAppSecretStatusRequest&,
+        ModifyMNPAppSecretStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -5982,6 +6882,106 @@ TcsasClient::RemoveMNPOutcomeCallable TcsasClient::RemoveMNPCallable(const Remov
         const TcsasClient*,
         const RemoveMNPRequest&,
         RemoveMNPOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ResetMNGAppSecretOutcome TcsasClient::ResetMNGAppSecret(const ResetMNGAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetMNGAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetMNGAppSecretResponse rsp = ResetMNGAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetMNGAppSecretOutcome(rsp);
+        else
+            return ResetMNGAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetMNGAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ResetMNGAppSecretAsync(const ResetMNGAppSecretRequest& request, const ResetMNGAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetMNGAppSecretRequest&;
+    using Resp = ResetMNGAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetMNGAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ResetMNGAppSecretOutcomeCallable TcsasClient::ResetMNGAppSecretCallable(const ResetMNGAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetMNGAppSecretOutcome>>();
+    ResetMNGAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ResetMNGAppSecretRequest&,
+        ResetMNGAppSecretOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ResetMNPAppSecretOutcome TcsasClient::ResetMNPAppSecret(const ResetMNPAppSecretRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetMNPAppSecret");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetMNPAppSecretResponse rsp = ResetMNPAppSecretResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetMNPAppSecretOutcome(rsp);
+        else
+            return ResetMNPAppSecretOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetMNPAppSecretOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ResetMNPAppSecretAsync(const ResetMNPAppSecretRequest& request, const ResetMNPAppSecretAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ResetMNPAppSecretRequest&;
+    using Resp = ResetMNPAppSecretResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ResetMNPAppSecret", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ResetMNPAppSecretOutcomeCallable TcsasClient::ResetMNPAppSecretCallable(const ResetMNPAppSecretRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ResetMNPAppSecretOutcome>>();
+    ResetMNPAppSecretAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ResetMNPAppSecretRequest&,
+        ResetMNPAppSecretOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

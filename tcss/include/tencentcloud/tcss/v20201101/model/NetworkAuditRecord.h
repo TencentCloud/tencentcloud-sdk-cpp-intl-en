@@ -194,19 +194,15 @@ namespace TencentCloud
                     bool OperationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Operator App ID
+                     * @return AppId Operator App ID
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Operator App ID
+                     * @param _appId Operator App ID
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -240,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return PolicyId The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Policy ID
+                     * @return PolicyId Policy ID
                      * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
-                     * 设置The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _policyId The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Policy ID
+                     * @param _policyId Policy ID
                      * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
@@ -309,8 +301,7 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool m_operationTimeHasBeenSet;
 
                     /**
-                     * Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Operator App ID
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -322,8 +313,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_uinHasBeenSet;
 
                     /**
-                     * The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Policy ID
                      */
                     uint64_t m_policyId;
                     bool m_policyIdHasBeenSet;

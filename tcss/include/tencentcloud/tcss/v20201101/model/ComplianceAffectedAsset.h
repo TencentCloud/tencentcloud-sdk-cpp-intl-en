@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcss/v20201101/model/ImageRegistryInfo.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of the customer asset
-                     * @return CustomerAssetId Unique ID of the customer asset
+                     * 获取<p>Unique asset item ID allocated to the customer.</p>
+                     * @return CustomerAssetId <p>Unique asset item ID allocated to the customer.</p>
                      * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
-                     * 设置Unique ID of the customer asset
-                     * @param _customerAssetId Unique ID of the customer asset
+                     * 设置<p>Unique asset item ID allocated to the customer.</p>
+                     * @param _customerAssetId <p>Unique asset item ID allocated to the customer.</p>
                      * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool CustomerAssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset name
-                     * @return AssetName Asset name
+                     * 获取<p>Asset item name.</p>
+                     * @return AssetName <p>Asset item name.</p>
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name
-                     * @param _assetName Asset name
+                     * 设置<p>Asset item name.</p>
+                     * @param _assetName <p>Asset item name.</p>
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type
-                     * @return AssetType Asset type
+                     * 获取<p>Asset item type.</p>
+                     * @return AssetType <p>Asset item type.</p>
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type
-                     * @param _assetType Asset type
+                     * 设置<p>Asset item type.</p>
+                     * @param _assetType <p>Asset item type.</p>
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -110,47 +111,15 @@ namespace TencentCloud
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
-                     * @return CheckStatus Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+                     * 获取<p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+                     * @return CheckStatus <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
                      * 
                      */
                     std::string GetCheckStatus() const;
 
                     /**
-                     * 设置Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
-                     * @param _checkStatus Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+                     * 设置<p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+                     * @param _checkStatus <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
                      * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
@@ -163,15 +132,15 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Node name
-                     * @return NodeName Node name
+                     * 获取<p>Node name.</p>
+                     * @return NodeName <p>Node name.</p>
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Node name
-                     * @param _nodeName Node name
+                     * 设置<p>Node name.</p>
+                     * @param _nodeName <p>Node name.</p>
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -184,23 +153,15 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
-                     * @return LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+                     * 获取<p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+                     * @return LastCheckTime <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
                      * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
-                     * 设置Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
-                     * @param _lastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+                     * 设置<p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+                     * @param _lastCheckTime <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
                      * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
@@ -213,31 +174,15 @@ It is "0000-00-00 00:00:00" if no check has been performed.
                     bool LastCheckTimeHasBeenSet() const;
 
                     /**
-                     * 获取Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
-                     * @return CheckResult Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+                     * 获取<p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+                     * @return CheckResult <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
                      * 
                      */
                     std::string GetCheckResult() const;
 
                     /**
-                     * 设置Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
-                     * @param _checkResult Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+                     * 设置<p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+                     * @param _checkResult <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
                      * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
@@ -250,19 +195,15 @@ It is "0000-00-00 00:00:00" if no check has been performed.
                     bool CheckResultHasBeenSet() const;
 
                     /**
-                     * 获取Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Host IP address.</p>
+                     * @return HostIP <p>Host IP address.</p>
                      * 
                      */
                     std::string GetHostIP() const;
 
                     /**
-                     * 设置Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Host IP address.</p>
+                     * @param _hostIP <p>Host IP address.</p>
                      * 
                      */
                     void SetHostIP(const std::string& _hostIP);
@@ -275,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostIPHasBeenSet() const;
 
                     /**
-                     * 获取Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Image tag.</p>
+                     * @return ImageTag <p>Image tag.</p>
                      * 
                      */
                     std::string GetImageTag() const;
 
                     /**
-                     * 设置Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _imageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Image tag.</p>
+                     * @param _imageTag <p>Image tag.</p>
                      * 
                      */
                     void SetImageTag(const std::string& _imageTag);
@@ -300,19 +237,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageTagHasBeenSet() const;
 
                     /**
-                     * 获取Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VerifyInfo Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Check item verification information.</p>
+                     * @return VerifyInfo <p>Check item verification information.</p>
                      * 
                      */
                     std::string GetVerifyInfo() const;
 
                     /**
-                     * 设置Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _verifyInfo Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Check item verification information.</p>
+                     * @param _verifyInfo <p>Check item verification information.</p>
                      * 
                      */
                     void SetVerifyInfo(const std::string& _verifyInfo);
@@ -325,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VerifyInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>Host instance ID.</p>
+                     * @return InstanceId <p>Host instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>Host instance ID.</p>
+                     * @param _instanceId <p>Host instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -349,91 +278,181 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Image repository information.</p>
+                     * @return ImageRegistryInfo <p>Image repository information.</p>
+                     * 
+                     */
+                    ImageRegistryInfo GetImageRegistryInfo() const;
+
+                    /**
+                     * 设置<p>Image repository information.</p>
+                     * @param _imageRegistryInfo <p>Image repository information.</p>
+                     * 
+                     */
+                    void SetImageRegistryInfo(const ImageRegistryInfo& _imageRegistryInfo);
+
+                    /**
+                     * 判断参数 ImageRegistryInfo 是否已赋值
+                     * @return ImageRegistryInfo 是否已赋值
+                     * 
+                     */
+                    bool ImageRegistryInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterID <p>Cluster ID.</p>
+                     * 
+                     */
+                    std::string GetClusterID() const;
+
+                    /**
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterID <p>Cluster ID.</p>
+                     * 
+                     */
+                    void SetClusterID(const std::string& _clusterID);
+
+                    /**
+                     * 判断参数 ClusterID 是否已赋值
+                     * @return ClusterID 是否已赋值
+                     * 
+                     */
+                    bool ClusterIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
+                     * 
+                     */
+                    std::string GetClusterName() const;
+
+                    /**
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
+                     * 
+                     */
+                    void SetClusterName(const std::string& _clusterName);
+
+                    /**
+                     * 判断参数 ClusterName 是否已赋值
+                     * @return ClusterName 是否已赋值
+                     * 
+                     */
+                    bool ClusterNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Unique asset ID.</p><p>Default value: -</p>
+                     * @return AssetUniqueID <p>Unique asset ID.</p><p>Default value: -</p>
+                     * 
+                     */
+                    std::string GetAssetUniqueID() const;
+
+                    /**
+                     * 设置<p>Unique asset ID.</p><p>Default value: -</p>
+                     * @param _assetUniqueID <p>Unique asset ID.</p><p>Default value: -</p>
+                     * 
+                     */
+                    void SetAssetUniqueID(const std::string& _assetUniqueID);
+
+                    /**
+                     * 判断参数 AssetUniqueID 是否已赋值
+                     * @return AssetUniqueID 是否已赋值
+                     * 
+                     */
+                    bool AssetUniqueIDHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Unique ID of the customer asset
+                     * <p>Unique asset item ID allocated to the customer.</p>
                      */
                     uint64_t m_customerAssetId;
                     bool m_customerAssetIdHasBeenSet;
 
                     /**
-                     * Asset name
+                     * <p>Asset item name.</p>
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Asset type
+                     * <p>Asset item type.</p>
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+                     * <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
                      */
                     std::string m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Node name
+                     * <p>Node name.</p>
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+                     * <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
                      */
                     std::string m_lastCheckTime;
                     bool m_lastCheckTimeHasBeenSet;
 
                     /**
-                     * Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+                     * <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
                      */
                     std::string m_checkResult;
                     bool m_checkResultHasBeenSet;
 
                     /**
-                     * Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Host IP address.</p>
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
 
                     /**
-                     * Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Image tag.</p>
                      */
                     std::string m_imageTag;
                     bool m_imageTagHasBeenSet;
 
                     /**
-                     * Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Check item verification information.</p>
                      */
                     std::string m_verifyInfo;
                     bool m_verifyInfoHasBeenSet;
 
                     /**
-                     * Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * <p>Host instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * <p>Image repository information.</p>
+                     */
+                    ImageRegistryInfo m_imageRegistryInfo;
+                    bool m_imageRegistryInfoHasBeenSet;
+
+                    /**
+                     * <p>Cluster ID.</p>
+                     */
+                    std::string m_clusterID;
+                    bool m_clusterIDHasBeenSet;
+
+                    /**
+                     * <p>Cluster name.</p>
+                     */
+                    std::string m_clusterName;
+                    bool m_clusterNameHasBeenSet;
+
+                    /**
+                     * <p>Unique asset ID.</p><p>Default value: -</p>
+                     */
+                    std::string m_assetUniqueID;
+                    bool m_assetUniqueIDHasBeenSet;
 
                 };
             }

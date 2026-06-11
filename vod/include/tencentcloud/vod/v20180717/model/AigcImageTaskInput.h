@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @return Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 获取<p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @return Prompt <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @param _prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 设置<p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @param _prompt <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
-                     * @return NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+                     * 获取<p>To prevent the model from generating image prompts.</p>
+                     * @return NegativePrompt <p>To prevent the model from generating image prompts.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置<p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
-                     * @param _negativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+                     * 设置<p>To prevent the model from generating image prompts.</p>
+                     * @param _negativePrompt <p>To prevent the model from generating image prompts.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -279,13 +279,13 @@ namespace TencentCloud
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+                     * <p>To prevent the model from generating image prompts.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;

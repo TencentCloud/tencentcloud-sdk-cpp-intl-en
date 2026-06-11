@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PendingAttackCount Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPendingAttackCount() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PendingTryAttackCount Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPendingTryAttackCount() const;
@@ -77,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PendingSuccAttackCount Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPendingSuccAttackCount() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PendingNewAttackCount Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPendingNewAttackCount() const;
@@ -109,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackedAssetCount Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAttackedAssetCount() const;
@@ -125,9 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewAttackedAssetCount Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetNewAttackedAssetCount() const;
@@ -141,9 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackedPortCount Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAttackedPortCount() const;
@@ -157,9 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewAttackedPortCount Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetNewAttackedPortCount() const;
@@ -173,9 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackSrcIpCount Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAttackSrcIpCount() const;
@@ -189,9 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewAttackSrcIpCount Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetNewAttackSrcIpCount() const;
@@ -207,70 +187,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_pendingAttackCount;
                     bool m_pendingAttackCountHasBeenSet;
 
                     /**
                      * Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_pendingTryAttackCount;
                     bool m_pendingTryAttackCountHasBeenSet;
 
                     /**
                      * Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_pendingSuccAttackCount;
                     bool m_pendingSuccAttackCountHasBeenSet;
 
                     /**
                      * Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_pendingNewAttackCount;
                     bool m_pendingNewAttackCountHasBeenSet;
 
                     /**
                      * Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_attackedAssetCount;
                     bool m_attackedAssetCountHasBeenSet;
 
                     /**
                      * Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_newAttackedAssetCount;
                     bool m_newAttackedAssetCountHasBeenSet;
 
                     /**
                      * Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_attackedPortCount;
                     bool m_attackedPortCountHasBeenSet;
 
                     /**
                      * Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_newAttackedPortCount;
                     bool m_newAttackedPortCountHasBeenSet;
 
                     /**
                      * Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_attackSrcIpCount;
                     bool m_attackSrcIpCountHasBeenSet;
 
                     /**
                      * Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_newAttackSrcIpCount;
                     bool m_newAttackSrcIpCountHasBeenSet;

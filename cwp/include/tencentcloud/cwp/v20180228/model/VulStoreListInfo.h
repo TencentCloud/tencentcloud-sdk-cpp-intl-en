@@ -216,18 +216,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
                      * @return FixSwitch Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
                      * 
                      */
                     uint64_t GetFixSwitch() const;
 
                     /**
                      * 设置Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
                      * @param _fixSwitch Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
                      * 
                      */
                     void SetFixSwitch(const uint64_t& _fixSwitch);
@@ -316,7 +316,7 @@ namespace TencentCloud
 
                     /**
                      * Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
                      */
                     uint64_t m_fixSwitch;
                     bool m_fixSwitchHasBeenSet;

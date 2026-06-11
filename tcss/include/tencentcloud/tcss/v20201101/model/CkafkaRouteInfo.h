@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CKafka route details
+                * Ckafka route detail
                 */
                 class CkafkaRouteInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RouteID Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Routing ID
+                     * @return RouteID Routing ID
                      * 
                      */
                     int64_t GetRouteID() const;
 
                     /**
-                     * 设置Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _routeID Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Routing ID
+                     * @param _routeID Routing ID
                      * 
                      */
                     void SetRouteID(const int64_t& _routeID);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _domain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DomainPort Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Domain Port
+                     * @return DomainPort Domain Port
                      * 
                      */
                     uint64_t GetDomainPort() const;
 
                     /**
-                     * 设置Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _domainPort Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Domain Port
+                     * @param _domainPort Domain Port
                      * 
                      */
                     void SetDomainPort(const uint64_t& _domainPort);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainPortHasBeenSet() const;
 
                     /**
-                     * 获取VIP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vip VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Virtual IP
+                     * @return Vip Virtual IP
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置VIP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vip VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Virtual IP
+                     * @param _vip Virtual IP
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VipType VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Virtual IP Type
+                     * @return VipType Virtual IP Type
                      * 
                      */
                     int64_t GetVipType() const;
 
                     /**
-                     * 设置VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vipType VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Virtual IP Type
+                     * @param _vipType Virtual IP Type
                      * 
                      */
                     void SetVipType(const int64_t& _vipType);
@@ -173,34 +153,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * @return AccessType Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
                      * 设置Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * @param _accessType Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      * 
                      */
                     void SetAccessType(const int64_t& _accessType);
@@ -215,47 +191,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Routing ID
                      */
                     int64_t m_routeID;
                     bool m_routeIDHasBeenSet;
 
                     /**
                      * Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Domain Port
                      */
                     uint64_t m_domainPort;
                     bool m_domainPortHasBeenSet;
 
                     /**
-                     * VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Virtual IP
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Virtual IP Type
                      */
                     int64_t m_vipType;
                     bool m_vipTypeHasBeenSet;
 
                     /**
                      * Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
                      */
                     int64_t m_accessType;
                     bool m_accessTypeHasBeenSet;

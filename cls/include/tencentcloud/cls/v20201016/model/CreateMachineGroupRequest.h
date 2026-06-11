@@ -46,15 +46,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Machine group name, which must be unique
-                     * @return GroupName Machine group name, which must be unique
+                     * 获取Machine group name.
+Input limit:
+-Supports up to 255 characters and cannot be an empty string
+-Cannot contain character '|'
+                     * @return GroupName Machine group name.
+Input limit:
+-Supports up to 255 characters and cannot be an empty string
+-Cannot contain character '|'
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Machine group name, which must be unique
-                     * @param _groupName Machine group name, which must be unique
+                     * 设置Machine group name.
+Input limit:
+-Supports up to 255 characters and cannot be an empty string
+-Cannot contain character '|'
+                     * @param _groupName Machine group name.
+Input limit:
+-Supports up to 255 characters and cannot be an empty string
+-Cannot contain character '|'
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -67,15 +79,23 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Type of the machine group to be created. Valid values: `ip`: use the IP string list in `Values` to create a machine group; `label`: use the tag string list in `Values` to create a machine group
-                     * @return MachineGroupType Type of the machine group to be created. Valid values: `ip`: use the IP string list in `Values` to create a machine group; `label`: use the tag string list in `Values` to create a machine group
+                     * 获取Create machine group type. Values are as follows:
+-Type: ip. Create a machine group with a string list of IPs in Values.
+-Type: label. Create a machine group with a string list of tags in Values.
+                     * @return MachineGroupType Create machine group type. Values are as follows:
+-Type: ip. Create a machine group with a string list of IPs in Values.
+-Type: label. Create a machine group with a string list of tags in Values.
                      * 
                      */
                     MachineGroupTypeInfo GetMachineGroupType() const;
 
                     /**
-                     * 设置Type of the machine group to be created. Valid values: `ip`: use the IP string list in `Values` to create a machine group; `label`: use the tag string list in `Values` to create a machine group
-                     * @param _machineGroupType Type of the machine group to be created. Valid values: `ip`: use the IP string list in `Values` to create a machine group; `label`: use the tag string list in `Values` to create a machine group
+                     * 设置Create machine group type. Values are as follows:
+-Type: ip. Create a machine group with a string list of IPs in Values.
+-Type: label. Create a machine group with a string list of tags in Values.
+                     * @param _machineGroupType Create machine group type. Values are as follows:
+-Type: ip. Create a machine group with a string list of IPs in Values.
+-Type: label. Create a machine group with a string list of tags in Values.
                      * 
                      */
                     void SetMachineGroupType(const MachineGroupTypeInfo& _machineGroupType);
@@ -109,15 +129,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable automatic update for the machine group
-                     * @return AutoUpdate Whether to enable automatic update for the machine group
+                     * 获取Whether to enable machine group auto-update. Default false.
+                     * @return AutoUpdate Whether to enable machine group auto-update. Default false.
                      * 
                      */
                     bool GetAutoUpdate() const;
 
                     /**
-                     * 设置Whether to enable automatic update for the machine group
-                     * @param _autoUpdate Whether to enable automatic update for the machine group
+                     * 设置Whether to enable machine group auto-update. Default false.
+                     * @param _autoUpdate Whether to enable machine group auto-update. Default false.
                      * 
                      */
                     void SetAutoUpdate(const bool& _autoUpdate);
@@ -130,15 +150,19 @@ namespace TencentCloud
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
-                     * 获取Update start time. We recommend you update LogListener during off-peak hours.
-                     * @return UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 获取Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @return UpdateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     std::string GetUpdateStartTime() const;
 
                     /**
-                     * 设置Update start time. We recommend you update LogListener during off-peak hours.
-                     * @param _updateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 设置Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @param _updateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     void SetUpdateStartTime(const std::string& _updateStartTime);
@@ -151,15 +175,19 @@ namespace TencentCloud
                     bool UpdateStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update end time. We recommend you update LogListener during off-peak hours.
-                     * @return UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 获取End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @return UpdateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     std::string GetUpdateEndTime() const;
 
                     /**
-                     * 设置Update end time. We recommend you update LogListener during off-peak hours.
-                     * @param _updateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 设置End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @param _updateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     void SetUpdateEndTime(const std::string& _updateEndTime);
@@ -172,15 +200,15 @@ namespace TencentCloud
                     bool UpdateEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees
-                     * @return ServiceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees
+                     * 获取Whether to enable service logs, which is used to record logs generated by the Loglistener service itself. After enabling, it will create an internal logset named cls_service_logging and log topics named loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges. The default value is false.
+                     * @return ServiceLogging Whether to enable service logs, which is used to record logs generated by the Loglistener service itself. After enabling, it will create an internal logset named cls_service_logging and log topics named loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges. The default value is false.
                      * 
                      */
                     bool GetServiceLogging() const;
 
                     /**
-                     * 设置Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees
-                     * @param _serviceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees
+                     * 设置Whether to enable service logs, which is used to record logs generated by the Loglistener service itself. After enabling, it will create an internal logset named cls_service_logging and log topics named loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges. The default value is false.
+                     * @param _serviceLogging Whether to enable service logs, which is used to record logs generated by the Loglistener service itself. After enabling, it will create an internal logset named cls_service_logging and log topics named loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges. The default value is false.
                      * 
                      */
                     void SetServiceLogging(const bool& _serviceLogging);
@@ -193,15 +221,23 @@ namespace TencentCloud
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Offline cleaning time for machines in machine group
-                     * @return DelayCleanupTime Offline cleaning time for machines in machine group
+                     * 获取Offline cleanup time for machines in the machine group, in days.
+
+-This parameter is valid only when larger than 0.
+                     * @return DelayCleanupTime Offline cleanup time for machines in the machine group, in days.
+
+-This parameter is valid only when larger than 0.
                      * 
                      */
                     int64_t GetDelayCleanupTime() const;
 
                     /**
-                     * 设置Offline cleaning time for machines in machine group
-                     * @param _delayCleanupTime Offline cleaning time for machines in machine group
+                     * 设置Offline cleanup time for machines in the machine group, in days.
+
+-This parameter is valid only when larger than 0.
+                     * @param _delayCleanupTime Offline cleanup time for machines in the machine group, in days.
+
+-This parameter is valid only when larger than 0.
                      * 
                      */
                     void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
@@ -235,15 +271,23 @@ namespace TencentCloud
                     bool MetaTagsHasBeenSet() const;
 
                     /**
-                     * 获取System type, default 0, 0: Linux, 1: Windows
-                     * @return OSType System type, default 0, 0: Linux, 1: Windows
+                     * 获取System type. Values as follows:
+-0: Linux (default value)
+- 1:Windows
+                     * @return OSType System type. Values as follows:
+-0: Linux (default value)
+- 1:Windows
                      * 
                      */
                     uint64_t GetOSType() const;
 
                     /**
-                     * 设置System type, default 0, 0: Linux, 1: Windows
-                     * @param _oSType System type, default 0, 0: Linux, 1: Windows
+                     * 设置System type. Values as follows:
+-0: Linux (default value)
+- 1:Windows
+                     * @param _oSType System type. Values as follows:
+-0: Linux (default value)
+- 1:Windows
                      * 
                      */
                     void SetOSType(const uint64_t& _oSType);
@@ -258,13 +302,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Machine group name, which must be unique
+                     * Machine group name.
+Input limit:
+-Supports up to 255 characters and cannot be an empty string
+-Cannot contain character '|'
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Type of the machine group to be created. Valid values: `ip`: use the IP string list in `Values` to create a machine group; `label`: use the tag string list in `Values` to create a machine group
+                     * Create machine group type. Values are as follows:
+-Type: ip. Create a machine group with a string list of IPs in Values.
+-Type: label. Create a machine group with a string list of tags in Values.
                      */
                     MachineGroupTypeInfo m_machineGroupType;
                     bool m_machineGroupTypeHasBeenSet;
@@ -276,31 +325,35 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether to enable automatic update for the machine group
+                     * Whether to enable machine group auto-update. Default false.
                      */
                     bool m_autoUpdate;
                     bool m_autoUpdateHasBeenSet;
 
                     /**
-                     * Update start time. We recommend you update LogListener during off-peak hours.
+                     * Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      */
                     std::string m_updateStartTime;
                     bool m_updateStartTimeHasBeenSet;
 
                     /**
-                     * Update end time. We recommend you update LogListener during off-peak hours.
+                     * End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      */
                     std::string m_updateEndTime;
                     bool m_updateEndTimeHasBeenSet;
 
                     /**
-                     * Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees
+                     * Whether to enable service logs, which is used to record logs generated by the Loglistener service itself. After enabling, it will create an internal logset named cls_service_logging and log topics named loglistener_status, loglistener_alarm, and loglistener_business, without incurring charges. The default value is false.
                      */
                     bool m_serviceLogging;
                     bool m_serviceLoggingHasBeenSet;
 
                     /**
-                     * Offline cleaning time for machines in machine group
+                     * Offline cleanup time for machines in the machine group, in days.
+
+-This parameter is valid only when larger than 0.
                      */
                     int64_t m_delayCleanupTime;
                     bool m_delayCleanupTimeHasBeenSet;
@@ -312,7 +365,9 @@ namespace TencentCloud
                     bool m_metaTagsHasBeenSet;
 
                     /**
-                     * System type, default 0, 0: Linux, 1: Windows
+                     * System type. Values as follows:
+-0: Linux (default value)
+- 1:Windows
                      */
                     uint64_t m_oSType;
                     bool m_oSTypeHasBeenSet;

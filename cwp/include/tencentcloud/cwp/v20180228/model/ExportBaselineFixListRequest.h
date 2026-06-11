@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<li>ItemName - String - required: no - item name</li>
-                     * @return Filters <li>ItemName - String - required: no - item name</li>
+                     * 获取<li>ItemName - String - required: no - item name</li>
+                     * @return Filters <li>ItemName - String - required: no - item name</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置<li>ItemName - String - required: no - item name</li>
-                     * @param _filters <li>ItemName - String - required: no - item name</li>
+                     * 设置<li>ItemName - String - required: no - item name</li>
+                     * @param _filters <li>ItemName - String - required: no - item name</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <li>ItemName - String - required: no - item name</li>
+                     * <li>ItemName - String - required: no - item name</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

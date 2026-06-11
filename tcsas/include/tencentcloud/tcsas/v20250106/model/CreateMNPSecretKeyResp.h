@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Response for creating a mini program secret key.
+                * Response for creating a mini program secret key
                 */
                 class CreateMNPSecretKeyResp : public AbstractModel
                 {

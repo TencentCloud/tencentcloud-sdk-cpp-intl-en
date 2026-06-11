@@ -49,7 +49,11 @@ DescribeAssetHostDetailResponse::DescribeAssetHostDetailResponse() :
     m_instanceIDHasBeenSet(false),
     m_regionIDHasBeenSet(false),
     m_projectHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_clusterIDHasBeenSet(false),
+    m_clusterNameHasBeenSet(false),
+    m_clusterAccessedStatusHasBeenSet(false),
+    m_assetSyncTimeHasBeenSet(false)
 {
 }
 
@@ -364,6 +368,46 @@ CoreInternalOutcome DescribeAssetHostDetailResponse::Deserialize(const string &p
         m_tagsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ClusterID") && !rsp["ClusterID"].IsNull())
+    {
+        if (!rsp["ClusterID"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterID` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterID = string(rsp["ClusterID"].GetString());
+        m_clusterIDHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ClusterName") && !rsp["ClusterName"].IsNull())
+    {
+        if (!rsp["ClusterName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterName = string(rsp["ClusterName"].GetString());
+        m_clusterNameHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ClusterAccessedStatus") && !rsp["ClusterAccessedStatus"].IsNull())
+    {
+        if (!rsp["ClusterAccessedStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterAccessedStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_clusterAccessedStatus = string(rsp["ClusterAccessedStatus"].GetString());
+        m_clusterAccessedStatusHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AssetSyncTime") && !rsp["AssetSyncTime"].IsNull())
+    {
+        if (!rsp["AssetSyncTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AssetSyncTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_assetSyncTime = string(rsp["AssetSyncTime"].GetString());
+        m_assetSyncTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -588,6 +632,38 @@ string DescribeAssetHostDetailResponse::ToJsonString() const
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_clusterIDHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterID";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterID.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_clusterAccessedStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterAccessedStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_clusterAccessedStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_assetSyncTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AssetSyncTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_assetSyncTime.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -860,6 +936,46 @@ vector<TagInfo> DescribeAssetHostDetailResponse::GetTags() const
 bool DescribeAssetHostDetailResponse::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+string DescribeAssetHostDetailResponse::GetClusterID() const
+{
+    return m_clusterID;
+}
+
+bool DescribeAssetHostDetailResponse::ClusterIDHasBeenSet() const
+{
+    return m_clusterIDHasBeenSet;
+}
+
+string DescribeAssetHostDetailResponse::GetClusterName() const
+{
+    return m_clusterName;
+}
+
+bool DescribeAssetHostDetailResponse::ClusterNameHasBeenSet() const
+{
+    return m_clusterNameHasBeenSet;
+}
+
+string DescribeAssetHostDetailResponse::GetClusterAccessedStatus() const
+{
+    return m_clusterAccessedStatus;
+}
+
+bool DescribeAssetHostDetailResponse::ClusterAccessedStatusHasBeenSet() const
+{
+    return m_clusterAccessedStatusHasBeenSet;
+}
+
+string DescribeAssetHostDetailResponse::GetAssetSyncTime() const
+{
+    return m_assetSyncTime;
+}
+
+bool DescribeAssetHostDetailResponse::AssetSyncTimeHasBeenSet() const
+{
+    return m_assetSyncTimeHasBeenSet;
 }
 
 

@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return List Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List
+                     * @return List List
                      * 
                      */
                     std::vector<RiskDnsPolicy> GetList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List
                      */
                     std::vector<RiskDnsPolicy> m_list;
                     bool m_listHasBeenSet;

@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool ClickTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
-                     * @return Uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+                     * 获取If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+                     * @return Uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
                      * 
                      */
                     std::vector<std::string> GetUuids() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool UuidsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScanMethod 
+                     * 获取0: version comparison, 2: version comparison + POC.
+                     * @return ScanMethod 0: version comparison, 2: version comparison + POC.
                      * 
                      */
                     uint64_t GetScanMethod() const;
@@ -254,13 +254,13 @@ namespace TencentCloud
                     bool m_clickTimeoutHasBeenSet;
 
                     /**
-                     * If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+                     * If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
                      */
                     std::vector<std::string> m_uuids;
                     bool m_uuidsHasBeenSet;
 
                     /**
-                     * 
+                     * 0: version comparison, 2: version comparison + POC.
                      */
                     uint64_t m_scanMethod;
                     bool m_scanMethodHasBeenSet;

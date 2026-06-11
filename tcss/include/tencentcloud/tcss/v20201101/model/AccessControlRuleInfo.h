@@ -49,25 +49,25 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Valid values: `true` (on); `false` (off).
-                     * @return IsEnable Switch. Valid values: `true` (on); `false` (off).
+                     * 获取Array of sub-policies of the user policy
+                     * @return ChildRules Array of sub-policies of the user policy
                      * 
                      */
-                    bool GetIsEnable() const;
+                    std::vector<AccessControlChildRuleInfo> GetChildRules() const;
 
                     /**
-                     * 设置Switch. Valid values: `true` (on); `false` (off).
-                     * @param _isEnable Switch. Valid values: `true` (on); `false` (off).
+                     * 设置Array of sub-policies of the user policy
+                     * @param _childRules Array of sub-policies of the user policy
                      * 
                      */
-                    void SetIsEnable(const bool& _isEnable);
+                    void SetChildRules(const std::vector<AccessControlChildRuleInfo>& _childRules);
 
                     /**
-                     * 判断参数 IsEnable 是否已赋值
-                     * @return IsEnable 是否已赋值
+                     * 判断参数 ChildRules 是否已赋值
+                     * @return ChildRules 是否已赋值
                      * 
                      */
-                    bool IsEnableHasBeenSet() const;
+                    bool ChildRulesHasBeenSet() const;
 
                     /**
                      * 获取IDs of associated images. An empty array indicates all images.
@@ -91,25 +91,25 @@ namespace TencentCloud
                     bool ImageIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of sub-policies of the user policy
-                     * @return ChildRules Array of sub-policies of the user policy
+                     * 获取Switch. Valid values: `true` (on); `false` (off).
+                     * @return IsEnable Switch. Valid values: `true` (on); `false` (off).
                      * 
                      */
-                    std::vector<AccessControlChildRuleInfo> GetChildRules() const;
+                    bool GetIsEnable() const;
 
                     /**
-                     * 设置Array of sub-policies of the user policy
-                     * @param _childRules Array of sub-policies of the user policy
+                     * 设置Switch. Valid values: `true` (on); `false` (off).
+                     * @param _isEnable Switch. Valid values: `true` (on); `false` (off).
                      * 
                      */
-                    void SetChildRules(const std::vector<AccessControlChildRuleInfo>& _childRules);
+                    void SetIsEnable(const bool& _isEnable);
 
                     /**
-                     * 判断参数 ChildRules 是否已赋值
-                     * @return ChildRules 是否已赋值
+                     * 判断参数 IsEnable 是否已赋值
+                     * @return IsEnable 是否已赋值
                      * 
                      */
-                    bool ChildRulesHasBeenSet() const;
+                    bool IsEnableHasBeenSet() const;
 
                     /**
                      * 获取Policy name
@@ -133,19 +133,57 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
+                     * 获取Whether it is the default preset policy
+                     * @return IsDefault Whether it is the default preset policy
+                     * 
+                     */
+                    bool GetIsDefault() const;
+
+                    /**
+                     * 设置Whether it is the default preset policy
+                     * @param _isDefault Whether it is the default preset policy
+                     * 
+                     */
+                    void SetIsDefault(const bool& _isDefault);
+
+                    /**
+                     * 判断参数 IsDefault 是否已赋值
+                     * @return IsDefault 是否已赋值
+                     * 
+                     */
+                    bool IsDefaultHasBeenSet() const;
+
+                    /**
+                     * 获取true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+                     * @return IsGlobal true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+                     * 
+                     */
+                    bool GetIsGlobal() const;
+
+                    /**
+                     * 设置true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+                     * @param _isGlobal true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+                     * 
+                     */
+                    void SetIsGlobal(const bool& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     * 
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
+                    /**
                      * 获取Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -178,40 +216,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SystemChildRulesHasBeenSet() const;
 
-                    /**
-                     * 获取Whether it is the default preset policy
-                     * @return IsDefault Whether it is the default preset policy
-                     * 
-                     */
-                    bool GetIsDefault() const;
-
-                    /**
-                     * 设置Whether it is the default preset policy
-                     * @param _isDefault Whether it is the default preset policy
-                     * 
-                     */
-                    void SetIsDefault(const bool& _isDefault);
-
-                    /**
-                     * 判断参数 IsDefault 是否已赋值
-                     * @return IsDefault 是否已赋值
-                     * 
-                     */
-                    bool IsDefaultHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * Switch. Valid values: `true` (on); `false` (off).
-                     */
-                    bool m_isEnable;
-                    bool m_isEnableHasBeenSet;
-
-                    /**
-                     * IDs of associated images. An empty array indicates all images.
-                     */
-                    std::vector<std::string> m_imageIds;
-                    bool m_imageIdsHasBeenSet;
 
                     /**
                      * Array of sub-policies of the user policy
@@ -220,14 +225,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_childRulesHasBeenSet;
 
                     /**
+                     * IDs of associated images. An empty array indicates all images.
+                     */
+                    std::vector<std::string> m_imageIds;
+                    bool m_imageIdsHasBeenSet;
+
+                    /**
+                     * Switch. Valid values: `true` (on); `false` (off).
+                     */
+                    bool m_isEnable;
+                    bool m_isEnableHasBeenSet;
+
+                    /**
                      * Policy name
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
+                     * Whether it is the default preset policy
+                     */
+                    bool m_isDefault;
+                    bool m_isDefaultHasBeenSet;
+
+                    /**
+                     * true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+                     */
+                    bool m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
+
+                    /**
                      * Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
@@ -237,12 +265,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AccessControlSystemChildRuleInfo> m_systemChildRules;
                     bool m_systemChildRulesHasBeenSet;
-
-                    /**
-                     * Whether it is the default preset policy
-                     */
-                    bool m_isDefault;
-                    bool m_isDefaultHasBeenSet;
 
                 };
             }

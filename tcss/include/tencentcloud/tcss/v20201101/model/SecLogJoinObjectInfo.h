@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool HostIDHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host name
+                     * @return HostName Host name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host name
+                     * @param _hostName Host name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -93,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host IP address
+                     * @return HostIP Host IP address
                      * 
                      */
                     std::string GetHostIP() const;
 
                     /**
-                     * 设置Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host IP address
+                     * @param _hostIP Host IP address
                      * 
                      */
                     void SetHostIP(const std::string& _hostIP);
@@ -140,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterID Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _clusterID Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetClusterID(const std::string& _clusterID);
@@ -164,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterIDHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -189,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PublicIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Public IP address
+                     * @return PublicIP Public IP address
                      * 
                      */
                     std::string GetPublicIP() const;
 
                     /**
-                     * 设置Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _publicIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Public IP address
+                     * @param _publicIP Public IP address
                      * 
                      */
                     void SetPublicIP(const std::string& _publicIP);
@@ -235,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JoinStateHasBeenSet() const;
 
                     /**
-                     * 获取Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClusterVersion Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取cluster edition
+                     * @return ClusterVersion cluster edition
                      * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
-                     * 设置Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clusterVersion Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置cluster edition
+                     * @param _clusterVersion cluster edition
                      * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
@@ -280,6 +256,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterMainAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Number of containers
+                     * @return ContainerCnt Number of containers
+                     * 
+                     */
+                    uint64_t GetContainerCnt() const;
+
+                    /**
+                     * 设置Number of containers
+                     * @param _containerCnt Number of containers
+                     * 
+                     */
+                    void SetContainerCnt(const uint64_t& _containerCnt);
+
+                    /**
+                     * 判断参数 ContainerCnt 是否已赋值
+                     * @return ContainerCnt 是否已赋值
+                     * 
+                     */
+                    bool ContainerCntHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster type.
+                     * @return ClusterType Cluster type.
+                     * 
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type.
+                     * @param _clusterType Cluster type.
+                     * 
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     * 
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster status
+                     * @return ClusterStatus Cluster status
+                     * 
+                     */
+                    std::string GetClusterStatus() const;
+
+                    /**
+                     * 设置Cluster status
+                     * @param _clusterStatus Cluster status
+                     * 
+                     */
+                    void SetClusterStatus(const std::string& _clusterStatus);
+
+                    /**
+                     * 判断参数 ClusterStatus 是否已赋值
+                     * @return ClusterStatus 是否已赋值
+                     * 
+                     */
+                    bool ClusterStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -289,15 +328,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_hostIDHasBeenSet;
 
                     /**
-                     * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host IP address
                      */
                     std::string m_hostIP;
                     bool m_hostIPHasBeenSet;
@@ -310,21 +347,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterID;
                     bool m_clusterIDHasBeenSet;
 
                     /**
-                     * Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Public IP address
                      */
                     std::string m_publicIP;
                     bool m_publicIPHasBeenSet;
@@ -336,8 +370,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_joinStateHasBeenSet;
 
                     /**
-                     * Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * cluster edition
                      */
                     std::string m_clusterVersion;
                     bool m_clusterVersionHasBeenSet;
@@ -347,6 +380,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_clusterMainAddress;
                     bool m_clusterMainAddressHasBeenSet;
+
+                    /**
+                     * Number of containers
+                     */
+                    uint64_t m_containerCnt;
+                    bool m_containerCntHasBeenSet;
+
+                    /**
+                     * Cluster type.
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Cluster status
+                     */
+                    std::string m_clusterStatus;
+                    bool m_clusterStatusHasBeenSet;
 
                 };
             }

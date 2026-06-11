@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Count Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of plugin exceptions
+                     * @return Count Number of plugin exceptions
                      * 
                      */
                     uint64_t GetCount() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of plugin exceptions
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Protocol Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Policy Protocol
+                     * @return Protocol Network Policy Protocol
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _protocol Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Network Policy Protocol
+                     * @param _protocol Network Policy Protocol
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Port Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Policy Port
+                     * @return Port Network Policy Port
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _port Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Network Policy Port
+                     * @param _port Network Policy Port
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Policy Protocol
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Policy Port
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;

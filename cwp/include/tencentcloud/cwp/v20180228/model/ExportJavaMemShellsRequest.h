@@ -93,6 +93,48 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
                      */
                     bool WhereHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * @return Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * 
+                     */
+                    std::string GetOrder() const;
+
+                    /**
+                     * 设置Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * @param _order Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     * 
+                     */
+                    void SetOrder(const std::string& _order);
+
+                    /**
+                     * 判断参数 Order 是否已赋值
+                     * @return Order 是否已赋值
+                     * 
+                     */
+                    bool OrderHasBeenSet() const;
+
+                    /**
+                     * 获取Sort column, strictly equal: latest detection time RecentFoundTime
+                     * @return By Sort column, strictly equal: latest detection time RecentFoundTime
+                     * 
+                     */
+                    std::string GetBy() const;
+
+                    /**
+                     * 设置Sort column, strictly equal: latest detection time RecentFoundTime
+                     * @param _by Sort column, strictly equal: latest detection time RecentFoundTime
+                     * 
+                     */
+                    void SetBy(const std::string& _by);
+
+                    /**
+                     * 判断参数 By 是否已赋值
+                     * @return By 是否已赋值
+                     * 
+                     */
+                    bool ByHasBeenSet() const;
+
                 private:
 
                     /**
@@ -108,6 +150,18 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
                      */
                     std::vector<std::string> m_where;
                     bool m_whereHasBeenSet;
+
+                    /**
+                     * Sorting method (case insensitive): asc for ascending order; desc for descending order
+                     */
+                    std::string m_order;
+                    bool m_orderHasBeenSet;
+
+                    /**
+                     * Sort column, strictly equal: latest detection time RecentFoundTime
+                     */
+                    std::string m_by;
+                    bool m_byHasBeenSet;
 
                 };
             }

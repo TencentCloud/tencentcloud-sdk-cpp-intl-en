@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulCount Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Obtain the vulnerability count for corresponding days in batch
+                     * @return VulCount Obtain the vulnerability count for corresponding days in batch
                      * 
                      */
                     std::vector<uint64_t> GetVulCount() const;
@@ -76,8 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Obtain the vulnerability count for corresponding days in batch
                      */
                     std::vector<uint64_t> m_vulCount;
                     bool m_vulCountHasBeenSet;

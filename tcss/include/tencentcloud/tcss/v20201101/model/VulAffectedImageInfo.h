@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ImageNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of associated servers
-                     * @return HostCount Number of associated servers
+                     * 获取Number of associated hosts (including regular nodes and super nodes).
+                     * @return HostCount Number of associated hosts (including regular nodes and super nodes).
                      * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
-                     * 设置Number of associated servers
-                     * @param _hostCount Number of associated servers
+                     * 设置Number of associated hosts (including regular nodes and super nodes).
+                     * @param _hostCount Number of associated hosts (including regular nodes and super nodes).
                      * 
                      */
                     void SetHostCount(const int64_t& _hostCount);
@@ -109,6 +109,27 @@ namespace TencentCloud
                      * 
                      */
                     bool HostCountHasBeenSet() const;
+
+                    /**
+                     * 获取Number of associated super nodes.
+                     * @return SuperNodeCount Number of associated super nodes.
+                     * 
+                     */
+                    int64_t GetSuperNodeCount() const;
+
+                    /**
+                     * 设置Number of associated super nodes.
+                     * @param _superNodeCount Number of associated super nodes.
+                     * 
+                     */
+                    void SetSuperNodeCount(const int64_t& _superNodeCount);
+
+                    /**
+                     * 判断参数 SuperNodeCount 是否已赋值
+                     * @return SuperNodeCount 是否已赋值
+                     * 
+                     */
+                    bool SuperNodeCountHasBeenSet() const;
 
                     /**
                      * 获取Number of associated containers
@@ -167,10 +188,16 @@ namespace TencentCloud
                     bool m_imageNameHasBeenSet;
 
                     /**
-                     * Number of associated servers
+                     * Number of associated hosts (including regular nodes and super nodes).
                      */
                     int64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
+
+                    /**
+                     * Number of associated super nodes.
+                     */
+                    int64_t m_superNodeCount;
+                    bool m_superNodeCountHasBeenSet;
 
                     /**
                      * Number of associated containers

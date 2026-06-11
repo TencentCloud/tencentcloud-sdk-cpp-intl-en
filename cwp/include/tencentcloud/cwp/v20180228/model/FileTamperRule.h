@@ -114,12 +114,10 @@ namespace TencentCloud
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFileAction() const;
@@ -129,12 +127,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileAction(const std::string& _fileAction);
@@ -145,6 +141,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool FileActionHasBeenSet() const;
+
+                    /**
+                     * 获取Command line parameter not filled
+                     * @return Args Command line parameter not filled
+                     * 
+                     */
+                    std::string GetArgs() const;
+
+                    /**
+                     * 设置Command line parameter not filled
+                     * @param _args Command line parameter not filled
+                     * 
+                     */
+                    void SetArgs(const std::string& _args);
+
+                    /**
+                     * 判断参数 Args 是否已赋值
+                     * @return Args 是否已赋值
+                     * 
+                     */
+                    bool ArgsHasBeenSet() const;
 
                 private:
 
@@ -171,10 +188,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fileAction;
                     bool m_fileActionHasBeenSet;
+
+                    /**
+                     * Command line parameter not filled
+                     */
+                    std::string m_args;
+                    bool m_argsHasBeenSet;
 
                 };
             }

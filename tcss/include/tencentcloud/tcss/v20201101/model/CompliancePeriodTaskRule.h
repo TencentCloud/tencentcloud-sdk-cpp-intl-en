@@ -89,19 +89,15 @@ namespace TencentCloud
                     bool ExecutionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Enable Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether enabled
+                     * @return Enable Whether enabled
                      * 
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enable Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether enabled
+                     * @param _enable Whether enabled
                      * 
                      */
                     void SetEnable(const bool& _enable);
@@ -128,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_executionTimeHasBeenSet;
 
                     /**
-                     * Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether enabled
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;

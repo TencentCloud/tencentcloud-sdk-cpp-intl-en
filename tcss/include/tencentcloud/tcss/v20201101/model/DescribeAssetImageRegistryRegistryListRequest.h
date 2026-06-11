@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number to return, default is 10, maximum is 100
-                     * @return Limit Number to return, default is 10, maximum is 100
+                     * 获取Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number to return, default is 10, maximum is 100
-                     * @param _limit Number to return, default is 10, maximum is 100
+                     * 设置Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of entries to be returned. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, the default is 0
-                     * @return Offset Offset, the default is 0
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, the default is 0
-                     * @param _offset Offset, the default is 0
+                     * 设置Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,15 +86,19 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
-                     * @return Filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+                     * 获取Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+                     * @return Filters Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
-                     * @param _filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+                     * 设置Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+                     * @param _filters Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -107,15 +111,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sort field
-                     * @return By Sort field
+                     * 获取Sorting field.
+                     * @return By Sorting field.
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sort field
-                     * @param _by Sort field
+                     * 设置Sorting field.
+                     * @param _by Sorting field.
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -128,15 +132,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Sort by asc, desc
-                     * @return Order Sort by asc, desc
+                     * 获取Sorting method: asc, desc
+                     * @return Order Sorting method: asc, desc
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sort by asc, desc
-                     * @param _order Sort by asc, desc
+                     * 设置Sorting method: asc, desc
+                     * @param _order Sorting method: asc, desc
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -151,31 +155,32 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number to return, default is 10, maximum is 100
+                     * Number of entries to be returned. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, the default is 0
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+                     * Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sort field
+                     * Sorting field.
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
 
                     /**
-                     * Sort by asc, desc
+                     * Sorting method: asc, desc
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

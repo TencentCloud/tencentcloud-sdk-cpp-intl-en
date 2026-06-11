@@ -44,8 +44,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Metric Query Result Type
-                     * @return ResultType Metric Query Result Type
+                     * 获取Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
+                     * @return ResultType Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
                      * 
                      */
                     std::string GetResultType() const;
@@ -74,7 +82,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Metric Query Result Type
+                     * Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
                      */
                     std::string m_resultType;
                     bool m_resultTypeHasBeenSet;

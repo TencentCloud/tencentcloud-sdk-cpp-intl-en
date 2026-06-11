@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailReason Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fix failure cause
+                     * @return FailReason Fix failure cause
                      * 
                      */
                     std::string GetFailReason() const;
 
                     /**
-                     * 设置Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _failReason Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fix failure cause
+                     * @param _failReason Fix failure cause
                      * 
                      */
                     void SetFailReason(const std::string& _failReason);
@@ -209,8 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Fix failure cause
                      */
                     std::string m_failReason;
                     bool m_failReasonHasBeenSet;

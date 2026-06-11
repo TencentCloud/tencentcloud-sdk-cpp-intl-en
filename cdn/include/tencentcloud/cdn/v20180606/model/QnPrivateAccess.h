@@ -101,15 +101,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Key
-                     * @return SecretKey Key
+                     * 获取Key. the field is returned with masking.
+                     * @return SecretKey Key. the field is returned with masking.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Key
-                     * @param _secretKey Key
+                     * 设置Key. the field is returned with masking.
+                     * @param _secretKey Key. the field is returned with masking.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -139,7 +139,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Key
+                     * Key. the field is returned with masking.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

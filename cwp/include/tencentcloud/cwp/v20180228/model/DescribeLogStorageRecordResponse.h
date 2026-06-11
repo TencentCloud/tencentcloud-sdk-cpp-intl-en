@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Records Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage record.
+                     * @return Records Storage record.
                      * 
                      */
                     std::vector<LogStorageRecord> GetRecords() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage record.
                      */
                     std::vector<LogStorageRecord> m_records;
                     bool m_recordsHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of parameters
-                     * @return TotalCount Number of parameters
+                     * 获取Number of parameters.
+                     * @return TotalCount Number of parameters.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of parameters
+                     * Number of parameters.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

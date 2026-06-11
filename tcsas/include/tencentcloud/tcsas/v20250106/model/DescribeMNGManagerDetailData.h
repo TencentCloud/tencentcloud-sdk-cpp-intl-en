@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The mini game name and description in multiple languages.
-                     * @return I18nList The mini game name and description in multiple languages.
+                     * 获取<p>Mini game information in multiple languages.</p>
+                     * @return I18nList <p>Mini game information in multiple languages.</p>
                      * 
                      */
                     std::vector<MNPDetailI18nVO> GetI18nList() const;
 
                     /**
-                     * 设置The mini game name and description in multiple languages.
-                     * @param _i18nList The mini game name and description in multiple languages.
+                     * 设置<p>Mini game information in multiple languages.</p>
+                     * @param _i18nList <p>Mini game information in multiple languages.</p>
                      * 
                      */
                     void SetI18nList(const std::vector<MNPDetailI18nVO>& _i18nList);
@@ -395,7 +395,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The mini game name and description in multiple languages.
+                     * <p>Mini game information in multiple languages.</p>
                      */
                     std::vector<MNPDetailI18nVO> m_i18nList;
                     bool m_i18nListHasBeenSet;

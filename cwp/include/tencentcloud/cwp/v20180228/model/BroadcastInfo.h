@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取article name
+                     * @return Title article name
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置article name
+                     * @param _title article name
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GotoType Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
+                     * @return GotoType Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
                      * 
                      */
                     uint64_t GetGotoType() const;
 
                     /**
-                     * 设置Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _gotoType Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
+                     * @param _gotoType Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
                      * 
                      */
                     void SetGotoType(const uint64_t& _gotoType);
@@ -204,15 +196,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * article name
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
                      */
                     uint64_t m_gotoType;
                     bool m_gotoTypeHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
-                     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+                     * 获取Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+                     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
-                     * @param _key Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+                     * 设置Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+                     * @param _key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+                     * Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 获取<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 设置<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @param _limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: `0`.
-                     * @return Offset Offset. Default value: `0`.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: `0`.
-                     * @param _offset Offset. Default value: `0`.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,31 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
-                     * @return Filters Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+                     * 获取<p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+                     * @return Filters <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
-                     * @param _filters Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+                     * 设置<p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+                     * @param _filters <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -123,15 +107,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field
-                     * @return By Sorting field
+                     * 获取<p>Sorting field.</p>
+                     * @return By <p>Sorting field.</p>
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting field
-                     * @param _by Sorting field
+                     * 设置<p>Sorting field.</p>
+                     * @param _by <p>Sorting field.</p>
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -144,15 +128,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: `asc`, `desc`.
-                     * @return Order Sorting order. Valid values: `asc`, `desc`.
+                     * 获取<p>Sorting method. Valid values: asc and desc.</p>
+                     * @return Order <p>Sorting method. Valid values: asc and desc.</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order. Valid values: `asc`, `desc`.
-                     * @param _order Sorting order. Valid values: `asc`, `desc`.
+                     * 设置<p>Sorting method. Valid values: asc and desc.</p>
+                     * @param _order <p>Sorting method. Valid values: asc and desc.</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -167,35 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: `0`.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+                     * <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting field
+                     * <p>Sorting field.</p>
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: `asc`, `desc`.
+                     * <p>Sorting method. Valid values: asc and desc.</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

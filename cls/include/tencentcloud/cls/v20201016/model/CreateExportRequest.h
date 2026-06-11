@@ -44,14 +44,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * @param _topicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -210,10 +214,32 @@ namespace TencentCloud
                      */
                     bool SyntaxRuleHasBeenSet() const;
 
+                    /**
+                     * 获取Export fields
+                     * @return DerivedFields Export fields
+                     * 
+                     */
+                    std::vector<std::string> GetDerivedFields() const;
+
+                    /**
+                     * 设置Export fields
+                     * @param _derivedFields Export fields
+                     * 
+                     */
+                    void SetDerivedFields(const std::vector<std::string>& _derivedFields);
+
+                    /**
+                     * 判断参数 DerivedFields 是否已赋值
+                     * @return DerivedFields 是否已赋值
+                     * 
+                     */
+                    bool DerivedFieldsHasBeenSet() const;
+
                 private:
 
                     /**
                      * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
@@ -259,6 +285,12 @@ namespace TencentCloud
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;
+
+                    /**
+                     * Export fields
+                     */
+                    std::vector<std::string> m_derivedFields;
+                    bool m_derivedFieldsHasBeenSet;
 
                 };
             }

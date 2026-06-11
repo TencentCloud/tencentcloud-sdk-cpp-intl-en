@@ -100,23 +100,44 @@ namespace TencentCloud
                     /**
                      * 获取Fields to be exported
                      * @return Fields Fields to be exported
-                     * 
+                     * @deprecated
                      */
                     std::string GetFields() const;
 
                     /**
                      * 设置Fields to be exported
                      * @param _fields Fields to be exported
-                     * 
+                     * @deprecated
                      */
                     void SetFields(const std::string& _fields);
 
                     /**
                      * 判断参数 Fields 是否已赋值
                      * @return Fields 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool FieldsHasBeenSet() const;
+
+                    /**
+                     * 获取Fields to be exported
+                     * @return Where Fields to be exported
+                     * 
+                     */
+                    std::vector<std::string> GetWhere() const;
+
+                    /**
+                     * 设置Fields to be exported
+                     * @param _where Fields to be exported
+                     * 
+                     */
+                    void SetWhere(const std::vector<std::string>& _where);
+
+                    /**
+                     * 判断参数 Where 是否已赋值
+                     * @return Where 是否已赋值
+                     * 
+                     */
+                    bool WhereHasBeenSet() const;
 
                 private:
 
@@ -140,6 +161,12 @@ namespace TencentCloud
                      */
                     std::string m_fields;
                     bool m_fieldsHasBeenSet;
+
+                    /**
+                     * Fields to be exported
+                     */
+                    std::vector<std::string> m_where;
+                    bool m_whereHasBeenSet;
 
                 };
             }

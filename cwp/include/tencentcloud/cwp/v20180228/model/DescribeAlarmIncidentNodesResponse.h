@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncidentNodes All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取All node information on the event corresponding to an alarm, which may include multiple events.
+                     * @return IncidentNodes All node information on the event corresponding to an alarm, which may include multiple events.
                      * 
                      */
                     std::vector<IncidentVertexInfo> GetIncidentNodes() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * All node information on the event corresponding to an alarm, which may include multiple events.
                      */
                     std::vector<IncidentVertexInfo> m_incidentNodes;
                     bool m_incidentNodesHasBeenSet;

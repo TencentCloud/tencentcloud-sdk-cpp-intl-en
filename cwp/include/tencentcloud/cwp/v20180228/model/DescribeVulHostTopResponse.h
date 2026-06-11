@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulHostTopList List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<VulHostTopInfo> GetVulHostTopList() const;
@@ -64,7 +62,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<VulHostTopInfo> m_vulHostTopList;
                     bool m_vulHostTopListHasBeenSet;

@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PodList Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cluster Pod Details
+                     * @return PodList Cluster Pod Details
                      * 
                      */
                     std::vector<NetworkClusterPodInfo> GetPodList() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cluster Pod Details
                      */
                     std::vector<NetworkClusterPodInfo> m_podList;
                     bool m_podListHasBeenSet;

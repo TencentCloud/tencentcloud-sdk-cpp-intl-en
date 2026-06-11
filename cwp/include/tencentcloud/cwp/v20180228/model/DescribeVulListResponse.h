@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VulInfoList Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of vulnerabilities
+                     * @return VulInfoList List of vulnerabilities
                      * 
                      */
                     std::vector<VulInfoList> GetVulInfoList() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -77,10 +73,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FollowVulCount Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of key vulnerabilities
+                     * @return FollowVulCount Total number of key vulnerabilities
                      * 
                      */
                     uint64_t GetFollowVulCount() const;
@@ -95,22 +89,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of vulnerabilities
                      */
                     std::vector<VulInfoList> m_vulInfoList;
                     bool m_vulInfoListHasBeenSet;
 
                     /**
                      * Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of key vulnerabilities
                      */
                     uint64_t m_followVulCount;
                     bool m_followVulCountHasBeenSet;

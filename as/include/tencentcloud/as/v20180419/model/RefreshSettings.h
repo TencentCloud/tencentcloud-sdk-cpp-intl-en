@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
-                     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+                     * 获取Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+                     * @return RollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
                      * 
                      */
                     RollingUpdateSettings GetRollingUpdateSettings() const;
 
                     /**
-                     * 设置Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
-                     * @param _rollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+                     * 设置Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+                     * @param _rollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
                      * 
                      */
                     void SetRollingUpdateSettings(const RollingUpdateSettings& _rollingUpdateSettings);
@@ -69,15 +69,19 @@ namespace TencentCloud
                     bool RollingUpdateSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
-                     * @return CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+                     * 获取Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+                     * @return CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
                      * 
                      */
                     bool GetCheckInstanceTargetHealth() const;
 
                     /**
-                     * 设置Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
-                     * @param _checkInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+                     * 设置Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+                     * @param _checkInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
                      * 
                      */
                     void SetCheckInstanceTargetHealth(const bool& _checkInstanceTargetHealth);
@@ -89,19 +93,57 @@ namespace TencentCloud
                      */
                     bool CheckInstanceTargetHealthHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+                     * @return CheckInstanceTargetHealthTimeout Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+                     * 
+                     */
+                    uint64_t GetCheckInstanceTargetHealthTimeout() const;
+
+                    /**
+                     * 设置Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+                     * @param _checkInstanceTargetHealthTimeout Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+                     * 
+                     */
+                    void SetCheckInstanceTargetHealthTimeout(const uint64_t& _checkInstanceTargetHealthTimeout);
+
+                    /**
+                     * 判断参数 CheckInstanceTargetHealthTimeout 是否已赋值
+                     * @return CheckInstanceTargetHealthTimeout 是否已赋值
+                     * 
+                     */
+                    bool CheckInstanceTargetHealthTimeoutHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+                     * Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
                      */
                     RollingUpdateSettings m_rollingUpdateSettings;
                     bool m_rollingUpdateSettingsHasBeenSet;
 
                     /**
-                     * Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+                     * Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
                      */
                     bool m_checkInstanceTargetHealth;
                     bool m_checkInstanceTargetHealthHasBeenSet;
+
+                    /**
+                     * Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+                     */
+                    uint64_t m_checkInstanceTargetHealthTimeout;
+                    bool m_checkInstanceTargetHealthTimeoutHasBeenSet;
 
                 };
             }

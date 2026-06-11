@@ -44,15 +44,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Processing statement entered by the user
-                     * @return EtlContent Processing statement entered by the user
+                     * 获取Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+                     * @return EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      * 
                      */
                     std::string GetEtlContent() const;
 
                     /**
-                     * 设置Processing statement entered by the user
-                     * @param _etlContent Processing statement entered by the user
+                     * 设置Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+                     * @param _etlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      * 
                      */
                     void SetEtlContent(const std::string& _etlContent);
@@ -65,15 +85,19 @@ namespace TencentCloud
                     bool EtlContentHasBeenSet() const;
 
                     /**
-                     * 获取Target topic ID and alias of the data processing task
-                     * @return DstResources Target topic ID and alias of the data processing task
+                     * 获取Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @return DstResources Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     std::vector<DataTransformResouceInfo> GetDstResources() const;
 
                     /**
-                     * 设置Target topic ID and alias of the data processing task
-                     * @param _dstResources Target topic ID and alias of the data processing task
+                     * 设置Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+                     * @param _dstResources Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      * 
                      */
                     void SetDstResources(const std::vector<DataTransformResouceInfo>& _dstResources);
@@ -109,13 +133,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Processing statement entered by the user
+                     * Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents
+
+-[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
                      */
                     std::string m_etlContent;
                     bool m_etlContentHasBeenSet;
 
                     /**
-                     * Target topic ID and alias of the data processing task
+                     * Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
                      */
                     std::vector<DataTransformResouceInfo> m_dstResources;
                     bool m_dstResourcesHasBeenSet;

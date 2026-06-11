@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing client ID
-                     * @return Uuid Yunjing client ID
+                     * 获取Host Security UUID
+                     * @return Uuid Host Security UUID
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing client ID
-                     * @param _uuid Yunjing client ID
+                     * 设置Host Security UUID
+                     * @param _uuid Host Security UUID
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -308,7 +308,7 @@ namespace TencentCloud
                     bool m_idHasBeenSet;
 
                     /**
-                     * Yunjing client ID
+                     * Host Security UUID
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

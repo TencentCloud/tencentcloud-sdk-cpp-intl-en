@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineLicense Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MachineLicenseDetail> GetMachineLicense() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MachineLicenseDetail> m_machineLicense;
                     bool m_machineLicenseHasBeenSet;
 
                     /**
                      * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

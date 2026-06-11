@@ -168,6 +168,27 @@ namespace TencentCloud
                      */
                     bool TagIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Virtual IP
+                     * @return Vip Virtual IP
+                     * 
+                     */
+                    std::string GetVip() const;
+
+                    /**
+                     * 设置Virtual IP
+                     * @param _vip Virtual IP
+                     * 
+                     */
+                    void SetVip(const std::string& _vip);
+
+                    /**
+                     * 判断参数 Vip 是否已赋值
+                     * @return Vip 是否已赋值
+                     * 
+                     */
+                    bool VipHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +226,12 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_tagIds;
                     bool m_tagIdsHasBeenSet;
+
+                    /**
+                     * Virtual IP
+                     */
+                    std::string m_vip;
+                    bool m_vipHasBeenSet;
 
                 };
             }

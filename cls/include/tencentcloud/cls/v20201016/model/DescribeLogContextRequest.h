@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID to be queried
-                     * @return TopicId Log topic ID to be queried
+                     * 获取Log topic Id to query.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @return TopicId Log topic Id to query.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID to be queried
-                     * @param _topicId Log topic ID to be queried
+                     * 设置Log topic Id to query.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+                     * @param _topicId Log topic Id to query.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -64,15 +72,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
-                     * @return BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+                     * 获取Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
+                     * @return BTime Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
                      * 
                      */
                     std::string GetBTime() const;
 
                     /**
-                     * 设置Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
-                     * @param _bTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+                     * 设置Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
+                     * @param _bTime Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
                      * 
                      */
                     void SetBTime(const std::string& _bTime);
@@ -85,15 +93,15 @@ namespace TencentCloud
                     bool BTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
-                     * @return PkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+                     * 获取Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
+                     * @return PkgId Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
                      * 
                      */
                     std::string GetPkgId() const;
 
                     /**
-                     * 设置Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
-                     * @param _pkgId Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+                     * 设置Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
+                     * @param _pkgId Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
                      * 
                      */
                     void SetPkgId(const std::string& _pkgId);
@@ -106,19 +114,15 @@ namespace TencentCloud
                     bool PkgIdHasBeenSet() const;
 
                     /**
-                     * 获取Sequence number of a log within the log package.
-The PkgLogId in the Results structure of the SearchLog API returned information.
-                     * @return PkgLogId Sequence number of a log within the log package.
-The PkgLogId in the Results structure of the SearchLog API returned information.
+                     * 获取Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
+                     * @return PkgLogId Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
                      * 
                      */
                     int64_t GetPkgLogId() const;
 
                     /**
-                     * 设置Sequence number of a log within the log package.
-The PkgLogId in the Results structure of the SearchLog API returned information.
-                     * @param _pkgLogId Sequence number of a log within the log package.
-The PkgLogId in the Results structure of the SearchLog API returned information.
+                     * 设置Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
+                     * @param _pkgLogId Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
                      * 
                      */
                     void SetPkgLogId(const int64_t& _pkgLogId);
@@ -172,29 +176,129 @@ The PkgLogId in the Results structure of the SearchLog API returned information.
                      */
                     bool NextLogsHasBeenSet() const;
 
+                    /**
+                     * 获取Query statement, filtering the log context with a maximum length of 12KB
+The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+                     * @return Query Query statement, filtering the log context with a maximum length of 12KB
+The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+                     * 
+                     */
+                    std::string GetQuery() const;
+
+                    /**
+                     * 设置Query statement, filtering the log context with a maximum length of 12KB
+The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+                     * @param _query Query statement, filtering the log context with a maximum length of 12KB
+The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+                     * 
+                     */
+                    void SetQuery(const std::string& _query);
+
+                    /**
+                     * 判断参数 Query 是否已赋值
+                     * @return Query 是否已赋值
+                     * 
+                     */
+                    bool QueryHasBeenSet() const;
+
+                    /**
+                     * 获取Context search start time, unit: millisecond-level timestamp
+Note:
+-When From is empty, it means no restrictions on the start time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * @return From Context search start time, unit: millisecond-level timestamp
+Note:
+-When From is empty, it means no restrictions on the start time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * 
+                     */
+                    uint64_t GetFrom() const;
+
+                    /**
+                     * 设置Context search start time, unit: millisecond-level timestamp
+Note:
+-When From is empty, it means no restrictions on the start time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * @param _from Context search start time, unit: millisecond-level timestamp
+Note:
+-When From is empty, it means no restrictions on the start time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * 
+                     */
+                    void SetFrom(const uint64_t& _from);
+
+                    /**
+                     * 判断参数 From 是否已赋值
+                     * @return From 是否已赋值
+                     * 
+                     */
+                    bool FromHasBeenSet() const;
+
+                    /**
+                     * 获取End time of context search. Measurement unit: millisecond-level timestamp.
+Note:
+-When To is empty, it means no restrictions on the end time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * @return To End time of context search. Measurement unit: millisecond-level timestamp.
+Note:
+-When To is empty, it means no restrictions on the end time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * 
+                     */
+                    uint64_t GetTo() const;
+
+                    /**
+                     * 设置End time of context search. Measurement unit: millisecond-level timestamp.
+Note:
+-When To is empty, it means no restrictions on the end time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * @param _to End time of context search. Measurement unit: millisecond-level timestamp.
+Note:
+-When To is empty, it means no restrictions on the end time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     * 
+                     */
+                    void SetTo(const uint64_t& _to);
+
+                    /**
+                     * 判断参数 To 是否已赋值
+                     * @return To 是否已赋值
+                     * 
+                     */
+                    bool ToHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log topic ID to be queried
+                     * Log topic Id to query.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+                     * Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
                      */
                     std::string m_bTime;
                     bool m_bTimeHasBeenSet;
 
                     /**
-                     * Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+                     * Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
                      */
                     std::string m_pkgId;
                     bool m_pkgIdHasBeenSet;
 
                     /**
-                     * Sequence number of a log within the log package.
-The PkgLogId in the Results structure of the SearchLog API returned information.
+                     * Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
                      */
                     int64_t m_pkgLogId;
                     bool m_pkgLogIdHasBeenSet;
@@ -210,6 +314,33 @@ The PkgLogId in the Results structure of the SearchLog API returned information.
                      */
                     int64_t m_nextLogs;
                     bool m_nextLogsHasBeenSet;
+
+                    /**
+                     * Query statement, filtering the log context with a maximum length of 12KB
+The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+                     */
+                    std::string m_query;
+                    bool m_queryHasBeenSet;
+
+                    /**
+                     * Context search start time, unit: millisecond-level timestamp
+Note:
+-When From is empty, it means no restrictions on the start time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     */
+                    uint64_t m_from;
+                    bool m_fromHasBeenSet;
+
+                    /**
+                     * End time of context search. Measurement unit: millisecond-level timestamp.
+Note:
+-When To is empty, it means no restrictions on the end time of context search.
+-From and To are not empty, From < To
+-Currently, the system only supports the Shanghai/Virginia/Singapore region.
+                     */
+                    uint64_t m_to;
+                    bool m_toHasBeenSet;
 
                 };
             }

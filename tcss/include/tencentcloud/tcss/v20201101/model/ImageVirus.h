@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Path.
+                     * @return Path Path.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Path
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Path.
+                     * @param _path Path.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 设置Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _riskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Category
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取category
+                     * @return Category category
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置Category
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置category
+                     * @param _category category
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVirusName() const;
 
                     /**
                      * 设置Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _virusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVirusName(const std::string& _virusName);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VirusNameHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tags Tag.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSolution(const std::string& _solution);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取File type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileType File type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置File type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileType File type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -248,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取File path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileName File path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置File path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileName File path
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File md5
+                     * @return FileMd5 File md5
                      * 
                      */
                     std::string GetFileMd5() const;
 
                     /**
-                     * 设置MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File md5
+                     * @param _fileMd5 File md5
                      * 
                      */
                     void SetFileMd5(const std::string& _fileMd5);
@@ -298,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileSize Size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
                      * 设置Size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fileSize Size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取First detection time
+                     * @return FirstScanTime First detection time
                      * 
                      */
                     std::string GetFirstScanTime() const;
 
                     /**
-                     * 设置First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _firstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置First detection time
+                     * @param _firstScanTime First detection time
                      * 
                      */
                     void SetFirstScanTime(const std::string& _firstScanTime);
@@ -348,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLatestScanTime() const;
 
                     /**
                      * 设置Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _latestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLatestScanTime(const std::string& _latestScanTime);
@@ -374,92 +322,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Path
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Path.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
                      * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Category
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * category
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
                      * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_virusName;
                     bool m_virusNameHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
                      * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_solution;
                     bool m_solutionHasBeenSet;
 
                     /**
                      * File type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
                      * File path
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File md5
                      */
                     std::string m_fileMd5;
                     bool m_fileMd5HasBeenSet;
 
                     /**
                      * Size
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * First detection time
                      */
                     std::string m_firstScanTime;
                     bool m_firstScanTimeHasBeenSet;
 
                     /**
                      * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_latestScanTime;
                     bool m_latestScanTimeHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output file information of the AIGC video task.	
-                     * @return FileInfos Output file information of the AIGC video task.	
+                     * 获取<p>Output file info of the AIGC video task.</p>
+                     * @return FileInfos <p>Output file info of the AIGC video task.</p>
                      * 
                      */
                     std::vector<AigcVideoTaskOutputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置Output file information of the AIGC video task.	
-                     * @param _fileInfos Output file information of the AIGC video task.	
+                     * 设置<p>Output file info of the AIGC video task.</p>
+                     * @param _fileInfos <p>Output file info of the AIGC video task.</p>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcVideoTaskOutputFileInfo>& _fileInfos);
@@ -68,13 +68,40 @@ namespace TencentCloud
                      */
                     bool FileInfosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * @return ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetProcedureTaskIds() const;
+
+                    /**
+                     * 设置<p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * @param _procedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * 
+                     */
+                    void SetProcedureTaskIds(const std::vector<std::string>& _procedureTaskIds);
+
+                    /**
+                     * 判断参数 ProcedureTaskIds 是否已赋值
+                     * @return ProcedureTaskIds 是否已赋值
+                     * 
+                     */
+                    bool ProcedureTaskIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Output file information of the AIGC video task.	
+                     * <p>Output file info of the AIGC video task.</p>
                      */
                     std::vector<AigcVideoTaskOutputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
+
+                    /**
+                     * <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     */
+                    std::vector<std::string> m_procedureTaskIds;
+                    bool m_procedureTaskIdsHasBeenSet;
 
                 };
             }

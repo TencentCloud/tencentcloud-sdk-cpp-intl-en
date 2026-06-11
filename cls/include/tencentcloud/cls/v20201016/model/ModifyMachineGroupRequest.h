@@ -46,15 +46,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Machine group ID
-                     * @return GroupId Machine group ID
+                     * 获取Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+                     * @return GroupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Machine group ID
-                     * @param _groupId Machine group ID
+                     * 设置Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+                     * @param _groupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -67,15 +71,27 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Machine group name
-                     * @return GroupName Machine group name
+                     * 获取machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
+                     * @return GroupName machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Machine group name
-                     * @param _groupName Machine group name
+                     * 设置machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
+                     * @param _groupName machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -88,15 +104,23 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Machine group type
-                     * @return MachineGroupType Machine group type
+                     * 获取Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
+                     * @return MachineGroupType Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
                      * 
                      */
                     MachineGroupTypeInfo GetMachineGroupType() const;
 
                     /**
-                     * 设置Machine group type
-                     * @param _machineGroupType Machine group type
+                     * 设置Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
+                     * @param _machineGroupType Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
                      * 
                      */
                     void SetMachineGroupType(const MachineGroupTypeInfo& _machineGroupType);
@@ -151,15 +175,19 @@ namespace TencentCloud
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
-                     * 获取Update start time. We recommend you update LogListener during off-peak hours.
-                     * @return UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 获取Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @return UpdateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     std::string GetUpdateStartTime() const;
 
                     /**
-                     * 设置Update start time. We recommend you update LogListener during off-peak hours.
-                     * @param _updateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 设置Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @param _updateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     void SetUpdateStartTime(const std::string& _updateStartTime);
@@ -172,15 +200,19 @@ namespace TencentCloud
                     bool UpdateStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update end time. We recommend you update LogListener during off-peak hours.
-                     * @return UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 获取End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @return UpdateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     std::string GetUpdateEndTime() const;
 
                     /**
-                     * 设置Update end time. We recommend you update LogListener during off-peak hours.
-                     * @param _updateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 设置End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+                     * @param _updateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      * 
                      */
                     void SetUpdateEndTime(const std::string& _updateEndTime);
@@ -214,15 +246,15 @@ namespace TencentCloud
                     bool ServiceLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Regular offline cleaning time for machines in machine group
-                     * @return DelayCleanupTime Regular offline cleaning time for machines in machine group
+                     * 获取Periodic offline cleanup time for machines in a machine group. Unit: day
+                     * @return DelayCleanupTime Periodic offline cleanup time for machines in a machine group. Unit: day
                      * 
                      */
                     int64_t GetDelayCleanupTime() const;
 
                     /**
-                     * 设置Regular offline cleaning time for machines in machine group
-                     * @param _delayCleanupTime Regular offline cleaning time for machines in machine group
+                     * 设置Periodic offline cleanup time for machines in a machine group. Unit: day
+                     * @param _delayCleanupTime Periodic offline cleanup time for machines in a machine group. Unit: day
                      * 
                      */
                     void SetDelayCleanupTime(const int64_t& _delayCleanupTime);
@@ -258,19 +290,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Machine group ID
+                     * Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Machine group name
+                     * machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Machine group type
+                     * Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
                      */
                     MachineGroupTypeInfo m_machineGroupType;
                     bool m_machineGroupTypeHasBeenSet;
@@ -288,13 +326,15 @@ namespace TencentCloud
                     bool m_autoUpdateHasBeenSet;
 
                     /**
-                     * Update start time. We recommend you update LogListener during off-peak hours.
+                     * Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      */
                     std::string m_updateStartTime;
                     bool m_updateStartTimeHasBeenSet;
 
                     /**
-                     * Update end time. We recommend you update LogListener during off-peak hours.
+                     * End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
                      */
                     std::string m_updateEndTime;
                     bool m_updateEndTimeHasBeenSet;
@@ -306,7 +346,7 @@ namespace TencentCloud
                     bool m_serviceLoggingHasBeenSet;
 
                     /**
-                     * Regular offline cleaning time for machines in machine group
+                     * Periodic offline cleanup time for machines in a machine group. Unit: day
                      */
                     int64_t m_delayCleanupTime;
                     bool m_delayCleanupTimeHasBeenSet;

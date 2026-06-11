@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool MachineOsHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 获取CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @param _uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 设置CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @param _uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -277,15 +277,19 @@ namespace TencentCloud
                     bool RegionInfoHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. TERMINATED_PRO_VERSION: terminated.
-                     * @return InstanceState Instance status. TERMINATED_PRO_VERSION: terminated.
+                     * 获取Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
+                     * @return InstanceState Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
-                     * 设置Instance status. TERMINATED_PRO_VERSION: terminated.
-                     * @param _instanceState Instance status. TERMINATED_PRO_VERSION: terminated.
+                     * 设置Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
+                     * @param _instanceState Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -361,15 +365,15 @@ namespace TencentCloud
                     bool KernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
-                     * @return ProtectType Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+                     * 获取Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+                     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      * 
                      */
                     std::string GetProtectType() const;
 
                     /**
-                     * 设置Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
-                     * @param _protectType Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+                     * 设置Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+                     * @param _protectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      * 
                      */
                     void SetProtectType(const std::string& _protectType);
@@ -383,18 +387,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LicenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     LicenseOrder GetLicenseOrder() const;
 
                     /**
                      * 设置Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _licenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLicenseOrder(const LicenseOrder& _licenseOrder);
@@ -408,18 +408,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tags> GetCloudTags() const;
 
                     /**
                      * 设置Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCloudTags(const std::vector<Tags>& _cloudTags);
@@ -433,18 +429,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -471,7 +463,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineOsHasBeenSet;
 
                     /**
-                     * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
@@ -523,7 +515,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_regionInfoHasBeenSet;
 
                     /**
-                     * Instance status. TERMINATED_PRO_VERSION: terminated.
+                     * Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;
@@ -547,28 +540,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_kernelVersionHasBeenSet;
 
                     /**
-                     * Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+                     * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      */
                     std::string m_protectType;
                     bool m_protectTypeHasBeenSet;
 
                     /**
                      * Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     LicenseOrder m_licenseOrder;
                     bool m_licenseOrderHasBeenSet;
 
                     /**
                      * Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tags> m_cloudTags;
                     bool m_cloudTagsHasBeenSet;
 
                     /**
                      * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

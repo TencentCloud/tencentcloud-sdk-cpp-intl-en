@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uuid Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Machine associated with the allowlist.
+                     * @return Uuid Machine associated with the allowlist.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uuid Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Machine associated with the allowlist.
+                     * @param _uuid Machine associated with the allowlist.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -177,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsGlobal Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the allowlist takes effect globally
+                     * @return IsGlobal Whether the allowlist takes effect globally
                      * 
                      */
                     bool GetIsGlobal() const;
 
                     /**
-                     * 设置Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isGlobal Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the allowlist takes effect globally
+                     * @param _isGlobal Whether the allowlist takes effect globally
                      * 
                      */
                     void SetIsGlobal(const bool& _isGlobal);
@@ -203,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuids Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
 
                     /**
                      * 设置Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuids Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuids(const std::vector<std::string>& _quuids);
@@ -259,22 +247,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Machine associated with the allowlist.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the allowlist takes effect globally
                      */
                     bool m_isGlobal;
                     bool m_isGlobalHasBeenSet;
 
                     /**
                      * Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;

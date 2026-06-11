@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cwp/v20180228/model/CloudFromCnt.h>
 
 
 namespace TencentCloud
@@ -268,8 +269,8 @@ namespace TencentCloud
                     bool NotProtectMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected Inclusive Edition machines (Lighthouse machines)
-                     * @return LHGeneralDiscountCnt Number of protected Inclusive Edition machines (Lighthouse machines)
+                     * 获取Number of protected Lighthouse machines (Lighthouse machines)
+                     * @return LHGeneralDiscountCnt Number of protected Lighthouse machines (Lighthouse machines)
                      * 
                      */
                     uint64_t GetLHGeneralDiscountCnt() const;
@@ -308,6 +309,20 @@ namespace TencentCloud
                      * 
                      */
                     bool MachineDestroyAfterOfflineHoursHasBeenSet() const;
+
+                    /**
+                     * 获取Machine type array
+                     * @return CloudFrom Machine type array
+                     * 
+                     */
+                    std::vector<CloudFromCnt> GetCloudFrom() const;
+
+                    /**
+                     * 判断参数 CloudFrom 是否已赋值
+                     * @return CloudFrom 是否已赋值
+                     * 
+                     */
+                    bool CloudFromHasBeenSet() const;
 
                 private:
 
@@ -408,7 +423,7 @@ namespace TencentCloud
                     bool m_notProtectMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected Inclusive Edition machines (Lighthouse machines)
+                     * Number of protected Lighthouse machines (Lighthouse machines)
                      */
                     uint64_t m_lHGeneralDiscountCnt;
                     bool m_lHGeneralDiscountCntHasBeenSet;
@@ -424,6 +439,12 @@ namespace TencentCloud
                      */
                     uint64_t m_machineDestroyAfterOfflineHours;
                     bool m_machineDestroyAfterOfflineHoursHasBeenSet;
+
+                    /**
+                     * Machine type array
+                     */
+                    std::vector<CloudFromCnt> m_cloudFrom;
+                    bool m_cloudFromHasBeenSet;
 
                 };
             }

@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Component name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     std::string GetComponent() const;
 
                     /**
                      * 设置Component name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetComponent(const std::string& _component);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _version Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return FixedVersion Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Repairable Version
+                     * @return FixedVersion Repairable Version
                      * 
                      */
                     std::string GetFixedVersion() const;
 
                     /**
-                     * 设置Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _fixedVersion Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Repairable Version
+                     * @param _fixedVersion Repairable Version
                      * 
                      */
                     void SetFixedVersion(const std::string& _fixedVersion);
@@ -122,19 +110,15 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool FixedVersionHasBeenSet() const;
 
                     /**
-                     * 获取Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return Path Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Path.
+                     * @return Path Path.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _path Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Path.
+                     * @param _path Path.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -147,19 +131,15 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @return Type Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 获取Type.
+                     * @return Type Type.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-                     * @param _type Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * 设置Type.
+                     * @param _type Type.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -172,19 +152,15 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Component name
+                     * @return Name Component name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Component name
+                     * @param _name Component name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -200,42 +176,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
                      * Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Repairable Version
                      */
                     std::string m_fixedVersion;
                     bool m_fixedVersionHasBeenSet;
 
                     /**
-                     * Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Path.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+                     * Type.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Component name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

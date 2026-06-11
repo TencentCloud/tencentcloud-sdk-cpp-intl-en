@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool VulIdHasBeenSet() const;
 
+                    /**
+                     * 获取Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+                     * @return Source Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+                     * 
+                     */
+                    std::string GetSource() const;
+
+                    /**
+                     * 设置Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+                     * @param _source Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+                     * 
+                     */
+                    void SetSource(const std::string& _source);
+
+                    /**
+                     * 判断参数 Source 是否已赋值
+                     * @return Source 是否已赋值
+                     * 
+                     */
+                    bool SourceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +91,12 @@ namespace TencentCloud
                      */
                     uint64_t m_vulId;
                     bool m_vulIdHasBeenSet;
+
+                    /**
+                     * Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+                     */
+                    std::string m_source;
+                    bool m_sourceHasBeenSet;
 
                 };
             }

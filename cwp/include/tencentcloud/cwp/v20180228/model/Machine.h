@@ -93,31 +93,15 @@ namespace TencentCloud
                     bool MachineOsHasBeenSet() const;
 
                     /**
-                     * 获取Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
-                     * @return MachineStatus Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+                     * 获取Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+                     * @return MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
                      * 
                      */
                     std::string GetMachineStatus() const;
 
                     /**
-                     * 设置Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
-                     * @param _machineStatus Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+                     * 设置Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+                     * @param _machineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
                      * 
                      */
                     void SetMachineStatus(const std::string& _machineStatus);
@@ -130,15 +114,15 @@ namespace TencentCloud
                     bool MachineStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AgentStatus 
+                     * 获取ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+                     * @return AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
                      * 
                      */
                     std::string GetAgentStatus() const;
 
                     /**
-                     * 设置
-                     * @param _agentStatus 
+                     * 设置ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+                     * @param _agentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
                      * 
                      */
                     void SetAgentStatus(const std::string& _agentStatus);
@@ -151,15 +135,15 @@ namespace TencentCloud
                     bool AgentStatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceStatus 
+                     * 获取RUNNING; is shut down; to be recycled	
+                     * @return InstanceStatus RUNNING; is shut down; to be recycled	
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置
-                     * @param _instanceStatus 
+                     * 设置RUNNING; is shut down; to be recycled	
+                     * @param _instanceStatus RUNNING; is shut down; to be recycled	
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -172,15 +156,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 获取CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-                     * @param _uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * 设置CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+                     * @param _uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -620,15 +604,15 @@ namespace TencentCloud
                     bool KernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
-                     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+                     * 获取Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+                     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      * 
                      */
                     std::string GetProtectType() const;
 
                     /**
-                     * 设置Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
-                     * @param _protectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+                     * 设置Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+                     * @param _protectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      * 
                      */
                     void SetProtectType(const std::string& _protectType);
@@ -642,18 +626,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tags> GetCloudTags() const;
 
                     /**
                      * 设置Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCloudTags(const std::vector<Tags>& _cloudTags);
@@ -666,19 +646,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CloudTagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsAddedOnTheFifteen Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+                     * @return IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
                      * 
                      */
                     uint64_t GetIsAddedOnTheFifteen() const;
 
                     /**
-                     * 设置Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isAddedOnTheFifteen Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+                     * @param _isAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
                      * 
                      */
                     void SetIsAddedOnTheFifteen(const uint64_t& _isAddedOnTheFifteen);
@@ -692,18 +668,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IpList Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIpList() const;
 
                     /**
                      * 设置Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ipList Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIpList(const std::string& _ipList);
@@ -717,18 +689,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Network
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId Network
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Network
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vpcId Network
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -742,18 +710,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -788,18 +752,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -812,15 +772,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AgentVersion 
+                     * 获取Host security agent version
+                     * @return AgentVersion Host security agent version
                      * 
                      */
                     std::string GetAgentVersion() const;
 
                     /**
-                     * 设置
-                     * @param _agentVersion 
+                     * 设置Host security agent version
+                     * @param _agentVersion Host security agent version
                      * 
                      */
                     void SetAgentVersion(const std::string& _agentVersion);
@@ -831,6 +791,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AgentVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AppId 
+                     * 
+                     */
+                    uint64_t GetAppId() const;
+
+                    /**
+                     * 设置
+                     * @param _appId 
+                     * 
+                     */
+                    void SetAppId(const uint64_t& _appId);
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     * 
+                     */
+                    bool AppIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CSIPProtectType 
+                     * 
+                     */
+                    std::string GetCSIPProtectType() const;
+
+                    /**
+                     * 设置
+                     * @param _cSIPProtectType 
+                     * 
+                     */
+                    void SetCSIPProtectType(const std::string& _cSIPProtectType);
+
+                    /**
+                     * 判断参数 CSIPProtectType 是否已赋值
+                     * @return CSIPProtectType 是否已赋值
+                     * 
+                     */
+                    bool CSIPProtectTypeHasBeenSet() const;
 
                 private:
 
@@ -847,29 +849,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_machineOsHasBeenSet;
 
                     /**
-                     * Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+                     * Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
                      */
                     std::string m_machineStatus;
                     bool m_machineStatusHasBeenSet;
 
                     /**
-                     * 
+                     * ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
                      */
                     std::string m_agentStatus;
                     bool m_agentStatusHasBeenSet;
 
                     /**
-                     * 
+                     * RUNNING; is shut down; to be recycled	
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+                     * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
@@ -996,42 +994,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_kernelVersionHasBeenSet;
 
                     /**
-                     * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+                     * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
                      */
                     std::string m_protectType;
                     bool m_protectTypeHasBeenSet;
 
                     /**
                      * Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tags> m_cloudTags;
                     bool m_cloudTagsHasBeenSet;
 
                     /**
-                     * Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
                      */
                     uint64_t m_isAddedOnTheFifteen;
                     bool m_isAddedOnTheFifteenHasBeenSet;
 
                     /**
                      * Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ipList;
                     bool m_ipListHasBeenSet;
 
                     /**
                      * Network
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
@@ -1044,16 +1037,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 
+                     * Host security agent version
                      */
                     std::string m_agentVersion;
                     bool m_agentVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_appId;
+                    bool m_appIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_cSIPProtectType;
+                    bool m_cSIPProtectTypeHasBeenSet;
 
                 };
             }

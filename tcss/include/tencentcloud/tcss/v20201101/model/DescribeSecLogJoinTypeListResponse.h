@@ -58,6 +58,20 @@ namespace TencentCloud
                      */
                     bool ListHasBeenSet() const;
 
+                    /**
+                     * 获取Language type
+                     * @return MsgLanguage Language type
+                     * 
+                     */
+                    std::string GetMsgLanguage() const;
+
+                    /**
+                     * 判断参数 MsgLanguage 是否已赋值
+                     * @return MsgLanguage 是否已赋值
+                     * 
+                     */
+                    bool MsgLanguageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -65,6 +79,12 @@ namespace TencentCloud
                      */
                     std::vector<SecLogJoinInfo> m_list;
                     bool m_listHasBeenSet;
+
+                    /**
+                     * Language type
+                     */
+                    std::string m_msgLanguage;
+                    bool m_msgLanguageHasBeenSet;
 
                 };
             }

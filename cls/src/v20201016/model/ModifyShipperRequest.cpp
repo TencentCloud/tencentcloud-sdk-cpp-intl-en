@@ -35,7 +35,11 @@ ModifyShipperRequest::ModifyShipperRequest() :
     m_compressHasBeenSet(false),
     m_contentHasBeenSet(false),
     m_filenameModeHasBeenSet(false),
-    m_storageTypeHasBeenSet(false)
+    m_storageTypeHasBeenSet(false),
+    m_roleArnHasBeenSet(false),
+    m_externalIdHasBeenSet(false),
+    m_timeZoneHasBeenSet(false),
+    m_dSLFilterHasBeenSet(false)
 {
 }
 
@@ -157,6 +161,38 @@ string ModifyShipperRequest::ToJsonString() const
         string key = "StorageType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_storageType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_roleArnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RoleArn";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_roleArn.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_externalIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExternalId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_externalId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_timeZoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TimeZone";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_timeZone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dSLFilterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DSLFilter";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_dSLFilter.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -373,6 +409,70 @@ void ModifyShipperRequest::SetStorageType(const string& _storageType)
 bool ModifyShipperRequest::StorageTypeHasBeenSet() const
 {
     return m_storageTypeHasBeenSet;
+}
+
+string ModifyShipperRequest::GetRoleArn() const
+{
+    return m_roleArn;
+}
+
+void ModifyShipperRequest::SetRoleArn(const string& _roleArn)
+{
+    m_roleArn = _roleArn;
+    m_roleArnHasBeenSet = true;
+}
+
+bool ModifyShipperRequest::RoleArnHasBeenSet() const
+{
+    return m_roleArnHasBeenSet;
+}
+
+string ModifyShipperRequest::GetExternalId() const
+{
+    return m_externalId;
+}
+
+void ModifyShipperRequest::SetExternalId(const string& _externalId)
+{
+    m_externalId = _externalId;
+    m_externalIdHasBeenSet = true;
+}
+
+bool ModifyShipperRequest::ExternalIdHasBeenSet() const
+{
+    return m_externalIdHasBeenSet;
+}
+
+string ModifyShipperRequest::GetTimeZone() const
+{
+    return m_timeZone;
+}
+
+void ModifyShipperRequest::SetTimeZone(const string& _timeZone)
+{
+    m_timeZone = _timeZone;
+    m_timeZoneHasBeenSet = true;
+}
+
+bool ModifyShipperRequest::TimeZoneHasBeenSet() const
+{
+    return m_timeZoneHasBeenSet;
+}
+
+string ModifyShipperRequest::GetDSLFilter() const
+{
+    return m_dSLFilter;
+}
+
+void ModifyShipperRequest::SetDSLFilter(const string& _dSLFilter)
+{
+    m_dSLFilter = _dSLFilter;
+    m_dSLFilterHasBeenSet = true;
+}
+
+bool ModifyShipperRequest::DSLFilterHasBeenSet() const
+{
+    return m_dSLFilterHasBeenSet;
 }
 
 

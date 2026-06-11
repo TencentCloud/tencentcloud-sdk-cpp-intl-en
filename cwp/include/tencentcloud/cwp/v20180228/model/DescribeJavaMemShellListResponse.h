@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<JavaMemShellInfo> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Event list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<JavaMemShellInfo> m_list;
                     bool m_listHasBeenSet;

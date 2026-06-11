@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AttackStatusHasBeenSet() const;
 
                     /**
-                     * 获取The maximum attack bandwidth.
-                     * @return AttackMaxBandWidth The maximum attack bandwidth.
+                     * 获取Maximum bandwidth of the attack in bps.
+                     * @return AttackMaxBandWidth Maximum bandwidth of the attack in bps.
                      * 
                      */
                     int64_t GetAttackMaxBandWidth() const;
 
                     /**
-                     * 设置The maximum attack bandwidth.
-                     * @param _attackMaxBandWidth The maximum attack bandwidth.
+                     * 设置Maximum bandwidth of the attack in bps.
+                     * @param _attackMaxBandWidth Maximum bandwidth of the attack in bps.
                      * 
                      */
                     void SetAttackMaxBandWidth(const int64_t& _attackMaxBandWidth);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AttackMaxBandWidthHasBeenSet() const;
 
                     /**
-                     * 获取The peak attack packet rate.
-                     * @return AttackPacketMaxRate The peak attack packet rate.
+                     * 获取Peak attack packet rate, unit: pps.
+                     * @return AttackPacketMaxRate Peak attack packet rate, unit: pps.
                      * 
                      */
                     int64_t GetAttackPacketMaxRate() const;
 
                     /**
-                     * 设置The peak attack packet rate.
-                     * @param _attackPacketMaxRate The peak attack packet rate.
+                     * 设置Peak attack packet rate, unit: pps.
+                     * @param _attackPacketMaxRate Peak attack packet rate, unit: pps.
                      * 
                      */
                     void SetAttackPacketMaxRate(const int64_t& _attackPacketMaxRate);
@@ -323,13 +323,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_attackStatusHasBeenSet;
 
                     /**
-                     * The maximum attack bandwidth.
+                     * Maximum bandwidth of the attack in bps.
                      */
                     int64_t m_attackMaxBandWidth;
                     bool m_attackMaxBandWidthHasBeenSet;
 
                     /**
-                     * The peak attack packet rate.
+                     * Peak attack packet rate, unit: pps.
                      */
                     int64_t m_attackPacketMaxRate;
                     bool m_attackPacketMaxRateHasBeenSet;

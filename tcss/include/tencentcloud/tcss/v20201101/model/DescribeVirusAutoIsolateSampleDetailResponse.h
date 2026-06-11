@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool MD5HasBeenSet() const;
 
                     /**
-                     * 获取File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Size File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File Size (B)
+                     * @return Size File Size (B)
                      * 
                      */
                     uint64_t GetSize() const;
@@ -75,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVirusName() const;
@@ -90,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VirusNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+                     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      * 
                      */
                     std::string GetRiskLevel() const;
@@ -106,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KillEngine Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取antivirus engine
+                     * @return KillEngine antivirus engine
                      * 
                      */
                     std::vector<std::string> GetKillEngine() const;
@@ -122,10 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KillEngineHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
@@ -139,9 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHarmDescribe() const;
@@ -154,10 +142,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HarmDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recommended solution
+                     * @return SuggestScheme Recommended solution
                      * 
                      */
                     std::string GetSuggestScheme() const;
@@ -171,9 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReferenceLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReferenceLink() const;
@@ -194,57 +178,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_mD5HasBeenSet;
 
                     /**
-                     * File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File Size (B)
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
                      * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_virusName;
                     bool m_virusNameHasBeenSet;
 
                     /**
-                     * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * antivirus engine
                      */
                     std::vector<std::string> m_killEngine;
                     bool m_killEngineHasBeenSet;
 
                     /**
-                     * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Event description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_harmDescribe;
                     bool m_harmDescribeHasBeenSet;
 
                     /**
-                     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recommended solution
                      */
                     std::string m_suggestScheme;
                     bool m_suggestSchemeHasBeenSet;
 
                     /**
                      * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_referenceLink;
                     bool m_referenceLinkHasBeenSet;

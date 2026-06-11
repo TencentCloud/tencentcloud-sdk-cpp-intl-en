@@ -406,18 +406,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -449,6 +445,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool UuidHasBeenSet() const;
+
+                    /**
+                     * 获取First time detection method 0 scan;1 real-time monitoring
+                     * @return FirstDetectionMethod First time detection method 0 scan;1 real-time monitoring
+                     * 
+                     */
+                    uint64_t GetFirstDetectionMethod() const;
+
+                    /**
+                     * 设置First time detection method 0 scan;1 real-time monitoring
+                     * @param _firstDetectionMethod First time detection method 0 scan;1 real-time monitoring
+                     * 
+                     */
+                    void SetFirstDetectionMethod(const uint64_t& _firstDetectionMethod);
+
+                    /**
+                     * 判断参数 FirstDetectionMethod 是否已赋值
+                     * @return FirstDetectionMethod 是否已赋值
+                     * 
+                     */
+                    bool FirstDetectionMethodHasBeenSet() const;
 
                 private:
 
@@ -556,7 +573,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
@@ -566,6 +582,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
+
+                    /**
+                     * First time detection method 0 scan;1 real-time monitoring
+                     */
+                    uint64_t m_firstDetectionMethod;
+                    bool m_firstDetectionMethodHasBeenSet;
 
                 };
             }

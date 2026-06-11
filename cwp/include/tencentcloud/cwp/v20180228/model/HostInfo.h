@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Quuid
-                     * @return Quuid Quuid
+                     * 获取Host QUUID
+                     * @return Quuid Host QUUID
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置Quuid
-                     * @param _quuid Quuid
+                     * 设置Host QUUID
+                     * @param _quuid Host QUUID
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Uuid
-                     * @return Uuid Uuid
+                     * 获取Host UUID.
+                     * @return Uuid Host UUID.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Uuid
-                     * @param _uuid Uuid
+                     * 设置Host UUID.
+                     * @param _uuid Host UUID.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Quuid
+                     * Host QUUID
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Uuid
+                     * Host UUID.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to scan all images
-                     * @return All Whether to scan all images
+                     * 获取<p>Whether to scan all images.</p>
+                     * @return All <p>Whether to scan all images.</p>
                      * 
                      */
                     bool GetAll() const;
 
                     /**
-                     * 设置Whether to scan all images
-                     * @param _all Whether to scan all images
+                     * 设置<p>Whether to scan all images.</p>
+                     * @param _all <p>Whether to scan all images.</p>
                      * 
                      */
                     void SetAll(const bool& _all);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool AllHasBeenSet() const;
 
                     /**
-                     * 获取List of scanned images
-                     * @return Images List of scanned images
+                     * 获取<p>List of images to be scanned.</p>
+                     * @return Images <p>List of images to be scanned.</p>
                      * 
                      */
                     std::vector<ImageInfo> GetImages() const;
 
                     /**
-                     * 设置List of scanned images
-                     * @param _images List of scanned images
+                     * 设置<p>List of images to be scanned.</p>
+                     * @param _images <p>List of images to be scanned.</p>
                      * 
                      */
                     void SetImages(const std::vector<ImageInfo>& _images);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool ImagesHasBeenSet() const;
 
                     /**
-                     * 获取Array of scan types
-                     * @return ScanType Array of scan types
+                     * 获取<p>Scan type array.</p>
+                     * @return ScanType <p>Scan type array.</p>
                      * 
                      */
                     std::vector<std::string> GetScanType() const;
 
                     /**
-                     * 设置Array of scan types
-                     * @param _scanType Array of scan types
+                     * 设置<p>Scan type array.</p>
+                     * @param _scanType <p>Scan type array.</p>
                      * 
                      */
                     void SetScanType(const std::vector<std::string>& _scanType);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool ScanTypeHasBeenSet() const;
 
                     /**
-                     * 获取List of scanned images
-                     * @return Id List of scanned images
+                     * 获取<p>List of images to be scanned.</p>
+                     * @return Id <p>List of images to be scanned.</p>
                      * 
                      */
                     std::vector<uint64_t> GetId() const;
 
                     /**
-                     * 设置List of scanned images
-                     * @param _id List of scanned images
+                     * 设置<p>List of images to be scanned.</p>
+                     * @param _id <p>List of images to be scanned.</p>
                      * 
                      */
                     void SetId(const std::vector<uint64_t>& _id);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Filter
-                     * @return Filters Filter
+                     * 获取<p>Filter conditions.</p>
+                     * @return Filters <p>Filter conditions.</p>
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filter
-                     * @param _filters Filter
+                     * 设置<p>Filter conditions.</p>
+                     * @param _filters <p>Filter conditions.</p>
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取List of images not to be scanned, which is used together with `Filters`.
-                     * @return ExcludeImageList List of images not to be scanned, which is used together with `Filters`.
+                     * 获取<p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+                     * @return ExcludeImageList <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
                      * 
                      */
                     std::vector<uint64_t> GetExcludeImageList() const;
 
                     /**
-                     * 设置List of images not to be scanned, which is used together with `Filters`.
-                     * @param _excludeImageList List of images not to be scanned, which is used together with `Filters`.
+                     * 设置<p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+                     * @param _excludeImageList <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
                      * 
                      */
                     void SetExcludeImageList(const std::vector<uint64_t>& _excludeImageList);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool ExcludeImageListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to scan only the latest repository images, which is used together with `Filters`.
-                     * @return OnlyScanLatest Whether to scan only the latest repository images, which is used together with `Filters`.
+                     * 获取<p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+                     * @return OnlyScanLatest <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
                      * 
                      */
                     bool GetOnlyScanLatest() const;
 
                     /**
-                     * 设置Whether to scan only the latest repository images, which is used together with `Filters`.
-                     * @param _onlyScanLatest Whether to scan only the latest repository images, which is used together with `Filters`.
+                     * 设置<p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+                     * @param _onlyScanLatest <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
                      * 
                      */
                     void SetOnlyScanLatest(const bool& _onlyScanLatest);
@@ -191,49 +191,76 @@ namespace TencentCloud
                      */
                     bool OnlyScanLatestHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Task timeout duration.</p><p>Unit: seconds.</p>
+                     * @return Timeout <p>Task timeout duration.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    uint64_t GetTimeout() const;
+
+                    /**
+                     * 设置<p>Task timeout duration.</p><p>Unit: seconds.</p>
+                     * @param _timeout <p>Task timeout duration.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    void SetTimeout(const uint64_t& _timeout);
+
+                    /**
+                     * 判断参数 Timeout 是否已赋值
+                     * @return Timeout 是否已赋值
+                     * 
+                     */
+                    bool TimeoutHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether to scan all images
+                     * <p>Whether to scan all images.</p>
                      */
                     bool m_all;
                     bool m_allHasBeenSet;
 
                     /**
-                     * List of scanned images
+                     * <p>List of images to be scanned.</p>
                      */
                     std::vector<ImageInfo> m_images;
                     bool m_imagesHasBeenSet;
 
                     /**
-                     * Array of scan types
+                     * <p>Scan type array.</p>
                      */
                     std::vector<std::string> m_scanType;
                     bool m_scanTypeHasBeenSet;
 
                     /**
-                     * List of scanned images
+                     * <p>List of images to be scanned.</p>
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Filter
+                     * <p>Filter conditions.</p>
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * List of images not to be scanned, which is used together with `Filters`.
+                     * <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
                      */
                     std::vector<uint64_t> m_excludeImageList;
                     bool m_excludeImageListHasBeenSet;
 
                     /**
-                     * Whether to scan only the latest repository images, which is used together with `Filters`.
+                     * <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
                      */
                     bool m_onlyScanLatest;
                     bool m_onlyScanLatestHasBeenSet;
+
+                    /**
+                     * <p>Task timeout duration.</p><p>Unit: seconds.</p>
+                     */
+                    uint64_t m_timeout;
+                    bool m_timeoutHasBeenSet;
 
                 };
             }

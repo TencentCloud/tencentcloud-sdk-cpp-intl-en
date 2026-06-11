@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Level Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
+                     * @return Level Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
                      * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
-                     * 设置Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _level Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
+                     * @param _level Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
                      * 
                      */
                     void SetLevel(const uint64_t& _level);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagList Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTagList() const;
 
                     /**
                      * 设置Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tagList Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagList(const std::vector<std::string>& _tagList);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagListHasBeenSet() const;
 
                     /**
-                     * 获取Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+                     * @return Status Status: 0: failed; 1: ignore; 3: approved; 5: detecting
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+                     * @param _status Status: 0: failed; 1: ignore; 3: approved; 5: detecting
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Last detection time
+                     * @return LastScanTime Last detection time
                      * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
-                     * 设置Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Last detection time
+                     * @param _lastScanTime Last detection time
                      * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEventId() const;
 
                     /**
                      * 设置Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEventId(const uint64_t& _eventId);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -225,49 +197,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
                      */
                     uint64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tagList;
                     bool m_tagListHasBeenSet;
 
                     /**
-                     * Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status: 0: failed; 1: ignore; 3: approved; 5: detecting
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Last detection time
                      */
                     std::string m_lastScanTime;
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
                      * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;

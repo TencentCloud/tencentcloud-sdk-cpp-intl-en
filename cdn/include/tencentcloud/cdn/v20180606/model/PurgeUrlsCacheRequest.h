@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of URLs. The protocol header such as "http://" or "https://" needs to be included.
-                     * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+                     * 获取List of URLs. The protocol header such as `http://` or `https://` needs to be included.
+                     * @return Urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
                      * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
-                     * 设置List of URLs. The protocol header such as "http://" or "https://" needs to be included.
-                     * @param _urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+                     * 设置List of URLs. The protocol header such as `http://` or `https://` needs to be included.
+                     * @param _urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
                      * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
@@ -124,7 +124,7 @@ The specified purging region should match the domain name acceleration region.
                 private:
 
                     /**
-                     * List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+                     * List of URLs. The protocol header such as `http://` or `https://` needs to be included.
                      */
                     std::vector<std::string> m_urls;
                     bool m_urlsHasBeenSet;

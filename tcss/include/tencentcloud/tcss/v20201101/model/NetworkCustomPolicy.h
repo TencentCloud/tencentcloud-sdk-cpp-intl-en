@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool DirectionHasBeenSet() const;
 
                     /**
-                     * 获取Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ports Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Network Policy Port
+                     * @return Ports Network Policy Port
                      * 
                      */
                     std::vector<NetworkPorts> GetPorts() const;
 
                     /**
-                     * 设置Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ports Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Network Policy Port
+                     * @param _ports Network Policy Port
                      * 
                      */
                     void SetPorts(const std::vector<NetworkPorts>& _ports);
@@ -97,28 +93,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
                      * @return Peer Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
                      * 
                      */
                     std::vector<NetworkPeer> GetPeer() const;
@@ -126,28 +120,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
                      * @param _peer Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
                      * 
                      */
                     void SetPeer(const std::vector<NetworkPeer>& _peer);
@@ -168,8 +160,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_directionHasBeenSet;
 
                     /**
-                     * Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Network Policy Port
                      */
                     std::vector<NetworkPorts> m_ports;
                     bool m_portsHasBeenSet;
@@ -177,16 +168,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
                      */
                     std::vector<NetworkPeer> m_peer;
                     bool m_peerHasBeenSet;

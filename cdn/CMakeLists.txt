@@ -41,6 +41,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/PurgePathCacheResponse.h
   include/tencentcloud/cdn/v20180606/model/DomainFilter.h
   include/tencentcloud/cdn/v20180606/model/DescribeCdnOriginIpResponse.h
+  include/tencentcloud/cdn/v20180606/model/ParamFilter.h
   include/tencentcloud/cdn/v20180606/model/SpecificConfig.h
   include/tencentcloud/cdn/v20180606/model/FollowRedirect.h
   include/tencentcloud/cdn/v20180606/model/RequestHeader.h
@@ -91,6 +92,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/DescribeCdnIpRequest.h
   include/tencentcloud/cdn/v20180606/model/Ipv6.h
   include/tencentcloud/cdn/v20180606/model/WafSubRuleStatus.h
+  include/tencentcloud/cdn/v20180606/model/FilterRules.h
   include/tencentcloud/cdn/v20180606/model/StatusCodeCache.h
   include/tencentcloud/cdn/v20180606/model/DescribeIpVisitResponse.h
   include/tencentcloud/cdn/v20180606/model/EnableClsLogTopicResponse.h
@@ -200,8 +202,10 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/CookieKey.h
   include/tencentcloud/cdn/v20180606/model/RemoteAuthentication.h
   include/tencentcloud/cdn/v20180606/model/KeyRule.h
+  include/tencentcloud/cdn/v20180606/model/ParamFilterRule.h
   include/tencentcloud/cdn/v20180606/model/CappingRule.h
   include/tencentcloud/cdn/v20180606/model/ShareCname.h
+  include/tencentcloud/cdn/v20180606/model/AutoGuard.h
   include/tencentcloud/cdn/v20180606/model/ListClsLogTopicsRequest.h
   include/tencentcloud/cdn/v20180606/model/Seo.h
   include/tencentcloud/cdn/v20180606/model/BandwidthAlert.h
@@ -294,6 +298,7 @@ set(cdn_src
   src/v20180606/model/PurgePathCacheResponse.cpp
   src/v20180606/model/DomainFilter.cpp
   src/v20180606/model/DescribeCdnOriginIpResponse.cpp
+  src/v20180606/model/ParamFilter.cpp
   src/v20180606/model/SpecificConfig.cpp
   src/v20180606/model/FollowRedirect.cpp
   src/v20180606/model/RequestHeader.cpp
@@ -344,6 +349,7 @@ set(cdn_src
   src/v20180606/model/DescribeCdnIpRequest.cpp
   src/v20180606/model/Ipv6.cpp
   src/v20180606/model/WafSubRuleStatus.cpp
+  src/v20180606/model/FilterRules.cpp
   src/v20180606/model/StatusCodeCache.cpp
   src/v20180606/model/DescribeIpVisitResponse.cpp
   src/v20180606/model/EnableClsLogTopicResponse.cpp
@@ -453,8 +459,10 @@ set(cdn_src
   src/v20180606/model/CookieKey.cpp
   src/v20180606/model/RemoteAuthentication.cpp
   src/v20180606/model/KeyRule.cpp
+  src/v20180606/model/ParamFilterRule.cpp
   src/v20180606/model/CappingRule.cpp
   src/v20180606/model/ShareCname.cpp
+  src/v20180606/model/AutoGuard.cpp
   src/v20180606/model/ListClsLogTopicsRequest.cpp
   src/v20180606/model/Seo.cpp
   src/v20180606/model/BandwidthAlert.cpp

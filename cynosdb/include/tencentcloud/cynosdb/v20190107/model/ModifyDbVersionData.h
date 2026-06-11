@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Modify database kernel version task information.
                 */
                 class ModifyDbVersionData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OldVersion 
+                     * 获取Version before modification.
+                     * @return OldVersion Version before modification.
                      * 
                      */
                     std::string GetOldVersion() const;
 
                     /**
-                     * 设置
-                     * @param _oldVersion 
+                     * 设置Version before modification.
+                     * @param _oldVersion Version before modification.
                      * 
                      */
                     void SetOldVersion(const std::string& _oldVersion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool OldVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NewVersion 
+                     * 获取Version after modification.
+                     * @return NewVersion Version after modification.
                      * 
                      */
                     std::string GetNewVersion() const;
 
                     /**
-                     * 设置
-                     * @param _newVersion 
+                     * 设置Version after modification.
+                     * @param _newVersion Version after modification.
                      * 
                      */
                     void SetNewVersion(const std::string& _newVersion);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NewVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpgradeType 
+                     * 获取Upgrade method.
+                     * @return UpgradeType Upgrade method.
                      * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
-                     * 设置
-                     * @param _upgradeType 
+                     * 设置Upgrade method.
+                     * @param _upgradeType Upgrade method.
                      * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Version before modification.
                      */
                     std::string m_oldVersion;
                     bool m_oldVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Version after modification.
                      */
                     std::string m_newVersion;
                     bool m_newVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Upgrade method.
                      */
                     std::string m_upgradeType;
                     bool m_upgradeTypeHasBeenSet;

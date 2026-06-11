@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceID Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Message Queue Instance ID
+                     * @return InstanceID Message Queue Instance ID
                      * 
                      */
                     std::string GetInstanceID() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Message Queue Instance Name
+                     * @return InstanceName Message Queue Instance Name
                      * 
                      */
                     std::string GetInstanceName() const;
@@ -78,9 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Domain
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDomain() const;
@@ -93,10 +87,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogTypeList List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Log Type Queue
+                     * @return LogTypeList Log Type Queue
                      * 
                      */
                     std::vector<SecLogDeliveryKafkaSettingInfo> GetLogTypeList() const;
@@ -109,10 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Username
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return User Username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Username.
+                     * @return User Username.
                      * 
                      */
                     std::string GetUser() const;
@@ -125,10 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return RegionID Region ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Region ID.
+                     * @return RegionID Region ID.
                      * 
                      */
                     std::string GetRegionID() const;
@@ -143,43 +131,37 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Message Queue Instance ID
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Message Queue Instance Name
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
                      * Domain
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Log Type Queue
                      */
                     std::vector<SecLogDeliveryKafkaSettingInfo> m_logTypeList;
                     bool m_logTypeListHasBeenSet;
 
                     /**
-                     * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Username.
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * Region ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Region ID.
                      */
                     std::string m_regionID;
                     bool m_regionIDHasBeenSet;

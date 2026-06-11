@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of backup files
-                     * @return TotalCount Total number of backup files
+                     * 获取Total number of backup files.
+                     * @return TotalCount Total number of backup files.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Backup file list
-                     * @return BackupList Backup file list
+                     * 获取Backup file list.
+                     * @return BackupList Backup file list.
                      * 
                      */
                     std::vector<BackupFileInfo> GetBackupList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of backup files
+                     * Total number of backup files.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Backup file list
+                     * Backup file list.
                      */
                     std::vector<BackupFileInfo> m_backupList;
                     bool m_backupListHasBeenSet;

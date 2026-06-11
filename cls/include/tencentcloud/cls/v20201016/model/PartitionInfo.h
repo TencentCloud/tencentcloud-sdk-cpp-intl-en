@@ -131,15 +131,19 @@ namespace TencentCloud
                     bool ExclusiveEndKeyHasBeenSet() const;
 
                     /**
-                     * 获取Partition creation time
-                     * @return CreateTime Partition creation time
+                     * 获取Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @return CreateTime Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Partition creation time
-                     * @param _createTime Partition creation time
+                     * 设置Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+                     * @param _createTime Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,19 +156,23 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return LastWriteTime Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastWriteTime Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastWriteTime() const;
 
                     /**
-                     * 设置Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param _lastWriteTime Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _lastWriteTime Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastWriteTime(const std::string& _lastWriteTime);
@@ -203,14 +211,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_exclusiveEndKeyHasBeenSet;
 
                     /**
-                     * Partition creation time
+                     * Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastWriteTime;
                     bool m_lastWriteTimeHasBeenSet;

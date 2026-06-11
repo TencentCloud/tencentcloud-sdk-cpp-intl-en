@@ -44,6 +44,68 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Sorting field
+                     * @return By Sorting field
+                     * 
+                     */
+                    std::string GetBy() const;
+
+                    /**
+                     * 设置Sorting field
+                     * @param _by Sorting field
+                     * 
+                     */
+                    void SetBy(const std::string& _by);
+
+                    /**
+                     * 判断参数 By 是否已赋值
+                     * @return By 是否已赋值
+                     * 
+                     */
+                    bool ByHasBeenSet() const;
+
+                    /**
+                     * 获取Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+<li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+
+                     * @return Filters Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+<li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+
+                     * 
+                     */
+                    std::vector<RunTimeFilters> GetFilters() const;
+
+                    /**
+                     * 设置Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+<li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+
+                     * @param _filters Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+<li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+
+                     * 
+                     */
+                    void SetFilters(const std::vector<RunTimeFilters>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     * 
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * 
@@ -86,27 +148,6 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * @return Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * 
-                     */
-                    std::vector<RunTimeFilters> GetFilters() const;
-
-                    /**
-                     * 设置Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * @param _filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     * 
-                     */
-                    void SetFilters(const std::vector<RunTimeFilters>& _filters);
-
-                    /**
-                     * 判断参数 Filters 是否已赋值
-                     * @return Filters 是否已赋值
-                     * 
-                     */
-                    bool FiltersHasBeenSet() const;
-
-                    /**
                      * 获取Valid values: `asc`, `desc`.
                      * @return Order Valid values: `asc`, `desc`.
                      * 
@@ -127,28 +168,24 @@ namespace TencentCloud
                      */
                     bool OrderHasBeenSet() const;
 
-                    /**
-                     * 获取Sorting field
-                     * @return By Sorting field
-                     * 
-                     */
-                    std::string GetBy() const;
-
-                    /**
-                     * 设置Sorting field
-                     * @param _by Sorting field
-                     * 
-                     */
-                    void SetBy(const std::string& _by);
-
-                    /**
-                     * 判断参数 By 是否已赋值
-                     * @return By 是否已赋值
-                     * 
-                     */
-                    bool ByHasBeenSet() const;
-
                 private:
+
+                    /**
+                     * Sorting field
+                     */
+                    std::string m_by;
+                    bool m_byHasBeenSet;
+
+                    /**
+                     * Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+<li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+
+                     */
+                    std::vector<RunTimeFilters> m_filters;
+                    bool m_filtersHasBeenSet;
 
                     /**
                      * Number of results to be returned. Default value: `10`. Maximum value: `100`.
@@ -163,22 +200,10 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-                     */
-                    std::vector<RunTimeFilters> m_filters;
-                    bool m_filtersHasBeenSet;
-
-                    /**
                      * Valid values: `asc`, `desc`.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
-
-                    /**
-                     * Sorting field
-                     */
-                    std::string m_by;
-                    bool m_byHasBeenSet;
 
                 };
             }

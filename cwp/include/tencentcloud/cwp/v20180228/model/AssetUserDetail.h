@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
-                     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+                     * 获取Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+                     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      * 
                      */
                     uint64_t GetUserType() const;
 
                     /**
-                     * 设置Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
-                     * @param _userType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+                     * 设置Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+                     * @param _userType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      * 
                      */
                     void SetUserType(const uint64_t& _userType);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool UserTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
-                     * @return IsDomain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+                     * 获取Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
+                     * @return IsDomain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
                      * 
                      */
                     uint64_t GetIsDomain() const;
 
                     /**
-                     * 设置Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
-                     * @param _isDomain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+                     * 设置Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
+                     * @param _isDomain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
                      * 
                      */
                     void SetIsDomain(const uint64_t& _isDomain);
@@ -615,15 +615,15 @@ namespace TencentCloud
                     bool PasswordChangeTypeHasBeenSet() const;
 
                     /**
-                     * 获取User public key listNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return Keys User public key listNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取User public key list.
+                     * @return Keys User public key list.
                      * 
                      */
                     std::vector<AssetUserKeyInfo> GetKeys() const;
 
                     /**
-                     * 设置User public key listNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keys User public key listNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置User public key list.
+                     * @param _keys User public key list.
                      * 
                      */
                     void SetKeys(const std::vector<AssetUserKeyInfo>& _keys);
@@ -637,18 +637,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _updateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -723,13 +719,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+                     * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
                      */
                     uint64_t m_userType;
                     bool m_userTypeHasBeenSet;
 
                     /**
-                     * Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+                     * Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
                      */
                     uint64_t m_isDomain;
                     bool m_isDomainHasBeenSet;
@@ -825,14 +821,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_passwordChangeTypeHasBeenSet;
 
                     /**
-                     * User public key listNote: This field may return null, indicating that no valid values can be obtained.
+                     * User public key list.
                      */
                     std::vector<AssetUserKeyInfo> m_keys;
                     bool m_keysHasBeenSet;
 
                     /**
                      * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

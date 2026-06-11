@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cwp/v20180228/model/MachineExtraInfo.h>
+#include <tencentcloud/cwp/v20180228/model/IPAnalyse.h>
 
 
 namespace TencentCloud
@@ -69,19 +70,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uuid CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CWP client UUID.
+                     * @return Uuid CWP client UUID.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uuid CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CWP client UUID.
+                     * @param _uuid CWP client UUID.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -95,18 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
@@ -119,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineIpHasBeenSet() const;
 
                     /**
-                     * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return MachineName host name
                      * 
                      */
                     std::string GetMachineName() const;
 
                     /**
-                     * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _machineName host name
                      * 
                      */
                     void SetMachineName(const std::string& _machineName);
@@ -144,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取Username
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Username.
+                     * @return UserName Username.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Username
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Username.
+                     * @param _userName Username.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -169,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SrcIp Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source IP
+                     * @return SrcIp Source IP
                      * 
                      */
                     std::string GetSrcIp() const;
 
                     /**
-                     * 设置Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _srcIp Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source IP
+                     * @param _srcIp Source IP
                      * 
                      */
                     void SetSrcIp(const std::string& _srcIp);
@@ -195,18 +176,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _status SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -220,18 +197,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCountry() const;
 
                     /**
                      * 设置Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCountry(const uint64_t& _country);
@@ -245,18 +218,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取City ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCity() const;
 
                     /**
                      * 设置City ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _city City ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCity(const uint64_t& _city);
@@ -269,19 +238,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CityHasBeenSet() const;
 
                     /**
-                     * 获取Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Province id
+                     * @return Province Province id
                      * 
                      */
                     uint64_t GetProvince() const;
 
                     /**
-                     * 设置Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Province id
+                     * @param _province Province id
                      * 
                      */
                     void SetProvince(const uint64_t& _province);
@@ -295,18 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _createTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -319,55 +280,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+                     * 获取0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BanStatus 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+                     * @return BanStatus 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
                      * 
                      */
                     uint64_t GetBanStatus() const;
 
                     /**
-                     * 设置0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+                     * 设置0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _banStatus 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+                     * @param _banStatus 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
                      * 
                      */
                     void SetBanStatus(const uint64_t& _banStatus);
@@ -380,15 +349,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BanStatusHasBeenSet() const;
 
                     /**
-                     * 获取Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EventType Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
+                     * @return EventType Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
                      * 
                      */
                     uint64_t GetEventType() const;
 
                     /**
-                     * 设置Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eventType Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
+                     * @param _eventType Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
                      * 
                      */
                     void SetEventType(const uint64_t& _eventType);
@@ -402,18 +371,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Count Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _count Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCount(const uint64_t& _count);
@@ -426,19 +391,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quuid Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CVM instance UUID.
+                     * @return Quuid CVM instance UUID.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
-                     * 设置Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quuid Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CVM instance UUID.
+                     * @param _quuid CVM instance UUID.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -451,19 +412,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsProVersion Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether it is the Pro Edition (true/false)
+                     * @return IsProVersion Whether it is the Pro Edition (true/false)
                      * 
                      */
                     bool GetIsProVersion() const;
 
                     /**
-                     * 设置Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isProVersion Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether it is the Pro Edition (true/false)
+                     * @param _isProVersion Whether it is the Pro Edition (true/false)
                      * 
                      */
                     void SetIsProVersion(const bool& _isProVersion);
@@ -477,18 +434,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _protocol Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -502,18 +455,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Port Port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _port Port
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -527,18 +476,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyTime Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyTime Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -552,18 +497,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -577,18 +518,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataStatus 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetDataStatus() const;
 
                     /**
                      * 设置0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dataStatus 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDataStatus(const uint64_t& _dataStatus);
@@ -602,18 +539,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MachineExtraInfo GetMachineExtraInfo() const;
 
                     /**
                      * 设置Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineExtraInfo(const MachineExtraInfo& _machineExtraInfo);
@@ -626,19 +559,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineExtraInfoHasBeenSet() const;
 
                     /**
-                     * 获取Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Location Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Chinese name of a geo location.
+                     * @return Location Chinese name of a geo location.
                      * 
                      */
                     std::string GetLocation() const;
 
                     /**
-                     * 设置Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _location Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Chinese name of a geo location.
+                     * @param _location Chinese name of a geo location.
                      * 
                      */
                     void SetLocation(const std::string& _location);
@@ -651,15 +580,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RiskLevel Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Threat level. 0: low risk, 1: medium risk, 2: high risk.
+                     * @return RiskLevel Threat level. 0: low risk, 1: medium risk, 2: high risk.
                      * 
                      */
                     uint64_t GetRiskLevel() const;
 
                     /**
-                     * 设置Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _riskLevel Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Threat level. 0: low risk, 1: medium risk, 2: high risk.
+                     * @param _riskLevel Threat level. 0: low risk, 1: medium risk, 2: high risk.
                      * 
                      */
                     void SetRiskLevel(const uint64_t& _riskLevel);
@@ -672,15 +601,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataFrom Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Event source. 0: blocking rule, 1: threat intelligence.
+                     * @return DataFrom Event source. 0: blocking rule, 1: threat intelligence.
                      * 
                      */
                     int64_t GetDataFrom() const;
 
                     /**
-                     * 设置Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataFrom Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Event source. 0: blocking rule, 1: threat intelligence.
+                     * @param _dataFrom Event source. 0: blocking rule, 1: threat intelligence.
                      * 
                      */
                     void SetDataFrom(const int64_t& _dataFrom);
@@ -693,19 +622,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataFromHasBeenSet() const;
 
                     /**
-                     * 获取Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackStatusDesc Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cracking status description.
+                     * @return AttackStatusDesc Cracking status description.
                      * 
                      */
                     std::string GetAttackStatusDesc() const;
 
                     /**
-                     * 设置Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackStatusDesc Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cracking status description.
+                     * @param _attackStatusDesc Cracking status description.
                      * 
                      */
                     void SetAttackStatusDesc(const std::string& _attackStatusDesc);
@@ -718,19 +643,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AttackStatusDescHasBeenSet() const;
 
                     /**
-                     * 获取Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BanExpiredTime Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Block expiration time (only valid for blocked events).
+                     * @return BanExpiredTime Block expiration time (only valid for blocked events).
                      * 
                      */
                     std::string GetBanExpiredTime() const;
 
                     /**
-                     * 设置Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _banExpiredTime Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Block expiration time (only valid for blocked events).
+                     * @param _banExpiredTime Block expiration time (only valid for blocked events).
                      * 
                      */
                     void SetBanExpiredTime(const std::string& _banExpiredTime);
@@ -742,6 +663,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BanExpiredTimeHasBeenSet() const;
 
+                    /**
+                     * 获取IP analysis
+                     * @return IPAnalyse IP analysis
+                     * 
+                     */
+                    IPAnalyse GetIPAnalyse() const;
+
+                    /**
+                     * 设置IP analysis
+                     * @param _iPAnalyse IP analysis
+                     * 
+                     */
+                    void SetIPAnalyse(const IPAnalyse& _iPAnalyse);
+
+                    /**
+                     * 判断参数 IPAnalyse 是否已赋值
+                     * @return IPAnalyse 是否已赋值
+                     * 
+                     */
+                    bool IPAnalyseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -751,192 +693,178 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CWP client UUID.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
                      * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_machineIp;
                     bool m_machineIpHasBeenSet;
 
                     /**
-                     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_machineName;
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Username.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source IP
                      */
                     std::string m_srcIp;
                     bool m_srcIpHasBeenSet;
 
                     /**
                      * SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_country;
                     bool m_countryHasBeenSet;
 
                     /**
                      * City ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_city;
                     bool m_cityHasBeenSet;
 
                     /**
-                     * Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Province id
                      */
                     uint64_t m_province;
                     bool m_provinceHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+                     * 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
                      */
                     uint64_t m_banStatus;
                     bool m_banStatusHasBeenSet;
 
                     /**
-                     * Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
                      */
                     uint64_t m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
                      * Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CVM instance UUID.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether it is the Pro Edition (true/false)
                      */
                     bool m_isProVersion;
                     bool m_isProVersionHasBeenSet;
 
                     /**
                      * Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
                      * Port
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
                      * Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
 
                     /**
                      * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_dataStatus;
                     bool m_dataStatusHasBeenSet;
 
                     /**
                      * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MachineExtraInfo m_machineExtraInfo;
                     bool m_machineExtraInfoHasBeenSet;
 
                     /**
-                     * Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Chinese name of a geo location.
                      */
                     std::string m_location;
                     bool m_locationHasBeenSet;
 
                     /**
-                     * Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Threat level. 0: low risk, 1: medium risk, 2: high risk.
                      */
                     uint64_t m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Event source. 0: blocking rule, 1: threat intelligence.
                      */
                     int64_t m_dataFrom;
                     bool m_dataFromHasBeenSet;
 
                     /**
-                     * Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cracking status description.
                      */
                     std::string m_attackStatusDesc;
                     bool m_attackStatusDescHasBeenSet;
 
                     /**
-                     * Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Block expiration time (only valid for blocked events).
                      */
                     std::string m_banExpiredTime;
                     bool m_banExpiredTimeHasBeenSet;
+
+                    /**
+                     * IP analysis
+                     */
+                    IPAnalyse m_iPAnalyse;
+                    bool m_iPAnalyseHasBeenSet;
 
                 };
             }

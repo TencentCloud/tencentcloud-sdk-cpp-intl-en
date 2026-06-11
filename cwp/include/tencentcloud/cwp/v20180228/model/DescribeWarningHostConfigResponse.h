@@ -59,9 +59,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemLabels List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetItemLabels() const;
@@ -75,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuids Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetQuuids() const;
@@ -91,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -107,9 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ItemLabelIds List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetItemLabelIds() const;
@@ -122,8 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ItemLabelIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExcludedQuuids 
+                     * 获取List of machines to be excluded.
+                     * @return ExcludedQuuids List of machines to be excluded.
                      * 
                      */
                     std::vector<std::string> GetExcludedQuuids() const;
@@ -145,34 +137,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_itemLabels;
                     bool m_itemLabelsHasBeenSet;
 
                     /**
                      * Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_quuids;
                     bool m_quuidsHasBeenSet;
 
                     /**
                      * Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
                      * List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_itemLabelIds;
                     bool m_itemLabelIdsHasBeenSet;
 
                     /**
-                     * 
+                     * List of machines to be excluded.
                      */
                     std::vector<std::string> m_excludedQuuids;
                     bool m_excludedQuuidsHasBeenSet;

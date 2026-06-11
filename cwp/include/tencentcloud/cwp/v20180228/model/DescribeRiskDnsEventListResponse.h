@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RiskDnsEvent> GetList() const;
@@ -78,7 +76,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RiskDnsEvent> m_list;
                     bool m_listHasBeenSet;

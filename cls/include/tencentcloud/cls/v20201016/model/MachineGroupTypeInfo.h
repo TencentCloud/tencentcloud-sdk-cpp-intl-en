@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
-                     * @return Type Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+                     * 获取Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+                     * @return Type Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
-                     * @param _type Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+                     * 设置Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+                     * @param _type Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Machine description list
-                     * @return Values Machine description list
+                     * 获取Machine description list.
+                     * @return Values Machine description list.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Machine description list
-                     * @param _values Machine description list
+                     * 设置Machine description list.
+                     * @param _values Machine description list.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+                     * Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Machine description list
+                     * Machine description list.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

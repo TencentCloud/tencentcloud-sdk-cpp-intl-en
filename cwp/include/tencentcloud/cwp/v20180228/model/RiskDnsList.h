@@ -468,18 +468,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
                      * 设置Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _machineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
@@ -492,19 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
-                     * 获取Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MachineStatus Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
+                     * @return MachineStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
                      * 
                      */
                     std::string GetMachineStatus() const;
 
                     /**
-                     * 设置Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _machineStatus Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
+                     * @param _machineStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
                      * 
                      */
                     void SetMachineStatus(const std::string& _machineStatus);
@@ -640,14 +632,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_machineWanIp;
                     bool m_machineWanIpHasBeenSet;
 
                     /**
-                     * Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
                      */
                     std::string m_machineStatus;
                     bool m_machineStatusHasBeenSet;

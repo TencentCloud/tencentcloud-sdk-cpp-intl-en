@@ -91,18 +91,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LicenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetLicenseStatus() const;
 
                     /**
                      * 设置Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _licenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLicenseStatus(const uint64_t& _licenseStatus);
@@ -346,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tags Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Platform tag
+                     * @return Tags Platform tag
                      * 
                      */
                     std::vector<Tags> GetTags() const;
 
                     /**
-                     * 设置Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tags Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Platform tag
+                     * @param _tags Platform tag
                      * 
                      */
                     void SetTags(const std::vector<Tags>& _tags);
@@ -371,19 +363,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FreezeNum Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
+                     * @return FreezeNum Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
                      * 
                      */
                     int64_t GetFreezeNum() const;
 
                     /**
-                     * 设置Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _freezeNum Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
+                     * @param _freezeNum Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
                      * 
                      */
                     void SetFreezeNum(const int64_t& _freezeNum);
@@ -411,7 +399,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_licenseStatus;
                     bool m_licenseStatusHasBeenSet;
@@ -483,15 +470,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Platform tag
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
                      */
                     int64_t m_freezeNum;
                     bool m_freezeNumHasBeenSet;

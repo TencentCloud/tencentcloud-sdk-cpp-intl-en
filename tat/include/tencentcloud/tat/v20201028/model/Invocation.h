@@ -113,26 +113,26 @@ namespace TencentCloud
                     /**
                      * 获取Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
                      * @return InvocationStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     std::string GetInvocationStatus() const;
@@ -140,26 +140,26 @@ namespace TencentCloud
                     /**
                      * 设置Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
                      * @param _invocationStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
                      * 
                      */
                     void SetInvocationStatus(const std::string& _invocationStatus);
@@ -388,12 +388,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * @return InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * 
                      */
                     std::string GetInvocationSource() const;
@@ -401,12 +401,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * @param _invocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      * 
                      */
                     void SetInvocationSource(const std::string& _invocationSource);
@@ -567,15 +567,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
                      */
                     std::string m_invocationStatus;
                     bool m_invocationStatusHasBeenSet;
@@ -644,8 +644,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
                      */
                     std::string m_invocationSource;
                     bool m_invocationSourceHasBeenSet;

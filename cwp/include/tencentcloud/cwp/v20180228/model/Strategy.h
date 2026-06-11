@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStrategyName() const;
 
                     /**
                      * 设置Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _strategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStrategyName(const std::string& _strategyName);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StrategyId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetStrategyId() const;
 
                     /**
                      * 设置Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _strategyId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStrategyId(const uint64_t& _strategyId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleCount Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetRuleCount() const;
 
                     /**
                      * 设置Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _ruleCount Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRuleCount(const uint64_t& _ruleCount);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostCount Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of hosts
+                     * @return HostCount Number of hosts
                      * 
                      */
                     uint64_t GetHostCount() const;
 
                     /**
-                     * 设置Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostCount Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of hosts
+                     * @param _hostCount Number of hosts
                      * 
                      */
                     void SetHostCount(const uint64_t& _hostCount);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanCycle Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetScanCycle() const;
 
                     /**
                      * 设置Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanCycle Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanCycle(const uint64_t& _scanCycle);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanAt Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetScanAt() const;
 
                     /**
                      * 设置Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _scanAt Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetScanAt(const std::string& _scanAt);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Enabled Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetEnabled() const;
 
                     /**
                      * 设置Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _enabled Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnabled(const uint64_t& _enabled);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassRate Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取pass rate
+                     * @return PassRate pass rate
                      * 
                      */
                     uint64_t GetPassRate() const;
 
                     /**
-                     * 设置Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passRate Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置pass rate
+                     * @param _passRate pass rate
                      * 
                      */
                     void SetPassRate(const uint64_t& _passRate);
@@ -248,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CategoryIds Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCategoryIds() const;
 
                     /**
                      * 设置Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _categoryIds Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCategoryIds(const std::string& _categoryIds);
@@ -273,18 +237,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDefault Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetIsDefault() const;
 
                     /**
                      * 设置Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isDefault Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsDefault(const uint64_t& _isDefault);
@@ -300,70 +260,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_strategyName;
                     bool m_strategyNameHasBeenSet;
 
                     /**
                      * Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_strategyId;
                     bool m_strategyIdHasBeenSet;
 
                     /**
                      * Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ruleCount;
                     bool m_ruleCountHasBeenSet;
 
                     /**
-                     * Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of hosts
                      */
                     uint64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
 
                     /**
                      * Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_scanCycle;
                     bool m_scanCycleHasBeenSet;
 
                     /**
                      * Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_scanAt;
                     bool m_scanAtHasBeenSet;
 
                     /**
                      * Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_enabled;
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * pass rate
                      */
                     uint64_t m_passRate;
                     bool m_passRateHasBeenSet;
 
                     /**
                      * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_categoryIds;
                     bool m_categoryIdsHasBeenSet;
 
                     /**
                      * Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_isDefault;
                     bool m_isDefaultHasBeenSet;

@@ -32,7 +32,13 @@ AddAssetImageRegistryRegistryDetailRequest::AddAssetImageRegistryRegistryDetailR
     m_registryVersionHasBeenSet(false),
     m_registryRegionHasBeenSet(false),
     m_speedLimitHasBeenSet(false),
-    m_insecureHasBeenSet(false)
+    m_insecureHasBeenSet(false),
+    m_connDetectConfigHasBeenSet(false),
+    m_needScanHasBeenSet(false),
+    m_syncModeHasBeenSet(false),
+    m_webhookUrlHasBeenSet(false),
+    m_webhookTokenHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
@@ -121,6 +127,61 @@ string AddAssetImageRegistryRegistryDetailRequest::ToJsonString() const
         string key = "Insecure";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_insecure, allocator);
+    }
+
+    if (m_connDetectConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConnDetectConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_connDetectConfig.begin(); itr != m_connDetectConfig.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_needScanHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NeedScan";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_needScan, allocator);
+    }
+
+    if (m_syncModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SyncMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_syncMode, allocator);
+    }
+
+    if (m_webhookUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebhookUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_webhookUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_webhookTokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebhookToken";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_webhookToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -289,6 +350,102 @@ void AddAssetImageRegistryRegistryDetailRequest::SetInsecure(const uint64_t& _in
 bool AddAssetImageRegistryRegistryDetailRequest::InsecureHasBeenSet() const
 {
     return m_insecureHasBeenSet;
+}
+
+vector<ConnDetectConfig> AddAssetImageRegistryRegistryDetailRequest::GetConnDetectConfig() const
+{
+    return m_connDetectConfig;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetConnDetectConfig(const vector<ConnDetectConfig>& _connDetectConfig)
+{
+    m_connDetectConfig = _connDetectConfig;
+    m_connDetectConfigHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::ConnDetectConfigHasBeenSet() const
+{
+    return m_connDetectConfigHasBeenSet;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::GetNeedScan() const
+{
+    return m_needScan;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetNeedScan(const bool& _needScan)
+{
+    m_needScan = _needScan;
+    m_needScanHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::NeedScanHasBeenSet() const
+{
+    return m_needScanHasBeenSet;
+}
+
+uint64_t AddAssetImageRegistryRegistryDetailRequest::GetSyncMode() const
+{
+    return m_syncMode;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetSyncMode(const uint64_t& _syncMode)
+{
+    m_syncMode = _syncMode;
+    m_syncModeHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::SyncModeHasBeenSet() const
+{
+    return m_syncModeHasBeenSet;
+}
+
+string AddAssetImageRegistryRegistryDetailRequest::GetWebhookUrl() const
+{
+    return m_webhookUrl;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetWebhookUrl(const string& _webhookUrl)
+{
+    m_webhookUrl = _webhookUrl;
+    m_webhookUrlHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::WebhookUrlHasBeenSet() const
+{
+    return m_webhookUrlHasBeenSet;
+}
+
+string AddAssetImageRegistryRegistryDetailRequest::GetWebhookToken() const
+{
+    return m_webhookToken;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetWebhookToken(const string& _webhookToken)
+{
+    m_webhookToken = _webhookToken;
+    m_webhookTokenHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::WebhookTokenHasBeenSet() const
+{
+    return m_webhookTokenHasBeenSet;
+}
+
+string AddAssetImageRegistryRegistryDetailRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void AddAssetImageRegistryRegistryDetailRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool AddAssetImageRegistryRegistryDetailRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
 }
 
 

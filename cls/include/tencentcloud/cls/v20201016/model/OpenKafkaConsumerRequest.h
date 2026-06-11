@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log Topic ID
-                     * @return FromTopicId Log Topic ID
+                     * 获取<p>Log topic Id.</p><ul><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">create log topic</a>.</li></ul>
+                     * @return FromTopicId <p>Log topic Id.</p><ul><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">create log topic</a>.</li></ul>
                      * 
                      */
                     std::string GetFromTopicId() const;
 
                     /**
-                     * 设置Log Topic ID
-                     * @param _fromTopicId Log Topic ID
+                     * 设置<p>Log topic Id.</p><ul><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">create log topic</a>.</li></ul>
+                     * @param _fromTopicId <p>Log topic Id.</p><ul><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">create log topic</a>.</li></ul>
                      * 
                      */
                     void SetFromTopicId(const std::string& _fromTopicId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FromTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
-                     * @return Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * 获取<p>Compression mode [0:NONE; 2:SNAPPY; 3:LZ4], default: 0</p>
+                     * @return Compression <p>Compression mode [0:NONE; 2:SNAPPY; 3:LZ4], default: 0</p>
                      * 
                      */
                     int64_t GetCompression() const;
 
                     /**
-                     * 设置Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
-                     * @param _compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * 设置<p>Compression mode [0:NONE; 2:SNAPPY; 3:LZ4], default: 0</p>
+                     * @param _compression <p>Compression mode [0:NONE; 2:SNAPPY; 3:LZ4], default: 0</p>
                      * 
                      */
                     void SetCompression(const int64_t& _compression);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consumer data format
-                     * @return ConsumerContent Kafka consumer data format
+                     * 获取<p>kafka protocol consumption data format</p>
+                     * @return ConsumerContent <p>kafka protocol consumption data format</p>
                      * 
                      */
                     KafkaConsumerContent GetConsumerContent() const;
 
                     /**
-                     * 设置Kafka consumer data format
-                     * @param _consumerContent Kafka consumer data format
+                     * 设置<p>kafka protocol consumption data format</p>
+                     * @param _consumerContent <p>kafka protocol consumption data format</p>
                      * 
                      */
                     void SetConsumerContent(const KafkaConsumerContent& _consumerContent);
@@ -106,25 +106,79 @@ namespace TencentCloud
                      */
                     bool ConsumerContentHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable service log shipping. Valid values: 1: disable; 2: enable. Default value: 2</p>
+                     * @return HasServicesLog <p>Whether to enable service log shipping. Valid values: 1: disable; 2: enable. Default value: 2</p>
+                     * 
+                     */
+                    uint64_t GetHasServicesLog() const;
+
+                    /**
+                     * 设置<p>Whether to enable service log shipping. Valid values: 1: disable; 2: enable. Default value: 2</p>
+                     * @param _hasServicesLog <p>Whether to enable service log shipping. Valid values: 1: disable; 2: enable. Default value: 2</p>
+                     * 
+                     */
+                    void SetHasServicesLog(const uint64_t& _hasServicesLog);
+
+                    /**
+                     * 判断参数 HasServicesLog 是否已赋值
+                     * @return HasServicesLog 是否已赋值
+                     * 
+                     */
+                    bool HasServicesLogHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Range type of consumption, 0: latest; 1: historic + latest; default value: 0</p>
+                     * @return ScopeType <p>Range type of consumption, 0: latest; 1: historic + latest; default value: 0</p>
+                     * 
+                     */
+                    uint64_t GetScopeType() const;
+
+                    /**
+                     * 设置<p>Range type of consumption, 0: latest; 1: historic + latest; default value: 0</p>
+                     * @param _scopeType <p>Range type of consumption, 0: latest; 1: historic + latest; default value: 0</p>
+                     * 
+                     */
+                    void SetScopeType(const uint64_t& _scopeType);
+
+                    /**
+                     * 判断参数 ScopeType 是否已赋值
+                     * @return ScopeType 是否已赋值
+                     * 
+                     */
+                    bool ScopeTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Log Topic ID
+                     * <p>Log topic Id.</p><ul><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li><li>Get log topic Id by <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">create log topic</a>.</li></ul>
                      */
                     std::string m_fromTopicId;
                     bool m_fromTopicIdHasBeenSet;
 
                     /**
-                     * Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * <p>Compression mode [0:NONE; 2:SNAPPY; 3:LZ4], default: 0</p>
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * Kafka consumer data format
+                     * <p>kafka protocol consumption data format</p>
                      */
                     KafkaConsumerContent m_consumerContent;
                     bool m_consumerContentHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable service log shipping. Valid values: 1: disable; 2: enable. Default value: 2</p>
+                     */
+                    uint64_t m_hasServicesLog;
+                    bool m_hasServicesLogHasBeenSet;
+
+                    /**
+                     * <p>Range type of consumption, 0: latest; 1: historic + latest; default value: 0</p>
+                     */
+                    uint64_t m_scopeType;
+                    bool m_scopeTypeHasBeenSet;
 
                 };
             }

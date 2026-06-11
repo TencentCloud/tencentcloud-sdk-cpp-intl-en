@@ -113,22 +113,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * @return DefaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     std::string GetDefaultResult() const;
 
                     /**
                      * 设置Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * @param _defaultResult Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      * 
                      */
                     void SetDefaultResult(const std::string& _defaultResult);
@@ -163,22 +163,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
                      * @return LifecycleTransition Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
                      * 
                      */
                     std::string GetLifecycleTransition() const;
 
                     /**
                      * 设置Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
                      * @param _lifecycleTransition Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
                      * 
                      */
                     void SetLifecycleTransition(const std::string& _lifecycleTransition);
@@ -321,8 +321,8 @@ Description: when set to `EXTENSION`, the lifecycle hook will be triggered durin
 
                     /**
                      * Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
--CONTINUE execution by default means capacity expansion or reduction.
--For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+- CONTINUE execution by default means capacity expansion or reduction.
+- For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
                      */
                     std::string m_defaultResult;
                     bool m_defaultResultHasBeenSet;
@@ -335,8 +335,8 @@ Description: when set to `EXTENSION`, the lifecycle hook will be triggered durin
 
                     /**
                      * Scenario for entering the lifecycle hook. valid values:.
--`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
--INSTANCE_TERMINATING: scale-in lifecycle hook.
+- `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+- `INSTANCE_TERMINATING`: scale-in lifecycle hook.
                      */
                     std::string m_lifecycleTransition;
                     bool m_lifecycleTransitionHasBeenSet;

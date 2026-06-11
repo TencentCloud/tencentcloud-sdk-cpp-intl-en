@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return HostName host name
                      * 
                      */
                     std::string GetHostName() const;
 
                     /**
-                     * 设置Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _hostName host name
                      * 
                      */
                     void SetHostName(const std::string& _hostName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HostIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host IP address
+                     * @return HostIp Host IP address
                      * 
                      */
                     std::string GetHostIp() const;
 
                     /**
-                     * 设置Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hostIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host IP address
+                     * @param _hostIp Host IP address
                      * 
                      */
                     void SetHostIp(const std::string& _hostIp);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetQuuid(const std::string& _quuid);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuuidHasBeenSet() const;
 
                     /**
-                     * 获取0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSupportAutoFix 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
+                     * @return IsSupportAutoFix 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
                      * 
                      */
                     uint64_t GetIsSupportAutoFix() const;
 
                     /**
-                     * 设置0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSupportAutoFix 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
+                     * @param _isSupportAutoFix 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
                      * 
                      */
                     void SetIsSupportAutoFix(const uint64_t& _isSupportAutoFix);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Host instance ID.
+                     * @return InstanceId Host instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Host instance ID.
+                     * @param _instanceId Host instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -221,56 +193,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Host type
+                     * @return MachineType Host type
+                     * 
+                     */
+                    std::string GetMachineType() const;
+
+                    /**
+                     * 设置Host type
+                     * @param _machineType Host type
+                     * 
+                     */
+                    void SetMachineType(const std::string& _machineType);
+
+                    /**
+                     * 判断参数 MachineType 是否已赋值
+                     * @return MachineType 是否已赋值
+                     * 
+                     */
+                    bool MachineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取agent online status; 0 for offline, 1 for online.
+                     * @return AgentStatus agent online status; 0 for offline, 1 for online.
+                     * 
+                     */
+                    uint64_t GetAgentStatus() const;
+
+                    /**
+                     * 设置agent online status; 0 for offline, 1 for online.
+                     * @param _agentStatus agent online status; 0 for offline, 1 for online.
+                     * 
+                     */
+                    void SetAgentStatus(const uint64_t& _agentStatus);
+
+                    /**
+                     * 判断参数 AgentStatus 是否已赋值
+                     * @return AgentStatus 是否已赋值
+                     * 
+                     */
+                    bool AgentStatusHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host IP address
                      */
                     std::string m_hostIp;
                     bool m_hostIpHasBeenSet;
 
                     /**
                      * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
                      * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_quuid;
                     bool m_quuidHasBeenSet;
 
                     /**
-                     * 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
                      */
                     uint64_t m_isSupportAutoFix;
                     bool m_isSupportAutoFixHasBeenSet;
 
                     /**
                      * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Host instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Host type
+                     */
+                    std::string m_machineType;
+                    bool m_machineTypeHasBeenSet;
+
+                    /**
+                     * agent online status; 0 for offline, 1 for online.
+                     */
+                    uint64_t m_agentStatus;
+                    bool m_agentStatusHasBeenSet;
 
                 };
             }
