@@ -24,6 +24,7 @@
 #include <tencentcloud/trtc/v20190722/model/TranscriptionParam.h>
 #include <tencentcloud/trtc/v20190722/model/AsrParam.h>
 #include <tencentcloud/trtc/v20190722/model/TranslationParam.h>
+#include <tencentcloud/trtc/v20190722/model/TTSParam.h>
 
 
 namespace TencentCloud
@@ -46,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
-                     * @return SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+                     * 获取<p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+                     * @return SdkAppId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置[SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
-                     * @param _sdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+                     * 设置<p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+                     * @param _sdkAppId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -67,15 +68,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取[RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
-                     * @return RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+                     * 获取<p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+                     * @return RoomId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
                      * 
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置[RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
-                     * @param _roomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+                     * 设置<p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+                     * @param _roomId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
                      * 
                      */
                     void SetRoomId(const std::string& _roomId);
@@ -88,15 +89,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
-                     * @return RoomIdType Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+                     * 获取<p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+                     * @return RoomIdType <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
                      * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
-                     * 设置Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
-                     * @param _roomIdType Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+                     * 设置<p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+                     * @param _roomIdType <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
                      * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
@@ -109,15 +110,15 @@ namespace TencentCloud
                     bool RoomIdTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for transcribe service to join TRTC room.
-                     * @return TranscriptionParam Parameters for transcribe service to join TRTC room.
+                     * 获取<p>Parameters for the transcribe service to join TRTC room.</p>
+                     * @return TranscriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
                      * 
                      */
                     TranscriptionParam GetTranscriptionParam() const;
 
                     /**
-                     * 设置Parameters for transcribe service to join TRTC room.
-                     * @param _transcriptionParam Parameters for transcribe service to join TRTC room.
+                     * 设置<p>Parameters for the transcribe service to join TRTC room.</p>
+                     * @param _transcriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
                      * 
                      */
                     void SetTranscriptionParam(const TranscriptionParam& _transcriptionParam);
@@ -130,15 +131,15 @@ namespace TencentCloud
                     bool TranscriptionParamHasBeenSet() const;
 
                     /**
-                     * 获取Parameters used by the ASR transcribe service.
-                     * @return AsrParam Parameters used by the ASR transcribe service.
+                     * 获取<p>Parameters used by the ASR transcribe service.</p>
+                     * @return AsrParam <p>Parameters used by the ASR transcribe service.</p>
                      * 
                      */
                     AsrParam GetAsrParam() const;
 
                     /**
-                     * 设置Parameters used by the ASR transcribe service.
-                     * @param _asrParam Parameters used by the ASR transcribe service.
+                     * 设置<p>Parameters used by the ASR transcribe service.</p>
+                     * @param _asrParam <p>Parameters used by the ASR transcribe service.</p>
                      * 
                      */
                     void SetAsrParam(const AsrParam& _asrParam);
@@ -151,15 +152,15 @@ namespace TencentCloud
                     bool AsrParamHasBeenSet() const;
 
                     /**
-                     * 获取Translation parameters used for transcription.
-                     * @return TranslationParam Translation parameters used for transcription.
+                     * 获取<p>Parameters used to transcribe the translation service.</p>
+                     * @return TranslationParam <p>Parameters used to transcribe the translation service.</p>
                      * 
                      */
                     TranslationParam GetTranslationParam() const;
 
                     /**
-                     * 设置Translation parameters used for transcription.
-                     * @param _translationParam Translation parameters used for transcription.
+                     * 设置<p>Parameters used to transcribe the translation service.</p>
+                     * @param _translationParam <p>Parameters used to transcribe the translation service.</p>
                      * 
                      */
                     void SetTranslationParam(const TranslationParam& _translationParam);
@@ -171,43 +172,70 @@ namespace TencentCloud
                      */
                     bool TranslationParamHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Parameters used by the TTS transcribe service.</p>
+                     * @return TTSParam <p>Parameters used by the TTS transcribe service.</p>
+                     * 
+                     */
+                    std::vector<TTSParam> GetTTSParam() const;
+
+                    /**
+                     * 设置<p>Parameters used by the TTS transcribe service.</p>
+                     * @param _tTSParam <p>Parameters used by the TTS transcribe service.</p>
+                     * 
+                     */
+                    void SetTTSParam(const std::vector<TTSParam>& _tTSParam);
+
+                    /**
+                     * 判断参数 TTSParam 是否已赋值
+                     * @return TTSParam 是否已赋值
+                     * 
+                     */
+                    bool TTSParamHasBeenSet() const;
+
                 private:
 
                     /**
-                     * [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+                     * <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+                     * <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+                     * <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
                      */
                     uint64_t m_roomIdType;
                     bool m_roomIdTypeHasBeenSet;
 
                     /**
-                     * Parameters for transcribe service to join TRTC room.
+                     * <p>Parameters for the transcribe service to join TRTC room.</p>
                      */
                     TranscriptionParam m_transcriptionParam;
                     bool m_transcriptionParamHasBeenSet;
 
                     /**
-                     * Parameters used by the ASR transcribe service.
+                     * <p>Parameters used by the ASR transcribe service.</p>
                      */
                     AsrParam m_asrParam;
                     bool m_asrParamHasBeenSet;
 
                     /**
-                     * Translation parameters used for transcription.
+                     * <p>Parameters used to transcribe the translation service.</p>
                      */
                     TranslationParam m_translationParam;
                     bool m_translationParamHasBeenSet;
+
+                    /**
+                     * <p>Parameters used by the TTS transcribe service.</p>
+                     */
+                    std::vector<TTSParam> m_tTSParam;
+                    bool m_tTSParamHasBeenSet;
 
                 };
             }

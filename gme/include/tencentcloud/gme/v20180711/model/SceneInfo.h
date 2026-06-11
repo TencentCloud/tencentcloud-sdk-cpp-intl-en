@@ -50,15 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SceneId 
+                     * 获取RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+                     * @return SceneId RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
                      * 
                      */
                     std::string GetSceneId() const;
 
                     /**
-                     * 设置
-                     * @param _sceneId 
+                     * 设置RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+                     * @param _sceneId RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
                      * 
                      */
                     void SetSceneId(const std::string& _sceneId);
@@ -71,15 +79,19 @@ namespace TencentCloud
                     bool SceneIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Switch state, true for on, false for off.
+
+                     * @return Status Switch state, true for on, false for off.
+
                      * 
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Switch state, true for on, false for off.
+
+                     * @param _status Switch state, true for on, false for off.
+
                      * 
                      */
                     void SetStatus(const bool& _status);
@@ -92,15 +104,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CallbackUrl 
+                     * 获取callback URL
+                     * @return CallbackUrl callback URL
                      * 
                      */
                     std::string GetCallbackUrl() const;
 
                     /**
-                     * 设置
-                     * @param _callbackUrl 
+                     * 设置callback URL
+                     * @param _callbackUrl callback URL
                      * 
                      */
                     void SetCallbackUrl(const std::string& _callbackUrl);
@@ -115,19 +127,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
                      */
                     std::string m_sceneId;
                     bool m_sceneIdHasBeenSet;
 
                     /**
-                     * 
+                     * Switch state, true for on, false for off.
+
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * callback URL
                      */
                     std::string m_callbackUrl;
                     bool m_callbackUrlHasBeenSet;

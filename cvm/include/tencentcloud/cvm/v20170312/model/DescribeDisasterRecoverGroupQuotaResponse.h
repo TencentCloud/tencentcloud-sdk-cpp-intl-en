@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool CvmInRackGroupQuotaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CvmInSwitchGroupQuota 
+                     * 获取Quota for instances in a disaster recovery group of the switch type.
+                     * @return CvmInSwitchGroupQuota Quota for instances in a disaster recovery group of the switch type.
                      * 
                      */
                     int64_t GetCvmInSwitchGroupQuota() const;
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_cvmInRackGroupQuotaHasBeenSet;
 
                     /**
-                     * 
+                     * Quota for instances in a disaster recovery group of the switch type.
                      */
                     int64_t m_cvmInSwitchGroupQuota;
                     bool m_cvmInSwitchGroupQuotaHasBeenSet;

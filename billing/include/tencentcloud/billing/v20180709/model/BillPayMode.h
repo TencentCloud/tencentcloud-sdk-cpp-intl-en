@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @return PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 获取Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @return PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @param _payModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 设置Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @param _payModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+                     * Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;

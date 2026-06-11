@@ -185,15 +185,19 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
                     bool MaxIdleTimeHasBeenSet() const;
 
                     /**
-                     * 获取Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
-                     * @return SendCustomMode Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+                     * 获取Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
+                     * @return SendCustomMode Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
                      * 
                      */
                     uint64_t GetSendCustomMode() const;
 
                     /**
-                     * 设置Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
-                     * @param _sendCustomMode Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+                     * 设置Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
+                     * @param _sendCustomMode Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
                      * 
                      */
                     void SetSendCustomMode(const uint64_t& _sendCustomMode);
@@ -246,7 +250,8 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
                     bool m_maxIdleTimeHasBeenSet;
 
                     /**
-                     * Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+                     * Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
                      */
                     uint64_t m_sendCustomMode;
                     bool m_sendCustomModeHasBeenSet;

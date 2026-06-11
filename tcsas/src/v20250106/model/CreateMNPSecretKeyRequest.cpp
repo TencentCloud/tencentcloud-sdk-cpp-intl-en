@@ -24,7 +24,8 @@ using namespace std;
 
 CreateMNPSecretKeyRequest::CreateMNPSecretKeyRequest() :
     m_platformIdHasBeenSet(false),
-    m_mNPIdHasBeenSet(false)
+    m_mNPIdHasBeenSet(false),
+    m_pipelineIdHasBeenSet(false)
 {
 }
 
@@ -49,6 +50,14 @@ string CreateMNPSecretKeyRequest::ToJsonString() const
         string key = "MNPId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_mNPId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pipelineIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_pipelineId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -89,6 +98,22 @@ void CreateMNPSecretKeyRequest::SetMNPId(const string& _mNPId)
 bool CreateMNPSecretKeyRequest::MNPIdHasBeenSet() const
 {
     return m_mNPIdHasBeenSet;
+}
+
+string CreateMNPSecretKeyRequest::GetPipelineId() const
+{
+    return m_pipelineId;
+}
+
+void CreateMNPSecretKeyRequest::SetPipelineId(const string& _pipelineId)
+{
+    m_pipelineId = _pipelineId;
+    m_pipelineIdHasBeenSet = true;
+}
+
+bool CreateMNPSecretKeyRequest::PipelineIdHasBeenSet() const
+{
+    return m_pipelineIdHasBeenSet;
 }
 
 

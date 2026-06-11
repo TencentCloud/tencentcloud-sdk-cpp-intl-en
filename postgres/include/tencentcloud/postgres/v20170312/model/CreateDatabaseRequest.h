@@ -89,15 +89,15 @@ Name specification: consists of letters (a-z, a-z), digits (0-9), and underscore
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @return DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 获取Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @return DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     std::string GetDatabaseOwner() const;
 
                     /**
-                     * 设置Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @param _databaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 设置Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @param _databaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     void SetDatabaseOwner(const std::string& _databaseOwner);
@@ -196,7 +196,7 @@ Name specification: consists of letters (a-z, a-z), digits (0-9), and underscore
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      */
                     std::string m_databaseOwner;
                     bool m_databaseOwnerHasBeenSet;

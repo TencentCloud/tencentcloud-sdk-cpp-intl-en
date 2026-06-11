@@ -307,6 +307,81 @@ Supported languages for speech-to-text:
                      */
                     bool VadLevelHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+                     * @return FilterDirty Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+                     * 
+                     */
+                    uint64_t GetFilterDirty() const;
+
+                    /**
+                     * 设置Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+                     * @param _filterDirty Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+                     * 
+                     */
+                    void SetFilterDirty(const uint64_t& _filterDirty);
+
+                    /**
+                     * 判断参数 FilterDirty 是否已赋值
+                     * @return FilterDirty 是否已赋值
+                     * 
+                     */
+                    bool FilterDirtyHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+                     * @return FilterModal Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+                     * 
+                     */
+                    uint64_t GetFilterModal() const;
+
+                    /**
+                     * 设置Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+                     * @param _filterModal Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+                     * 
+                     */
+                    void SetFilterModal(const uint64_t& _filterModal);
+
+                    /**
+                     * 判断参数 FilterModal 是否已赋值
+                     * @return FilterModal 是否已赋值
+                     * 
+                     */
+                    bool FilterModalHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+                     * @return FilterPunc Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+                     * 
+                     */
+                    uint64_t GetFilterPunc() const;
+
+                    /**
+                     * 设置Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+                     * @param _filterPunc Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+                     * 
+                     */
+                    void SetFilterPunc(const uint64_t& _filterPunc);
+
+                    /**
+                     * 判断参数 FilterPunc 是否已赋值
+                     * @return FilterPunc 是否已赋值
+                     * 
+                     */
+                    bool FilterPuncHasBeenSet() const;
+
                 private:
 
                     /**
@@ -377,6 +452,27 @@ Supported languages for speech-to-text:
                      */
                     uint64_t m_vadLevel;
                     bool m_vadLevelHasBeenSet;
+
+                    /**
+                     * Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+                     */
+                    uint64_t m_filterDirty;
+                    bool m_filterDirtyHasBeenSet;
+
+                    /**
+                     * Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+                     */
+                    uint64_t m_filterModal;
+                    bool m_filterModalHasBeenSet;
+
+                    /**
+                     * Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+                     */
+                    uint64_t m_filterPunc;
+                    bool m_filterPuncHasBeenSet;
 
                 };
             }

@@ -25,7 +25,10 @@ DescribeMNPVersionResp::DescribeMNPVersionResp() :
     m_taskIdHasBeenSet(false),
     m_taskStatusHasBeenSet(false),
     m_taskMsgHasBeenSet(false),
-    m_mNPVersionIdHasBeenSet(false)
+    m_mNPVersionIdHasBeenSet(false),
+    m_expireTimeHasBeenSet(false),
+    m_qRCodeHasBeenSet(false),
+    m_subPackageInfosHasBeenSet(false)
 {
 }
 
@@ -84,6 +87,46 @@ CoreInternalOutcome DescribeMNPVersionResp::Deserialize(const rapidjson::Value &
         m_mNPVersionIdHasBeenSet = true;
     }
 
+    if (value.HasMember("ExpireTime") && !value["ExpireTime"].IsNull())
+    {
+        if (!value["ExpireTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPVersionResp.ExpireTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_expireTime = value["ExpireTime"].GetInt64();
+        m_expireTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("QRCode") && !value["QRCode"].IsNull())
+    {
+        if (!value["QRCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPVersionResp.QRCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_qRCode = string(value["QRCode"].GetString());
+        m_qRCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubPackageInfos") && !value["SubPackageInfos"].IsNull())
+    {
+        if (!value["SubPackageInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPVersionResp.SubPackageInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SubPackageInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            MNPVersionSubPackageInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_subPackageInfos.push_back(item);
+        }
+        m_subPackageInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +172,37 @@ void DescribeMNPVersionResp::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "MNPVersionId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_mNPVersionId, allocator);
+    }
+
+    if (m_expireTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpireTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_expireTime, allocator);
+    }
+
+    if (m_qRCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QRCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_qRCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subPackageInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubPackageInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_subPackageInfos.begin(); itr != m_subPackageInfos.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -212,5 +286,53 @@ void DescribeMNPVersionResp::SetMNPVersionId(const int64_t& _mNPVersionId)
 bool DescribeMNPVersionResp::MNPVersionIdHasBeenSet() const
 {
     return m_mNPVersionIdHasBeenSet;
+}
+
+int64_t DescribeMNPVersionResp::GetExpireTime() const
+{
+    return m_expireTime;
+}
+
+void DescribeMNPVersionResp::SetExpireTime(const int64_t& _expireTime)
+{
+    m_expireTime = _expireTime;
+    m_expireTimeHasBeenSet = true;
+}
+
+bool DescribeMNPVersionResp::ExpireTimeHasBeenSet() const
+{
+    return m_expireTimeHasBeenSet;
+}
+
+string DescribeMNPVersionResp::GetQRCode() const
+{
+    return m_qRCode;
+}
+
+void DescribeMNPVersionResp::SetQRCode(const string& _qRCode)
+{
+    m_qRCode = _qRCode;
+    m_qRCodeHasBeenSet = true;
+}
+
+bool DescribeMNPVersionResp::QRCodeHasBeenSet() const
+{
+    return m_qRCodeHasBeenSet;
+}
+
+vector<MNPVersionSubPackageInfo> DescribeMNPVersionResp::GetSubPackageInfos() const
+{
+    return m_subPackageInfos;
+}
+
+void DescribeMNPVersionResp::SetSubPackageInfos(const vector<MNPVersionSubPackageInfo>& _subPackageInfos)
+{
+    m_subPackageInfos = _subPackageInfos;
+    m_subPackageInfosHasBeenSet = true;
+}
+
+bool DescribeMNPVersionResp::SubPackageInfosHasBeenSet() const
+{
+    return m_subPackageInfosHasBeenSet;
 }
 

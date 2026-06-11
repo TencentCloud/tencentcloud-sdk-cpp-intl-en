@@ -24,7 +24,8 @@ using namespace std;
 
 DescribeMNGVersionRequest::DescribeMNGVersionRequest() :
     m_businessIdHasBeenSet(false),
-    m_platformIdHasBeenSet(false)
+    m_platformIdHasBeenSet(false),
+    m_pipelineIdHasBeenSet(false)
 {
 }
 
@@ -49,6 +50,14 @@ string DescribeMNGVersionRequest::ToJsonString() const
         string key = "PlatformId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_platformId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pipelineIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_pipelineId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -89,6 +98,22 @@ void DescribeMNGVersionRequest::SetPlatformId(const string& _platformId)
 bool DescribeMNGVersionRequest::PlatformIdHasBeenSet() const
 {
     return m_platformIdHasBeenSet;
+}
+
+string DescribeMNGVersionRequest::GetPipelineId() const
+{
+    return m_pipelineId;
+}
+
+void DescribeMNGVersionRequest::SetPipelineId(const string& _pipelineId)
+{
+    m_pipelineId = _pipelineId;
+    m_pipelineIdHasBeenSet = true;
+}
+
+bool DescribeMNGVersionRequest::PipelineIdHasBeenSet() const
+{
+    return m_pipelineIdHasBeenSet;
 }
 
 

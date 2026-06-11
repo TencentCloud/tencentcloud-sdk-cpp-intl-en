@@ -27,7 +27,12 @@ CreateMNGVersionRequest::CreateMNGVersionRequest() :
     m_mNPVersionHasBeenSet(false),
     m_fileUrlHasBeenSet(false),
     m_platformIdHasBeenSet(false),
-    m_mNPVersionIntroHasBeenSet(false)
+    m_mNPVersionIntroHasBeenSet(false),
+    m_versionTypeHasBeenSet(false),
+    m_compileConditionHasBeenSet(false),
+    m_compileConfigHasBeenSet(false),
+    m_pipelineIdHasBeenSet(false),
+    m_fileInnerUrlHasBeenSet(false)
 {
 }
 
@@ -76,6 +81,46 @@ string CreateMNGVersionRequest::ToJsonString() const
         string key = "MNPVersionIntro";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_mNPVersionIntro.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_versionTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VersionType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_versionType, allocator);
+    }
+
+    if (m_compileConditionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompileCondition";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_compileCondition.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_compileConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CompileConfig";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_compileConfig.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_pipelineIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PipelineId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_pipelineId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fileInnerUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileInnerUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_fileInnerUrl.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -164,6 +209,86 @@ void CreateMNGVersionRequest::SetMNPVersionIntro(const string& _mNPVersionIntro)
 bool CreateMNGVersionRequest::MNPVersionIntroHasBeenSet() const
 {
     return m_mNPVersionIntroHasBeenSet;
+}
+
+int64_t CreateMNGVersionRequest::GetVersionType() const
+{
+    return m_versionType;
+}
+
+void CreateMNGVersionRequest::SetVersionType(const int64_t& _versionType)
+{
+    m_versionType = _versionType;
+    m_versionTypeHasBeenSet = true;
+}
+
+bool CreateMNGVersionRequest::VersionTypeHasBeenSet() const
+{
+    return m_versionTypeHasBeenSet;
+}
+
+string CreateMNGVersionRequest::GetCompileCondition() const
+{
+    return m_compileCondition;
+}
+
+void CreateMNGVersionRequest::SetCompileCondition(const string& _compileCondition)
+{
+    m_compileCondition = _compileCondition;
+    m_compileConditionHasBeenSet = true;
+}
+
+bool CreateMNGVersionRequest::CompileConditionHasBeenSet() const
+{
+    return m_compileConditionHasBeenSet;
+}
+
+string CreateMNGVersionRequest::GetCompileConfig() const
+{
+    return m_compileConfig;
+}
+
+void CreateMNGVersionRequest::SetCompileConfig(const string& _compileConfig)
+{
+    m_compileConfig = _compileConfig;
+    m_compileConfigHasBeenSet = true;
+}
+
+bool CreateMNGVersionRequest::CompileConfigHasBeenSet() const
+{
+    return m_compileConfigHasBeenSet;
+}
+
+string CreateMNGVersionRequest::GetPipelineId() const
+{
+    return m_pipelineId;
+}
+
+void CreateMNGVersionRequest::SetPipelineId(const string& _pipelineId)
+{
+    m_pipelineId = _pipelineId;
+    m_pipelineIdHasBeenSet = true;
+}
+
+bool CreateMNGVersionRequest::PipelineIdHasBeenSet() const
+{
+    return m_pipelineIdHasBeenSet;
+}
+
+string CreateMNGVersionRequest::GetFileInnerUrl() const
+{
+    return m_fileInnerUrl;
+}
+
+void CreateMNGVersionRequest::SetFileInnerUrl(const string& _fileInnerUrl)
+{
+    m_fileInnerUrl = _fileInnerUrl;
+    m_fileInnerUrlHasBeenSet = true;
+}
+
+bool CreateMNGVersionRequest::FileInnerUrlHasBeenSet() const
+{
+    return m_fileInnerUrlHasBeenSet;
 }
 
 

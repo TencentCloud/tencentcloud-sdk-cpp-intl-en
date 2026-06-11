@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool UidsHasBeenSet() const;
 
+                    /**
+                     * 获取List of users to exclude (string type)
+                     * @return StrUids List of users to exclude (string type)
+                     * 
+                     */
+                    std::vector<std::string> GetStrUids() const;
+
+                    /**
+                     * 设置List of users to exclude (string type)
+                     * @param _strUids List of users to exclude (string type)
+                     * 
+                     */
+                    void SetStrUids(const std::vector<std::string>& _strUids);
+
+                    /**
+                     * 判断参数 StrUids 是否已赋值
+                     * @return StrUids 是否已赋值
+                     * 
+                     */
+                    bool StrUidsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_uids;
                     bool m_uidsHasBeenSet;
+
+                    /**
+                     * List of users to exclude (string type)
+                     */
+                    std::vector<std::string> m_strUids;
+                    bool m_strUidsHasBeenSet;
 
                 };
             }

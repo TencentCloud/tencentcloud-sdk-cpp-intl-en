@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trtc/v20190722/model/TerminologyItem.h>
 
 
 namespace TencentCloud
@@ -47,87 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
-                     * @return TargetLang Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+                     * 获取<p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+                     * @return TargetLang <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
                      * 
                      */
                     std::vector<std::string> GetTargetLang() const;
 
                     /**
-                     * 设置Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
-                     * @param _targetLang Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+                     * 设置<p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+                     * @param _targetLang <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
                      * 
                      */
                     void SetTargetLang(const std::vector<std::string>& _targetLang);
@@ -139,31 +68,40 @@ Supported target languages:
                      */
                     bool TargetLangHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Glossary configuration.</p>
+                     * @return Terminologies <p>Glossary configuration.</p>
+                     * 
+                     */
+                    std::vector<TerminologyItem> GetTerminologies() const;
+
+                    /**
+                     * 设置<p>Glossary configuration.</p>
+                     * @param _terminologies <p>Glossary configuration.</p>
+                     * 
+                     */
+                    void SetTerminologies(const std::vector<TerminologyItem>& _terminologies);
+
+                    /**
+                     * 判断参数 Terminologies 是否已赋值
+                     * @return Terminologies 是否已赋值
+                     * 
+                     */
+                    bool TerminologiesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+                     * <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
                      */
                     std::vector<std::string> m_targetLang;
                     bool m_targetLangHasBeenSet;
+
+                    /**
+                     * <p>Glossary configuration.</p>
+                     */
+                    std::vector<TerminologyItem> m_terminologies;
+                    bool m_terminologiesHasBeenSet;
 
                 };
             }

@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BmcUserHasBeenSet() const;
 
                     /**
-                     * 获取The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
-                     * @return Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * 获取The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+                     * @return Password The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
-                     * @param _password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * 设置The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+                     * @param _password The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_bmcUserHasBeenSet;
 
                     /**
-                     * The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

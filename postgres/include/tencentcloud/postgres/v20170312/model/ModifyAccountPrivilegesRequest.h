@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
-                     * @return UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+                     * 获取Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
+                     * @return UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
-                     * @param _userName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+                     * 设置Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
+                     * @param _userName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+                     * Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;

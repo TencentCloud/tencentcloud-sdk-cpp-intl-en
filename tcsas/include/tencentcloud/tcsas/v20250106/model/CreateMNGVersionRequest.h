@@ -147,6 +147,111 @@ namespace TencentCloud
                      */
                     bool MNPVersionIntroHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * @return VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * 
+                     */
+                    int64_t GetVersionType() const;
+
+                    /**
+                     * 设置<p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * @param _versionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * 
+                     */
+                    void SetVersionType(const int64_t& _versionType);
+
+                    /**
+                     * 判断参数 VersionType 是否已赋值
+                     * @return VersionType 是否已赋值
+                     * 
+                     */
+                    bool VersionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Compilation condition.</p>
+                     * @return CompileCondition <p>Compilation condition.</p>
+                     * 
+                     */
+                    std::string GetCompileCondition() const;
+
+                    /**
+                     * 设置<p>Compilation condition.</p>
+                     * @param _compileCondition <p>Compilation condition.</p>
+                     * 
+                     */
+                    void SetCompileCondition(const std::string& _compileCondition);
+
+                    /**
+                     * 判断参数 CompileCondition 是否已赋值
+                     * @return CompileCondition 是否已赋值
+                     * 
+                     */
+                    bool CompileConditionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Compilation configuration.</p>
+                     * @return CompileConfig <p>Compilation configuration.</p>
+                     * 
+                     */
+                    std::string GetCompileConfig() const;
+
+                    /**
+                     * 设置<p>Compilation configuration.</p>
+                     * @param _compileConfig <p>Compilation configuration.</p>
+                     * 
+                     */
+                    void SetCompileConfig(const std::string& _compileConfig);
+
+                    /**
+                     * 判断参数 CompileConfig 是否已赋值
+                     * @return CompileConfig 是否已赋值
+                     * 
+                     */
+                    bool CompileConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>CI/CD key ID.</p>
+                     * @return PipelineId <p>CI/CD key ID.</p>
+                     * 
+                     */
+                    std::string GetPipelineId() const;
+
+                    /**
+                     * 设置<p>CI/CD key ID.</p>
+                     * @param _pipelineId <p>CI/CD key ID.</p>
+                     * 
+                     */
+                    void SetPipelineId(const std::string& _pipelineId);
+
+                    /**
+                     * 判断参数 PipelineId 是否已赋值
+                     * @return PipelineId 是否已赋值
+                     * 
+                     */
+                    bool PipelineIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Internal file URL.</p>
+                     * @return FileInnerUrl <p>Internal file URL.</p>
+                     * 
+                     */
+                    std::string GetFileInnerUrl() const;
+
+                    /**
+                     * 设置<p>Internal file URL.</p>
+                     * @param _fileInnerUrl <p>Internal file URL.</p>
+                     * 
+                     */
+                    void SetFileInnerUrl(const std::string& _fileInnerUrl);
+
+                    /**
+                     * 判断参数 FileInnerUrl 是否已赋值
+                     * @return FileInnerUrl 是否已赋值
+                     * 
+                     */
+                    bool FileInnerUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +283,36 @@ namespace TencentCloud
                      */
                     std::string m_mNPVersionIntro;
                     bool m_mNPVersionIntroHasBeenSet;
+
+                    /**
+                     * <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     */
+                    int64_t m_versionType;
+                    bool m_versionTypeHasBeenSet;
+
+                    /**
+                     * <p>Compilation condition.</p>
+                     */
+                    std::string m_compileCondition;
+                    bool m_compileConditionHasBeenSet;
+
+                    /**
+                     * <p>Compilation configuration.</p>
+                     */
+                    std::string m_compileConfig;
+                    bool m_compileConfigHasBeenSet;
+
+                    /**
+                     * <p>CI/CD key ID.</p>
+                     */
+                    std::string m_pipelineId;
+                    bool m_pipelineIdHasBeenSet;
+
+                    /**
+                     * <p>Internal file URL.</p>
+                     */
+                    std::string m_fileInnerUrl;
+                    bool m_fileInnerUrlHasBeenSet;
 
                 };
             }

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcsas/v20250106/model/MNPVersionSubPackageInfo.h>
 
 
 namespace TencentCloud
@@ -151,6 +152,69 @@ namespace TencentCloud
                      */
                     bool MNPVersionIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>QR code expiration time.</p>
+                     * @return ExpireTime <p>QR code expiration time.</p>
+                     * 
+                     */
+                    int64_t GetExpireTime() const;
+
+                    /**
+                     * 设置<p>QR code expiration time.</p>
+                     * @param _expireTime <p>QR code expiration time.</p>
+                     * 
+                     */
+                    void SetExpireTime(const int64_t& _expireTime);
+
+                    /**
+                     * 判断参数 ExpireTime 是否已赋值
+                     * @return ExpireTime 是否已赋值
+                     * 
+                     */
+                    bool ExpireTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Version QR code.</p>
+                     * @return QRCode <p>Version QR code.</p>
+                     * 
+                     */
+                    std::string GetQRCode() const;
+
+                    /**
+                     * 设置<p>Version QR code.</p>
+                     * @param _qRCode <p>Version QR code.</p>
+                     * 
+                     */
+                    void SetQRCode(const std::string& _qRCode);
+
+                    /**
+                     * 判断参数 QRCode 是否已赋值
+                     * @return QRCode 是否已赋值
+                     * 
+                     */
+                    bool QRCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Compilation package information.</p>
+                     * @return SubPackageInfos <p>Compilation package information.</p>
+                     * 
+                     */
+                    std::vector<MNPVersionSubPackageInfo> GetSubPackageInfos() const;
+
+                    /**
+                     * 设置<p>Compilation package information.</p>
+                     * @param _subPackageInfos <p>Compilation package information.</p>
+                     * 
+                     */
+                    void SetSubPackageInfos(const std::vector<MNPVersionSubPackageInfo>& _subPackageInfos);
+
+                    /**
+                     * 判断参数 SubPackageInfos 是否已赋值
+                     * @return SubPackageInfos 是否已赋值
+                     * 
+                     */
+                    bool SubPackageInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +246,24 @@ namespace TencentCloud
                      */
                     int64_t m_mNPVersionId;
                     bool m_mNPVersionIdHasBeenSet;
+
+                    /**
+                     * <p>QR code expiration time.</p>
+                     */
+                    int64_t m_expireTime;
+                    bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * <p>Version QR code.</p>
+                     */
+                    std::string m_qRCode;
+                    bool m_qRCodeHasBeenSet;
+
+                    /**
+                     * <p>Compilation package information.</p>
+                     */
+                    std::vector<MNPVersionSubPackageInfo> m_subPackageInfos;
+                    bool m_subPackageInfosHasBeenSet;
 
                 };
             }

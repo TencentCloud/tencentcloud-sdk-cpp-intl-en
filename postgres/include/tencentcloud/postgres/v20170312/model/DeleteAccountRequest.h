@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @return UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 获取Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @return UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @param _userName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 设置Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @param _userName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;

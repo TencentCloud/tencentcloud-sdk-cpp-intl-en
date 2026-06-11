@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ProductCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @return PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 获取Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
+                     * @return PayModeName Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @param _payModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 设置Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
+                     * @param _payModeName Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
-                     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * 获取Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
-                     * @param _actionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * 设置Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * @param _actionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool ActionTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Order ID: The ID of a monthly subscription order.
-                     * @return OrderId Order ID: The ID of a monthly subscription order.
+                     * 获取Order ID: The ID of a yearly/monthly subscription order.
+                     * @return OrderId Order ID: The ID of a yearly/monthly subscription order.
                      * 
                      */
                     std::string GetOrderId() const;
 
                     /**
-                     * 设置Order ID: The ID of a monthly subscription order.
-                     * @param _orderId Order ID: The ID of a monthly subscription order.
+                     * 设置Order ID: The ID of a yearly/monthly subscription order.
+                     * @param _orderId Order ID: The ID of a yearly/monthly subscription order.
                      * 
                      */
                     void SetOrderId(const std::string& _orderId);
@@ -673,7 +673,7 @@ namespace TencentCloud
                     bool m_productCodeNameHasBeenSet;
 
                     /**
-                     * Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+                     * Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;
@@ -709,13 +709,13 @@ namespace TencentCloud
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+                     * Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
 
                     /**
-                     * Order ID: The ID of a monthly subscription order.
+                     * Order ID: The ID of a yearly/monthly subscription order.
                      */
                     std::string m_orderId;
                     bool m_orderIdHasBeenSet;

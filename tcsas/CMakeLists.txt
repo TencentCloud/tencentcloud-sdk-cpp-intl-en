@@ -39,6 +39,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DeleteApplicationResponse.h
   include/tencentcloud/tcsas/v20250106/model/ResetMNPAppSecretResp.h
   include/tencentcloud/tcsas/v20250106/model/DeleteUserRequest.h
+  include/tencentcloud/tcsas/v20250106/model/MNPVersionSubPackageInfo.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPVersionRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPAccessAnalysisOverviewRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfosResponse.h
@@ -452,6 +453,7 @@ set(tcsas_src
   src/v20250106/model/DeleteApplicationResponse.cpp
   src/v20250106/model/ResetMNPAppSecretResp.cpp
   src/v20250106/model/DeleteUserRequest.cpp
+  src/v20250106/model/MNPVersionSubPackageInfo.cpp
   src/v20250106/model/CreateMNPVersionRequest.cpp
   src/v20250106/model/DescribeMNPAccessAnalysisOverviewRequest.cpp
   src/v20250106/model/DescribeApplicationConfigInfosResponse.cpp

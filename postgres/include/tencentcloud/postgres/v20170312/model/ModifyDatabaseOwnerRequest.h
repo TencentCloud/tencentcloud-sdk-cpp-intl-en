@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
-                     * 获取New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @return DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 获取New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @return DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     std::string GetDatabaseOwner() const;
 
                     /**
-                     * 设置New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-                     * @param _databaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * 设置New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+                     * @param _databaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      * 
                      */
                     void SetDatabaseOwner(const std::string& _databaseOwner);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_databaseNameHasBeenSet;
 
                     /**
-                     * New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+                     * New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
                      */
                     std::string m_databaseOwner;
                     bool m_databaseOwnerHasBeenSet;
