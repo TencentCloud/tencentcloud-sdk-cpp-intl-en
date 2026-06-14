@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool CPFHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CLASSIFICATION 
+                     * 获取Residence category
+                     * @return CLASSIFICATION Residence category
                      * 
                      */
                     std::string GetCLASSIFICATION() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool CLASSIFICATIONHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PRAZODERESIDENCIA 
+                     * 获取Residence validity term
+                     * @return PRAZODERESIDENCIA Residence validity term
                      * 
                      */
                     std::string GetPRAZODERESIDENCIA() const;
@@ -324,13 +324,13 @@ namespace TencentCloud
                     bool m_cPFHasBeenSet;
 
                     /**
-                     * 
+                     * Residence category
                      */
                     std::string m_cLASSIFICATION;
                     bool m_cLASSIFICATIONHasBeenSet;
 
                     /**
-                     * 
+                     * Residence validity term
                      */
                     std::string m_pRAZODERESIDENCIA;
                     bool m_pRAZODERESIDENCIAHasBeenSet;

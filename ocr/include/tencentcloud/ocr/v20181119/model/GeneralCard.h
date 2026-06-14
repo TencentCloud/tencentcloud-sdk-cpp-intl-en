@@ -349,14 +349,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Sex Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -364,14 +364,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 设置Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sex Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -697,9 +697,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_sex;
