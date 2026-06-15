@@ -85,27 +85,6 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The path or file to be settled supports passing only one path and cannot be empty.
-                     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
-                     * 
-                     */
-                    std::string GetTaskPath() const;
-
-                    /**
-                     * 设置The path or file to be settled supports passing only one path and cannot be empty.
-                     * @param _taskPath The path or file to be settled supports passing only one path and cannot be empty.
-                     * 
-                     */
-                    void SetTaskPath(const std::string& _taskPath);
-
-                    /**
-                     * 判断参数 TaskPath 是否已赋值
-                     * @return TaskPath 是否已赋值
-                     * 
-                     */
-                    bool TaskPathHasBeenSet() const;
-
-                    /**
                      * 获取Task name.
                      * @return TaskName Task name.
                      * 
@@ -125,6 +104,27 @@ namespace TencentCloud
                      * 
                      */
                     bool TaskNameHasBeenSet() const;
+
+                    /**
+                     * 获取The path or file to be settled supports passing only one path and cannot be empty.
+                     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+                     * 
+                     */
+                    std::string GetTaskPath() const;
+
+                    /**
+                     * 设置The path or file to be settled supports passing only one path and cannot be empty.
+                     * @param _taskPath The path or file to be settled supports passing only one path and cannot be empty.
+                     * 
+                     */
+                    void SetTaskPath(const std::string& _taskPath);
+
+                    /**
+                     * 判断参数 TaskPath 是否已赋值
+                     * @return TaskPath 是否已赋值
+                     * 
+                     */
+                    bool TaskPathHasBeenSet() const;
 
                     /**
                      * 获取Data flow ID. this api can be accessed through DescribeDataFlow.
@@ -183,16 +183,16 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The path or file to be settled supports passing only one path and cannot be empty.
-                     */
-                    std::string m_taskPath;
-                    bool m_taskPathHasBeenSet;
-
-                    /**
                      * Task name.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
+
+                    /**
+                     * The path or file to be settled supports passing only one path and cannot be empty.
+                     */
+                    std::string m_taskPath;
+                    bool m_taskPathHasBeenSet;
 
                     /**
                      * Data flow ID. this api can be accessed through DescribeDataFlow.

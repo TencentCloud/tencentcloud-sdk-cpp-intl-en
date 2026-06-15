@@ -241,6 +241,27 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return Encrypted 
+                     * 
+                     */
+                    bool GetEncrypted() const;
+
+                    /**
+                     * 设置
+                     * @param _encrypted 
+                     * 
+                     */
+                    void SetEncrypted(const bool& _encrypted);
+
+                    /**
+                     * 判断参数 Encrypted 是否已赋值
+                     * @return Encrypted 是否已赋值
+                     * 
+                     */
+                    bool EncryptedHasBeenSet() const;
+
+                    /**
                      * 获取File system tag
                      * @return ResourceTags File system tag
                      * 
@@ -539,6 +560,12 @@ Enhanced: creates enhanced metadata.
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_encrypted;
+                    bool m_encryptedHasBeenSet;
 
                     /**
                      * File system tag
