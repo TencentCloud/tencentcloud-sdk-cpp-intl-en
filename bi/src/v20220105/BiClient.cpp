@@ -140,6 +140,56 @@ BiClient::ClearEmbedTokenOutcomeCallable BiClient::ClearEmbedTokenCallable(const
     return prom->get_future();
 }
 
+BiClient::CreateDataTableOutcome BiClient::CreateDataTable(const CreateDataTableRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDataTable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDataTableResponse rsp = CreateDataTableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDataTableOutcome(rsp);
+        else
+            return CreateDataTableOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDataTableOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::CreateDataTableAsync(const CreateDataTableRequest& request, const CreateDataTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateDataTableRequest&;
+    using Resp = CreateDataTableResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateDataTable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::CreateDataTableOutcomeCallable BiClient::CreateDataTableCallable(const CreateDataTableRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateDataTableOutcome>>();
+    CreateDataTableAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const CreateDataTableRequest&,
+        CreateDataTableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BiClient::CreateDatasourceOutcome BiClient::CreateDatasource(const CreateDatasourceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateDatasource");
@@ -282,6 +332,56 @@ BiClient::CreateEmbedTokenOutcomeCallable BiClient::CreateEmbedTokenCallable(con
         const BiClient*,
         const CreateEmbedTokenRequest&,
         CreateEmbedTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BiClient::CreatePermissionRanksOutcome BiClient::CreatePermissionRanks(const CreatePermissionRanksRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreatePermissionRanks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreatePermissionRanksResponse rsp = CreatePermissionRanksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreatePermissionRanksOutcome(rsp);
+        else
+            return CreatePermissionRanksOutcome(o.GetError());
+    }
+    else
+    {
+        return CreatePermissionRanksOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::CreatePermissionRanksAsync(const CreatePermissionRanksRequest& request, const CreatePermissionRanksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreatePermissionRanksRequest&;
+    using Resp = CreatePermissionRanksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreatePermissionRanks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::CreatePermissionRanksOutcomeCallable BiClient::CreatePermissionRanksCallable(const CreatePermissionRanksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreatePermissionRanksOutcome>>();
+    CreatePermissionRanksAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const CreatePermissionRanksRequest&,
+        CreatePermissionRanksOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -840,6 +940,56 @@ BiClient::DescribeProjectListOutcomeCallable BiClient::DescribeProjectListCallab
     return prom->get_future();
 }
 
+BiClient::DescribeSourceFieldListOutcome BiClient::DescribeSourceFieldList(const DescribeSourceFieldListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSourceFieldList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSourceFieldListResponse rsp = DescribeSourceFieldListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSourceFieldListOutcome(rsp);
+        else
+            return DescribeSourceFieldListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSourceFieldListOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::DescribeSourceFieldListAsync(const DescribeSourceFieldListRequest& request, const DescribeSourceFieldListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSourceFieldListRequest&;
+    using Resp = DescribeSourceFieldListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSourceFieldList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::DescribeSourceFieldListOutcomeCallable BiClient::DescribeSourceFieldListCallable(const DescribeSourceFieldListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSourceFieldListOutcome>>();
+    DescribeSourceFieldListAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const DescribeSourceFieldListRequest&,
+        DescribeSourceFieldListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BiClient::DescribeUserProjectListOutcome BiClient::DescribeUserProjectList(const DescribeUserProjectListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeUserProjectList");
@@ -1182,6 +1332,106 @@ BiClient::ModifyProjectOutcomeCallable BiClient::ModifyProjectCallable(const Mod
         const BiClient*,
         const ModifyProjectRequest&,
         ModifyProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BiClient::ModifyResourceUserOutcome BiClient::ModifyResourceUser(const ModifyResourceUserRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyResourceUser");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyResourceUserResponse rsp = ModifyResourceUserResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyResourceUserOutcome(rsp);
+        else
+            return ModifyResourceUserOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyResourceUserOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::ModifyResourceUserAsync(const ModifyResourceUserRequest& request, const ModifyResourceUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyResourceUserRequest&;
+    using Resp = ModifyResourceUserResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyResourceUser", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::ModifyResourceUserOutcomeCallable BiClient::ModifyResourceUserCallable(const ModifyResourceUserRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyResourceUserOutcome>>();
+    ModifyResourceUserAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const ModifyResourceUserRequest&,
+        ModifyResourceUserOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BiClient::ModifyResourceUserGroupResourceOutcome BiClient::ModifyResourceUserGroupResource(const ModifyResourceUserGroupResourceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyResourceUserGroupResource");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyResourceUserGroupResourceResponse rsp = ModifyResourceUserGroupResourceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyResourceUserGroupResourceOutcome(rsp);
+        else
+            return ModifyResourceUserGroupResourceOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyResourceUserGroupResourceOutcome(outcome.GetError());
+    }
+}
+
+void BiClient::ModifyResourceUserGroupResourceAsync(const ModifyResourceUserGroupResourceRequest& request, const ModifyResourceUserGroupResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyResourceUserGroupResourceRequest&;
+    using Resp = ModifyResourceUserGroupResourceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyResourceUserGroupResource", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BiClient::ModifyResourceUserGroupResourceOutcomeCallable BiClient::ModifyResourceUserGroupResourceCallable(const ModifyResourceUserGroupResourceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyResourceUserGroupResourceOutcome>>();
+    ModifyResourceUserGroupResourceAsync(
+    request,
+    [prom](
+        const BiClient*,
+        const ModifyResourceUserGroupResourceRequest&,
+        ModifyResourceUserGroupResourceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

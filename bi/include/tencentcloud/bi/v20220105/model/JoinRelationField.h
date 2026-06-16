@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
-#define TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#ifndef TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATIONFIELD_H_
+#define TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATIONFIELD_H_
 
 #include <string>
 #include <vector>
@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/bi/v20220105/model/TableField.h>
 
 
 namespace TencentCloud
@@ -35,159 +36,114 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Customized query
+                * Join tables and view association information between original tables
                 */
-                class ProjectConfigResult : public AbstractModel
+                class JoinRelationField : public AbstractModel
                 {
                 public:
-                    ProjectConfigResult();
-                    ~ProjectConfigResult() = default;
+                    JoinRelationField();
+                    ~JoinRelationField() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Configuration name.
+                     * 获取Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModuleId Configuration name.
+                     * @return FieldJoinId Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetModuleId() const;
+                    std::string GetFieldJoinId() const;
 
                     /**
-                     * 设置Configuration name.
+                     * 设置Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _moduleId Configuration name.
+                     * @param _fieldJoinId Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetModuleId(const std::string& _moduleId);
+                    void SetFieldJoinId(const std::string& _fieldJoinId);
 
                     /**
-                     * 判断参数 ModuleId 是否已赋值
-                     * @return ModuleId 是否已赋值
+                     * 判断参数 FieldJoinId 是否已赋值
+                     * @return FieldJoinId 是否已赋值
                      * 
                      */
-                    bool ModuleIdHasBeenSet() const;
+                    bool FieldJoinIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 获取Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @return SourceField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetIncludeType() const;
+                    TableField GetSourceField() const;
 
                     /**
-                     * 设置Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 设置Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @param _sourceField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetIncludeType(const std::string& _includeType);
+                    void SetSourceField(const TableField& _sourceField);
 
                     /**
-                     * 判断参数 IncludeType 是否已赋值
-                     * @return IncludeType 是否已赋值
+                     * 判断参数 SourceField 是否已赋值
+                     * @return SourceField 是否已赋值
                      * 
                      */
-                    bool IncludeTypeHasBeenSet() const;
+                    bool SourceFieldHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameters.
+                     * 获取Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Params Additional parameters.
+                     * @return TargetField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetParams() const;
+                    TableField GetTargetField() const;
 
                     /**
-                     * 设置Additional parameters.
+                     * 设置Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _params Additional parameters.
+                     * @param _targetField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetParams(const std::string& _params);
+                    void SetTargetField(const TableField& _targetField);
 
                     /**
-                     * 判断参数 Params 是否已赋值
-                     * @return Params 是否已赋值
+                     * 判断参数 TargetField 是否已赋值
+                     * @return TargetField 是否已赋值
                      * 
                      */
-                    bool ParamsHasBeenSet() const;
+                    bool TargetFieldHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Configuration name.
+                     * Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_moduleId;
-                    bool m_moduleIdHasBeenSet;
+                    std::string m_fieldJoinId;
+                    bool m_fieldJoinIdHasBeenSet;
 
                     /**
-                     * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_includeType;
-                    bool m_includeTypeHasBeenSet;
+                    TableField m_sourceField;
+                    bool m_sourceFieldHasBeenSet;
 
                     /**
-                     * Additional parameters.
+                     * Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_params;
-                    bool m_paramsHasBeenSet;
+                    TableField m_targetField;
+                    bool m_targetFieldHasBeenSet;
 
                 };
             }
@@ -195,4 +151,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#endif // !TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATIONFIELD_H_

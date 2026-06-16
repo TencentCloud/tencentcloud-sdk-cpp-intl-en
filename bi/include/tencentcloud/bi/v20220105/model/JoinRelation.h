@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BI_V20220105_MODEL_PERMISSIONCOMPONENT_H_
-#define TENCENTCLOUD_BI_V20220105_MODEL_PERMISSIONCOMPONENT_H_
+#ifndef TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATION_H_
+#define TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATION_H_
 
 #include <string>
 #include <vector>
@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/bi/v20220105/model/JoinRelationField.h>
 
 
 namespace TencentCloud
@@ -35,223 +36,178 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Business edition permission unit
+                * Join tables and view association information between original tables
                 */
-                class PermissionComponent : public AbstractModel
+                class JoinRelation : public AbstractModel
                 {
                 public:
-                    PermissionComponent();
-                    ~PermissionComponent() = default;
+                    JoinRelation();
+                    ~JoinRelation() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Permission value.
+                     * 获取Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModuleId Permission value.
+                     * @return JoinId Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetModuleId() const;
+                    std::string GetJoinId() const;
 
                     /**
-                     * 设置Permission value.
+                     * 设置Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _moduleId Permission value.
+                     * @param _joinId Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetModuleId(const std::string& _moduleId);
+                    void SetJoinId(const std::string& _joinId);
 
                     /**
-                     * 判断参数 ModuleId 是否已赋值
-                     * @return ModuleId 是否已赋值
+                     * 判断参数 JoinId 是否已赋值
+                     * @return JoinId 是否已赋值
                      * 
                      */
-                    bool ModuleIdHasBeenSet() const;
+                    bool JoinIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 获取Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeType Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @return SourceTableNodeId Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetIncludeType() const;
+                    std::string GetSourceTableNodeId() const;
 
                     /**
-                     * 设置Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 设置Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeType Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @param _sourceTableNodeId Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetIncludeType(const std::string& _includeType);
+                    void SetSourceTableNodeId(const std::string& _sourceTableNodeId);
 
                     /**
-                     * 判断参数 IncludeType 是否已赋值
-                     * @return IncludeType 是否已赋值
+                     * 判断参数 SourceTableNodeId 是否已赋值
+                     * @return SourceTableNodeId 是否已赋值
                      * 
                      */
-                    bool IncludeTypeHasBeenSet() const;
+                    bool SourceTableNodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Target upgrade version.
+                     * 获取Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpgradeVersionType Target upgrade version.
+                     * @return TargetTableNodeId Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetUpgradeVersionType() const;
+                    std::string GetTargetTableNodeId() const;
 
                     /**
-                     * 设置Target upgrade version.
+                     * 设置Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _upgradeVersionType Target upgrade version.
+                     * @param _targetTableNodeId Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetUpgradeVersionType(const std::string& _upgradeVersionType);
+                    void SetTargetTableNodeId(const std::string& _targetTableNodeId);
 
                     /**
-                     * 判断参数 UpgradeVersionType 是否已赋值
-                     * @return UpgradeVersionType 是否已赋值
+                     * 判断参数 TargetTableNodeId 是否已赋值
+                     * @return TargetTableNodeId 是否已赋值
                      * 
                      */
-                    bool UpgradeVersionTypeHasBeenSet() const;
+                    bool TargetTableNodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Supplemental information.
+                     * 获取Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tips Supplemental information.
+                     * @return JoinType Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetTips() const;
+                    std::string GetJoinType() const;
 
                     /**
-                     * 设置Supplemental information.
+                     * 设置Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tips Supplemental information.
+                     * @param _joinType Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetTips(const std::string& _tips);
+                    void SetJoinType(const std::string& _joinType);
 
                     /**
-                     * 判断参数 Tips 是否已赋值
-                     * @return Tips 是否已赋值
+                     * 判断参数 JoinType 是否已赋值
+                     * @return JoinType 是否已赋值
                      * 
                      */
-                    bool TipsHasBeenSet() const;
+                    bool JoinTypeHasBeenSet() const;
 
                     /**
-                     * 获取Key for supplementary information.
+                     * 获取Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TipsKey Key for supplementary information.
+                     * @return Fields Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetTipsKey() const;
+                    std::vector<JoinRelationField> GetFields() const;
 
                     /**
-                     * 设置Key for supplementary information.
+                     * 设置Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tipsKey Key for supplementary information.
+                     * @param _fields Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetTipsKey(const std::string& _tipsKey);
+                    void SetFields(const std::vector<JoinRelationField>& _fields);
 
                     /**
-                     * 判断参数 TipsKey 是否已赋值
-                     * @return TipsKey 是否已赋值
+                     * 判断参数 Fields 是否已赋值
+                     * @return Fields 是否已赋值
                      * 
                      */
-                    bool TipsKeyHasBeenSet() const;
+                    bool FieldsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Permission value.
+                     * Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_moduleId;
-                    bool m_moduleIdHasBeenSet;
+                    std::string m_joinId;
+                    bool m_joinIdHasBeenSet;
 
                     /**
-                     * Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_includeType;
-                    bool m_includeTypeHasBeenSet;
+                    std::string m_sourceTableNodeId;
+                    bool m_sourceTableNodeIdHasBeenSet;
 
                     /**
-                     * Target upgrade version.
+                     * Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_upgradeVersionType;
-                    bool m_upgradeVersionTypeHasBeenSet;
+                    std::string m_targetTableNodeId;
+                    bool m_targetTableNodeIdHasBeenSet;
 
                     /**
-                     * Supplemental information.
+                     * Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_tips;
-                    bool m_tipsHasBeenSet;
+                    std::string m_joinType;
+                    bool m_joinTypeHasBeenSet;
 
                     /**
-                     * Key for supplementary information.
+                     * Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_tipsKey;
-                    bool m_tipsKeyHasBeenSet;
+                    std::vector<JoinRelationField> m_fields;
+                    bool m_fieldsHasBeenSet;
 
                 };
             }
@@ -259,4 +215,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BI_V20220105_MODEL_PERMISSIONCOMPONENT_H_
+#endif // !TENCENTCLOUD_BI_V20220105_MODEL_JOINRELATION_H_

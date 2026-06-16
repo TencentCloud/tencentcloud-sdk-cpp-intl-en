@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
-#define TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#ifndef TENCENTCLOUD_BI_V20220105_MODEL_ROWCOLUMNTAGVALUE_H_
+#define TENCENTCLOUD_BI_V20220105_MODEL_ROWCOLUMNTAGVALUE_H_
 
 #include <string>
 #include <vector>
@@ -35,159 +35,114 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Customized query
+                * Row/column permission tag input/output parameter
                 */
-                class ProjectConfigResult : public AbstractModel
+                class RowColumnTagValue : public AbstractModel
                 {
                 public:
-                    ProjectConfigResult();
-                    ~ProjectConfigResult() = default;
+                    RowColumnTagValue();
+                    ~RowColumnTagValue() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Configuration name.
+                     * 获取Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModuleId Configuration name.
+                     * @return Id Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetModuleId() const;
+                    int64_t GetId() const;
 
                     /**
-                     * 设置Configuration name.
+                     * 设置Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _moduleId Configuration name.
+                     * @param _id Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetModuleId(const std::string& _moduleId);
+                    void SetId(const int64_t& _id);
 
                     /**
-                     * 判断参数 ModuleId 是否已赋值
-                     * @return ModuleId 是否已赋值
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
                      * 
                      */
-                    bool ModuleIdHasBeenSet() const;
+                    bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 获取Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @return Name Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetIncludeType() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 设置Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @param _name Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetIncludeType(const std::string& _includeType);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 IncludeType 是否已赋值
-                     * @return IncludeType 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      * 
                      */
-                    bool IncludeTypeHasBeenSet() const;
+                    bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameters.
+                     * 获取Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Params Additional parameters.
+                     * @return Values Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetParams() const;
+                    std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Additional parameters.
+                     * 设置Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _params Additional parameters.
+                     * @param _values Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetParams(const std::string& _params);
+                    void SetValues(const std::vector<std::string>& _values);
 
                     /**
-                     * 判断参数 Params 是否已赋值
-                     * @return Params 是否已赋值
+                     * 判断参数 Values 是否已赋值
+                     * @return Values 是否已赋值
                      * 
                      */
-                    bool ParamsHasBeenSet() const;
+                    bool ValuesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Configuration name.
+                     * Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_moduleId;
-                    bool m_moduleIdHasBeenSet;
+                    int64_t m_id;
+                    bool m_idHasBeenSet;
 
                     /**
-                     * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_includeType;
-                    bool m_includeTypeHasBeenSet;
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
-                     * Additional parameters.
+                     * Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_params;
-                    bool m_paramsHasBeenSet;
+                    std::vector<std::string> m_values;
+                    bool m_valuesHasBeenSet;
 
                 };
             }
@@ -195,4 +150,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#endif // !TENCENTCLOUD_BI_V20220105_MODEL_ROWCOLUMNTAGVALUE_H_

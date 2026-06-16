@@ -167,8 +167,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -176,8 +176,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Status User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -190,8 +190,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -199,8 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @param _status User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.
@@ -684,8 +684,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * User status.
 Valid values:.
 
--Enable.
--0: disabled.
+- 1: Enable.
+- 0: disabled.
 
 The default value is 1.
 Example value: 1.

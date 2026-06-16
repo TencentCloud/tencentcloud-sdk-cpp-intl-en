@@ -27,12 +27,16 @@
 #include <tencentcloud/bi/v20220105/model/ApplyEmbedIntervalResponse.h>
 #include <tencentcloud/bi/v20220105/model/ClearEmbedTokenRequest.h>
 #include <tencentcloud/bi/v20220105/model/ClearEmbedTokenResponse.h>
+#include <tencentcloud/bi/v20220105/model/CreateDataTableRequest.h>
+#include <tencentcloud/bi/v20220105/model/CreateDataTableResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateDatasourceRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateDatasourceResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateDatasourceCloudRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateDatasourceCloudResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateEmbedTokenRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateEmbedTokenResponse.h>
+#include <tencentcloud/bi/v20220105/model/CreatePermissionRanksRequest.h>
+#include <tencentcloud/bi/v20220105/model/CreatePermissionRanksResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateProjectRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateProjectResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateUserRoleRequest.h>
@@ -55,6 +59,8 @@
 #include <tencentcloud/bi/v20220105/model/DescribeProjectInfoResponse.h>
 #include <tencentcloud/bi/v20220105/model/DescribeProjectListRequest.h>
 #include <tencentcloud/bi/v20220105/model/DescribeProjectListResponse.h>
+#include <tencentcloud/bi/v20220105/model/DescribeSourceFieldListRequest.h>
+#include <tencentcloud/bi/v20220105/model/DescribeSourceFieldListResponse.h>
 #include <tencentcloud/bi/v20220105/model/DescribeUserProjectListRequest.h>
 #include <tencentcloud/bi/v20220105/model/DescribeUserProjectListResponse.h>
 #include <tencentcloud/bi/v20220105/model/DescribeUserRoleListRequest.h>
@@ -69,6 +75,10 @@
 #include <tencentcloud/bi/v20220105/model/ModifyDatasourceCloudResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyProjectRequest.h>
 #include <tencentcloud/bi/v20220105/model/ModifyProjectResponse.h>
+#include <tencentcloud/bi/v20220105/model/ModifyResourceUserRequest.h>
+#include <tencentcloud/bi/v20220105/model/ModifyResourceUserResponse.h>
+#include <tencentcloud/bi/v20220105/model/ModifyResourceUserGroupResourceRequest.h>
+#include <tencentcloud/bi/v20220105/model/ModifyResourceUserGroupResourceResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleRequest.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleProjectRequest.h>
@@ -93,6 +103,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ClearEmbedTokenResponse> ClearEmbedTokenOutcome;
                 typedef std::future<ClearEmbedTokenOutcome> ClearEmbedTokenOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ClearEmbedTokenRequest&, ClearEmbedTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearEmbedTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDataTableResponse> CreateDataTableOutcome;
+                typedef std::future<CreateDataTableOutcome> CreateDataTableOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::CreateDataTableRequest&, CreateDataTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataTableAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDatasourceResponse> CreateDatasourceOutcome;
                 typedef std::future<CreateDatasourceOutcome> CreateDatasourceOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateDatasourceRequest&, CreateDatasourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDatasourceAsyncHandler;
@@ -102,6 +115,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateEmbedTokenResponse> CreateEmbedTokenOutcome;
                 typedef std::future<CreateEmbedTokenOutcome> CreateEmbedTokenOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateEmbedTokenRequest&, CreateEmbedTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmbedTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreatePermissionRanksResponse> CreatePermissionRanksOutcome;
+                typedef std::future<CreatePermissionRanksOutcome> CreatePermissionRanksOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::CreatePermissionRanksRequest&, CreatePermissionRanksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePermissionRanksAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateProjectResponse> CreateProjectOutcome;
                 typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateProjectRequest&, CreateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectAsyncHandler;
@@ -135,6 +151,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProjectListResponse> DescribeProjectListOutcome;
                 typedef std::future<DescribeProjectListOutcome> DescribeProjectListOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::DescribeProjectListRequest&, DescribeProjectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSourceFieldListResponse> DescribeSourceFieldListOutcome;
+                typedef std::future<DescribeSourceFieldListOutcome> DescribeSourceFieldListOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::DescribeSourceFieldListRequest&, DescribeSourceFieldListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSourceFieldListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserProjectListResponse> DescribeUserProjectListOutcome;
                 typedef std::future<DescribeUserProjectListOutcome> DescribeUserProjectListOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::DescribeUserProjectListRequest&, DescribeUserProjectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserProjectListAsyncHandler;
@@ -156,6 +175,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyProjectResponse> ModifyProjectOutcome;
                 typedef std::future<ModifyProjectOutcome> ModifyProjectOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ModifyProjectRequest&, ModifyProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourceUserResponse> ModifyResourceUserOutcome;
+                typedef std::future<ModifyResourceUserOutcome> ModifyResourceUserOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::ModifyResourceUserRequest&, ModifyResourceUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourceUserGroupResourceResponse> ModifyResourceUserGroupResourceOutcome;
+                typedef std::future<ModifyResourceUserGroupResourceOutcome> ModifyResourceUserGroupResourceOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::ModifyResourceUserGroupResourceRequest&, ModifyResourceUserGroupResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceUserGroupResourceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyUserRoleResponse> ModifyUserRoleOutcome;
                 typedef std::future<ModifyUserRoleOutcome> ModifyUserRoleOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ModifyUserRoleRequest&, ModifyUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserRoleAsyncHandler;
@@ -184,6 +209,15 @@ namespace TencentCloud
                 ClearEmbedTokenOutcomeCallable ClearEmbedTokenCallable(const Model::ClearEmbedTokenRequest& request);
 
                 /**
+                 *Add a data table
+                 * @param req CreateDataTableRequest
+                 * @return CreateDataTableOutcome
+                 */
+                CreateDataTableOutcome CreateDataTable(const Model::CreateDataTableRequest &request);
+                void CreateDataTableAsync(const Model::CreateDataTableRequest& request, const CreateDataTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDataTableOutcomeCallable CreateDataTableCallable(const Model::CreateDataTableRequest& request);
+
+                /**
                  *This API is used to create a data source.
                  * @param req CreateDatasourceRequest
                  * @return CreateDatasourceOutcome
@@ -209,6 +243,15 @@ namespace TencentCloud
                 CreateEmbedTokenOutcome CreateEmbedToken(const Model::CreateEmbedTokenRequest &request);
                 void CreateEmbedTokenAsync(const Model::CreateEmbedTokenRequest& request, const CreateEmbedTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateEmbedTokenOutcomeCallable CreateEmbedTokenCallable(const Model::CreateEmbedTokenRequest& request);
+
+                /**
+                 *Create row/column permissions
+                 * @param req CreatePermissionRanksRequest
+                 * @return CreatePermissionRanksOutcome
+                 */
+                CreatePermissionRanksOutcome CreatePermissionRanks(const Model::CreatePermissionRanksRequest &request);
+                void CreatePermissionRanksAsync(const Model::CreatePermissionRanksRequest& request, const CreatePermissionRanksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePermissionRanksOutcomeCallable CreatePermissionRanksCallable(const Model::CreatePermissionRanksRequest& request);
 
                 /**
                  *This API is used to create a project.
@@ -310,6 +353,15 @@ namespace TencentCloud
                 DescribeProjectListOutcomeCallable DescribeProjectListCallable(const Model::DescribeProjectListRequest& request);
 
                 /**
+                 *API information for raw data table fields
+                 * @param req DescribeSourceFieldListRequest
+                 * @return DescribeSourceFieldListOutcome
+                 */
+                DescribeSourceFieldListOutcome DescribeSourceFieldList(const Model::DescribeSourceFieldListRequest &request);
+                void DescribeSourceFieldListAsync(const Model::DescribeSourceFieldListRequest& request, const DescribeSourceFieldListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSourceFieldListOutcomeCallable DescribeSourceFieldListCallable(const Model::DescribeSourceFieldListRequest& request);
+
+                /**
                  *This API is used to obtain the user interface in the project.
                  * @param req DescribeUserProjectListRequest
                  * @return DescribeUserProjectListOutcome
@@ -371,6 +423,24 @@ namespace TencentCloud
                 ModifyProjectOutcome ModifyProject(const Model::ModifyProjectRequest &request);
                 void ModifyProjectAsync(const Model::ModifyProjectRequest& request, const ModifyProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyProjectOutcomeCallable ModifyProjectCallable(const Model::ModifyProjectRequest& request);
+
+                /**
+                 *This API is used to modify by user resource.
+                 * @param req ModifyResourceUserRequest
+                 * @return ModifyResourceUserOutcome
+                 */
+                ModifyResourceUserOutcome ModifyResourceUser(const Model::ModifyResourceUserRequest &request);
+                void ModifyResourceUserAsync(const Model::ModifyResourceUserRequest& request, const ModifyResourceUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourceUserOutcomeCallable ModifyResourceUserCallable(const Model::ModifyResourceUserRequest& request);
+
+                /**
+                 *Update user group permission based on resources
+                 * @param req ModifyResourceUserGroupResourceRequest
+                 * @return ModifyResourceUserGroupResourceOutcome
+                 */
+                ModifyResourceUserGroupResourceOutcome ModifyResourceUserGroupResource(const Model::ModifyResourceUserGroupResourceRequest &request);
+                void ModifyResourceUserGroupResourceAsync(const Model::ModifyResourceUserGroupResourceRequest& request, const ModifyResourceUserGroupResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourceUserGroupResourceOutcomeCallable ModifyResourceUserGroupResourceCallable(const Model::ModifyResourceUserGroupResourceRequest& request);
 
                 /**
                  *This API is used to modify user role info.

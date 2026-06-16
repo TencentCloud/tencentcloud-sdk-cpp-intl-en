@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
-#define TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#ifndef TENCENTCLOUD_BI_V20220105_MODEL_TABLECOLUMNLISTDATA_H_
+#define TENCENTCLOUD_BI_V20220105_MODEL_TABLECOLUMNLISTDATA_H_
 
 #include <string>
 #include <vector>
@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/bi/v20220105/model/TableColumn.h>
 
 
 namespace TencentCloud
@@ -35,159 +36,114 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Customized query
+                * Data list of all column names in the table
                 */
-                class ProjectConfigResult : public AbstractModel
+                class TableColumnListData : public AbstractModel
                 {
                 public:
-                    ProjectConfigResult();
-                    ~ProjectConfigResult() = default;
+                    TableColumnListData();
+                    ~TableColumnListData() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Configuration name.
+                     * 获取Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ModuleId Configuration name.
+                     * @return List Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetModuleId() const;
+                    std::vector<TableColumn> GetList() const;
 
                     /**
-                     * 设置Configuration name.
+                     * 设置Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _moduleId Configuration name.
+                     * @param _list Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetModuleId(const std::string& _moduleId);
+                    void SetList(const std::vector<TableColumn>& _list);
 
                     /**
-                     * 判断参数 ModuleId 是否已赋值
-                     * @return ModuleId 是否已赋值
+                     * 判断参数 List 是否已赋值
+                     * @return List 是否已赋值
                      * 
                      */
-                    bool ModuleIdHasBeenSet() const;
+                    bool ListHasBeenSet() const;
 
                     /**
-                     * 获取Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 获取async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @return TranId async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetIncludeType() const;
+                    std::string GetTranId() const;
 
                     /**
-                     * 设置Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * 设置async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _includeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * @param _tranId async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetIncludeType(const std::string& _includeType);
+                    void SetTranId(const std::string& _tranId);
 
                     /**
-                     * 判断参数 IncludeType 是否已赋值
-                     * @return IncludeType 是否已赋值
+                     * 判断参数 TranId 是否已赋值
+                     * @return TranId 是否已赋值
                      * 
                      */
-                    bool IncludeTypeHasBeenSet() const;
+                    bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameters.
+                     * 获取Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Params Additional parameters.
+                     * @return TranStatus Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetParams() const;
+                    int64_t GetTranStatus() const;
 
                     /**
-                     * 设置Additional parameters.
+                     * 设置Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _params Additional parameters.
+                     * @param _tranStatus Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetParams(const std::string& _params);
+                    void SetTranStatus(const int64_t& _tranStatus);
 
                     /**
-                     * 判断参数 Params 是否已赋值
-                     * @return Params 是否已赋值
+                     * 判断参数 TranStatus 是否已赋值
+                     * @return TranStatus 是否已赋值
                      * 
                      */
-                    bool ParamsHasBeenSet() const;
+                    bool TranStatusHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Configuration name.
+                     * Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_moduleId;
-                    bool m_moduleIdHasBeenSet;
+                    std::vector<TableColumn> m_list;
+                    bool m_listHasBeenSet;
 
                     /**
-                     * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+                     * async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_includeType;
-                    bool m_includeTypeHasBeenSet;
+                    std::string m_tranId;
+                    bool m_tranIdHasBeenSet;
 
                     /**
-                     * Additional parameters.
+                     * Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_params;
-                    bool m_paramsHasBeenSet;
+                    int64_t m_tranStatus;
+                    bool m_tranStatusHasBeenSet;
 
                 };
             }
@@ -195,4 +151,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_BI_V20220105_MODEL_PROJECTCONFIGRESULT_H_
+#endif // !TENCENTCLOUD_BI_V20220105_MODEL_TABLECOLUMNLISTDATA_H_
