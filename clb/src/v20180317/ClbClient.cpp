@@ -2540,6 +2540,56 @@ ClbClient::DescribeRewriteOutcomeCallable ClbClient::DescribeRewriteCallable(con
     return prom->get_future();
 }
 
+ClbClient::DescribeTargetGroupInstanceStatusOutcome ClbClient::DescribeTargetGroupInstanceStatus(const DescribeTargetGroupInstanceStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTargetGroupInstanceStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTargetGroupInstanceStatusResponse rsp = DescribeTargetGroupInstanceStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTargetGroupInstanceStatusOutcome(rsp);
+        else
+            return DescribeTargetGroupInstanceStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTargetGroupInstanceStatusOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::DescribeTargetGroupInstanceStatusAsync(const DescribeTargetGroupInstanceStatusRequest& request, const DescribeTargetGroupInstanceStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTargetGroupInstanceStatusRequest&;
+    using Resp = DescribeTargetGroupInstanceStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTargetGroupInstanceStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::DescribeTargetGroupInstanceStatusOutcomeCallable ClbClient::DescribeTargetGroupInstanceStatusCallable(const DescribeTargetGroupInstanceStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTargetGroupInstanceStatusOutcome>>();
+    DescribeTargetGroupInstanceStatusAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const DescribeTargetGroupInstanceStatusRequest&,
+        DescribeTargetGroupInstanceStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClbClient::DescribeTargetGroupInstancesOutcome ClbClient::DescribeTargetGroupInstances(const DescribeTargetGroupInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTargetGroupInstances");
@@ -4182,6 +4232,56 @@ ClbClient::RegisterTargetsWithClassicalLBOutcomeCallable ClbClient::RegisterTarg
         const ClbClient*,
         const RegisterTargetsWithClassicalLBRequest&,
         RegisterTargetsWithClassicalLBOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClbClient::RenewLoadBalancersOutcome ClbClient::RenewLoadBalancers(const RenewLoadBalancersRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewLoadBalancers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewLoadBalancersResponse rsp = RenewLoadBalancersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewLoadBalancersOutcome(rsp);
+        else
+            return RenewLoadBalancersOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewLoadBalancersOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::RenewLoadBalancersAsync(const RenewLoadBalancersRequest& request, const RenewLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RenewLoadBalancersRequest&;
+    using Resp = RenewLoadBalancersResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RenewLoadBalancers", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClbClient::RenewLoadBalancersOutcomeCallable ClbClient::RenewLoadBalancersCallable(const RenewLoadBalancersRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RenewLoadBalancersOutcome>>();
+    RenewLoadBalancersAsync(
+    request,
+    [prom](
+        const ClbClient*,
+        const RenewLoadBalancersRequest&,
+        RenewLoadBalancersOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -387,6 +387,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/OfflineLibraDBClusterResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineLibraDBInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineLibraDBInstanceResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenAIOptimizerRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenAIOptimizerResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenAuditServiceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OpenClusterPasswordComplexityRequest.h>
@@ -1017,6 +1019,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OfflineLibraDBInstanceResponse> OfflineLibraDBInstanceOutcome;
                 typedef std::future<OfflineLibraDBInstanceOutcome> OfflineLibraDBInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OfflineLibraDBInstanceRequest&, OfflineLibraDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineLibraDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenAIOptimizerResponse> OpenAIOptimizerOutcome;
+                typedef std::future<OpenAIOptimizerOutcome> OpenAIOptimizerOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::OpenAIOptimizerRequest&, OpenAIOptimizerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAIOptimizerAsyncHandler;
                 typedef Outcome<Core::Error, Model::OpenAuditServiceResponse> OpenAuditServiceOutcome;
                 typedef std::future<OpenAuditServiceOutcome> OpenAuditServiceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OpenAuditServiceRequest&, OpenAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAuditServiceAsyncHandler;
@@ -2762,6 +2767,15 @@ namespace TencentCloud
                 OfflineLibraDBInstanceOutcome OfflineLibraDBInstance(const Model::OfflineLibraDBInstanceRequest &request);
                 void OfflineLibraDBInstanceAsync(const Model::OfflineLibraDBInstanceRequest& request, const OfflineLibraDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OfflineLibraDBInstanceOutcomeCallable OfflineLibraDBInstanceCallable(const Model::OfflineLibraDBInstanceRequest& request);
+
+                /**
+                 *This API is used to start the optimizer switch of an instance.
+                 * @param req OpenAIOptimizerRequest
+                 * @return OpenAIOptimizerOutcome
+                 */
+                OpenAIOptimizerOutcome OpenAIOptimizer(const Model::OpenAIOptimizerRequest &request);
+                void OpenAIOptimizerAsync(const Model::OpenAIOptimizerRequest& request, const OpenAIOptimizerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenAIOptimizerOutcomeCallable OpenAIOptimizerCallable(const Model::OpenAIOptimizerRequest& request);
 
                 /**
                  *This API is used to enable database audit service for an instance.

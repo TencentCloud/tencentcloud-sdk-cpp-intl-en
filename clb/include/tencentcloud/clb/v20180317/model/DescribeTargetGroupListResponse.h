@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of displayed results
-                     * @return TotalCount Number of displayed results
+                     * 获取<p>Number of displayed results.</p>
+                     * @return TotalCount <p>Number of displayed results.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Information set of displayed target groups
-                     * @return TargetGroupSet Information set of displayed target groups
+                     * 获取<p>Collection of displayed target group information.</p>
+                     * @return TargetGroupSet <p>Collection of displayed target group information.</p>
                      * 
                      */
                     std::vector<TargetGroupInfo> GetTargetGroupSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of displayed results
+                     * <p>Number of displayed results.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Information set of displayed target groups
+                     * <p>Collection of displayed target group information.</p>
                      */
                     std::vector<TargetGroupInfo> m_targetGroupSet;
                     bool m_targetGroupSetHasBeenSet;

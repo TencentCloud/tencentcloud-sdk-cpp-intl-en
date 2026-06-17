@@ -268,6 +268,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagHasBeenSet() const;
 
+                    /**
+                     * 获取The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Zone The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _zone The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     * 
+                     */
+                    bool ZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -332,6 +357,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
 
                 };
             }

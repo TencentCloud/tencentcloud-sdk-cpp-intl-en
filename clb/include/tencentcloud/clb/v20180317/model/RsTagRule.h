@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB listener ID.
-                     * @return ListenerId CLB listener ID.
+                     * 获取<p>CLB listener ID.</p>
+                     * @return ListenerId <p>CLB listener ID.</p>
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID.
-                     * @param _listenerId CLB listener ID.
+                     * 设置<p>CLB listener ID.</p>
+                     * @param _listenerId <p>CLB listener ID.</p>
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of real servers with tags to be modified.
-                     * @return Targets List of real servers with tags to be modified.
+                     * 获取<p>List of real servers with tags to be modified.</p>
+                     * @return Targets <p>List of real servers with tags to be modified.</p>
                      * 
                      */
                     std::vector<Target> GetTargets() const;
 
                     /**
-                     * 设置List of real servers with tags to be modified.
-                     * @param _targets List of real servers with tags to be modified.
+                     * 设置<p>List of real servers with tags to be modified.</p>
+                     * @param _targets <p>List of real servers with tags to be modified.</p>
                      * 
                      */
                     void SetTargets(const std::vector<Target>& _targets);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
-                     * @return LocationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+                     * 获取<p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+                     * @return LocationId <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
-                     * @param _locationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+                     * 设置<p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+                     * @param _locationId <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
-                     * @return Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+                     * 获取<p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
+                     * @return Tag <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
-                     * @param _tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+                     * 设置<p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
+                     * @param _tag <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB listener ID.
+                     * <p>CLB listener ID.</p>
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * List of real servers with tags to be modified.
+                     * <p>List of real servers with tags to be modified.</p>
                      */
                     std::vector<Target> m_targets;
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+                     * <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+                     * <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;

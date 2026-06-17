@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取<p>CLB listener ID</p>
+                     * @return ListenerId <p>CLB listener ID</p>
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param _listenerId CLB listener ID
+                     * 设置<p>CLB listener ID</p>
+                     * @param _listenerId <p>CLB listener ID</p>
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB listener port
-                     * @return ListenerPort CLB listener port
+                     * 获取<p>CLB listener port</p>
+                     * @return ListenerPort <p>CLB listener port</p>
                      * 
                      */
                     int64_t GetListenerPort() const;
 
                     /**
-                     * 设置CLB listener port
-                     * @param _listenerPort CLB listener port
+                     * 设置<p>CLB listener port</p>
+                     * @param _listenerPort <p>CLB listener port</p>
                      * 
                      */
                     void SetListenerPort(const int64_t& _listenerPort);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ListenerPortHasBeenSet() const;
 
                     /**
-                     * 获取Backend forwarding port of a listener
-                     * @return InstancePort Backend forwarding port of a listener
+                     * 获取<p>listener backend forwarding port</p>
+                     * @return InstancePort <p>listener backend forwarding port</p>
                      * 
                      */
                     int64_t GetInstancePort() const;
 
                     /**
-                     * 设置Backend forwarding port of a listener
-                     * @param _instancePort Backend forwarding port of a listener
+                     * 设置<p>listener backend forwarding port</p>
+                     * @param _instancePort <p>listener backend forwarding port</p>
                      * 
                      */
                     void SetInstancePort(const int64_t& _instancePort);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstancePortHasBeenSet() const;
 
                     /**
-                     * 获取Listener name
-                     * @return ListenerName Listener name
+                     * 获取<p>Listener name</p>
+                     * @return ListenerName <p>Listener name</p>
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置Listener name
-                     * @param _listenerName Listener name
+                     * 设置<p>Listener name</p>
+                     * @param _listenerName <p>Listener name</p>
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ListenerNameHasBeenSet() const;
 
                     /**
-                     * 获取Listener protocol type
-                     * @return Protocol Listener protocol type
+                     * 获取<p>Listener protocol type</p>
+                     * @return Protocol <p>Listener protocol type</p>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Listener protocol type
-                     * @param _protocol Listener protocol type
+                     * 设置<p>Listener protocol type</p>
+                     * @param _protocol <p>Listener protocol type</p>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Session persistence time
-                     * @return SessionExpire Session persistence time
+                     * 获取<p>Session persistence time</p>
+                     * @return SessionExpire <p>Session persistence time</p>
                      * 
                      */
                     int64_t GetSessionExpire() const;
 
                     /**
-                     * 设置Session persistence time
-                     * @param _sessionExpire Session persistence time
+                     * 设置<p>Session persistence time</p>
+                     * @param _sessionExpire <p>Session persistence time</p>
                      * 
                      */
                     void SetSessionExpire(const int64_t& _sessionExpire);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool SessionExpireHasBeenSet() const;
 
                     /**
-                     * 获取Whether health check is enabled. 1: enabled; 0: disabled.
-                     * @return HealthSwitch Whether health check is enabled. 1: enabled; 0: disabled.
+                     * 获取<p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
+                     * @return HealthSwitch <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
                      * 
                      */
                     int64_t GetHealthSwitch() const;
 
                     /**
-                     * 设置Whether health check is enabled. 1: enabled; 0: disabled.
-                     * @param _healthSwitch Whether health check is enabled. 1: enabled; 0: disabled.
+                     * 设置<p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
+                     * @param _healthSwitch <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
                      * 
                      */
                     void SetHealthSwitch(const int64_t& _healthSwitch);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool HealthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Response timeout period
-                     * @return TimeOut Response timeout period
+                     * 获取<p>Response timeout</p><p>Unit: second</p>
+                     * @return TimeOut <p>Response timeout</p><p>Unit: second</p>
                      * 
                      */
                     int64_t GetTimeOut() const;
 
                     /**
-                     * 设置Response timeout period
-                     * @param _timeOut Response timeout period
+                     * 设置<p>Response timeout</p><p>Unit: second</p>
+                     * @param _timeOut <p>Response timeout</p><p>Unit: second</p>
                      * 
                      */
                     void SetTimeOut(const int64_t& _timeOut);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool TimeOutHasBeenSet() const;
 
                     /**
-                     * 获取Check interval
-                     * @return IntervalTime Check interval
+                     * 获取<p>Check interval</p><p>Unit: seconds</p>
+                     * @return IntervalTime <p>Check interval</p><p>Unit: seconds</p>
                      * 
                      */
                     int64_t GetIntervalTime() const;
 
                     /**
-                     * 设置Check interval
-                     * @param _intervalTime Check interval
+                     * 设置<p>Check interval</p><p>Unit: seconds</p>
+                     * @param _intervalTime <p>Check interval</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetIntervalTime(const int64_t& _intervalTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool IntervalTimeHasBeenSet() const;
 
                     /**
-                     * 获取Health threshold
-                     * @return HealthNum Health threshold
+                     * 获取<p>Health threshold</p>
+                     * @return HealthNum <p>Health threshold</p>
                      * 
                      */
                     int64_t GetHealthNum() const;
 
                     /**
-                     * 设置Health threshold
-                     * @param _healthNum Health threshold
+                     * 设置<p>Health threshold</p>
+                     * @param _healthNum <p>Health threshold</p>
                      * 
                      */
                     void SetHealthNum(const int64_t& _healthNum);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool HealthNumHasBeenSet() const;
 
                     /**
-                     * 获取Unhealthy threshold
-                     * @return UnhealthNum Unhealthy threshold
+                     * 获取<p>Unhealthy threshold</p>
+                     * @return UnhealthNum <p>Unhealthy threshold</p>
                      * 
                      */
                     int64_t GetUnhealthNum() const;
 
                     /**
-                     * 设置Unhealthy threshold
-                     * @param _unhealthNum Unhealthy threshold
+                     * 设置<p>Unhealthy threshold</p>
+                     * @param _unhealthNum <p>Unhealthy threshold</p>
                      * 
                      */
                     void SetUnhealthNum(const int64_t& _unhealthNum);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool UnhealthNumHasBeenSet() const;
 
                     /**
-                     * 获取Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
-                     * @return HttpHash Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+                     * 获取<p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
+                     * @return HttpHash <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
                      * 
                      */
                     std::string GetHttpHash() const;
 
                     /**
-                     * 设置Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
-                     * @param _httpHash Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+                     * 设置<p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
+                     * @param _httpHash <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
                      * 
                      */
                     void SetHttpHash(const std::string& _httpHash);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool HttpHashHasBeenSet() const;
 
                     /**
-                     * 获取Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
-                     * @return HttpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+                     * 获取<p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
+                     * @return HttpCode <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
                      * 
                      */
                     int64_t GetHttpCode() const;
 
                     /**
-                     * 设置Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
-                     * @param _httpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+                     * 设置<p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
+                     * @param _httpCode <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
                      * 
                      */
                     void SetHttpCode(const int64_t& _httpCode);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool HttpCodeHasBeenSet() const;
 
                     /**
-                     * 获取Health check path for HTTP and HTTPS listeners of a public network classic CLB
-                     * @return HttpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
+                     * 获取<p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
+                     * @return HttpCheckPath <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
                      * 
                      */
                     std::string GetHttpCheckPath() const;
 
                     /**
-                     * 设置Health check path for HTTP and HTTPS listeners of a public network classic CLB
-                     * @param _httpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
+                     * 设置<p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
+                     * @param _httpCheckPath <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
                      * 
                      */
                     void SetHttpCheckPath(const std::string& _httpCheckPath);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool HttpCheckPathHasBeenSet() const;
 
                     /**
-                     * 获取Authentication method for an HTTPS listener of a public network classic CLB
-                     * @return SSLMode Authentication method for an HTTPS listener of a public network classic CLB
+                     * 获取<p>Authentication method of the HTTPS listener for public network CLB</p>
+                     * @return SSLMode <p>Authentication method of the HTTPS listener for public network CLB</p>
                      * 
                      */
                     std::string GetSSLMode() const;
 
                     /**
-                     * 设置Authentication method for an HTTPS listener of a public network classic CLB
-                     * @param _sSLMode Authentication method for an HTTPS listener of a public network classic CLB
+                     * 设置<p>Authentication method of the HTTPS listener for public network CLB</p>
+                     * @param _sSLMode <p>Authentication method of the HTTPS listener for public network CLB</p>
                      * 
                      */
                     void SetSSLMode(const std::string& _sSLMode);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool SSLModeHasBeenSet() const;
 
                     /**
-                     * 获取Server certificate ID for an HTTPS listener of a public network classic CLB
-                     * @return CertId Server certificate ID for an HTTPS listener of a public network classic CLB
+                     * 获取<p>Server certificate ID of the HTTPS listener for the public network CLB</p>
+                     * @return CertId <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Server certificate ID for an HTTPS listener of a public network classic CLB
-                     * @param _certId Server certificate ID for an HTTPS listener of a public network classic CLB
+                     * 设置<p>Server certificate ID of the HTTPS listener for the public network CLB</p>
+                     * @param _certId <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Client certificate ID for an HTTPS listener of a public network classic CLB
-                     * @return CertCaId Client certificate ID for an HTTPS listener of a public network classic CLB
+                     * 获取<p>Client certificate ID of the HTTPS listener for public network CLB</p>
+                     * @return CertCaId <p>Client certificate ID of the HTTPS listener for public network CLB</p>
                      * 
                      */
                     std::string GetCertCaId() const;
 
                     /**
-                     * 设置Client certificate ID for an HTTPS listener of a public network classic CLB
-                     * @param _certCaId Client certificate ID for an HTTPS listener of a public network classic CLB
+                     * 设置<p>Client certificate ID of the HTTPS listener for public network CLB</p>
+                     * @param _certCaId <p>Client certificate ID of the HTTPS listener for public network CLB</p>
                      * 
                      */
                     void SetCertCaId(const std::string& _certCaId);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool CertCaIdHasBeenSet() const;
 
                     /**
-                     * 获取Listener status. Value range: 0 (creating), 1 (running)
-                     * @return Status Listener status. Value range: 0 (creating), 1 (running)
+                     * 获取<p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
+                     * @return Status <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Listener status. Value range: 0 (creating), 1 (running)
-                     * @param _status Listener status. Value range: 0 (creating), 1 (running)
+                     * 设置<p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
+                     * @param _status <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -427,109 +427,109 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB listener ID
+                     * <p>CLB listener ID</p>
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * CLB listener port
+                     * <p>CLB listener port</p>
                      */
                     int64_t m_listenerPort;
                     bool m_listenerPortHasBeenSet;
 
                     /**
-                     * Backend forwarding port of a listener
+                     * <p>listener backend forwarding port</p>
                      */
                     int64_t m_instancePort;
                     bool m_instancePortHasBeenSet;
 
                     /**
-                     * Listener name
+                     * <p>Listener name</p>
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
 
                     /**
-                     * Listener protocol type
+                     * <p>Listener protocol type</p>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Session persistence time
+                     * <p>Session persistence time</p>
                      */
                     int64_t m_sessionExpire;
                     bool m_sessionExpireHasBeenSet;
 
                     /**
-                     * Whether health check is enabled. 1: enabled; 0: disabled.
+                     * <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
                      */
                     int64_t m_healthSwitch;
                     bool m_healthSwitchHasBeenSet;
 
                     /**
-                     * Response timeout period
+                     * <p>Response timeout</p><p>Unit: second</p>
                      */
                     int64_t m_timeOut;
                     bool m_timeOutHasBeenSet;
 
                     /**
-                     * Check interval
+                     * <p>Check interval</p><p>Unit: seconds</p>
                      */
                     int64_t m_intervalTime;
                     bool m_intervalTimeHasBeenSet;
 
                     /**
-                     * Health threshold
+                     * <p>Health threshold</p>
                      */
                     int64_t m_healthNum;
                     bool m_healthNumHasBeenSet;
 
                     /**
-                     * Unhealthy threshold
+                     * <p>Unhealthy threshold</p>
                      */
                     int64_t m_unhealthNum;
                     bool m_unhealthNumHasBeenSet;
 
                     /**
-                     * Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+                     * <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
                      */
                     std::string m_httpHash;
                     bool m_httpHashHasBeenSet;
 
                     /**
-                     * Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+                     * <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
                      */
                     int64_t m_httpCode;
                     bool m_httpCodeHasBeenSet;
 
                     /**
-                     * Health check path for HTTP and HTTPS listeners of a public network classic CLB
+                     * <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
                      */
                     std::string m_httpCheckPath;
                     bool m_httpCheckPathHasBeenSet;
 
                     /**
-                     * Authentication method for an HTTPS listener of a public network classic CLB
+                     * <p>Authentication method of the HTTPS listener for public network CLB</p>
                      */
                     std::string m_sSLMode;
                     bool m_sSLModeHasBeenSet;
 
                     /**
-                     * Server certificate ID for an HTTPS listener of a public network classic CLB
+                     * <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Client certificate ID for an HTTPS listener of a public network classic CLB
+                     * <p>Client certificate ID of the HTTPS listener for public network CLB</p>
                      */
                     std::string m_certCaId;
                     bool m_certCaIdHasBeenSet;
 
                     /**
-                     * Listener status. Value range: 0 (creating), 1 (running)
+                     * <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

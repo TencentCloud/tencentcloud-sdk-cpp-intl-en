@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
-                     * @return Url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+                     * 获取Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
+                     * @return Url Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
-                     * @param _url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+                     * 设置Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
+                     * @param _url Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -195,7 +195,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+                     * Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

@@ -106,18 +106,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     std::string GetConfigContent() const;
 
                     /**
                      * 设置Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * @param _configContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      * 
                      */
                     void SetConfigContent(const std::string& _configContent);
@@ -196,7 +196,7 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/
 
                     /**
                      * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
                      */
                     std::string m_configContent;
                     bool m_configContentHasBeenSet;

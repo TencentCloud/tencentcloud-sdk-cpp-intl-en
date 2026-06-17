@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool ApQueryToOtherNodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LoadBalanceMode 
+                     * 获取<p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * @return LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      * 
                      */
                     std::string GetLoadBalanceMode() const;
 
                     /**
-                     * 设置
-                     * @param _loadBalanceMode 
+                     * 设置<p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+                     * @param _loadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      * 
                      */
                     void SetLoadBalanceMode(const std::string& _loadBalanceMode);
@@ -526,7 +526,7 @@ namespace TencentCloud
                     bool m_apQueryToOtherNodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
                      */
                     std::string m_loadBalanceMode;
                     bool m_loadBalanceModeHasBeenSet;

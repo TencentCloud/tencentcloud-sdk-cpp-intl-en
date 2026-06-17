@@ -43,19 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database type. Valid values: 
-<li> MYSQL </li>
-                     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 获取<p>Database type, value ranges from...to... </p><li> MYSQL </li>
+                     * @return DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
                      * 
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type. Valid values: 
-<li> MYSQL </li>
-                     * @param _dbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 设置<p>Database type, value ranges from...to... </p><li> MYSQL </li>
+                     * @param _dbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
                      * 
                      */
                     void SetDbType(const std::string& _dbType);
@@ -68,15 +64,15 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return the AZ information.
-                     * @return IncludeZoneStocks Whether to return the AZ information.
+                     * 获取<p>Whether required to return AZ information</p>
+                     * @return IncludeZoneStocks <p>Whether required to return AZ information</p>
                      * 
                      */
                     bool GetIncludeZoneStocks() const;
 
                     /**
-                     * 设置Whether to return the AZ information.
-                     * @param _includeZoneStocks Whether to return the AZ information.
+                     * 设置<p>Whether required to return AZ information</p>
+                     * @param _includeZoneStocks <p>Whether required to return AZ information</p>
                      * 
                      */
                     void SetIncludeZoneStocks(const bool& _includeZoneStocks);
@@ -89,15 +85,15 @@ namespace TencentCloud
                     bool IncludeZoneStocksHasBeenSet() const;
 
                     /**
-                     * 获取Instance machine type.
-                     * @return DeviceType Instance machine type.
+                     * 获取<p>Instance machine type.</p>
+                     * @return DeviceType <p>Instance machine type.</p>
                      * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
-                     * 设置Instance machine type.
-                     * @param _deviceType Instance machine type.
+                     * 设置<p>Instance machine type.</p>
+                     * @param _deviceType <p>Instance machine type.</p>
                      * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
@@ -109,26 +105,52 @@ namespace TencentCloud
                      */
                     bool DeviceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster level, optional. For example P0, P1</p>
+                     * @return ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+                     * 
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置<p>Cluster level, optional. For example P0, P1</p>
+                     * @param _clusterLevel <p>Cluster level, optional. For example P0, P1</p>
+                     * 
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     * 
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Database type. Valid values: 
-<li> MYSQL </li>
+                     * <p>Database type, value ranges from...to... </p><li> MYSQL </li>
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Whether to return the AZ information.
+                     * <p>Whether required to return AZ information</p>
                      */
                     bool m_includeZoneStocks;
                     bool m_includeZoneStocksHasBeenSet;
 
                     /**
-                     * Instance machine type.
+                     * <p>Instance machine type.</p>
                      */
                     std::string m_deviceType;
                     bool m_deviceTypeHasBeenSet;
+
+                    /**
+                     * <p>Cluster level, optional. For example P0, P1</p>
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
 
                 };
             }

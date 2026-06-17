@@ -28,6 +28,7 @@
 #include <tencentcloud/clb/v20180317/model/LBChargePrepaid.h>
 #include <tencentcloud/clb/v20180317/model/ExtraInfo.h>
 #include <tencentcloud/clb/v20180317/model/TagInfo.h>
+#include <tencentcloud/clb/v20180317/model/AvailableZoneAffinityInfo.h>
 
 
 namespace TencentCloud
@@ -1084,6 +1085,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExclusiveHasBeenSet() const;
 
+                    /**
+                     * 获取Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AvailableZoneAffinityInfo Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AvailableZoneAffinityInfo GetAvailableZoneAffinityInfo() const;
+
+                    /**
+                     * 设置Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _availableZoneAffinityInfo Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAvailableZoneAffinityInfo(const AvailableZoneAffinityInfo& _availableZoneAffinityInfo);
+
+                    /**
+                     * 判断参数 AvailableZoneAffinityInfo 是否已赋值
+                     * @return AvailableZoneAffinityInfo 是否已赋值
+                     * 
+                     */
+                    bool AvailableZoneAffinityInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1375,6 +1401,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_exclusive;
                     bool m_exclusiveHasBeenSet;
+
+                    /**
+                     * Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AvailableZoneAffinityInfo m_availableZoneAffinityInfo;
+                    bool m_availableZoneAffinityInfoHasBeenSet;
 
                 };
             }

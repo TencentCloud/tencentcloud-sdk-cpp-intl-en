@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target group name (up to 50 characters)
-                     * @return TargetGroupName Target group name (up to 50 characters)
+                     * 获取<p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
+                     * @return TargetGroupName <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
                      * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
-                     * 设置Target group name (up to 50 characters)
-                     * @param _targetGroupName Target group name (up to 50 characters)
+                     * 设置<p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
+                     * @param _targetGroupName <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
                      * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool TargetGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
-                     * @return VpcId Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
+                     * 获取<p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
+                     * @return VpcId <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
-                     * @param _vpcId Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
+                     * 设置<p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
+                     * @param _vpcId <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -88,19 +88,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
-                     * @return Port Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
+                     * 获取<p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
+                     * @return Port <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
-                     * @param _port Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
+                     * 设置<p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
+                     * @param _port <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -113,15 +109,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the real servers bound to the target group. supports up to 50 at a time.
-                     * @return TargetGroupInstances Specifies the real servers bound to the target group. supports up to 50 at a time.
+                     * 获取<p>The target group supports up to 50 real servers bound to it.</p>
+                     * @return TargetGroupInstances <p>The target group supports up to 50 real servers bound to it.</p>
                      * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
-                     * 设置Specifies the real servers bound to the target group. supports up to 50 at a time.
-                     * @param _targetGroupInstances Specifies the real servers bound to the target group. supports up to 50 at a time.
+                     * 设置<p>The target group supports up to 50 real servers bound to it.</p>
+                     * @param _targetGroupInstances <p>The target group supports up to 50 real servers bound to it.</p>
                      * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
@@ -134,15 +130,15 @@ namespace TencentCloud
                     bool TargetGroupInstancesHasBeenSet() const;
 
                     /**
-                     * 获取Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
-                     * @return Type Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
+                     * 获取<p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
+                     * @return Type <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
-                     * @param _type Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
+                     * 设置<p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
+                     * @param _type <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -155,15 +151,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
-                     * @return Protocol Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
+                     * 获取<p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
+                     * @return Protocol <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
-                     * @param _protocol Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
+                     * 设置<p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
+                     * @param _protocol <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -176,15 +172,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Health check.
-                     * @return HealthCheck Health check.
+                     * 获取<p>Health check.</p>
+                     * @return HealthCheck <p>Health check.</p>
                      * 
                      */
                     TargetGroupHealthCheck GetHealthCheck() const;
 
                     /**
-                     * 设置Health check.
-                     * @param _healthCheck Health check.
+                     * 设置<p>Health check.</p>
+                     * @param _healthCheck <p>Health check.</p>
                      * 
                      */
                     void SetHealthCheck(const TargetGroupHealthCheck& _healthCheck);
@@ -197,19 +193,15 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
-                     * @return ScheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+                     * 获取<p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
+                     * @return ScheduleAlgorithm <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
                      * 
                      */
                     std::string GetScheduleAlgorithm() const;
 
                     /**
-                     * 设置Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
-                     * @param _scheduleAlgorithm Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+                     * 设置<p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
+                     * @param _scheduleAlgorithm <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
                      * 
                      */
                     void SetScheduleAlgorithm(const std::string& _scheduleAlgorithm);
@@ -222,15 +214,15 @@ namespace TencentCloud
                     bool ScheduleAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Tag.
-                     * @return Tags Tag.
+                     * 获取<p>Tag.</p>
+                     * @return Tags <p>Tag.</p>
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tag.
-                     * @param _tags Tag.
+                     * 设置<p>Tag.</p>
+                     * @param _tags <p>Tag.</p>
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -243,19 +235,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
-                     * @return Weight Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+                     * 获取<p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
+                     * @return Weight <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
-                     * @param _weight Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+                     * 设置<p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
+                     * @param _weight <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -268,15 +256,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
-                     * @return FullListenSwitch Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
+                     * 获取<p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
+                     * @return FullListenSwitch <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
                      * 
                      */
                     bool GetFullListenSwitch() const;
 
                     /**
-                     * 设置Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
-                     * @param _fullListenSwitch Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
+                     * 设置<p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
+                     * @param _fullListenSwitch <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
                      * 
                      */
                     void SetFullListenSwitch(const bool& _fullListenSwitch);
@@ -289,15 +277,15 @@ namespace TencentCloud
                     bool FullListenSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
-                     * @return KeepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
+                     * 获取<p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
+                     * @return KeepaliveEnable <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
                      * 
                      */
                     bool GetKeepaliveEnable() const;
 
                     /**
-                     * 设置Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
-                     * @param _keepaliveEnable Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
+                     * 设置<p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
+                     * @param _keepaliveEnable <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
                      * 
                      */
                     void SetKeepaliveEnable(const bool& _keepaliveEnable);
@@ -310,15 +298,15 @@ namespace TencentCloud
                     bool KeepaliveEnableHasBeenSet() const;
 
                     /**
-                     * 获取Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
-                     * @return SessionExpireTime Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
+                     * 获取<p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
+                     * @return SessionExpireTime <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
                      * 
                      */
                     uint64_t GetSessionExpireTime() const;
 
                     /**
-                     * 设置Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
-                     * @param _sessionExpireTime Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
+                     * 设置<p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
+                     * @param _sessionExpireTime <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
                      * 
                      */
                     void SetSessionExpireTime(const uint64_t& _sessionExpireTime);
@@ -331,15 +319,15 @@ namespace TencentCloud
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取IP version type.
-                     * @return IpVersion IP version type.
+                     * 获取<p>IP version type.</p>
+                     * @return IpVersion <p>IP version type.</p>
                      * 
                      */
                     std::string GetIpVersion() const;
 
                     /**
-                     * 设置IP version type.
-                     * @param _ipVersion IP version type.
+                     * 设置<p>IP version type.</p>
+                     * @param _ipVersion <p>IP version type.</p>
                      * 
                      */
                     void SetIpVersion(const std::string& _ipVersion);
@@ -352,15 +340,15 @@ namespace TencentCloud
                     bool IpVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnatEnable 
+                     * 获取<p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
+                     * @return SnatEnable <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
                      * 
                      */
                     bool GetSnatEnable() const;
 
                     /**
-                     * 设置
-                     * @param _snatEnable 
+                     * 设置<p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
+                     * @param _snatEnable <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
                      * 
                      */
                     void SetSnatEnable(const bool& _snatEnable);
@@ -375,94 +363,91 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target group name (up to 50 characters)
+                     * <p>Target group name. Naming rule: 1-80 English letters, Chinese characters and other internationally compatible language characters, digits, connecting line "-", underscore "_" and other common characters (Unicode supplementary characters such as emoji and rare Chinese characters are forbidden).</p>
                      */
                     std::string m_targetGroupName;
                     bool m_targetGroupNameHasBeenSet;
 
                     /**
-                     * Specifies the vpc id attribute of the target group. uses the default vpc if left empty.
+                     * <p>The vpcId attribute of the target group. Leave it blank to use the default VPC.</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Specifies the default Port of the target group. the default Port can be used when servers are added subsequently. this parameter is not supported for full-listen target groups. for non-full-listen target groups, either Port or Port in TargetGroupInstances.N is required.
-
+                     * <p>Default port of target group. Default port can be used when servers are added subsequently. Full listen target group does not support this parameter. For non-full listen target group, either Port or port in TargetGroupInstances.N is required.</p>
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Specifies the real servers bound to the target group. supports up to 50 at a time.
+                     * <p>The target group supports up to 50 real servers bound to it.</p>
                      */
                     std::vector<TargetGroupInstance> m_targetGroupInstances;
                     bool m_targetGroupInstancesHasBeenSet;
 
                     /**
-                     * Target group type, currently supported v1 (legacy version target group) and v2 (new version target group), defaults to v1 (legacy version target group).
+                     * <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group), defaults to v1 (legacy version target group).</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Backend forwarding protocol of the target group. this field is required for the new version (v2) target group. currently supports TCP, UDP, HTTP, HTTPS, GRPC.
+                     * <p>Backend forwarding protocol of the target group. This field is required for the new version target group v2. Currently supports TCP, UDP, HTTP, HTTPS, GRPC.</p>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Health check.
+                     * <p>Health check.</p>
                      */
                     TargetGroupHealthCheck m_healthCheck;
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+                     * <p>Scheduling algorithm. This parameter is valid only for new version V2 target groups with backend forwarding protocol (HTTP|HTTPS|GRPC). Available values:</p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: least connection.</li><li>IP_HASH: based on IP hash.</li><li>Default WRR.</li>
                      */
                     std::string m_scheduleAlgorithm;
                     bool m_scheduleAlgorithmHasBeenSet;
 
                     /**
-                     * Tag.
+                     * <p>Tag.</p>
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Specifies the default weight of the backend service. among them:.
-<ul><li>Value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+                     * <p>Default weight of the backend service, where:</p><ul><li>Value ranges from 0 to 100.</li><li>After setting this value, when adding a backend service to the target group, if the backend service does not set the weight separately, use the default weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Full listen target group flag. valid values: true (yes), false (no). only target groups of the new version V2 event type support this parameter.
+                     * <p>Full listen target group flag. true: yes, false: no. Only target groups of the new version V2 support this parameter.</p>
                      */
                     bool m_fullListenSwitch;
                     bool m_fullListenSwitchHasBeenSet;
 
                     /**
-                     * Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. 0: disable; 1: enable. this feature is off by default.
+                     * <p>Whether to enable long connections. This parameter is applicable only to HTTP/HTTPS target groups. 0: off; 1: on. Off by default.</p>
                      */
                     bool m_keepaliveEnable;
                     bool m_keepaliveEnableHasBeenSet;
 
                     /**
-                     * Session hold time, unit: second. value range: 30-3600. default: 0, disabled. this parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.
+                     * <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled. This parameter is supported only for target groups with HTTP/HTTPS/GRPC backend forwarding protocol in the new version V2.</p>
                      */
                     uint64_t m_sessionExpireTime;
                     bool m_sessionExpireTimeHasBeenSet;
 
                     /**
-                     * IP version type.
+                     * <p>IP version type.</p>
                      */
                     std::string m_ipVersion;
                     bool m_ipVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether SNAT (source IP replacement) is enabled, True (enabled), False (disabled). Disabled by default. Note: When SnatEnable is enabled, the client source IP will be replaced. At this point, the <code>Pass through client source IP</code> option is disabled, and vice versa.</p>
                      */
                     bool m_snatEnable;
                     bool m_snatEnableHasBeenSet;

@@ -73,6 +73,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/ModifyResourcePackageNameRequest.h
   include/tencentcloud/cynosdb/v20190107/model/UpgradeProxy.h
   include/tencentcloud/cynosdb/v20190107/model/OpenWanResponse.h
+  include/tencentcloud/cynosdb/v20190107/model/OpenAIOptimizerRequest.h
   include/tencentcloud/cynosdb/v20190107/model/BackupFileInfo.h
   include/tencentcloud/cynosdb/v20190107/model/UpgradeProxyRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeBinlogDownloadUrlResponse.h
@@ -187,6 +188,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/CloseProxyEndPointRequest.h
   include/tencentcloud/cynosdb/v20190107/model/LibraDBInstanceInitInfo.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeBinlogsResponse.h
+  include/tencentcloud/cynosdb/v20190107/model/OpenAIOptimizerResponse.h
   include/tencentcloud/cynosdb/v20190107/model/AuditInstanceInfo.h
   include/tencentcloud/cynosdb/v20190107/model/AddClusterSlaveZoneResponse.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeProxySpecsResponse.h
@@ -681,6 +683,7 @@ set(cynosdb_src
   src/v20190107/model/ModifyResourcePackageNameRequest.cpp
   src/v20190107/model/UpgradeProxy.cpp
   src/v20190107/model/OpenWanResponse.cpp
+  src/v20190107/model/OpenAIOptimizerRequest.cpp
   src/v20190107/model/BackupFileInfo.cpp
   src/v20190107/model/UpgradeProxyRequest.cpp
   src/v20190107/model/DescribeBinlogDownloadUrlResponse.cpp
@@ -795,6 +798,7 @@ set(cynosdb_src
   src/v20190107/model/CloseProxyEndPointRequest.cpp
   src/v20190107/model/LibraDBInstanceInitInfo.cpp
   src/v20190107/model/DescribeBinlogsResponse.cpp
+  src/v20190107/model/OpenAIOptimizerResponse.cpp
   src/v20190107/model/AuditInstanceInfo.cpp
   src/v20190107/model/AddClusterSlaveZoneResponse.cpp
   src/v20190107/model/DescribeProxySpecsResponse.cpp

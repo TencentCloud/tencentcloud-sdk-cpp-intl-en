@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
-                     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+                     * 获取Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
+                     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
-                     * @param _locationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+                     * 设置Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
+                     * @param _locationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
                      * 
                      */
                     void SetLocationId(const std::string& _locationId);
@@ -319,7 +319,7 @@ Defaults to 0.
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+                     * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;

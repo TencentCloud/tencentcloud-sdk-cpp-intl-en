@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Availability zone forward affinity info
                 */
                 class AvailableZoneAffinityInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Enable 
+                     * 获取Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+                     * @return Enable Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
                      * 
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置
-                     * @param _enable 
+                     * 设置Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+                     * @param _enable Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
                      * 
                      */
                     void SetEnable(const bool& _enable);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExitRatio 
+                     * 获取The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExitRatio The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetExitRatio() const;
 
                     /**
-                     * 设置
-                     * @param _exitRatio 
+                     * 设置The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _exitRatio The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExitRatio(const uint64_t& _exitRatio);
@@ -89,15 +93,19 @@ namespace TencentCloud
                     bool ExitRatioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReentryRatio 
+                     * 获取The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReentryRatio The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetReentryRatio() const;
 
                     /**
-                     * 设置
-                     * @param _reentryRatio 
+                     * 设置The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _reentryRatio The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReentryRatio(const uint64_t& _reentryRatio);
@@ -112,19 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * 
+                     * The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_exitRatio;
                     bool m_exitRatioHasBeenSet;
 
                     /**
-                     * 
+                     * The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_reentryRatio;
                     bool m_reentryRatioHasBeenSet;

@@ -9140,6 +9140,56 @@ CynosdbClient::OfflineLibraDBInstanceOutcomeCallable CynosdbClient::OfflineLibra
     return prom->get_future();
 }
 
+CynosdbClient::OpenAIOptimizerOutcome CynosdbClient::OpenAIOptimizer(const OpenAIOptimizerRequest &request)
+{
+    auto outcome = MakeRequest(request, "OpenAIOptimizer");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OpenAIOptimizerResponse rsp = OpenAIOptimizerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OpenAIOptimizerOutcome(rsp);
+        else
+            return OpenAIOptimizerOutcome(o.GetError());
+    }
+    else
+    {
+        return OpenAIOptimizerOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::OpenAIOptimizerAsync(const OpenAIOptimizerRequest& request, const OpenAIOptimizerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const OpenAIOptimizerRequest&;
+    using Resp = OpenAIOptimizerResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "OpenAIOptimizer", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::OpenAIOptimizerOutcomeCallable CynosdbClient::OpenAIOptimizerCallable(const OpenAIOptimizerRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<OpenAIOptimizerOutcome>>();
+    OpenAIOptimizerAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const OpenAIOptimizerRequest&,
+        OpenAIOptimizerOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::OpenAuditServiceOutcome CynosdbClient::OpenAuditService(const OpenAuditServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "OpenAuditService");

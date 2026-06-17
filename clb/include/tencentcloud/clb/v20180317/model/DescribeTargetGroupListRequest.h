@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target group ID array
-                     * @return TargetGroupIds Target group ID array
+                     * 获取<p>Target group ID array.</p>
+                     * @return TargetGroupIds <p>Target group ID array.</p>
                      * 
                      */
                     std::vector<std::string> GetTargetGroupIds() const;
 
                     /**
-                     * 设置Target group ID array
-                     * @param _targetGroupIds Target group ID array
+                     * 设置<p>Target group ID array.</p>
+                     * @param _targetGroupIds <p>Target group ID array.</p>
                      * 
                      */
                     void SetTargetGroupIds(const std::vector<std::string>& _targetGroupIds);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TargetGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
-                     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+                     * 获取<p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+                     * @return Filters <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
-                     * @param _filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+                     * 设置<p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+                     * @param _filters <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Starting display offset
-                     * @return Offset Starting display offset
+                     * 获取<p>Starting display offset.</p>
+                     * @return Offset <p>Starting display offset.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting display offset
-                     * @param _offset Starting display offset
+                     * 设置<p>Starting display offset.</p>
+                     * @param _offset <p>Starting display offset.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit of the number of displayed results. Default value: 20.
-                     * @return Limit Limit of the number of displayed results. Default value: 20.
+                     * 获取<p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
+                     * @return Limit <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit of the number of displayed results. Default value: 20.
-                     * @param _limit Limit of the number of displayed results. Default value: 20.
+                     * 设置<p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
+                     * @param _limit <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target group ID array
+                     * <p>Target group ID array.</p>
                      */
                     std::vector<std::string> m_targetGroupIds;
                     bool m_targetGroupIdsHasBeenSet;
 
                     /**
-                     * Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+                     * <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Starting display offset
+                     * <p>Starting display offset.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit of the number of displayed results. Default value: 20.
+                     * <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

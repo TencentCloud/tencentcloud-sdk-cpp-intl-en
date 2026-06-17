@@ -164,15 +164,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool SlaveZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
-                     * @return ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * 获取Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * @return ZoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
-                     * @param _zoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * 设置Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * @param _zoneId Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -416,15 +416,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ClusterTagHasBeenSet() const;
 
                     /**
-                     * 获取Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
-                     * @return Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * 获取Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * @return Zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
-                     * @param _zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * 设置Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * @param _zones Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -437,15 +437,15 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
-                     * @return EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+                     * 获取The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
+                     * @return EipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
                      * 
                      */
                     std::string GetEipAddressId() const;
 
                     /**
-                     * 设置The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
-                     * @param _eipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+                     * 设置The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
+                     * @param _eipAddressId The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
                      * 
                      */
                     void SetEipAddressId(const std::string& _eipAddressId);
@@ -493,7 +493,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool m_slaveZoneIdHasBeenSet;
 
                     /**
-                     * Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
+                     * Applicable only to public network clb. AZ ID, both availability zone ID and name are supported. specify availability zone to create a load balancing instance, for example: 100001 or ap-guangzhou-1. if not passed, queries CVM instances in all azs. if needed, call the API for the query [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to specify availability zone.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -565,13 +565,13 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool m_clusterTagHasBeenSet;
 
                     /**
-                     * Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call DescribeZones (https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
+                     * Applicable only to private network clb. when connected to nearby, select availability zone for deployment. you can call [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1) to query the availability zone list.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the DescribeAddresses API (https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1).
+                     * The unique ID of EIP, such as EIP-qhx8udkc, applicable only to private network clb binding EIP, can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) API .
                      */
                     std::string m_eipAddressId;
                     bool m_eipAddressIdHasBeenSet;

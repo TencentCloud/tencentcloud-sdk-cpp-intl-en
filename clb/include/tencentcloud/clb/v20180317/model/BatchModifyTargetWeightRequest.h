@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取<p>CLB instance ID.</p>
+                     * @return LoadBalancerId <p>CLB instance ID.</p>
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param _loadBalancerId CLB instance ID
+                     * 设置<p>CLB instance ID.</p>
+                     * @param _loadBalancerId <p>CLB instance ID.</p>
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取List of weights to be modified in batches
-                     * @return ModifyList List of weights to be modified in batches
+                     * 获取<p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
+                     * @return ModifyList <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
                      * 
                      */
                     std::vector<RsWeightRule> GetModifyList() const;
 
                     /**
-                     * 设置List of weights to be modified in batches
-                     * @param _modifyList List of weights to be modified in batches
+                     * 设置<p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
+                     * @param _modifyList <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
                      * 
                      */
                     void SetModifyList(const std::vector<RsWeightRule>& _modifyList);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID
+                     * <p>CLB instance ID.</p>
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * List of weights to be modified in batches
+                     * <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
                      */
                     std::vector<RsWeightRule> m_modifyList;
                     bool m_modifyListHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取LoadBalancer list.
-                     * @return LoadBalancers LoadBalancer list.
+                     * 获取<p>CLB list.</p>
+                     * @return LoadBalancers <p>CLB list.</p>
                      * 
                      */
                     std::vector<LoadBalancerHealth> GetLoadBalancers() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * LoadBalancer list.
+                     * <p>CLB list.</p>
                      */
                     std::vector<LoadBalancerHealth> m_loadBalancers;
                     bool m_loadBalancersHasBeenSet;

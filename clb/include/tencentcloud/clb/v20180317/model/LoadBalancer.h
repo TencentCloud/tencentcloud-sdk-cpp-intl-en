@@ -99,18 +99,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
                      * @return LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
                      * 设置Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
                      * @param _loadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
                      * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
@@ -517,15 +517,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressIPVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
-                     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+                     * 获取Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
+                     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
                      * 
                      */
                     uint64_t GetNumericalVpcId() const;
 
                     /**
-                     * 设置Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
-                     * @param _numericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+                     * 设置Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
+                     * @param _numericalVpcId Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
                      * 
                      */
                     void SetNumericalVpcId(const uint64_t& _numericalVpcId);
@@ -540,16 +540,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VipIsp Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -559,16 +559,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vipIsp Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -1482,15 +1482,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AssociateEndpointHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AvailableZoneAffinityInfo 
+                     * 获取Availability zone forwarding affinity info
+                     * @return AvailableZoneAffinityInfo Availability zone forwarding affinity info
                      * 
                      */
                     AvailableZoneAffinityInfo GetAvailableZoneAffinityInfo() const;
 
                     /**
-                     * 设置
-                     * @param _availableZoneAffinityInfo 
+                     * 设置Availability zone forwarding affinity info
+                     * @param _availableZoneAffinityInfo Availability zone forwarding affinity info
                      * 
                      */
                     void SetAvailableZoneAffinityInfo(const AvailableZoneAffinityInfo& _availableZoneAffinityInfo);
@@ -1518,7 +1518,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
                      */
                     std::string m_loadBalancerType;
                     bool m_loadBalancerTypeHasBeenSet;
@@ -1636,7 +1636,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_addressIPVersionHasBeenSet;
 
                     /**
-                     * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+                     * Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
                      */
                     uint64_t m_numericalVpcId;
                     bool m_numericalVpcIdHasBeenSet;
@@ -1644,9 +1644,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -1905,7 +1905,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_associateEndpointHasBeenSet;
 
                     /**
-                     * 
+                     * Availability zone forwarding affinity info
                      */
                     AvailableZoneAffinityInfo m_availableZoneAffinityInfo;
                     bool m_availableZoneAffinityInfoHasBeenSet;
