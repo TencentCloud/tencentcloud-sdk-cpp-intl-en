@@ -10040,6 +10040,56 @@ CwpClient::DescribeMachineGeneralOutcomeCallable CwpClient::DescribeMachineGener
     return prom->get_future();
 }
 
+CwpClient::DescribeMachineInfoOutcome CwpClient::DescribeMachineInfo(const DescribeMachineInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMachineInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMachineInfoResponse rsp = DescribeMachineInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMachineInfoOutcome(rsp);
+        else
+            return DescribeMachineInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMachineInfoOutcome(outcome.GetError());
+    }
+}
+
+void CwpClient::DescribeMachineInfoAsync(const DescribeMachineInfoRequest& request, const DescribeMachineInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMachineInfoRequest&;
+    using Resp = DescribeMachineInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMachineInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CwpClient::DescribeMachineInfoOutcomeCallable CwpClient::DescribeMachineInfoCallable(const DescribeMachineInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMachineInfoOutcome>>();
+    DescribeMachineInfoAsync(
+    request,
+    [prom](
+        const CwpClient*,
+        const DescribeMachineInfoRequest&,
+        DescribeMachineInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CwpClient::DescribeMachineLicenseDetailOutcome CwpClient::DescribeMachineLicenseDetail(const DescribeMachineLicenseDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMachineLicenseDetail");

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-                     * @return Level Risk level
+                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level
-                     * @param _level Risk level
+                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-                     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * 获取Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+                     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-                     * @param _status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * 设置Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+                     * @param _status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the asset
-                     * @return Id Unique ID of the asset
+                     * 获取Risk ID
+                     * @return Id Risk ID
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of the asset
-                     * @param _id Unique ID of the asset
+                     * 设置Risk ID
+                     * @param _id Risk ID
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -383,19 +383,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User Nickname
+                     * @return Nick User Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User Nickname
+                     * @param _nick User Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -408,19 +404,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User UIN
+                     * @return Uin User UIN
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User UIN
+                     * @param _uin User UIN
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -433,15 +425,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Source of the task
-                     * @return From Source of the task
+                     * 获取Recognition Source. See Enumeration Return for details.
+                     * @return From Recognition Source. See Enumeration Return for details.
                      * 
                      */
                     std::string GetFrom() const;
 
                     /**
-                     * 设置Source of the task
-                     * @param _from Source of the task
+                     * 设置Recognition Source. See Enumeration Return for details.
+                     * @param _from Recognition Source. See Enumeration Return for details.
                      * 
                      */
                     void SetFrom(const std::string& _from);
@@ -452,6 +444,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 
                      */
                     bool FromHasBeenSet() const;
+
+                    /**
+                     * 获取Service judgment, high-risk service, web service, other service
+                     * @return ServiceJudge Service judgment, high-risk service, web service, other service
+                     * 
+                     */
+                    std::string GetServiceJudge() const;
+
+                    /**
+                     * 设置Service judgment, high-risk service, web service, other service
+                     * @param _serviceJudge Service judgment, high-risk service, web service, other service
+                     * 
+                     */
+                    void SetServiceJudge(const std::string& _serviceJudge);
+
+                    /**
+                     * 判断参数 ServiceJudge 是否已赋值
+                     * @return ServiceJudge 是否已赋值
+                     * 
+                     */
+                    bool ServiceJudgeHasBeenSet() const;
+
+                    /**
+                     * 获取Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * 
+                     */
+                    uint64_t GetXspmStatus() const;
+
+                    /**
+                     * 设置Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * @param _xspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * 
+                     */
+                    void SetXspmStatus(const uint64_t& _xspmStatus);
+
+                    /**
+                     * 判断参数 XspmStatus 是否已赋值
+                     * @return XspmStatus 是否已赋值
+                     * 
+                     */
+                    bool XspmStatusHasBeenSet() const;
 
                 private:
 
@@ -468,7 +502,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Risk level
+                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -516,13 +550,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Unique ID of the asset
+                     * Risk ID
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -552,24 +586,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
-                     * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User UIN
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Source of the task
+                     * Recognition Source. See Enumeration Return for details.
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
+
+                    /**
+                     * Service judgment, high-risk service, web service, other service
+                     */
+                    std::string m_serviceJudge;
+                    bool m_serviceJudgeHasBeenSet;
+
+                    /**
+                     * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     */
+                    uint64_t m_xspmStatus;
+                    bool m_xspmStatusHasBeenSet;
 
                 };
             }

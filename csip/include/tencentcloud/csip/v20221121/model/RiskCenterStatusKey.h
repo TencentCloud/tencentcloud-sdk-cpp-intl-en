@@ -68,27 +68,6 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
-                     * 
-                     */
-                    std::string GetAppId() const;
-
-                    /**
-                     * 设置User AppId
-                     * @param _appId User AppId
-                     * 
-                     */
-                    void SetAppId(const std::string& _appId);
-
-                    /**
-                     * 判断参数 AppId 是否已赋值
-                     * @return AppId 是否已赋值
-                     * 
-                     */
-                    bool AppIdHasBeenSet() const;
-
-                    /**
                      * 获取Public IP/domain name
                      * @return PublicIPDomain Public IP/domain name
                      * 
@@ -130,6 +109,27 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取User AppId
+                     * @return AppId User AppId
+                     * 
+                     */
+                    std::string GetAppId() const;
+
+                    /**
+                     * 设置User AppId
+                     * @param _appId User AppId
+                     * 
+                     */
+                    void SetAppId(const std::string& _appId);
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     * 
+                     */
+                    bool AppIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -137,12 +137,6 @@ namespace TencentCloud
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
-
-                    /**
-                     * User AppId
-                     */
-                    std::string m_appId;
-                    bool m_appIdHasBeenSet;
 
                     /**
                      * Public IP/domain name
@@ -155,6 +149,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * User AppId
+                     */
+                    std::string m_appId;
+                    bool m_appIdHasBeenSet;
 
                 };
             }

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Member ID of the group account
-                     * @return MemberId Member ID of the group account
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
                      * 
                      */
                     std::vector<std::string> GetMemberId() const;
 
                     /**
-                     * 设置Member ID of the group account
-                     * @param _memberId Member ID of the group account
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
                      * 
                      */
                     void SetMemberId(const std::vector<std::string>& _memberId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter content
-                     * @return Filter Filter content
+                     * 获取Filtered Content
+                     * @return Filter Filtered Content
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter content
-                     * @param _filter Filter content
+                     * 设置Filtered Content
+                     * @param _filter Filtered Content
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Member ID of the group account
+                     * Group Account Member ID
                      */
                     std::vector<std::string> m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Filter content
+                     * Filtered Content
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;

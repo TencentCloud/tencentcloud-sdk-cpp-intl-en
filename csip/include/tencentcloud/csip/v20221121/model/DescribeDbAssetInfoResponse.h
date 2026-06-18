@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取DB Asset Details
+                     * @return Data DB Asset Details
                      * 
                      */
                     DbAssetInfo GetData() const;
@@ -63,8 +61,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * DB Asset Details
                      */
                     DbAssetInfo m_data;
                     bool m_dataHasBeenSet;

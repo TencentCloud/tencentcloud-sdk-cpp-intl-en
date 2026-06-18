@@ -128,6 +128,27 @@ namespace TencentCloud
                     bool AccUinHasBeenSet() const;
 
                     /**
+                     * 获取Access key. Note: Temporary key is unsupported.
+                     * @return AccessKey Access key. Note: Temporary key is unsupported.
+                     * 
+                     */
+                    std::string GetAccessKey() const;
+
+                    /**
+                     * 设置Access key. Note: Temporary key is unsupported.
+                     * @param _accessKey Access key. Note: Temporary key is unsupported.
+                     * 
+                     */
+                    void SetAccessKey(const std::string& _accessKey);
+
+                    /**
+                     * 判断参数 AccessKey 是否已赋值
+                     * @return AccessKey 是否已赋值
+                     * 
+                     */
+                    bool AccessKeyHasBeenSet() const;
+
+                    /**
                      * 获取Filter.
                      * @return Filter Filter.
                      * 
@@ -173,6 +194,12 @@ namespace TencentCloud
                      */
                     std::string m_accUin;
                     bool m_accUinHasBeenSet;
+
+                    /**
+                     * Access key. Note: Temporary key is unsupported.
+                     */
+                    std::string m_accessKey;
+                    bool m_accessKeyHasBeenSet;
 
                     /**
                      * Filter.

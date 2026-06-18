@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number
-                     * @return Total Total number
+                     * 获取<p>Total.</p>
+                     * @return Total <p>Total.</p>
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取List of hosts
-                     * @return List List of hosts
+                     * 获取<p>Host list</p>
+                     * @return List <p>Host list</p>
                      * 
                      */
                     std::vector<ClientSettingHost> GetList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number
+                     * <p>Total.</p>
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * List of hosts
+                     * <p>Host list</p>
                      */
                     std::vector<ClientSettingHost> m_list;
                     bool m_listHasBeenSet;

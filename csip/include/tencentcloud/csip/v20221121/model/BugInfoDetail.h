@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _id Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取POC ID of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PatchId POC ID of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取PocId Corresponding to Vulnerability
+                     * @return PatchId PocId Corresponding to Vulnerability
                      * 
                      */
                     std::string GetPatchId() const;
 
                     /**
-                     * 设置POC ID of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _patchId POC ID of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置PocId Corresponding to Vulnerability
+                     * @param _patchId PocId Corresponding to Vulnerability
                      * 
                      */
                     void SetPatchId(const std::string& _patchId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VULName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVULName() const;
 
                     /**
                      * 设置Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vULName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVULName(const std::string& _vULName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VULNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Level Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Severity: High, Middle, Low, Info.
+                     * @return Level Vulnerability Severity: High, Middle, Low, Info.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _level Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Severity: High, Middle, Low, Info.
+                     * @param _level Vulnerability Severity: High, Middle, Low, Info.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CVSS Score
+                     * @return CVSSScore CVSS Score
                      * 
                      */
                     std::string GetCVSSScore() const;
 
                     /**
-                     * 设置CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CVSS Score
+                     * @param _cVSSScore CVSS Score
                      * 
                      */
                     void SetCVSSScore(const std::string& _cVSSScore);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CVSSScoreHasBeenSet() const;
 
                     /**
-                     * 获取CVE number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CVEId CVE number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CVE ID
+                     * @return CVEId CVE ID
                      * 
                      */
                     std::string GetCVEId() const;
 
                     /**
-                     * 设置CVE number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cVEId CVE number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CVE ID
+                     * @param _cVEId CVE ID
                      * 
                      */
                     void SetCVEId(const std::string& _cVEId);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 设置Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tag Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VULCategory Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
+                     * @return VULCategory Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
                      * 
                      */
                     uint64_t GetVULCategory() const;
 
                     /**
-                     * 设置Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vULCategory Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
+                     * @param _vULCategory Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
                      * 
                      */
                     void SetVULCategory(const uint64_t& _vULCategory);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VULCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Operating systems affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImpactOs Operating systems affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Affected System
+                     * @return ImpactOs Vulnerability Affected System
                      * 
                      */
                     std::string GetImpactOs() const;
 
                     /**
-                     * 设置Operating systems affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _impactOs Operating systems affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Affected System
+                     * @param _impactOs Vulnerability Affected System
                      * 
                      */
                     void SetImpactOs(const std::string& _impactOs);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImpactOsHasBeenSet() const;
 
                     /**
-                     * 获取Components affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImpactCOMPENT Components affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Affected component
+                     * @return ImpactCOMPENT Affected component
                      * 
                      */
                     std::string GetImpactCOMPENT() const;
 
                     /**
-                     * 设置Components affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _impactCOMPENT Components affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Affected component
+                     * @param _impactCOMPENT Affected component
                      * 
                      */
                     void SetImpactCOMPENT(const std::string& _impactCOMPENT);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImpactCOMPENTHasBeenSet() const;
 
                     /**
-                     * 获取Versions affected by the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImpactVersion Versions affected by the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Affected Version
+                     * @return ImpactVersion Vulnerability Affected Version
                      * 
                      */
                     std::string GetImpactVersion() const;
 
                     /**
-                     * 设置Versions affected by the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _impactVersion Versions affected by the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Affected Version
+                     * @param _impactVersion Vulnerability Affected Version
                      * 
                      */
                     void SetImpactVersion(const std::string& _impactVersion);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImpactVersionHasBeenSet() const;
 
                     /**
-                     * 获取Reference information of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Reference Reference information of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Link
+                     * @return Reference Link
                      * 
                      */
                     std::string GetReference() const;
 
                     /**
-                     * 设置Reference information of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reference Reference information of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Link
+                     * @param _reference Link
                      * 
                      */
                     void SetReference(const std::string& _reference);
@@ -348,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Vulnerability description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VULDescribe Vulnerability description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVULDescribe() const;
 
                     /**
                      * 设置Vulnerability description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vULDescribe Vulnerability description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVULDescribe(const std::string& _vULDescribe);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VULDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Fix Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Fixing suggestion
+                     * @return Fix Fixing suggestion
                      * 
                      */
                     std::string GetFix() const;
 
                     /**
-                     * 设置Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fix Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Fixing suggestion
+                     * @param _fix Fixing suggestion
                      * 
                      */
                     void SetFix(const std::string& _fix);
@@ -397,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FixHasBeenSet() const;
 
                     /**
-                     * 获取Product support status. The real-time status is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProSupport Product support status. The real-time status is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product Support Status, returned in real time.
+                     * @return ProSupport Product Support Status, returned in real time.
                      * 
                      */
                     uint64_t GetProSupport() const;
 
                     /**
-                     * 设置Product support status. The real-time status is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proSupport Product support status. The real-time status is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product Support Status, returned in real time.
+                     * @param _proSupport Product Support Status, returned in real time.
                      * 
                      */
                     void SetProSupport(const uint64_t& _proSupport);
@@ -422,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProSupportHasBeenSet() const;
 
                     /**
-                     * 获取Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Published or Not. 0 for No, 1 for Yes.
+                     * @return IsPublish Published or Not. 0 for No, 1 for Yes.
                      * 
                      */
                     uint64_t GetIsPublish() const;
 
                     /**
-                     * 设置Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isPublish Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Published or Not. 0 for No, 1 for Yes.
+                     * @param _isPublish Published or Not. 0 for No, 1 for Yes.
                      * 
                      */
                     void SetIsPublish(const uint64_t& _isPublish);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsPublishHasBeenSet() const;
 
                     /**
-                     * 获取Disclosure time of the vulnerability. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReleaseTime Disclosure time of the vulnerability. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Release time.
+                     * @return ReleaseTime Release time.
                      * 
                      */
                     std::string GetReleaseTime() const;
 
                     /**
-                     * 设置Disclosure time of the vulnerability. 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _releaseTime Disclosure time of the vulnerability. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Release time.
+                     * @param _releaseTime Release time.
                      * 
                      */
                     void SetReleaseTime(const std::string& _releaseTime);
@@ -472,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReleaseTimeHasBeenSet() const;
 
                     /**
-                     * 获取The time when the vulnerability is added to the vulnerability database.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime The time when the vulnerability is added to the vulnerability database.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The time when the vulnerability is added to the vulnerability database.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime The time when the vulnerability is added to the vulnerability database.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -497,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The last update time of the vulnerability in the database
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime The last update time of the vulnerability in the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update time
+                     * @return UpdateTime Update time
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The last update time of the vulnerability in the database
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _updateTime The last update time of the vulnerability in the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update time
+                     * @param _updateTime Update time
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -522,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-category of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubCategory Sub-category of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Subcategory
+                     * @return SubCategory Vulnerability Subcategory
                      * 
                      */
                     std::string GetSubCategory() const;
 
                     /**
-                     * 设置Sub-category of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subCategory Sub-category of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability Subcategory
+                     * @param _subCategory Vulnerability Subcategory
                      * 
                      */
                     void SetSubCategory(const std::string& _subCategory);
@@ -550,140 +470,120 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * POC ID of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * PocId Corresponding to Vulnerability
                      */
                     std::string m_patchId;
                     bool m_patchIdHasBeenSet;
 
                     /**
                      * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vULName;
                     bool m_vULNameHasBeenSet;
 
                     /**
-                     * Vulnerability severity: `high`, `middle`, `low`, `info`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Severity: High, Middle, Low, Info.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CVSS Score
                      */
                     std::string m_cVSSScore;
                     bool m_cVSSScoreHasBeenSet;
 
                     /**
-                     * CVE number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CVE ID
                      */
                     std::string m_cVEId;
                     bool m_cVEIdHasBeenSet;
 
                     /**
                      * Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Vulnerability category: `1`: Web application vulnerabilities, `2`: System component vulnerabilities, `3`: Configuration risks
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Type. 1: Web Application; 2: System Component Vulnerabilities; 3: Configuration Risk.
                      */
                     uint64_t m_vULCategory;
                     bool m_vULCategoryHasBeenSet;
 
                     /**
-                     * Operating systems affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Affected System
                      */
                     std::string m_impactOs;
                     bool m_impactOsHasBeenSet;
 
                     /**
-                     * Components affected by the vulnerability 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Affected component
                      */
                     std::string m_impactCOMPENT;
                     bool m_impactCOMPENTHasBeenSet;
 
                     /**
-                     * Versions affected by the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Affected Version
                      */
                     std::string m_impactVersion;
                     bool m_impactVersionHasBeenSet;
 
                     /**
-                     * Reference information of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Link
                      */
                     std::string m_reference;
                     bool m_referenceHasBeenSet;
 
                     /**
                      * Vulnerability description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vULDescribe;
                     bool m_vULDescribeHasBeenSet;
 
                     /**
-                     * Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Fixing suggestion
                      */
                     std::string m_fix;
                     bool m_fixHasBeenSet;
 
                     /**
-                     * Product support status. The real-time status is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product Support Status, returned in real time.
                      */
                     uint64_t m_proSupport;
                     bool m_proSupportHasBeenSet;
 
                     /**
-                     * Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Published or Not. 0 for No, 1 for Yes.
                      */
                     uint64_t m_isPublish;
                     bool m_isPublishHasBeenSet;
 
                     /**
-                     * Disclosure time of the vulnerability. 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Release time.
                      */
                     std::string m_releaseTime;
                     bool m_releaseTimeHasBeenSet;
 
                     /**
-                     * The time when the vulnerability is added to the vulnerability database.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The last update time of the vulnerability in the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update time
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Sub-category of the vulnerability
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability Subcategory
                      */
                     std::string m_subCategory;
                     bool m_subCategoryHasBeenSet;

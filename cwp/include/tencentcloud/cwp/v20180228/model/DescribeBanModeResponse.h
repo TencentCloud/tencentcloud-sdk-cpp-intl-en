@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-                     * @return Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+                     * 获取<p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+                     * @return Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
                      * 
                      */
                     std::string GetMode() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of the standard blocking mode
-                     * @return StandardModeConfig Configuration of the standard blocking mode
+                     * 获取<p>Configuration of the standard blocking mode</p>
+                     * @return StandardModeConfig <p>Configuration of the standard blocking mode</p>
                      * 
                      */
                     StandardModeConfig GetStandardModeConfig() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+                     * <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Configuration of the standard blocking mode
+                     * <p>Configuration of the standard blocking mode</p>
                      */
                     StandardModeConfig m_standardModeConfig;
                     bool m_standardModeConfigHasBeenSet;

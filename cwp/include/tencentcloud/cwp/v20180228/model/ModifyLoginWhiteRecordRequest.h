@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Allowlisted users (Multiple users are separated by commas.)
-                     * @return UserName Allowlisted users (Multiple users are separated by commas.)
+                     * 获取<p>Allowlisted users (multiple users separated by commas)</p>
+                     * @return UserName <p>Allowlisted users (multiple users separated by commas)</p>
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Allowlisted users (Multiple users are separated by commas.)
-                     * @param _userName Allowlisted users (Multiple users are separated by commas.)
+                     * 设置<p>Allowlisted users (multiple users separated by commas)</p>
+                     * @param _userName <p>Allowlisted users (multiple users separated by commas)</p>
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Allowlisted dimension information recorded after the update
-                     * @return SrcIp Allowlisted dimension information recorded after the update
+                     * 获取<p>Allowlisted dimension information recorded after the update</p>
+                     * @return SrcIp <p>Allowlisted dimension information recorded after the update</p>
                      * 
                      */
                     std::string GetSrcIp() const;
 
                     /**
-                     * 设置Allowlisted dimension information recorded after the update
-                     * @param _srcIp Allowlisted dimension information recorded after the update
+                     * 设置<p>Allowlisted dimension information recorded after the update</p>
+                     * @param _srcIp <p>Allowlisted dimension information recorded after the update</p>
                      * 
                      */
                     void SetSrcIp(const std::string& _srcIp);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SrcIpHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取<p>Start time.</p>
+                     * @return StartTime <p>Start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param _startTime Start time
+                     * 设置<p>Start time.</p>
+                     * @param _startTime <p>Start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取<p>End time.</p>
+                     * @return EndTime <p>End time.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param _endTime End time
+                     * 设置<p>End time.</p>
+                     * @param _endTime <p>End time.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Remark Remarks
+                     * 获取<p>Remark</p>
+                     * @return Remark <p>Remark</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _remark Remarks
+                     * 设置<p>Remark</p>
+                     * @param _remark <p>Remark</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether it applies to all servers: 0: no; 1: yes
-                     * @return IsGlobal Whether it applies to all servers: 0: no; 1: yes
+                     * 获取<p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+                     * @return IsGlobal <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
                      * 
                      */
                     uint64_t GetIsGlobal() const;
 
                     /**
-                     * 设置Whether it applies to all servers: 0: no; 1: yes
-                     * @param _isGlobal Whether it applies to all servers: 0: no; 1: yes
+                     * 设置<p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+                     * @param _isGlobal <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
                      * 
                      */
                     void SetIsGlobal(const uint64_t& _isGlobal);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool IsGlobalHasBeenSet() const;
 
                     /**
-                     * 获取Allowlist ID
-                     * @return Id Allowlist ID
+                     * 获取<p>Allowlist ID</p>
+                     * @return Id <p>Allowlist ID</p>
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Allowlist ID
-                     * @param _id Allowlist ID
+                     * 设置<p>Allowlist ID</p>
+                     * @param _id <p>Allowlist ID</p>
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Server list
-                     * @return Hosts Server list
+                     * 获取<p>Server list</p>
+                     * @return Hosts <p>Server list</p>
                      * 
                      */
                     std::vector<HostInfo> GetHosts() const;
 
                     /**
-                     * 设置Server list
-                     * @param _hosts Server list
+                     * 设置<p>Server list</p>
+                     * @param _hosts <p>Server list</p>
                      * 
                      */
                     void SetHosts(const std::vector<HostInfo>& _hosts);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool HostsHasBeenSet() const;
 
                     /**
-                     * 获取Region list
-                     * @return Places Region list
+                     * 获取<p>Region list</p>
+                     * @return Places <p>Region list</p>
                      * 
                      */
                     std::vector<Place> GetPlaces() const;
 
                     /**
-                     * 设置Region list
-                     * @param _places Region list
+                     * 设置<p>Region list</p>
+                     * @param _places <p>Region list</p>
                      * 
                      */
                     void SetPlaces(const std::vector<Place>& _places);
@@ -236,55 +236,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Allowlisted users (Multiple users are separated by commas.)
+                     * <p>Allowlisted users (multiple users separated by commas)</p>
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Allowlisted dimension information recorded after the update
+                     * <p>Allowlisted dimension information recorded after the update</p>
                      */
                     std::string m_srcIp;
                     bool m_srcIpHasBeenSet;
 
                     /**
-                     * Start time
+                     * <p>Start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * <p>End time.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Remarks
+                     * <p>Remark</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether it applies to all servers: 0: no; 1: yes
+                     * <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
                      */
                     uint64_t m_isGlobal;
                     bool m_isGlobalHasBeenSet;
 
                     /**
-                     * Allowlist ID
+                     * <p>Allowlist ID</p>
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Server list
+                     * <p>Server list</p>
                      */
                     std::vector<HostInfo> m_hosts;
                     bool m_hostsHasBeenSet;
 
                     /**
-                     * Region list
+                     * <p>Region list</p>
                      */
                     std::vector<Place> m_places;
                     bool m_placesHasBeenSet;

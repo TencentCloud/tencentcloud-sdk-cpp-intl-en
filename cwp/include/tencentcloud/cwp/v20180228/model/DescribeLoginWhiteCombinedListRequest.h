@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of items to be returned. It is 10 by default, and the maximum value is 100.
-                     * @return Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
+                     * 获取<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of items to be returned. It is 10 by default, and the maximum value is 100.
-                     * @param _limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
+                     * 设置<p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+                     * @param _limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which defaults to 0
-                     * @return Offset Offset, which defaults to 0
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which defaults to 0
-                     * @param _offset Offset, which defaults to 0
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
-                     * @return Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+                     * 获取<p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
+                     * @return Filters <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
-                     * @param _filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+                     * 设置<p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
+                     * @param _filters <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of items to be returned. It is 10 by default, and the maximum value is 100.
+                     * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which defaults to 0
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+                     * <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

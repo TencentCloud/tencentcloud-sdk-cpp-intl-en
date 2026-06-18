@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return ListenerId Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _listenerId Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetListenerId(const std::string& _listenerId);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ListenerName The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取listener name
+                     * @return ListenerName listener name
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _listenerName The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置listener name
+                     * @param _listenerName listener name
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -97,19 +89,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ListenerNameHasBeenSet() const;
 
                     /**
-                     * 获取Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerId Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CLB Id
+                     * @return LoadBalancerId CLB Id
                      * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerId Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CLB Id
+                     * @param _loadBalancerId CLB Id
                      * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
@@ -122,19 +110,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerName CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CLB name
+                     * @return LoadBalancerName CLB name
                      * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
-                     * 设置CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerName CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CLB name
+                     * @param _loadBalancerName CLB name
                      * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
@@ -147,19 +131,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Protocol Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Protocol
+                     * @return Protocol Protocol
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _protocol Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Protocol
+                     * @param _protocol Protocol
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -172,19 +152,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -197,19 +173,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Vip CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Load balancing ip
+                     * @return Vip Load balancing ip
                      * 
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _vip CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Load balancing ip
+                     * @param _vip Load balancing ip
                      * 
                      */
                     void SetVip(const std::string& _vip);
@@ -222,19 +194,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VPort Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Port.
+                     * @return VPort Port.
                      * 
                      */
                     int64_t GetVPort() const;
 
                     /**
-                     * 设置Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _vPort Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Port.
+                     * @param _vPort Port.
                      * 
                      */
                     void SetVPort(const int64_t& _vPort);
@@ -247,19 +215,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Zone Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Zone Region.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _zone Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _zone Region.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -272,19 +236,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return NumericalVpcId VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取VPC id
+                     * @return NumericalVpcId VPC id
                      * 
                      */
                     int64_t GetNumericalVpcId() const;
 
                     /**
-                     * 设置VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _numericalVpcId VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置VPC id
+                     * @param _numericalVpcId VPC id
                      * 
                      */
                     void SetNumericalVpcId(const int64_t& _numericalVpcId);
@@ -297,19 +257,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NumericalVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerType CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CLB Type
+                     * @return LoadBalancerType CLB Type
                      * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
-                     * 设置CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerType CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CLB Type
+                     * @param _loadBalancerType CLB Type
                      * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
@@ -322,19 +278,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LoadBalancerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Domain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Listener Domain Name
+                     * @return Domain Listener Domain Name
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _domain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Listener Domain Name
+                     * @param _domain Listener Domain Name
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -347,19 +299,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return LoadBalancerDomain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CLB domain name
+                     * @return LoadBalancerDomain CLB domain name
                      * 
                      */
                     std::string GetLoadBalancerDomain() const;
 
                     /**
-                     * 设置Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _loadBalancerDomain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CLB domain name
+                     * @param _loadBalancerDomain CLB domain name
                      * 
                      */
                     void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
@@ -375,91 +323,78 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * listener name
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
 
                     /**
-                     * Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CLB Id
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CLB name
                      */
                     std::string m_loadBalancerName;
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Protocol
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Load balancing ip
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Port.
                      */
                     int64_t m_vPort;
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * VPC id
                      */
                     int64_t m_numericalVpcId;
                     bool m_numericalVpcIdHasBeenSet;
 
                     /**
-                     * CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CLB Type
                      */
                     std::string m_loadBalancerType;
                     bool m_loadBalancerTypeHasBeenSet;
 
                     /**
-                     * Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Listener Domain Name
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CLB domain name
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm name.
-                     * @return Name Alarm name.
+                     * 获取<p>Alarm name</p>
+                     * @return Name <p>Alarm name</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Alarm name.
-                     * @param _name Alarm name.
+                     * 设置<p>Alarm name</p>
+                     * @param _name <p>Alarm name</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-                     * @return Level Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * 获取<p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+                     * @return Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
-                     * 设置Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-                     * @param _level Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * 设置<p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+                     * @param _level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -93,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Alarm record ID.
-                     * @return ID Alarm record ID.
+                     * 获取<p>Alarm record ID</p>
+                     * @return ID <p>Alarm record ID</p>
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Alarm record ID.
-                     * @param _iD Alarm record ID.
+                     * 设置<p>Alarm record ID</p>
+                     * @param _iD <p>Alarm record ID</p>
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -114,15 +110,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Alarm rule ID.
-                     * @return AlarmRuleID Alarm rule ID.
+                     * 获取<p>Alarm rule ID</p>
+                     * @return AlarmRuleID <p>Alarm rule ID</p>
                      * 
                      */
                     int64_t GetAlarmRuleID() const;
 
                     /**
-                     * 设置Alarm rule ID.
-                     * @param _alarmRuleID Alarm rule ID.
+                     * 设置<p>Alarm rule ID</p>
+                     * @param _alarmRuleID <p>Alarm rule ID</p>
                      * 
                      */
                     void SetAlarmRuleID(const int64_t& _alarmRuleID);
@@ -135,23 +131,15 @@ namespace TencentCloud
                     bool AlarmRuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Alarm type
-Abnormal call.
-Leak monitoring.
-                     * @return AlarmType Alarm type
-Abnormal call.
-Leak monitoring.
+                     * 获取<p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+                     * @return AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
                      * 
                      */
                     int64_t GetAlarmType() const;
 
                     /**
-                     * 设置Alarm type
-Abnormal call.
-Leak monitoring.
-                     * @param _alarmType Alarm type
-Abnormal call.
-Leak monitoring.
+                     * 设置<p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+                     * @param _alarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
                      * 
                      */
                     void SetAlarmType(const int64_t& _alarmType);
@@ -164,15 +152,15 @@ Leak monitoring.
                     bool AlarmTypeHasBeenSet() const;
 
                     /**
-                     * 获取Access key.
-                     * @return AccessKey Access key.
+                     * 获取<p>Access key</p>
+                     * @return AccessKey <p>Access key</p>
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access key.
-                     * @param _accessKey Access key.
+                     * 设置<p>Access key</p>
+                     * @param _accessKey <p>Access key</p>
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -185,15 +173,15 @@ Leak monitoring.
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Access key ID.
-                     * @return AccessKeyID Access key ID.
+                     * 获取<p>Access Key ID</p>
+                     * @return AccessKeyID <p>Access Key ID</p>
                      * 
                      */
                     uint64_t GetAccessKeyID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _accessKeyID Access key ID.
+                     * 设置<p>Access Key ID</p>
+                     * @param _accessKeyID <p>Access Key ID</p>
                      * 
                      */
                     void SetAccessKeyID(const uint64_t& _accessKeyID);
@@ -206,15 +194,15 @@ Leak monitoring.
                     bool AccessKeyIDHasBeenSet() const;
 
                     /**
-                     * 获取Access key remark.
-                     * @return AccessKeyRemark Access key remark.
+                     * 获取<p>Access key remark</p>
+                     * @return AccessKeyRemark <p>Access key remark</p>
                      * 
                      */
                     std::string GetAccessKeyRemark() const;
 
                     /**
-                     * 设置Access key remark.
-                     * @param _accessKeyRemark Access key remark.
+                     * 设置<p>Access key remark</p>
+                     * @param _accessKeyRemark <p>Access key remark</p>
                      * 
                      */
                     void SetAccessKeyRemark(const std::string& _accessKeyRemark);
@@ -227,15 +215,15 @@ Leak monitoring.
                     bool AccessKeyRemarkHasBeenSet() const;
 
                     /**
-                     * 获取Last Alarm Time
-                     * @return LastAlarmTime Last Alarm Time
+                     * 获取<p>Last alarm time</p>
+                     * @return LastAlarmTime <p>Last alarm time</p>
                      * 
                      */
                     std::string GetLastAlarmTime() const;
 
                     /**
-                     * 设置Last Alarm Time
-                     * @param _lastAlarmTime Last Alarm Time
+                     * 设置<p>Last alarm time</p>
+                     * @param _lastAlarmTime <p>Last alarm time</p>
                      * 
                      */
                     void SetLastAlarmTime(const std::string& _lastAlarmTime);
@@ -248,19 +236,15 @@ Leak monitoring.
                     bool LastAlarmTimeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
-                     * @return Status Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+                     * 获取<p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+                     * @return Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
-                     * @param _status Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+                     * 设置<p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+                     * @param _status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -273,15 +257,15 @@ Leak monitoring.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Aggregate date.
-                     * @return Date Aggregate date.
+                     * 获取<p>Aggregate date</p>
+                     * @return Date <p>Aggregate date</p>
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置Aggregate date.
-                     * @param _date Aggregate date.
+                     * 设置<p>Aggregate date</p>
+                     * @param _date <p>Aggregate date</p>
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -294,15 +278,15 @@ Leak monitoring.
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取Alarm Tag.
-                     * @return Tag Alarm Tag.
+                     * 获取<p>Alarm tag</p>
+                     * @return Tag <p>Alarm tag</p>
                      * 
                      */
                     std::vector<std::string> GetTag() const;
 
                     /**
-                     * 设置Alarm Tag.
-                     * @param _tag Alarm Tag.
+                     * 设置<p>Alarm tag</p>
+                     * @param _tag <p>Alarm tag</p>
                      * 
                      */
                     void SetTag(const std::vector<std::string>& _tag);
@@ -315,15 +299,15 @@ Leak monitoring.
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Account associate Uin belonging to main account.
-                     * @return Uin Account associate Uin belonging to main account.
+                     * 获取<p>Uin of the main account</p>
+                     * @return Uin <p>Uin of the main account</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Account associate Uin belonging to main account.
-                     * @param _uin Account associate Uin belonging to main account.
+                     * 设置<p>Uin of the main account</p>
+                     * @param _uin <p>Uin of the main account</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -336,15 +320,15 @@ Leak monitoring.
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Nickname of the main account.
-                     * @return Nickname Nickname of the main account.
+                     * 获取<p>Nickname of the main account</p>
+                     * @return Nickname <p>Nickname of the main account</p>
                      * 
                      */
                     std::string GetNickname() const;
 
                     /**
-                     * 设置Nickname of the main account.
-                     * @param _nickname Nickname of the main account.
+                     * 设置<p>Nickname of the main account</p>
+                     * @param _nickname <p>Nickname of the main account</p>
                      * 
                      */
                     void SetNickname(const std::string& _nickname);
@@ -357,15 +341,15 @@ Leak monitoring.
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account Uin belonging to.
-                     * @return SubUin Sub-Account Uin belonging to.
+                     * 获取<p>Sub-account Uin</p>
+                     * @return SubUin <p>Sub-account Uin</p>
                      * 
                      */
                     std::string GetSubUin() const;
 
                     /**
-                     * 设置Sub-Account Uin belonging to.
-                     * @param _subUin Sub-Account Uin belonging to.
+                     * 设置<p>Sub-account Uin</p>
+                     * @param _subUin <p>Sub-account Uin</p>
                      * 
                      */
                     void SetSubUin(const std::string& _subUin);
@@ -378,15 +362,15 @@ Leak monitoring.
                     bool SubUinHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account nickname.
-                     * @return SubNickname Sub-Account nickname.
+                     * 获取<p>Sub-account nickname</p>
+                     * @return SubNickname <p>Sub-account nickname</p>
                      * 
                      */
                     std::string GetSubNickname() const;
 
                     /**
-                     * 设置Sub-Account nickname.
-                     * @param _subNickname Sub-Account nickname.
+                     * 设置<p>Sub-account nickname</p>
+                     * @param _subNickname <p>Sub-account nickname</p>
                      * 
                      */
                     void SetSubNickname(const std::string& _subNickname);
@@ -399,19 +383,15 @@ Leak monitoring.
                     bool SubNicknameHasBeenSet() const;
 
                     /**
-                     * 获取Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
-                     * @return Type Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+                     * 获取<p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+                     * @return Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
-                     * @param _type Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+                     * 设置<p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+                     * @param _type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -424,15 +404,15 @@ Leak monitoring.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取App ID
-                     * @return AppID App ID
+                     * 获取<p>App ID</p>
+                     * @return AppID <p>App ID</p>
                      * 
                      */
                     int64_t GetAppID() const;
 
                     /**
-                     * 设置App ID
-                     * @param _appID App ID
+                     * 设置<p>App ID</p>
+                     * @param _appID <p>App ID</p>
                      * 
                      */
                     void SetAppID(const int64_t& _appID);
@@ -445,15 +425,15 @@ Leak monitoring.
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Leakage evidence.
-                     * @return LeakEvidence Leakage evidence.
+                     * 获取<p>Leakage evidence</p>
+                     * @return LeakEvidence <p>Leakage evidence</p>
                      * 
                      */
                     std::vector<std::string> GetLeakEvidence() const;
 
                     /**
-                     * 设置Leakage evidence.
-                     * @param _leakEvidence Leakage evidence.
+                     * 设置<p>Leakage evidence</p>
+                     * @param _leakEvidence <p>Leakage evidence</p>
                      * 
                      */
                     void SetLeakEvidence(const std::vector<std::string>& _leakEvidence);
@@ -466,15 +446,15 @@ Leak monitoring.
                     bool LeakEvidenceHasBeenSet() const;
 
                     /**
-                     * 获取Whether editing a trusted account is supported.
-                     * @return IsSupportEditWhiteAccount Whether editing a trusted account is supported.
+                     * 获取<p>Whether support editing trust account</p>
+                     * @return IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
                      * 
                      */
                     bool GetIsSupportEditWhiteAccount() const;
 
                     /**
-                     * 设置Whether editing a trusted account is supported.
-                     * @param _isSupportEditWhiteAccount Whether editing a trusted account is supported.
+                     * 设置<p>Whether support editing trust account</p>
+                     * @param _isSupportEditWhiteAccount <p>Whether support editing trust account</p>
                      * 
                      */
                     void SetIsSupportEditWhiteAccount(const bool& _isSupportEditWhiteAccount);
@@ -487,15 +467,15 @@ Leak monitoring.
                     bool IsSupportEditWhiteAccountHasBeenSet() const;
 
                     /**
-                     * 获取Alarm evidence.
-                     * @return Evidence Alarm evidence.
+                     * 获取<p>Alert evidence</p>
+                     * @return Evidence <p>Alert evidence</p>
                      * 
                      */
                     std::string GetEvidence() const;
 
                     /**
-                     * 设置Alarm evidence.
-                     * @param _evidence Alarm evidence.
+                     * 设置<p>Alert evidence</p>
+                     * @param _evidence <p>Alert evidence</p>
                      * 
                      */
                     void SetEvidence(const std::string& _evidence);
@@ -508,15 +488,15 @@ Leak monitoring.
                     bool EvidenceHasBeenSet() const;
 
                     /**
-                     * 获取Alarm rule flag.
-                     * @return RuleKey Alarm rule flag.
+                     * 获取<p>Alarm rule flag</p>
+                     * @return RuleKey <p>Alarm rule flag</p>
                      * 
                      */
                     std::string GetRuleKey() const;
 
                     /**
-                     * 设置Alarm rule flag.
-                     * @param _ruleKey Alarm rule flag.
+                     * 设置<p>Alarm rule flag</p>
+                     * @param _ruleKey <p>Alarm rule flag</p>
                      * 
                      */
                     void SetRuleKey(const std::string& _ruleKey);
@@ -529,15 +509,15 @@ Leak monitoring.
                     bool RuleKeyHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 获取<p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+                     * @return CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @param _cloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 设置<p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+                     * @param _cloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -550,35 +530,15 @@ Leak monitoring.
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
-                     * @return AIStatus Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+                     * 获取<p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+                     * @return AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
                      * 
                      */
                     int64_t GetAIStatus() const;
 
                     /**
-                     * 设置Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
-                     * @param _aIStatus Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+                     * 设置<p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+                     * @param _aIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
                      * 
                      */
                     void SetAIStatus(const int64_t& _aIStatus);
@@ -591,15 +551,15 @@ Under analysis.
                     bool AIStatusHasBeenSet() const;
 
                     /**
-                     * 获取First Alarm timestamp (in seconds).
-                     * @return FirstAlarmTimestamp First Alarm timestamp (in seconds).
+                     * 获取<p>First alarm timestamp (in seconds)</p>
+                     * @return FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
                      * 
                      */
                     int64_t GetFirstAlarmTimestamp() const;
 
                     /**
-                     * 设置First Alarm timestamp (in seconds).
-                     * @param _firstAlarmTimestamp First Alarm timestamp (in seconds).
+                     * 设置<p>First alarm timestamp (in seconds)</p>
+                     * @param _firstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
                      * 
                      */
                     void SetFirstAlarmTimestamp(const int64_t& _firstAlarmTimestamp);
@@ -612,15 +572,15 @@ Under analysis.
                     bool FirstAlarmTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Last Alarm timestamp (in seconds).
-                     * @return LastAlarmTimestamp Last Alarm timestamp (in seconds).
+                     * 获取<p>Last alarm timestamp (in seconds)</p>
+                     * @return LastAlarmTimestamp <p>Last alarm timestamp (in seconds)</p>
                      * 
                      */
                     int64_t GetLastAlarmTimestamp() const;
 
                     /**
-                     * 设置Last Alarm timestamp (in seconds).
-                     * @param _lastAlarmTimestamp Last Alarm timestamp (in seconds).
+                     * 设置<p>Last alarm timestamp (in seconds)</p>
+                     * @param _lastAlarmTimestamp <p>Last alarm timestamp (in seconds)</p>
                      * 
                      */
                     void SetLastAlarmTimestamp(const int64_t& _lastAlarmTimestamp);
@@ -632,173 +592,190 @@ Under analysis.
                      */
                     bool LastAlarmTimestampHasBeenSet() const;
 
+                    /**
+                     * 获取<p>AI analysis failure description. Empty string if not failed.</p>
+                     * @return AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+                     * 
+                     */
+                    std::string GetAIFailedReason() const;
+
+                    /**
+                     * 设置<p>AI analysis failure description. Empty string if not failed.</p>
+                     * @param _aIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+                     * 
+                     */
+                    void SetAIFailedReason(const std::string& _aIFailedReason);
+
+                    /**
+                     * 判断参数 AIFailedReason 是否已赋值
+                     * @return AIFailedReason 是否已赋值
+                     * 
+                     */
+                    bool AIFailedReasonHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Alarm name.
+                     * <p>Alarm name</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Alarm record ID.
+                     * <p>Alarm record ID</p>
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Alarm rule ID.
+                     * <p>Alarm rule ID</p>
                      */
                     int64_t m_alarmRuleID;
                     bool m_alarmRuleIDHasBeenSet;
 
                     /**
-                     * Alarm type
-Abnormal call.
-Leak monitoring.
+                     * <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
                      */
                     int64_t m_alarmType;
                     bool m_alarmTypeHasBeenSet;
 
                     /**
-                     * Access key.
+                     * <p>Access key</p>
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Access key ID.
+                     * <p>Access Key ID</p>
                      */
                     uint64_t m_accessKeyID;
                     bool m_accessKeyIDHasBeenSet;
 
                     /**
-                     * Access key remark.
+                     * <p>Access key remark</p>
                      */
                     std::string m_accessKeyRemark;
                     bool m_accessKeyRemarkHasBeenSet;
 
                     /**
-                     * Last Alarm Time
+                     * <p>Last alarm time</p>
                      */
                     std::string m_lastAlarmTime;
                     bool m_lastAlarmTimeHasBeenSet;
 
                     /**
-                     * Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+                     * <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Aggregate date.
+                     * <p>Aggregate date</p>
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * Alarm Tag.
+                     * <p>Alarm tag</p>
                      */
                     std::vector<std::string> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Account associate Uin belonging to main account.
+                     * <p>Uin of the main account</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Nickname of the main account.
+                     * <p>Nickname of the main account</p>
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Sub-Account Uin belonging to.
+                     * <p>Sub-account Uin</p>
                      */
                     std::string m_subUin;
                     bool m_subUinHasBeenSet;
 
                     /**
-                     * Sub-Account nickname.
+                     * <p>Sub-account nickname</p>
                      */
                     std::string m_subNickname;
                     bool m_subNicknameHasBeenSet;
 
                     /**
-                     * Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+                     * <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * App ID
+                     * <p>App ID</p>
                      */
                     int64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Leakage evidence.
+                     * <p>Leakage evidence</p>
                      */
                     std::vector<std::string> m_leakEvidence;
                     bool m_leakEvidenceHasBeenSet;
 
                     /**
-                     * Whether editing a trusted account is supported.
+                     * <p>Whether support editing trust account</p>
                      */
                     bool m_isSupportEditWhiteAccount;
                     bool m_isSupportEditWhiteAccountHasBeenSet;
 
                     /**
-                     * Alarm evidence.
+                     * <p>Alert evidence</p>
                      */
                     std::string m_evidence;
                     bool m_evidenceHasBeenSet;
 
                     /**
-                     * Alarm rule flag.
+                     * <p>Alarm rule flag</p>
                      */
                     std::string m_ruleKey;
                     bool m_ruleKeyHasBeenSet;
 
                     /**
-                     * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+                     * <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
                      */
                     int64_t m_aIStatus;
                     bool m_aIStatusHasBeenSet;
 
                     /**
-                     * First Alarm timestamp (in seconds).
+                     * <p>First alarm timestamp (in seconds)</p>
                      */
                     int64_t m_firstAlarmTimestamp;
                     bool m_firstAlarmTimestampHasBeenSet;
 
                     /**
-                     * Last Alarm timestamp (in seconds).
+                     * <p>Last alarm timestamp (in seconds)</p>
                      */
                     int64_t m_lastAlarmTimestamp;
                     bool m_lastAlarmTimestampHasBeenSet;
+
+                    /**
+                     * <p>AI analysis failure description. Empty string if not failed.</p>
+                     */
+                    std::string m_aIFailedReason;
+                    bool m_aIFailedReasonHasBeenSet;
 
                 };
             }

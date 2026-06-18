@@ -240,6 +240,156 @@ CsipClient::CreateDomainAndIpOutcomeCallable CsipClient::CreateDomainAndIpCallab
     return prom->get_future();
 }
 
+CsipClient::CreateIaCAccessTokenOutcome CsipClient::CreateIaCAccessToken(const CreateIaCAccessTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateIaCAccessToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateIaCAccessTokenResponse rsp = CreateIaCAccessTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateIaCAccessTokenOutcome(rsp);
+        else
+            return CreateIaCAccessTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateIaCAccessTokenOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateIaCAccessTokenAsync(const CreateIaCAccessTokenRequest& request, const CreateIaCAccessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateIaCAccessTokenRequest&;
+    using Resp = CreateIaCAccessTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateIaCAccessToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateIaCAccessTokenOutcomeCallable CsipClient::CreateIaCAccessTokenCallable(const CreateIaCAccessTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateIaCAccessTokenOutcome>>();
+    CreateIaCAccessTokenAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateIaCAccessTokenRequest&,
+        CreateIaCAccessTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateIaCFileExportJobOutcome CsipClient::CreateIaCFileExportJob(const CreateIaCFileExportJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateIaCFileExportJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateIaCFileExportJobResponse rsp = CreateIaCFileExportJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateIaCFileExportJobOutcome(rsp);
+        else
+            return CreateIaCFileExportJobOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateIaCFileExportJobOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateIaCFileExportJobAsync(const CreateIaCFileExportJobRequest& request, const CreateIaCFileExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateIaCFileExportJobRequest&;
+    using Resp = CreateIaCFileExportJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateIaCFileExportJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateIaCFileExportJobOutcomeCallable CsipClient::CreateIaCFileExportJobCallable(const CreateIaCFileExportJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateIaCFileExportJobOutcome>>();
+    CreateIaCFileExportJobAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateIaCFileExportJobRequest&,
+        CreateIaCFileExportJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateIaCFileReScanTaskOutcome CsipClient::CreateIaCFileReScanTask(const CreateIaCFileReScanTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateIaCFileReScanTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateIaCFileReScanTaskResponse rsp = CreateIaCFileReScanTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateIaCFileReScanTaskOutcome(rsp);
+        else
+            return CreateIaCFileReScanTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateIaCFileReScanTaskOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateIaCFileReScanTaskAsync(const CreateIaCFileReScanTaskRequest& request, const CreateIaCFileReScanTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateIaCFileReScanTaskRequest&;
+    using Resp = CreateIaCFileReScanTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateIaCFileReScanTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateIaCFileReScanTaskOutcomeCallable CsipClient::CreateIaCFileReScanTaskCallable(const CreateIaCFileReScanTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateIaCFileReScanTaskOutcome>>();
+    CreateIaCFileReScanTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateIaCFileReScanTaskRequest&,
+        CreateIaCFileReScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::CreateRiskCenterScanTaskOutcome CsipClient::CreateRiskCenterScanTask(const CreateRiskCenterScanTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRiskCenterScanTask");
@@ -282,6 +432,56 @@ CsipClient::CreateRiskCenterScanTaskOutcomeCallable CsipClient::CreateRiskCenter
         const CsipClient*,
         const CreateRiskCenterScanTaskRequest&,
         CreateRiskCenterScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateSkillScanOutcome CsipClient::CreateSkillScan(const CreateSkillScanRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateSkillScan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateSkillScanResponse rsp = CreateSkillScanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateSkillScanOutcome(rsp);
+        else
+            return CreateSkillScanOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateSkillScanOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateSkillScanAsync(const CreateSkillScanRequest& request, const CreateSkillScanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateSkillScanRequest&;
+    using Resp = CreateSkillScanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateSkillScan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateSkillScanOutcomeCallable CsipClient::CreateSkillScanCallable(const CreateSkillScanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateSkillScanOutcome>>();
+    CreateSkillScanAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateSkillScanRequest&,
+        CreateSkillScanOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -340,6 +540,106 @@ CsipClient::DeleteDomainAndIpOutcomeCallable CsipClient::DeleteDomainAndIpCallab
     return prom->get_future();
 }
 
+CsipClient::DeleteIaCAccessTokenOutcome CsipClient::DeleteIaCAccessToken(const DeleteIaCAccessTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteIaCAccessToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteIaCAccessTokenResponse rsp = DeleteIaCAccessTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteIaCAccessTokenOutcome(rsp);
+        else
+            return DeleteIaCAccessTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteIaCAccessTokenOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteIaCAccessTokenAsync(const DeleteIaCAccessTokenRequest& request, const DeleteIaCAccessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteIaCAccessTokenRequest&;
+    using Resp = DeleteIaCAccessTokenResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteIaCAccessToken", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteIaCAccessTokenOutcomeCallable CsipClient::DeleteIaCAccessTokenCallable(const DeleteIaCAccessTokenRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteIaCAccessTokenOutcome>>();
+    DeleteIaCAccessTokenAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteIaCAccessTokenRequest&,
+        DeleteIaCAccessTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DeleteIaCFileOutcome CsipClient::DeleteIaCFile(const DeleteIaCFileRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteIaCFile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteIaCFileResponse rsp = DeleteIaCFileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteIaCFileOutcome(rsp);
+        else
+            return DeleteIaCFileOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteIaCFileOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteIaCFileAsync(const DeleteIaCFileRequest& request, const DeleteIaCFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteIaCFileRequest&;
+    using Resp = DeleteIaCFileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteIaCFile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteIaCFileOutcomeCallable CsipClient::DeleteIaCFileCallable(const DeleteIaCFileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteIaCFileOutcome>>();
+    DeleteIaCFileAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteIaCFileRequest&,
+        DeleteIaCFileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DeleteRiskScanTaskOutcome CsipClient::DeleteRiskScanTask(const DeleteRiskScanTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRiskScanTask");
@@ -382,6 +682,106 @@ CsipClient::DeleteRiskScanTaskOutcomeCallable CsipClient::DeleteRiskScanTaskCall
         const CsipClient*,
         const DeleteRiskScanTaskRequest&,
         DeleteRiskScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeAIAgentAssetListOutcome CsipClient::DescribeAIAgentAssetList(const DescribeAIAgentAssetListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAIAgentAssetList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAIAgentAssetListResponse rsp = DescribeAIAgentAssetListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAIAgentAssetListOutcome(rsp);
+        else
+            return DescribeAIAgentAssetListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAIAgentAssetListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAIAgentAssetListAsync(const DescribeAIAgentAssetListRequest& request, const DescribeAIAgentAssetListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAIAgentAssetListRequest&;
+    using Resp = DescribeAIAgentAssetListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAIAgentAssetList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAIAgentAssetListOutcomeCallable CsipClient::DescribeAIAgentAssetListCallable(const DescribeAIAgentAssetListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAIAgentAssetListOutcome>>();
+    DescribeAIAgentAssetListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAIAgentAssetListRequest&,
+        DescribeAIAgentAssetListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeAKAnalysisDetailOutcome CsipClient::DescribeAKAnalysisDetail(const DescribeAKAnalysisDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAKAnalysisDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAKAnalysisDetailResponse rsp = DescribeAKAnalysisDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAKAnalysisDetailOutcome(rsp);
+        else
+            return DescribeAKAnalysisDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAKAnalysisDetailOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAKAnalysisDetailAsync(const DescribeAKAnalysisDetailRequest& request, const DescribeAKAnalysisDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAKAnalysisDetailRequest&;
+    using Resp = DescribeAKAnalysisDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAKAnalysisDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAKAnalysisDetailOutcomeCallable CsipClient::DescribeAKAnalysisDetailCallable(const DescribeAKAnalysisDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAKAnalysisDetailOutcome>>();
+    DescribeAKAnalysisDetailAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAKAnalysisDetailRequest&,
+        DescribeAKAnalysisDetailOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -790,6 +1190,56 @@ CsipClient::DescribeAccessKeyUserListOutcomeCallable CsipClient::DescribeAccessK
     return prom->get_future();
 }
 
+CsipClient::DescribeAlertListOutcome CsipClient::DescribeAlertList(const DescribeAlertListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAlertList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAlertListResponse rsp = DescribeAlertListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAlertListOutcome(rsp);
+        else
+            return DescribeAlertListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAlertListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAlertListAsync(const DescribeAlertListRequest& request, const DescribeAlertListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAlertListRequest&;
+    using Resp = DescribeAlertListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAlertList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAlertListOutcomeCallable CsipClient::DescribeAlertListCallable(const DescribeAlertListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAlertListOutcome>>();
+    DescribeAlertListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAlertListRequest&,
+        DescribeAlertListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeAssetProcessListOutcome CsipClient::DescribeAssetProcessList(const DescribeAssetProcessListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAssetProcessList");
@@ -832,6 +1282,106 @@ CsipClient::DescribeAssetProcessListOutcomeCallable CsipClient::DescribeAssetPro
         const CsipClient*,
         const DescribeAssetProcessListRequest&,
         DescribeAssetProcessListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeAssetRiskListOutcome CsipClient::DescribeAssetRiskList(const DescribeAssetRiskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAssetRiskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAssetRiskListResponse rsp = DescribeAssetRiskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAssetRiskListOutcome(rsp);
+        else
+            return DescribeAssetRiskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAssetRiskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAssetRiskListAsync(const DescribeAssetRiskListRequest& request, const DescribeAssetRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAssetRiskListRequest&;
+    using Resp = DescribeAssetRiskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAssetRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAssetRiskListOutcomeCallable CsipClient::DescribeAssetRiskListCallable(const DescribeAssetRiskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAssetRiskListOutcome>>();
+    DescribeAssetRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAssetRiskListRequest&,
+        DescribeAssetRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeAssetViewVulRiskListOutcome CsipClient::DescribeAssetViewVulRiskList(const DescribeAssetViewVulRiskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAssetViewVulRiskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAssetViewVulRiskListResponse rsp = DescribeAssetViewVulRiskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAssetViewVulRiskListOutcome(rsp);
+        else
+            return DescribeAssetViewVulRiskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAssetViewVulRiskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeAssetViewVulRiskListAsync(const DescribeAssetViewVulRiskListRequest& request, const DescribeAssetViewVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAssetViewVulRiskListRequest&;
+    using Resp = DescribeAssetViewVulRiskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAssetViewVulRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeAssetViewVulRiskListOutcomeCallable CsipClient::DescribeAssetViewVulRiskListCallable(const DescribeAssetViewVulRiskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAssetViewVulRiskListOutcome>>();
+    DescribeAssetViewVulRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeAssetViewVulRiskListRequest&,
+        DescribeAssetViewVulRiskListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1090,6 +1640,56 @@ CsipClient::DescribeCallRecordOutcomeCallable CsipClient::DescribeCallRecordCall
     return prom->get_future();
 }
 
+CsipClient::DescribeCheckViewRisksOutcome CsipClient::DescribeCheckViewRisks(const DescribeCheckViewRisksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCheckViewRisks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCheckViewRisksResponse rsp = DescribeCheckViewRisksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCheckViewRisksOutcome(rsp);
+        else
+            return DescribeCheckViewRisksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCheckViewRisksOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeCheckViewRisksAsync(const DescribeCheckViewRisksRequest& request, const DescribeCheckViewRisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCheckViewRisksRequest&;
+    using Resp = DescribeCheckViewRisksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCheckViewRisks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeCheckViewRisksOutcomeCallable CsipClient::DescribeCheckViewRisksCallable(const DescribeCheckViewRisksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCheckViewRisksOutcome>>();
+    DescribeCheckViewRisksAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeCheckViewRisksRequest&,
+        DescribeCheckViewRisksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeClusterAssetsOutcome CsipClient::DescribeClusterAssets(const DescribeClusterAssetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterAssets");
@@ -1182,6 +1782,56 @@ CsipClient::DescribeClusterPodAssetsOutcomeCallable CsipClient::DescribeClusterP
         const CsipClient*,
         const DescribeClusterPodAssetsRequest&,
         DescribeClusterPodAssetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeConfigCheckRulesOutcome CsipClient::DescribeConfigCheckRules(const DescribeConfigCheckRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeConfigCheckRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeConfigCheckRulesResponse rsp = DescribeConfigCheckRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeConfigCheckRulesOutcome(rsp);
+        else
+            return DescribeConfigCheckRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeConfigCheckRulesOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeConfigCheckRulesAsync(const DescribeConfigCheckRulesRequest& request, const DescribeConfigCheckRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeConfigCheckRulesRequest&;
+    using Resp = DescribeConfigCheckRulesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeConfigCheckRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeConfigCheckRulesOutcomeCallable CsipClient::DescribeConfigCheckRulesCallable(const DescribeConfigCheckRulesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeConfigCheckRulesOutcome>>();
+    DescribeConfigCheckRulesAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeConfigCheckRulesRequest&,
+        DescribeConfigCheckRulesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1582,6 +2232,306 @@ CsipClient::DescribeHighBaseLineRiskListOutcomeCallable CsipClient::DescribeHigh
         const CsipClient*,
         const DescribeHighBaseLineRiskListRequest&,
         DescribeHighBaseLineRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeIaCFileListOutcome CsipClient::DescribeIaCFileList(const DescribeIaCFileListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIaCFileList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIaCFileListResponse rsp = DescribeIaCFileListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIaCFileListOutcome(rsp);
+        else
+            return DescribeIaCFileListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIaCFileListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeIaCFileListAsync(const DescribeIaCFileListRequest& request, const DescribeIaCFileListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeIaCFileListRequest&;
+    using Resp = DescribeIaCFileListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeIaCFileList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeIaCFileListOutcomeCallable CsipClient::DescribeIaCFileListCallable(const DescribeIaCFileListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeIaCFileListOutcome>>();
+    DescribeIaCFileListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeIaCFileListRequest&,
+        DescribeIaCFileListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeIaCFileOverviewOutcome CsipClient::DescribeIaCFileOverview(const DescribeIaCFileOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIaCFileOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIaCFileOverviewResponse rsp = DescribeIaCFileOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIaCFileOverviewOutcome(rsp);
+        else
+            return DescribeIaCFileOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIaCFileOverviewOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeIaCFileOverviewAsync(const DescribeIaCFileOverviewRequest& request, const DescribeIaCFileOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeIaCFileOverviewRequest&;
+    using Resp = DescribeIaCFileOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeIaCFileOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeIaCFileOverviewOutcomeCallable CsipClient::DescribeIaCFileOverviewCallable(const DescribeIaCFileOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeIaCFileOverviewOutcome>>();
+    DescribeIaCFileOverviewAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeIaCFileOverviewRequest&,
+        DescribeIaCFileOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeIaCFileReportOutcome CsipClient::DescribeIaCFileReport(const DescribeIaCFileReportRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIaCFileReport");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIaCFileReportResponse rsp = DescribeIaCFileReportResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIaCFileReportOutcome(rsp);
+        else
+            return DescribeIaCFileReportOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIaCFileReportOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeIaCFileReportAsync(const DescribeIaCFileReportRequest& request, const DescribeIaCFileReportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeIaCFileReportRequest&;
+    using Resp = DescribeIaCFileReportResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeIaCFileReport", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeIaCFileReportOutcomeCallable CsipClient::DescribeIaCFileReportCallable(const DescribeIaCFileReportRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeIaCFileReportOutcome>>();
+    DescribeIaCFileReportAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeIaCFileReportRequest&,
+        DescribeIaCFileReportOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeIaCTokenListOutcome CsipClient::DescribeIaCTokenList(const DescribeIaCTokenListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeIaCTokenList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeIaCTokenListResponse rsp = DescribeIaCTokenListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeIaCTokenListOutcome(rsp);
+        else
+            return DescribeIaCTokenListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeIaCTokenListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeIaCTokenListAsync(const DescribeIaCTokenListRequest& request, const DescribeIaCTokenListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeIaCTokenListRequest&;
+    using Resp = DescribeIaCTokenListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeIaCTokenList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeIaCTokenListOutcomeCallable CsipClient::DescribeIaCTokenListCallable(const DescribeIaCTokenListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeIaCTokenListOutcome>>();
+    DescribeIaCTokenListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeIaCTokenListRequest&,
+        DescribeIaCTokenListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeKeySandboxCredentialOutcome CsipClient::DescribeKeySandboxCredential(const DescribeKeySandboxCredentialRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKeySandboxCredential");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKeySandboxCredentialResponse rsp = DescribeKeySandboxCredentialResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKeySandboxCredentialOutcome(rsp);
+        else
+            return DescribeKeySandboxCredentialOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKeySandboxCredentialOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeKeySandboxCredentialAsync(const DescribeKeySandboxCredentialRequest& request, const DescribeKeySandboxCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKeySandboxCredentialRequest&;
+    using Resp = DescribeKeySandboxCredentialResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKeySandboxCredential", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeKeySandboxCredentialOutcomeCallable CsipClient::DescribeKeySandboxCredentialCallable(const DescribeKeySandboxCredentialRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKeySandboxCredentialOutcome>>();
+    DescribeKeySandboxCredentialAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeKeySandboxCredentialRequest&,
+        DescribeKeySandboxCredentialOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeKeySandboxCredentialListOutcome CsipClient::DescribeKeySandboxCredentialList(const DescribeKeySandboxCredentialListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKeySandboxCredentialList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKeySandboxCredentialListResponse rsp = DescribeKeySandboxCredentialListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKeySandboxCredentialListOutcome(rsp);
+        else
+            return DescribeKeySandboxCredentialListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKeySandboxCredentialListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeKeySandboxCredentialListAsync(const DescribeKeySandboxCredentialListRequest& request, const DescribeKeySandboxCredentialListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKeySandboxCredentialListRequest&;
+    using Resp = DescribeKeySandboxCredentialListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKeySandboxCredentialList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeKeySandboxCredentialListOutcomeCallable CsipClient::DescribeKeySandboxCredentialListCallable(const DescribeKeySandboxCredentialListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKeySandboxCredentialListOutcome>>();
+    DescribeKeySandboxCredentialListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeKeySandboxCredentialListRequest&,
+        DescribeKeySandboxCredentialListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2440,6 +3390,156 @@ CsipClient::DescribeRiskCenterWebsiteRiskListOutcomeCallable CsipClient::Describ
     return prom->get_future();
 }
 
+CsipClient::DescribeRiskDetailListOutcome CsipClient::DescribeRiskDetailList(const DescribeRiskDetailListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRiskDetailList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRiskDetailListResponse rsp = DescribeRiskDetailListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRiskDetailListOutcome(rsp);
+        else
+            return DescribeRiskDetailListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRiskDetailListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeRiskDetailListAsync(const DescribeRiskDetailListRequest& request, const DescribeRiskDetailListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRiskDetailListRequest&;
+    using Resp = DescribeRiskDetailListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskDetailList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeRiskDetailListOutcomeCallable CsipClient::DescribeRiskDetailListCallable(const DescribeRiskDetailListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRiskDetailListOutcome>>();
+    DescribeRiskDetailListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskDetailListRequest&,
+        DescribeRiskDetailListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeRiskRuleDetailOutcome CsipClient::DescribeRiskRuleDetail(const DescribeRiskRuleDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRiskRuleDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRiskRuleDetailResponse rsp = DescribeRiskRuleDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRiskRuleDetailOutcome(rsp);
+        else
+            return DescribeRiskRuleDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRiskRuleDetailOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeRiskRuleDetailAsync(const DescribeRiskRuleDetailRequest& request, const DescribeRiskRuleDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRiskRuleDetailRequest&;
+    using Resp = DescribeRiskRuleDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskRuleDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeRiskRuleDetailOutcomeCallable CsipClient::DescribeRiskRuleDetailCallable(const DescribeRiskRuleDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRiskRuleDetailOutcome>>();
+    DescribeRiskRuleDetailAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskRuleDetailRequest&,
+        DescribeRiskRuleDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeRiskRulesOutcome CsipClient::DescribeRiskRules(const DescribeRiskRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRiskRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRiskRulesResponse rsp = DescribeRiskRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRiskRulesOutcome(rsp);
+        else
+            return DescribeRiskRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRiskRulesOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeRiskRulesAsync(const DescribeRiskRulesRequest& request, const DescribeRiskRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRiskRulesRequest&;
+    using Resp = DescribeRiskRulesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRiskRules", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeRiskRulesOutcomeCallable CsipClient::DescribeRiskRulesCallable(const DescribeRiskRulesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRiskRulesOutcome>>();
+    DescribeRiskRulesAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeRiskRulesRequest&,
+        DescribeRiskRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeScanReportListOutcome CsipClient::DescribeScanReportList(const DescribeScanReportListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeScanReportList");
@@ -2632,6 +3732,106 @@ CsipClient::DescribeSearchBugInfoOutcomeCallable CsipClient::DescribeSearchBugIn
         const CsipClient*,
         const DescribeSearchBugInfoRequest&,
         DescribeSearchBugInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeSkillScanPayInfoOutcome CsipClient::DescribeSkillScanPayInfo(const DescribeSkillScanPayInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSkillScanPayInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSkillScanPayInfoResponse rsp = DescribeSkillScanPayInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSkillScanPayInfoOutcome(rsp);
+        else
+            return DescribeSkillScanPayInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSkillScanPayInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeSkillScanPayInfoAsync(const DescribeSkillScanPayInfoRequest& request, const DescribeSkillScanPayInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSkillScanPayInfoRequest&;
+    using Resp = DescribeSkillScanPayInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSkillScanPayInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeSkillScanPayInfoOutcomeCallable CsipClient::DescribeSkillScanPayInfoCallable(const DescribeSkillScanPayInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSkillScanPayInfoOutcome>>();
+    DescribeSkillScanPayInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeSkillScanPayInfoRequest&,
+        DescribeSkillScanPayInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeSkillScanResultOutcome CsipClient::DescribeSkillScanResult(const DescribeSkillScanResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSkillScanResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSkillScanResultResponse rsp = DescribeSkillScanResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSkillScanResultOutcome(rsp);
+        else
+            return DescribeSkillScanResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSkillScanResultOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeSkillScanResultAsync(const DescribeSkillScanResultRequest& request, const DescribeSkillScanResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeSkillScanResultRequest&;
+    using Resp = DescribeSkillScanResultResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeSkillScanResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeSkillScanResultOutcomeCallable CsipClient::DescribeSkillScanResultCallable(const DescribeSkillScanResultRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeSkillScanResultOutcome>>();
+    DescribeSkillScanResultAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeSkillScanResultRequest&,
+        DescribeSkillScanResultOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2882,6 +4082,106 @@ CsipClient::DescribeTaskLogURLOutcomeCallable CsipClient::DescribeTaskLogURLCall
         const CsipClient*,
         const DescribeTaskLogURLRequest&,
         DescribeTaskLogURLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeTopAttackInfoOutcome CsipClient::DescribeTopAttackInfo(const DescribeTopAttackInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopAttackInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopAttackInfoResponse rsp = DescribeTopAttackInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopAttackInfoOutcome(rsp);
+        else
+            return DescribeTopAttackInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopAttackInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeTopAttackInfoAsync(const DescribeTopAttackInfoRequest& request, const DescribeTopAttackInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeTopAttackInfoRequest&;
+    using Resp = DescribeTopAttackInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeTopAttackInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeTopAttackInfoOutcomeCallable CsipClient::DescribeTopAttackInfoCallable(const DescribeTopAttackInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeTopAttackInfoOutcome>>();
+    DescribeTopAttackInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeTopAttackInfoRequest&,
+        DescribeTopAttackInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeUebaRuleOutcome CsipClient::DescribeUebaRule(const DescribeUebaRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUebaRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUebaRuleResponse rsp = DescribeUebaRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUebaRuleOutcome(rsp);
+        else
+            return DescribeUebaRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUebaRuleOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeUebaRuleAsync(const DescribeUebaRuleRequest& request, const DescribeUebaRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUebaRuleRequest&;
+    using Resp = DescribeUebaRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUebaRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeUebaRuleOutcomeCallable CsipClient::DescribeUebaRuleCallable(const DescribeUebaRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUebaRuleOutcome>>();
+    DescribeUebaRuleAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeUebaRuleRequest&,
+        DescribeUebaRuleOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3240,6 +4540,56 @@ CsipClient::DescribeVulViewVulRiskListOutcomeCallable CsipClient::DescribeVulVie
     return prom->get_future();
 }
 
+CsipClient::ModifyIaCTokenPeriodOutcome CsipClient::ModifyIaCTokenPeriod(const ModifyIaCTokenPeriodRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyIaCTokenPeriod");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyIaCTokenPeriodResponse rsp = ModifyIaCTokenPeriodResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyIaCTokenPeriodOutcome(rsp);
+        else
+            return ModifyIaCTokenPeriodOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyIaCTokenPeriodOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyIaCTokenPeriodAsync(const ModifyIaCTokenPeriodRequest& request, const ModifyIaCTokenPeriodAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyIaCTokenPeriodRequest&;
+    using Resp = ModifyIaCTokenPeriodResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyIaCTokenPeriod", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyIaCTokenPeriodOutcomeCallable CsipClient::ModifyIaCTokenPeriodCallable(const ModifyIaCTokenPeriodRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyIaCTokenPeriodOutcome>>();
+    ModifyIaCTokenPeriodAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyIaCTokenPeriodRequest&,
+        ModifyIaCTokenPeriodOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::ModifyOrganizationAccountStatusOutcome CsipClient::ModifyOrganizationAccountStatus(const ModifyOrganizationAccountStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyOrganizationAccountStatus");
@@ -3390,6 +4740,56 @@ CsipClient::ModifyRiskCenterScanTaskOutcomeCallable CsipClient::ModifyRiskCenter
     return prom->get_future();
 }
 
+CsipClient::ModifyUebaRuleSwitchOutcome CsipClient::ModifyUebaRuleSwitch(const ModifyUebaRuleSwitchRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyUebaRuleSwitch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyUebaRuleSwitchResponse rsp = ModifyUebaRuleSwitchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyUebaRuleSwitchOutcome(rsp);
+        else
+            return ModifyUebaRuleSwitchOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyUebaRuleSwitchOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyUebaRuleSwitchAsync(const ModifyUebaRuleSwitchRequest& request, const ModifyUebaRuleSwitchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyUebaRuleSwitchRequest&;
+    using Resp = ModifyUebaRuleSwitchResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyUebaRuleSwitch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyUebaRuleSwitchOutcomeCallable CsipClient::ModifyUebaRuleSwitchCallable(const ModifyUebaRuleSwitchRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyUebaRuleSwitchOutcome>>();
+    ModifyUebaRuleSwitchAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyUebaRuleSwitchRequest&,
+        ModifyUebaRuleSwitchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::StopRiskCenterTaskOutcome CsipClient::StopRiskCenterTask(const StopRiskCenterTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "StopRiskCenterTask");
@@ -3532,6 +4932,56 @@ CsipClient::UpdateAccessKeyRemarkOutcomeCallable CsipClient::UpdateAccessKeyRema
         const CsipClient*,
         const UpdateAccessKeyRemarkRequest&,
         UpdateAccessKeyRemarkOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::UpdateAlertStatusListOutcome CsipClient::UpdateAlertStatusList(const UpdateAlertStatusListRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateAlertStatusList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateAlertStatusListResponse rsp = UpdateAlertStatusListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateAlertStatusListOutcome(rsp);
+        else
+            return UpdateAlertStatusListOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateAlertStatusListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::UpdateAlertStatusListAsync(const UpdateAlertStatusListRequest& request, const UpdateAlertStatusListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateAlertStatusListRequest&;
+    using Resp = UpdateAlertStatusListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateAlertStatusList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::UpdateAlertStatusListOutcomeCallable CsipClient::UpdateAlertStatusListCallable(const UpdateAlertStatusListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateAlertStatusListOutcome>>();
+    UpdateAlertStatusListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const UpdateAlertStatusListRequest&,
+        UpdateAlertStatusListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

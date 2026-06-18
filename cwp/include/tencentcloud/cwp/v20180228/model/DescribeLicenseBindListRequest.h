@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Authorization ID
-                     * @return LicenseId Authorization ID
+                     * 获取<p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+                     * @return LicenseId <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
                      * 
                      */
                     uint64_t GetLicenseId() const;
 
                     /**
-                     * 设置Authorization ID
-                     * @param _licenseId Authorization ID
+                     * 设置<p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+                     * @param _licenseId <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
                      * 
                      */
                     void SetLicenseId(const uint64_t& _licenseId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LicenseIdHasBeenSet() const;
 
                     /**
-                     * 获取Authorization type
-                     * @return LicenseType Authorization type
+                     * 获取<p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+                     * @return LicenseType <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
                      * 
                      */
                     uint64_t GetLicenseType() const;
 
                     /**
-                     * 设置Authorization type
-                     * @param _licenseType Authorization type
+                     * 设置<p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+                     * @param _licenseType <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
                      * 
                      */
                     void SetLicenseType(const uint64_t& _licenseType);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LicenseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID
-                     * @return ResourceId Resource ID
+                     * 获取<p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+                     * @return ResourceId <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID
-                     * @param _resourceId Resource ID
+                     * 设置<p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+                     * @param _resourceId <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -107,23 +107,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取<li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
-                     * @return Filters <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+                     * 获取<li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+                     * @return Filters <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置<li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
-                     * @param _filters <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+                     * 设置<li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+                     * @param _filters <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -136,15 +128,15 @@ and MachineName for fuzzy search</li>
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Limit number, 10 by default.
-                     * @return Limit Limit number, 10 by default.
+                     * 获取<p>The maximum number of entries. Default value: 10.</p>
+                     * @return Limit <p>The maximum number of entries. Default value: 10.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit number, 10 by default.
-                     * @param _limit Limit number, 10 by default.
+                     * 设置<p>The maximum number of entries. Default value: 10.</p>
+                     * @param _limit <p>The maximum number of entries. Default value: 10.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -157,15 +149,15 @@ and MachineName for fuzzy search</li>
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -180,39 +172,37 @@ and MachineName for fuzzy search</li>
                 private:
 
                     /**
-                     * Authorization ID
+                     * <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
                      */
                     uint64_t m_licenseId;
                     bool m_licenseIdHasBeenSet;
 
                     /**
-                     * Authorization type
+                     * <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
                      */
                     uint64_t m_licenseType;
                     bool m_licenseTypeHasBeenSet;
 
                     /**
-                     * Resource ID
+                     * <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+                     * <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Limit number, 10 by default.
+                     * <p>The maximum number of entries. Default value: 10.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

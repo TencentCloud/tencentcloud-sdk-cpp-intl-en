@@ -130,6 +130,27 @@ namespace TencentCloud
                     bool ScanPlanTypeHasBeenSet() const;
 
                     /**
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
+                    /**
                      * 获取List of assets to scan
                      * @return Assets List of assets to scan
                      * 
@@ -193,15 +214,15 @@ namespace TencentCloud
                     bool SelfDefiningAssetsHasBeenSet() const;
 
                     /**
-                     * 获取Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
-                     * @return ScanFrom Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+                     * 获取Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+                     * @return ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
                      * 
                      */
                     std::string GetScanFrom() const;
 
                     /**
-                     * 设置Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
-                     * @param _scanFrom Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+                     * 设置Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+                     * @param _scanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
                      * 
                      */
                     void SetScanFrom(const std::string& _scanFrom);
@@ -276,6 +297,27 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Task completed callback webhook url
+                     * @return FinishWebHook Task completed callback webhook url
+                     * 
+                     */
+                    std::string GetFinishWebHook() const;
+
+                    /**
+                     * 设置Task completed callback webhook url
+                     * @param _finishWebHook Task completed callback webhook url
+                     * 
+                     */
+                    void SetFinishWebHook(const std::string& _finishWebHook);
+
+                    /**
+                     * 判断参数 FinishWebHook 是否已赋值
+                     * @return FinishWebHook 是否已赋值
+                     * 
+                     */
+                    bool FinishWebHookHasBeenSet() const;
+
                 private:
 
                     /**
@@ -303,6 +345,12 @@ namespace TencentCloud
                     bool m_scanPlanTypeHasBeenSet;
 
                     /**
+                     * Group Account Member ID
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
+
+                    /**
                      * List of assets to scan
                      */
                     std::vector<TaskAssetObject> m_assets;
@@ -321,7 +369,7 @@ namespace TencentCloud
                     bool m_selfDefiningAssetsHasBeenSet;
 
                     /**
-                     * Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+                     * Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
                      */
                     std::string m_scanFrom;
                     bool m_scanFromHasBeenSet;
@@ -343,6 +391,12 @@ namespace TencentCloud
                      */
                     AssetTag m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Task completed callback webhook url
+                     */
+                    std::string m_finishWebHook;
+                    bool m_finishWebHookHasBeenSet;
 
                 };
             }

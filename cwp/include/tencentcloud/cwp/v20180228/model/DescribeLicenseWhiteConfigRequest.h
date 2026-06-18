@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule name. For example, cwp.
-                     * @return RuleName Rule name. For example, cwp.
+                     * 获取<p>Rule name, for example: cwp</p>
+                     * @return RuleName <p>Rule name, for example: cwp</p>
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Rule name. For example, cwp.
-                     * @param _ruleName Rule name. For example, cwp.
+                     * 设置<p>Rule name, for example: cwp</p>
+                     * @param _ruleName <p>Rule name, for example: cwp</p>
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule name. For example, cwp.
+                     * <p>Rule name, for example: cwp</p>
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;

@@ -210,15 +210,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool VoiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FastVoiceType 
+                     * 获取Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
+                     * @return FastVoiceType Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
                      * 
                      */
                     std::string GetFastVoiceType() const;
 
                     /**
-                     * 设置
-                     * @param _fastVoiceType 
+                     * 设置Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
+                     * @param _fastVoiceType Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
                      * 
                      */
                     void SetFastVoiceType(const std::string& _fastVoiceType);
@@ -336,15 +336,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool SegmentRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmotionCategory 
+                     * 获取Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+                     * @return EmotionCategory Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
                      * 
                      */
                     std::string GetEmotionCategory() const;
 
                     /**
-                     * 设置
-                     * @param _emotionCategory 
+                     * 设置Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+                     * @param _emotionCategory Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
                      * 
                      */
                     void SetEmotionCategory(const std::string& _emotionCategory);
@@ -357,15 +357,15 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool EmotionCategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmotionIntensity 
+                     * 获取Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
+                     * @return EmotionIntensity Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
                      * 
                      */
                     int64_t GetEmotionIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _emotionIntensity 
+                     * 设置Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
+                     * @param _emotionIntensity Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
                      * 
                      */
                     void SetEmotionIntensity(const int64_t& _emotionIntensity);
@@ -427,7 +427,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool m_voiceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
                      */
                     std::string m_fastVoiceType;
                     bool m_fastVoiceTypeHasBeenSet;
@@ -463,13 +463,13 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                     bool m_segmentRateHasBeenSet;
 
                     /**
-                     * 
+                     * Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
                      */
                     std::string m_emotionCategory;
                     bool m_emotionCategoryHasBeenSet;
 
                     /**
-                     * 
+                     * Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
                      */
                     int64_t m_emotionIntensity;
                     bool m_emotionIntensityHasBeenSet;

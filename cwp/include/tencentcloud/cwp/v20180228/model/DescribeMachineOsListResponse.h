@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operating system list
-                     * @return List Operating system list
+                     * 获取<p>Operating system list</p>
+                     * @return List <p>Operating system list</p>
                      * 
                      */
                     std::vector<OsName> GetList() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Operating system list
+                     * <p>Operating system list</p>
                      */
                     std::vector<OsName> m_list;
                     bool m_listHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Member ID of the group account
-                     * @return MemberId Member ID of the group account
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
                      * 
                      */
                     std::vector<std::string> GetMemberId() const;
 
                     /**
-                     * 设置Member ID of the group account
-                     * @param _memberId Member ID of the group account
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
                      * 
                      */
                     void SetMemberId(const std::vector<std::string>& _memberId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter content
-                     * @return Filter Filter content
+                     * 获取Filtered Content
+                     * @return Filter Filtered Content
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter content
-                     * @param _filter Filter content
+                     * 设置Filtered Content
+                     * @param _filter Filtered Content
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FilterHasBeenSet() const;
 
                     /**
-                     * 获取No support for multi-cloud
-                     * @return NotSupportCloud No support for multi-cloud
+                     * 获取Does not support multi-cloud.
+                     * @return NotSupportCloud Does not support multi-cloud.
                      * 
                      */
                     bool GetNotSupportCloud() const;
 
                     /**
-                     * 设置No support for multi-cloud
-                     * @param _notSupportCloud No support for multi-cloud
+                     * 设置Does not support multi-cloud.
+                     * @param _notSupportCloud Does not support multi-cloud.
                      * 
                      */
                     void SetNotSupportCloud(const bool& _notSupportCloud);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Member ID of the group account
+                     * Group Account Member ID
                      */
                     std::vector<std::string> m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Filter content
+                     * Filtered Content
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;
 
                     /**
-                     * No support for multi-cloud
+                     * Does not support multi-cloud.
                      */
                     bool m_notSupportCloud;
                     bool m_notSupportCloudHasBeenSet;

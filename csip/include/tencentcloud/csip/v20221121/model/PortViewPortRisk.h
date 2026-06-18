@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Affected assets
-                     * @return NoHandleCount Affected assets
+                     * 获取Unprocessed quantity.
+                     * @return NoHandleCount Unprocessed quantity.
                      * 
                      */
                     int64_t GetNoHandleCount() const;
 
                     /**
-                     * 设置Affected assets
-                     * @param _noHandleCount Affected assets
+                     * 设置Unprocessed quantity.
+                     * @param _noHandleCount Unprocessed quantity.
                      * 
                      */
                     void SetNoHandleCount(const int64_t& _noHandleCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NoHandleCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-                     * @return Level Risk level
+                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level
-                     * @param _level Risk level
+                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-                     * @return AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * 获取Number of Affected Assets
+                     * @return AffectAssetCount Number of Affected Assets
                      * 
                      */
                     std::string GetAffectAssetCount() const;
 
                     /**
-                     * 设置Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-                     * @param _affectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * 设置Number of Affected Assets
+                     * @param _affectAssetCount Number of Affected Assets
                      * 
                      */
                     void SetAffectAssetCount(const std::string& _affectAssetCount);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool AffectAssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the asset
-                     * @return Id Unique ID of the asset
+                     * 获取ID
+                     * @return Id ID
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of the asset
-                     * @param _id Unique ID of the asset
+                     * 设置ID
+                     * @param _id ID
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Asset sub-category
-                     * @return From Asset sub-category
+                     * 获取Source recognition
+                     * @return From Source recognition
                      * 
                      */
                     std::string GetFrom() const;
 
                     /**
-                     * 设置Asset sub-category
-                     * @param _from Asset sub-category
+                     * 设置Source recognition
+                     * @param _from Source recognition
                      * 
                      */
                     void SetFrom(const std::string& _from);
@@ -320,19 +320,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User Nickname
+                     * @return Nick User Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User Nickname
+                     * @param _nick User Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -345,19 +341,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User UIN
+                     * @return Uin User UIN
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User UIN
+                     * @param _uin User UIN
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -393,13 +385,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Affected assets
+                     * Unprocessed quantity.
                      */
                     int64_t m_noHandleCount;
                     bool m_noHandleCountHasBeenSet;
 
                     /**
-                     * Risk level
+                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -441,19 +433,19 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+                     * Number of Affected Assets
                      */
                     std::string m_affectAssetCount;
                     bool m_affectAssetCountHasBeenSet;
 
                     /**
-                     * Unique ID of the asset
+                     * ID
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Asset sub-category
+                     * Source recognition
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
@@ -471,15 +463,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
-                     * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User UIN
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;

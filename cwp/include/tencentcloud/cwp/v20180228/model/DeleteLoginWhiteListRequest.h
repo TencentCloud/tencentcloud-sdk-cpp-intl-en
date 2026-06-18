@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Allowlisted IDs (The maximum number is 100.)
-                     * @return Ids Allowlisted IDs (The maximum number is 100.)
+                     * 获取<p>Allowlist ID (maximum 100)</p>
+                     * @return Ids <p>Allowlist ID (maximum 100)</p>
                      * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
-                     * 设置Allowlisted IDs (The maximum number is 100.)
-                     * @param _ids Allowlisted IDs (The maximum number is 100.)
+                     * 设置<p>Allowlist ID (maximum 100)</p>
+                     * @param _ids <p>Allowlist ID (maximum 100)</p>
                      * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Allowlisted IDs (The maximum number is 100.)
+                     * <p>Allowlist ID (maximum 100)</p>
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;

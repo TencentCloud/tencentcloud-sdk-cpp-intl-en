@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cloud Defense Status
+                     * @return CFWStatus Cloud Defense Status
                      * 
                      */
                     uint64_t GetCFWStatus() const;
 
                     /**
-                     * 设置CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _cFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cloud Defense Status
+                     * @param _cFWStatus Cloud Defense Status
                      * 
                      */
                     void SetCFWStatus(const uint64_t& _cFWStatus);
@@ -74,18 +70,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
                      * 设置Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -99,18 +91,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return VpcName VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _vpcName VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -124,18 +112,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -148,19 +132,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Public IP address
+                     * @return PublicIp Public IP address
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _publicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Public IP address
+                     * @param _publicIp Public IP address
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -173,19 +153,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取VPC IP
+                     * @return PrivateIp VPC IP
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _privateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置VPC IP
+                     * @param _privateIp VPC IP
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -198,19 +174,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -223,15 +195,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取vpc information
-                     * @return VpcId vpc information
+                     * 获取VPC information
+                     * @return VpcId VPC information
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置vpc information
-                     * @param _vpcId vpc information
+                     * 设置VPC information
+                     * @param _vpcId VPC information
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -245,18 +217,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -269,19 +237,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CFWProtectLevel CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cloud Defense Protection Edition
+                     * @return CFWProtectLevel Cloud Defense Protection Edition
                      * 
                      */
                     uint64_t GetCFWProtectLevel() const;
 
                     /**
-                     * 设置CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _cFWProtectLevel CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cloud Defense Protection Edition
+                     * @param _cFWProtectLevel Cloud Defense Protection Edition
                      * 
                      */
                     void SetCFWProtectLevel(const uint64_t& _cFWProtectLevel);
@@ -294,19 +258,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool CFWProtectLevelHasBeenSet() const;
 
                     /**
-                     * 获取Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Tag Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag Information
+                     * @return Tag Tag Information
                      * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
-                     * 设置Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tag Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag Information
+                     * @param _tag Tag Information
                      * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
@@ -321,77 +281,67 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cloud Defense Status
                      */
                     uint64_t m_cFWStatus;
                     bool m_cFWStatusHasBeenSet;
 
                     /**
                      * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
                      * VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
 
                     /**
                      * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Public IP address
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * VPC IP
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * vpc information
+                     * VPC information
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
                      * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cloud Defense Protection Edition
                      */
                     uint64_t m_cFWProtectLevel;
                     bool m_cFWProtectLevelHasBeenSet;
 
                     /**
-                     * Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag Information
                      */
                     std::vector<Tag> m_tag;
                     bool m_tagHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of assets
-                     * @return MachineCnt Total number of assets
+                     * 获取<p>Total number of assets</p>
+                     * @return MachineCnt <p>Total number of assets</p>
                      * 
                      */
                     uint64_t GetMachineCnt() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool MachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of Tencent Cloud machines
-                     * @return TencentCloudMachineCnt Number of Tencent Cloud machines
+                     * 获取<p>Number of Tencent Cloud machines</p>
+                     * @return TencentCloudMachineCnt <p>Number of Tencent Cloud machines</p>
                      * @deprecated
                      */
                     uint64_t GetTencentCloudMachineCnt() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TencentCloudMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of Alibaba Cloud machines
-                     * @return AliCloudMachineCnt Number of Alibaba Cloud machines
+                     * 获取<p>Number of Alibaba Cloud machines</p>
+                     * @return AliCloudMachineCnt <p>Number of Alibaba Cloud machines</p>
                      * @deprecated
                      */
                     uint64_t GetAliCloudMachineCnt() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool AliCloudMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of Baidu Cloud machines
-                     * @return BaiduCloudMachineCnt Number of Baidu Cloud machines
+                     * 获取<p>Number of Baidu Cloud machines</p>
+                     * @return BaiduCloudMachineCnt <p>Number of Baidu Cloud machines</p>
                      * @deprecated
                      */
                     uint64_t GetBaiduCloudMachineCnt() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool BaiduCloudMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of IDC machines
-                     * @return IDCMachineCnt Number of IDC machines
+                     * 获取<p>Number of IDC machines</p>
+                     * @return IDCMachineCnt <p>Number of IDC machines</p>
                      * @deprecated
                      */
                     uint64_t GetIDCMachineCnt() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool IDCMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of machines from other cloud service vendors
-                     * @return OtherCloudMachineCnt Number of machines from other cloud service vendors
+                     * 获取<p>Number of machines from other cloud service vendors</p>
+                     * @return OtherCloudMachineCnt <p>Number of machines from other cloud service vendors</p>
                      * @deprecated
                      */
                     uint64_t GetOtherCloudMachineCnt() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool OtherCloudMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected machines
-                     * @return ProtectMachineCnt Number of protected machines
+                     * 获取<p>Number of protected machines</p>
+                     * @return ProtectMachineCnt <p>Number of protected machines</p>
                      * 
                      */
                     uint64_t GetProtectMachineCnt() const;
@@ -143,8 +143,8 @@ namespace TencentCloud
                     bool ProtectMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected Basic Edition machines
-                     * @return BaseMachineCnt Number of protected Basic Edition machines
+                     * 获取<p>Number of protected Basic Edition machines</p>
+                     * @return BaseMachineCnt <p>Number of protected Basic Edition machines</p>
                      * 
                      */
                     uint64_t GetBaseMachineCnt() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool BaseMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected Pro Edition machines
-                     * @return SpecialtyMachineCnt Number of protected Pro Edition machines
+                     * 获取<p>Number of protected Pro Edition machines</p>
+                     * @return SpecialtyMachineCnt <p>Number of protected Pro Edition machines</p>
                      * 
                      */
                     uint64_t GetSpecialtyMachineCnt() const;
@@ -171,8 +171,8 @@ namespace TencentCloud
                     bool SpecialtyMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected Ultimate Edition machines
-                     * @return FlagshipMachineCnt Number of protected Ultimate Edition machines
+                     * 获取<p>Number of protected Ultimate Edition machines</p>
+                     * @return FlagshipMachineCnt <p>Number of protected Ultimate Edition machines</p>
                      * 
                      */
                     uint64_t GetFlagshipMachineCnt() const;
@@ -185,8 +185,8 @@ namespace TencentCloud
                     bool FlagshipMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of risky machines
-                     * @return RiskMachineCnt Number of risky machines
+                     * 获取<p>Number of risky machines</p>
+                     * @return RiskMachineCnt <p>Number of risky machines</p>
                      * 
                      */
                     uint64_t GetRiskMachineCnt() const;
@@ -199,8 +199,8 @@ namespace TencentCloud
                     bool RiskMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of new risky machines compared with that yesterday
-                     * @return CompareYesterdayRiskMachineCnt Number of new risky machines compared with that yesterday
+                     * 获取<p>Change in the number of risky machines compared with yesterday</p>
+                     * @return CompareYesterdayRiskMachineCnt <p>Change in the number of risky machines compared with yesterday</p>
                      * 
                      */
                     int64_t GetCompareYesterdayRiskMachineCnt() const;
@@ -213,8 +213,8 @@ namespace TencentCloud
                     bool CompareYesterdayRiskMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of new unprotected machines compared with that yesterday
-                     * @return CompareYesterdayNotProtectMachineCnt Number of new unprotected machines compared with that yesterday
+                     * 获取<p>Change in the number of unprotected machines compared with yesterday</p>
+                     * @return CompareYesterdayNotProtectMachineCnt <p>Change in the number of unprotected machines compared with yesterday</p>
                      * 
                      */
                     int64_t GetCompareYesterdayNotProtectMachineCnt() const;
@@ -227,8 +227,8 @@ namespace TencentCloud
                     bool CompareYesterdayNotProtectMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of new machines about to expire compared with that yesterday
-                     * @return CompareYesterdayDeadlineMachineCnt Number of new machines about to expire compared with that yesterday
+                     * 获取<p>Change in the number of machines expiring soon compared with yesterday</p>
+                     * @return CompareYesterdayDeadlineMachineCnt <p>Change in the number of machines expiring soon compared with yesterday</p>
                      * 
                      */
                     int64_t GetCompareYesterdayDeadlineMachineCnt() const;
@@ -241,8 +241,8 @@ namespace TencentCloud
                     bool CompareYesterdayDeadlineMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of machines about to expire
-                     * @return DeadlineMachineCnt Number of machines about to expire
+                     * 获取<p>Number of machines about to expire</p>
+                     * @return DeadlineMachineCnt <p>Number of machines about to expire</p>
                      * 
                      */
                     uint64_t GetDeadlineMachineCnt() const;
@@ -255,8 +255,8 @@ namespace TencentCloud
                     bool DeadlineMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of unprotected machines
-                     * @return NotProtectMachineCnt Number of unprotected machines
+                     * 获取<p>Number of unprotected machines</p>
+                     * @return NotProtectMachineCnt <p>Number of unprotected machines</p>
                      * 
                      */
                     uint64_t GetNotProtectMachineCnt() const;
@@ -269,8 +269,8 @@ namespace TencentCloud
                     bool NotProtectMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of protected Lighthouse machines (Lighthouse machines)
-                     * @return LHGeneralDiscountCnt Number of protected Lighthouse machines (Lighthouse machines)
+                     * 获取<p>Number of protected Lighthouse machines</p>
+                     * @return LHGeneralDiscountCnt <p>Number of protected Lighthouse machines</p>
                      * 
                      */
                     uint64_t GetLHGeneralDiscountCnt() const;
@@ -283,8 +283,8 @@ namespace TencentCloud
                     bool LHGeneralDiscountCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of new hosts compared with that yesterday
-                     * @return CompareYesterdayMachineCnt Number of new hosts compared with that yesterday
+                     * 获取<p>Change in the number of newly added hosts compared with yesterday</p>
+                     * @return CompareYesterdayMachineCnt <p>Change in the number of newly added hosts compared with yesterday</p>
                      * 
                      */
                     int64_t GetCompareYesterdayMachineCnt() const;
@@ -297,8 +297,8 @@ namespace TencentCloud
                     bool CompareYesterdayMachineCntHasBeenSet() const;
 
                     /**
-                     * 获取Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
-                     * @return MachineDestroyAfterOfflineHours Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+                     * 获取<p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
+                     * @return MachineDestroyAfterOfflineHours <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
                      * 
                      */
                     uint64_t GetMachineDestroyAfterOfflineHours() const;
@@ -311,8 +311,8 @@ namespace TencentCloud
                     bool MachineDestroyAfterOfflineHoursHasBeenSet() const;
 
                     /**
-                     * 获取Machine type array
-                     * @return CloudFrom Machine type array
+                     * 获取<p>Cloud server type array</p>
+                     * @return CloudFrom <p>Cloud server type array</p>
                      * 
                      */
                     std::vector<CloudFromCnt> GetCloudFrom() const;
@@ -327,121 +327,121 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of assets
+                     * <p>Total number of assets</p>
                      */
                     uint64_t m_machineCnt;
                     bool m_machineCntHasBeenSet;
 
                     /**
-                     * Number of Tencent Cloud machines
+                     * <p>Number of Tencent Cloud machines</p>
                      */
                     uint64_t m_tencentCloudMachineCnt;
                     bool m_tencentCloudMachineCntHasBeenSet;
 
                     /**
-                     * Number of Alibaba Cloud machines
+                     * <p>Number of Alibaba Cloud machines</p>
                      */
                     uint64_t m_aliCloudMachineCnt;
                     bool m_aliCloudMachineCntHasBeenSet;
 
                     /**
-                     * Number of Baidu Cloud machines
+                     * <p>Number of Baidu Cloud machines</p>
                      */
                     uint64_t m_baiduCloudMachineCnt;
                     bool m_baiduCloudMachineCntHasBeenSet;
 
                     /**
-                     * Number of IDC machines
+                     * <p>Number of IDC machines</p>
                      */
                     uint64_t m_iDCMachineCnt;
                     bool m_iDCMachineCntHasBeenSet;
 
                     /**
-                     * Number of machines from other cloud service vendors
+                     * <p>Number of machines from other cloud service vendors</p>
                      */
                     uint64_t m_otherCloudMachineCnt;
                     bool m_otherCloudMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected machines
+                     * <p>Number of protected machines</p>
                      */
                     uint64_t m_protectMachineCnt;
                     bool m_protectMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected Basic Edition machines
+                     * <p>Number of protected Basic Edition machines</p>
                      */
                     uint64_t m_baseMachineCnt;
                     bool m_baseMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected Pro Edition machines
+                     * <p>Number of protected Pro Edition machines</p>
                      */
                     uint64_t m_specialtyMachineCnt;
                     bool m_specialtyMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected Ultimate Edition machines
+                     * <p>Number of protected Ultimate Edition machines</p>
                      */
                     uint64_t m_flagshipMachineCnt;
                     bool m_flagshipMachineCntHasBeenSet;
 
                     /**
-                     * Number of risky machines
+                     * <p>Number of risky machines</p>
                      */
                     uint64_t m_riskMachineCnt;
                     bool m_riskMachineCntHasBeenSet;
 
                     /**
-                     * Number of new risky machines compared with that yesterday
+                     * <p>Change in the number of risky machines compared with yesterday</p>
                      */
                     int64_t m_compareYesterdayRiskMachineCnt;
                     bool m_compareYesterdayRiskMachineCntHasBeenSet;
 
                     /**
-                     * Number of new unprotected machines compared with that yesterday
+                     * <p>Change in the number of unprotected machines compared with yesterday</p>
                      */
                     int64_t m_compareYesterdayNotProtectMachineCnt;
                     bool m_compareYesterdayNotProtectMachineCntHasBeenSet;
 
                     /**
-                     * Number of new machines about to expire compared with that yesterday
+                     * <p>Change in the number of machines expiring soon compared with yesterday</p>
                      */
                     int64_t m_compareYesterdayDeadlineMachineCnt;
                     bool m_compareYesterdayDeadlineMachineCntHasBeenSet;
 
                     /**
-                     * Number of machines about to expire
+                     * <p>Number of machines about to expire</p>
                      */
                     uint64_t m_deadlineMachineCnt;
                     bool m_deadlineMachineCntHasBeenSet;
 
                     /**
-                     * Number of unprotected machines
+                     * <p>Number of unprotected machines</p>
                      */
                     uint64_t m_notProtectMachineCnt;
                     bool m_notProtectMachineCntHasBeenSet;
 
                     /**
-                     * Number of protected Lighthouse machines (Lighthouse machines)
+                     * <p>Number of protected Lighthouse machines</p>
                      */
                     uint64_t m_lHGeneralDiscountCnt;
                     bool m_lHGeneralDiscountCntHasBeenSet;
 
                     /**
-                     * Number of new hosts compared with that yesterday
+                     * <p>Change in the number of newly added hosts compared with yesterday</p>
                      */
                     int64_t m_compareYesterdayMachineCnt;
                     bool m_compareYesterdayMachineCntHasBeenSet;
 
                     /**
-                     * Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+                     * <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
                      */
                     uint64_t m_machineDestroyAfterOfflineHours;
                     bool m_machineDestroyAfterOfflineHoursHasBeenSet;
 
                     /**
-                     * Machine type array
+                     * <p>Cloud server type array</p>
                      */
                     std::vector<CloudFromCnt> m_cloudFrom;
                     bool m_cloudFromHasBeenSet;

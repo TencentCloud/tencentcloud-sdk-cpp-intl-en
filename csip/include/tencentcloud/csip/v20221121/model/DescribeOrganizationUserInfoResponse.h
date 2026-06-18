@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of items
-                     * @return TotalCount Total number of items
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -104,7 +104,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of items
+                     * Total quantity.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Clean-up rule time, 0 for OFF, in days, up to 30 days
-                     * @return ClearRule Clean-up rule time, 0 for OFF, in days, up to 30 days
+                     * 获取<p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
+                     * @return ClearRule <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
                      * 
                      */
                     uint64_t GetClearRule() const;
 
                     /**
-                     * 设置Clean-up rule time, 0 for OFF, in days, up to 30 days
-                     * @param _clearRule Clean-up rule time, 0 for OFF, in days, up to 30 days
+                     * 设置<p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
+                     * @param _clearRule <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
                      * 
                      */
                     void SetClearRule(const uint64_t& _clearRule);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Clean-up rule time, 0 for OFF, in days, up to 30 days
+                     * <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
                      */
                     uint64_t m_clearRule;
                     bool m_clearRuleHasBeenSet;

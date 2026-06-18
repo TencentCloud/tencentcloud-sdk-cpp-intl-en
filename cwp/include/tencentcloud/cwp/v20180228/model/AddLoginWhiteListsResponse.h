@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Prompt list of duplicate addition
-                     * @return DuplicateHosts Prompt list of duplicate addition
+                     * 获取<p>List of duplicate-addition prompts</p>
+                     * @return DuplicateHosts <p>List of duplicate-addition prompts</p>
                      * 
                      */
                     std::vector<DuplicateHosts> GetDuplicateHosts() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Prompt list of duplicate addition
+                     * <p>List of duplicate-addition prompts</p>
                      */
                     std::vector<DuplicateHosts> m_duplicateHosts;
                     bool m_duplicateHostsHasBeenSet;

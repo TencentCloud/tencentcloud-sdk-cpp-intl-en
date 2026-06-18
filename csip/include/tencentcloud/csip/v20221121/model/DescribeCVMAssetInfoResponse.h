@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Data.
+
+                     * @return Data Data.
+
                      * 
                      */
                     AssetBaseInfoResponse GetData() const;
@@ -63,8 +63,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Data.
+
                      */
                     AssetBaseInfoResponse m_data;
                     bool m_dataHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filters
+                * Filter conditions. Multiple Values under the same Name are in an OR relationship, and different Names are in an AND relationship.
                 */
                 class Filters : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filter condition name.
+                     * @return Name Filter condition name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filter condition name.
+                     * @param _name Filter condition name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Values Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filter condition value list
+                     * @return Values Filter condition value list
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _values Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filter condition value list
+                     * @param _values Filter condition value list
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExactMatch Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Exact match: 1 - exact match; default - fuzzy match
+                     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy match
                      * 
                      */
                     std::string GetExactMatch() const;
 
                     /**
-                     * 设置Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _exactMatch Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Exact match: 1 - exact match; default - fuzzy match
+                     * @param _exactMatch Exact match: 1 - exact match; default - fuzzy match
                      * 
                      */
                     void SetExactMatch(const std::string& _exactMatch);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filter condition name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filter condition value list
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Exact match: 1 - exact match; default - fuzzy match
                      */
                     std::string m_exactMatch;
                     bool m_exactMatchHasBeenSet;

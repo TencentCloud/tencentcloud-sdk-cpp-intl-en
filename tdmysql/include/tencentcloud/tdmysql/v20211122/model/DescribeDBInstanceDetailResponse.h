@@ -886,6 +886,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaintenanceWindowHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * @return EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 
+                     */
+                    int64_t GetEncryptionEnable() const;
+
+                    /**
+                     * 判断参数 EncryptionEnable 是否已赋值
+                     * @return EncryptionEnable 是否已赋值
+                     * 
+                     */
+                    bool EncryptionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Real-use kms region for subsequent call to kms service</p>
+                     * @return EncryptionKmsRegion <p>Real-use kms region for subsequent call to kms service</p>
+                     * 
+                     */
+                    std::string GetEncryptionKmsRegion() const;
+
+                    /**
+                     * 判断参数 EncryptionKmsRegion 是否已赋值
+                     * @return EncryptionKmsRegion 是否已赋值
+                     * 
+                     */
+                    bool EncryptionKmsRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1246,6 +1274,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     MaintenanceWindowInfo m_maintenanceWindow;
                     bool m_maintenanceWindowHasBeenSet;
+
+                    /**
+                     * <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     */
+                    int64_t m_encryptionEnable;
+                    bool m_encryptionEnableHasBeenSet;
+
+                    /**
+                     * <p>Real-use kms region for subsequent call to kms service</p>
+                     */
+                    std::string m_encryptionKmsRegion;
+                    bool m_encryptionKmsRegionHasBeenSet;
 
                 };
             }

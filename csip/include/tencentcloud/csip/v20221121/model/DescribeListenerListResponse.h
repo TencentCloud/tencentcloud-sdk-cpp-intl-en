@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Total Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Total number.
+                     * @return Total Total number.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -61,10 +59,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Listener list
+                     * @return Data Listener list
                      * 
                      */
                     std::vector<ClbListenerListInfo> GetData() const;
@@ -79,15 +75,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Total number.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Listener list
                      */
                     std::vector<ClbListenerListInfo> m_data;
                     bool m_dataHasBeenSet;

@@ -44,31 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
-                     * @return MachineType Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+                     * 获取<p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+                     * @return MachineType <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
                      * 
                      */
                     std::string GetMachineType() const;
 
                     /**
-                     * 设置Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
-                     * @param _machineType Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+                     * 设置<p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+                     * @param _machineType <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
                      * 
                      */
                     void SetMachineType(const std::string& _machineType);
@@ -81,15 +65,15 @@ Other: Hybrid Cloud Zone
                     bool MachineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
-                     * @return MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+                     * 获取<p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+                     * @return MachineRegion <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
                      * 
                      */
                     std::string GetMachineRegion() const;
 
                     /**
-                     * 设置Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
-                     * @param _machineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+                     * 设置<p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+                     * @param _machineRegion <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
                      * 
                      */
                     void SetMachineRegion(const std::string& _machineRegion);
@@ -102,15 +86,15 @@ Other: Hybrid Cloud Zone
                     bool MachineRegionHasBeenSet() const;
 
                     /**
-                     * 获取Number of returns. It is 10 by default, and the maximum value is 100.
-                     * @return Limit Number of returns. It is 10 by default, and the maximum value is 100.
+                     * 获取<p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+                     * @return Limit <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returns. It is 10 by default, and the maximum value is 100.
-                     * @param _limit Number of returns. It is 10 by default, and the maximum value is 100.
+                     * 设置<p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+                     * @param _limit <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -123,15 +107,15 @@ Other: Hybrid Cloud Zone
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -144,63 +128,15 @@ Other: Hybrid Cloud Zone
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
-                     * @return Filters Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+                     * 获取<p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+                     * @return Filters <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
-                     * @param _filters Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+                     * 设置<p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+                     * @param _filters <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -213,15 +149,15 @@ Each filtering criterion supports only one value; queries of multiple values wit
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取ID List of Businesses to which machines belong
-                     * @return ProjectIds ID List of Businesses to which machines belong
+                     * 获取<p>List of business IDs to which the machines belong</p>
+                     * @return ProjectIds <p>List of business IDs to which the machines belong</p>
                      * 
                      */
                     std::vector<uint64_t> GetProjectIds() const;
 
                     /**
-                     * 设置ID List of Businesses to which machines belong
-                     * @param _projectIds ID List of Businesses to which machines belong
+                     * 设置<p>List of business IDs to which the machines belong</p>
+                     * @param _projectIds <p>List of business IDs to which the machines belong</p>
                      * 
                      */
                     void SetProjectIds(const std::vector<uint64_t>& _projectIds);
@@ -234,15 +170,15 @@ Each filtering criterion supports only one value; queries of multiple values wit
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MachineAppId 
+                     * 获取<p>APPID of the machine</p>
+                     * @return MachineAppId <p>APPID of the machine</p>
                      * 
                      */
                     uint64_t GetMachineAppId() const;
 
                     /**
-                     * 设置
-                     * @param _machineAppId 
+                     * 设置<p>APPID of the machine</p>
+                     * @param _machineAppId <p>APPID of the machine</p>
                      * 
                      */
                     void SetMachineAppId(const uint64_t& _machineAppId);
@@ -257,59 +193,43 @@ Each filtering criterion supports only one value; queries of multiple values wit
                 private:
 
                     /**
-                     * Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+                     * <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
                      */
                     std::string m_machineType;
                     bool m_machineTypeHasBeenSet;
 
                     /**
-                     * Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+                     * <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
                      */
                     std::string m_machineRegion;
                     bool m_machineRegionHasBeenSet;
 
                     /**
-                     * Number of returns. It is 10 by default, and the maximum value is 100.
+                     * <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+                     * <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * ID List of Businesses to which machines belong
+                     * <p>List of business IDs to which the machines belong</p>
                      */
                     std::vector<uint64_t> m_projectIds;
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>APPID of the machine</p>
                      */
                     uint64_t m_machineAppId;
                     bool m_machineAppIdHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud service provider.
-                     * @return Provider Cloud service provider.
+                     * 获取<p>Cloud vendor</p>
+                     * @return Provider <p>Cloud vendor</p>
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置Cloud service provider.
-                     * @param _provider Cloud service provider.
+                     * 设置<p>Cloud vendor</p>
+                     * @param _provider <p>Cloud vendor</p>
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProviderHasBeenSet() const;
 
                     /**
-                     * 获取Account name.
-                     * @return CloudAccountName Account name.
+                     * 获取<p>Cloud account name</p>
+                     * @return CloudAccountName <p>Cloud account name</p>
                      * 
                      */
                     std::string GetCloudAccountName() const;
 
                     /**
-                     * 设置Account name.
-                     * @param _cloudAccountName Account name.
+                     * 设置<p>Cloud account name</p>
+                     * @param _cloudAccountName <p>Cloud account name</p>
                      * 
                      */
                     void SetCloudAccountName(const std::string& _cloudAccountName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CloudAccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Cloud account.
-                     * @return CloudAccountId Cloud account.
+                     * 获取<p>Cloud Account</p>
+                     * @return CloudAccountId <p>Cloud Account</p>
                      * 
                      */
                     std::string GetCloudAccountId() const;
 
                     /**
-                     * 设置Cloud account.
-                     * @param _cloudAccountId Cloud account.
+                     * 设置<p>Cloud Account</p>
+                     * @param _cloudAccountId <p>Cloud Account</p>
                      * 
                      */
                     void SetCloudAccountId(const std::string& _cloudAccountId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CloudAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain
-                     * @return Domain Domain
+                     * 获取<p>Domain name</p>
+                     * @return Domain <p>Domain name</p>
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain
-                     * @param _domain Domain
+                     * 设置<p>Domain name</p>
+                     * @param _domain <p>Domain name</p>
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取IP
-                     * @return Ip IP
+                     * 获取<p>IP</p>
+                     * @return Ip <p>IP</p>
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置IP
-                     * @param _ip IP
+                     * 设置<p>IP</p>
+                     * @param _ip <p>IP</p>
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Port or port range.
-                     * @return Port Port or port range.
+                     * 获取<p>Port or port range</p>
+                     * @return Port <p>Port or port range</p>
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port or port range.
-                     * @param _port Port or port range.
+                     * 设置<p>Port or port range</p>
+                     * @param _port <p>Port or port range</p>
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Open.
-                     * @return Status Open.
+                     * 获取<p>Open</p>
+                     * @return Status <p>Open</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Open.
-                     * @param _status Open.
+                     * 设置<p>Open</p>
+                     * @param _status <p>Open</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Risk type.
-                     * @return RiskType Risk type.
+                     * 获取<p>Risk type</p>
+                     * @return RiskType <p>Risk type</p>
                      * 
                      */
                     std::string GetRiskType() const;
 
                     /**
-                     * 设置Risk type.
-                     * @param _riskType Risk type.
+                     * 设置<p>Risk type</p>
+                     * @param _riskType <p>Risk type</p>
                      * 
                      */
                     void SetRiskType(const std::string& _riskType);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取acl type.
-                     * @return AclType acl type.
+                     * 获取<p>acl type</p>
+                     * @return AclType <p>acl type</p>
                      * 
                      */
                     std::string GetAclType() const;
 
                     /**
-                     * 设置acl type.
-                     * @param _aclType acl type.
+                     * 设置<p>acl type</p>
+                     * @param _aclType <p>acl type</p>
                      * 
                      */
                     void SetAclType(const std::string& _aclType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool AclTypeHasBeenSet() const;
 
                     /**
-                     * 获取ACL list.
-                     * @return AclList ACL list.
+                     * 获取<p>acl list</p>
+                     * @return AclList <p>acl list</p>
                      * 
                      */
                     std::string GetAclList() const;
 
                     /**
-                     * 设置ACL list.
-                     * @param _aclList ACL list.
+                     * 设置<p>acl list</p>
+                     * @param _aclList <p>acl list</p>
                      * 
                      */
                     void SetAclList(const std::string& _aclList);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool AclListHasBeenSet() const;
 
                     /**
-                     * 获取Asset ID.
-                     * @return AssetId Asset ID.
+                     * 获取<p>Asset ID</p>
+                     * @return AssetId <p>Asset ID</p>
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
-                     * 设置Asset ID.
-                     * @param _assetId Asset ID.
+                     * 设置<p>Asset ID</p>
+                     * @param _assetId <p>Asset ID</p>
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name</p>
+                     * @return InstanceName <p>Instance name</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name</p>
+                     * @param _instanceName <p>Instance name</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return AssetType Asset type.
+                     * 获取<p>Asset type</p>
+                     * @return AssetType <p>Asset type</p>
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _assetType Asset type.
+                     * 设置<p>Asset type</p>
+                     * @param _assetType <p>Asset type</p>
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Port service quantity.
-                     * @return PortServiceCount Port service quantity.
+                     * 获取<p>Number of port services</p>
+                     * @return PortServiceCount <p>Number of port services</p>
                      * 
                      */
                     uint64_t GetPortServiceCount() const;
 
                     /**
-                     * 设置Port service quantity.
-                     * @param _portServiceCount Port service quantity.
+                     * 设置<p>Number of port services</p>
+                     * @param _portServiceCount <p>Number of port services</p>
                      * 
                      */
                     void SetPortServiceCount(const uint64_t& _portServiceCount);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool PortServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of high-risk ports.
-                     * @return HighRiskPortServiceCount Number of high-risk ports.
+                     * 获取<p>Number of high-risk ports</p>
+                     * @return HighRiskPortServiceCount <p>Number of high-risk ports</p>
                      * 
                      */
                     uint64_t GetHighRiskPortServiceCount() const;
 
                     /**
-                     * 设置Number of high-risk ports.
-                     * @param _highRiskPortServiceCount Number of high-risk ports.
+                     * 设置<p>Number of high-risk ports</p>
+                     * @param _highRiskPortServiceCount <p>Number of high-risk ports</p>
                      * 
                      */
                     void SetHighRiskPortServiceCount(const uint64_t& _highRiskPortServiceCount);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool HighRiskPortServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of web applications.
-                     * @return WebAppCount Number of web applications.
+                     * 获取<p>Number of web applications</p>
+                     * @return WebAppCount <p>Number of web applications</p>
                      * 
                      */
                     uint64_t GetWebAppCount() const;
 
                     /**
-                     * 设置Number of web applications.
-                     * @param _webAppCount Number of web applications.
+                     * 设置<p>Number of web applications</p>
+                     * @param _webAppCount <p>Number of web applications</p>
                      * 
                      */
                     void SetWebAppCount(const uint64_t& _webAppCount);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool WebAppCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of web applications at risk.
-                     * @return RiskWebAppCount Number of web applications at risk.
+                     * 获取<p>Number of web applications at risk</p>
+                     * @return RiskWebAppCount <p>Number of web applications at risk</p>
                      * 
                      */
                     uint64_t GetRiskWebAppCount() const;
 
                     /**
-                     * 设置Number of web applications at risk.
-                     * @param _riskWebAppCount Number of web applications at risk.
+                     * 设置<p>Number of web applications at risk</p>
+                     * @param _riskWebAppCount <p>Number of web applications at risk</p>
                      * 
                      */
                     void SetRiskWebAppCount(const uint64_t& _riskWebAppCount);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool RiskWebAppCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of Weak Passwords
-                     * @return WeakPasswordCount Number of Weak Passwords
+                     * 获取<p>Number of weak passwords.</p>
+                     * @return WeakPasswordCount <p>Number of weak passwords.</p>
                      * 
                      */
                     uint64_t GetWeakPasswordCount() const;
 
                     /**
-                     * 设置Number of Weak Passwords
-                     * @param _weakPasswordCount Number of Weak Passwords
+                     * 设置<p>Number of weak passwords.</p>
+                     * @param _weakPasswordCount <p>Number of weak passwords.</p>
                      * 
                      */
                     void SetWeakPasswordCount(const uint64_t& _weakPasswordCount);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool WeakPasswordCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of vulnerabilities
-                     * @return VulCount Number of vulnerabilities
+                     * 获取<p>Vulnerability count</p>
+                     * @return VulCount <p>Vulnerability count</p>
                      * 
                      */
                     uint64_t GetVulCount() const;
 
                     /**
-                     * 设置Number of vulnerabilities
-                     * @param _vulCount Number of vulnerabilities
+                     * 设置<p>Vulnerability count</p>
+                     * @param _vulCount <p>Vulnerability count</p>
                      * 
                      */
                     void SetVulCount(const uint64_t& _vulCount);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool VulCountHasBeenSet() const;
 
                     /**
-                     * 获取First detection time
-                     * @return CreateTime First detection time
+                     * 获取<p>First discovery time</p>
+                     * @return CreateTime <p>First discovery time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置First detection time
-                     * @param _createTime First detection time
+                     * 设置<p>First discovery time</p>
+                     * @param _createTime <p>First discovery time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Latest update time.
-                     * @return UpdateTime Latest update time.
+                     * 获取<p>Latest update time.</p>
+                     * @return UpdateTime <p>Latest update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Latest update time.
-                     * @param _updateTime Latest update time.
+                     * 设置<p>Latest update time.</p>
+                     * @param _updateTime <p>Latest update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance Type Name
-                     * @return AssetTypeName Instance Type Name
+                     * 获取<p>Instance Type Name</p>
+                     * @return AssetTypeName <p>Instance Type Name</p>
                      * 
                      */
                     std::string GetAssetTypeName() const;
 
                     /**
-                     * 设置Instance Type Name
-                     * @param _assetTypeName Instance Type Name
+                     * 设置<p>Instance Type Name</p>
+                     * @param _assetTypeName <p>Instance Type Name</p>
                      * 
                      */
                     void SetAssetTypeName(const std::string& _assetTypeName);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool AssetTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Open status.
-                     * @return DisplayStatus Open status.
+                     * 获取<p>Open status</p>
+                     * @return DisplayStatus <p>Open status</p>
                      * 
                      */
                     std::string GetDisplayStatus() const;
 
                     /**
-                     * 设置Open status.
-                     * @param _displayStatus Open status.
+                     * 设置<p>Open status</p>
+                     * @param _displayStatus <p>Open status</p>
                      * 
                      */
                     void SetDisplayStatus(const std::string& _displayStatus);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool DisplayStatusHasBeenSet() const;
 
                     /**
-                     * 获取Port status.
-                     * @return DisplayRiskType Port status.
+                     * 获取<p>Port status</p>
+                     * @return DisplayRiskType <p>Port status</p>
                      * 
                      */
                     std::string GetDisplayRiskType() const;
 
                     /**
-                     * 设置Port status.
-                     * @param _displayRiskType Port status.
+                     * 设置<p>Port status</p>
+                     * @param _displayRiskType <p>Port status</p>
                      * 
                      */
                     void SetDisplayRiskType(const std::string& _displayRiskType);
@@ -551,15 +551,15 @@ namespace TencentCloud
                     bool DisplayRiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scan task status.
-                     * @return ScanTaskStatus Scan task status.
+                     * 获取<p>Scan task status</p>
+                     * @return ScanTaskStatus <p>Scan task status</p>
                      * 
                      */
                     std::string GetScanTaskStatus() const;
 
                     /**
-                     * 设置Scan task status.
-                     * @param _scanTaskStatus Scan task status.
+                     * 设置<p>Scan task status</p>
+                     * @param _scanTaskStatus <p>Scan task status</p>
                      * 
                      */
                     void SetScanTaskStatus(const std::string& _scanTaskStatus);
@@ -572,15 +572,15 @@ namespace TencentCloud
                     bool ScanTaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取uuid
-                     * @return Uuid uuid
+                     * 获取<p>uuid</p>
+                     * @return Uuid <p>uuid</p>
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置uuid
-                     * @param _uuid uuid
+                     * 设置<p>uuid</p>
+                     * @param _uuid <p>uuid</p>
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -593,15 +593,15 @@ namespace TencentCloud
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Whether a security check has been performed.
-                     * @return HasScan Whether a security check has been performed.
+                     * 获取<p>Whether a security check has been performed</p>
+                     * @return HasScan <p>Whether a security check has been performed</p>
                      * 
                      */
                     std::string GetHasScan() const;
 
                     /**
-                     * 设置Whether a security check has been performed.
-                     * @param _hasScan Whether a security check has been performed.
+                     * 设置<p>Whether a security check has been performed</p>
+                     * @param _hasScan <p>Whether a security check has been performed</p>
                      * 
                      */
                     void SetHasScan(const std::string& _hasScan);
@@ -614,15 +614,15 @@ namespace TencentCloud
                     bool HasScanHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID.
-                     * @return AppId Tenant ID.
+                     * 获取<p>Tenant ID</p>
+                     * @return AppId <p>Tenant ID</p>
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置Tenant ID.
-                     * @param _appId Tenant ID.
+                     * 设置<p>Tenant ID</p>
+                     * @param _appId <p>Tenant ID</p>
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -635,15 +635,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID string.
-                     * @return AppIdStr Tenant ID string.
+                     * 获取<p>Tenant ID string</p>
+                     * @return AppIdStr <p>Tenant ID string</p>
                      * 
                      */
                     std::string GetAppIdStr() const;
 
                     /**
-                     * 设置Tenant ID string.
-                     * @param _appIdStr Tenant ID string.
+                     * 设置<p>Tenant ID string</p>
+                     * @param _appIdStr <p>Tenant ID string</p>
                      * 
                      */
                     void SetAppIdStr(const std::string& _appIdStr);
@@ -656,15 +656,15 @@ namespace TencentCloud
                     bool AppIdStrHasBeenSet() const;
 
                     /**
-                     * 获取Record ID
-                     * @return ExposureID Record ID
+                     * 获取<p>Record ID</p>
+                     * @return ExposureID <p>Record ID</p>
                      * 
                      */
                     uint64_t GetExposureID() const;
 
                     /**
-                     * 设置Record ID
-                     * @param _exposureID Record ID
+                     * 设置<p>Record ID</p>
+                     * @param _exposureID <p>Record ID</p>
                      * 
                      */
                     void SetExposureID(const uint64_t& _exposureID);
@@ -677,15 +677,15 @@ namespace TencentCloud
                     bool ExposureIDHasBeenSet() const;
 
                     /**
-                     * 获取Number of ports open.
-                     * @return PortDetectCount Number of ports open.
+                     * 获取<p>Number of open ports</p>
+                     * @return PortDetectCount <p>Number of open ports</p>
                      * 
                      */
                     uint64_t GetPortDetectCount() const;
 
                     /**
-                     * 设置Number of ports open.
-                     * @param _portDetectCount Number of ports open.
+                     * 设置<p>Number of open ports</p>
+                     * @param _portDetectCount <p>Number of open ports</p>
                      * 
                      */
                     void SetPortDetectCount(const uint64_t& _portDetectCount);
@@ -698,15 +698,15 @@ namespace TencentCloud
                     bool PortDetectCountHasBeenSet() const;
 
                     /**
-                     * 获取Port exposure result.
-                     * @return PortDetectResult Port exposure result.
+                     * 获取<p>Port exposure result</p>
+                     * @return PortDetectResult <p>Port exposure result</p>
                      * 
                      */
                     std::string GetPortDetectResult() const;
 
                     /**
-                     * 设置Port exposure result.
-                     * @param _portDetectResult Port exposure result.
+                     * 设置<p>Port exposure result</p>
+                     * @param _portDetectResult <p>Port exposure result</p>
                      * 
                      */
                     void SetPortDetectResult(const std::string& _portDetectResult);
@@ -719,15 +719,15 @@ namespace TencentCloud
                     bool PortDetectResultHasBeenSet() const;
 
                     /**
-                     * 获取Tag.
-                     * @return Tag Tag.
+                     * 获取<p>Tag.</p>
+                     * @return Tag <p>Tag.</p>
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Tag.
-                     * @param _tag Tag.
+                     * 设置<p>Tag.</p>
+                     * @param _tag <p>Tag.</p>
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -740,15 +740,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-                     * @return Comment Remarks
+                     * 获取<p>Remark</p>
+                     * @return Comment <p>Remark</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Remarks
-                     * @param _comment Remarks
+                     * 设置<p>Remark</p>
+                     * @param _comment <p>Remark</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -761,15 +761,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Number of risks to be governed.
-                     * @return ToGovernedRiskCount Number of risks to be governed.
+                     * 获取<p>Number of risks to be governed</p>
+                     * @return ToGovernedRiskCount <p>Number of risks to be governed</p>
                      * 
                      */
                     uint64_t GetToGovernedRiskCount() const;
 
                     /**
-                     * 设置Number of risks to be governed.
-                     * @param _toGovernedRiskCount Number of risks to be governed.
+                     * 设置<p>Number of risks to be governed</p>
+                     * @param _toGovernedRiskCount <p>Number of risks to be governed</p>
                      * 
                      */
                     void SetToGovernedRiskCount(const uint64_t& _toGovernedRiskCount);
@@ -782,15 +782,15 @@ namespace TencentCloud
                     bool ToGovernedRiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk content to be governed.
-                     * @return ToGovernedRiskContent Risk content to be governed.
+                     * 获取<p>Risk content to be governed</p>
+                     * @return ToGovernedRiskContent <p>Risk content to be governed</p>
                      * 
                      */
                     std::string GetToGovernedRiskContent() const;
 
                     /**
-                     * 设置Risk content to be governed.
-                     * @param _toGovernedRiskContent Risk content to be governed.
+                     * 设置<p>Risk content to be governed</p>
+                     * @param _toGovernedRiskContent <p>Risk content to be governed</p>
                      * 
                      */
                     void SetToGovernedRiskContent(const std::string& _toGovernedRiskContent);
@@ -802,223 +802,277 @@ namespace TencentCloud
                      */
                     bool ToGovernedRiskContentHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Type icon of asset</p>
+                     * @return AssetTypeIconURL <p>Type icon of asset</p>
+                     * 
+                     */
+                    std::string GetAssetTypeIconURL() const;
+
+                    /**
+                     * 设置<p>Type icon of asset</p>
+                     * @param _assetTypeIconURL <p>Type icon of asset</p>
+                     * 
+                     */
+                    void SetAssetTypeIconURL(const std::string& _assetTypeIconURL);
+
+                    /**
+                     * 判断参数 AssetTypeIconURL 是否已赋值
+                     * @return AssetTypeIconURL 是否已赋值
+                     * 
+                     */
+                    bool AssetTypeIconURLHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Asset type 3D icon</p>
+                     * @return AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+                     * 
+                     */
+                    std::string GetAssetTypeIconSolidURL() const;
+
+                    /**
+                     * 设置<p>Asset type 3D icon</p>
+                     * @param _assetTypeIconSolidURL <p>Asset type 3D icon</p>
+                     * 
+                     */
+                    void SetAssetTypeIconSolidURL(const std::string& _assetTypeIconSolidURL);
+
+                    /**
+                     * 判断参数 AssetTypeIconSolidURL 是否已赋值
+                     * @return AssetTypeIconSolidURL 是否已赋值
+                     * 
+                     */
+                    bool AssetTypeIconSolidURLHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cloud service provider.
+                     * <p>Cloud vendor</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
 
                     /**
-                     * Account name.
+                     * <p>Cloud account name</p>
                      */
                     std::string m_cloudAccountName;
                     bool m_cloudAccountNameHasBeenSet;
 
                     /**
-                     * Cloud account.
+                     * <p>Cloud Account</p>
                      */
                     std::string m_cloudAccountId;
                     bool m_cloudAccountIdHasBeenSet;
 
                     /**
-                     * Domain
+                     * <p>Domain name</p>
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * IP
+                     * <p>IP</p>
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Port or port range.
+                     * <p>Port or port range</p>
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Open.
+                     * <p>Open</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Risk type.
+                     * <p>Risk type</p>
                      */
                     std::string m_riskType;
                     bool m_riskTypeHasBeenSet;
 
                     /**
-                     * acl type.
+                     * <p>acl type</p>
                      */
                     std::string m_aclType;
                     bool m_aclTypeHasBeenSet;
 
                     /**
-                     * ACL list.
+                     * <p>acl list</p>
                      */
                     std::string m_aclList;
                     bool m_aclListHasBeenSet;
 
                     /**
-                     * Asset ID.
+                     * <p>Asset ID</p>
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * <p>Asset type</p>
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Port service quantity.
+                     * <p>Number of port services</p>
                      */
                     uint64_t m_portServiceCount;
                     bool m_portServiceCountHasBeenSet;
 
                     /**
-                     * Number of high-risk ports.
+                     * <p>Number of high-risk ports</p>
                      */
                     uint64_t m_highRiskPortServiceCount;
                     bool m_highRiskPortServiceCountHasBeenSet;
 
                     /**
-                     * Number of web applications.
+                     * <p>Number of web applications</p>
                      */
                     uint64_t m_webAppCount;
                     bool m_webAppCountHasBeenSet;
 
                     /**
-                     * Number of web applications at risk.
+                     * <p>Number of web applications at risk</p>
                      */
                     uint64_t m_riskWebAppCount;
                     bool m_riskWebAppCountHasBeenSet;
 
                     /**
-                     * Number of Weak Passwords
+                     * <p>Number of weak passwords.</p>
                      */
                     uint64_t m_weakPasswordCount;
                     bool m_weakPasswordCountHasBeenSet;
 
                     /**
-                     * Number of vulnerabilities
+                     * <p>Vulnerability count</p>
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
 
                     /**
-                     * First detection time
+                     * <p>First discovery time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Latest update time.
+                     * <p>Latest update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Instance Type Name
+                     * <p>Instance Type Name</p>
                      */
                     std::string m_assetTypeName;
                     bool m_assetTypeNameHasBeenSet;
 
                     /**
-                     * Open status.
+                     * <p>Open status</p>
                      */
                     std::string m_displayStatus;
                     bool m_displayStatusHasBeenSet;
 
                     /**
-                     * Port status.
+                     * <p>Port status</p>
                      */
                     std::string m_displayRiskType;
                     bool m_displayRiskTypeHasBeenSet;
 
                     /**
-                     * Scan task status.
+                     * <p>Scan task status</p>
                      */
                     std::string m_scanTaskStatus;
                     bool m_scanTaskStatusHasBeenSet;
 
                     /**
-                     * uuid
+                     * <p>uuid</p>
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Whether a security check has been performed.
+                     * <p>Whether a security check has been performed</p>
                      */
                     std::string m_hasScan;
                     bool m_hasScanHasBeenSet;
 
                     /**
-                     * Tenant ID.
+                     * <p>Tenant ID</p>
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Tenant ID string.
+                     * <p>Tenant ID string</p>
                      */
                     std::string m_appIdStr;
                     bool m_appIdStrHasBeenSet;
 
                     /**
-                     * Record ID
+                     * <p>Record ID</p>
                      */
                     uint64_t m_exposureID;
                     bool m_exposureIDHasBeenSet;
 
                     /**
-                     * Number of ports open.
+                     * <p>Number of open ports</p>
                      */
                     uint64_t m_portDetectCount;
                     bool m_portDetectCountHasBeenSet;
 
                     /**
-                     * Port exposure result.
+                     * <p>Port exposure result</p>
                      */
                     std::string m_portDetectResult;
                     bool m_portDetectResultHasBeenSet;
 
                     /**
-                     * Tag.
+                     * <p>Tag.</p>
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Remarks
+                     * <p>Remark</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Number of risks to be governed.
+                     * <p>Number of risks to be governed</p>
                      */
                     uint64_t m_toGovernedRiskCount;
                     bool m_toGovernedRiskCountHasBeenSet;
 
                     /**
-                     * Risk content to be governed.
+                     * <p>Risk content to be governed</p>
                      */
                     std::string m_toGovernedRiskContent;
                     bool m_toGovernedRiskContentHasBeenSet;
+
+                    /**
+                     * <p>Type icon of asset</p>
+                     */
+                    std::string m_assetTypeIconURL;
+                    bool m_assetTypeIconURLHasBeenSet;
+
+                    /**
+                     * <p>Asset type 3D icon</p>
+                     */
+                    std::string m_assetTypeIconSolidURL;
+                    bool m_assetTypeIconSolidURLHasBeenSet;
 
                 };
             }

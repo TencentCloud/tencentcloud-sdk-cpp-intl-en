@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of rules for blocking brute force cracking
-                     * @return Rules List of rules for blocking brute force cracking
+                     * 获取<p>Rules for blocking brute-force attacks</p>
+                     * @return Rules <p>Rules for blocking brute-force attacks</p>
                      * 
                      */
                     std::vector<BruteAttackRuleList> GetRules() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of rules for blocking brute force cracking
+                     * <p>Rules for blocking brute-force attacks</p>
                      */
                     std::vector<BruteAttackRuleList> m_rules;
                     bool m_rulesHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Title Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Title.
+                     * @return Title Title.
                      * 
                      */
                     std::string GetTitle() const;
 
                     /**
-                     * 设置Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _title Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Title.
+                     * @param _title Title.
                      * 
                      */
                     void SetTitle(const std::string& _title);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Body Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Details.
+                     * @return Body Details.
                      * 
                      */
                     std::string GetBody() const;
 
                     /**
-                     * 设置Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _body Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Details.
+                     * @param _body Details.
                      * 
                      */
                     void SetBody(const std::string& _body);
@@ -99,15 +91,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Title.
                      */
                     std::string m_title;
                     bool m_titleHasBeenSet;
 
                     /**
-                     * Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Details.
                      */
                     std::string m_body;
                     bool m_bodyHasBeenSet;

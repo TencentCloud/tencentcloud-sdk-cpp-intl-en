@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-                     * @return Level Risk level
+                     * 获取Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level
-                     * @param _level Risk level
+                     * 设置Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @param _level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the asset
-                     * @return Id Unique ID of the asset
+                     * 获取ID, handle risk usage
+                     * @return Id ID, handle risk usage
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of the asset
-                     * @param _id Unique ID of the asset
+                     * 设置ID, handle risk usage
+                     * @param _id ID, handle risk usage
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -320,19 +320,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User Nickname
+                     * @return Nick User Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User Nickname
+                     * @param _nick User Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -345,19 +341,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User UIN
+                     * @return Uin User UIN
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User UIN
+                     * @param _uin User UIN
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -475,15 +467,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool FixHasBeenSet() const;
 
                     /**
-                     * 获取Pay load
-                     * @return Payload Pay load
+                     * 获取proof
+                     * @return Payload proof
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置Pay load
-                     * @param _payload Pay load
+                     * 设置proof
+                     * @param _payload proof
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -495,6 +487,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool PayloadHasBeenSet() const;
 
+                    /**
+                     * 获取Port.
+                     * @return Port Port.
+                     * 
+                     */
+                    int64_t GetPort() const;
+
+                    /**
+                     * 设置Port.
+                     * @param _port Port.
+                     * 
+                     */
+                    void SetPort(const int64_t& _port);
+
+                    /**
+                     * 判断参数 Port 是否已赋值
+                     * @return Port 是否已赋值
+                     * 
+                     */
+                    bool PortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -504,7 +517,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Risk level
+                     * Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -546,7 +559,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Unique ID of the asset
+                     * ID, handle risk usage
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -576,15 +589,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
-                     * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User UIN
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -620,10 +631,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_fixHasBeenSet;
 
                     /**
-                     * Pay load
+                     * proof
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;
+
+                    /**
+                     * Port.
+                     */
+                    int64_t m_port;
+                    bool m_portHasBeenSet;
 
                 };
             }

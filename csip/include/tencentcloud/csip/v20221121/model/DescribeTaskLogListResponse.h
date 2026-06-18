@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Report List
+                     * @return Data Report List
                      * 
                      */
                     std::vector<TaskLogInfo> GetData() const;
@@ -77,10 +73,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return NotViewNumber Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Pending Viewing Count
+                     * @return NotViewNumber Pending Viewing Count
                      * 
                      */
                     int64_t GetNotViewNumber() const;
@@ -93,10 +87,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NotViewNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ReportTemplateNumber Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Report Templates
+                     * @return ReportTemplateNumber Number of Report Templates
                      * 
                      */
                     int64_t GetReportTemplateNumber() const;
@@ -111,29 +103,25 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Report List
                      */
                     std::vector<TaskLogInfo> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Pending Viewing Count
                      */
                     int64_t m_notViewNumber;
                     bool m_notViewNumberHasBeenSet;
 
                     /**
-                     * Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Report Templates
                      */
                     int64_t m_reportTemplateNumber;
                     bool m_reportTemplateNumberHasBeenSet;

@@ -70,18 +70,14 @@ namespace TencentCloud
 
                     /**
                      * 获取vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return VpcName vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _vpcName vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -95,18 +91,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -119,19 +111,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Os Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Operating system.
+                     * @return Os Operating system.
                      * 
                      */
                     std::string GetOs() const;
 
                     /**
-                     * 设置Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _os Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Operating system.
+                     * @param _os Operating system.
                      * 
                      */
                     void SetOs(const std::string& _os);
@@ -144,19 +132,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool OsHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Public IP address
+                     * @return PublicIp Public IP address
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _publicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Public IP address
+                     * @param _publicIp Public IP address
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -169,19 +153,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Private IP address
+                     * @return PrivateIp Private IP address
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _privateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Private IP address
+                     * @param _privateIp Private IP address
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -194,19 +174,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -220,18 +196,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -245,18 +217,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
                      * 设置Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -269,19 +237,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AccountNum Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of accounts
+                     * @return AccountNum Number of accounts
                      * 
                      */
                     uint64_t GetAccountNum() const;
 
                     /**
-                     * 设置Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _accountNum Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of accounts
+                     * @param _accountNum Number of accounts
                      * 
                      */
                     void SetAccountNum(const uint64_t& _accountNum);
@@ -294,19 +258,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AccountNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PortNum Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Ports
+                     * @return PortNum Number of Ports
                      * 
                      */
                     uint64_t GetPortNum() const;
 
                     /**
-                     * 设置Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _portNum Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Ports
+                     * @param _portNum Number of Ports
                      * 
                      */
                     void SetPortNum(const uint64_t& _portNum);
@@ -319,19 +279,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PortNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ProcessNum Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Process quantity
+                     * @return ProcessNum Process quantity
                      * 
                      */
                     uint64_t GetProcessNum() const;
 
                     /**
-                     * 设置Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _processNum Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Process quantity
+                     * @param _processNum Process quantity
                      * 
                      */
                     void SetProcessNum(const uint64_t& _processNum);
@@ -344,19 +300,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ProcessNumHasBeenSet() const;
 
                     /**
-                     * 获取Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SoftApplicationNum Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Software Applications
+                     * @return SoftApplicationNum Number of Software Applications
                      * 
                      */
                     uint64_t GetSoftApplicationNum() const;
 
                     /**
-                     * 设置Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _softApplicationNum Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Software Applications
+                     * @param _softApplicationNum Number of Software Applications
                      * 
                      */
                     void SetSoftApplicationNum(const uint64_t& _softApplicationNum);
@@ -369,19 +321,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SoftApplicationNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DatabaseNum Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Database Count
+                     * @return DatabaseNum Database Count
                      * 
                      */
                     uint64_t GetDatabaseNum() const;
 
                     /**
-                     * 设置Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _databaseNum Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Database Count
+                     * @param _databaseNum Database Count
                      * 
                      */
                     void SetDatabaseNum(const uint64_t& _databaseNum);
@@ -394,19 +342,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DatabaseNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WebApplicationNum Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Web Applications
+                     * @return WebApplicationNum Number of Web Applications
                      * 
                      */
                     uint64_t GetWebApplicationNum() const;
 
                     /**
-                     * 设置Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _webApplicationNum Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Web Applications
+                     * @param _webApplicationNum Number of Web Applications
                      * 
                      */
                     void SetWebApplicationNum(const uint64_t& _webApplicationNum);
@@ -420,18 +364,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return ServiceNum Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetServiceNum() const;
 
                     /**
                      * 设置Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _serviceNum Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServiceNum(const uint64_t& _serviceNum);
@@ -444,19 +384,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ServiceNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WebFrameworkNum Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Web Framework Count
+                     * @return WebFrameworkNum Web Framework Count
                      * 
                      */
                     uint64_t GetWebFrameworkNum() const;
 
                     /**
-                     * 设置Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _webFrameworkNum Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Web Framework Count
+                     * @param _webFrameworkNum Web Framework Count
                      * 
                      */
                     void SetWebFrameworkNum(const uint64_t& _webFrameworkNum);
@@ -469,19 +405,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WebFrameworkNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WebSiteNum Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Website Count
+                     * @return WebSiteNum Website Count
                      * 
                      */
                     uint64_t GetWebSiteNum() const;
 
                     /**
-                     * 设置Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _webSiteNum Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Website Count
+                     * @param _webSiteNum Website Count
                      * 
                      */
                     void SetWebSiteNum(const uint64_t& _webSiteNum);
@@ -494,19 +426,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WebSiteNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return JarPackageNum Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Jar Package Count
+                     * @return JarPackageNum Jar Package Count
                      * 
                      */
                     uint64_t GetJarPackageNum() const;
 
                     /**
-                     * 设置Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _jarPackageNum Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Jar Package Count
+                     * @param _jarPackageNum Jar Package Count
                      * 
                      */
                     void SetJarPackageNum(const uint64_t& _jarPackageNum);
@@ -519,19 +447,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool JarPackageNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return StartServiceNum Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Started Service Count
+                     * @return StartServiceNum Started Service Count
                      * 
                      */
                     uint64_t GetStartServiceNum() const;
 
                     /**
-                     * 设置Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _startServiceNum Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Started Service Count
+                     * @param _startServiceNum Started Service Count
                      * 
                      */
                     void SetStartServiceNum(const uint64_t& _startServiceNum);
@@ -544,19 +468,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool StartServiceNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ScheduledTaskNum Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Scheduled Tasks
+                     * @return ScheduledTaskNum Number of Scheduled Tasks
                      * 
                      */
                     uint64_t GetScheduledTaskNum() const;
 
                     /**
-                     * 设置Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _scheduledTaskNum Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Scheduled Tasks
+                     * @param _scheduledTaskNum Number of Scheduled Tasks
                      * 
                      */
                     void SetScheduledTaskNum(const uint64_t& _scheduledTaskNum);
@@ -569,19 +489,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ScheduledTaskNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return EnvironmentVariableNum Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Environment Variables
+                     * @return EnvironmentVariableNum Number of Environment Variables
                      * 
                      */
                     uint64_t GetEnvironmentVariableNum() const;
 
                     /**
-                     * 设置Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _environmentVariableNum Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Environment Variables
+                     * @param _environmentVariableNum Number of Environment Variables
                      * 
                      */
                     void SetEnvironmentVariableNum(const uint64_t& _environmentVariableNum);
@@ -594,19 +510,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool EnvironmentVariableNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return KernelModuleNum Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Kernel Modules
+                     * @return KernelModuleNum Number of Kernel Modules
                      * 
                      */
                     uint64_t GetKernelModuleNum() const;
 
                     /**
-                     * 设置Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _kernelModuleNum Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Kernel Modules
+                     * @param _kernelModuleNum Number of Kernel Modules
                      * 
                      */
                     void SetKernelModuleNum(const uint64_t& _kernelModuleNum);
@@ -619,19 +531,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool KernelModuleNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SystemInstallationPackageNum Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取System Installation Package Count
+                     * @return SystemInstallationPackageNum System Installation Package Count
                      * 
                      */
                     uint64_t GetSystemInstallationPackageNum() const;
 
                     /**
-                     * 设置Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _systemInstallationPackageNum Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置System Installation Package Count
+                     * @param _systemInstallationPackageNum System Installation Package Count
                      * 
                      */
                     void SetSystemInstallationPackageNum(const uint64_t& _systemInstallationPackageNum);
@@ -644,19 +552,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SystemInstallationPackageNumHasBeenSet() const;
 
                     /**
-                     * 获取Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SurplusProtectDay Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取remaining protection duration
+                     * @return SurplusProtectDay remaining protection duration
                      * 
                      */
                     uint64_t GetSurplusProtectDay() const;
 
                     /**
-                     * 设置Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _surplusProtectDay Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置remaining protection duration
+                     * @param _surplusProtectDay remaining protection duration
                      * 
                      */
                     void SetSurplusProtectDay(const uint64_t& _surplusProtectDay);
@@ -669,19 +573,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SurplusProtectDayHasBeenSet() const;
 
                     /**
-                     * 获取Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CWPStatus Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Whether client is installed. 1 for Installed, 0 for Not Installed.
+                     * @return CWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
                      * 
                      */
                     uint64_t GetCWPStatus() const;
 
                     /**
-                     * 设置Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _cWPStatus Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Whether client is installed. 1 for Installed, 0 for Not Installed.
+                     * @param _cWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
                      * 
                      */
                     void SetCWPStatus(const uint64_t& _cWPStatus);
@@ -694,19 +594,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool CWPStatusHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
-                     * 设置Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
@@ -720,18 +616,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return ProtectLevel Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProtectLevel() const;
 
                     /**
                      * 设置Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _protectLevel Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProtectLevel(const std::string& _protectLevel);
@@ -744,19 +636,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ProtectLevelHasBeenSet() const;
 
                     /**
-                     * 获取Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ProtectedDay Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取protection duration
+                     * @return ProtectedDay protection duration
                      * 
                      */
                     uint64_t GetProtectedDay() const;
 
                     /**
-                     * 设置Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _protectedDay Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置protection duration
+                     * @param _protectedDay protection duration
                      * 
                      */
                     void SetProtectedDay(const uint64_t& _protectedDay);
@@ -778,196 +666,168 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
 
                     /**
                      * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Operating system.
                      */
                     std::string m_os;
                     bool m_osHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Public IP address
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Private IP address
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
                      * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
                      * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of accounts
                      */
                     uint64_t m_accountNum;
                     bool m_accountNumHasBeenSet;
 
                     /**
-                     * Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Ports
                      */
                     uint64_t m_portNum;
                     bool m_portNumHasBeenSet;
 
                     /**
-                     * Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Process quantity
                      */
                     uint64_t m_processNum;
                     bool m_processNumHasBeenSet;
 
                     /**
-                     * Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Software Applications
                      */
                     uint64_t m_softApplicationNum;
                     bool m_softApplicationNumHasBeenSet;
 
                     /**
-                     * Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Database Count
                      */
                     uint64_t m_databaseNum;
                     bool m_databaseNumHasBeenSet;
 
                     /**
-                     * Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Web Applications
                      */
                     uint64_t m_webApplicationNum;
                     bool m_webApplicationNumHasBeenSet;
 
                     /**
                      * Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_serviceNum;
                     bool m_serviceNumHasBeenSet;
 
                     /**
-                     * Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Web Framework Count
                      */
                     uint64_t m_webFrameworkNum;
                     bool m_webFrameworkNumHasBeenSet;
 
                     /**
-                     * Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Website Count
                      */
                     uint64_t m_webSiteNum;
                     bool m_webSiteNumHasBeenSet;
 
                     /**
-                     * Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Jar Package Count
                      */
                     uint64_t m_jarPackageNum;
                     bool m_jarPackageNumHasBeenSet;
 
                     /**
-                     * Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Started Service Count
                      */
                     uint64_t m_startServiceNum;
                     bool m_startServiceNumHasBeenSet;
 
                     /**
-                     * Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Scheduled Tasks
                      */
                     uint64_t m_scheduledTaskNum;
                     bool m_scheduledTaskNumHasBeenSet;
 
                     /**
-                     * Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Environment Variables
                      */
                     uint64_t m_environmentVariableNum;
                     bool m_environmentVariableNumHasBeenSet;
 
                     /**
-                     * Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Kernel Modules
                      */
                     uint64_t m_kernelModuleNum;
                     bool m_kernelModuleNumHasBeenSet;
 
                     /**
-                     * Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * System Installation Package Count
                      */
                     uint64_t m_systemInstallationPackageNum;
                     bool m_systemInstallationPackageNumHasBeenSet;
 
                     /**
-                     * Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * remaining protection duration
                      */
                     uint64_t m_surplusProtectDay;
                     bool m_surplusProtectDayHasBeenSet;
 
                     /**
-                     * Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Whether client is installed. 1 for Installed, 0 for Not Installed.
                      */
                     uint64_t m_cWPStatus;
                     bool m_cWPStatusHasBeenSet;
 
                     /**
-                     * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<Tag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
                      * Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_protectLevel;
                     bool m_protectLevelHasBeenSet;
 
                     /**
-                     * Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * protection duration
                      */
                     uint64_t m_protectedDay;
                     bool m_protectedDayHasBeenSet;

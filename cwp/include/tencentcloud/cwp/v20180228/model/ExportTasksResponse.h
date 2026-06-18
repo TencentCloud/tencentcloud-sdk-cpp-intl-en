@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取PENDING: download URL being generated; FINISHED: download URL generated; ERROR: network error or other errors.
-                     * @return Status PENDING: download URL being generated; FINISHED: download URL generated; ERROR: network error or other errors.
+                     * 获取<p>PENDING: The download URL is being generated; FINISHED: The download URL has been generated; ERROR: A network error or another exception occurred</p>
+                     * @return Status <p>PENDING: The download URL is being generated; FINISHED: The download URL has been generated; ERROR: A network error or another exception occurred</p>
                      * 
                      */
                     std::string GetStatus() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Download URL
-                     * @return DownloadUrl Download URL
+                     * 获取<p>Download link</p>
+                     * @return DownloadUrl <p>Download link</p>
                      * 
                      */
                     std::string GetDownloadUrl() const;
@@ -71,19 +71,39 @@ namespace TencentCloud
                      */
                     bool DownloadUrlHasBeenSet() const;
 
+                    /**
+                     * 获取<p>File name.</p>
+                     * @return FileName <p>File name.</p>
+                     * 
+                     */
+                    std::string GetFileName() const;
+
+                    /**
+                     * 判断参数 FileName 是否已赋值
+                     * @return FileName 是否已赋值
+                     * 
+                     */
+                    bool FileNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * PENDING: download URL being generated; FINISHED: download URL generated; ERROR: network error or other errors.
+                     * <p>PENDING: The download URL is being generated; FINISHED: The download URL has been generated; ERROR: A network error or another exception occurred</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Download URL
+                     * <p>Download link</p>
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
+
+                    /**
+                     * <p>File name.</p>
+                     */
+                    std::string m_fileName;
+                    bool m_fileNameHasBeenSet;
 
                 };
             }

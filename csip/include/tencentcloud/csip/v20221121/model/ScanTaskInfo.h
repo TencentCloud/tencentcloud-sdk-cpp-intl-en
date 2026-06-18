@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task ID
+                     * @return TaskId Task ID
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _taskId Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task ID
+                     * @param _taskId Task ID
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TaskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task name.
+                     * @return TaskName Task name.
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _taskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task name.
+                     * @param _taskName Task name.
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -97,19 +89,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Status Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
+                     * @return Status Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _status Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
+                     * @param _status Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -123,18 +111,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Progress Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _progress Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -147,19 +131,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TaskTime Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task Completion Time
+                     * @return TaskTime Task Completion Time
                      * 
                      */
                     std::string GetTaskTime() const;
 
                     /**
-                     * 设置Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _taskTime Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task Completion Time
+                     * @param _taskTime Task Completion Time
                      * 
                      */
                     void SetTaskTime(const std::string& _taskTime);
@@ -172,19 +152,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TaskTimeHasBeenSet() const;
 
                     /**
-                     * 获取Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ReportId Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取report ID
+                     * @return ReportId report ID
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _reportId Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置report ID
+                     * @param _reportId report ID
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -197,19 +173,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ReportName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取report name
+                     * @return ReportName report name
                      * 
                      */
                     std::string GetReportName() const;
 
                     /**
-                     * 设置Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _reportName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置report name
+                     * @param _reportName report name
                      * 
                      */
                     void SetReportName(const std::string& _reportName);
@@ -222,19 +194,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ReportNameHasBeenSet() const;
 
                     /**
-                     * 获取Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ScanPlan Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+                     * @return ScanPlan Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
                      * 
                      */
                     int64_t GetScanPlan() const;
 
                     /**
-                     * 设置Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _scanPlan Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+                     * @param _scanPlan Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
                      * 
                      */
                     void SetScanPlan(const int64_t& _scanPlan);
@@ -247,19 +215,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ScanPlanHasBeenSet() const;
 
                     /**
-                     * 获取Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetCount Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Associated Assets
+                     * @return AssetCount Number of Associated Assets
                      * 
                      */
                     int64_t GetAssetCount() const;
 
                     /**
-                     * 设置Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _assetCount Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Associated Assets
+                     * @param _assetCount Number of Associated Assets
                      * 
                      */
                     void SetAssetCount(const int64_t& _assetCount);
@@ -272,19 +236,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetCountHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取APP ID
+                     * @return AppId APP ID
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _appId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置APP ID
+                     * @param _appId APP ID
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -297,19 +257,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User Host Account ID
+                     * @return UIN User Host Account ID
                      * 
                      */
                     std::string GetUIN() const;
 
                     /**
-                     * 设置User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _uIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User Host Account ID
+                     * @param _uIN User Host Account ID
                      * 
                      */
                     void SetUIN(const std::string& _uIN);
@@ -322,19 +278,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool UINHasBeenSet() const;
 
                     /**
-                     * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User name
+                     * @return UserName User name
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _userName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User name
+                     * @param _userName User name
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -349,85 +301,73 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task ID
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task name.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task Completion Time
                      */
                     std::string m_taskTime;
                     bool m_taskTimeHasBeenSet;
 
                     /**
-                     * Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * report ID
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * report name
                      */
                     std::string m_reportName;
                     bool m_reportNameHasBeenSet;
 
                     /**
-                     * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
                      */
                     int64_t m_scanPlan;
                     bool m_scanPlanHasBeenSet;
 
                     /**
-                     * Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Associated Assets
                      */
                     int64_t m_assetCount;
                     bool m_assetCountHasBeenSet;
 
                     /**
-                     * User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * APP ID
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User Host Account ID
                      */
                     std::string m_uIN;
                     bool m_uINHasBeenSet;
 
                     /**
-                     * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User name
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;

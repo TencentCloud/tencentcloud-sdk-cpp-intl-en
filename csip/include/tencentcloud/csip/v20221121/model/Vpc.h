@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool CVMHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
-                     * 设置Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
@@ -178,19 +174,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DNS DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取DNS Domain
+                     * @return DNS DNS Domain
                      * 
                      */
                     std::vector<std::string> GetDNS() const;
 
                     /**
-                     * 设置DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _dNS DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置DNS Domain
+                     * @param _dNS DNS Domain
                      * 
                      */
                     void SetDNS(const std::vector<std::string>& _dNS);
@@ -329,19 +321,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取New Asset or Not. 1: New
+                     * @return IsNewAsset New Asset or Not. 1: New
                      * 
                      */
                     uint64_t GetIsNewAsset() const;
 
                     /**
-                     * 设置Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置New Asset or Not. 1: New
+                     * @param _isNewAsset New Asset or Not. 1: New
                      * 
                      */
                     void SetIsNewAsset(const uint64_t& _isNewAsset);
@@ -354,19 +342,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsNewAssetHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsCore Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Whether it is a core asset. 1-Yes, 2-No.
+                     * @return IsCore Whether it is a core asset. 1-Yes, 2-No.
                      * 
                      */
                     uint64_t GetIsCore() const;
 
                     /**
-                     * 设置Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isCore Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Whether it is a core asset. 1-Yes, 2-No.
+                     * @param _isCore Whether it is a core asset. 1-Yes, 2-No.
                      * 
                      */
                     void SetIsCore(const uint64_t& _isCore);
@@ -411,15 +395,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_cVMHasBeenSet;
 
                     /**
-                     * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<Tag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * DNS domain
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * DNS Domain
                      */
                     std::vector<std::string> m_dNS;
                     bool m_dNSHasBeenSet;
@@ -461,15 +443,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_nickHasBeenSet;
 
                     /**
-                     * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * New Asset or Not. 1: New
                      */
                     uint64_t m_isNewAsset;
                     bool m_isNewAssetHasBeenSet;
 
                     /**
-                     * Whether it's a critical asset. `1`: Yes; `2`: No
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Whether it is a core asset. 1-Yes, 2-No.
                      */
                     uint64_t m_isCore;
                     bool m_isCoreHasBeenSet;

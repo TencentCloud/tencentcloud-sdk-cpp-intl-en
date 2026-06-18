@@ -463,6 +463,27 @@ namespace TencentCloud
                      */
                     bool InstanceModeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Security group id list</p>
+                     * @return SecurityGroupIds <p>Security group id list</p>
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置<p>Security group id list</p>
+                     * @param _securityGroupIds <p>Security group id list</p>
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -584,6 +605,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceMode;
                     bool m_instanceModeHasBeenSet;
+
+                    /**
+                     * <p>Security group id list</p>
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

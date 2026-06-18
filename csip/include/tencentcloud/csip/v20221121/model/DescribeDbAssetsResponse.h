@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Total Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Total number.
+                     * @return Total Total number.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -62,10 +60,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Total of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data Total of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Total number of assets
+                     * @return Data Total number of assets
                      * 
                      */
                     std::vector<DBAssetVO> GetData() const;
@@ -78,10 +74,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region Enumeration
+                     * @return RegionList Region Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetRegionList() const;
@@ -94,10 +88,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionListHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Type Enumeration
+                     * @return AssetTypeList Asset Type Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetAssetTypeList() const;
@@ -110,10 +102,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetTypeListHasBeenSet() const;
 
                     /**
-                     * 获取List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VpcList List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取VPC Enumeration
+                     * @return VpcList VPC Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetVpcList() const;
@@ -126,10 +116,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VpcListHasBeenSet() const;
 
                     /**
-                     * 获取List of users (AppId)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AppIdList List of users (AppId)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Appid Enumeration
+                     * @return AppIdList Appid Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetAppIdList() const;
@@ -141,49 +129,63 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool AppIdListHasBeenSet() const;
 
+                    /**
+                     * 获取Public network private network enumeration
+                     * @return PublicPrivateAttr Public network private network enumeration
+                     * 
+                     */
+                    std::vector<FilterDataObject> GetPublicPrivateAttr() const;
+
+                    /**
+                     * 判断参数 PublicPrivateAttr 是否已赋值
+                     * @return PublicPrivateAttr 是否已赋值
+                     * 
+                     */
+                    bool PublicPrivateAttrHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Total number.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Total of assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Total number of assets
                      */
                     std::vector<DBAssetVO> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region Enumeration
                      */
                     std::vector<FilterDataObject> m_regionList;
                     bool m_regionListHasBeenSet;
 
                     /**
-                     * List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Type Enumeration
                      */
                     std::vector<FilterDataObject> m_assetTypeList;
                     bool m_assetTypeListHasBeenSet;
 
                     /**
-                     * List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * VPC Enumeration
                      */
                     std::vector<FilterDataObject> m_vpcList;
                     bool m_vpcListHasBeenSet;
 
                     /**
-                     * List of users (AppId)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Appid Enumeration
                      */
                     std::vector<FilterDataObject> m_appIdList;
                     bool m_appIdListHasBeenSet;
+
+                    /**
+                     * Public network private network enumeration
+                     */
+                    std::vector<FilterDataObject> m_publicPrivateAttr;
+                    bool m_publicPrivateAttrHasBeenSet;
 
                 };
             }

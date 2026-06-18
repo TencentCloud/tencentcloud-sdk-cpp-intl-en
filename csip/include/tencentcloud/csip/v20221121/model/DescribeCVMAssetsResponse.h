@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/CVMAssetVO.h>
 #include <tencentcloud/csip/v20221121/model/FilterDataObject.h>
+#include <tencentcloud/csip/v20221121/model/AssetInstanceTypeMap.h>
 
 
 namespace TencentCloud
@@ -46,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Total u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Total number.
+                     * @return Total Total number.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -62,10 +61,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Machine list
+                     * @return Data Machine list
                      * 
                      */
                     std::vector<CVMAssetVO> GetData() const;
@@ -78,10 +75,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region list
+                     * @return RegionList Region list
                      * 
                      */
                     std::vector<FilterDataObject> GetRegionList() const;
@@ -95,9 +90,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return DefenseStatusList Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<FilterDataObject> GetDefenseStatusList() const;
@@ -110,10 +103,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DefenseStatusListHasBeenSet() const;
 
                     /**
-                     * 获取List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VpcList List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取VPC Enumeration
+                     * @return VpcList VPC Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetVpcList() const;
@@ -126,10 +117,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VpcListHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Type Enumeration
+                     * @return AssetTypeList Asset Type Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetAssetTypeList() const;
@@ -142,10 +131,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetTypeListHasBeenSet() const;
 
                     /**
-                     * 获取List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SystemTypeList List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Operating System Enumeration
+                     * @return SystemTypeList Operating System Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetSystemTypeList() const;
@@ -158,10 +145,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SystemTypeListHasBeenSet() const;
 
                     /**
-                     * 获取List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IpTypeList List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取IP List
+                     * @return IpTypeList IP List
                      * 
                      */
                     std::vector<FilterDataObject> GetIpTypeList() const;
@@ -174,10 +159,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IpTypeListHasBeenSet() const;
 
                     /**
-                     * 获取List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AppIdList List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取AppID List
+                     * @return AppIdList AppID List
                      * 
                      */
                     std::vector<FilterDataObject> GetAppIdList() const;
@@ -190,10 +173,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AppIdListHasBeenSet() const;
 
                     /**
-                     * 获取List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ZoneList List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Availability Zone List
+                     * @return ZoneList Availability Zone List
                      * 
                      */
                     std::vector<FilterDataObject> GetZoneList() const;
@@ -206,10 +187,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ZoneListHasBeenSet() const;
 
                     /**
-                     * 获取List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OsList List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取OS List
+                     * @return OsList OS List
                      * 
                      */
                     std::vector<FilterDataObject> GetOsList() const;
@@ -221,84 +200,133 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool OsListHasBeenSet() const;
 
+                    /**
+                     * 获取Mapping of asset type and instance type.
+                     * @return AssetMapInstanceTypeList Mapping of asset type and instance type.
+                     * 
+                     */
+                    std::vector<AssetInstanceTypeMap> GetAssetMapInstanceTypeList() const;
+
+                    /**
+                     * 判断参数 AssetMapInstanceTypeList 是否已赋值
+                     * @return AssetMapInstanceTypeList 是否已赋值
+                     * 
+                     */
+                    bool AssetMapInstanceTypeListHasBeenSet() const;
+
+                    /**
+                     * 获取Public network private network enumeration.
+                     * @return PublicPrivateAttr Public network private network enumeration.
+                     * 
+                     */
+                    std::vector<FilterDataObject> GetPublicPrivateAttr() const;
+
+                    /**
+                     * 判断参数 PublicPrivateAttr 是否已赋值
+                     * @return PublicPrivateAttr 是否已赋值
+                     * 
+                     */
+                    bool PublicPrivateAttrHasBeenSet() const;
+
+                    /**
+                     * 获取Host protection status.
+                     * @return ProtectStatusList Host protection status.
+                     * 
+                     */
+                    std::vector<FilterDataObject> GetProtectStatusList() const;
+
+                    /**
+                     * 判断参数 ProtectStatusList 是否已赋值
+                     * @return ProtectStatusList 是否已赋值
+                     * 
+                     */
+                    bool ProtectStatusListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Total number.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Machine list
                      */
                     std::vector<CVMAssetVO> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region list
                      */
                     std::vector<FilterDataObject> m_regionList;
                     bool m_regionListHasBeenSet;
 
                     /**
                      * Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<FilterDataObject> m_defenseStatusList;
                     bool m_defenseStatusListHasBeenSet;
 
                     /**
-                     * List of VPCs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * VPC Enumeration
                      */
                     std::vector<FilterDataObject> m_vpcList;
                     bool m_vpcListHasBeenSet;
 
                     /**
-                     * List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Type Enumeration
                      */
                     std::vector<FilterDataObject> m_assetTypeList;
                     bool m_assetTypeListHasBeenSet;
 
                     /**
-                     * List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Operating System Enumeration
                      */
                     std::vector<FilterDataObject> m_systemTypeList;
                     bool m_systemTypeListHasBeenSet;
 
                     /**
-                     * List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * IP List
                      */
                     std::vector<FilterDataObject> m_ipTypeList;
                     bool m_ipTypeListHasBeenSet;
 
                     /**
-                     * List of AppIds
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * AppID List
                      */
                     std::vector<FilterDataObject> m_appIdList;
                     bool m_appIdListHasBeenSet;
 
                     /**
-                     * List of availability zones
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Availability Zone List
                      */
                     std::vector<FilterDataObject> m_zoneList;
                     bool m_zoneListHasBeenSet;
 
                     /**
-                     * List of operating systems
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * OS List
                      */
                     std::vector<FilterDataObject> m_osList;
                     bool m_osListHasBeenSet;
+
+                    /**
+                     * Mapping of asset type and instance type.
+                     */
+                    std::vector<AssetInstanceTypeMap> m_assetMapInstanceTypeList;
+                    bool m_assetMapInstanceTypeListHasBeenSet;
+
+                    /**
+                     * Public network private network enumeration.
+                     */
+                    std::vector<FilterDataObject> m_publicPrivateAttr;
+                    bool m_publicPrivateAttrHasBeenSet;
+
+                    /**
+                     * Host protection status.
+                     */
+                    std::vector<FilterDataObject> m_protectStatusList;
+                    bool m_protectStatusListHasBeenSet;
 
                 };
             }

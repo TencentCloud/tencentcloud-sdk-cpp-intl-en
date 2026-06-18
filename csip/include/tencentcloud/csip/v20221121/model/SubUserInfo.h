@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sub-account details
+                * Sub-account Details
                 */
                 class SubUserInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary key ID, which has no business meaning and serves solely as a unique identifier
-                     * @return ID Primary key ID, which has no business meaning and serves solely as a unique identifier
+                     * 获取<p>Primary key ID, with no business significance, only serves as a unique key.</p>
+                     * @return ID <p>Primary key ID, with no business significance, only serves as a unique key.</p>
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Primary key ID, which has no business meaning and serves solely as a unique identifier
-                     * @param _iD Primary key ID, which has no business meaning and serves solely as a unique identifier
+                     * 设置<p>Primary key ID, with no business significance, only serves as a unique key.</p>
+                     * @param _iD <p>Primary key ID, with no business significance, only serves as a unique key.</p>
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取sub-account Appid
-                     * @return AppID sub-account Appid
+                     * 获取<p>Sub-account Appid</p>
+                     * @return AppID <p>Sub-account Appid</p>
                      * 
                      */
                     std::string GetAppID() const;
 
                     /**
-                     * 设置sub-account Appid
-                     * @param _appID sub-account Appid
+                     * 设置<p>Sub-account Appid</p>
+                     * @param _appID <p>Sub-account Appid</p>
                      * 
                      */
                     void SetAppID(const std::string& _appID);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取sub-account UIn
-                     * @return Uin sub-account UIn
+                     * 获取<p>Sub-account UIn</p>
+                     * @return Uin <p>Sub-account UIn</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置sub-account UIn
-                     * @param _uin sub-account UIn
+                     * 设置<p>Sub-account UIn</p>
+                     * @param _uin <p>Sub-account UIn</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account name
-                     * @return NickName Sub-account name
+                     * 获取<p>Sub-account name</p>
+                     * @return NickName <p>Sub-account name</p>
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
-                     * 设置Sub-account name
-                     * @param _nickName Sub-account name
+                     * 设置<p>Sub-account name</p>
+                     * @param _nickName <p>Sub-account name</p>
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool NickNameHasBeenSet() const;
 
                     /**
-                     * 获取master account Appid
-                     * @return OwnerAppID master account Appid
+                     * 获取<p>Root Account Appid</p>
+                     * @return OwnerAppID <p>Root Account Appid</p>
                      * 
                      */
                     std::string GetOwnerAppID() const;
 
                     /**
-                     * 设置master account Appid
-                     * @param _ownerAppID master account Appid
+                     * 设置<p>Root Account Appid</p>
+                     * @param _ownerAppID <p>Root Account Appid</p>
                      * 
                      */
                     void SetOwnerAppID(const std::string& _ownerAppID);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OwnerAppIDHasBeenSet() const;
 
                     /**
-                     * 获取master account Uin
-                     * @return OwnerUin master account Uin
+                     * 获取<p>Root account Uin</p>
+                     * @return OwnerUin <p>Root account Uin</p>
                      * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
-                     * 设置master account Uin
-                     * @param _ownerUin master account Uin
+                     * 设置<p>Root account Uin</p>
+                     * @param _ownerUin <p>Root account Uin</p>
                      * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool OwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取master account name
-                     * @return OwnerNickName master account name
+                     * 获取<p>Root account name</p>
+                     * @return OwnerNickName <p>Root account name</p>
                      * 
                      */
                     std::string GetOwnerNickName() const;
 
                     /**
-                     * 设置master account name
-                     * @param _ownerNickName master account name
+                     * 设置<p>Root account name</p>
+                     * @param _ownerNickName <p>Root account name</p>
                      * 
                      */
                     void SetOwnerNickName(const std::string& _ownerNickName);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool OwnerNickNameHasBeenSet() const;
 
                     /**
-                     * 获取master account's memberId information
-                     * @return OwnerMemberID master account's memberId information
+                     * 获取<p>Member ID information belonging to main account</p>
+                     * @return OwnerMemberID <p>Member ID information belonging to main account</p>
                      * 
                      */
                     std::string GetOwnerMemberID() const;
 
                     /**
-                     * 设置master account's memberId information
-                     * @param _ownerMemberID master account's memberId information
+                     * 设置<p>Member ID information belonging to main account</p>
+                     * @param _ownerMemberID <p>Member ID information belonging to main account</p>
                      * 
                      */
                     void SetOwnerMemberID(const std::string& _ownerMemberID);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool OwnerMemberIDHasBeenSet() const;
 
                     /**
-                     * 获取Account type: 0 for Tencent Cloud account, 1 for AWS account
-                     * @return CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+                     * 获取<p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+                     * @return CloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Account type: 0 for Tencent Cloud account, 1 for AWS account
-                     * @param _cloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+                     * 设置<p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+                     * @param _cloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取Accessible services count
-                     * @return ServiceCount Accessible services count
+                     * 获取<p>Number of accessible services</p>
+                     * @return ServiceCount <p>Number of accessible services</p>
                      * 
                      */
                     int64_t GetServiceCount() const;
 
                     /**
-                     * 设置Accessible services count
-                     * @param _serviceCount Accessible services count
+                     * 设置<p>Number of accessible services</p>
+                     * @param _serviceCount <p>Number of accessible services</p>
                      * 
                      */
                     void SetServiceCount(const int64_t& _serviceCount);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Accessible API count
-                     * @return InterfaceCount Accessible API count
+                     * 获取<p>Number of accessible APIs</p>
+                     * @return InterfaceCount <p>Number of accessible APIs</p>
                      * 
                      */
                     int64_t GetInterfaceCount() const;
 
                     /**
-                     * 设置Accessible API count
-                     * @param _interfaceCount Accessible API count
+                     * 设置<p>Number of accessible APIs</p>
+                     * @param _interfaceCount <p>Number of accessible APIs</p>
                      * 
                      */
                     void SetInterfaceCount(const int64_t& _interfaceCount);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool InterfaceCountHasBeenSet() const;
 
                     /**
-                     * 获取Accessible resources count
-                     * @return AssetCount Accessible resources count
+                     * 获取<p>Number of accessible resources</p>
+                     * @return AssetCount <p>Number of accessible resources</p>
                      * 
                      */
                     int64_t GetAssetCount() const;
 
                     /**
-                     * 设置Accessible resources count
-                     * @param _assetCount Accessible resources count
+                     * 设置<p>Number of accessible resources</p>
+                     * @param _assetCount <p>Number of accessible resources</p>
                      * 
                      */
                     void SetAssetCount(const int64_t& _assetCount);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool AssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Access/Behavior Logs Count
-                     * @return LogCount Access/Behavior Logs Count
+                     * 获取<p>Number of access/behavior logs</p>
+                     * @return LogCount <p>Number of access/behavior logs</p>
                      * 
                      */
                     int64_t GetLogCount() const;
 
                     /**
-                     * 设置Access/Behavior Logs Count
-                     * @param _logCount Access/Behavior Logs Count
+                     * 设置<p>Number of access/behavior logs</p>
+                     * @param _logCount <p>Number of access/behavior logs</p>
                      * 
                      */
                     void SetLogCount(const int64_t& _logCount);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool LogCountHasBeenSet() const;
 
                     /**
-                     * 获取Permissions configuration risk
-                     * @return ConfigRiskCount Permissions configuration risk
+                     * 获取<p>Permission configuration risk</p>
+                     * @return ConfigRiskCount <p>Permission configuration risk</p>
                      * 
                      */
                     int64_t GetConfigRiskCount() const;
 
                     /**
-                     * 设置Permissions configuration risk
-                     * @param _configRiskCount Permissions configuration risk
+                     * 设置<p>Permission configuration risk</p>
+                     * @param _configRiskCount <p>Permission configuration risk</p>
                      * 
                      */
                     void SetConfigRiskCount(const int64_t& _configRiskCount);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool ConfigRiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Dangerous behavior alarm
-                     * @return ActionRiskCount Dangerous behavior alarm
+                     * 获取<p>Dangerous behavior alarm</p>
+                     * @return ActionRiskCount <p>Dangerous behavior alarm</p>
                      * 
                      */
                     int64_t GetActionRiskCount() const;
 
                     /**
-                     * 设置Dangerous behavior alarm
-                     * @param _actionRiskCount Dangerous behavior alarm
+                     * 设置<p>Dangerous behavior alarm</p>
+                     * @param _actionRiskCount <p>Dangerous behavior alarm</p>
                      * 
                      */
                     void SetActionRiskCount(const int64_t& _actionRiskCount);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ActionRiskCountHasBeenSet() const;
 
                     /**
-                     * 获取whether to enable CloudAudit logs
-                     * @return IsAccessCloudAudit whether to enable CloudAudit logs
+                     * 获取<p>Whether to access operation audit log</p>
+                     * @return IsAccessCloudAudit <p>Whether to access operation audit log</p>
                      * 
                      */
                     bool GetIsAccessCloudAudit() const;
 
                     /**
-                     * 设置whether to enable CloudAudit logs
-                     * @param _isAccessCloudAudit whether to enable CloudAudit logs
+                     * 设置<p>Whether to access operation audit log</p>
+                     * @param _isAccessCloudAudit <p>Whether to access operation audit log</p>
                      * 
                      */
                     void SetIsAccessCloudAudit(const bool& _isAccessCloudAudit);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool IsAccessCloudAuditHasBeenSet() const;
 
                     /**
-                     * 获取whether risk configuration security assessment
-                     * @return IsAccessCheck whether risk configuration security assessment
+                     * 获取<p>Security check for configuration risk required or not</p>
+                     * @return IsAccessCheck <p>Security check for configuration risk required or not</p>
                      * 
                      */
                     bool GetIsAccessCheck() const;
 
                     /**
-                     * 设置whether risk configuration security assessment
-                     * @param _isAccessCheck whether risk configuration security assessment
+                     * 设置<p>Security check for configuration risk required or not</p>
+                     * @param _isAccessCheck <p>Security check for configuration risk required or not</p>
                      * 
                      */
                     void SetIsAccessCheck(const bool& _isAccessCheck);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool IsAccessCheckHasBeenSet() const;
 
                     /**
-                     * 获取whether to configure user behavior management policies
-                     * @return IsAccessUeba whether to configure user behavior management policies
+                     * 获取<p>Whether configure user behavior management policy</p>
+                     * @return IsAccessUeba <p>Whether configure user behavior management policy</p>
                      * 
                      */
                     bool GetIsAccessUeba() const;
 
                     /**
-                     * 设置whether to configure user behavior management policies
-                     * @param _isAccessUeba whether to configure user behavior management policies
+                     * 设置<p>Whether configure user behavior management policy</p>
+                     * @param _isAccessUeba <p>Whether configure user behavior management policy</p>
                      * 
                      */
                     void SetIsAccessUeba(const bool& _isAccessUeba);
@@ -424,115 +424,142 @@ namespace TencentCloud
                      */
                     bool IsAccessUebaHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Creation time (Unix timestamp).</p>
+                     * @return CreateTime <p>Creation time (Unix timestamp).</p>
+                     * 
+                     */
+                    int64_t GetCreateTime() const;
+
+                    /**
+                     * 设置<p>Creation time (Unix timestamp).</p>
+                     * @param _createTime <p>Creation time (Unix timestamp).</p>
+                     * 
+                     */
+                    void SetCreateTime(const int64_t& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Primary key ID, which has no business meaning and serves solely as a unique identifier
+                     * <p>Primary key ID, with no business significance, only serves as a unique key.</p>
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * sub-account Appid
+                     * <p>Sub-account Appid</p>
                      */
                     std::string m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * sub-account UIn
+                     * <p>Sub-account UIn</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Sub-account name
+                     * <p>Sub-account name</p>
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
 
                     /**
-                     * master account Appid
+                     * <p>Root Account Appid</p>
                      */
                     std::string m_ownerAppID;
                     bool m_ownerAppIDHasBeenSet;
 
                     /**
-                     * master account Uin
+                     * <p>Root account Uin</p>
                      */
                     std::string m_ownerUin;
                     bool m_ownerUinHasBeenSet;
 
                     /**
-                     * master account name
+                     * <p>Root account name</p>
                      */
                     std::string m_ownerNickName;
                     bool m_ownerNickNameHasBeenSet;
 
                     /**
-                     * master account's memberId information
+                     * <p>Member ID information belonging to main account</p>
                      */
                     std::string m_ownerMemberID;
                     bool m_ownerMemberIDHasBeenSet;
 
                     /**
-                     * Account type: 0 for Tencent Cloud account, 1 for AWS account
+                     * <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * Accessible services count
+                     * <p>Number of accessible services</p>
                      */
                     int64_t m_serviceCount;
                     bool m_serviceCountHasBeenSet;
 
                     /**
-                     * Accessible API count
+                     * <p>Number of accessible APIs</p>
                      */
                     int64_t m_interfaceCount;
                     bool m_interfaceCountHasBeenSet;
 
                     /**
-                     * Accessible resources count
+                     * <p>Number of accessible resources</p>
                      */
                     int64_t m_assetCount;
                     bool m_assetCountHasBeenSet;
 
                     /**
-                     * Access/Behavior Logs Count
+                     * <p>Number of access/behavior logs</p>
                      */
                     int64_t m_logCount;
                     bool m_logCountHasBeenSet;
 
                     /**
-                     * Permissions configuration risk
+                     * <p>Permission configuration risk</p>
                      */
                     int64_t m_configRiskCount;
                     bool m_configRiskCountHasBeenSet;
 
                     /**
-                     * Dangerous behavior alarm
+                     * <p>Dangerous behavior alarm</p>
                      */
                     int64_t m_actionRiskCount;
                     bool m_actionRiskCountHasBeenSet;
 
                     /**
-                     * whether to enable CloudAudit logs
+                     * <p>Whether to access operation audit log</p>
                      */
                     bool m_isAccessCloudAudit;
                     bool m_isAccessCloudAuditHasBeenSet;
 
                     /**
-                     * whether risk configuration security assessment
+                     * <p>Security check for configuration risk required or not</p>
                      */
                     bool m_isAccessCheck;
                     bool m_isAccessCheckHasBeenSet;
 
                     /**
-                     * whether to configure user behavior management policies
+                     * <p>Whether configure user behavior management policy</p>
                      */
                     bool m_isAccessUeba;
                     bool m_isAccessUebaHasBeenSet;
+
+                    /**
+                     * <p>Creation time (Unix timestamp).</p>
+                     */
+                    int64_t m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                 };
             }

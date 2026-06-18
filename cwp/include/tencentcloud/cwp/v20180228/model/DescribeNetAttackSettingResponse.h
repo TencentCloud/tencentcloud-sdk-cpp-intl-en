@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
-                     * @return NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+                     * 获取<p>0: Disable network attack detection; 1: Enable network attack detection</p>
+                     * @return NetAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
                      * 
                      */
                     uint64_t GetNetAttackEnable() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool NetAttackEnableHasBeenSet() const;
 
                     /**
-                     * 获取0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
-                     * @return NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+                     * 获取<p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+                     * @return NetAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
                      * 
                      */
                     uint64_t GetNetAttackAlarmStatus() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool NetAttackAlarmStatusHasBeenSet() const;
 
                     /**
-                     * 获取1 - All Premium Edition Hosts, 0 - Hosts in InstanceIds List
-                     * @return Scope 1 - All Premium Edition Hosts, 0 - Hosts in InstanceIds List
+                     * 获取<p>1 - All Ultimate Edition hosts; 0 - hosts in InstanceIds list</p>
+                     * @return Scope <p>1 - All Ultimate Edition hosts; 0 - hosts in InstanceIds list</p>
                      * 
                      */
                     uint64_t GetScope() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Specified hosts
-                     * @return InstanceIds Specified hosts
+                     * 获取<p>Selected hosts</p>
+                     * @return InstanceIds <p>Selected hosts</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Custom Hosts to Exclude
-                     * @return ExcludeInstanceIds Custom Hosts to Exclude
+                     * 获取<p>Custom excluded hosts</p>
+                     * @return ExcludeInstanceIds <p>Custom excluded hosts</p>
                      * 
                      */
                     std::vector<std::string> GetExcludeInstanceIds() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool ExcludeInstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取New assets automatically include: 0 - Do not include, 1 - include.
-                     * @return AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
+                     * 获取<p>Automatically include newly added assets. 0: No; 1: Yes</p>
+                     * @return AutoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
                      * 
                      */
                     uint64_t GetAutoInclude() const;
@@ -130,37 +130,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+                     * <p>0: Disable network attack detection; 1: Enable network attack detection</p>
                      */
                     uint64_t m_netAttackEnable;
                     bool m_netAttackEnableHasBeenSet;
 
                     /**
-                     * 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+                     * <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
                      */
                     uint64_t m_netAttackAlarmStatus;
                     bool m_netAttackAlarmStatusHasBeenSet;
 
                     /**
-                     * 1 - All Premium Edition Hosts, 0 - Hosts in InstanceIds List
+                     * <p>1 - All Ultimate Edition hosts; 0 - hosts in InstanceIds list</p>
                      */
                     uint64_t m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Specified hosts
+                     * <p>Selected hosts</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Custom Hosts to Exclude
+                     * <p>Custom excluded hosts</p>
                      */
                     std::vector<std::string> m_excludeInstanceIds;
                     bool m_excludeInstanceIdsHasBeenSet;
 
                     /**
-                     * New assets automatically include: 0 - Do not include, 1 - include.
+                     * <p>Automatically include newly added assets. 0: No; 1: Yes</p>
                      */
                     uint64_t m_autoInclude;
                     bool m_autoIncludeHasBeenSet;

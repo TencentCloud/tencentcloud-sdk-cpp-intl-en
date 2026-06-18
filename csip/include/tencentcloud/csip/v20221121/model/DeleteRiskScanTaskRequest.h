@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of task IDs
-                     * @return TaskIdList List of task IDs
+                     * 获取task id and target AppID list
+                     * @return TaskIdList task id and target AppID list
                      * 
                      */
                     std::vector<TaskIdListKey> GetTaskIdList() const;
 
                     /**
-                     * 设置List of task IDs
-                     * @param _taskIdList List of task IDs
+                     * 设置task id and target AppID list
+                     * @param _taskIdList task id and target AppID list
                      * 
                      */
                     void SetTaskIdList(const std::vector<TaskIdListKey>& _taskIdList);
@@ -64,13 +64,40 @@ namespace TencentCloud
                      */
                     bool TaskIdListHasBeenSet() const;
 
+                    /**
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of task IDs
+                     * task id and target AppID list
                      */
                     std::vector<TaskIdListKey> m_taskIdList;
                     bool m_taskIdListHasBeenSet;
+
+                    /**
+                     * Group Account Member ID
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
 
                 };
             }

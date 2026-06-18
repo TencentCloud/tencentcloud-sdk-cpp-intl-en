@@ -44,27 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
-                     * @return Filters Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+                     * 获取<p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+                     * @return Filters <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
-                     * @param _filters Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+                     * 设置<p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+                     * @param _filters <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -77,15 +65,15 @@ Return entries that match both Keywords and TimeBetween when multiple filtering 
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Limit Entries, 10 by default, up to 100.
-                     * @return Limit Limit Entries, 10 by default, up to 100.
+                     * 获取<p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit Entries, 10 by default, up to 100.
-                     * @param _limit Limit Entries, 10 by default, up to 100.
+                     * 设置<p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -98,15 +86,15 @@ Return entries that match both Keywords and TimeBetween when multiple filtering 
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -119,15 +107,15 @@ Return entries that match both Keywords and TimeBetween when multiple filtering 
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Ascending order, ASC, Descending order DESC, ASC by default.
-                     * @return Order Ascending order, ASC, Descending order DESC, ASC by default.
+                     * 获取<p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+                     * @return Order <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Ascending order, ASC, Descending order DESC, ASC by default.
-                     * @param _order Ascending order, ASC, Descending order DESC, ASC by default.
+                     * 设置<p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+                     * @param _order <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -140,19 +128,15 @@ Return entries that match both Keywords and TimeBetween when multiple filtering 
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
-                     * @return By AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+                     * 获取<p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
+                     * @return By <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
-                     * @param _by AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+                     * 设置<p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
+                     * @param _by <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -167,35 +151,31 @@ AutoClearTime: clearing time
                 private:
 
                     /**
-                     * Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+                     * <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Limit Entries, 10 by default, up to 100.
+                     * <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Ascending order, ASC, Descending order DESC, ASC by default.
+                     * <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+                     * <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

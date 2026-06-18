@@ -195,19 +195,15 @@ namespace TencentCloud
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Tag.
+                     * @return Tag Tag.
                      * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
-                     * 设置Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Tag.
+                     * @param _tag Tag.
                      * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
@@ -409,19 +405,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Core or Not
+                     * @return IsCore Core or Not
                      * 
                      */
                     uint64_t GetIsCore() const;
 
                     /**
-                     * 设置Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Core or Not
+                     * @param _isCore Core or Not
                      * 
                      */
                     void SetIsCore(const uint64_t& _isCore);
@@ -434,19 +426,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsCoreHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取New Asset or Not. 1: New
+                     * @return IsNewAsset New Asset or Not. 1: New
                      * 
                      */
                     uint64_t GetIsNewAsset() const;
 
                     /**
-                     * 设置Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置New Asset or Not. 1: New
+                     * @param _isNewAsset New Asset or Not. 1: New
                      * 
                      */
                     void SetIsNewAsset(const uint64_t& _isNewAsset);
@@ -503,8 +491,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Tag.
                      */
                     std::vector<Tag> m_tag;
                     bool m_tagHasBeenSet;
@@ -564,15 +551,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Core or Not
                      */
                     uint64_t m_isCore;
                     bool m_isCoreHasBeenSet;
 
                     /**
-                     * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * New Asset or Not. 1: New
                      */
                     uint64_t m_isNewAsset;
                     bool m_isNewAssetHasBeenSet;

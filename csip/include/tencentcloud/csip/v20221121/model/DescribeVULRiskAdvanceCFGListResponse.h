@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of configuration items
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data List of configuration items
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Configuration item list
+                     * @return Data Configuration item list
                      * 
                      */
                     std::vector<VULRiskAdvanceCFGList> GetData() const;
@@ -76,10 +74,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of risk levels
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return RiskLevelLists List of risk levels
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Risk Level Filter List
+                     * @return RiskLevelLists Risk Level Filter List
                      * 
                      */
                     std::vector<FilterDataObject> GetRiskLevelLists() const;
@@ -92,10 +88,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RiskLevelListsHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerabilities types
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VULTypeLists List of vulnerabilities types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability Type Filter List
+                     * @return VULTypeLists Vulnerability Type Filter List
                      * 
                      */
                     std::vector<FilterDataObject> GetVULTypeLists() const;
@@ -108,10 +102,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VULTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取List of check source
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CheckFromLists List of check source
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Recognition Source Filter List
+                     * @return CheckFromLists Recognition Source Filter List
                      * 
                      */
                     std::vector<FilterDataObject> GetCheckFromLists() const;
@@ -123,11 +115,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      */
                     bool CheckFromListsHasBeenSet() const;
 
+                    /**
+                     * 获取Vulnerability tag list.
+                     * @return VulTagList Vulnerability tag list.
+                     * 
+                     */
+                    std::vector<FilterDataObject> GetVulTagList() const;
+
+                    /**
+                     * 判断参数 VulTagList 是否已赋值
+                     * @return VulTagList 是否已赋值
+                     * 
+                     */
+                    bool VulTagListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * List of configuration items
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Configuration item list
                      */
                     std::vector<VULRiskAdvanceCFGList> m_data;
                     bool m_dataHasBeenSet;
@@ -139,25 +144,28 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of risk levels
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Risk Level Filter List
                      */
                     std::vector<FilterDataObject> m_riskLevelLists;
                     bool m_riskLevelListsHasBeenSet;
 
                     /**
-                     * List of vulnerabilities types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Vulnerability Type Filter List
                      */
                     std::vector<FilterDataObject> m_vULTypeLists;
                     bool m_vULTypeListsHasBeenSet;
 
                     /**
-                     * List of check source
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Recognition Source Filter List
                      */
                     std::vector<FilterDataObject> m_checkFromLists;
                     bool m_checkFromListsHasBeenSet;
+
+                    /**
+                     * Vulnerability tag list.
+                     */
+                    std::vector<FilterDataObject> m_vulTagList;
+                    bool m_vulTagListHasBeenSet;
 
                 };
             }

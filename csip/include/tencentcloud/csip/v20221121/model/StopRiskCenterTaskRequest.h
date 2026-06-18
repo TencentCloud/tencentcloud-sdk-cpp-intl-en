@@ -64,6 +64,27 @@ namespace TencentCloud
                      */
                     bool TaskIdListHasBeenSet() const;
 
+                    /**
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +92,12 @@ namespace TencentCloud
                      */
                     std::vector<TaskIdListKey> m_taskIdList;
                     bool m_taskIdListHasBeenSet;
+
+                    /**
+                     * Group Account Member ID
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
 
                 };
             }

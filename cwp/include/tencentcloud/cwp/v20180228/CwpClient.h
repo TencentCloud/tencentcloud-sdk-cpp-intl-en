@@ -423,6 +423,8 @@
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineFileTamperRulesResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineGeneralRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineGeneralResponse.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeMachineInfoRequest.h>
+#include <tencentcloud/cwp/v20180228/model/DescribeMachineInfoResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineLicenseDetailRequest.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineLicenseDetailResponse.h>
 #include <tencentcloud/cwp/v20180228/model/DescribeMachineOsListRequest.h>
@@ -1607,6 +1609,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMachineGeneralResponse> DescribeMachineGeneralOutcome;
                 typedef std::future<DescribeMachineGeneralOutcome> DescribeMachineGeneralOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeMachineGeneralRequest&, DescribeMachineGeneralOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineGeneralAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMachineInfoResponse> DescribeMachineInfoOutcome;
+                typedef std::future<DescribeMachineInfoOutcome> DescribeMachineInfoOutcomeCallable;
+                typedef std::function<void(const CwpClient*, const Model::DescribeMachineInfoRequest&, DescribeMachineInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMachineLicenseDetailResponse> DescribeMachineLicenseDetailOutcome;
                 typedef std::future<DescribeMachineLicenseDetailOutcome> DescribeMachineLicenseDetailOutcomeCallable;
                 typedef std::function<void(const CwpClient*, const Model::DescribeMachineLicenseDetailRequest&, DescribeMachineLicenseDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMachineLicenseDetailAsyncHandler;
@@ -4267,6 +4272,15 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeMachineGeneralOutcome DescribeMachineGeneral(const Model::DescribeMachineGeneralRequest &request);
                 void DescribeMachineGeneralAsync(const Model::DescribeMachineGeneralRequest& request, const DescribeMachineGeneralAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMachineGeneralOutcomeCallable DescribeMachineGeneralCallable(const Model::DescribeMachineGeneralRequest& request);
+
+                /**
+                 *This API is used to get server details.
+                 * @param req DescribeMachineInfoRequest
+                 * @return DescribeMachineInfoOutcome
+                 */
+                DescribeMachineInfoOutcome DescribeMachineInfo(const Model::DescribeMachineInfoRequest &request);
+                void DescribeMachineInfoAsync(const Model::DescribeMachineInfoRequest& request, const DescribeMachineInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMachineInfoOutcomeCallable DescribeMachineInfoCallable(const Model::DescribeMachineInfoRequest& request);
 
                 /**
                  *This API is used to query the machine authorization information.

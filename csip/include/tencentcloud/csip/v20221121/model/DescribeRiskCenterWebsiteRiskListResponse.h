@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of content risks
-                     * @return Data List of content risks
+                     * 获取Content Risk List
+                     * @return Data Content Risk List
                      * 
                      */
                     std::vector<WebsiteRisk> GetData() const;
@@ -138,7 +138,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of content risks
+                     * Content Risk List
                      */
                     std::vector<WebsiteRisk> m_data;
                     bool m_dataHasBeenSet;

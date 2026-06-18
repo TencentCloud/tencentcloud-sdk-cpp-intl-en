@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ProductType 
+                     * 获取<p>Product type. 0:CWP (default); 1:CSC</p>
+                     * @return ProductType <p>Product type. 0:CWP (default); 1:CSC</p>
                      * 
                      */
                     int64_t GetProductType() const;
 
                     /**
-                     * 设置
-                     * @param _productType 
+                     * 设置<p>Product type. 0:CWP (default); 1:CSC</p>
+                     * @param _productType <p>Product type. 0:CWP (default); 1:CSC</p>
                      * 
                      */
                     void SetProductType(const int64_t& _productType);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Product type. 0:CWP (default); 1:CSC</p>
                      */
                     int64_t m_productType;
                     bool m_productTypeHasBeenSet;

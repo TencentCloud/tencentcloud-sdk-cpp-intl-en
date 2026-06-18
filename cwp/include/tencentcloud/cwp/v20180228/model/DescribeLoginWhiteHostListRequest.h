@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Allowlist ID
-                     * @return Id Allowlist ID
+                     * 获取<p>Allowlist ID</p>
+                     * @return Id <p>Allowlist ID</p>
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Allowlist ID
-                     * @param _id Allowlist ID
+                     * 设置<p>Allowlist ID</p>
+                     * @param _id <p>Allowlist ID</p>
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. Maximum value: 1000.
-                     * @return Limit Number of results to be returned. Maximum value: 1000.
+                     * 获取<p>Number of items to return. Maximum value: 1000.</p>
+                     * @return Limit <p>Number of items to return. Maximum value: 1000.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. Maximum value: 1000.
-                     * @param _limit Number of results to be returned. Maximum value: 1000.
+                     * 设置<p>Number of items to return. Maximum value: 1000.</p>
+                     * @param _limit <p>Number of items to return. Maximum value: 1000.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0.
-                     * @return Offset Offset. Default value: 0.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0.
-                     * @param _offset Offset. Default value: 0.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
-                     * @return Filters Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+                     * 获取<p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
+                     * @return Filters <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
                      * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
-                     * 设置Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
-                     * @param _filters Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+                     * 设置<p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
+                     * @param _filters <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
                      * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Allowlist ID
+                     * <p>Allowlist ID</p>
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Number of results to be returned. Maximum value: 1000.
+                     * <p>Number of items to return. Maximum value: 1000.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+                     * <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
                      */
                     std::vector<AssetFilters> m_filters;
                     bool m_filtersHasBeenSet;

@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return URL Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Temporary Link for Report Download
+                     * @return URL Temporary Link for Report Download
                      * 
                      */
                     std::string GetURL() const;
 
                     /**
-                     * 设置Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _uRL Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Temporary Link for Report Download
+                     * @param _uRL Temporary Link for Report Download
                      * 
                      */
                     void SetURL(const std::string& _uRL);
@@ -72,19 +68,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool URLHasBeenSet() const;
 
                     /**
-                     * 获取Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return LogId Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task Report ID
+                     * @return LogId Task Report ID
                      * 
                      */
                     std::string GetLogId() const;
 
                     /**
-                     * 设置Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _logId Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task Report ID
+                     * @param _logId Task Report ID
                      * 
                      */
                     void SetLogId(const std::string& _logId);
@@ -97,19 +89,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LogIdHasBeenSet() const;
 
                     /**
-                     * 获取Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TaskLogName Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task Report Name
+                     * @return TaskLogName Task Report Name
                      * 
                      */
                     std::string GetTaskLogName() const;
 
                     /**
-                     * 设置Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _taskLogName Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Task Report Name
+                     * @param _taskLogName Task Report Name
                      * 
                      */
                     void SetTaskLogName(const std::string& _taskLogName);
@@ -123,18 +111,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AppId APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
                      * 设置APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _appId APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -149,29 +133,25 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Temporary Link for Report Download
                      */
                     std::string m_uRL;
                     bool m_uRLHasBeenSet;
 
                     /**
-                     * Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task Report ID
                      */
                     std::string m_logId;
                     bool m_logIdHasBeenSet;
 
                     /**
-                     * Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task Report Name
                      */
                     std::string m_taskLogName;
                     bool m_taskLogNameHasBeenSet;
 
                     /**
                      * APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;

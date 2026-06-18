@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -62,10 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Task Log List
+                     * @return Data Task Log List
                      * 
                      */
                     std::vector<ScanTaskInfoList> GetData() const;
@@ -78,10 +74,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return UINList List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Host Account ID List
+                     * @return UINList Host Account ID List
                      * 
                      */
                     std::vector<std::string> GetUINList() const;
@@ -94,10 +88,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool UINListHasBeenSet() const;
 
                     /**
-                     * 获取List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return TaskModeList List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Health Checkup Mode Filter List
+                     * @return TaskModeList Health Checkup Mode Filter List
                      * 
                      */
                     std::vector<FilterDataObject> GetTaskModeList() const;
@@ -112,29 +104,25 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total quantity.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Task Log List
                      */
                     std::vector<ScanTaskInfoList> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Host Account ID List
                      */
                     std::vector<std::string> m_uINList;
                     bool m_uINListHasBeenSet;
 
                     /**
-                     * List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Health Checkup Mode Filter List
                      */
                     std::vector<FilterDataObject> m_taskModeList;
                     bool m_taskModeListHasBeenSet;

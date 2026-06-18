@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-cloud account statistics
+                * Multi-Cloud Account Statistics
                 */
                 class CloudCountDesc : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0 represents Tencent Cloud
-1 represents AWS
-                     * @return CloudType 0 represents Tencent Cloud
-1 represents AWS
+                     * 获取0 means Tencent Cloud
+1 indicates AWS
+                     * @return CloudType 0 means Tencent Cloud
+1 indicates AWS
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置0 represents Tencent Cloud
-1 represents AWS
-                     * @param _cloudType 0 represents Tencent Cloud
-1 represents AWS
+                     * 设置0 means Tencent Cloud
+1 indicates AWS
+                     * @param _cloudType 0 means Tencent Cloud
+1 indicates AWS
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取Account quantity
-                     * @return CloudCount Account quantity
+                     * 获取Account Quantity
+                     * @return CloudCount Account Quantity
                      * 
                      */
                     int64_t GetCloudCount() const;
 
                     /**
-                     * 设置Account quantity
-                     * @param _cloudCount Account quantity
+                     * 设置Account Quantity
+                     * @param _cloudCount Account Quantity
                      * 
                      */
                     void SetCloudCount(const int64_t& _cloudCount);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool CloudCountHasBeenSet() const;
 
                     /**
-                     * 获取The cloud account type description
-                     * @return CloudDesc The cloud account type description
+                     * 获取Description of The Cloud Account Type
+                     * @return CloudDesc Description of The Cloud Account Type
                      * 
                      */
                     std::string GetCloudDesc() const;
 
                     /**
-                     * 设置The cloud account type description
-                     * @param _cloudDesc The cloud account type description
+                     * 设置Description of The Cloud Account Type
+                     * @param _cloudDesc Description of The Cloud Account Type
                      * 
                      */
                     void SetCloudDesc(const std::string& _cloudDesc);
@@ -116,20 +116,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0 represents Tencent Cloud
-1 represents AWS
+                     * 0 means Tencent Cloud
+1 indicates AWS
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * Account quantity
+                     * Account Quantity
                      */
                     int64_t m_cloudCount;
                     bool m_cloudCountHasBeenSet;
 
                     /**
-                     * The cloud account type description
+                     * Description of The Cloud Account Type
                      */
                     std::string m_cloudDesc;
                     bool m_cloudDescHasBeenSet;

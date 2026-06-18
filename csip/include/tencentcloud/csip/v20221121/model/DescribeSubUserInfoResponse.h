@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取total
-                     * @return TotalCount total
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Manufacturer Enumeration List
-                     * @return CloudTypeLst Manufacturer Enumeration List
+                     * 获取Manufacturer list
+                     * @return CloudTypeLst Manufacturer list
                      * 
                      */
                     std::vector<FilterDataObject> GetCloudTypeLst() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool CloudTypeLstHasBeenSet() const;
 
                     /**
-                     * 获取Enumeration of appid of the main account
-                     * @return OwnerAppIDLst Enumeration of appid of the main account
+                     * 获取Enumerate appid belonging to main account
+                     * @return OwnerAppIDLst Enumerate appid belonging to main account
                      * 
                      */
                     std::vector<FilterDataObject> GetOwnerAppIDLst() const;
@@ -104,7 +104,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * total
+                     * Total number.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -116,13 +116,13 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Manufacturer Enumeration List
+                     * Manufacturer list
                      */
                     std::vector<FilterDataObject> m_cloudTypeLst;
                     bool m_cloudTypeLstHasBeenSet;
 
                     /**
-                     * Enumeration of appid of the main account
+                     * Enumerate appid belonging to main account
                      */
                     std::vector<FilterDataObject> m_ownerAppIDLst;
                     bool m_ownerAppIDLstHasBeenSet;

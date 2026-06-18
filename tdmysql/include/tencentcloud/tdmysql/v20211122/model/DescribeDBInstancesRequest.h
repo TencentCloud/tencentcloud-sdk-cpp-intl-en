@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter parameters.
-                     * @return Filters Filter parameters.
+                     * 获取<p>Filter parameters</p>
+                     * @return Filters <p>Filter parameters</p>
                      * 
                      */
                     std::vector<InstanceFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter parameters.
-                     * @param _filters Filter parameters.
+                     * 设置<p>Filter parameters</p>
+                     * @param _filters <p>Filter parameters</p>
                      * 
                      */
                     void SetFilters(const std::vector<InstanceFilter>& _filters);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Maximum return count, defaults to 20, maximum 100
-                     * @return Limit Maximum return count, defaults to 20, maximum 100
+                     * 获取<p>Maximum return count, defaults to 20, maximum 100</p>
+                     * @return Limit <p>Maximum return count, defaults to 20, maximum 100</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum return count, defaults to 20, maximum 100
-                     * @param _limit Maximum return count, defaults to 20, maximum 100
+                     * 设置<p>Maximum return count, defaults to 20, maximum 100</p>
+                     * @param _limit <p>Maximum return count, defaults to 20, maximum 100</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integer multiple of Limit.
-                     * @return Offset Offset, which is an integer multiple of Limit.
+                     * 获取<p>Offset, which is an integer multiple of Limit.</p>
+                     * @return Offset <p>Offset, which is an integer multiple of Limit.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integer multiple of Limit.
-                     * @param _offset Offset, which is an integer multiple of Limit.
+                     * 设置<p>Offset, which is an integer multiple of Limit.</p>
+                     * @param _offset <p>Offset, which is an integer multiple of Limit.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,25 +106,52 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * 
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * @param _engineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * 
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     * 
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Filter parameters.
+                     * <p>Filter parameters</p>
                      */
                     std::vector<InstanceFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Maximum return count, defaults to 20, maximum 100
+                     * <p>Maximum return count, defaults to 20, maximum 100</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integer multiple of Limit.
+                     * <p>Offset, which is an integer multiple of Limit.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                 };
             }

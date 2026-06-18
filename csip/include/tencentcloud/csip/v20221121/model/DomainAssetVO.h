@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetAssetId() const;
 
                     /**
                      * 设置Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetId(const std::vector<std::string>& _assetId);
@@ -73,19 +69,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Name
+                     * @return AssetName Asset Name
                      * 
                      */
                     std::vector<std::string> GetAssetName() const;
 
                     /**
-                     * 设置Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _assetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Asset Name
+                     * @param _assetName Asset Name
                      * 
                      */
                     void SetAssetName(const std::vector<std::string>& _assetName);
@@ -99,18 +91,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetAssetType() const;
 
                     /**
                      * 设置Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _assetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAssetType(const std::vector<std::string>& _assetType);
@@ -123,19 +111,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::vector<std::string> GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::vector<std::string>& _region);
@@ -148,19 +132,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WAFStatus WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取WAF Status
+                     * @return WAFStatus WAF Status
                      * 
                      */
                     uint64_t GetWAFStatus() const;
 
                     /**
-                     * 设置WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _wAFStatus WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置WAF Status
+                     * @param _wAFStatus WAF Status
                      * 
                      */
                     void SetWAFStatus(const uint64_t& _wAFStatus);
@@ -173,19 +153,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WAFStatusHasBeenSet() const;
 
                     /**
-                     * 获取Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Creation Time
+                     * @return AssetCreateTime Asset Creation Time
                      * 
                      */
                     std::string GetAssetCreateTime() const;
 
                     /**
-                     * 设置Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _assetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Asset Creation Time
+                     * @param _assetCreateTime Asset Creation Time
                      * 
                      */
                     void SetAssetCreateTime(const std::string& _assetCreateTime);
@@ -199,18 +175,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return AppId Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
                      * 设置Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _appId Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -224,18 +196,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Uin Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _uin Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -249,18 +217,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return NickName Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
                      * 设置Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _nickName Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -273,19 +237,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NickNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Core or Not
+                     * @return IsCore Core or Not
                      * 
                      */
                     uint64_t GetIsCore() const;
 
                     /**
-                     * 设置Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Core or Not
+                     * @param _isCore Core or Not
                      * 
                      */
                     void SetIsCore(const uint64_t& _isCore);
@@ -298,19 +258,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsCoreHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Whether it is on-cloud asset.
+                     * @return IsCloud Whether it is on-cloud asset.
                      * 
                      */
                     uint64_t GetIsCloud() const;
 
                     /**
-                     * 设置Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Whether it is on-cloud asset.
+                     * @param _isCloud Whether it is on-cloud asset.
                      * 
                      */
                     void SetIsCloud(const uint64_t& _isCloud);
@@ -323,19 +279,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsCloudHasBeenSet() const;
 
                     /**
-                     * 获取Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取network attack
+                     * @return Attack network attack
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置network attack
+                     * @param _attack network attack
                      * 
                      */
                     void SetAttack(const uint64_t& _attack);
@@ -349,18 +301,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Access Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetAccess() const;
 
                     /**
                      * 设置Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _access Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAccess(const uint64_t& _access);
@@ -373,19 +321,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AccessHasBeenSet() const;
 
                     /**
-                     * 获取Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Network Interception
+                     * @return Intercept Network Interception
                      * 
                      */
                     uint64_t GetIntercept() const;
 
                     /**
-                     * 设置Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Network Interception
+                     * @param _intercept Network Interception
                      * 
                      */
                     void SetIntercept(const uint64_t& _intercept);
@@ -399,18 +343,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInBandwidth() const;
 
                     /**
                      * 设置Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _inBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInBandwidth(const std::string& _inBandwidth);
@@ -424,18 +364,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return OutBandwidth Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetOutBandwidth() const;
 
                     /**
                      * 设置Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _outBandwidth Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutBandwidth(const std::string& _outBandwidth);
@@ -448,19 +384,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool OutBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cumulative Inbound Traffic
+                     * @return InFlow Cumulative Inbound Traffic
                      * 
                      */
                     std::string GetInFlow() const;
 
                     /**
-                     * 设置Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _inFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cumulative Inbound Traffic
+                     * @param _inFlow Cumulative Inbound Traffic
                      * 
                      */
                     void SetInFlow(const std::string& _inFlow);
@@ -473,19 +405,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool InFlowHasBeenSet() const;
 
                     /**
-                     * 获取Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cumulative Outbound Traffic
+                     * @return OutFlow Cumulative Outbound Traffic
                      * 
                      */
                     std::string GetOutFlow() const;
 
                     /**
-                     * 设置Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _outFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cumulative Outbound Traffic
+                     * @param _outFlow Cumulative Outbound Traffic
                      * 
                      */
                     void SetOutFlow(const std::string& _outFlow);
@@ -499,18 +427,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
                      * 设置Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _lastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
@@ -523,19 +447,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取port risk
+                     * @return PortRisk port risk
                      * 
                      */
                     uint64_t GetPortRisk() const;
 
                     /**
-                     * 设置Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _portRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置port risk
+                     * @param _portRisk port risk
                      * 
                      */
                     void SetPortRisk(const uint64_t& _portRisk);
@@ -548,19 +468,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PortRiskHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability risk
+                     * @return VulnerabilityRisk Vulnerability risk
                      * 
                      */
                     uint64_t GetVulnerabilityRisk() const;
 
                     /**
-                     * 设置Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _vulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability risk
+                     * @param _vulnerabilityRisk Vulnerability risk
                      * 
                      */
                     void SetVulnerabilityRisk(const uint64_t& _vulnerabilityRisk);
@@ -573,19 +489,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VulnerabilityRiskHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Configuration risk
+                     * @return ConfigurationRisk Configuration risk
                      * 
                      */
                     uint64_t GetConfigurationRisk() const;
 
                     /**
-                     * 设置Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _configurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Configuration risk
+                     * @param _configurationRisk Configuration risk
                      * 
                      */
                     void SetConfigurationRisk(const uint64_t& _configurationRisk);
@@ -598,19 +510,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ConfigurationRiskHasBeenSet() const;
 
                     /**
-                     * 获取Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Scan Task
+                     * @return ScanTask Scan Task
                      * 
                      */
                     uint64_t GetScanTask() const;
 
                     /**
-                     * 设置Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _scanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Scan Task
+                     * @param _scanTask Scan Task
                      * 
                      */
                     void SetScanTask(const uint64_t& _scanTask);
@@ -623,19 +531,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ScanTaskHasBeenSet() const;
 
                     /**
-                     * 获取Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SubDomain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Domain
+                     * @return SubDomain Domain
                      * 
                      */
                     std::string GetSubDomain() const;
 
                     /**
-                     * 设置Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _subDomain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Domain
+                     * @param _subDomain Domain
                      * 
                      */
                     void SetSubDomain(const std::string& _subDomain);
@@ -648,19 +552,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SubDomainHasBeenSet() const;
 
                     /**
-                     * 获取Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SeverIp Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Resolve IP
+                     * @return SeverIp Resolve IP
                      * 
                      */
                     std::vector<std::string> GetSeverIp() const;
 
                     /**
-                     * 设置Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _severIp Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Resolve IP
+                     * @param _severIp Resolve IP
                      * 
                      */
                     void SetSeverIp(const std::vector<std::string>& _severIp);
@@ -673,19 +573,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SeverIpHasBeenSet() const;
 
                     /**
-                     * 获取Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return BotCount Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Bot Attacks
+                     * @return BotCount Number of Bot Attacks
                      * 
                      */
                     uint64_t GetBotCount() const;
 
                     /**
-                     * 设置Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _botCount Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Bot Attacks
+                     * @param _botCount Number of Bot Attacks
                      * 
                      */
                     void SetBotCount(const uint64_t& _botCount);
@@ -698,19 +594,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool BotCountHasBeenSet() const;
 
                     /**
-                     * 获取Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WeakPassword Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Weak password risk
+                     * @return WeakPassword Weak password risk
                      * 
                      */
                     uint64_t GetWeakPassword() const;
 
                     /**
-                     * 设置Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _weakPassword Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Weak password risk
+                     * @param _weakPassword Weak password risk
                      * 
                      */
                     void SetWeakPassword(const uint64_t& _weakPassword);
@@ -723,19 +615,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WeakPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WebContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Content risk
+                     * @return WebContentRisk Content risk
                      * 
                      */
                     uint64_t GetWebContentRisk() const;
 
                     /**
-                     * 设置Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _webContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Content risk
+                     * @param _webContentRisk Content risk
                      * 
                      */
                     void SetWebContentRisk(const uint64_t& _webContentRisk);
@@ -748,19 +636,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WebContentRiskHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取tag
+                     * @return Tag tag
                      * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
-                     * 设置Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置tag
+                     * @param _tag tag
                      * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
@@ -773,19 +657,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SourceType The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Associated instance type
+                     * @return SourceType Associated instance type
                      * 
                      */
                     std::string GetSourceType() const;
 
                     /**
-                     * 设置The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _sourceType The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Associated instance type
+                     * @param _sourceType Associated instance type
                      * 
                      */
                     void SetSourceType(const std::string& _sourceType);
@@ -798,19 +678,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Member ID information
+                     * @return MemberId Member ID information
                      * 
                      */
                     std::string GetMemberId() const;
 
                     /**
-                     * 设置Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _memberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Member ID information
+                     * @param _memberId Member ID information
                      * 
                      */
                     void SetMemberId(const std::string& _memberId);
@@ -823,19 +699,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CCAttack CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CC Attack
+                     * @return CCAttack CC Attack
                      * 
                      */
                     int64_t GetCCAttack() const;
 
                     /**
-                     * 设置CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _cCAttack CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CC Attack
+                     * @param _cCAttack CC Attack
                      * 
                      */
                     void SetCCAttack(const int64_t& _cCAttack);
@@ -848,19 +720,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool CCAttackHasBeenSet() const;
 
                     /**
-                     * 获取Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return WebAttack Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Web Attack
+                     * @return WebAttack Web Attack
                      * 
                      */
                     int64_t GetWebAttack() const;
 
                     /**
-                     * 设置Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _webAttack Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Web Attack
+                     * @param _webAttack Web Attack
                      * 
                      */
                     void SetWebAttack(const int64_t& _webAttack);
@@ -873,19 +741,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool WebAttackHasBeenSet() const;
 
                     /**
-                     * 获取Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ServiceRisk Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Number of Risk Service Exposures
+                     * @return ServiceRisk Number of Risk Service Exposures
                      * 
                      */
                     uint64_t GetServiceRisk() const;
 
                     /**
-                     * 设置Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _serviceRisk Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Number of Risk Service Exposures
+                     * @param _serviceRisk Number of Risk Service Exposures
                      * 
                      */
                     void SetServiceRisk(const uint64_t& _serviceRisk);
@@ -898,19 +762,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ServiceRiskHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取New Asset or Not. 1: New
+                     * @return IsNewAsset New Asset or Not. 1: New
                      * 
                      */
                     uint64_t GetIsNewAsset() const;
 
                     /**
-                     * 设置Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置New Asset or Not. 1: New
+                     * @param _isNewAsset New Asset or Not. 1: New
                      * 
                      */
                     void SetIsNewAsset(const uint64_t& _isNewAsset);
@@ -923,19 +783,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsNewAssetHasBeenSet() const;
 
                     /**
-                     * 获取Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VerifyDomain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Random Layer-3 Domain of Assets to Be Recognized
+                     * @return VerifyDomain Random Layer-3 Domain of Assets to Be Recognized
                      * 
                      */
                     std::string GetVerifyDomain() const;
 
                     /**
-                     * 设置Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _verifyDomain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Random Layer-3 Domain of Assets to Be Recognized
+                     * @param _verifyDomain Random Layer-3 Domain of Assets to Be Recognized
                      * 
                      */
                     void SetVerifyDomain(const std::string& _verifyDomain);
@@ -948,19 +804,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VerifyDomainHasBeenSet() const;
 
                     /**
-                     * 获取TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VerifyTXTRecord TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取TXT Record Content of Pending Confirmation Assets
+                     * @return VerifyTXTRecord TXT Record Content of Pending Confirmation Assets
                      * 
                      */
                     std::string GetVerifyTXTRecord() const;
 
                     /**
-                     * 设置TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _verifyTXTRecord TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置TXT Record Content of Pending Confirmation Assets
+                     * @param _verifyTXTRecord TXT Record Content of Pending Confirmation Assets
                      * 
                      */
                     void SetVerifyTXTRecord(const std::string& _verifyTXTRecord);
@@ -973,19 +825,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VerifyTXTRecordHasBeenSet() const;
 
                     /**
-                     * 获取Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return VerifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+                     * @return VerifyStatus Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
                      * 
                      */
                     int64_t GetVerifyStatus() const;
 
                     /**
-                     * 设置Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _verifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+                     * @param _verifyStatus Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
                      * 
                      */
                     void SetVerifyStatus(const int64_t& _verifyStatus);
@@ -998,19 +846,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VerifyStatusHasBeenSet() const;
 
                     /**
-                     * 获取u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return BotAccessCount u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Bot Access Count
+                     * @return BotAccessCount Bot Access Count
                      * 
                      */
                     int64_t GetBotAccessCount() const;
 
                     /**
-                     * 设置u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _botAccessCount u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Bot Access Count
+                     * @param _botAccessCount Bot Access Count
                      * 
                      */
                     void SetBotAccessCount(const int64_t& _botAccessCount);
@@ -1026,273 +870,234 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Name
                      */
                     std::vector<std::string> m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
                      * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::vector<std::string> m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * WAF Status
                      */
                     uint64_t m_wAFStatus;
                     bool m_wAFStatusHasBeenSet;
 
                     /**
-                     * Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Creation Time
                      */
                     std::string m_assetCreateTime;
                     bool m_assetCreateTimeHasBeenSet;
 
                     /**
                      * Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
                      * Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
                      * Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
 
                     /**
-                     * Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Core or Not
                      */
                     uint64_t m_isCore;
                     bool m_isCoreHasBeenSet;
 
                     /**
-                     * Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Whether it is on-cloud asset.
                      */
                     uint64_t m_isCloud;
                     bool m_isCloudHasBeenSet;
 
                     /**
-                     * Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * network attack
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
 
                     /**
                      * Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_access;
                     bool m_accessHasBeenSet;
 
                     /**
-                     * Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Network Interception
                      */
                     uint64_t m_intercept;
                     bool m_interceptHasBeenSet;
 
                     /**
                      * Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_inBandwidth;
                     bool m_inBandwidthHasBeenSet;
 
                     /**
                      * Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_outBandwidth;
                     bool m_outBandwidthHasBeenSet;
 
                     /**
-                     * Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cumulative Inbound Traffic
                      */
                     std::string m_inFlow;
                     bool m_inFlowHasBeenSet;
 
                     /**
-                     * Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cumulative Outbound Traffic
                      */
                     std::string m_outFlow;
                     bool m_outFlowHasBeenSet;
 
                     /**
                      * Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastScanTime;
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * port risk
                      */
                     uint64_t m_portRisk;
                     bool m_portRiskHasBeenSet;
 
                     /**
-                     * Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Vulnerability risk
                      */
                     uint64_t m_vulnerabilityRisk;
                     bool m_vulnerabilityRiskHasBeenSet;
 
                     /**
-                     * Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Configuration risk
                      */
                     uint64_t m_configurationRisk;
                     bool m_configurationRiskHasBeenSet;
 
                     /**
-                     * Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Scan Task
                      */
                     uint64_t m_scanTask;
                     bool m_scanTaskHasBeenSet;
 
                     /**
-                     * Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Domain
                      */
                     std::string m_subDomain;
                     bool m_subDomainHasBeenSet;
 
                     /**
-                     * Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Resolve IP
                      */
                     std::vector<std::string> m_severIp;
                     bool m_severIpHasBeenSet;
 
                     /**
-                     * Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Bot Attacks
                      */
                     uint64_t m_botCount;
                     bool m_botCountHasBeenSet;
 
                     /**
-                     * Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Weak password risk
                      */
                     uint64_t m_weakPassword;
                     bool m_weakPasswordHasBeenSet;
 
                     /**
-                     * Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Content risk
                      */
                     uint64_t m_webContentRisk;
                     bool m_webContentRiskHasBeenSet;
 
                     /**
-                     * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * tag
                      */
                     std::vector<Tag> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Associated instance type
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Member ID information
                      */
                     std::string m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CC Attack
                      */
                     int64_t m_cCAttack;
                     bool m_cCAttackHasBeenSet;
 
                     /**
-                     * Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Web Attack
                      */
                     int64_t m_webAttack;
                     bool m_webAttackHasBeenSet;
 
                     /**
-                     * Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Number of Risk Service Exposures
                      */
                     uint64_t m_serviceRisk;
                     bool m_serviceRiskHasBeenSet;
 
                     /**
-                     * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * New Asset or Not. 1: New
                      */
                     uint64_t m_isNewAsset;
                     bool m_isNewAssetHasBeenSet;
 
                     /**
-                     * Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Random Layer-3 Domain of Assets to Be Recognized
                      */
                     std::string m_verifyDomain;
                     bool m_verifyDomainHasBeenSet;
 
                     /**
-                     * TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * TXT Record Content of Pending Confirmation Assets
                      */
                     std::string m_verifyTXTRecord;
                     bool m_verifyTXTRecordHasBeenSet;
 
                     /**
-                     * Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
                      */
                     int64_t m_verifyStatus;
                     bool m_verifyStatusHasBeenSet;
 
                     /**
-                     * u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Bot Access Count
                      */
                     int64_t m_botAccessCount;
                     bool m_botAccessCountHasBeenSet;

@@ -396,6 +396,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/UntrustMalwaresResponse.h
   include/tencentcloud/cwp/v20180228/model/RiskDnsEvent.h
   include/tencentcloud/cwp/v20180228/model/DescribeAccountStatisticsResponse.h
+  include/tencentcloud/cwp/v20180228/model/DescribeProVersionStatusResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeBashEventsInfoNewRequest.h
   include/tencentcloud/cwp/v20180228/model/ScreenTrendsChart.h
   include/tencentcloud/cwp/v20180228/model/DescribeBaselineRuleResponse.h
@@ -771,6 +772,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeBanRegionsResponse.h
   include/tencentcloud/cwp/v20180228/model/DescribeLogStorageRecordResponse.h
   include/tencentcloud/cwp/v20180228/model/DeletePrivilegeEventsResponse.h
+  include/tencentcloud/cwp/v20180228/model/DescribeMachineInfoResponse.h
   include/tencentcloud/cwp/v20180228/model/VulHostTopInfo.h
   include/tencentcloud/cwp/v20180228/model/OrderModifyObject.h
   include/tencentcloud/cwp/v20180228/model/DescribeRansomDefenseRollBackTaskListResponse.h
@@ -1194,7 +1196,7 @@ set(cwp_public_header_model
   include/tencentcloud/cwp/v20180228/model/DescribeRecommendedProtectCpuRequest.h
   include/tencentcloud/cwp/v20180228/model/DescribeABTestConfigResponse.h
   include/tencentcloud/cwp/v20180228/model/RansomDefenseBackup.h
-  include/tencentcloud/cwp/v20180228/model/DescribeProVersionStatusResponse.h
+  include/tencentcloud/cwp/v20180228/model/DescribeMachineInfoRequest.h
   include/tencentcloud/cwp/v20180228/model/SearchTemplate.h
   include/tencentcloud/cwp/v20180228/model/DescribeVulFixStatusResponse.h
   include/tencentcloud/cwp/v20180228/model/DeleteMalwareWhiteListRequest.h
@@ -1625,6 +1627,7 @@ set(cwp_src
   src/v20180228/model/UntrustMalwaresResponse.cpp
   src/v20180228/model/RiskDnsEvent.cpp
   src/v20180228/model/DescribeAccountStatisticsResponse.cpp
+  src/v20180228/model/DescribeProVersionStatusResponse.cpp
   src/v20180228/model/DescribeBashEventsInfoNewRequest.cpp
   src/v20180228/model/ScreenTrendsChart.cpp
   src/v20180228/model/DescribeBaselineRuleResponse.cpp
@@ -2000,6 +2003,7 @@ set(cwp_src
   src/v20180228/model/DescribeBanRegionsResponse.cpp
   src/v20180228/model/DescribeLogStorageRecordResponse.cpp
   src/v20180228/model/DeletePrivilegeEventsResponse.cpp
+  src/v20180228/model/DescribeMachineInfoResponse.cpp
   src/v20180228/model/VulHostTopInfo.cpp
   src/v20180228/model/OrderModifyObject.cpp
   src/v20180228/model/DescribeRansomDefenseRollBackTaskListResponse.cpp
@@ -2423,7 +2427,7 @@ set(cwp_src
   src/v20180228/model/DescribeRecommendedProtectCpuRequest.cpp
   src/v20180228/model/DescribeABTestConfigResponse.cpp
   src/v20180228/model/RansomDefenseBackup.cpp
-  src/v20180228/model/DescribeProVersionStatusResponse.cpp
+  src/v20180228/model/DescribeMachineInfoRequest.cpp
   src/v20180228/model/SearchTemplate.cpp
   src/v20180228/model/DescribeVulFixStatusResponse.cpp
   src/v20180228/model/DeleteMalwareWhiteListRequest.cpp

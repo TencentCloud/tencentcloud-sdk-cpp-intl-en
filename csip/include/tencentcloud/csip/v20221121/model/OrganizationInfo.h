@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Group account details
+                * Group Account Details
                 */
                 class OrganizationInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Member account name
-                     * @return NickName Member account name
+                     * 获取member account name
+                     * @return NickName member account name
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
-                     * 设置Member account name
-                     * @param _nickName Member account name
+                     * 设置member account name
+                     * @param _nickName member account name
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool NickNameHasBeenSet() const;
 
                     /**
-                     * 获取Department node name, department of account
-                     * @return NodeName Department node name, department of account
+                     * 获取Department Node Name, Account's Department
+                     * @return NodeName Department Node Name, Account's Department
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Department node name, department of account
-                     * @param _nodeName Department node name, department of account
+                     * 设置Department Node Name, Account's Department
+                     * @param _nodeName Department Node Name, Account's Department
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
-                     * @return Role Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+                     * 获取Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
+                     * @return Role Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
                      * 
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
-                     * @param _role Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+                     * 设置Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
+                     * @param _role Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
                      * 
                      */
                     void SetRole(const std::string& _role);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取Member account id
-                     * @return MemberId Member account id
+                     * 获取Member Account ID
+                     * @return MemberId Member Account ID
                      * 
                      */
                     std::string GetMemberId() const;
 
                     /**
-                     * 设置Member account id
-                     * @param _memberId Member account id
+                     * 设置Member Account ID
+                     * @param _memberId Member Account ID
                      * 
                      */
                     void SetMemberId(const std::string& _memberId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取account joining method,create/invite
-                     * @return JoinType account joining method,create/invite
+                     * 获取Account Joining Method: Create/Invite.
+                     * @return JoinType Account Joining Method: Create/Invite.
                      * 
                      */
                     std::string GetJoinType() const;
 
                     /**
-                     * 设置account joining method,create/invite
-                     * @param _joinType account joining method,create/invite
+                     * 设置Account Joining Method: Create/Invite.
+                     * @param _joinType Account Joining Method: Create/Invite.
                      * 
                      */
                     void SetJoinType(const std::string& _joinType);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool JoinTypeHasBeenSet() const;
 
                     /**
-                     * 获取Group name
-                     * @return GroupName Group name
+                     * 获取Group Name
+                     * @return GroupName Group Name
                      * 
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Group name
-                     * @param _groupName Group name
+                     * 设置Group Name
+                     * @param _groupName Group Name
                      * 
                      */
                     void SetGroupName(const std::string& _groupName);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Admin account name
-                     * @return AdminName Admin account name
+                     * 获取administrator account name
+                     * @return AdminName administrator account name
                      * 
                      */
                     std::string GetAdminName() const;
 
                     /**
-                     * 设置Admin account name
-                     * @param _adminName Admin account name
+                     * 设置administrator account name
+                     * @param _adminName administrator account name
                      * 
                      */
                     void SetAdminName(const std::string& _adminName);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool AdminNameHasBeenSet() const;
 
                     /**
-                     * 获取Admin Uin
-                     * @return AdminUin Admin Uin
+                     * 获取Administrator UIN
+                     * @return AdminUin Administrator UIN
                      * 
                      */
                     std::string GetAdminUin() const;
 
                     /**
-                     * 设置Admin Uin
-                     * @param _adminUin Admin Uin
+                     * 设置Administrator UIN
+                     * @param _adminUin Administrator UIN
                      * 
                      */
                     void SetAdminUin(const std::string& _adminUin);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AdminUinHasBeenSet() const;
 
                     /**
-                     * 获取Creation Time
-                     * @return CreateTime Creation Time
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation Time
-                     * @param _createTime Creation Time
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool MemberCountHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account count
-                     * @return SubAccountCount Sub-account count
+                     * 获取Number of sub-accounts
+                     * @return SubAccountCount Number of sub-accounts
                      * 
                      */
                     int64_t GetSubAccountCount() const;
 
                     /**
-                     * 设置Sub-account count
-                     * @param _subAccountCount Sub-account count
+                     * 设置Number of sub-accounts
+                     * @param _subAccountCount Number of sub-accounts
                      * 
                      */
                     void SetSubAccountCount(const int64_t& _subAccountCount);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool SubAccountCountHasBeenSet() const;
 
                     /**
-                     * 获取Abnormal sub-account quantity
-                     * @return AbnormalSubUserCount Abnormal sub-account quantity
+                     * 获取Number of abnormal sub-accounts
+                     * @return AbnormalSubUserCount Number of abnormal sub-accounts
                      * 
                      */
                     int64_t GetAbnormalSubUserCount() const;
 
                     /**
-                     * 设置Abnormal sub-account quantity
-                     * @param _abnormalSubUserCount Abnormal sub-account quantity
+                     * 设置Number of abnormal sub-accounts
+                     * @param _abnormalSubUserCount Number of abnormal sub-accounts
                      * 
                      */
                     void SetAbnormalSubUserCount(const int64_t& _abnormalSubUserCount);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool AbnormalSubUserCountHasBeenSet() const;
 
                     /**
-                     * 获取Organization Relationship Policy Permissions
-                     * @return GroupPermission Organization Relationship Policy Permissions
+                     * 获取Group Relationship Policy Permissions
+                     * @return GroupPermission Group Relationship Policy Permissions
                      * 
                      */
                     std::vector<std::string> GetGroupPermission() const;
 
                     /**
-                     * 设置Organization Relationship Policy Permissions
-                     * @param _groupPermission Organization Relationship Policy Permissions
+                     * 设置Group Relationship Policy Permissions
+                     * @param _groupPermission Group Relationship Policy Permissions
                      * 
                      */
                     void SetGroupPermission(const std::vector<std::string>& _groupPermission);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool MemberPermissionHasBeenSet() const;
 
                     /**
-                     * 获取Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
-                     * @return GroupPayMode Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * 获取Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
+                     * @return GroupPayMode Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
                      * 
                      */
                     int64_t GetGroupPayMode() const;
 
                     /**
-                     * 设置Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
-                     * @param _groupPayMode Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * 设置Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
+                     * @param _groupPayMode Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
                      * 
                      */
                     void SetGroupPayMode(const int64_t& _groupPayMode);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool GroupPayModeHasBeenSet() const;
 
                     /**
-                     * 获取Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
-                     * @return MemberPayMode Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * 获取Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
+                     * @return MemberPayMode Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
                      * 
                      */
                     int64_t GetMemberPayMode() const;
 
                     /**
-                     * 设置Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
-                     * @param _memberPayMode Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * 设置Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
+                     * @param _memberPayMode Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
                      * 
                      */
                     void SetMemberPayMode(const int64_t& _memberPayMode);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool MemberPayModeHasBeenSet() const;
 
                     /**
-                     * 获取If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @return CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 获取Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @return CFWProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     std::string GetCFWProtect() const;
 
                     /**
-                     * 设置If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @param _cFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 设置Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @param _cFWProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     void SetCFWProtect(const std::string& _cFWProtect);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool CFWProtectHasBeenSet() const;
 
                     /**
-                     * 获取If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @return WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 获取Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @return WAFProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     std::string GetWAFProtect() const;
 
                     /**
-                     * 设置If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @param _wAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 设置Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @param _wAFProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     void SetWAFProtect(const std::string& _wAFProtect);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool WAFProtectHasBeenSet() const;
 
                     /**
-                     * 获取If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @return CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 获取Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @return CWPProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     std::string GetCWPProtect() const;
 
                     /**
-                     * 设置If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-                     * @param _cWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * 设置Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+                     * @param _cWPProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      * 
                      */
                     void SetCWPProtect(const std::string& _cWPProtect);
@@ -468,15 +468,15 @@ namespace TencentCloud
                     bool CWPProtectHasBeenSet() const;
 
                     /**
-                     * 获取Array of all departments
-                     * @return Departments Array of all departments
+                     * 获取Array of Collections for All Departments
+                     * @return Departments Array of Collections for All Departments
                      * 
                      */
                     std::vector<std::string> GetDepartments() const;
 
                     /**
-                     * 设置Array of all departments
-                     * @param _departments Array of all departments
+                     * 设置Array of Collections for All Departments
+                     * @param _departments Array of Collections for All Departments
                      * 
                      */
                     void SetDepartments(const std::vector<std::string>& _departments);
@@ -531,15 +531,15 @@ namespace TencentCloud
                     bool CSIPProtectHasBeenSet() const;
 
                     /**
-                     * 获取1 indicates the quota consumer
-                     * @return QuotaConsumer 1 indicates the quota consumer
+                     * 获取1 indicates the quota consumer.
+                     * @return QuotaConsumer 1 indicates the quota consumer.
                      * 
                      */
                     int64_t GetQuotaConsumer() const;
 
                     /**
-                     * 设置1 indicates the quota consumer
-                     * @param _quotaConsumer 1 indicates the quota consumer
+                     * 设置1 indicates the quota consumer.
+                     * @param _quotaConsumer 1 indicates the quota consumer.
                      * 
                      */
                     void SetQuotaConsumer(const int64_t& _quotaConsumer);
@@ -552,15 +552,15 @@ namespace TencentCloud
                     bool QuotaConsumerHasBeenSet() const;
 
                     /**
-                     * 获取Number of enabled Admin/Delegated Admin accounts
-                     * @return EnableAdminCount Number of enabled Admin/Delegated Admin accounts
+                     * 获取Number of activations by admin/delegated admin
+                     * @return EnableAdminCount Number of activations by admin/delegated admin
                      * 
                      */
                     int64_t GetEnableAdminCount() const;
 
                     /**
-                     * 设置Number of enabled Admin/Delegated Admin accounts
-                     * @param _enableAdminCount Number of enabled Admin/Delegated Admin accounts
+                     * 设置Number of activations by admin/delegated admin
+                     * @param _enableAdminCount Number of activations by admin/delegated admin
                      * 
                      */
                     void SetEnableAdminCount(const int64_t& _enableAdminCount);
@@ -573,15 +573,15 @@ namespace TencentCloud
                     bool EnableAdminCountHasBeenSet() const;
 
                     /**
-                     * 获取Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
-                     * @return CloudCountDesc Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+                     * 获取Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
+                     * @return CloudCountDesc Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
                      * 
                      */
                     std::vector<CloudCountDesc> GetCloudCountDesc() const;
 
                     /**
-                     * 设置Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
-                     * @param _cloudCountDesc Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+                     * 设置Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
+                     * @param _cloudCountDesc Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
                      * 
                      */
                     void SetCloudCountDesc(const std::vector<CloudCountDesc>& _cloudCountDesc);
@@ -594,15 +594,15 @@ namespace TencentCloud
                     bool CloudCountDescHasBeenSet() const;
 
                     /**
-                     * 获取Total Number of Admin/Delegated Admin Accounts
-                     * @return AdminCount Total Number of Admin/Delegated Admin Accounts
+                     * 获取Total number of admins/delegated admins
+                     * @return AdminCount Total number of admins/delegated admins
                      * 
                      */
                     int64_t GetAdminCount() const;
 
                     /**
-                     * 设置Total Number of Admin/Delegated Admin Accounts
-                     * @param _adminCount Total Number of Admin/Delegated Admin Accounts
+                     * 设置Total number of admins/delegated admins
+                     * @param _adminCount Total number of admins/delegated admins
                      * 
                      */
                     void SetAdminCount(const int64_t& _adminCount);
@@ -617,55 +617,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Member account name
+                     * member account name
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
 
                     /**
-                     * Department node name, department of account
+                     * Department Node Name, Account's Department
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+                     * Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * Member account id
+                     * Member Account ID
                      */
                     std::string m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * account joining method,create/invite
+                     * Account Joining Method: Create/Invite.
                      */
                     std::string m_joinType;
                     bool m_joinTypeHasBeenSet;
 
                     /**
-                     * Group name
+                     * Group Name
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Admin account name
+                     * administrator account name
                      */
                     std::string m_adminName;
                     bool m_adminNameHasBeenSet;
 
                     /**
-                     * Admin Uin
+                     * Administrator UIN
                      */
                     std::string m_adminUin;
                     bool m_adminUinHasBeenSet;
 
                     /**
-                     * Creation Time
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -683,19 +683,19 @@ namespace TencentCloud
                     bool m_memberCountHasBeenSet;
 
                     /**
-                     * Sub-account count
+                     * Number of sub-accounts
                      */
                     int64_t m_subAccountCount;
                     bool m_subAccountCountHasBeenSet;
 
                     /**
-                     * Abnormal sub-account quantity
+                     * Number of abnormal sub-accounts
                      */
                     int64_t m_abnormalSubUserCount;
                     bool m_abnormalSubUserCountHasBeenSet;
 
                     /**
-                     * Organization Relationship Policy Permissions
+                     * Group Relationship Policy Permissions
                      */
                     std::vector<std::string> m_groupPermission;
                     bool m_groupPermissionHasBeenSet;
@@ -707,37 +707,37 @@ namespace TencentCloud
                     bool m_memberPermissionHasBeenSet;
 
                     /**
-                     * Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
                      */
                     int64_t m_groupPayMode;
                     bool m_groupPayModeHasBeenSet;
 
                     /**
-                     * Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+                     * Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
                      */
                     int64_t m_memberPayMode;
                     bool m_memberPayModeHasBeenSet;
 
                     /**
-                     * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      */
                     std::string m_cFWProtect;
                     bool m_cFWProtectHasBeenSet;
 
                     /**
-                     * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      */
                     std::string m_wAFProtect;
                     bool m_wAFProtectHasBeenSet;
 
                     /**
-                     * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+                     * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
                      */
                     std::string m_cWPProtect;
                     bool m_cWPProtectHasBeenSet;
 
                     /**
-                     * Array of all departments
+                     * Array of Collections for All Departments
                      */
                     std::vector<std::string> m_departments;
                     bool m_departmentsHasBeenSet;
@@ -755,25 +755,25 @@ namespace TencentCloud
                     bool m_cSIPProtectHasBeenSet;
 
                     /**
-                     * 1 indicates the quota consumer
+                     * 1 indicates the quota consumer.
                      */
                     int64_t m_quotaConsumer;
                     bool m_quotaConsumerHasBeenSet;
 
                     /**
-                     * Number of enabled Admin/Delegated Admin accounts
+                     * Number of activations by admin/delegated admin
                      */
                     int64_t m_enableAdminCount;
                     bool m_enableAdminCountHasBeenSet;
 
                     /**
-                     * Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+                     * Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
                      */
                     std::vector<CloudCountDesc> m_cloudCountDesc;
                     bool m_cloudCountDescHasBeenSet;
 
                     /**
-                     * Total Number of Admin/Delegated Admin Accounts
+                     * Total number of admins/delegated admins
                      */
                     int64_t m_adminCount;
                     bool m_adminCountHasBeenSet;

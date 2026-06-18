@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Group account member ID
-                     * @return MemberId Group account member ID
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
                      * 
                      */
                     std::vector<std::string> GetMemberId() const;
 
                     /**
-                     * 设置Group account member ID
-                     * @param _memberId Group account member ID
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
                      * 
                      */
                     void SetMemberId(const std::vector<std::string>& _memberId);
@@ -110,7 +110,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Group account member ID
+                     * Group Account Member ID
                      */
                     std::vector<std::string> m_memberId;
                     bool m_memberIdHasBeenSet;

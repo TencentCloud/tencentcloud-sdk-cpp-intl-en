@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-                     * @return Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+                     * 获取<p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+                     * @return Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-                     * @param _mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+                     * 设置<p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+                     * @param _mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Blocking time. This parameter is valid in standard blocking mode.
-                     * @return Ttl Blocking time. This parameter is valid in standard blocking mode.
+                     * 获取<p>Blocking duration, used in standard blocking mode</p>
+                     * @return Ttl <p>Blocking duration, used in standard blocking mode</p>
                      * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
-                     * 设置Blocking time. This parameter is valid in standard blocking mode.
-                     * @param _ttl Blocking time. This parameter is valid in standard blocking mode.
+                     * 设置<p>Blocking duration, used in standard blocking mode</p>
+                     * @param _ttl <p>Blocking duration, used in standard blocking mode</p>
                      * 
                      */
                     void SetTtl(const uint64_t& _ttl);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+                     * <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Blocking time. This parameter is valid in standard blocking mode.
+                     * <p>Blocking duration, used in standard blocking mode</p>
                      */
                     uint64_t m_ttl;
                     bool m_ttlHasBeenSet;

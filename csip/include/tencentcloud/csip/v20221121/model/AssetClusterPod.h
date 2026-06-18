@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Region Region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _region Region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -177,19 +173,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return InstanceCreateTime Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Pod Creation Time
+                     * @return InstanceCreateTime Pod Creation Time
                      * 
                      */
                     std::string GetInstanceCreateTime() const;
 
                     /**
-                     * 设置Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _instanceCreateTime Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Pod Creation Time
+                     * @param _instanceCreateTime Pod Creation Time
                      * 
                      */
                     void SetInstanceCreateTime(const std::string& _instanceCreateTime);
@@ -203,18 +195,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Namespace Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _namespace Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -227,19 +215,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -252,19 +236,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ClusterId Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _clusterId Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -277,19 +257,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ClusterName Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Cluster name.
+                     * @return ClusterName Cluster name.
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _clusterName Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Cluster name.
+                     * @param _clusterName Cluster name.
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -302,19 +278,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return MachineId Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Host ID
+                     * @return MachineId Host ID
                      * 
                      */
                     std::string GetMachineId() const;
 
                     /**
-                     * 设置Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _machineId Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Host ID
+                     * @param _machineId Host ID
                      * 
                      */
                     void SetMachineId(const std::string& _machineId);
@@ -327,19 +299,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool MachineIdHasBeenSet() const;
 
                     /**
-                     * 获取Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return MachineName Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取host name
+                     * @return MachineName host name
                      * 
                      */
                     std::string GetMachineName() const;
 
                     /**
-                     * 设置Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _machineName Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置host name
+                     * @param _machineName host name
                      * 
                      */
                     void SetMachineName(const std::string& _machineName);
@@ -352,19 +320,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PodIp Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取pod ip
+                     * @return PodIp pod ip
                      * 
                      */
                     std::string GetPodIp() const;
 
                     /**
-                     * 设置Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _podIp Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置pod ip
+                     * @param _podIp pod ip
                      * 
                      */
                     void SetPodIp(const std::string& _podIp);
@@ -377,19 +341,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PodIpHasBeenSet() const;
 
                     /**
-                     * 获取Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ServiceCount Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Associated Service Count
+                     * @return ServiceCount Associated Service Count
                      * 
                      */
                     int64_t GetServiceCount() const;
 
                     /**
-                     * 设置Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _serviceCount Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Associated Service Count
+                     * @param _serviceCount Associated Service Count
                      * 
                      */
                     void SetServiceCount(const int64_t& _serviceCount);
@@ -402,19 +362,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ContainerCount Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Associated container number
+                     * @return ContainerCount Associated container number
                      * 
                      */
                     int64_t GetContainerCount() const;
 
                     /**
-                     * 设置Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _containerCount Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Associated container number
+                     * @param _containerCount Associated container number
                      * 
                      */
                     void SetContainerCount(const int64_t& _containerCount);
@@ -427,19 +383,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ContainerCountHasBeenSet() const;
 
                     /**
-                     * 获取Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Public IP address
+                     * @return PublicIp Public IP address
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _publicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Public IP address
+                     * @param _publicIp Public IP address
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -452,19 +404,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Private IP address
+                     * @return PrivateIp Private IP address
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _privateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Private IP address
+                     * @param _privateIp Private IP address
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -477,19 +425,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsCore Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Whether it is core. 1: Core; 2: Non-core.
+                     * @return IsCore Whether it is core. 1: Core; 2: Non-core.
                      * 
                      */
                     int64_t GetIsCore() const;
 
                     /**
-                     * 设置Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isCore Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Whether it is core. 1: Core; 2: Non-core.
+                     * @param _isCore Whether it is core. 1: Core; 2: Non-core.
                      * 
                      */
                     void SetIsCore(const int64_t& _isCore);
@@ -502,19 +446,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool IsCoreHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取New Asset or Not. 1: New
+                     * @return IsNewAsset New Asset or Not. 1: New
                      * 
                      */
                     uint64_t GetIsNewAsset() const;
 
                     /**
-                     * 设置Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _isNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置New Asset or Not. 1: New
+                     * @param _isNewAsset New Asset or Not. 1: New
                      * 
                      */
                     void SetIsNewAsset(const uint64_t& _isNewAsset);
@@ -547,8 +487,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_nickHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
@@ -566,99 +505,85 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Pod Creation Time
                      */
                     std::string m_instanceCreateTime;
                     bool m_instanceCreateTimeHasBeenSet;
 
                     /**
                      * Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Cluster name.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Host ID
                      */
                     std::string m_machineId;
                     bool m_machineIdHasBeenSet;
 
                     /**
-                     * Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * host name
                      */
                     std::string m_machineName;
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * pod ip
                      */
                     std::string m_podIp;
                     bool m_podIpHasBeenSet;
 
                     /**
-                     * Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Associated Service Count
                      */
                     int64_t m_serviceCount;
                     bool m_serviceCountHasBeenSet;
 
                     /**
-                     * Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Associated container number
                      */
                     int64_t m_containerCount;
                     bool m_containerCountHasBeenSet;
 
                     /**
-                     * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Public IP address
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Private IP address
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Whether it is core. 1: Core; 2: Non-core.
                      */
                     int64_t m_isCore;
                     bool m_isCoreHasBeenSet;
 
                     /**
-                     * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * New Asset or Not. 1: New
                      */
                     uint64_t m_isNewAsset;
                     bool m_isNewAssetHasBeenSet;

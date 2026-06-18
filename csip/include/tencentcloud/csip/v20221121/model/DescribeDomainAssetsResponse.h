@@ -46,10 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Total u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Total number.
+                     * @return Total Total number.
                      * 
                      */
                     uint64_t GetTotal() const;
@@ -62,10 +60,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Domain name list
+                     * @return Data Domain name list
                      * 
                      */
                     std::vector<DomainAssetVO> GetData() const;
@@ -78,10 +74,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return DefenseStatusList List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Protection Status List
+                     * @return DefenseStatusList Protection Status List
                      * 
                      */
                     std::vector<FilterDataObject> GetDefenseStatusList() const;
@@ -94,10 +88,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool DefenseStatusListHasBeenSet() const;
 
                     /**
-                     * 获取List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return AssetLocationList List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Attribution List
+                     * @return AssetLocationList Asset Attribution List
                      * 
                      */
                     std::vector<FilterDataObject> GetAssetLocationList() const;
@@ -110,10 +102,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool AssetLocationListHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return SourceTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Asset Type List
+                     * @return SourceTypeList Asset Type List
                      * 
                      */
                     std::vector<FilterDataObject> GetSourceTypeList() const;
@@ -126,10 +116,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool SourceTypeListHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Region list
+                     * @return RegionList Region list
                      * 
                      */
                     std::vector<FilterDataObject> GetRegionList() const;
@@ -144,43 +132,37 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Total number.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Domain name list
                      */
                     std::vector<DomainAssetVO> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Protection Status List
                      */
                     std::vector<FilterDataObject> m_defenseStatusList;
                     bool m_defenseStatusListHasBeenSet;
 
                     /**
-                     * List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Attribution List
                      */
                     std::vector<FilterDataObject> m_assetLocationList;
                     bool m_assetLocationListHasBeenSet;
 
                     /**
-                     * List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Asset Type List
                      */
                     std::vector<FilterDataObject> m_sourceTypeList;
                     bool m_sourceTypeListHasBeenSet;
 
                     /**
-                     * List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Region list
                      */
                     std::vector<FilterDataObject> m_regionList;
                     bool m_regionListHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
-                     * @return Enable Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+                     * 获取<p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+                     * @return Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
                      * 
                      */
                     uint64_t GetEnable() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Scope <li>0 Selected host</li> <li>1 All hosts</li>
-                     * @return Scope Scope <li>0 Selected host</li> <li>1 All hosts</li>
+                     * 获取<p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
+                     * @return Scope <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
                      * 
                      */
                     uint64_t GetScope() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Selected host configuration count
-                     * @return IncludeHostCount Selected host configuration count
+                     * 获取<p>Number of selected host configurations</p>
+                     * @return IncludeHostCount <p>Number of selected host configurations</p>
                      * 
                      */
                     uint64_t GetIncludeHostCount() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool IncludeHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Deselect host configuration count
-                     * @return ExcludeHostCount Deselect host configuration count
+                     * 获取<p>Number of excluded host configurations</p>
+                     * @return ExcludeHostCount <p>Number of excluded host configurations</p>
                      * 
                      */
                     uint64_t GetExcludeHostCount() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool ExcludeHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Select quuid configuration list
-                     * @return IncludeQuuid Select quuid configuration list
+                     * 获取<p>List of selected QUUID configurations</p>
+                     * @return IncludeQuuid <p>List of selected QUUID configurations</p>
                      * 
                      */
                     std::vector<std::string> GetIncludeQuuid() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool IncludeQuuidHasBeenSet() const;
 
                     /**
-                     * 获取Exclude quuid configuration list
-                     * @return ExcludeQuuid Exclude quuid configuration list
+                     * 获取<p>List of excluded QUUID configurations</p>
+                     * @return ExcludeQuuid <p>List of excluded QUUID configurations</p>
                      * 
                      */
                     std::vector<std::string> GetExcludeQuuid() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool ExcludeQuuidHasBeenSet() const;
 
                     /**
-                     * 获取Number of Machines Enabled
-                     * @return EnableCount Number of Machines Enabled
+                     * 获取<p>Number of enabled machines</p>
+                     * @return EnableCount <p>Number of enabled machines</p>
                      * 
                      */
                     uint64_t GetEnableCount() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool EnableCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of inactive machines
-                     * @return DisableCount Number of inactive machines
+                     * 获取<p>Number of disabled machines</p>
+                     * @return DisableCount <p>Number of disabled machines</p>
                      * 
                      */
                     uint64_t GetDisableCount() const;
@@ -158,49 +158,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+                     * <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
                      */
                     uint64_t m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Scope <li>0 Selected host</li> <li>1 All hosts</li>
+                     * <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
                      */
                     uint64_t m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Selected host configuration count
+                     * <p>Number of selected host configurations</p>
                      */
                     uint64_t m_includeHostCount;
                     bool m_includeHostCountHasBeenSet;
 
                     /**
-                     * Deselect host configuration count
+                     * <p>Number of excluded host configurations</p>
                      */
                     uint64_t m_excludeHostCount;
                     bool m_excludeHostCountHasBeenSet;
 
                     /**
-                     * Select quuid configuration list
+                     * <p>List of selected QUUID configurations</p>
                      */
                     std::vector<std::string> m_includeQuuid;
                     bool m_includeQuuidHasBeenSet;
 
                     /**
-                     * Exclude quuid configuration list
+                     * <p>List of excluded QUUID configurations</p>
                      */
                     std::vector<std::string> m_excludeQuuid;
                     bool m_excludeQuuidHasBeenSet;
 
                     /**
-                     * Number of Machines Enabled
+                     * <p>Number of enabled machines</p>
                      */
                     uint64_t m_enableCount;
                     bool m_enableCountHasBeenSet;
 
                     /**
-                     * Number of inactive machines
+                     * <p>Number of disabled machines</p>
                      */
                     uint64_t m_disableCount;
                     bool m_disableCountHasBeenSet;

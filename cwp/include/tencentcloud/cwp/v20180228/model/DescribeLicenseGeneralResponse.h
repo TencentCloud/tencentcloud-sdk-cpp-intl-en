@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of authorizations (including those that are isolated, expired, and in other states)
-                     * @return LicenseCnt Total number of authorizations (including those that are isolated, expired, and in other states)
+                     * 获取<p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
+                     * @return LicenseCnt <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
                      * 
                      */
                     uint64_t GetLicenseCnt() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool LicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of available authorizations
-                     * @return AvailableLicenseCnt Number of available authorizations
+                     * 获取<p>Available licenses</p>
+                     * @return AvailableLicenseCnt <p>Available licenses</p>
                      * 
                      */
                     uint64_t GetAvailableLicenseCnt() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AvailableLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of available Professional Edition authorizations (including those in postpaid mode)
-                     * @return AvailableProVersionLicenseCnt Number of available Professional Edition authorizations (including those in postpaid mode)
+                     * 获取<p>Number of available Pro Edition licenses (including postpaid licenses)</p>
+                     * @return AvailableProVersionLicenseCnt <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
                      * 
                      */
                     uint64_t GetAvailableProVersionLicenseCnt() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool AvailableProVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of available Ultimate Edition authorizations
-                     * @return AvailableFlagshipVersionLicenseCnt Number of available Ultimate Edition authorizations
+                     * 获取<p>Number of available Ultimate Edition licenses</p>
+                     * @return AvailableFlagshipVersionLicenseCnt <p>Number of available Ultimate Edition licenses</p>
                      * 
                      */
                     uint64_t GetAvailableFlagshipVersionLicenseCnt() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool AvailableFlagshipVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of authorizations about to expire (no more than 15 days left)
-                     * @return NearExpiryLicenseCnt Number of authorizations about to expire (no more than 15 days left)
+                     * 获取<p>Number of licenses expiring within 15 days</p>
+                     * @return NearExpiryLicenseCnt <p>Number of licenses expiring within 15 days</p>
                      * 
                      */
                     uint64_t GetNearExpiryLicenseCnt() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool NearExpiryLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of expired authorizations (excluding deleted ones)
-                     * @return ExpireLicenseCnt Number of expired authorizations (excluding deleted ones)
+                     * 获取<p>Number of expired licenses (excluding deleted records)</p>
+                     * @return ExpireLicenseCnt <p>Number of expired licenses (excluding deleted records)</p>
                      * 
                      */
                     uint64_t GetExpireLicenseCnt() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool ExpireLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
-                     * @return AutoOpenStatus Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+                     * 获取<p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
+                     * @return AutoOpenStatus <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
                      * 
                      */
                     bool GetAutoOpenStatus() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool AutoOpenStatusHasBeenSet() const;
 
                     /**
-                     * 获取PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
-                     * @return ProtectType PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+                     * 获取<p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
+                     * @return ProtectType <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
                      * 
                      */
                     std::string GetProtectType() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool ProtectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic upgrade has been enabled before
-                     * @return IsOpenStatusHistory Whether automatic upgrade has been enabled before
+                     * 获取<p>Whether automatic upgrade has been enabled before</p>
+                     * @return IsOpenStatusHistory <p>Whether automatic upgrade has been enabled before</p>
                      * 
                      */
                     bool GetIsOpenStatusHistory() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool IsOpenStatusHistoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of used authorizations
-                     * @return UsedLicenseCnt Number of used authorizations
+                     * 获取<p>Number of used licenses</p>
+                     * @return UsedLicenseCnt <p>Number of used licenses</p>
                      * 
                      */
                     uint64_t GetUsedLicenseCnt() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool UsedLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of authorizations that have not expired
-                     * @return NotExpiredLicenseCnt Number of authorizations that have not expired
+                     * 获取<p>Number of unexpired licenses</p>
+                     * @return NotExpiredLicenseCnt <p>Number of unexpired licenses</p>
                      * 
                      */
                     uint64_t GetNotExpiredLicenseCnt() const;
@@ -198,8 +198,8 @@ namespace TencentCloud
                     bool NotExpiredLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Total number of Ultimate Edition authorizations (valid orders)
-                     * @return FlagshipVersionLicenseCnt Total number of Ultimate Edition authorizations (valid orders)
+                     * 获取<p>Total number of Ultimate Edition licenses (valid orders)</p>
+                     * @return FlagshipVersionLicenseCnt <p>Total number of Ultimate Edition licenses (valid orders)</p>
                      * 
                      */
                     uint64_t GetFlagshipVersionLicenseCnt() const;
@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool FlagshipVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Total number of Pro Edition authorizations (valid orders)
-                     * @return ProVersionLicenseCnt Total number of Pro Edition authorizations (valid orders)
+                     * 获取<p>Total number of Pro Edition licenses (valid orders)</p>
+                     * @return ProVersionLicenseCnt <p>Total number of Pro Edition licenses (valid orders)</p>
                      * 
                      */
                     uint64_t GetProVersionLicenseCnt() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool ProVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Total number of Lite Edition authorizations (those of valid orders)
-                     * @return CwpVersionLicenseCnt Total number of Lite Edition authorizations (those of valid orders)
+                     * 获取<p>Lightweight edition total number of licenses (valid order licenses count)</p>
+                     * @return CwpVersionLicenseCnt <p>Lightweight edition total number of licenses (valid order licenses count)</p>
                      * 
                      */
                     uint64_t GetCwpVersionLicenseCnt() const;
@@ -240,8 +240,8 @@ namespace TencentCloud
                     bool CwpVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Number of available Inclusive Edition authorizations
-                     * @return AvailableLHLicenseCnt Number of available Inclusive Edition authorizations
+                     * 获取<p>Number of available Lightweight Edition licenses</p>
+                     * @return AvailableLHLicenseCnt <p>Number of available Lightweight Edition licenses</p>
                      * 
                      */
                     uint64_t GetAvailableLHLicenseCnt() const;
@@ -254,8 +254,8 @@ namespace TencentCloud
                     bool AvailableLHLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取Auto-purchase switch, true for ON, false for OFF
-                     * @return AutoRepurchaseSwitch Auto-purchase switch, true for ON, false for OFF
+                     * 获取<p>Auto-purchase switch. true: enabled; false: disabled.</p>
+                     * @return AutoRepurchaseSwitch <p>Auto-purchase switch. true: enabled; false: disabled.</p>
                      * 
                      */
                     bool GetAutoRepurchaseSwitch() const;
@@ -268,8 +268,8 @@ namespace TencentCloud
                     bool AutoRepurchaseSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
-                     * @return AutoRepurchaseRenewSwitch Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+                     * 获取<p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
+                     * @return AutoRepurchaseRenewSwitch <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
                      * 
                      */
                     bool GetAutoRepurchaseRenewSwitch() const;
@@ -282,8 +282,8 @@ namespace TencentCloud
                     bool AutoRepurchaseRenewSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Number of terminated orders
-                     * @return DestroyOrderNum Number of terminated orders
+                     * 获取<p>Number of terminated orders</p>
+                     * @return DestroyOrderNum <p>Number of terminated orders</p>
                      * 
                      */
                     uint64_t GetDestroyOrderNum() const;
@@ -296,8 +296,8 @@ namespace TencentCloud
                     bool DestroyOrderNumHasBeenSet() const;
 
                     /**
-                     * 获取Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
-                     * @return RepurchaseRenewSwitch Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+                     * 获取<p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
+                     * @return RepurchaseRenewSwitch <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
                      * 
                      */
                     bool GetRepurchaseRenewSwitch() const;
@@ -310,8 +310,8 @@ namespace TencentCloud
                     bool RepurchaseRenewSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
-                     * @return AutoBindRaspSwitch Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+                     * 获取<p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
+                     * @return AutoBindRaspSwitch <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
                      * 
                      */
                     bool GetAutoBindRaspSwitch() const;
@@ -324,8 +324,8 @@ namespace TencentCloud
                     bool AutoBindRaspSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
-                     * @return AutoOpenRaspSwitch Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+                     * 获取<p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
+                     * @return AutoOpenRaspSwitch <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
                      * 
                      */
                     bool GetAutoOpenRaspSwitch() const;
@@ -338,8 +338,8 @@ namespace TencentCloud
                     bool AutoOpenRaspSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Whether the automatic scaling down switch is on
-                     * @return AutoDowngradeSwitch Whether the automatic scaling down switch is on
+                     * 获取<p>Whether the auto-downgrade switch is enabled</p>
+                     * @return AutoDowngradeSwitch <p>Whether the auto-downgrade switch is enabled</p>
                      * 
                      */
                     bool GetAutoDowngradeSwitch() const;
@@ -352,8 +352,8 @@ namespace TencentCloud
                     bool AutoDowngradeSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AvailableAISecurityLicenseCnt 
+                     * 获取<p>Number of available AI Protection Edition licenses</p>
+                     * @return AvailableAISecurityLicenseCnt <p>Number of available AI Protection Edition licenses</p>
                      * 
                      */
                     uint64_t GetAvailableAISecurityLicenseCnt() const;
@@ -366,8 +366,8 @@ namespace TencentCloud
                     bool AvailableAISecurityLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AISecurityVersionLicenseCnt 
+                     * 获取<p>Total number of AI Protection Edition licenses</p>
+                     * @return AISecurityVersionLicenseCnt <p>Total number of AI Protection Edition licenses</p>
                      * 
                      */
                     uint64_t GetAISecurityVersionLicenseCnt() const;
@@ -380,8 +380,8 @@ namespace TencentCloud
                     bool AISecurityVersionLicenseCntHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApplicationAvailableLicenseCnt 
+                     * 获取<p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
+                     * @return ApplicationAvailableLicenseCnt <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
                      * 
                      */
                     uint64_t GetApplicationAvailableLicenseCnt() const;
@@ -396,151 +396,151 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of authorizations (including those that are isolated, expired, and in other states)
+                     * <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
                      */
                     uint64_t m_licenseCnt;
                     bool m_licenseCntHasBeenSet;
 
                     /**
-                     * Number of available authorizations
+                     * <p>Available licenses</p>
                      */
                     uint64_t m_availableLicenseCnt;
                     bool m_availableLicenseCntHasBeenSet;
 
                     /**
-                     * Number of available Professional Edition authorizations (including those in postpaid mode)
+                     * <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
                      */
                     uint64_t m_availableProVersionLicenseCnt;
                     bool m_availableProVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Number of available Ultimate Edition authorizations
+                     * <p>Number of available Ultimate Edition licenses</p>
                      */
                     uint64_t m_availableFlagshipVersionLicenseCnt;
                     bool m_availableFlagshipVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Number of authorizations about to expire (no more than 15 days left)
+                     * <p>Number of licenses expiring within 15 days</p>
                      */
                     uint64_t m_nearExpiryLicenseCnt;
                     bool m_nearExpiryLicenseCntHasBeenSet;
 
                     /**
-                     * Number of expired authorizations (excluding deleted ones)
+                     * <p>Number of expired licenses (excluding deleted records)</p>
                      */
                     uint64_t m_expireLicenseCnt;
                     bool m_expireLicenseCntHasBeenSet;
 
                     /**
-                     * Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+                     * <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
                      */
                     bool m_autoOpenStatus;
                     bool m_autoOpenStatusHasBeenSet;
 
                     /**
-                     * PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+                     * <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
                      */
                     std::string m_protectType;
                     bool m_protectTypeHasBeenSet;
 
                     /**
-                     * Whether automatic upgrade has been enabled before
+                     * <p>Whether automatic upgrade has been enabled before</p>
                      */
                     bool m_isOpenStatusHistory;
                     bool m_isOpenStatusHistoryHasBeenSet;
 
                     /**
-                     * Number of used authorizations
+                     * <p>Number of used licenses</p>
                      */
                     uint64_t m_usedLicenseCnt;
                     bool m_usedLicenseCntHasBeenSet;
 
                     /**
-                     * Number of authorizations that have not expired
+                     * <p>Number of unexpired licenses</p>
                      */
                     uint64_t m_notExpiredLicenseCnt;
                     bool m_notExpiredLicenseCntHasBeenSet;
 
                     /**
-                     * Total number of Ultimate Edition authorizations (valid orders)
+                     * <p>Total number of Ultimate Edition licenses (valid orders)</p>
                      */
                     uint64_t m_flagshipVersionLicenseCnt;
                     bool m_flagshipVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Total number of Pro Edition authorizations (valid orders)
+                     * <p>Total number of Pro Edition licenses (valid orders)</p>
                      */
                     uint64_t m_proVersionLicenseCnt;
                     bool m_proVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Total number of Lite Edition authorizations (those of valid orders)
+                     * <p>Lightweight edition total number of licenses (valid order licenses count)</p>
                      */
                     uint64_t m_cwpVersionLicenseCnt;
                     bool m_cwpVersionLicenseCntHasBeenSet;
 
                     /**
-                     * Number of available Inclusive Edition authorizations
+                     * <p>Number of available Lightweight Edition licenses</p>
                      */
                     uint64_t m_availableLHLicenseCnt;
                     bool m_availableLHLicenseCntHasBeenSet;
 
                     /**
-                     * Auto-purchase switch, true for ON, false for OFF
+                     * <p>Auto-purchase switch. true: enabled; false: disabled.</p>
                      */
                     bool m_autoRepurchaseSwitch;
                     bool m_autoRepurchaseSwitchHasBeenSet;
 
                     /**
-                     * Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+                     * <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
                      */
                     bool m_autoRepurchaseRenewSwitch;
                     bool m_autoRepurchaseRenewSwitchHasBeenSet;
 
                     /**
-                     * Number of terminated orders
+                     * <p>Number of terminated orders</p>
                      */
                     uint64_t m_destroyOrderNum;
                     bool m_destroyOrderNumHasBeenSet;
 
                     /**
-                     * Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+                     * <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
                      */
                     bool m_repurchaseRenewSwitch;
                     bool m_repurchaseRenewSwitchHasBeenSet;
 
                     /**
-                     * Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+                     * <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
                      */
                     bool m_autoBindRaspSwitch;
                     bool m_autoBindRaspSwitchHasBeenSet;
 
                     /**
-                     * Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+                     * <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
                      */
                     bool m_autoOpenRaspSwitch;
                     bool m_autoOpenRaspSwitchHasBeenSet;
 
                     /**
-                     * Whether the automatic scaling down switch is on
+                     * <p>Whether the auto-downgrade switch is enabled</p>
                      */
                     bool m_autoDowngradeSwitch;
                     bool m_autoDowngradeSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of available AI Protection Edition licenses</p>
                      */
                     uint64_t m_availableAISecurityLicenseCnt;
                     bool m_availableAISecurityLicenseCntHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total number of AI Protection Edition licenses</p>
                      */
                     uint64_t m_aISecurityVersionLicenseCnt;
                     bool m_aISecurityVersionLicenseCntHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
                      */
                     uint64_t m_applicationAvailableLicenseCnt;
                     bool m_applicationAvailableLicenseCntHasBeenSet;

@@ -675,6 +675,90 @@ namespace TencentCloud
                      */
                     bool AutoScaleConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Bind to security group list</p>
+                     * @return SecurityGroupIds <p>Bind to security group list</p>
+                     * 
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置<p>Bind to security group list</p>
+                     * @param _securityGroupIds <p>Bind to security group list</p>
+                     * 
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     * 
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * @return UserName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * 
+                     */
+                    std::string GetUserName() const;
+
+                    /**
+                     * 设置<p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * @param _userName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * 
+                     */
+                    void SetUserName(const std::string& _userName);
+
+                    /**
+                     * 判断参数 UserName 是否已赋值
+                     * @return UserName 是否已赋值
+                     * 
+                     */
+                    bool UserNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>dbaadmin password</p>
+                     * @return Password <p>dbaadmin password</p>
+                     * 
+                     */
+                    std::string GetPassword() const;
+
+                    /**
+                     * 设置<p>dbaadmin password</p>
+                     * @param _password <p>dbaadmin password</p>
+                     * 
+                     */
+                    void SetPassword(const std::string& _password);
+
+                    /**
+                     * 判断参数 Password 是否已赋值
+                     * @return Password 是否已赋值
+                     * 
+                     */
+                    bool PasswordHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * @return EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 
+                     */
+                    int64_t GetEncryptionEnable() const;
+
+                    /**
+                     * 设置<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * @param _encryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 
+                     */
+                    void SetEncryptionEnable(const int64_t& _encryptionEnable);
+
+                    /**
+                     * 判断参数 EncryptionEnable 是否已赋值
+                     * @return EncryptionEnable 是否已赋值
+                     * 
+                     */
+                    bool EncryptionEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -856,6 +940,30 @@ namespace TencentCloud
                      */
                     AutoScalingConfig m_autoScaleConfig;
                     bool m_autoScaleConfigHasBeenSet;
+
+                    /**
+                     * <p>Bind to security group list</p>
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     */
+                    std::string m_userName;
+                    bool m_userNameHasBeenSet;
+
+                    /**
+                     * <p>dbaadmin password</p>
+                     */
+                    std::string m_password;
+                    bool m_passwordHasBeenSet;
+
+                    /**
+                     * <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     */
+                    int64_t m_encryptionEnable;
+                    bool m_encryptionEnableHasBeenSet;
 
                 };
             }

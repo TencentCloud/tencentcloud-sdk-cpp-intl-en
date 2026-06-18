@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule of determining brute force cracking
-                     * @return Rules Rule of determining brute force cracking
+                     * 获取<p>Brute-force attack determination rule</p>
+                     * @return Rules <p>Brute-force attack determination rule</p>
                      * 
                      */
                     std::vector<BruteAttackRule> GetRules() const;
 
                     /**
-                     * 设置Rule of determining brute force cracking
-                     * @param _rules Rule of determining brute force cracking
+                     * 设置<p>Brute-force attack determination rule</p>
+                     * @param _rules <p>Brute-force attack determination rule</p>
                      * 
                      */
                     void SetRules(const std::vector<BruteAttackRule>& _rules);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule of determining brute force cracking
+                     * <p>Brute-force attack determination rule</p>
                      */
                     std::vector<BruteAttackRule> m_rules;
                     bool m_rulesHasBeenSet;

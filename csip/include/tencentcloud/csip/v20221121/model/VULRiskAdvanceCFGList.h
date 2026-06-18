@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/csip/v20221121/model/ServiceSupport.h>
 
 
 namespace TencentCloud
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool VULNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-                     * @return RiskLevel Risk level
+                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @return RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level
-                     * @param _riskLevel Risk level
+                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @param _riskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -131,19 +132,15 @@ namespace TencentCloud
                     bool CheckFromHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Enable Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Enable/Disable. 1-Enable; 0-Disable.
+                     * @return Enable Enable/Disable. 1-Enable; 0-Disable.
                      * 
                      */
                     int64_t GetEnable() const;
 
                     /**
-                     * 设置Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _enable Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Enable/Disable. 1-Enable; 0-Disable.
+                     * @param _enable Enable/Disable. 1-Enable; 0-Disable.
                      * 
                      */
                     void SetEnable(const int64_t& _enable);
@@ -198,19 +195,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ImpactVersionHasBeenSet() const;
 
                     /**
-                     * 获取CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return CVE CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取CVE
+                     * @return CVE CVE
                      * 
                      */
                     std::string GetCVE() const;
 
                     /**
-                     * 设置CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _cVE CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置CVE
+                     * @param _cVE CVE
                      * 
                      */
                     void SetCVE(const std::string& _cVE);
@@ -244,19 +237,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VULTagHasBeenSet() const;
 
                     /**
-                     * 获取Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return FixMethod Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Repair method
+                     * @return FixMethod Repair method
                      * 
                      */
                     std::vector<std::string> GetFixMethod() const;
 
                     /**
-                     * 设置Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _fixMethod Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Repair method
+                     * @param _fixMethod Repair method
                      * 
                      */
                     void SetFixMethod(const std::vector<std::string>& _fixMethod);
@@ -270,18 +259,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return ReleaseTime Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReleaseTime() const;
 
                     /**
                      * 设置Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _releaseTime Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReleaseTime(const std::string& _releaseTime);
@@ -294,19 +279,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ReleaseTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+                     * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
                      * 
                      */
                     int64_t GetEMGCVulType() const;
 
                     /**
-                     * 设置Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _eMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+                     * @param _eMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
                      * 
                      */
                     void SetEMGCVulType(const int64_t& _eMGCVulType);
@@ -320,18 +301,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return VULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVULDescribe() const;
 
                     /**
                      * 设置Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _vULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVULDescribe(const std::string& _vULDescribe);
@@ -344,19 +321,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool VULDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ImpactComponent Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Affected component
+                     * @return ImpactComponent Affected component
                      * 
                      */
                     std::string GetImpactComponent() const;
 
                     /**
-                     * 设置Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _impactComponent Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Affected component
+                     * @param _impactComponent Affected component
                      * 
                      */
                     void SetImpactComponent(const std::string& _impactComponent);
@@ -367,6 +340,132 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 
                      */
                     bool ImpactComponentHasBeenSet() const;
+
+                    /**
+                     * 获取Vulnerability Payload
+                     * @return Payload Vulnerability Payload
+                     * 
+                     */
+                    std::string GetPayload() const;
+
+                    /**
+                     * 设置Vulnerability Payload
+                     * @param _payload Vulnerability Payload
+                     * 
+                     */
+                    void SetPayload(const std::string& _payload);
+
+                    /**
+                     * 判断参数 Payload 是否已赋值
+                     * @return Payload 是否已赋值
+                     * 
+                     */
+                    bool PayloadHasBeenSet() const;
+
+                    /**
+                     * 获取Technology reference
+                     * @return References Technology reference
+                     * 
+                     */
+                    std::string GetReferences() const;
+
+                    /**
+                     * 设置Technology reference
+                     * @param _references Technology reference
+                     * 
+                     */
+                    void SetReferences(const std::string& _references);
+
+                    /**
+                     * 判断参数 References 是否已赋值
+                     * @return References 是否已赋值
+                     * 
+                     */
+                    bool ReferencesHasBeenSet() const;
+
+                    /**
+                     * 获取CVSS Score
+                     * @return CVSS CVSS Score
+                     * 
+                     */
+                    std::string GetCVSS() const;
+
+                    /**
+                     * 设置CVSS Score
+                     * @param _cVSS CVSS Score
+                     * 
+                     */
+                    void SetCVSS(const std::string& _cVSS);
+
+                    /**
+                     * 判断参数 CVSS 是否已赋值
+                     * @return CVSS 是否已赋值
+                     * 
+                     */
+                    bool CVSSHasBeenSet() const;
+
+                    /**
+                     * 获取Attack intensity
+                     * @return AttackHeat Attack intensity
+                     * 
+                     */
+                    std::string GetAttackHeat() const;
+
+                    /**
+                     * 设置Attack intensity
+                     * @param _attackHeat Attack intensity
+                     * 
+                     */
+                    void SetAttackHeat(const std::string& _attackHeat);
+
+                    /**
+                     * 判断参数 AttackHeat 是否已赋值
+                     * @return AttackHeat 是否已赋值
+                     * 
+                     */
+                    bool AttackHeatHasBeenSet() const;
+
+                    /**
+                     * 获取Security Product Support Status
+                     * @return ServiceSupport Security Product Support Status
+                     * 
+                     */
+                    std::vector<ServiceSupport> GetServiceSupport() const;
+
+                    /**
+                     * 设置Security Product Support Status
+                     * @param _serviceSupport Security Product Support Status
+                     * 
+                     */
+                    void SetServiceSupport(const std::vector<ServiceSupport>& _serviceSupport);
+
+                    /**
+                     * 判断参数 ServiceSupport 是否已赋值
+                     * @return ServiceSupport 是否已赋值
+                     * 
+                     */
+                    bool ServiceSupportHasBeenSet() const;
+
+                    /**
+                     * 获取Latest detection time
+                     * @return RecentScanTime Latest detection time
+                     * 
+                     */
+                    std::string GetRecentScanTime() const;
+
+                    /**
+                     * 设置Latest detection time
+                     * @param _recentScanTime Latest detection time
+                     * 
+                     */
+                    void SetRecentScanTime(const std::string& _recentScanTime);
+
+                    /**
+                     * 判断参数 RecentScanTime 是否已赋值
+                     * @return RecentScanTime 是否已赋值
+                     * 
+                     */
+                    bool RecentScanTimeHasBeenSet() const;
 
                 private:
 
@@ -383,7 +482,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_vULNameHasBeenSet;
 
                     /**
-                     * Risk level
+                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
@@ -395,8 +494,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_checkFromHasBeenSet;
 
                     /**
-                     * Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Enable/Disable. 1-Enable; 0-Disable.
                      */
                     int64_t m_enable;
                     bool m_enableHasBeenSet;
@@ -414,8 +512,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_impactVersionHasBeenSet;
 
                     /**
-                     * CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * CVE
                      */
                     std::string m_cVE;
                     bool m_cVEHasBeenSet;
@@ -427,39 +524,70 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_vULTagHasBeenSet;
 
                     /**
-                     * Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Repair method
                      */
                     std::vector<std::string> m_fixMethod;
                     bool m_fixMethodHasBeenSet;
 
                     /**
                      * Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_releaseTime;
                     bool m_releaseTimeHasBeenSet;
 
                     /**
-                     * Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
                      */
                     int64_t m_eMGCVulType;
                     bool m_eMGCVulTypeHasBeenSet;
 
                     /**
                      * Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_vULDescribe;
                     bool m_vULDescribeHasBeenSet;
 
                     /**
-                     * Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Affected component
                      */
                     std::string m_impactComponent;
                     bool m_impactComponentHasBeenSet;
+
+                    /**
+                     * Vulnerability Payload
+                     */
+                    std::string m_payload;
+                    bool m_payloadHasBeenSet;
+
+                    /**
+                     * Technology reference
+                     */
+                    std::string m_references;
+                    bool m_referencesHasBeenSet;
+
+                    /**
+                     * CVSS Score
+                     */
+                    std::string m_cVSS;
+                    bool m_cVSSHasBeenSet;
+
+                    /**
+                     * Attack intensity
+                     */
+                    std::string m_attackHeat;
+                    bool m_attackHeatHasBeenSet;
+
+                    /**
+                     * Security Product Support Status
+                     */
+                    std::vector<ServiceSupport> m_serviceSupport;
+                    bool m_serviceSupportHasBeenSet;
+
+                    /**
+                     * Latest detection time
+                     */
+                    std::string m_recentScanTime;
+                    bool m_recentScanTimeHasBeenSet;
 
                 };
             }

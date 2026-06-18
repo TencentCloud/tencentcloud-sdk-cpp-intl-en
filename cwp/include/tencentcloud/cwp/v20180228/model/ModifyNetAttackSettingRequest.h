@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
-                     * @return NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+                     * 获取<p>0: Disable network attack detection; 1: Enable network attack detection</p>
+                     * @return NetAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
                      * 
                      */
                     uint64_t GetNetAttackEnable() const;
 
                     /**
-                     * 设置0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
-                     * @param _netAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+                     * 设置<p>0: Disable network attack detection; 1: Enable network attack detection</p>
+                     * @param _netAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
                      * 
                      */
                     void SetNetAttackEnable(const uint64_t& _netAttackEnable);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NetAttackEnableHasBeenSet() const;
 
                     /**
-                     * 获取0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
-                     * @return NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+                     * 获取<p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+                     * @return NetAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
                      * 
                      */
                     uint64_t GetNetAttackAlarmStatus() const;
 
                     /**
-                     * 设置0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
-                     * @param _netAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+                     * 设置<p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+                     * @param _netAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
                      * 
                      */
                     void SetNetAttackAlarmStatus(const uint64_t& _netAttackAlarmStatus);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NetAttackAlarmStatusHasBeenSet() const;
 
                     /**
-                     * 获取1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
-                     * @return Scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+                     * 获取<p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+                     * @return Scope <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
                      * 
                      */
                     uint64_t GetScope() const;
 
                     /**
-                     * 设置1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
-                     * @param _scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+                     * 设置<p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+                     * @param _scope <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
                      * 
                      */
                     void SetScope(const uint64_t& _scope);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取Specified hosts
-                     * @return InstanceIds Specified hosts
+                     * 获取<p>Selected hosts</p>
+                     * @return InstanceIds <p>Selected hosts</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Specified hosts
-                     * @param _instanceIds Specified hosts
+                     * 设置<p>Selected hosts</p>
+                     * @param _instanceIds <p>Selected hosts</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Manually Excluded Hosts
-                     * @return ExcludeInstanceIds Manually Excluded Hosts
+                     * 获取<p>Custom excluded hosts</p>
+                     * @return ExcludeInstanceIds <p>Custom excluded hosts</p>
                      * 
                      */
                     std::vector<std::string> GetExcludeInstanceIds() const;
 
                     /**
-                     * 设置Manually Excluded Hosts
-                     * @param _excludeInstanceIds Manually Excluded Hosts
+                     * 设置<p>Custom excluded hosts</p>
+                     * @param _excludeInstanceIds <p>Custom excluded hosts</p>
                      * 
                      */
                     void SetExcludeInstanceIds(const std::vector<std::string>& _excludeInstanceIds);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ExcludeInstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取New assets automatically include: 0 - Do not include, 1 - include.
-                     * @return AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
+                     * 获取<p>Automatically include newly added assets. 0: No; 1: Yes</p>
+                     * @return AutoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
                      * 
                      */
                     uint64_t GetAutoInclude() const;
 
                     /**
-                     * 设置New assets automatically include: 0 - Do not include, 1 - include.
-                     * @param _autoInclude New assets automatically include: 0 - Do not include, 1 - include.
+                     * 设置<p>Automatically include newly added assets. 0: No; 1: Yes</p>
+                     * @param _autoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
                      * 
                      */
                     void SetAutoInclude(const uint64_t& _autoInclude);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AutoIncludeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProductType 
+                     * 获取<p>Product type. 0: CWP; 1: CSC</p>
+                     * @return ProductType <p>Product type. 0: CWP; 1: CSC</p>
                      * 
                      */
                     uint64_t GetProductType() const;
 
                     /**
-                     * 设置
-                     * @param _productType 
+                     * 设置<p>Product type. 0: CWP; 1: CSC</p>
+                     * @param _productType <p>Product type. 0: CWP; 1: CSC</p>
                      * 
                      */
                     void SetProductType(const uint64_t& _productType);
@@ -192,43 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+                     * <p>0: Disable network attack detection; 1: Enable network attack detection</p>
                      */
                     uint64_t m_netAttackEnable;
                     bool m_netAttackEnableHasBeenSet;
 
                     /**
-                     * 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+                     * <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
                      */
                     uint64_t m_netAttackAlarmStatus;
                     bool m_netAttackAlarmStatusHasBeenSet;
 
                     /**
-                     * 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+                     * <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
                      */
                     uint64_t m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * Specified hosts
+                     * <p>Selected hosts</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Manually Excluded Hosts
+                     * <p>Custom excluded hosts</p>
                      */
                     std::vector<std::string> m_excludeInstanceIds;
                     bool m_excludeInstanceIdsHasBeenSet;
 
                     /**
-                     * New assets automatically include: 0 - Do not include, 1 - include.
+                     * <p>Automatically include newly added assets. 0: No; 1: Yes</p>
                      */
                     uint64_t m_autoInclude;
                     bool m_autoIncludeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Product type. 0: CWP; 1: CSC</p>
                      */
                     uint64_t m_productType;
                     bool m_productTypeHasBeenSet;

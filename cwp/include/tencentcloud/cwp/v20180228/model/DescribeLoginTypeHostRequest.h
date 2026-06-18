@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Limit Entries, 10 by default, up to 100
-                     * @return Limit Limit Entries, 10 by default, up to 100
+                     * 获取<p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit Entries, 10 by default, up to 100
-                     * @param _limit Limit Entries, 10 by default, up to 100
+                     * 设置<p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is 0 by default.
-                     * @return Offset Offset, which is 0 by default.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is 0 by default.
-                     * @param _offset Offset, which is 0 by default.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
-                     * @return Order Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+                     * 获取<p>Sort order: [ASC: ascending | DESC: descending]</p>
+                     * @return Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
-                     * @param _order Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+                     * 设置<p>Sort order: [ASC: ascending | DESC: descending]</p>
+                     * @param _order <p>Sort order: [ASC: ascending | DESC: descending]</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sorting column: [Id].
-                     * @return By Sorting column: [Id].
+                     * 获取<p>Optional sorting column: [Id]</p>
+                     * @return By <p>Optional sorting column: [Id]</p>
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Sorting column: [Id].
-                     * @param _by Sorting column: [Id].
+                     * 设置<p>Optional sorting column: [Id]</p>
+                     * @param _by <p>Optional sorting column: [Id]</p>
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -157,25 +157,25 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Limit Entries, 10 by default, up to 100
+                     * <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is 0 by default.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+                     * <p>Sort order: [ASC: ascending | DESC: descending]</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sorting column: [Id].
+                     * <p>Optional sorting column: [Id]</p>
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

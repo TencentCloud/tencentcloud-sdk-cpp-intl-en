@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
-                     * @return Id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * 获取1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+                     * @return Id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
-                     * @param _id Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * 设置1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+                     * @param _id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+                     * 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;

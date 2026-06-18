@@ -54,15 +54,15 @@ If multiple values exist in one filter, the logical relationship between these v
 
 
                     /**
-                     * 获取Name of filter key
-                     * @return Name Name of filter key
+                     * 获取<p>Name of filter key.</p>
+                     * @return Name <p>Name of filter key.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of filter key
-                     * @param _name Name of filter key
+                     * 设置<p>Name of filter key.</p>
+                     * @param _name <p>Name of filter key.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -75,15 +75,15 @@ If multiple values exist in one filter, the logical relationship between these v
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取One or more filter values
-                     * @return Values One or more filter values
+                     * 获取<p>One or more filter values.</p>
+                     * @return Values <p>One or more filter values.</p>
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置One or more filter values
-                     * @param _values One or more filter values
+                     * 设置<p>One or more filter values.</p>
+                     * @param _values <p>One or more filter values.</p>
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -96,15 +96,15 @@ If multiple values exist in one filter, the logical relationship between these v
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Fuzzy search
-                     * @return ExactMatch Fuzzy search
+                     * 获取<p>Fuzzy search</p>
+                     * @return ExactMatch <p>Fuzzy search</p>
                      * 
                      */
                     bool GetExactMatch() const;
 
                     /**
-                     * 设置Fuzzy search
-                     * @param _exactMatch Fuzzy search
+                     * 设置<p>Fuzzy search</p>
+                     * @param _exactMatch <p>Fuzzy search</p>
                      * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
@@ -119,19 +119,19 @@ If multiple values exist in one filter, the logical relationship between these v
                 private:
 
                     /**
-                     * Name of filter key
+                     * <p>Name of filter key.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * One or more filter values
+                     * <p>One or more filter values.</p>
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Fuzzy search
+                     * <p>Fuzzy search</p>
                      */
                     bool m_exactMatch;
                     bool m_exactMatchHasBeenSet;

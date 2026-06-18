@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID
-                     * @param _taskId Task ID
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

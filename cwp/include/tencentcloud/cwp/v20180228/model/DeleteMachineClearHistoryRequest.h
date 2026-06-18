@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IDs of records to be deleted, up to 100 characters in length
-                     * @return Ids IDs of records to be deleted, up to 100 characters in length
+                     * 获取<p>IDs of the records to be deleted. Maximum: 100</p>
+                     * @return Ids <p>IDs of the records to be deleted. Maximum: 100</p>
                      * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
-                     * 设置IDs of records to be deleted, up to 100 characters in length
-                     * @param _ids IDs of records to be deleted, up to 100 characters in length
+                     * 设置<p>IDs of the records to be deleted. Maximum: 100</p>
+                     * @param _ids <p>IDs of the records to be deleted. Maximum: 100</p>
                      * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IDs of records to be deleted, up to 100 characters in length
+                     * <p>IDs of the records to be deleted. Maximum: 100</p>
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;

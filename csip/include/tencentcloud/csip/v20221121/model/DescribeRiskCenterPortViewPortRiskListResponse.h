@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of port risks by assets
-                     * @return Data List of port risks by assets
+                     * 获取Port Risk List from Port's Perspective
+                     * @return Data Port Risk List from Port's Perspective
                      * 
                      */
                     std::vector<PortViewPortRisk> GetData() const;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of port risks by assets
+                     * Port Risk List from Port's Perspective
                      */
                     std::vector<PortViewPortRisk> m_data;
                     bool m_dataHasBeenSet;

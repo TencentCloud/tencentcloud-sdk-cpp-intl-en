@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cross-region log-in allowlist entity
-                     * @return HostLoginWhiteObj Cross-region log-in allowlist entity
+                     * 获取<p>Unusual-login allowlist entry</p>
+                     * @return HostLoginWhiteObj <p>Unusual-login allowlist entry</p>
                      * 
                      */
                     HostLoginWhiteObj GetHostLoginWhiteObj() const;
 
                     /**
-                     * 设置Cross-region log-in allowlist entity
-                     * @param _hostLoginWhiteObj Cross-region log-in allowlist entity
+                     * 设置<p>Unusual-login allowlist entry</p>
+                     * @param _hostLoginWhiteObj <p>Unusual-login allowlist entry</p>
                      * 
                      */
                     void SetHostLoginWhiteObj(const HostLoginWhiteObj& _hostLoginWhiteObj);
@@ -65,19 +65,15 @@ namespace TencentCloud
                     bool HostLoginWhiteObjHasBeenSet() const;
 
                     /**
-                     * 获取Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
-                     * @return ProcessType Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+                     * 获取<p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+                     * @return ProcessType <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
                      * 
                      */
                     std::string GetProcessType() const;
 
                     /**
-                     * 设置Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
-                     * @param _processType Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+                     * 设置<p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+                     * @param _processType <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
                      * 
                      */
                     void SetProcessType(const std::string& _processType);
@@ -90,15 +86,15 @@ namespace TencentCloud
                     bool ProcessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
-                     * @return EventId Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+                     * 获取<p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
+                     * @return EventId <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
                      * 
                      */
                     uint64_t GetEventId() const;
 
                     /**
-                     * 设置Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
-                     * @param _eventId Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+                     * 设置<p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
+                     * @param _eventId <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
                      * 
                      */
                     void SetEventId(const uint64_t& _eventId);
@@ -113,20 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cross-region log-in allowlist entity
+                     * <p>Unusual-login allowlist entry</p>
                      */
                     HostLoginWhiteObj m_hostLoginWhiteObj;
                     bool m_hostLoginWhiteObjHasBeenSet;
 
                     /**
-                     * Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+                     * <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
                      */
                     std::string m_processType;
                     bool m_processTypeHasBeenSet;
 
                     /**
-                     * Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+                     * <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
                      */
                     uint64_t m_eventId;
                     bool m_eventIdHasBeenSet;

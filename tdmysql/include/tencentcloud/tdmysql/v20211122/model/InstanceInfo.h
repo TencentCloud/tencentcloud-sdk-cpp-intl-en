@@ -29,6 +29,7 @@
 #include <tencentcloud/tdmysql/v20211122/model/InstanceNode.h>
 #include <tencentcloud/tdmysql/v20211122/model/AutoScalingConfig.h>
 #include <tencentcloud/tdmysql/v20211122/model/AnalysisRelationInfo.h>
+#include <tencentcloud/tdmysql/v20211122/model/AnalysisInstanceInfo.h>
 
 
 namespace TencentCloud
@@ -1465,6 +1466,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AnalysisRelationInfosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Analysis engine instance info</p>
+                     * @return AnalysisInstanceInfo <p>Analysis engine instance info</p>
+                     * 
+                     */
+                    AnalysisInstanceInfo GetAnalysisInstanceInfo() const;
+
+                    /**
+                     * 设置<p>Analysis engine instance info</p>
+                     * @param _analysisInstanceInfo <p>Analysis engine instance info</p>
+                     * 
+                     */
+                    void SetAnalysisInstanceInfo(const AnalysisInstanceInfo& _analysisInstanceInfo);
+
+                    /**
+                     * 判断参数 AnalysisInstanceInfo 是否已赋值
+                     * @return AnalysisInstanceInfo 是否已赋值
+                     * 
+                     */
+                    bool AnalysisInstanceInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1866,6 +1888,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AnalysisRelationInfo> m_analysisRelationInfos;
                     bool m_analysisRelationInfosHasBeenSet;
+
+                    /**
+                     * <p>Analysis engine instance info</p>
+                     */
+                    AnalysisInstanceInfo m_analysisInstanceInfo;
+                    bool m_analysisInstanceInfoHasBeenSet;
 
                 };
             }

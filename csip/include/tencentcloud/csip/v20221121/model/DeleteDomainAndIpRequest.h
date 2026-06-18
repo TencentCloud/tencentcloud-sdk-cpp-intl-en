@@ -45,15 +45,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取u200c-
-                     * @return Content u200c-
+                     * 获取Group Account Member ID
+                     * @return MemberId Group Account Member ID
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置Group Account Member ID
+                     * @param _memberId Group Account Member ID
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
+                    /**
+                     * 获取asset
+                     * @return Content asset
                      * 
                      */
                     std::vector<PublicIpDomainListKey> GetContent() const;
 
                     /**
-                     * 设置u200c-
-                     * @param _content u200c-
+                     * 设置asset
+                     * @param _content asset
                      * 
                      */
                     void SetContent(const std::vector<PublicIpDomainListKey>& _content);
@@ -152,7 +173,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * u200c-
+                     * Group Account Member ID
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
+
+                    /**
+                     * asset
                      */
                     std::vector<PublicIpDomainListKey> m_content;
                     bool m_contentHasBeenSet;

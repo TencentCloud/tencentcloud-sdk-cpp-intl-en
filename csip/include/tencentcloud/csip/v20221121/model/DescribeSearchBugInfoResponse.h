@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Data Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability information and asset information
+                     * @return Data Vulnerability information and asset information
                      * 
                      */
                     DataSearchBug GetData() const;
@@ -91,8 +89,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Vulnerability information and asset information
                      */
                     DataSearchBug m_data;
                     bool m_dataHasBeenSet;

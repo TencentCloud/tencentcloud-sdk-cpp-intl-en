@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Risk level
-                     * @return Level Risk level
+                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level
-                     * @param _level Risk level
+                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取u200c-
-                     * @return CFGSTD u200c-
+                     * 获取relevant standards
+                     * @return CFGSTD relevant standards
                      * 
                      */
                     std::string GetCFGSTD() const;
 
                     /**
-                     * 设置u200c-
-                     * @param _cFGSTD u200c-
+                     * 设置relevant standards
+                     * @param _cFGSTD relevant standards
                      * 
                      */
                     void SetCFGSTD(const std::string& _cFGSTD);
@@ -425,19 +425,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取User Nickname
+                     * @return Nick User Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置User Nickname
+                     * @param _nick User Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -451,18 +447,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
                     /**
                      * 获取User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @return Uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * @param _uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -473,6 +465,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
                      * 
                      */
                     bool UinHasBeenSet() const;
+
+                    /**
+                     * 获取When the asset type is LBL, show this field to locate the specific LB.
+                     * @return ClbId When the asset type is LBL, show this field to locate the specific LB.
+                     * 
+                     */
+                    std::string GetClbId() const;
+
+                    /**
+                     * 设置When the asset type is LBL, show this field to locate the specific LB.
+                     * @param _clbId When the asset type is LBL, show this field to locate the specific LB.
+                     * 
+                     */
+                    void SetClbId(const std::string& _clbId);
+
+                    /**
+                     * 判断参数 ClbId 是否已赋值
+                     * @return ClbId 是否已赋值
+                     * 
+                     */
+                    bool ClbIdHasBeenSet() const;
 
                 private:
 
@@ -519,7 +532,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Risk level
+                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -549,7 +562,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_statusHasBeenSet;
 
                     /**
-                     * u200c-
+                     * relevant standards
                      */
                     std::string m_cFGSTD;
                     bool m_cFGSTDHasBeenSet;
@@ -585,18 +598,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * User Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
                      * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
+
+                    /**
+                     * When the asset type is LBL, show this field to locate the specific LB.
+                     */
+                    std::string m_clbId;
+                    bool m_clbIdHasBeenSet;
 
                 };
             }
