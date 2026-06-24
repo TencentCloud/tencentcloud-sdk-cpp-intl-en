@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ProductCodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 获取Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @return PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @param _payModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 设置Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @param _payModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool ResourceNameHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-                     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * 获取Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+                     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
-                     * 设置Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-                     * @param _actionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * 设置Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+                     * @param _actionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
                      * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
@@ -239,18 +239,18 @@ namespace TencentCloud
                     bool ActionTypeNameHasBeenSet() const;
 
                     /**
-                     * 获取Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+                     * 获取Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
-                     * @return OrderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+                     * @return OrderId Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
                      * 
                      */
                     std::string GetOrderId() const;
 
                     /**
-                     * 设置Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+                     * 设置Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
-                     * @param _orderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+                     * @param _orderId Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
                      * 
                      */
@@ -845,7 +845,7 @@ namespace TencentCloud
                     bool m_productCodeNameHasBeenSet;
 
                     /**
-                     * Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;
@@ -881,13 +881,13 @@ namespace TencentCloud
                     bool m_resourceNameHasBeenSet;
 
                     /**
-                     * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+                     * Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
                      */
                     std::string m_actionTypeName;
                     bool m_actionTypeNameHasBeenSet;
 
                     /**
-                     * Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+                     * Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
                      */
                     std::string m_orderId;

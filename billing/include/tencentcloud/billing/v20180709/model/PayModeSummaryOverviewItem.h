@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 获取Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @return PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
-                     * 设置Billing mode, which can be monthly subscription or pay-as-you-go.
-                     * @param _payModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * 设置Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+                     * @param _payModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Cash credit: The amount paid from the user’s cash balance
-                     * @return CashPayAmount Cash credit: The amount paid from the user’s cash balance
+                     * 获取Cash credit: The amount paid from the user's cash balance
+                     * @return CashPayAmount Cash credit: The amount paid from the user's cash balance
                      * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
-                     * 设置Cash credit: The amount paid from the user’s cash balance
-                     * @param _cashPayAmount Cash credit: The amount paid from the user’s cash balance
+                     * 设置Cash credit: The amount paid from the user's cash balance
+                     * @param _cashPayAmount Cash credit: The amount paid from the user's cash balance
                      * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool CashPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Free credit: The amount paid with the user’s free credit
-                     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 获取Free credit: The amount paid with the user's free credit
+                     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
                      * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
-                     * 设置Free credit: The amount paid with the user’s free credit
-                     * @param _incentivePayAmount Free credit: The amount paid with the user’s free credit
+                     * 设置Free credit: The amount paid with the user's free credit
+                     * @param _incentivePayAmount Free credit: The amount paid with the user's free credit
                      * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool VoucherPayAmountHasBeenSet() const;
 
                     /**
-                     * 获取Commission credit: The amount paid with the user’s commission credit.
-                     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit.
+                     * 获取Commission credit: The amount paid with the user's commission credit.
+                     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit.
                      * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
-                     * 设置Commission credit: The amount paid with the user’s commission credit.
-                     * @param _transferPayAmount Commission credit: The amount paid with the user’s commission credit.
+                     * 设置Commission credit: The amount paid with the user's commission credit.
+                     * @param _transferPayAmount Commission credit: The amount paid with the user's commission credit.
                      * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
@@ -266,7 +266,7 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Billing mode, which can be monthly subscription or pay-as-you-go.
+                     * Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
                      */
                     std::string m_payModeName;
                     bool m_payModeNameHasBeenSet;
@@ -284,13 +284,13 @@ namespace TencentCloud
                     bool m_realTotalCostHasBeenSet;
 
                     /**
-                     * Cash credit: The amount paid from the user’s cash balance
+                     * Cash credit: The amount paid from the user's cash balance
                      */
                     std::string m_cashPayAmount;
                     bool m_cashPayAmountHasBeenSet;
 
                     /**
-                     * Free credit: The amount paid with the user’s free credit
+                     * Free credit: The amount paid with the user's free credit
                      */
                     std::string m_incentivePayAmount;
                     bool m_incentivePayAmountHasBeenSet;
@@ -302,7 +302,7 @@ namespace TencentCloud
                     bool m_voucherPayAmountHasBeenSet;
 
                     /**
-                     * Commission credit: The amount paid with the user’s commission credit.
+                     * Commission credit: The amount paid with the user's commission credit.
                      */
                     std::string m_transferPayAmount;
                     bool m_transferPayAmountHasBeenSet;

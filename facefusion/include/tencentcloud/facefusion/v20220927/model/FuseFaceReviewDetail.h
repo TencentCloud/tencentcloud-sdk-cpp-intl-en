@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Facial Information of Inappropriate Content Detection in Face Fusion
                 */
                 class FuseFaceReviewDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Field 
+                     * 获取Reserved field
+                     * @return Field Reserved field
                      * 
                      */
                     std::string GetField() const;
 
                     /**
-                     * 设置
-                     * @param _field 
+                     * 设置Reserved field
+                     * @param _field Reserved field
                      * 
                      */
                     void SetField(const std::string& _field);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FieldHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Label Names Matched by Content Moderation
+                     * @return Label Label Names Matched by Content Moderation
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Label Names Matched by Content Moderation
+                     * @param _label Label Names Matched by Content Moderation
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -89,15 +89,27 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+                     * @return Confidence Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+                     * @param _confidence Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,15 +122,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
+                     * @return Suggestion Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
+                     * @param _suggestion Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -133,25 +157,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Reserved field
                      */
                     std::string m_field;
                     bool m_fieldHasBeenSet;
 
                     /**
-                     * 
+                     * Label Names Matched by Content Moderation
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
