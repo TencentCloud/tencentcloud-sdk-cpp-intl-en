@@ -236,6 +236,48 @@ namespace TencentCloud
                      */
                     bool ExtraAttrHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ConsumerVpcId 
+                     * 
+                     */
+                    std::string GetConsumerVpcId() const;
+
+                    /**
+                     * 设置
+                     * @param _consumerVpcId 
+                     * 
+                     */
+                    void SetConsumerVpcId(const std::string& _consumerVpcId);
+
+                    /**
+                     * 判断参数 ConsumerVpcId 是否已赋值
+                     * @return ConsumerVpcId 是否已赋值
+                     * 
+                     */
+                    bool ConsumerVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConsumerSubnetId 
+                     * 
+                     */
+                    std::string GetConsumerSubnetId() const;
+
+                    /**
+                     * 设置
+                     * @param _consumerSubnetId 
+                     * 
+                     */
+                    void SetConsumerSubnetId(const std::string& _consumerSubnetId);
+
+                    /**
+                     * 判断参数 ConsumerSubnetId 是否已赋值
+                     * @return ConsumerSubnetId 是否已赋值
+                     * 
+                     */
+                    bool ConsumerSubnetIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -291,6 +333,18 @@ namespace TencentCloud
                      */
                     std::vector<KeyValuePairOption> m_extraAttr;
                     bool m_extraAttrHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_consumerVpcId;
+                    bool m_consumerVpcIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_consumerSubnetId;
+                    bool m_consumerSubnetIdHasBeenSet;
 
                 };
             }

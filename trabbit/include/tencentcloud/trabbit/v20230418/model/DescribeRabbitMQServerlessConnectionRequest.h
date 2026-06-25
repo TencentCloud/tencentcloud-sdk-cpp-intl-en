@@ -84,6 +84,111 @@ namespace TencentCloud
                      */
                     bool VirtualHostHasBeenSet() const;
 
+                    /**
+                     * 获取Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * @return SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * 
+                     */
+                    std::string GetSortElement() const;
+
+                    /**
+                     * 设置Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * @param _sortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * 
+                     */
+                    void SetSortElement(const std::string& _sortElement);
+
+                    /**
+                     * 判断参数 SortElement 是否已赋值
+                     * @return SortElement 是否已赋值
+                     * 
+                     */
+                    bool SortElementHasBeenSet() const;
+
+                    /**
+                     * 获取Sort order: ASC, DESC
+                     * @return SortType Sort order: ASC, DESC
+                     * 
+                     */
+                    std::string GetSortType() const;
+
+                    /**
+                     * 设置Sort order: ASC, DESC
+                     * @param _sortType Sort order: ASC, DESC
+                     * 
+                     */
+                    void SetSortType(const std::string& _sortType);
+
+                    /**
+                     * 判断参数 SortType 是否已赋值
+                     * @return SortType 是否已赋值
+                     * 
+                     */
+                    bool SortTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Offset 
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置
+                     * @param _offset 
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Limit 
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置
+                     * @param _limit 
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Name 
+                     * 
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置
+                     * @param _name 
+                     * 
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     * 
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -97,6 +202,36 @@ namespace TencentCloud
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
+
+                    /**
+                     * Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     */
+                    std::string m_sortElement;
+                    bool m_sortElementHasBeenSet;
+
+                    /**
+                     * Sort order: ASC, DESC
+                     */
+                    std::string m_sortType;
+                    bool m_sortTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

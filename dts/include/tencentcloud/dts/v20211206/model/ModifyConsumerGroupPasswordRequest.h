@@ -106,27 +106,6 @@ namespace TencentCloud
                     bool ConsumerGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Old Password.
-                     * @return OldPassword Old Password.
-                     * 
-                     */
-                    std::string GetOldPassword() const;
-
-                    /**
-                     * 设置Old Password.
-                     * @param _oldPassword Old Password.
-                     * 
-                     */
-                    void SetOldPassword(const std::string& _oldPassword);
-
-                    /**
-                     * 判断参数 OldPassword 是否已赋值
-                     * @return OldPassword 是否已赋值
-                     * 
-                     */
-                    bool OldPasswordHasBeenSet() const;
-
-                    /**
                      * 获取New password. The character length is no less than 3 and no more than 32.
                      * @return NewPassword New password. The character length is no less than 3 and no more than 32.
                      * 
@@ -166,12 +145,6 @@ namespace TencentCloud
                      */
                     std::string m_consumerGroupName;
                     bool m_consumerGroupNameHasBeenSet;
-
-                    /**
-                     * Old Password.
-                     */
-                    std::string m_oldPassword;
-                    bool m_oldPasswordHasBeenSet;
 
                     /**
                      * New password. The character length is no less than 3 and no more than 32.

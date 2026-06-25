@@ -101,6 +101,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IndexNameHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return IndexMetaJson 
+                     * 
+                     */
+                    std::string GetIndexMetaJson() const;
+
+                    /**
+                     * 设置
+                     * @param _indexMetaJson 
+                     * 
+                     */
+                    void SetIndexMetaJson(const std::string& _indexMetaJson);
+
+                    /**
+                     * 判断参数 IndexMetaJson 是否已赋值
+                     * @return IndexMetaJson 是否已赋值
+                     * 
+                     */
+                    bool IndexMetaJsonHasBeenSet() const;
+
+                    /**
                      * 获取Index status
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexStatus Index status
@@ -415,6 +436,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_indexName;
                     bool m_indexNameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_indexMetaJson;
+                    bool m_indexMetaJsonHasBeenSet;
 
                     /**
                      * Index status

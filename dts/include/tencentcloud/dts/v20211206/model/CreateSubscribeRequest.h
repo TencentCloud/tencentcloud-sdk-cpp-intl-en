@@ -190,6 +190,27 @@ namespace TencentCloud
                      */
                     bool NameHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return InstanceClass 
+                     * 
+                     */
+                    std::string GetInstanceClass() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceClass 
+                     * 
+                     */
+                    void SetInstanceClass(const std::string& _instanceClass);
+
+                    /**
+                     * 判断参数 InstanceClass 是否已赋值
+                     * @return InstanceClass 是否已赋值
+                     * 
+                     */
+                    bool InstanceClassHasBeenSet() const;
+
                 private:
 
                     /**
@@ -233,6 +254,12 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceClass;
+                    bool m_instanceClassHasBeenSet;
 
                 };
             }

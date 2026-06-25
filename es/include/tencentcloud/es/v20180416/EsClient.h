@@ -23,14 +23,20 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/es/v20180416/model/CreateAutoBackUpStrategyRequest.h>
+#include <tencentcloud/es/v20180416/model/CreateAutoBackUpStrategyResponse.h>
 #include <tencentcloud/es/v20180416/model/CreateIndexRequest.h>
 #include <tencentcloud/es/v20180416/model/CreateIndexResponse.h>
 #include <tencentcloud/es/v20180416/model/CreateInstanceRequest.h>
 #include <tencentcloud/es/v20180416/model/CreateInstanceResponse.h>
+#include <tencentcloud/es/v20180416/model/DeleteAutoBackUpStrategyRequest.h>
+#include <tencentcloud/es/v20180416/model/DeleteAutoBackUpStrategyResponse.h>
 #include <tencentcloud/es/v20180416/model/DeleteIndexRequest.h>
 #include <tencentcloud/es/v20180416/model/DeleteIndexResponse.h>
 #include <tencentcloud/es/v20180416/model/DeleteInstanceRequest.h>
 #include <tencentcloud/es/v20180416/model/DeleteInstanceResponse.h>
+#include <tencentcloud/es/v20180416/model/DescribeAutoBackUpStrategyRequest.h>
+#include <tencentcloud/es/v20180416/model/DescribeAutoBackUpStrategyResponse.h>
 #include <tencentcloud/es/v20180416/model/DescribeIndexListRequest.h>
 #include <tencentcloud/es/v20180416/model/DescribeIndexListResponse.h>
 #include <tencentcloud/es/v20180416/model/DescribeIndexMetaRequest.h>
@@ -45,6 +51,10 @@
 #include <tencentcloud/es/v20180416/model/DescribeViewsResponse.h>
 #include <tencentcloud/es/v20180416/model/GetRequestTargetNodeTypesRequest.h>
 #include <tencentcloud/es/v20180416/model/GetRequestTargetNodeTypesResponse.h>
+#include <tencentcloud/es/v20180416/model/ModifyAutoBackUpCommonInfoRequest.h>
+#include <tencentcloud/es/v20180416/model/ModifyAutoBackUpCommonInfoResponse.h>
+#include <tencentcloud/es/v20180416/model/ModifyAutoBackUpStrategyRequest.h>
+#include <tencentcloud/es/v20180416/model/ModifyAutoBackUpStrategyResponse.h>
 #include <tencentcloud/es/v20180416/model/RestartInstanceRequest.h>
 #include <tencentcloud/es/v20180416/model/RestartInstanceResponse.h>
 #include <tencentcloud/es/v20180416/model/RestartKibanaRequest.h>
@@ -79,18 +89,27 @@ namespace TencentCloud
                 EsClient(const Credential &credential, const std::string &region);
                 EsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CreateAutoBackUpStrategyResponse> CreateAutoBackUpStrategyOutcome;
+                typedef std::future<CreateAutoBackUpStrategyOutcome> CreateAutoBackUpStrategyOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::CreateAutoBackUpStrategyRequest&, CreateAutoBackUpStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoBackUpStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateIndexResponse> CreateIndexOutcome;
                 typedef std::future<CreateIndexOutcome> CreateIndexOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::CreateIndexRequest&, CreateIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIndexAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
                 typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAutoBackUpStrategyResponse> DeleteAutoBackUpStrategyOutcome;
+                typedef std::future<DeleteAutoBackUpStrategyOutcome> DeleteAutoBackUpStrategyOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::DeleteAutoBackUpStrategyRequest&, DeleteAutoBackUpStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoBackUpStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteIndexResponse> DeleteIndexOutcome;
                 typedef std::future<DeleteIndexOutcome> DeleteIndexOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::DeleteIndexRequest&, DeleteIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIndexAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstanceResponse> DeleteInstanceOutcome;
                 typedef std::future<DeleteInstanceOutcome> DeleteInstanceOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::DeleteInstanceRequest&, DeleteInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAutoBackUpStrategyResponse> DescribeAutoBackUpStrategyOutcome;
+                typedef std::future<DescribeAutoBackUpStrategyOutcome> DescribeAutoBackUpStrategyOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::DescribeAutoBackUpStrategyRequest&, DescribeAutoBackUpStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoBackUpStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIndexListResponse> DescribeIndexListOutcome;
                 typedef std::future<DescribeIndexListOutcome> DescribeIndexListOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::DescribeIndexListRequest&, DescribeIndexListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIndexListAsyncHandler;
@@ -112,6 +131,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetRequestTargetNodeTypesResponse> GetRequestTargetNodeTypesOutcome;
                 typedef std::future<GetRequestTargetNodeTypesOutcome> GetRequestTargetNodeTypesOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::GetRequestTargetNodeTypesRequest&, GetRequestTargetNodeTypesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRequestTargetNodeTypesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAutoBackUpCommonInfoResponse> ModifyAutoBackUpCommonInfoOutcome;
+                typedef std::future<ModifyAutoBackUpCommonInfoOutcome> ModifyAutoBackUpCommonInfoOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::ModifyAutoBackUpCommonInfoRequest&, ModifyAutoBackUpCommonInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoBackUpCommonInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAutoBackUpStrategyResponse> ModifyAutoBackUpStrategyOutcome;
+                typedef std::future<ModifyAutoBackUpStrategyOutcome> ModifyAutoBackUpStrategyOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::ModifyAutoBackUpStrategyRequest&, ModifyAutoBackUpStrategyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoBackUpStrategyAsyncHandler;
                 typedef Outcome<Core::Error, Model::RestartInstanceResponse> RestartInstanceOutcome;
                 typedef std::future<RestartInstanceOutcome> RestartInstanceOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::RestartInstanceRequest&, RestartInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartInstanceAsyncHandler;
@@ -146,6 +171,15 @@ namespace TencentCloud
 
 
                 /**
+                 *This API is used to create an auto backup snapshot policy.
+                 * @param req CreateAutoBackUpStrategyRequest
+                 * @return CreateAutoBackUpStrategyOutcome
+                 */
+                CreateAutoBackUpStrategyOutcome CreateAutoBackUpStrategy(const Model::CreateAutoBackUpStrategyRequest &request);
+                void CreateAutoBackUpStrategyAsync(const Model::CreateAutoBackUpStrategyRequest& request, const CreateAutoBackUpStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAutoBackUpStrategyOutcomeCallable CreateAutoBackUpStrategyCallable(const Model::CreateAutoBackUpStrategyRequest& request);
+
+                /**
                  *This API is used to create indices.
                  * @param req CreateIndexRequest
                  * @return CreateIndexOutcome
@@ -164,6 +198,15 @@ namespace TencentCloud
                 CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
 
                 /**
+                 *This API is used to delete an auto backup snapshot policy.
+                 * @param req DeleteAutoBackUpStrategyRequest
+                 * @return DeleteAutoBackUpStrategyOutcome
+                 */
+                DeleteAutoBackUpStrategyOutcome DeleteAutoBackUpStrategy(const Model::DeleteAutoBackUpStrategyRequest &request);
+                void DeleteAutoBackUpStrategyAsync(const Model::DeleteAutoBackUpStrategyRequest& request, const DeleteAutoBackUpStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAutoBackUpStrategyOutcomeCallable DeleteAutoBackUpStrategyCallable(const Model::DeleteAutoBackUpStrategyRequest& request);
+
+                /**
                  *This API is used to delete indices.
                  * @param req DeleteIndexRequest
                  * @return DeleteIndexOutcome
@@ -180,6 +223,15 @@ namespace TencentCloud
                 DeleteInstanceOutcome DeleteInstance(const Model::DeleteInstanceRequest &request);
                 void DeleteInstanceAsync(const Model::DeleteInstanceRequest& request, const DeleteInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteInstanceOutcomeCallable DeleteInstanceCallable(const Model::DeleteInstanceRequest& request);
+
+                /**
+                 *This API is used to obtain an auto backup snapshot policy.
+                 * @param req DescribeAutoBackUpStrategyRequest
+                 * @return DescribeAutoBackUpStrategyOutcome
+                 */
+                DescribeAutoBackUpStrategyOutcome DescribeAutoBackUpStrategy(const Model::DescribeAutoBackUpStrategyRequest &request);
+                void DescribeAutoBackUpStrategyAsync(const Model::DescribeAutoBackUpStrategyRequest& request, const DescribeAutoBackUpStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAutoBackUpStrategyOutcomeCallable DescribeAutoBackUpStrategyCallable(const Model::DescribeAutoBackUpStrategyRequest& request);
 
                 /**
                  *This API is used to obtain the index list.
@@ -243,6 +295,24 @@ namespace TencentCloud
                 GetRequestTargetNodeTypesOutcome GetRequestTargetNodeTypes(const Model::GetRequestTargetNodeTypesRequest &request);
                 void GetRequestTargetNodeTypesAsync(const Model::GetRequestTargetNodeTypesRequest& request, const GetRequestTargetNodeTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetRequestTargetNodeTypesOutcomeCallable GetRequestTargetNodeTypesCallable(const Model::GetRequestTargetNodeTypesRequest& request);
+
+                /**
+                 *This API is used to modify the common information of an auto backup snapshot policy.
+                 * @param req ModifyAutoBackUpCommonInfoRequest
+                 * @return ModifyAutoBackUpCommonInfoOutcome
+                 */
+                ModifyAutoBackUpCommonInfoOutcome ModifyAutoBackUpCommonInfo(const Model::ModifyAutoBackUpCommonInfoRequest &request);
+                void ModifyAutoBackUpCommonInfoAsync(const Model::ModifyAutoBackUpCommonInfoRequest& request, const ModifyAutoBackUpCommonInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAutoBackUpCommonInfoOutcomeCallable ModifyAutoBackUpCommonInfoCallable(const Model::ModifyAutoBackUpCommonInfoRequest& request);
+
+                /**
+                 *This API is used to modify an auto backup snapshot policy.
+                 * @param req ModifyAutoBackUpStrategyRequest
+                 * @return ModifyAutoBackUpStrategyOutcome
+                 */
+                ModifyAutoBackUpStrategyOutcome ModifyAutoBackUpStrategy(const Model::ModifyAutoBackUpStrategyRequest &request);
+                void ModifyAutoBackUpStrategyAsync(const Model::ModifyAutoBackUpStrategyRequest& request, const ModifyAutoBackUpStrategyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAutoBackUpStrategyOutcomeCallable ModifyAutoBackUpStrategyCallable(const Model::ModifyAutoBackUpStrategyRequest& request);
 
                 /**
                  *This API is used to restart an ES cluster instance (for operations such as system update). 

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessKeyValuePair.h>
 
 
 namespace TencentCloud
@@ -168,6 +169,27 @@ namespace TencentCloud
                      */
                     bool RoutingKeyHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Arguments 
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessKeyValuePair> GetArguments() const;
+
+                    /**
+                     * 设置
+                     * @param _arguments 
+                     * 
+                     */
+                    void SetArguments(const std::vector<RabbitMQServerlessKeyValuePair>& _arguments);
+
+                    /**
+                     * 判断参数 Arguments 是否已赋值
+                     * @return Arguments 是否已赋值
+                     * 
+                     */
+                    bool ArgumentsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -205,6 +227,12 @@ namespace TencentCloud
                      */
                     std::string m_routingKey;
                     bool m_routingKeyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessKeyValuePair> m_arguments;
+                    bool m_argumentsHasBeenSet;
 
                 };
             }

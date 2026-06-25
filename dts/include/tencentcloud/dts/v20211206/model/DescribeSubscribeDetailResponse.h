@@ -349,6 +349,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KafkaConfigHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return KafkaVersion 
+                     * 
+                     */
+                    std::string GetKafkaVersion() const;
+
+                    /**
+                     * 判断参数 KafkaVersion 是否已赋值
+                     * @return KafkaVersion 是否已赋值
+                     * 
+                     */
+                    bool KafkaVersionHasBeenSet() const;
+
+                    /**
                      * 获取Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccessType Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
@@ -437,6 +451,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool ExtraAttrHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SubscribeVersion 
+                     * 
+                     */
+                    std::string GetSubscribeVersion() const;
+
+                    /**
+                     * 判断参数 SubscribeVersion 是否已赋值
+                     * @return SubscribeVersion 是否已赋值
+                     * 
+                     */
+                    bool SubscribeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConsumerVpcId 
+                     * 
+                     */
+                    std::string GetConsumerVpcId() const;
+
+                    /**
+                     * 判断参数 ConsumerVpcId 是否已赋值
+                     * @return ConsumerVpcId 是否已赋值
+                     * 
+                     */
+                    bool ConsumerVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConsumerSubnetId 
+                     * 
+                     */
+                    std::string GetConsumerSubnetId() const;
+
+                    /**
+                     * 判断参数 ConsumerSubnetId 是否已赋值
+                     * @return ConsumerSubnetId 是否已赋值
+                     * 
+                     */
+                    bool ConsumerSubnetIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceClass 
+                     * 
+                     */
+                    std::string GetInstanceClass() const;
+
+                    /**
+                     * 判断参数 InstanceClass 是否已赋值
+                     * @return InstanceClass 是否已赋值
+                     * 
+                     */
+                    bool InstanceClassHasBeenSet() const;
 
                 private:
 
@@ -569,6 +639,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_kafkaConfigHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::string m_kafkaVersion;
+                    bool m_kafkaVersionHasBeenSet;
+
+                    /**
                      * Source database access type. Valid values: extranet (public network); vpncloud (VPN access); dcg (Direct Connect); ccn (CCN); cdb (database); cvm (self-build on CVM); intranet (intranet); vpc (VPC). Note: The specific optional values depend on the current link support capabilities.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_accessType;
@@ -606,6 +682,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<KeyValuePairOption> m_extraAttr;
                     bool m_extraAttrHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_subscribeVersion;
+                    bool m_subscribeVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_consumerVpcId;
+                    bool m_consumerVpcIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_consumerSubnetId;
+                    bool m_consumerSubnetIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceClass;
+                    bool m_instanceClassHasBeenSet;
 
                 };
             }

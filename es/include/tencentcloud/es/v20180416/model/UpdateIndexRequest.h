@@ -189,6 +189,69 @@ namespace TencentCloud
                      */
                     bool RolloverBackingIndexHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return MountIndex 
+                     * 
+                     */
+                    bool GetMountIndex() const;
+
+                    /**
+                     * 设置
+                     * @param _mountIndex 
+                     * 
+                     */
+                    void SetMountIndex(const bool& _mountIndex);
+
+                    /**
+                     * 判断参数 MountIndex 是否已赋值
+                     * @return MountIndex 是否已赋值
+                     * 
+                     */
+                    bool MountIndexHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IndexUuid 
+                     * 
+                     */
+                    std::string GetIndexUuid() const;
+
+                    /**
+                     * 设置
+                     * @param _indexUuid 
+                     * 
+                     */
+                    void SetIndexUuid(const std::string& _indexUuid);
+
+                    /**
+                     * 判断参数 IndexUuid 是否已赋值
+                     * @return IndexUuid 是否已赋值
+                     * 
+                     */
+                    bool IndexUuidHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return BackingIndexName 
+                     * 
+                     */
+                    std::string GetBackingIndexName() const;
+
+                    /**
+                     * 设置
+                     * @param _backingIndexName 
+                     * 
+                     */
+                    void SetBackingIndexName(const std::string& _backingIndexName);
+
+                    /**
+                     * 判断参数 BackingIndexName 是否已赋值
+                     * @return BackingIndexName 是否已赋值
+                     * 
+                     */
+                    bool BackingIndexNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -232,6 +295,24 @@ namespace TencentCloud
                      */
                     bool m_rolloverBackingIndex;
                     bool m_rolloverBackingIndexHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_mountIndex;
+                    bool m_mountIndexHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_indexUuid;
+                    bool m_indexUuidHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_backingIndexName;
+                    bool m_backingIndexNameHasBeenSet;
 
                 };
             }

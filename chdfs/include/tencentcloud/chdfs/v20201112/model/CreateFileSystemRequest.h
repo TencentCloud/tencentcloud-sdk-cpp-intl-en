@@ -65,27 +65,6 @@ namespace TencentCloud
                     bool FileSystemNameHasBeenSet() const;
 
                     /**
-                     * 获取File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     * @return CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     * 
-                     */
-                    uint64_t GetCapacityQuota() const;
-
-                    /**
-                     * 设置File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     * @param _capacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     * 
-                     */
-                    void SetCapacityQuota(const uint64_t& _capacityQuota);
-
-                    /**
-                     * 判断参数 CapacityQuota 是否已赋值
-                     * @return CapacityQuota 是否已赋值
-                     * 
-                     */
-                    bool CapacityQuotaHasBeenSet() const;
-
-                    /**
                      * 获取Whether to verify POSIX ACL
                      * @return PosixAcl Whether to verify POSIX ACL
                      * 
@@ -126,6 +105,27 @@ namespace TencentCloud
                      * 
                      */
                     bool DescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * @return CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * 
+                     */
+                    uint64_t GetCapacityQuota() const;
+
+                    /**
+                     * 设置File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * @param _capacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * 
+                     */
+                    void SetCapacityQuota(const uint64_t& _capacityQuota);
+
+                    /**
+                     * 判断参数 CapacityQuota 是否已赋值
+                     * @return CapacityQuota 是否已赋值
+                     * 
+                     */
+                    bool CapacityQuotaHasBeenSet() const;
 
                     /**
                      * 获取List of superuser names, which is an empty array by default
@@ -262,12 +262,6 @@ namespace TencentCloud
                     bool m_fileSystemNameHasBeenSet;
 
                     /**
-                     * File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     */
-                    uint64_t m_capacityQuota;
-                    bool m_capacityQuotaHasBeenSet;
-
-                    /**
                      * Whether to verify POSIX ACL
                      */
                     bool m_posixAcl;
@@ -278,6 +272,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     */
+                    uint64_t m_capacityQuota;
+                    bool m_capacityQuotaHasBeenSet;
 
                     /**
                      * List of superuser names, which is an empty array by default

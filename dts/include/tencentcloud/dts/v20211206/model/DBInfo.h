@@ -534,6 +534,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TmpTokenHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return EncryptConn 
+                     * 
+                     */
+                    std::string GetEncryptConn() const;
+
+                    /**
+                     * 设置
+                     * @param _encryptConn 
+                     * 
+                     */
+                    void SetEncryptConn(const std::string& _encryptConn);
+
+                    /**
+                     * 判断参数 EncryptConn 是否已赋值
+                     * @return EncryptConn 是否已赋值
+                     * 
+                     */
+                    bool EncryptConnHasBeenSet() const;
+
                 private:
 
                     /**
@@ -672,6 +693,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_tmpToken;
                     bool m_tmpTokenHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_encryptConn;
+                    bool m_encryptConnHasBeenSet;
 
                 };
             }

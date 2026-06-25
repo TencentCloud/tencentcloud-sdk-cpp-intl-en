@@ -65,6 +65,27 @@ namespace TencentCloud
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return SubscribeIds 
+                     * 
+                     */
+                    std::vector<std::string> GetSubscribeIds() const;
+
+                    /**
+                     * 设置
+                     * @param _subscribeIds 
+                     * 
+                     */
+                    void SetSubscribeIds(const std::vector<std::string>& _subscribeIds);
+
+                    /**
+                     * 判断参数 SubscribeIds 是否已赋值
+                     * @return SubscribeIds 是否已赋值
+                     * 
+                     */
+                    bool SubscribeIdsHasBeenSet() const;
+
+                    /**
                      * 获取Subscription name (prefix fuzzy match)
                      * @return SubscribeName Subscription name (prefix fuzzy match)
                      * 
@@ -105,6 +126,27 @@ namespace TencentCloud
                      * 
                      */
                     bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Topic 
+                     * 
+                     */
+                    std::string GetTopic() const;
+
+                    /**
+                     * 设置
+                     * @param _topic 
+                     * 
+                     */
+                    void SetTopic(const std::string& _topic);
+
+                    /**
+                     * 判断参数 Topic 是否已赋值
+                     * @return Topic 是否已赋值
+                     * 
+                     */
+                    bool TopicHasBeenSet() const;
 
                     /**
                      * 获取Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
@@ -283,6 +325,12 @@ namespace TencentCloud
                     bool m_subscribeIdHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::vector<std::string> m_subscribeIds;
+                    bool m_subscribeIdsHasBeenSet;
+
+                    /**
                      * Subscription name (prefix fuzzy match)
                      */
                     std::string m_subscribeName;
@@ -293,6 +341,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_topic;
+                    bool m_topicHasBeenSet;
 
                     /**
                      * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).

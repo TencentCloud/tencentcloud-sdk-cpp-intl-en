@@ -229,15 +229,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExtraAttrHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL migration types: logical (logical migration), physical (physical migration)
-                     * @return MigrateWay PostgreSQL migration types: logical (logical migration), physical (physical migration)
+                     * 获取
+                     * @return MigrateWay 
                      * 
                      */
                     std::string GetMigrateWay() const;
 
                     /**
-                     * 设置PostgreSQL migration types: logical (logical migration), physical (physical migration)
-                     * @param _migrateWay PostgreSQL migration types: logical (logical migration), physical (physical migration)
+                     * 设置
+                     * @param _migrateWay 
                      * 
                      */
                     void SetMigrateWay(const std::string& _migrateWay);
@@ -302,7 +302,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_extraAttrHasBeenSet;
 
                     /**
-                     * PostgreSQL migration types: logical (logical migration), physical (physical migration)
+                     * 
                      */
                     std::string m_migrateWay;
                     bool m_migrateWayHasBeenSet;

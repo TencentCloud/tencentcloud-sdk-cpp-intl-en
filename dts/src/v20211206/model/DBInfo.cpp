@@ -40,7 +40,8 @@ DBInfo::DBInfo() :
     m_accountModeHasBeenSet(false),
     m_tmpSecretIdHasBeenSet(false),
     m_tmpSecretKeyHasBeenSet(false),
-    m_tmpTokenHasBeenSet(false)
+    m_tmpTokenHasBeenSet(false),
+    m_encryptConnHasBeenSet(false)
 {
 }
 
@@ -249,6 +250,16 @@ CoreInternalOutcome DBInfo::Deserialize(const rapidjson::Value &value)
         m_tmpTokenHasBeenSet = true;
     }
 
+    if (value.HasMember("EncryptConn") && !value["EncryptConn"].IsNull())
+    {
+        if (!value["EncryptConn"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DBInfo.EncryptConn` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encryptConn = string(value["EncryptConn"].GetString());
+        m_encryptConnHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -414,6 +425,14 @@ void DBInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocato
         string key = "TmpToken";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_tmpToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptConnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptConn";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptConn.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -737,5 +756,21 @@ void DBInfo::SetTmpToken(const string& _tmpToken)
 bool DBInfo::TmpTokenHasBeenSet() const
 {
     return m_tmpTokenHasBeenSet;
+}
+
+string DBInfo::GetEncryptConn() const
+{
+    return m_encryptConn;
+}
+
+void DBInfo::SetEncryptConn(const string& _encryptConn)
+{
+    m_encryptConn = _encryptConn;
+    m_encryptConnHasBeenSet = true;
+}
+
+bool DBInfo::EncryptConnHasBeenSet() const
+{
+    return m_encryptConnHasBeenSet;
 }
 

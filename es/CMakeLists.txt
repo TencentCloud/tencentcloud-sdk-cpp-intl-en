@@ -22,45 +22,52 @@ set(es_public_header_model
   include/tencentcloud/es/v20180416/model/WebNodeTypeInfo.h
   include/tencentcloud/es/v20180416/model/InstanceLog.h
   include/tencentcloud/es/v20180416/model/LocalDiskInfo.h
+  include/tencentcloud/es/v20180416/model/ModifyAutoBackUpStrategyRequest.h
   include/tencentcloud/es/v20180416/model/IndexPolicyField.h
   include/tencentcloud/es/v20180416/model/NodeInfo.h
-  include/tencentcloud/es/v20180416/model/UpgradeInstanceResponse.h
+  include/tencentcloud/es/v20180416/model/UpdateIndexResponse.h
+  include/tencentcloud/es/v20180416/model/DescribeAutoBackUpStrategyRequest.h
   include/tencentcloud/es/v20180416/model/DescribeIndexMetaResponse.h
   include/tencentcloud/es/v20180416/model/UpdateInstanceResponse.h
-  include/tencentcloud/es/v20180416/model/DescribeInstanceOperationsRequest.h
-  include/tencentcloud/es/v20180416/model/CreateIndexResponse.h
   include/tencentcloud/es/v20180416/model/OperationDetail.h
+  include/tencentcloud/es/v20180416/model/ClusterView.h
+  include/tencentcloud/es/v20180416/model/TagInfo.h
+  include/tencentcloud/es/v20180416/model/CreateIndexResponse.h
+  include/tencentcloud/es/v20180416/model/DeleteAutoBackUpStrategyRequest.h
   include/tencentcloud/es/v20180416/model/KibanaView.h
   include/tencentcloud/es/v20180416/model/EsPublicAcl.h
   include/tencentcloud/es/v20180416/model/BackingIndexMetaField.h
   include/tencentcloud/es/v20180416/model/DictInfo.h
   include/tencentcloud/es/v20180416/model/RestartInstanceResponse.h
+  include/tencentcloud/es/v20180416/model/KeyValue.h
   include/tencentcloud/es/v20180416/model/RestartKibanaRequest.h
   include/tencentcloud/es/v20180416/model/CreateInstanceResponse.h
   include/tencentcloud/es/v20180416/model/IndexSettingsField.h
+  include/tencentcloud/es/v20180416/model/DescribeAutoBackUpStrategyResponse.h
   include/tencentcloud/es/v20180416/model/DescribeInstanceLogsRequest.h
   include/tencentcloud/es/v20180416/model/UpdateDictionariesRequest.h
-  include/tencentcloud/es/v20180416/model/ZoneDetail.h
   include/tencentcloud/es/v20180416/model/UpdateRequestTargetNodeTypesRequest.h
+  include/tencentcloud/es/v20180416/model/ZoneDetail.h
+  include/tencentcloud/es/v20180416/model/ModifyAutoBackUpCommonInfoRequest.h
   include/tencentcloud/es/v20180416/model/OperationDuration.h
   include/tencentcloud/es/v20180416/model/NodeView.h
   include/tencentcloud/es/v20180416/model/DescribeIndexListRequest.h
   include/tencentcloud/es/v20180416/model/CosBackup.h
-  include/tencentcloud/es/v20180416/model/TagInfo.h
-  include/tencentcloud/es/v20180416/model/KeyValue.h
-  include/tencentcloud/es/v20180416/model/CreateInstanceRequest.h
+  include/tencentcloud/es/v20180416/model/ModifyAutoBackUpStrategyResponse.h
+  include/tencentcloud/es/v20180416/model/CreateAutoBackUpStrategyRequest.h
+  include/tencentcloud/es/v20180416/model/CreateAutoBackUpStrategyResponse.h
+  include/tencentcloud/es/v20180416/model/UpgradeInstanceResponse.h
   include/tencentcloud/es/v20180416/model/UpdateDictionariesResponse.h
   include/tencentcloud/es/v20180416/model/InstanceInfo.h
   include/tencentcloud/es/v20180416/model/DeleteInstanceResponse.h
-  include/tencentcloud/es/v20180416/model/DescribeInstancesResponse.h
+  include/tencentcloud/es/v20180416/model/DeleteIndexResponse.h
   include/tencentcloud/es/v20180416/model/DescribeInstanceLogsResponse.h
-  include/tencentcloud/es/v20180416/model/IndexMetaField.h
+  include/tencentcloud/es/v20180416/model/CreateInstanceRequest.h
   include/tencentcloud/es/v20180416/model/UpdatePluginsResponse.h
   include/tencentcloud/es/v20180416/model/RestartInstanceRequest.h
   include/tencentcloud/es/v20180416/model/RestartKibanaResponse.h
   include/tencentcloud/es/v20180416/model/DescribeInstancesRequest.h
   include/tencentcloud/es/v20180416/model/CreateIndexRequest.h
-  include/tencentcloud/es/v20180416/model/ClusterView.h
   include/tencentcloud/es/v20180416/model/UpdateInstanceRequest.h
   include/tencentcloud/es/v20180416/model/EsDictionaryInfo.h
   include/tencentcloud/es/v20180416/model/DescribeInstanceOperationsResponse.h
@@ -74,23 +81,26 @@ set(es_public_header_model
   include/tencentcloud/es/v20180416/model/UpdateRequestTargetNodeTypesResponse.h
   include/tencentcloud/es/v20180416/model/UpdateIndexRequest.h
   include/tencentcloud/es/v20180416/model/MasterNodeInfo.h
+  include/tencentcloud/es/v20180416/model/DescribeInstanceOperationsRequest.h
   include/tencentcloud/es/v20180416/model/IndexOptionsField.h
   include/tencentcloud/es/v20180416/model/TaskDetail.h
   include/tencentcloud/es/v20180416/model/DeleteInstanceRequest.h
   include/tencentcloud/es/v20180416/model/DescribeViewsResponse.h
   include/tencentcloud/es/v20180416/model/RestartNodesResponse.h
   include/tencentcloud/es/v20180416/model/SubTaskDetail.h
+  include/tencentcloud/es/v20180416/model/DeleteAutoBackUpStrategyResponse.h
   include/tencentcloud/es/v20180416/model/DescribeIndexMetaRequest.h
   include/tencentcloud/es/v20180416/model/UpgradeInstanceRequest.h
-  include/tencentcloud/es/v20180416/model/DeleteIndexResponse.h
+  include/tencentcloud/es/v20180416/model/DescribeInstancesResponse.h
   include/tencentcloud/es/v20180416/model/DeleteIndexRequest.h
   include/tencentcloud/es/v20180416/model/EsConfigSetInfo.h
   include/tencentcloud/es/v20180416/model/DescribeViewsRequest.h
   include/tencentcloud/es/v20180416/model/GetRequestTargetNodeTypesResponse.h
   include/tencentcloud/es/v20180416/model/DescribeIndexListResponse.h
   include/tencentcloud/es/v20180416/model/Operation.h
-  include/tencentcloud/es/v20180416/model/UpdateIndexResponse.h
+  include/tencentcloud/es/v20180416/model/IndexMetaField.h
   include/tencentcloud/es/v20180416/model/UpgradeLicenseRequest.h
+  include/tencentcloud/es/v20180416/model/ModifyAutoBackUpCommonInfoResponse.h
   include/tencentcloud/es/v20180416/model/OptionalWebServiceInfo.h
   )
 
@@ -99,45 +109,52 @@ set(es_src
   src/v20180416/model/WebNodeTypeInfo.cpp
   src/v20180416/model/InstanceLog.cpp
   src/v20180416/model/LocalDiskInfo.cpp
+  src/v20180416/model/ModifyAutoBackUpStrategyRequest.cpp
   src/v20180416/model/IndexPolicyField.cpp
   src/v20180416/model/NodeInfo.cpp
-  src/v20180416/model/UpgradeInstanceResponse.cpp
+  src/v20180416/model/UpdateIndexResponse.cpp
+  src/v20180416/model/DescribeAutoBackUpStrategyRequest.cpp
   src/v20180416/model/DescribeIndexMetaResponse.cpp
   src/v20180416/model/UpdateInstanceResponse.cpp
-  src/v20180416/model/DescribeInstanceOperationsRequest.cpp
-  src/v20180416/model/CreateIndexResponse.cpp
   src/v20180416/model/OperationDetail.cpp
+  src/v20180416/model/ClusterView.cpp
+  src/v20180416/model/TagInfo.cpp
+  src/v20180416/model/CreateIndexResponse.cpp
+  src/v20180416/model/DeleteAutoBackUpStrategyRequest.cpp
   src/v20180416/model/KibanaView.cpp
   src/v20180416/model/EsPublicAcl.cpp
   src/v20180416/model/BackingIndexMetaField.cpp
   src/v20180416/model/DictInfo.cpp
   src/v20180416/model/RestartInstanceResponse.cpp
+  src/v20180416/model/KeyValue.cpp
   src/v20180416/model/RestartKibanaRequest.cpp
   src/v20180416/model/CreateInstanceResponse.cpp
   src/v20180416/model/IndexSettingsField.cpp
+  src/v20180416/model/DescribeAutoBackUpStrategyResponse.cpp
   src/v20180416/model/DescribeInstanceLogsRequest.cpp
   src/v20180416/model/UpdateDictionariesRequest.cpp
-  src/v20180416/model/ZoneDetail.cpp
   src/v20180416/model/UpdateRequestTargetNodeTypesRequest.cpp
+  src/v20180416/model/ZoneDetail.cpp
+  src/v20180416/model/ModifyAutoBackUpCommonInfoRequest.cpp
   src/v20180416/model/OperationDuration.cpp
   src/v20180416/model/NodeView.cpp
   src/v20180416/model/DescribeIndexListRequest.cpp
   src/v20180416/model/CosBackup.cpp
-  src/v20180416/model/TagInfo.cpp
-  src/v20180416/model/KeyValue.cpp
-  src/v20180416/model/CreateInstanceRequest.cpp
+  src/v20180416/model/ModifyAutoBackUpStrategyResponse.cpp
+  src/v20180416/model/CreateAutoBackUpStrategyRequest.cpp
+  src/v20180416/model/CreateAutoBackUpStrategyResponse.cpp
+  src/v20180416/model/UpgradeInstanceResponse.cpp
   src/v20180416/model/UpdateDictionariesResponse.cpp
   src/v20180416/model/InstanceInfo.cpp
   src/v20180416/model/DeleteInstanceResponse.cpp
-  src/v20180416/model/DescribeInstancesResponse.cpp
+  src/v20180416/model/DeleteIndexResponse.cpp
   src/v20180416/model/DescribeInstanceLogsResponse.cpp
-  src/v20180416/model/IndexMetaField.cpp
+  src/v20180416/model/CreateInstanceRequest.cpp
   src/v20180416/model/UpdatePluginsResponse.cpp
   src/v20180416/model/RestartInstanceRequest.cpp
   src/v20180416/model/RestartKibanaResponse.cpp
   src/v20180416/model/DescribeInstancesRequest.cpp
   src/v20180416/model/CreateIndexRequest.cpp
-  src/v20180416/model/ClusterView.cpp
   src/v20180416/model/UpdateInstanceRequest.cpp
   src/v20180416/model/EsDictionaryInfo.cpp
   src/v20180416/model/DescribeInstanceOperationsResponse.cpp
@@ -151,23 +168,26 @@ set(es_src
   src/v20180416/model/UpdateRequestTargetNodeTypesResponse.cpp
   src/v20180416/model/UpdateIndexRequest.cpp
   src/v20180416/model/MasterNodeInfo.cpp
+  src/v20180416/model/DescribeInstanceOperationsRequest.cpp
   src/v20180416/model/IndexOptionsField.cpp
   src/v20180416/model/TaskDetail.cpp
   src/v20180416/model/DeleteInstanceRequest.cpp
   src/v20180416/model/DescribeViewsResponse.cpp
   src/v20180416/model/RestartNodesResponse.cpp
   src/v20180416/model/SubTaskDetail.cpp
+  src/v20180416/model/DeleteAutoBackUpStrategyResponse.cpp
   src/v20180416/model/DescribeIndexMetaRequest.cpp
   src/v20180416/model/UpgradeInstanceRequest.cpp
-  src/v20180416/model/DeleteIndexResponse.cpp
+  src/v20180416/model/DescribeInstancesResponse.cpp
   src/v20180416/model/DeleteIndexRequest.cpp
   src/v20180416/model/EsConfigSetInfo.cpp
   src/v20180416/model/DescribeViewsRequest.cpp
   src/v20180416/model/GetRequestTargetNodeTypesResponse.cpp
   src/v20180416/model/DescribeIndexListResponse.cpp
   src/v20180416/model/Operation.cpp
-  src/v20180416/model/UpdateIndexResponse.cpp
+  src/v20180416/model/IndexMetaField.cpp
   src/v20180416/model/UpgradeLicenseRequest.cpp
+  src/v20180416/model/ModifyAutoBackUpCommonInfoResponse.cpp
   src/v20180416/model/OptionalWebServiceInfo.cpp
   )
 

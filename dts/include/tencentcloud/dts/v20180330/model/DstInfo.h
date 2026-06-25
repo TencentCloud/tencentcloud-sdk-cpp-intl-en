@@ -91,42 +91,42 @@ namespace TencentCloud
                     /**
                      * 获取Target instance VIP, which has been disused and does not need to be entered
                      * @return Ip Target instance VIP, which has been disused and does not need to be entered
-                     * 
+                     * @deprecated
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Target instance VIP, which has been disused and does not need to be entered
                      * @param _ip Target instance VIP, which has been disused and does not need to be entered
-                     * 
+                     * @deprecated
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Target instance Vport, which has been disused and does not need to be entered
                      * @return Port Target instance Vport, which has been disused and does not need to be entered
-                     * 
+                     * @deprecated
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Target instance Vport, which has been disused and does not need to be entered
                      * @param _port Target instance Vport, which has been disused and does not need to be entered
-                     * 
+                     * @deprecated
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PortHasBeenSet() const;
 

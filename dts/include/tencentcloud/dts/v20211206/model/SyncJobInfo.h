@@ -878,6 +878,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return OptObjStatus 
+                     * 
+                     */
+                    std::string GetOptObjStatus() const;
+
+                    /**
+                     * 设置
+                     * @param _optObjStatus 
+                     * 
+                     */
+                    void SetOptObjStatus(const std::string& _optObjStatus);
+
+                    /**
+                     * 判断参数 OptObjStatus 是否已赋值
+                     * @return OptObjStatus 是否已赋值
+                     * 
+                     */
+                    bool OptObjStatusHasBeenSet() const;
+
+                    /**
                      * 获取Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoRetryTimeRangeMinutes Settings of automatic retry time
@@ -1159,6 +1180,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_optObjStatus;
+                    bool m_optObjStatusHasBeenSet;
 
                     /**
                      * Settings of automatic retry time

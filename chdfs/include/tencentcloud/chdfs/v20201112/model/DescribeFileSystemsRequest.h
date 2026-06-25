@@ -42,7 +42,34 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return FileSystemIdMarker 
+                     * 
+                     */
+                    std::string GetFileSystemIdMarker() const;
+
+                    /**
+                     * 设置
+                     * @param _fileSystemIdMarker 
+                     * 
+                     */
+                    void SetFileSystemIdMarker(const std::string& _fileSystemIdMarker);
+
+                    /**
+                     * 判断参数 FileSystemIdMarker 是否已赋值
+                     * @return FileSystemIdMarker 是否已赋值
+                     * 
+                     */
+                    bool FileSystemIdMarkerHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::string m_fileSystemIdMarker;
+                    bool m_fileSystemIdMarkerHasBeenSet;
 
                 };
             }

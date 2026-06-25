@@ -23,7 +23,8 @@ using namespace std;
 CompareOptions::CompareOptions() :
     m_methodHasBeenSet(false),
     m_sampleRateHasBeenSet(false),
-    m_threadCountHasBeenSet(false)
+    m_threadCountHasBeenSet(false),
+    m_typeHasBeenSet(false)
 {
 }
 
@@ -62,6 +63,16 @@ CoreInternalOutcome CompareOptions::Deserialize(const rapidjson::Value &value)
         m_threadCountHasBeenSet = true;
     }
 
+    if (value.HasMember("Type") && !value["Type"].IsNull())
+    {
+        if (!value["Type"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CompareOptions.Type` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_type = string(value["Type"].GetString());
+        m_typeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -91,6 +102,14 @@ void CompareOptions::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "ThreadCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_threadCount, allocator);
+    }
+
+    if (m_typeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Type";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -142,5 +161,21 @@ void CompareOptions::SetThreadCount(const int64_t& _threadCount)
 bool CompareOptions::ThreadCountHasBeenSet() const
 {
     return m_threadCountHasBeenSet;
+}
+
+string CompareOptions::GetType() const
+{
+    return m_type;
+}
+
+void CompareOptions::SetType(const string& _type)
+{
+    m_type = _type;
+    m_typeHasBeenSet = true;
+}
+
+bool CompareOptions::TypeHasBeenSet() const
+{
+    return m_typeHasBeenSet;
 }
 

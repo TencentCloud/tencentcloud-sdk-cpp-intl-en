@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
-                     * @return Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+                     * 获取Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
+                     * @return Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
                      * 
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
-                     * @param _qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+                     * 设置Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
+                     * @param _qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
                      * 
                      */
                     void SetQualifier(const std::string& _qualifier);
@@ -216,7 +216,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+                     * Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458) for canary release.
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;
