@@ -65,8 +65,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CLBData 
+                     * 获取Name of the domain asset.
+                     * @return CLBData Name of the domain asset.
                      * 
                      */
                     std::vector<KeyValue> GetCLBData() const;
@@ -79,8 +79,8 @@ namespace TencentCloud
                     bool CLBDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CnameWafData 
+                     * 获取Status of the CNAME WAF resource.
+                     * @return CnameWafData Status of the CNAME WAF resource.
                      * 
                      */
                     std::vector<KeyValue> GetCnameWafData() const;
@@ -104,13 +104,13 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * 
+                     * Name of the domain asset.
                      */
                     std::vector<KeyValue> m_cLBData;
                     bool m_cLBDataHasBeenSet;
 
                     /**
-                     * 
+                     * Status of the CNAME WAF resource.
                      */
                     std::vector<KeyValue> m_cnameWafData;
                     bool m_cnameWafDataHasBeenSet;

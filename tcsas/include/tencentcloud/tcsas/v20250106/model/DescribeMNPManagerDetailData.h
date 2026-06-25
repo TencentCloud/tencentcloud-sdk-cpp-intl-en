@@ -320,6 +320,27 @@ namespace TencentCloud
                      */
                     bool I18nListHasBeenSet() const;
 
+                    /**
+                     * 获取Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * 
+                     */
+                    int64_t GetTeamTypeId() const;
+
+                    /**
+                     * 设置Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * @param _teamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * 
+                     */
+                    void SetTeamTypeId(const int64_t& _teamTypeId);
+
+                    /**
+                     * 判断参数 TeamTypeId 是否已赋值
+                     * @return TeamTypeId 是否已赋值
+                     * 
+                     */
+                    bool TeamTypeIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -399,6 +420,12 @@ namespace TencentCloud
                      */
                     std::vector<MNPDetailI18nVO> m_i18nList;
                     bool m_i18nListHasBeenSet;
+
+                    /**
+                     * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     */
+                    int64_t m_teamTypeId;
+                    bool m_teamTypeIdHasBeenSet;
 
                 };
             }

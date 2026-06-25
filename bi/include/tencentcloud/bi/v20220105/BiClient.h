@@ -27,6 +27,8 @@
 #include <tencentcloud/bi/v20220105/model/ApplyEmbedIntervalResponse.h>
 #include <tencentcloud/bi/v20220105/model/ClearEmbedTokenRequest.h>
 #include <tencentcloud/bi/v20220105/model/ClearEmbedTokenResponse.h>
+#include <tencentcloud/bi/v20220105/model/CreateCorpTagRequest.h>
+#include <tencentcloud/bi/v20220105/model/CreateCorpTagResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateDataTableRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateDataTableResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateDatasourceRequest.h>
@@ -39,6 +41,8 @@
 #include <tencentcloud/bi/v20220105/model/CreatePermissionRanksResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateProjectRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateProjectResponse.h>
+#include <tencentcloud/bi/v20220105/model/CreateTagTableRequest.h>
+#include <tencentcloud/bi/v20220105/model/CreateTagTableResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateUserRoleRequest.h>
 #include <tencentcloud/bi/v20220105/model/CreateUserRoleResponse.h>
 #include <tencentcloud/bi/v20220105/model/CreateUserRoleProjectRequest.h>
@@ -67,6 +71,8 @@
 #include <tencentcloud/bi/v20220105/model/DescribeUserRoleListResponse.h>
 #include <tencentcloud/bi/v20220105/model/DescribeUserRoleProjectListRequest.h>
 #include <tencentcloud/bi/v20220105/model/DescribeUserRoleProjectListResponse.h>
+#include <tencentcloud/bi/v20220105/model/EditCorpTagRequest.h>
+#include <tencentcloud/bi/v20220105/model/EditCorpTagResponse.h>
 #include <tencentcloud/bi/v20220105/model/ExportScreenPageRequest.h>
 #include <tencentcloud/bi/v20220105/model/ExportScreenPageResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyDatasourceRequest.h>
@@ -79,10 +85,14 @@
 #include <tencentcloud/bi/v20220105/model/ModifyResourceUserResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyResourceUserGroupResourceRequest.h>
 #include <tencentcloud/bi/v20220105/model/ModifyResourceUserGroupResourceResponse.h>
+#include <tencentcloud/bi/v20220105/model/ModifyTagTableRequest.h>
+#include <tencentcloud/bi/v20220105/model/ModifyTagTableResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleRequest.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleResponse.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleProjectRequest.h>
 #include <tencentcloud/bi/v20220105/model/ModifyUserRoleProjectResponse.h>
+#include <tencentcloud/bi/v20220105/model/ModifyUserTagRequest.h>
+#include <tencentcloud/bi/v20220105/model/ModifyUserTagResponse.h>
 
 
 namespace TencentCloud
@@ -103,6 +113,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ClearEmbedTokenResponse> ClearEmbedTokenOutcome;
                 typedef std::future<ClearEmbedTokenOutcome> ClearEmbedTokenOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ClearEmbedTokenRequest&, ClearEmbedTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ClearEmbedTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCorpTagResponse> CreateCorpTagOutcome;
+                typedef std::future<CreateCorpTagOutcome> CreateCorpTagOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::CreateCorpTagRequest&, CreateCorpTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCorpTagAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDataTableResponse> CreateDataTableOutcome;
                 typedef std::future<CreateDataTableOutcome> CreateDataTableOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateDataTableRequest&, CreateDataTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataTableAsyncHandler;
@@ -121,6 +134,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateProjectResponse> CreateProjectOutcome;
                 typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateProjectRequest&, CreateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTagTableResponse> CreateTagTableOutcome;
+                typedef std::future<CreateTagTableOutcome> CreateTagTableOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::CreateTagTableRequest&, CreateTagTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTagTableAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateUserRoleResponse> CreateUserRoleOutcome;
                 typedef std::future<CreateUserRoleOutcome> CreateUserRoleOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::CreateUserRoleRequest&, CreateUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUserRoleAsyncHandler;
@@ -163,6 +179,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUserRoleProjectListResponse> DescribeUserRoleProjectListOutcome;
                 typedef std::future<DescribeUserRoleProjectListOutcome> DescribeUserRoleProjectListOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::DescribeUserRoleProjectListRequest&, DescribeUserRoleProjectListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserRoleProjectListAsyncHandler;
+                typedef Outcome<Core::Error, Model::EditCorpTagResponse> EditCorpTagOutcome;
+                typedef std::future<EditCorpTagOutcome> EditCorpTagOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::EditCorpTagRequest&, EditCorpTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditCorpTagAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportScreenPageResponse> ExportScreenPageOutcome;
                 typedef std::future<ExportScreenPageOutcome> ExportScreenPageOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ExportScreenPageRequest&, ExportScreenPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportScreenPageAsyncHandler;
@@ -181,12 +200,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourceUserGroupResourceResponse> ModifyResourceUserGroupResourceOutcome;
                 typedef std::future<ModifyResourceUserGroupResourceOutcome> ModifyResourceUserGroupResourceOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ModifyResourceUserGroupResourceRequest&, ModifyResourceUserGroupResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceUserGroupResourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyTagTableResponse> ModifyTagTableOutcome;
+                typedef std::future<ModifyTagTableOutcome> ModifyTagTableOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::ModifyTagTableRequest&, ModifyTagTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTagTableAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyUserRoleResponse> ModifyUserRoleOutcome;
                 typedef std::future<ModifyUserRoleOutcome> ModifyUserRoleOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ModifyUserRoleRequest&, ModifyUserRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyUserRoleProjectResponse> ModifyUserRoleProjectOutcome;
                 typedef std::future<ModifyUserRoleProjectOutcome> ModifyUserRoleProjectOutcomeCallable;
                 typedef std::function<void(const BiClient*, const Model::ModifyUserRoleProjectRequest&, ModifyUserRoleProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserRoleProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyUserTagResponse> ModifyUserTagOutcome;
+                typedef std::future<ModifyUserTagOutcome> ModifyUserTagOutcomeCallable;
+                typedef std::function<void(const BiClient*, const Model::ModifyUserTagRequest&, ModifyUserTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserTagAsyncHandler;
 
 
 
@@ -207,6 +232,15 @@ namespace TencentCloud
                 ClearEmbedTokenOutcome ClearEmbedToken(const Model::ClearEmbedTokenRequest &request);
                 void ClearEmbedTokenAsync(const Model::ClearEmbedTokenRequest& request, const ClearEmbedTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ClearEmbedTokenOutcomeCallable ClearEmbedTokenCallable(const Model::ClearEmbedTokenRequest& request);
+
+                /**
+                 *Create a business tag
+                 * @param req CreateCorpTagRequest
+                 * @return CreateCorpTagOutcome
+                 */
+                CreateCorpTagOutcome CreateCorpTag(const Model::CreateCorpTagRequest &request);
+                void CreateCorpTagAsync(const Model::CreateCorpTagRequest& request, const CreateCorpTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCorpTagOutcomeCallable CreateCorpTagCallable(const Model::CreateCorpTagRequest& request);
 
                 /**
                  *Add a data table
@@ -261,6 +295,15 @@ namespace TencentCloud
                 CreateProjectOutcome CreateProject(const Model::CreateProjectRequest &request);
                 void CreateProjectAsync(const Model::CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateProjectOutcomeCallable CreateProjectCallable(const Model::CreateProjectRequest& request);
+
+                /**
+                 *Create a tag table
+                 * @param req CreateTagTableRequest
+                 * @return CreateTagTableOutcome
+                 */
+                CreateTagTableOutcome CreateTagTable(const Model::CreateTagTableRequest &request);
+                void CreateTagTableAsync(const Model::CreateTagTableRequest& request, const CreateTagTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTagTableOutcomeCallable CreateTagTableCallable(const Model::CreateTagTableRequest& request);
 
                 /**
                  *This API is used to create a user role.
@@ -389,6 +432,15 @@ namespace TencentCloud
                 DescribeUserRoleProjectListOutcomeCallable DescribeUserRoleProjectListCallable(const Model::DescribeUserRoleProjectListRequest& request);
 
                 /**
+                 *Edit business tags (async)
+                 * @param req EditCorpTagRequest
+                 * @return EditCorpTagOutcome
+                 */
+                EditCorpTagOutcome EditCorpTag(const Model::EditCorpTagRequest &request);
+                void EditCorpTagAsync(const Model::EditCorpTagRequest& request, const EditCorpTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EditCorpTagOutcomeCallable EditCorpTagCallable(const Model::EditCorpTagRequest& request);
+
+                /**
                  *This API is used to export a screenshot.
                  * @param req ExportScreenPageRequest
                  * @return ExportScreenPageOutcome
@@ -443,6 +495,15 @@ namespace TencentCloud
                 ModifyResourceUserGroupResourceOutcomeCallable ModifyResourceUserGroupResourceCallable(const Model::ModifyResourceUserGroupResourceRequest& request);
 
                 /**
+                 *Edit tag table
+                 * @param req ModifyTagTableRequest
+                 * @return ModifyTagTableOutcome
+                 */
+                ModifyTagTableOutcome ModifyTagTable(const Model::ModifyTagTableRequest &request);
+                void ModifyTagTableAsync(const Model::ModifyTagTableRequest& request, const ModifyTagTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyTagTableOutcomeCallable ModifyTagTableCallable(const Model::ModifyTagTableRequest& request);
+
+                /**
                  *This API is used to modify user role info.
                  * @param req ModifyUserRoleRequest
                  * @return ModifyUserRoleOutcome
@@ -459,6 +520,15 @@ namespace TencentCloud
                 ModifyUserRoleProjectOutcome ModifyUserRoleProject(const Model::ModifyUserRoleProjectRequest &request);
                 void ModifyUserRoleProjectAsync(const Model::ModifyUserRoleProjectRequest& request, const ModifyUserRoleProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyUserRoleProjectOutcomeCallable ModifyUserRoleProjectCallable(const Model::ModifyUserRoleProjectRequest& request);
+
+                /**
+                 *Modify user tag value
+                 * @param req ModifyUserTagRequest
+                 * @return ModifyUserTagOutcome
+                 */
+                ModifyUserTagOutcome ModifyUserTag(const Model::ModifyUserTagRequest &request);
+                void ModifyUserTagAsync(const Model::ModifyUserTagRequest& request, const ModifyUserTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyUserTagOutcomeCallable ModifyUserTagCallable(const Model::ModifyUserTagRequest& request);
 
             };
         }

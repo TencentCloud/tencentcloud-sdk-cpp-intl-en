@@ -33,7 +33,8 @@ DescribeMNGManagerDetailData::DescribeMNGManagerDetailData() :
     m_teamNameHasBeenSet(false),
     m_teamIdHasBeenSet(false),
     m_statusHasBeenSet(false),
-    m_i18nListHasBeenSet(false)
+    m_i18nListHasBeenSet(false),
+    m_teamTypeIdHasBeenSet(false)
 {
 }
 
@@ -182,6 +183,16 @@ CoreInternalOutcome DescribeMNGManagerDetailData::Deserialize(const rapidjson::V
         m_i18nListHasBeenSet = true;
     }
 
+    if (value.HasMember("TeamTypeId") && !value["TeamTypeId"].IsNull())
+    {
+        if (!value["TeamTypeId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNGManagerDetailData.TeamTypeId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamTypeId = value["TeamTypeId"].GetInt64();
+        m_teamTypeIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -298,6 +309,14 @@ void DescribeMNGManagerDetailData::ToJsonObject(rapidjson::Value &value, rapidjs
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_teamTypeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamTypeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_teamTypeId, allocator);
     }
 
 }
@@ -509,5 +528,21 @@ void DescribeMNGManagerDetailData::SetI18nList(const vector<MNPDetailI18nVO>& _i
 bool DescribeMNGManagerDetailData::I18nListHasBeenSet() const
 {
     return m_i18nListHasBeenSet;
+}
+
+int64_t DescribeMNGManagerDetailData::GetTeamTypeId() const
+{
+    return m_teamTypeId;
+}
+
+void DescribeMNGManagerDetailData::SetTeamTypeId(const int64_t& _teamTypeId)
+{
+    m_teamTypeId = _teamTypeId;
+    m_teamTypeIdHasBeenSet = true;
+}
+
+bool DescribeMNGManagerDetailData::TeamTypeIdHasBeenSet() const
+{
+    return m_teamTypeIdHasBeenSet;
 }
 

@@ -35,7 +35,9 @@ DescribeMNGListData::DescribeMNGListData() :
     m_applicationNameHasBeenSet(false),
     m_effectStatusHasBeenSet(false),
     m_effectMNPVersionIdHasBeenSet(false),
-    m_effectMNPVersionHasBeenSet(false)
+    m_effectMNPVersionHasBeenSet(false),
+    m_teamIdHasBeenSet(false),
+    m_teamTypeIdHasBeenSet(false)
 {
 }
 
@@ -194,6 +196,26 @@ CoreInternalOutcome DescribeMNGListData::Deserialize(const rapidjson::Value &val
         m_effectMNPVersionHasBeenSet = true;
     }
 
+    if (value.HasMember("TeamId") && !value["TeamId"].IsNull())
+    {
+        if (!value["TeamId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNGListData.TeamId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamId = string(value["TeamId"].GetString());
+        m_teamIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("TeamTypeId") && !value["TeamTypeId"].IsNull())
+    {
+        if (!value["TeamTypeId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNGListData.TeamTypeId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamTypeId = value["TeamTypeId"].GetInt64();
+        m_teamTypeIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -319,6 +341,22 @@ void DescribeMNGListData::ToJsonObject(rapidjson::Value &value, rapidjson::Docum
         string key = "EffectMNPVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_effectMNPVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_teamIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_teamTypeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamTypeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_teamTypeId, allocator);
     }
 
 }
@@ -562,5 +600,37 @@ void DescribeMNGListData::SetEffectMNPVersion(const string& _effectMNPVersion)
 bool DescribeMNGListData::EffectMNPVersionHasBeenSet() const
 {
     return m_effectMNPVersionHasBeenSet;
+}
+
+string DescribeMNGListData::GetTeamId() const
+{
+    return m_teamId;
+}
+
+void DescribeMNGListData::SetTeamId(const string& _teamId)
+{
+    m_teamId = _teamId;
+    m_teamIdHasBeenSet = true;
+}
+
+bool DescribeMNGListData::TeamIdHasBeenSet() const
+{
+    return m_teamIdHasBeenSet;
+}
+
+int64_t DescribeMNGListData::GetTeamTypeId() const
+{
+    return m_teamTypeId;
+}
+
+void DescribeMNGListData::SetTeamTypeId(const int64_t& _teamTypeId)
+{
+    m_teamTypeId = _teamTypeId;
+    m_teamTypeIdHasBeenSet = true;
+}
+
+bool DescribeMNGListData::TeamTypeIdHasBeenSet() const
+{
+    return m_teamTypeIdHasBeenSet;
 }
 

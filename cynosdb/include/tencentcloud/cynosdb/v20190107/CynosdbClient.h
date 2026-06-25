@@ -155,6 +155,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailDatabasesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterDetailDatabasesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterInstanceGroupsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterInstanceGroupsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterInstanceGrpsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterInstanceGrpsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterParamsRequest.h>
@@ -671,6 +673,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterDetailDatabasesResponse> DescribeClusterDetailDatabasesOutcome;
                 typedef std::future<DescribeClusterDetailDatabasesOutcome> DescribeClusterDetailDatabasesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterDetailDatabasesRequest&, DescribeClusterDetailDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterDetailDatabasesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterInstanceGroupsResponse> DescribeClusterInstanceGroupsOutcome;
+                typedef std::future<DescribeClusterInstanceGroupsOutcome> DescribeClusterInstanceGroupsOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterInstanceGroupsRequest&, DescribeClusterInstanceGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterInstanceGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterInstanceGrpsResponse> DescribeClusterInstanceGrpsOutcome;
                 typedef std::future<DescribeClusterInstanceGrpsOutcome> DescribeClusterInstanceGrpsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterInstanceGrpsRequest&, DescribeClusterInstanceGrpsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterInstanceGrpsAsyncHandler;
@@ -1723,6 +1728,15 @@ namespace TencentCloud
                 DescribeClusterDetailDatabasesOutcome DescribeClusterDetailDatabases(const Model::DescribeClusterDetailDatabasesRequest &request);
                 void DescribeClusterDetailDatabasesAsync(const Model::DescribeClusterDetailDatabasesRequest& request, const DescribeClusterDetailDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterDetailDatabasesOutcomeCallable DescribeClusterDetailDatabasesCallable(const Model::DescribeClusterDetailDatabasesRequest& request);
+
+                /**
+                 *This API is used to query instance group info.
+                 * @param req DescribeClusterInstanceGroupsRequest
+                 * @return DescribeClusterInstanceGroupsOutcome
+                 */
+                DescribeClusterInstanceGroupsOutcome DescribeClusterInstanceGroups(const Model::DescribeClusterInstanceGroupsRequest &request);
+                void DescribeClusterInstanceGroupsAsync(const Model::DescribeClusterInstanceGroupsRequest& request, const DescribeClusterInstanceGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterInstanceGroupsOutcomeCallable DescribeClusterInstanceGroupsCallable(const Model::DescribeClusterInstanceGroupsRequest& request);
 
                 /**
                  *This API is used to query instance groups.

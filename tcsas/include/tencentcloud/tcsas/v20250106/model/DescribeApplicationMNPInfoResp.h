@@ -278,6 +278,69 @@ namespace TencentCloud
                      */
                     bool CategoryListHasBeenSet() const;
 
+                    /**
+                     * 获取Team ID.
+                     * @return TeamId Team ID.
+                     * 
+                     */
+                    std::string GetTeamId() const;
+
+                    /**
+                     * 设置Team ID.
+                     * @param _teamId Team ID.
+                     * 
+                     */
+                    void SetTeamId(const std::string& _teamId);
+
+                    /**
+                     * 判断参数 TeamId 是否已赋值
+                     * @return TeamId 是否已赋值
+                     * 
+                     */
+                    bool TeamIdHasBeenSet() const;
+
+                    /**
+                     * 获取Team name.
+                     * @return TeamName Team name.
+                     * 
+                     */
+                    std::string GetTeamName() const;
+
+                    /**
+                     * 设置Team name.
+                     * @param _teamName Team name.
+                     * 
+                     */
+                    void SetTeamName(const std::string& _teamName);
+
+                    /**
+                     * 判断参数 TeamName 是否已赋值
+                     * @return TeamName 是否已赋值
+                     * 
+                     */
+                    bool TeamNameHasBeenSet() const;
+
+                    /**
+                     * 获取Team type ID.
+                     * @return TeamTypeId Team type ID.
+                     * 
+                     */
+                    int64_t GetTeamTypeId() const;
+
+                    /**
+                     * 设置Team type ID.
+                     * @param _teamTypeId Team type ID.
+                     * 
+                     */
+                    void SetTeamTypeId(const int64_t& _teamTypeId);
+
+                    /**
+                     * 判断参数 TeamTypeId 是否已赋值
+                     * @return TeamTypeId 是否已赋值
+                     * 
+                     */
+                    bool TeamTypeIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -345,6 +408,24 @@ namespace TencentCloud
                      */
                     std::vector<CategoryInfo> m_categoryList;
                     bool m_categoryListHasBeenSet;
+
+                    /**
+                     * Team ID.
+                     */
+                    std::string m_teamId;
+                    bool m_teamIdHasBeenSet;
+
+                    /**
+                     * Team name.
+                     */
+                    std::string m_teamName;
+                    bool m_teamNameHasBeenSet;
+
+                    /**
+                     * Team type ID.
+                     */
+                    int64_t m_teamTypeId;
+                    bool m_teamTypeIdHasBeenSet;
 
                 };
             }

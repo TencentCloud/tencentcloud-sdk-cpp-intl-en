@@ -31,6 +31,8 @@
 #include <tencentcloud/mps/v20190612/model/CreateAIRecognitionTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAdaptiveDynamicStreamingTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAdaptiveDynamicStreamingTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/CreateAigcAudioTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/CreateAigcAudioTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcImageTaskRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcImageTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcVideoTaskRequest.h>
@@ -127,6 +129,8 @@
 #include <tencentcloud/mps/v20190612/model/DescribeAIRecognitionTemplatesResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAdaptiveDynamicStreamingTemplatesRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAdaptiveDynamicStreamingTemplatesResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeAigcAudioTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeAigcAudioTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcImageTaskRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcImageTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcVideoTaskRequest.h>
@@ -301,6 +305,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplateOutcome;
                 typedef std::future<CreateAdaptiveDynamicStreamingTemplateOutcome> CreateAdaptiveDynamicStreamingTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAdaptiveDynamicStreamingTemplateRequest&, CreateAdaptiveDynamicStreamingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAdaptiveDynamicStreamingTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAigcAudioTaskResponse> CreateAigcAudioTaskOutcome;
+                typedef std::future<CreateAigcAudioTaskOutcome> CreateAigcAudioTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::CreateAigcAudioTaskRequest&, CreateAigcAudioTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAigcAudioTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAigcImageTaskResponse> CreateAigcImageTaskOutcome;
                 typedef std::future<CreateAigcImageTaskOutcome> CreateAigcImageTaskOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAigcImageTaskRequest&, CreateAigcImageTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAigcImageTaskAsyncHandler;
@@ -445,6 +452,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplatesOutcome;
                 typedef std::future<DescribeAdaptiveDynamicStreamingTemplatesOutcome> DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest&, DescribeAdaptiveDynamicStreamingTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAdaptiveDynamicStreamingTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAigcAudioTaskResponse> DescribeAigcAudioTaskOutcome;
+                typedef std::future<DescribeAigcAudioTaskOutcome> DescribeAigcAudioTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeAigcAudioTaskRequest&, DescribeAigcAudioTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcAudioTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAigcImageTaskResponse> DescribeAigcImageTaskOutcome;
                 typedef std::future<DescribeAigcImageTaskOutcome> DescribeAigcImageTaskOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeAigcImageTaskRequest&, DescribeAigcImageTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcImageTaskAsyncHandler;
@@ -706,6 +716,15 @@ Smart subtitle (full speech, speech hotword, and speech translation).
                 CreateAdaptiveDynamicStreamingTemplateOutcome CreateAdaptiveDynamicStreamingTemplate(const Model::CreateAdaptiveDynamicStreamingTemplateRequest &request);
                 void CreateAdaptiveDynamicStreamingTemplateAsync(const Model::CreateAdaptiveDynamicStreamingTemplateRequest& request, const CreateAdaptiveDynamicStreamingTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAdaptiveDynamicStreamingTemplateOutcomeCallable CreateAdaptiveDynamicStreamingTemplateCallable(const Model::CreateAdaptiveDynamicStreamingTemplateRequest& request);
+
+                /**
+                 *This API is used to create AIGC audio generation tasks.
+                 * @param req CreateAigcAudioTaskRequest
+                 * @return CreateAigcAudioTaskOutcome
+                 */
+                CreateAigcAudioTaskOutcome CreateAigcAudioTask(const Model::CreateAigcAudioTaskRequest &request);
+                void CreateAigcAudioTaskAsync(const Model::CreateAigcAudioTaskRequest& request, const CreateAigcAudioTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAigcAudioTaskOutcomeCallable CreateAigcAudioTaskCallable(const Model::CreateAigcAudioTaskRequest& request);
 
                 /**
                  *This API is used to create AIGC image generation tasks.
@@ -1167,6 +1186,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAdaptiveDynamicStreamingTemplatesOutcome DescribeAdaptiveDynamicStreamingTemplates(const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest &request);
                 void DescribeAdaptiveDynamicStreamingTemplatesAsync(const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest& request, const DescribeAdaptiveDynamicStreamingTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable DescribeAdaptiveDynamicStreamingTemplatesCallable(const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the progress of AIGC audio generation tasks and obtain the generation results.
+                 * @param req DescribeAigcAudioTaskRequest
+                 * @return DescribeAigcAudioTaskOutcome
+                 */
+                DescribeAigcAudioTaskOutcome DescribeAigcAudioTask(const Model::DescribeAigcAudioTaskRequest &request);
+                void DescribeAigcAudioTaskAsync(const Model::DescribeAigcAudioTaskRequest& request, const DescribeAigcAudioTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAigcAudioTaskOutcomeCallable DescribeAigcAudioTaskCallable(const Model::DescribeAigcAudioTaskRequest& request);
 
                 /**
                  *This API is used to query the progress of AIGC image generation tasks and obtain the generation results.

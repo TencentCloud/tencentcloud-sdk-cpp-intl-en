@@ -31,7 +31,10 @@ DescribeApplicationMNPInfoResp::DescribeApplicationMNPInfoResp() :
     m_updateTimeHasBeenSet(false),
     m_onlineStatusHasBeenSet(false),
     m_engineTypeHasBeenSet(false),
-    m_categoryListHasBeenSet(false)
+    m_categoryListHasBeenSet(false),
+    m_teamIdHasBeenSet(false),
+    m_teamNameHasBeenSet(false),
+    m_teamTypeIdHasBeenSet(false)
 {
 }
 
@@ -160,6 +163,36 @@ CoreInternalOutcome DescribeApplicationMNPInfoResp::Deserialize(const rapidjson:
         m_categoryListHasBeenSet = true;
     }
 
+    if (value.HasMember("TeamId") && !value["TeamId"].IsNull())
+    {
+        if (!value["TeamId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeApplicationMNPInfoResp.TeamId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamId = string(value["TeamId"].GetString());
+        m_teamIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("TeamName") && !value["TeamName"].IsNull())
+    {
+        if (!value["TeamName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeApplicationMNPInfoResp.TeamName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamName = string(value["TeamName"].GetString());
+        m_teamNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("TeamTypeId") && !value["TeamTypeId"].IsNull())
+    {
+        if (!value["TeamTypeId"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeApplicationMNPInfoResp.TeamTypeId` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_teamTypeId = value["TeamTypeId"].GetInt64();
+        m_teamTypeIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -260,6 +293,30 @@ void DescribeApplicationMNPInfoResp::ToJsonObject(rapidjson::Value &value, rapid
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_teamIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_teamId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_teamNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_teamName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_teamTypeIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TeamTypeId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_teamTypeId, allocator);
     }
 
 }
@@ -439,5 +496,53 @@ void DescribeApplicationMNPInfoResp::SetCategoryList(const vector<CategoryInfo>&
 bool DescribeApplicationMNPInfoResp::CategoryListHasBeenSet() const
 {
     return m_categoryListHasBeenSet;
+}
+
+string DescribeApplicationMNPInfoResp::GetTeamId() const
+{
+    return m_teamId;
+}
+
+void DescribeApplicationMNPInfoResp::SetTeamId(const string& _teamId)
+{
+    m_teamId = _teamId;
+    m_teamIdHasBeenSet = true;
+}
+
+bool DescribeApplicationMNPInfoResp::TeamIdHasBeenSet() const
+{
+    return m_teamIdHasBeenSet;
+}
+
+string DescribeApplicationMNPInfoResp::GetTeamName() const
+{
+    return m_teamName;
+}
+
+void DescribeApplicationMNPInfoResp::SetTeamName(const string& _teamName)
+{
+    m_teamName = _teamName;
+    m_teamNameHasBeenSet = true;
+}
+
+bool DescribeApplicationMNPInfoResp::TeamNameHasBeenSet() const
+{
+    return m_teamNameHasBeenSet;
+}
+
+int64_t DescribeApplicationMNPInfoResp::GetTeamTypeId() const
+{
+    return m_teamTypeId;
+}
+
+void DescribeApplicationMNPInfoResp::SetTeamTypeId(const int64_t& _teamTypeId)
+{
+    m_teamTypeId = _teamTypeId;
+    m_teamTypeIdHasBeenSet = true;
+}
+
+bool DescribeApplicationMNPInfoResp::TeamTypeIdHasBeenSet() const
+{
+    return m_teamTypeIdHasBeenSet;
 }
 

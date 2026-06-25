@@ -3340,6 +3340,56 @@ CynosdbClient::DescribeClusterDetailDatabasesOutcomeCallable CynosdbClient::Desc
     return prom->get_future();
 }
 
+CynosdbClient::DescribeClusterInstanceGroupsOutcome CynosdbClient::DescribeClusterInstanceGroups(const DescribeClusterInstanceGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusterInstanceGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClusterInstanceGroupsResponse rsp = DescribeClusterInstanceGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClusterInstanceGroupsOutcome(rsp);
+        else
+            return DescribeClusterInstanceGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClusterInstanceGroupsOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeClusterInstanceGroupsAsync(const DescribeClusterInstanceGroupsRequest& request, const DescribeClusterInstanceGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeClusterInstanceGroupsRequest&;
+    using Resp = DescribeClusterInstanceGroupsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeClusterInstanceGroups", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeClusterInstanceGroupsOutcomeCallable CynosdbClient::DescribeClusterInstanceGroupsCallable(const DescribeClusterInstanceGroupsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeClusterInstanceGroupsOutcome>>();
+    DescribeClusterInstanceGroupsAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeClusterInstanceGroupsRequest&,
+        DescribeClusterInstanceGroupsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::DescribeClusterInstanceGrpsOutcome CynosdbClient::DescribeClusterInstanceGrps(const DescribeClusterInstanceGrpsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterInstanceGrps");
