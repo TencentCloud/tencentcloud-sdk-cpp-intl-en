@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Indicates the status. valid values: 
-PASSED
+                     * 获取Verification status. Valid values: 
 PROCESSING
-WARNING
-                     * @return Status Indicates the status. valid values: 
-PASSED
+ABNORMAL
+COMPLETED
+                     * @return Status Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
                      * 
                      */
                     std::string GetStatus() const;
@@ -65,19 +65,29 @@ WARNING
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+                     * 获取Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WarnInfo Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+                     * @return WarnInfo Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -91,25 +101,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WarnInfoHasBeenSet() const;
 
                     /**
-                     * 获取Country Code.
+                     * 获取Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Nationality Country Code.
+                     * @return Nationality Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * 
+                     * @deprecated
                      */
                     std::string GetNationality() const;
 
                     /**
                      * 判断参数 Nationality 是否已赋值
                      * @return Nationality 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取Recognition result of the text in the id photo.	
+                     * 获取Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CardInfo Recognition result of the text in the id photo.	
+                     * @return CardInfo Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -123,8 +133,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardInfoHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the token in the request parameters.
-                     * @return CardVerificationToken Specifies the token in the request parameters.
+                     * 获取Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackCardInfo Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    GeneralCard GetBackCardInfo() const;
+
+                    /**
+                     * 判断参数 BackCardInfo 是否已赋值
+                     * @return BackCardInfo 是否已赋值
+                     * 
+                     */
+                    bool BackCardInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The token passed in the input parameters.
+                     * @return CardVerificationToken The token passed in the input parameters.
                      * 
                      */
                     std::string GetCardVerificationToken() const;
@@ -137,8 +163,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardVerificationTokenHasBeenSet() const;
 
                     /**
-                     * 获取If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
-                     * @return HeadImageBase64 If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+                     * 获取Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
+                     * @return HeadImageBase64 Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
                      * 
                      */
                     std::string GetHeadImageBase64() const;
@@ -153,48 +179,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Indicates the status. valid values: 
-PASSED
+                     * Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+                     * Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_warnInfo;
                     bool m_warnInfoHasBeenSet;
 
                     /**
-                     * Country Code.
+                     * Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * Recognition result of the text in the id photo.	
+                     * Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     GeneralCard m_cardInfo;
                     bool m_cardInfoHasBeenSet;
 
                     /**
-                     * Specifies the token in the request parameters.
+                     * Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    GeneralCard m_backCardInfo;
+                    bool m_backCardInfoHasBeenSet;
+
+                    /**
+                     * The token passed in the input parameters.
                      */
                     std::string m_cardVerificationToken;
                     bool m_cardVerificationTokenHasBeenSet;
 
                     /**
-                     * If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+                     * Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
                      */
                     std::string m_headImageBase64;
                     bool m_headImageBase64HasBeenSet;

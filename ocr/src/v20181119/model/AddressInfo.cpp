@@ -24,7 +24,9 @@ AddressInfo::AddressInfo() :
     m_countryHasBeenSet(false),
     m_postalCodeHasBeenSet(false),
     m_subdivisionHasBeenSet(false),
+    m_districtHasBeenSet(false),
     m_cityHasBeenSet(false),
+    m_subdistrictHasBeenSet(false),
     m_formattedAddressHasBeenSet(false),
     m_lineOneHasBeenSet(false),
     m_lineTwoHasBeenSet(false),
@@ -69,6 +71,16 @@ CoreInternalOutcome AddressInfo::Deserialize(const rapidjson::Value &value)
         m_subdivisionHasBeenSet = true;
     }
 
+    if (value.HasMember("District") && !value["District"].IsNull())
+    {
+        if (!value["District"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AddressInfo.District` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_district = string(value["District"].GetString());
+        m_districtHasBeenSet = true;
+    }
+
     if (value.HasMember("City") && !value["City"].IsNull())
     {
         if (!value["City"].IsString())
@@ -77,6 +89,16 @@ CoreInternalOutcome AddressInfo::Deserialize(const rapidjson::Value &value)
         }
         m_city = string(value["City"].GetString());
         m_cityHasBeenSet = true;
+    }
+
+    if (value.HasMember("Subdistrict") && !value["Subdistrict"].IsNull())
+    {
+        if (!value["Subdistrict"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AddressInfo.Subdistrict` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subdistrict = string(value["Subdistrict"].GetString());
+        m_subdistrictHasBeenSet = true;
     }
 
     if (value.HasMember("FormattedAddress") && !value["FormattedAddress"].IsNull())
@@ -170,12 +192,28 @@ void AddressInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         value.AddMember(iKey, rapidjson::Value(m_subdivision.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_districtHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "District";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_district.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_cityHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "City";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_city.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subdistrictHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Subdistrict";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subdistrict.c_str(), allocator).Move(), allocator);
     }
 
     if (m_formattedAddressHasBeenSet)
@@ -277,6 +315,22 @@ bool AddressInfo::SubdivisionHasBeenSet() const
     return m_subdivisionHasBeenSet;
 }
 
+string AddressInfo::GetDistrict() const
+{
+    return m_district;
+}
+
+void AddressInfo::SetDistrict(const string& _district)
+{
+    m_district = _district;
+    m_districtHasBeenSet = true;
+}
+
+bool AddressInfo::DistrictHasBeenSet() const
+{
+    return m_districtHasBeenSet;
+}
+
 string AddressInfo::GetCity() const
 {
     return m_city;
@@ -291,6 +345,22 @@ void AddressInfo::SetCity(const string& _city)
 bool AddressInfo::CityHasBeenSet() const
 {
     return m_cityHasBeenSet;
+}
+
+string AddressInfo::GetSubdistrict() const
+{
+    return m_subdistrict;
+}
+
+void AddressInfo::SetSubdistrict(const string& _subdistrict)
+{
+    m_subdistrict = _subdistrict;
+    m_subdistrictHasBeenSet = true;
+}
+
+bool AddressInfo::SubdistrictHasBeenSet() const
+{
+    return m_subdistrictHasBeenSet;
 }
 
 string AddressInfo::GetFormattedAddress() const

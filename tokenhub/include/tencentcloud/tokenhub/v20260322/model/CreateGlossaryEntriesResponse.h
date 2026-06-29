@@ -14,56 +14,57 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_OCR_V20181119_MODEL_APPLYCARDVERIFICATIONEXTERNALRESPONSE_H_
-#define TENCENTCLOUD_OCR_V20181119_MODEL_APPLYCARDVERIFICATIONEXTERNALRESPONSE_H_
+#ifndef TENCENTCLOUD_TOKENHUB_V20260322_MODEL_CREATEGLOSSARYENTRIESRESPONSE_H_
+#define TENCENTCLOUD_TOKENHUB_V20260322_MODEL_CREATEGLOSSARYENTRIESRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tokenhub/v20260322/model/GlossaryEntryItem.h>
 
 
 namespace TencentCloud
 {
-    namespace Ocr
+    namespace Tokenhub
     {
-        namespace V20181119
+        namespace V20260322
         {
             namespace Model
             {
                 /**
-                * ApplyCardVerificationExternal response structure.
+                * CreateGlossaryEntries response structure.
                 */
-                class ApplyCardVerificationExternalResponse : public AbstractModel
+                class CreateGlossaryEntriesResponse : public AbstractModel
                 {
                 public:
-                    ApplyCardVerificationExternalResponse();
-                    ~ApplyCardVerificationExternalResponse() = default;
+                    CreateGlossaryEntriesResponse();
+                    ~CreateGlossaryEntriesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Unique token for the verification process, used to retrieve the result.
-                     * @return CardVerificationToken Unique token for the verification process, used to retrieve the result.
+                     * 获取List of successfully created terminology entries.
+                     * @return Entries List of successfully created terminology entries.
                      * 
                      */
-                    std::string GetCardVerificationToken() const;
+                    std::vector<GlossaryEntryItem> GetEntries() const;
 
                     /**
-                     * 判断参数 CardVerificationToken 是否已赋值
-                     * @return CardVerificationToken 是否已赋值
+                     * 判断参数 Entries 是否已赋值
+                     * @return Entries 是否已赋值
                      * 
                      */
-                    bool CardVerificationTokenHasBeenSet() const;
+                    bool EntriesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Unique token for the verification process, used to retrieve the result.
+                     * List of successfully created terminology entries.
                      */
-                    std::string m_cardVerificationToken;
-                    bool m_cardVerificationTokenHasBeenSet;
+                    std::vector<GlossaryEntryItem> m_entries;
+                    bool m_entriesHasBeenSet;
 
                 };
             }
@@ -71,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_OCR_V20181119_MODEL_APPLYCARDVERIFICATIONEXTERNALRESPONSE_H_
+#endif // !TENCENTCLOUD_TOKENHUB_V20260322_MODEL_CREATEGLOSSARYENTRIESRESPONSE_H_

@@ -97,18 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the sub-region.
+                     * 获取Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Subdivision Specifies the sub-region.
+                     * @return Subdivision Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubdivision() const;
 
                     /**
-                     * 设置Specifies the sub-region.
+                     * 设置Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subdivision Specifies the sub-region.
+                     * @param _subdivision Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -122,18 +122,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubdivisionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the city.
+                     * 获取District or county.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return City Specifies the city.
+                     * @return District District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetDistrict() const;
+
+                    /**
+                     * 设置District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _district District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetDistrict(const std::string& _district);
+
+                    /**
+                     * 判断参数 District 是否已赋值
+                     * @return District 是否已赋值
+                     * 
+                     */
+                    bool DistrictHasBeenSet() const;
+
+                    /**
+                     * 获取City name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return City City name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置Specifies the city.
+                     * 设置City name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _city Specifies the city.
+                     * @param _city City name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -147,18 +172,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CityHasBeenSet() const;
 
                     /**
-                     * 获取Complete address.
+                     * 获取Subdistrict or township.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FormattedAddress Complete address.
+                     * @return Subdistrict Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetSubdistrict() const;
+
+                    /**
+                     * 设置Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _subdistrict Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSubdistrict(const std::string& _subdistrict);
+
+                    /**
+                     * 判断参数 Subdistrict 是否已赋值
+                     * @return Subdistrict 是否已赋值
+                     * 
+                     */
+                    bool SubdistrictHasBeenSet() const;
+
+                    /**
+                     * 获取Formatted complete address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FormattedAddress Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFormattedAddress() const;
 
                     /**
-                     * 设置Complete address.
+                     * 设置Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formattedAddress Complete address.
+                     * @param _formattedAddress Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -272,18 +322,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LineFourHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the fifth line in the address bar.
+                     * 获取Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LineFive Specifies the fifth line in the address bar.
+                     * @return LineFive Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLineFive() const;
 
                     /**
-                     * 设置Specifies the fifth line in the address bar.
+                     * 设置Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _lineFive Specifies the fifth line in the address bar.
+                     * @param _lineFive Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -313,21 +363,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Specifies the sub-region.
+                     * Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subdivision;
                     bool m_subdivisionHasBeenSet;
 
                     /**
-                     * Specifies the city.
+                     * District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_district;
+                    bool m_districtHasBeenSet;
+
+                    /**
+                     * City name.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;
 
                     /**
-                     * Complete address.
+                     * Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subdistrict;
+                    bool m_subdistrictHasBeenSet;
+
+                    /**
+                     * Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_formattedAddress;
@@ -362,7 +426,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lineFourHasBeenSet;
 
                     /**
-                     * Specifies the fifth line in the address bar.
+                     * Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lineFive;

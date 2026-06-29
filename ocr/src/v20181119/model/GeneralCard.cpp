@@ -23,26 +23,41 @@ using namespace std;
 GeneralCard::GeneralCard() :
     m_licenseNumberHasBeenSet(false),
     m_personalNumberHasBeenSet(false),
-    m_passportCodeFirstHasBeenSet(false),
-    m_passportCodeSecondHasBeenSet(false),
-    m_expirationDateHasBeenSet(false),
-    m_dueDateHasBeenSet(false),
-    m_issuedDateHasBeenSet(false),
-    m_issuedAuthorityHasBeenSet(false),
-    m_issuedCountryHasBeenSet(false),
     m_fullNameHasBeenSet(false),
+    m_fullNameLocalHasBeenSet(false),
     m_firstNameHasBeenSet(false),
+    m_firstNameLocalHasBeenSet(false),
+    m_middleNameHasBeenSet(false),
+    m_middleNameLocalHasBeenSet(false),
     m_lastNameHasBeenSet(false),
+    m_lastNameLocalHasBeenSet(false),
     m_sexHasBeenSet(false),
-    m_ageHasBeenSet(false),
     m_birthdayHasBeenSet(false),
     m_birthPlaceHasBeenSet(false),
+    m_issuedDateHasBeenSet(false),
+    m_issuedAuthorityHasBeenSet(false),
+    m_issuedPlaceHasBeenSet(false),
+    m_issuedCountryHasBeenSet(false),
+    m_issuedCountryCodeHasBeenSet(false),
+    m_expirationDateHasBeenSet(false),
+    m_mRZLine1HasBeenSet(false),
+    m_mRZLine2HasBeenSet(false),
     m_nationalityHasBeenSet(false),
-    m_registrationNumberHasBeenSet(false),
     m_addressHasBeenSet(false),
-    m_fullNameLocalHasBeenSet(false),
-    m_firstNameLocalHasBeenSet(false),
-    m_lastNameLocalHasBeenSet(false)
+    m_religionHasBeenSet(false),
+    m_typeHasBeenSet(false),
+    m_bloodTypeHasBeenSet(false),
+    m_heightHasBeenSet(false),
+    m_weightHasBeenSet(false),
+    m_vehicleClassHasBeenSet(false),
+    m_restrictionsHasBeenSet(false),
+    m_endorsementHasBeenSet(false),
+    m_othersHasBeenSet(false),
+    m_passportCodeFirstHasBeenSet(false),
+    m_passportCodeSecondHasBeenSet(false),
+    m_dueDateHasBeenSet(false),
+    m_ageHasBeenSet(false),
+    m_registrationNumberHasBeenSet(false)
 {
 }
 
@@ -71,76 +86,6 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_personalNumberHasBeenSet = true;
     }
 
-    if (value.HasMember("PassportCodeFirst") && !value["PassportCodeFirst"].IsNull())
-    {
-        if (!value["PassportCodeFirst"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.PassportCodeFirst` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_passportCodeFirst = string(value["PassportCodeFirst"].GetString());
-        m_passportCodeFirstHasBeenSet = true;
-    }
-
-    if (value.HasMember("PassportCodeSecond") && !value["PassportCodeSecond"].IsNull())
-    {
-        if (!value["PassportCodeSecond"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.PassportCodeSecond` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_passportCodeSecond = string(value["PassportCodeSecond"].GetString());
-        m_passportCodeSecondHasBeenSet = true;
-    }
-
-    if (value.HasMember("ExpirationDate") && !value["ExpirationDate"].IsNull())
-    {
-        if (!value["ExpirationDate"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.ExpirationDate` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_expirationDate = string(value["ExpirationDate"].GetString());
-        m_expirationDateHasBeenSet = true;
-    }
-
-    if (value.HasMember("DueDate") && !value["DueDate"].IsNull())
-    {
-        if (!value["DueDate"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.DueDate` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_dueDate = string(value["DueDate"].GetString());
-        m_dueDateHasBeenSet = true;
-    }
-
-    if (value.HasMember("IssuedDate") && !value["IssuedDate"].IsNull())
-    {
-        if (!value["IssuedDate"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedDate` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_issuedDate = string(value["IssuedDate"].GetString());
-        m_issuedDateHasBeenSet = true;
-    }
-
-    if (value.HasMember("IssuedAuthority") && !value["IssuedAuthority"].IsNull())
-    {
-        if (!value["IssuedAuthority"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedAuthority` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_issuedAuthority = string(value["IssuedAuthority"].GetString());
-        m_issuedAuthorityHasBeenSet = true;
-    }
-
-    if (value.HasMember("IssuedCountry") && !value["IssuedCountry"].IsNull())
-    {
-        if (!value["IssuedCountry"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedCountry` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_issuedCountry = string(value["IssuedCountry"].GetString());
-        m_issuedCountryHasBeenSet = true;
-    }
-
     if (value.HasMember("FullName") && !value["FullName"].IsNull())
     {
         if (!value["FullName"].IsString())
@@ -149,6 +94,16 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         }
         m_fullName = string(value["FullName"].GetString());
         m_fullNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("FullNameLocal") && !value["FullNameLocal"].IsNull())
+    {
+        if (!value["FullNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.FullNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullNameLocal = string(value["FullNameLocal"].GetString());
+        m_fullNameLocalHasBeenSet = true;
     }
 
     if (value.HasMember("FirstName") && !value["FirstName"].IsNull())
@@ -161,6 +116,36 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_firstNameHasBeenSet = true;
     }
 
+    if (value.HasMember("FirstNameLocal") && !value["FirstNameLocal"].IsNull())
+    {
+        if (!value["FirstNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.FirstNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_firstNameLocal = string(value["FirstNameLocal"].GetString());
+        m_firstNameLocalHasBeenSet = true;
+    }
+
+    if (value.HasMember("MiddleName") && !value["MiddleName"].IsNull())
+    {
+        if (!value["MiddleName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.MiddleName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_middleName = string(value["MiddleName"].GetString());
+        m_middleNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("MiddleNameLocal") && !value["MiddleNameLocal"].IsNull())
+    {
+        if (!value["MiddleNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.MiddleNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_middleNameLocal = string(value["MiddleNameLocal"].GetString());
+        m_middleNameLocalHasBeenSet = true;
+    }
+
     if (value.HasMember("LastName") && !value["LastName"].IsNull())
     {
         if (!value["LastName"].IsString())
@@ -171,6 +156,16 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_lastNameHasBeenSet = true;
     }
 
+    if (value.HasMember("LastNameLocal") && !value["LastNameLocal"].IsNull())
+    {
+        if (!value["LastNameLocal"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.LastNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_lastNameLocal = string(value["LastNameLocal"].GetString());
+        m_lastNameLocalHasBeenSet = true;
+    }
+
     if (value.HasMember("Sex") && !value["Sex"].IsNull())
     {
         if (!value["Sex"].IsString())
@@ -179,16 +174,6 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         }
         m_sex = string(value["Sex"].GetString());
         m_sexHasBeenSet = true;
-    }
-
-    if (value.HasMember("Age") && !value["Age"].IsNull())
-    {
-        if (!value["Age"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.Age` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_age = string(value["Age"].GetString());
-        m_ageHasBeenSet = true;
     }
 
     if (value.HasMember("Birthday") && !value["Birthday"].IsNull())
@@ -211,6 +196,86 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_birthPlaceHasBeenSet = true;
     }
 
+    if (value.HasMember("IssuedDate") && !value["IssuedDate"].IsNull())
+    {
+        if (!value["IssuedDate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedDate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_issuedDate = string(value["IssuedDate"].GetString());
+        m_issuedDateHasBeenSet = true;
+    }
+
+    if (value.HasMember("IssuedAuthority") && !value["IssuedAuthority"].IsNull())
+    {
+        if (!value["IssuedAuthority"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedAuthority` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_issuedAuthority = string(value["IssuedAuthority"].GetString());
+        m_issuedAuthorityHasBeenSet = true;
+    }
+
+    if (value.HasMember("IssuedPlace") && !value["IssuedPlace"].IsNull())
+    {
+        if (!value["IssuedPlace"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedPlace` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_issuedPlace = string(value["IssuedPlace"].GetString());
+        m_issuedPlaceHasBeenSet = true;
+    }
+
+    if (value.HasMember("IssuedCountry") && !value["IssuedCountry"].IsNull())
+    {
+        if (!value["IssuedCountry"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedCountry` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_issuedCountry = string(value["IssuedCountry"].GetString());
+        m_issuedCountryHasBeenSet = true;
+    }
+
+    if (value.HasMember("IssuedCountryCode") && !value["IssuedCountryCode"].IsNull())
+    {
+        if (!value["IssuedCountryCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.IssuedCountryCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_issuedCountryCode = string(value["IssuedCountryCode"].GetString());
+        m_issuedCountryCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExpirationDate") && !value["ExpirationDate"].IsNull())
+    {
+        if (!value["ExpirationDate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.ExpirationDate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_expirationDate = string(value["ExpirationDate"].GetString());
+        m_expirationDateHasBeenSet = true;
+    }
+
+    if (value.HasMember("MRZLine1") && !value["MRZLine1"].IsNull())
+    {
+        if (!value["MRZLine1"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.MRZLine1` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mRZLine1 = string(value["MRZLine1"].GetString());
+        m_mRZLine1HasBeenSet = true;
+    }
+
+    if (value.HasMember("MRZLine2") && !value["MRZLine2"].IsNull())
+    {
+        if (!value["MRZLine2"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.MRZLine2` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mRZLine2 = string(value["MRZLine2"].GetString());
+        m_mRZLine2HasBeenSet = true;
+    }
+
     if (value.HasMember("Nationality") && !value["Nationality"].IsNull())
     {
         if (!value["Nationality"].IsString())
@@ -219,16 +284,6 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         }
         m_nationality = string(value["Nationality"].GetString());
         m_nationalityHasBeenSet = true;
-    }
-
-    if (value.HasMember("RegistrationNumber") && !value["RegistrationNumber"].IsNull())
-    {
-        if (!value["RegistrationNumber"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.RegistrationNumber` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_registrationNumber = string(value["RegistrationNumber"].GetString());
-        m_registrationNumberHasBeenSet = true;
     }
 
     if (value.HasMember("Address") && !value["Address"].IsNull())
@@ -248,34 +303,144 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_addressHasBeenSet = true;
     }
 
-    if (value.HasMember("FullNameLocal") && !value["FullNameLocal"].IsNull())
+    if (value.HasMember("Religion") && !value["Religion"].IsNull())
     {
-        if (!value["FullNameLocal"].IsString())
+        if (!value["Religion"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.FullNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Religion` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_fullNameLocal = string(value["FullNameLocal"].GetString());
-        m_fullNameLocalHasBeenSet = true;
+        m_religion = string(value["Religion"].GetString());
+        m_religionHasBeenSet = true;
     }
 
-    if (value.HasMember("FirstNameLocal") && !value["FirstNameLocal"].IsNull())
+    if (value.HasMember("Type") && !value["Type"].IsNull())
     {
-        if (!value["FirstNameLocal"].IsString())
+        if (!value["Type"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.FirstNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Type` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_firstNameLocal = string(value["FirstNameLocal"].GetString());
-        m_firstNameLocalHasBeenSet = true;
+        m_type = string(value["Type"].GetString());
+        m_typeHasBeenSet = true;
     }
 
-    if (value.HasMember("LastNameLocal") && !value["LastNameLocal"].IsNull())
+    if (value.HasMember("BloodType") && !value["BloodType"].IsNull())
     {
-        if (!value["LastNameLocal"].IsString())
+        if (!value["BloodType"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `GeneralCard.LastNameLocal` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.BloodType` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_lastNameLocal = string(value["LastNameLocal"].GetString());
-        m_lastNameLocalHasBeenSet = true;
+        m_bloodType = string(value["BloodType"].GetString());
+        m_bloodTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Height") && !value["Height"].IsNull())
+    {
+        if (!value["Height"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Height` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_height = string(value["Height"].GetString());
+        m_heightHasBeenSet = true;
+    }
+
+    if (value.HasMember("Weight") && !value["Weight"].IsNull())
+    {
+        if (!value["Weight"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Weight` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_weight = string(value["Weight"].GetString());
+        m_weightHasBeenSet = true;
+    }
+
+    if (value.HasMember("VehicleClass") && !value["VehicleClass"].IsNull())
+    {
+        if (!value["VehicleClass"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.VehicleClass` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vehicleClass = string(value["VehicleClass"].GetString());
+        m_vehicleClassHasBeenSet = true;
+    }
+
+    if (value.HasMember("Restrictions") && !value["Restrictions"].IsNull())
+    {
+        if (!value["Restrictions"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Restrictions` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_restrictions = string(value["Restrictions"].GetString());
+        m_restrictionsHasBeenSet = true;
+    }
+
+    if (value.HasMember("Endorsement") && !value["Endorsement"].IsNull())
+    {
+        if (!value["Endorsement"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Endorsement` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_endorsement = string(value["Endorsement"].GetString());
+        m_endorsementHasBeenSet = true;
+    }
+
+    if (value.HasMember("Others") && !value["Others"].IsNull())
+    {
+        if (!value["Others"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Others` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_others = string(value["Others"].GetString());
+        m_othersHasBeenSet = true;
+    }
+
+    if (value.HasMember("PassportCodeFirst") && !value["PassportCodeFirst"].IsNull())
+    {
+        if (!value["PassportCodeFirst"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.PassportCodeFirst` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_passportCodeFirst = string(value["PassportCodeFirst"].GetString());
+        m_passportCodeFirstHasBeenSet = true;
+    }
+
+    if (value.HasMember("PassportCodeSecond") && !value["PassportCodeSecond"].IsNull())
+    {
+        if (!value["PassportCodeSecond"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.PassportCodeSecond` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_passportCodeSecond = string(value["PassportCodeSecond"].GetString());
+        m_passportCodeSecondHasBeenSet = true;
+    }
+
+    if (value.HasMember("DueDate") && !value["DueDate"].IsNull())
+    {
+        if (!value["DueDate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.DueDate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dueDate = string(value["DueDate"].GetString());
+        m_dueDateHasBeenSet = true;
+    }
+
+    if (value.HasMember("Age") && !value["Age"].IsNull())
+    {
+        if (!value["Age"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.Age` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_age = string(value["Age"].GetString());
+        m_ageHasBeenSet = true;
+    }
+
+    if (value.HasMember("RegistrationNumber") && !value["RegistrationNumber"].IsNull())
+    {
+        if (!value["RegistrationNumber"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.RegistrationNumber` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_registrationNumber = string(value["RegistrationNumber"].GetString());
+        m_registrationNumberHasBeenSet = true;
     }
 
 
@@ -301,68 +466,20 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         value.AddMember(iKey, rapidjson::Value(m_personalNumber.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_passportCodeFirstHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PassportCodeFirst";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_passportCodeFirst.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_passportCodeSecondHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PassportCodeSecond";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_passportCodeSecond.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_expirationDateHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ExpirationDate";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_expirationDate.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_dueDateHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DueDate";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_dueDate.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_issuedDateHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IssuedDate";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_issuedDate.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_issuedAuthorityHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IssuedAuthority";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_issuedAuthority.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_issuedCountryHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IssuedCountry";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_issuedCountry.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_fullNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "FullName";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_fullName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fullNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fullNameLocal.c_str(), allocator).Move(), allocator);
     }
 
     if (m_firstNameHasBeenSet)
@@ -373,6 +490,30 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         value.AddMember(iKey, rapidjson::Value(m_firstName.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_firstNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FirstNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_firstNameLocal.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_middleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MiddleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_middleName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_middleNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MiddleNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_middleNameLocal.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_lastNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -381,20 +522,20 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         value.AddMember(iKey, rapidjson::Value(m_lastName.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_lastNameLocalHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LastNameLocal";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastNameLocal.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_sexHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Sex";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_sex.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_ageHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Age";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_age.c_str(), allocator).Move(), allocator);
     }
 
     if (m_birthdayHasBeenSet)
@@ -413,20 +554,76 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         value.AddMember(iKey, rapidjson::Value(m_birthPlace.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_issuedDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IssuedDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_issuedDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_issuedAuthorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IssuedAuthority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_issuedAuthority.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_issuedPlaceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IssuedPlace";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_issuedPlace.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_issuedCountryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IssuedCountry";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_issuedCountry.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_issuedCountryCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IssuedCountryCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_issuedCountryCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_expirationDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpirationDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_expirationDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mRZLine1HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MRZLine1";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mRZLine1.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mRZLine2HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MRZLine2";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mRZLine2.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_nationalityHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "Nationality";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_nationality.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_registrationNumberHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RegistrationNumber";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_registrationNumber.c_str(), allocator).Move(), allocator);
     }
 
     if (m_addressHasBeenSet)
@@ -438,28 +635,116 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         m_address.ToJsonObject(value[key.c_str()], allocator);
     }
 
-    if (m_fullNameLocalHasBeenSet)
+    if (m_religionHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FullNameLocal";
+        string key = "Religion";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_fullNameLocal.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_religion.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_firstNameLocalHasBeenSet)
+    if (m_typeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FirstNameLocal";
+        string key = "Type";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_firstNameLocal.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_type.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_lastNameLocalHasBeenSet)
+    if (m_bloodTypeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LastNameLocal";
+        string key = "BloodType";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_lastNameLocal.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_bloodType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_heightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Height";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_height.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_weightHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Weight";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_weight.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vehicleClassHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VehicleClass";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vehicleClass.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_restrictionsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Restrictions";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_restrictions.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_endorsementHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Endorsement";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_endorsement.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_othersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Others";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_others.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passportCodeFirstHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PassportCodeFirst";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_passportCodeFirst.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passportCodeSecondHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PassportCodeSecond";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_passportCodeSecond.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dueDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DueDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dueDate.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Age";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_age.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_registrationNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RegistrationNumber";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_registrationNumber.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -497,118 +782,6 @@ bool GeneralCard::PersonalNumberHasBeenSet() const
     return m_personalNumberHasBeenSet;
 }
 
-string GeneralCard::GetPassportCodeFirst() const
-{
-    return m_passportCodeFirst;
-}
-
-void GeneralCard::SetPassportCodeFirst(const string& _passportCodeFirst)
-{
-    m_passportCodeFirst = _passportCodeFirst;
-    m_passportCodeFirstHasBeenSet = true;
-}
-
-bool GeneralCard::PassportCodeFirstHasBeenSet() const
-{
-    return m_passportCodeFirstHasBeenSet;
-}
-
-string GeneralCard::GetPassportCodeSecond() const
-{
-    return m_passportCodeSecond;
-}
-
-void GeneralCard::SetPassportCodeSecond(const string& _passportCodeSecond)
-{
-    m_passportCodeSecond = _passportCodeSecond;
-    m_passportCodeSecondHasBeenSet = true;
-}
-
-bool GeneralCard::PassportCodeSecondHasBeenSet() const
-{
-    return m_passportCodeSecondHasBeenSet;
-}
-
-string GeneralCard::GetExpirationDate() const
-{
-    return m_expirationDate;
-}
-
-void GeneralCard::SetExpirationDate(const string& _expirationDate)
-{
-    m_expirationDate = _expirationDate;
-    m_expirationDateHasBeenSet = true;
-}
-
-bool GeneralCard::ExpirationDateHasBeenSet() const
-{
-    return m_expirationDateHasBeenSet;
-}
-
-string GeneralCard::GetDueDate() const
-{
-    return m_dueDate;
-}
-
-void GeneralCard::SetDueDate(const string& _dueDate)
-{
-    m_dueDate = _dueDate;
-    m_dueDateHasBeenSet = true;
-}
-
-bool GeneralCard::DueDateHasBeenSet() const
-{
-    return m_dueDateHasBeenSet;
-}
-
-string GeneralCard::GetIssuedDate() const
-{
-    return m_issuedDate;
-}
-
-void GeneralCard::SetIssuedDate(const string& _issuedDate)
-{
-    m_issuedDate = _issuedDate;
-    m_issuedDateHasBeenSet = true;
-}
-
-bool GeneralCard::IssuedDateHasBeenSet() const
-{
-    return m_issuedDateHasBeenSet;
-}
-
-string GeneralCard::GetIssuedAuthority() const
-{
-    return m_issuedAuthority;
-}
-
-void GeneralCard::SetIssuedAuthority(const string& _issuedAuthority)
-{
-    m_issuedAuthority = _issuedAuthority;
-    m_issuedAuthorityHasBeenSet = true;
-}
-
-bool GeneralCard::IssuedAuthorityHasBeenSet() const
-{
-    return m_issuedAuthorityHasBeenSet;
-}
-
-string GeneralCard::GetIssuedCountry() const
-{
-    return m_issuedCountry;
-}
-
-void GeneralCard::SetIssuedCountry(const string& _issuedCountry)
-{
-    m_issuedCountry = _issuedCountry;
-    m_issuedCountryHasBeenSet = true;
-}
-
-bool GeneralCard::IssuedCountryHasBeenSet() const
-{
-    return m_issuedCountryHasBeenSet;
-}
-
 string GeneralCard::GetFullName() const
 {
     return m_fullName;
@@ -623,6 +796,22 @@ void GeneralCard::SetFullName(const string& _fullName)
 bool GeneralCard::FullNameHasBeenSet() const
 {
     return m_fullNameHasBeenSet;
+}
+
+string GeneralCard::GetFullNameLocal() const
+{
+    return m_fullNameLocal;
+}
+
+void GeneralCard::SetFullNameLocal(const string& _fullNameLocal)
+{
+    m_fullNameLocal = _fullNameLocal;
+    m_fullNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::FullNameLocalHasBeenSet() const
+{
+    return m_fullNameLocalHasBeenSet;
 }
 
 string GeneralCard::GetFirstName() const
@@ -641,6 +830,54 @@ bool GeneralCard::FirstNameHasBeenSet() const
     return m_firstNameHasBeenSet;
 }
 
+string GeneralCard::GetFirstNameLocal() const
+{
+    return m_firstNameLocal;
+}
+
+void GeneralCard::SetFirstNameLocal(const string& _firstNameLocal)
+{
+    m_firstNameLocal = _firstNameLocal;
+    m_firstNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::FirstNameLocalHasBeenSet() const
+{
+    return m_firstNameLocalHasBeenSet;
+}
+
+string GeneralCard::GetMiddleName() const
+{
+    return m_middleName;
+}
+
+void GeneralCard::SetMiddleName(const string& _middleName)
+{
+    m_middleName = _middleName;
+    m_middleNameHasBeenSet = true;
+}
+
+bool GeneralCard::MiddleNameHasBeenSet() const
+{
+    return m_middleNameHasBeenSet;
+}
+
+string GeneralCard::GetMiddleNameLocal() const
+{
+    return m_middleNameLocal;
+}
+
+void GeneralCard::SetMiddleNameLocal(const string& _middleNameLocal)
+{
+    m_middleNameLocal = _middleNameLocal;
+    m_middleNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::MiddleNameLocalHasBeenSet() const
+{
+    return m_middleNameLocalHasBeenSet;
+}
+
 string GeneralCard::GetLastName() const
 {
     return m_lastName;
@@ -657,6 +894,22 @@ bool GeneralCard::LastNameHasBeenSet() const
     return m_lastNameHasBeenSet;
 }
 
+string GeneralCard::GetLastNameLocal() const
+{
+    return m_lastNameLocal;
+}
+
+void GeneralCard::SetLastNameLocal(const string& _lastNameLocal)
+{
+    m_lastNameLocal = _lastNameLocal;
+    m_lastNameLocalHasBeenSet = true;
+}
+
+bool GeneralCard::LastNameLocalHasBeenSet() const
+{
+    return m_lastNameLocalHasBeenSet;
+}
+
 string GeneralCard::GetSex() const
 {
     return m_sex;
@@ -671,22 +924,6 @@ void GeneralCard::SetSex(const string& _sex)
 bool GeneralCard::SexHasBeenSet() const
 {
     return m_sexHasBeenSet;
-}
-
-string GeneralCard::GetAge() const
-{
-    return m_age;
-}
-
-void GeneralCard::SetAge(const string& _age)
-{
-    m_age = _age;
-    m_ageHasBeenSet = true;
-}
-
-bool GeneralCard::AgeHasBeenSet() const
-{
-    return m_ageHasBeenSet;
 }
 
 string GeneralCard::GetBirthday() const
@@ -721,6 +958,134 @@ bool GeneralCard::BirthPlaceHasBeenSet() const
     return m_birthPlaceHasBeenSet;
 }
 
+string GeneralCard::GetIssuedDate() const
+{
+    return m_issuedDate;
+}
+
+void GeneralCard::SetIssuedDate(const string& _issuedDate)
+{
+    m_issuedDate = _issuedDate;
+    m_issuedDateHasBeenSet = true;
+}
+
+bool GeneralCard::IssuedDateHasBeenSet() const
+{
+    return m_issuedDateHasBeenSet;
+}
+
+string GeneralCard::GetIssuedAuthority() const
+{
+    return m_issuedAuthority;
+}
+
+void GeneralCard::SetIssuedAuthority(const string& _issuedAuthority)
+{
+    m_issuedAuthority = _issuedAuthority;
+    m_issuedAuthorityHasBeenSet = true;
+}
+
+bool GeneralCard::IssuedAuthorityHasBeenSet() const
+{
+    return m_issuedAuthorityHasBeenSet;
+}
+
+string GeneralCard::GetIssuedPlace() const
+{
+    return m_issuedPlace;
+}
+
+void GeneralCard::SetIssuedPlace(const string& _issuedPlace)
+{
+    m_issuedPlace = _issuedPlace;
+    m_issuedPlaceHasBeenSet = true;
+}
+
+bool GeneralCard::IssuedPlaceHasBeenSet() const
+{
+    return m_issuedPlaceHasBeenSet;
+}
+
+string GeneralCard::GetIssuedCountry() const
+{
+    return m_issuedCountry;
+}
+
+void GeneralCard::SetIssuedCountry(const string& _issuedCountry)
+{
+    m_issuedCountry = _issuedCountry;
+    m_issuedCountryHasBeenSet = true;
+}
+
+bool GeneralCard::IssuedCountryHasBeenSet() const
+{
+    return m_issuedCountryHasBeenSet;
+}
+
+string GeneralCard::GetIssuedCountryCode() const
+{
+    return m_issuedCountryCode;
+}
+
+void GeneralCard::SetIssuedCountryCode(const string& _issuedCountryCode)
+{
+    m_issuedCountryCode = _issuedCountryCode;
+    m_issuedCountryCodeHasBeenSet = true;
+}
+
+bool GeneralCard::IssuedCountryCodeHasBeenSet() const
+{
+    return m_issuedCountryCodeHasBeenSet;
+}
+
+string GeneralCard::GetExpirationDate() const
+{
+    return m_expirationDate;
+}
+
+void GeneralCard::SetExpirationDate(const string& _expirationDate)
+{
+    m_expirationDate = _expirationDate;
+    m_expirationDateHasBeenSet = true;
+}
+
+bool GeneralCard::ExpirationDateHasBeenSet() const
+{
+    return m_expirationDateHasBeenSet;
+}
+
+string GeneralCard::GetMRZLine1() const
+{
+    return m_mRZLine1;
+}
+
+void GeneralCard::SetMRZLine1(const string& _mRZLine1)
+{
+    m_mRZLine1 = _mRZLine1;
+    m_mRZLine1HasBeenSet = true;
+}
+
+bool GeneralCard::MRZLine1HasBeenSet() const
+{
+    return m_mRZLine1HasBeenSet;
+}
+
+string GeneralCard::GetMRZLine2() const
+{
+    return m_mRZLine2;
+}
+
+void GeneralCard::SetMRZLine2(const string& _mRZLine2)
+{
+    m_mRZLine2 = _mRZLine2;
+    m_mRZLine2HasBeenSet = true;
+}
+
+bool GeneralCard::MRZLine2HasBeenSet() const
+{
+    return m_mRZLine2HasBeenSet;
+}
+
 string GeneralCard::GetNationality() const
 {
     return m_nationality;
@@ -735,22 +1100,6 @@ void GeneralCard::SetNationality(const string& _nationality)
 bool GeneralCard::NationalityHasBeenSet() const
 {
     return m_nationalityHasBeenSet;
-}
-
-string GeneralCard::GetRegistrationNumber() const
-{
-    return m_registrationNumber;
-}
-
-void GeneralCard::SetRegistrationNumber(const string& _registrationNumber)
-{
-    m_registrationNumber = _registrationNumber;
-    m_registrationNumberHasBeenSet = true;
-}
-
-bool GeneralCard::RegistrationNumberHasBeenSet() const
-{
-    return m_registrationNumberHasBeenSet;
 }
 
 AddressInfo GeneralCard::GetAddress() const
@@ -769,51 +1118,227 @@ bool GeneralCard::AddressHasBeenSet() const
     return m_addressHasBeenSet;
 }
 
-string GeneralCard::GetFullNameLocal() const
+string GeneralCard::GetReligion() const
 {
-    return m_fullNameLocal;
+    return m_religion;
 }
 
-void GeneralCard::SetFullNameLocal(const string& _fullNameLocal)
+void GeneralCard::SetReligion(const string& _religion)
 {
-    m_fullNameLocal = _fullNameLocal;
-    m_fullNameLocalHasBeenSet = true;
+    m_religion = _religion;
+    m_religionHasBeenSet = true;
 }
 
-bool GeneralCard::FullNameLocalHasBeenSet() const
+bool GeneralCard::ReligionHasBeenSet() const
 {
-    return m_fullNameLocalHasBeenSet;
+    return m_religionHasBeenSet;
 }
 
-string GeneralCard::GetFirstNameLocal() const
+string GeneralCard::GetType() const
 {
-    return m_firstNameLocal;
+    return m_type;
 }
 
-void GeneralCard::SetFirstNameLocal(const string& _firstNameLocal)
+void GeneralCard::SetType(const string& _type)
 {
-    m_firstNameLocal = _firstNameLocal;
-    m_firstNameLocalHasBeenSet = true;
+    m_type = _type;
+    m_typeHasBeenSet = true;
 }
 
-bool GeneralCard::FirstNameLocalHasBeenSet() const
+bool GeneralCard::TypeHasBeenSet() const
 {
-    return m_firstNameLocalHasBeenSet;
+    return m_typeHasBeenSet;
 }
 
-string GeneralCard::GetLastNameLocal() const
+string GeneralCard::GetBloodType() const
 {
-    return m_lastNameLocal;
+    return m_bloodType;
 }
 
-void GeneralCard::SetLastNameLocal(const string& _lastNameLocal)
+void GeneralCard::SetBloodType(const string& _bloodType)
 {
-    m_lastNameLocal = _lastNameLocal;
-    m_lastNameLocalHasBeenSet = true;
+    m_bloodType = _bloodType;
+    m_bloodTypeHasBeenSet = true;
 }
 
-bool GeneralCard::LastNameLocalHasBeenSet() const
+bool GeneralCard::BloodTypeHasBeenSet() const
 {
-    return m_lastNameLocalHasBeenSet;
+    return m_bloodTypeHasBeenSet;
+}
+
+string GeneralCard::GetHeight() const
+{
+    return m_height;
+}
+
+void GeneralCard::SetHeight(const string& _height)
+{
+    m_height = _height;
+    m_heightHasBeenSet = true;
+}
+
+bool GeneralCard::HeightHasBeenSet() const
+{
+    return m_heightHasBeenSet;
+}
+
+string GeneralCard::GetWeight() const
+{
+    return m_weight;
+}
+
+void GeneralCard::SetWeight(const string& _weight)
+{
+    m_weight = _weight;
+    m_weightHasBeenSet = true;
+}
+
+bool GeneralCard::WeightHasBeenSet() const
+{
+    return m_weightHasBeenSet;
+}
+
+string GeneralCard::GetVehicleClass() const
+{
+    return m_vehicleClass;
+}
+
+void GeneralCard::SetVehicleClass(const string& _vehicleClass)
+{
+    m_vehicleClass = _vehicleClass;
+    m_vehicleClassHasBeenSet = true;
+}
+
+bool GeneralCard::VehicleClassHasBeenSet() const
+{
+    return m_vehicleClassHasBeenSet;
+}
+
+string GeneralCard::GetRestrictions() const
+{
+    return m_restrictions;
+}
+
+void GeneralCard::SetRestrictions(const string& _restrictions)
+{
+    m_restrictions = _restrictions;
+    m_restrictionsHasBeenSet = true;
+}
+
+bool GeneralCard::RestrictionsHasBeenSet() const
+{
+    return m_restrictionsHasBeenSet;
+}
+
+string GeneralCard::GetEndorsement() const
+{
+    return m_endorsement;
+}
+
+void GeneralCard::SetEndorsement(const string& _endorsement)
+{
+    m_endorsement = _endorsement;
+    m_endorsementHasBeenSet = true;
+}
+
+bool GeneralCard::EndorsementHasBeenSet() const
+{
+    return m_endorsementHasBeenSet;
+}
+
+string GeneralCard::GetOthers() const
+{
+    return m_others;
+}
+
+void GeneralCard::SetOthers(const string& _others)
+{
+    m_others = _others;
+    m_othersHasBeenSet = true;
+}
+
+bool GeneralCard::OthersHasBeenSet() const
+{
+    return m_othersHasBeenSet;
+}
+
+string GeneralCard::GetPassportCodeFirst() const
+{
+    return m_passportCodeFirst;
+}
+
+void GeneralCard::SetPassportCodeFirst(const string& _passportCodeFirst)
+{
+    m_passportCodeFirst = _passportCodeFirst;
+    m_passportCodeFirstHasBeenSet = true;
+}
+
+bool GeneralCard::PassportCodeFirstHasBeenSet() const
+{
+    return m_passportCodeFirstHasBeenSet;
+}
+
+string GeneralCard::GetPassportCodeSecond() const
+{
+    return m_passportCodeSecond;
+}
+
+void GeneralCard::SetPassportCodeSecond(const string& _passportCodeSecond)
+{
+    m_passportCodeSecond = _passportCodeSecond;
+    m_passportCodeSecondHasBeenSet = true;
+}
+
+bool GeneralCard::PassportCodeSecondHasBeenSet() const
+{
+    return m_passportCodeSecondHasBeenSet;
+}
+
+string GeneralCard::GetDueDate() const
+{
+    return m_dueDate;
+}
+
+void GeneralCard::SetDueDate(const string& _dueDate)
+{
+    m_dueDate = _dueDate;
+    m_dueDateHasBeenSet = true;
+}
+
+bool GeneralCard::DueDateHasBeenSet() const
+{
+    return m_dueDateHasBeenSet;
+}
+
+string GeneralCard::GetAge() const
+{
+    return m_age;
+}
+
+void GeneralCard::SetAge(const string& _age)
+{
+    m_age = _age;
+    m_ageHasBeenSet = true;
+}
+
+bool GeneralCard::AgeHasBeenSet() const
+{
+    return m_ageHasBeenSet;
+}
+
+string GeneralCard::GetRegistrationNumber() const
+{
+    return m_registrationNumber;
+}
+
+void GeneralCard::SetRegistrationNumber(const string& _registrationNumber)
+{
+    m_registrationNumber = _registrationNumber;
+    m_registrationNumberHasBeenSet = true;
+}
+
+bool GeneralCard::RegistrationNumberHasBeenSet() const
+{
+    return m_registrationNumberHasBeenSet;
 }
 

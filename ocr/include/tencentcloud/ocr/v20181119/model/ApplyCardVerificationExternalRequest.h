@@ -43,127 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
-                     * @return Nationality Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+                     * 获取Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+                     * @return Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
                      * 
                      */
                     std::string GetNationality() const;
 
                     /**
-                     * 设置Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
-                     * @param _nationality Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+                     * 设置Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+                     * @param _nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
                      * 
                      */
                     void SetNationality(const std::string& _nationality);
@@ -176,31 +64,15 @@ AUTO: supports cards and documents from 200+ countries
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
-                     * @return CardType Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+                     * 获取Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+                     * @return CardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
                      * 
                      */
                     std::string GetCardType() const;
 
                     /**
-                     * 设置Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
-                     * @param _cardType Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+                     * 设置Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+                     * @param _cardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
                      * 
                      */
                     void SetCardType(const std::string& _cardType);
@@ -213,23 +85,31 @@ RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, C
                     bool CardTypeHasBeenSet() const;
 
                     /**
-                     * 获取The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @return ImageBase64Front The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 获取Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+                     * @return ImageBase64Front Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      * 
                      */
                     std::string GetImageBase64Front() const;
 
                     /**
-                     * 设置The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @param _imageBase64Front The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 设置Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+                     * @param _imageBase64Front Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      * 
                      */
                     void SetImageBase64Front(const std::string& _imageBase64Front);
@@ -243,10 +123,10 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
                     /**
                      * 获取The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
                      * @return ImageBase64Back The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
                      * 
                      */
@@ -254,10 +134,10 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
                     /**
                      * 设置The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
                      * @param _imageBase64Back The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
                      * 
                      */
@@ -271,23 +151,31 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                     bool ImageBase64BackHasBeenSet() const;
 
                     /**
-                     * 获取Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @return ImageUrlFront Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 获取URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+                     * @return ImageUrlFront URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      * 
                      */
                     std::string GetImageUrlFront() const;
 
                     /**
-                     * 设置Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-                     * @param _imageUrlFront Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * 设置URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+                     * @param _imageUrlFront URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      * 
                      */
                     void SetImageUrlFront(const std::string& _imageUrlFront);
@@ -300,27 +188,31 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                     bool ImageUrlFrontHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
-                     * @return ImageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+                     * 获取URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+                     * @return ImageUrlBack URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
                      * 
                      */
                     std::string GetImageUrlBack() const;
 
                     /**
-                     * 设置Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
-                     * @param _imageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+                     * 设置URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+                     * @param _imageUrlBack URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
                      * 
                      */
                     void SetImageUrlBack(const std::string& _imageUrlBack);
@@ -333,15 +225,35 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                     bool ImageUrlBackHasBeenSet() const;
 
                     /**
-                     * 获取Whether to extract the ID portrait. Default value: false.
-                     * @return ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+                     * 获取Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+                     * @return ReturnHeadImage Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
                      * 
                      */
                     bool GetReturnHeadImage() const;
 
                     /**
-                     * 设置Whether to extract the ID portrait. Default value: false.
-                     * @param _returnHeadImage Whether to extract the ID portrait. Default value: false.
+                     * 设置Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+                     * @param _returnHeadImage Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
                      * 
                      */
                     void SetReturnHeadImage(const bool& _returnHeadImage);
@@ -356,84 +268,62 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
                 private:
 
                     /**
-                     * Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+                     * Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+                     * Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
                      */
                     std::string m_cardType;
                     bool m_cardTypeHasBeenSet;
 
                     /**
-                     * The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      */
                     std::string m_imageBase64Front;
                     bool m_imageBase64FrontHasBeenSet;
 
                     /**
                      * The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
                      */
                     std::string m_imageBase64Back;
                     bool m_imageBase64BackHasBeenSet;
 
                     /**
-                     * Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+                     * URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
                      */
                     std::string m_imageUrlFront;
                     bool m_imageUrlFrontHasBeenSet;
 
                     /**
-                     * Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+                     * URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
                      */
                     std::string m_imageUrlBack;
                     bool m_imageUrlBackHasBeenSet;
 
                     /**
-                     * Whether to extract the ID portrait. Default value: false.
+                     * Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
                      */
                     bool m_returnHeadImage;
                     bool m_returnHeadImageHasBeenSet;

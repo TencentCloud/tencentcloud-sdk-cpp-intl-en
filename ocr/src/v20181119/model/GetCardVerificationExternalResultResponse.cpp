@@ -28,6 +28,7 @@ GetCardVerificationExternalResultResponse::GetCardVerificationExternalResultResp
     m_warnInfoHasBeenSet(false),
     m_nationalityHasBeenSet(false),
     m_cardInfoHasBeenSet(false),
+    m_backCardInfoHasBeenSet(false),
     m_cardVerificationTokenHasBeenSet(false),
     m_headImageBase64HasBeenSet(false)
 {
@@ -117,6 +118,23 @@ CoreInternalOutcome GetCardVerificationExternalResultResponse::Deserialize(const
         m_cardInfoHasBeenSet = true;
     }
 
+    if (rsp.HasMember("BackCardInfo") && !rsp["BackCardInfo"].IsNull())
+    {
+        if (!rsp["BackCardInfo"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `BackCardInfo` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_backCardInfo.Deserialize(rsp["BackCardInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_backCardInfoHasBeenSet = true;
+    }
+
     if (rsp.HasMember("CardVerificationToken") && !rsp["CardVerificationToken"].IsNull())
     {
         if (!rsp["CardVerificationToken"].IsString())
@@ -185,6 +203,15 @@ string GetCardVerificationExternalResultResponse::ToJsonString() const
         m_cardInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
+    if (m_backCardInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BackCardInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_backCardInfo.ToJsonObject(value[key.c_str()], allocator);
+    }
+
     if (m_cardVerificationTokenHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -251,6 +278,16 @@ GeneralCard GetCardVerificationExternalResultResponse::GetCardInfo() const
 bool GetCardVerificationExternalResultResponse::CardInfoHasBeenSet() const
 {
     return m_cardInfoHasBeenSet;
+}
+
+GeneralCard GetCardVerificationExternalResultResponse::GetBackCardInfo() const
+{
+    return m_backCardInfo;
+}
+
+bool GetCardVerificationExternalResultResponse::BackCardInfoHasBeenSet() const
+{
+    return m_backCardInfoHasBeenSet;
 }
 
 string GetCardVerificationExternalResultResponse::GetCardVerificationToken() const
