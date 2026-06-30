@@ -101,35 +101,35 @@ Only data queries at the granularity of days are supported. Take the day in the 
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Objects to be sorted. Valid values:
-`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
-                     * @return Metric Objects to be sorted. Valid values:
-`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+                     * 获取Sorting object, which supports the following formats.
+url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+district: specifies the province or country/region sorting order. supported filters are flux and request.
+isp: specifies the carrier sorting order. supported filters are flux and request.
+host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
+                     * @return Metric Sorting object, which supports the following formats.
+url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+district: specifies the province or country/region sorting order. supported filters are flux and request.
+isp: specifies the carrier sorting order. supported filters are flux and request.
+host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
                      * 
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置Objects to be sorted. Valid values:
-`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
-                     * @param _metric Objects to be sorted. Valid values:
-`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+                     * 设置Sorting object, which supports the following formats.
+url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+district: specifies the province or country/region sorting order. supported filters are flux and request.
+isp: specifies the carrier sorting order. supported filters are flux and request.
+host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
+                     * @param _metric Sorting object, which supports the following formats.
+url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+district: specifies the province or country/region sorting order. supported filters are flux and request.
+isp: specifies the carrier sorting order. supported filters are flux and request.
+host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
                      * 
                      */
                     void SetMetric(const std::string& _metric);
@@ -429,12 +429,12 @@ Only data queries at the granularity of days are supported. Take the day in the 
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Objects to be sorted. Valid values:
-`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-`isp`: sorts ISPs. Supported filters are `flux` and `request`.
-`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+                     * Sorting object, which supports the following formats.
+url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+district: specifies the province or country/region sorting order. supported filters are flux and request.
+isp: specifies the carrier sorting order. supported filters are flux and request.
+host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;

@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of domain names connected to CDN
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Domains List of domain names connected to CDN
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取List of domain names integrated with CDN.
+                     * @return Domains List of domain names integrated with CDN.
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
@@ -60,10 +58,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取List of CDN domain names with certificates configured
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return CertifiedDomains List of CDN domain names with certificates configured
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取List of CDN domain names with configured certificates.
+                     * @return CertifiedDomains List of CDN domain names with configured certificates.
                      * 
                      */
                     std::vector<std::string> GetCertifiedDomains() const;
@@ -78,15 +74,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * List of domain names connected to CDN
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * List of domain names integrated with CDN.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * List of CDN domain names with certificates configured
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * List of CDN domain names with configured certificates.
                      */
                     std::vector<std::string> m_certifiedDomains;
                     bool m_certifiedDomainsHasBeenSet;

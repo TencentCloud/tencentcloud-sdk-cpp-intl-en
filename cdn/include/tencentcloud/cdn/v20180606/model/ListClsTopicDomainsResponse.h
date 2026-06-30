@@ -129,10 +129,8 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of log topic
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return UpdateTime Last modified time of log topic
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Latest update time of the log topic.
+                     * @return UpdateTime Latest update time of the log topic.
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -143,6 +141,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 
                      */
                     bool UpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to inherit the domain name tag.
+                     * @return InheritDomainTags Specifies whether to inherit the domain name tag.
+                     * 
+                     */
+                    bool GetInheritDomainTags() const;
+
+                    /**
+                     * 判断参数 InheritDomainTags 是否已赋值
+                     * @return InheritDomainTags 是否已赋值
+                     * 
+                     */
+                    bool InheritDomainTagsHasBeenSet() const;
 
                 private:
 
@@ -183,11 +195,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Last modified time of log topic
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Latest update time of the log topic.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Specifies whether to inherit the domain name tag.
+                     */
+                    bool m_inheritDomainTags;
+                    bool m_inheritDomainTagsHasBeenSet;
 
                 };
             }

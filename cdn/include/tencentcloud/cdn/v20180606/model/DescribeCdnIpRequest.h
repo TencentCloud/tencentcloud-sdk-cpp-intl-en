@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IPs to be queried
-                     * @return Ips List of IPs to be queried
+                     * 获取IP list you want to query. supports 1-20 ip inquiries at a time.
+                     * @return Ips IP list you want to query. supports 1-20 ip inquiries at a time.
                      * 
                      */
                     std::vector<std::string> GetIps() const;
 
                     /**
-                     * 设置List of IPs to be queried
-                     * @param _ips List of IPs to be queried
+                     * 设置IP list you want to query. supports 1-20 ip inquiries at a time.
+                     * @param _ips IP list you want to query. supports 1-20 ip inquiries at a time.
                      * 
                      */
                     void SetIps(const std::vector<std::string>& _ips);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IPs to be queried
+                     * IP list you want to query. supports 1-20 ip inquiries at a time.
                      */
                     std::vector<std::string> m_ips;
                     bool m_ipsHasBeenSet;

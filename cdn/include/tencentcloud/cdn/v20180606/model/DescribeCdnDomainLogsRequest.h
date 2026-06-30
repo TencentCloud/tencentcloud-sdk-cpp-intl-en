@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Starting time, such as `2019-09-04 00:00:00`
-                     * @return StartTime Starting time, such as `2019-09-04 00:00:00`
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Starting time, such as `2019-09-04 00:00:00`
-                     * @param _startTime Starting time, such as `2019-09-04 00:00:00`
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time, such as `2019-09-04 12:00:00`
-                     * @return EndTime End time, such as `2019-09-04 12:00:00`
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time, such as `2019-09-04 12:00:00`
-                     * @param _endTime End time, such as `2019-09-04 12:00:00`
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -148,31 +148,27 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
-                     * @return Area Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+                     * 获取Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+                     * @return Area Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
-                     * @param _area Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+                     * 设置Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+                     * @param _area Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -185,19 +181,19 @@ Default value: `mainland`.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
-                     * @return LogType Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+                     * 获取Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
+                     * @return LogType Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
-                     * @param _logType Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+                     * 设置Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
+                     * @param _logType Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -218,13 +214,13 @@ Default value: `mainland`.
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Starting time, such as `2019-09-04 00:00:00`
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time, such as `2019-09-04 12:00:00`
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -242,18 +238,17 @@ Default value: `mainland`.
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+                     * Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+                     * Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;

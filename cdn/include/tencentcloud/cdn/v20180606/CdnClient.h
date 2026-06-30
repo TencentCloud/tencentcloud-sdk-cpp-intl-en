@@ -29,8 +29,6 @@
 #include <tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicResponse.h>
-#include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h>
-#include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteCdnDomainRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteCdnDomainResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DeleteClsLogTopicRequest.h>
@@ -73,16 +71,12 @@
 #include <tencentcloud/cdn/v20180606/model/DescribeReportDataResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeUrlViolationsRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DescribeUrlViolationsResponse.h>
-#include <tencentcloud/cdn/v20180606/model/DisableCachesRequest.h>
-#include <tencentcloud/cdn/v20180606/model/DisableCachesResponse.h>
 #include <tencentcloud/cdn/v20180606/model/DisableClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/DisableClsLogTopicResponse.h>
-#include <tencentcloud/cdn/v20180606/model/EnableCachesRequest.h>
-#include <tencentcloud/cdn/v20180606/model/EnableCachesResponse.h>
+#include <tencentcloud/cdn/v20180606/model/DuplicateDomainConfigRequest.h>
+#include <tencentcloud/cdn/v20180606/model/DuplicateDomainConfigResponse.h>
 #include <tencentcloud/cdn/v20180606/model/EnableClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/EnableClsLogTopicResponse.h>
-#include <tencentcloud/cdn/v20180606/model/GetDisableRecordsRequest.h>
-#include <tencentcloud/cdn/v20180606/model/GetDisableRecordsResponse.h>
 #include <tencentcloud/cdn/v20180606/model/ListClsLogTopicsRequest.h>
 #include <tencentcloud/cdn/v20180606/model/ListClsLogTopicsResponse.h>
 #include <tencentcloud/cdn/v20180606/model/ListClsTopicDomainsRequest.h>
@@ -109,8 +103,6 @@
 #include <tencentcloud/cdn/v20180606/model/UpdateDomainConfigResponse.h>
 #include <tencentcloud/cdn/v20180606/model/UpdatePayTypeRequest.h>
 #include <tencentcloud/cdn/v20180606/model/UpdatePayTypeResponse.h>
-#include <tencentcloud/cdn/v20180606/model/UpdateScdnDomainRequest.h>
-#include <tencentcloud/cdn/v20180606/model/UpdateScdnDomainResponse.h>
 
 
 namespace TencentCloud
@@ -134,9 +126,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClsLogTopicResponse> CreateClsLogTopicOutcome;
                 typedef std::future<CreateClsLogTopicOutcome> CreateClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::CreateClsLogTopicRequest&, CreateClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClsLogTopicAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTaskOutcome;
-                typedef std::future<CreateScdnFailedLogTaskOutcome> CreateScdnFailedLogTaskOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::CreateScdnFailedLogTaskRequest&, CreateScdnFailedLogTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScdnFailedLogTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCdnDomainResponse> DeleteCdnDomainOutcome;
                 typedef std::future<DeleteCdnDomainOutcome> DeleteCdnDomainOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DeleteCdnDomainRequest&, DeleteCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCdnDomainAsyncHandler;
@@ -200,21 +189,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUrlViolationsResponse> DescribeUrlViolationsOutcome;
                 typedef std::future<DescribeUrlViolationsOutcome> DescribeUrlViolationsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DescribeUrlViolationsRequest&, DescribeUrlViolationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUrlViolationsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DisableCachesResponse> DisableCachesOutcome;
-                typedef std::future<DisableCachesOutcome> DisableCachesOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::DisableCachesRequest&, DisableCachesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableCachesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisableClsLogTopicResponse> DisableClsLogTopicOutcome;
                 typedef std::future<DisableClsLogTopicOutcome> DisableClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::DisableClsLogTopicRequest&, DisableClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableClsLogTopicAsyncHandler;
-                typedef Outcome<Core::Error, Model::EnableCachesResponse> EnableCachesOutcome;
-                typedef std::future<EnableCachesOutcome> EnableCachesOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::EnableCachesRequest&, EnableCachesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableCachesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DuplicateDomainConfigResponse> DuplicateDomainConfigOutcome;
+                typedef std::future<DuplicateDomainConfigOutcome> DuplicateDomainConfigOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::DuplicateDomainConfigRequest&, DuplicateDomainConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DuplicateDomainConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableClsLogTopicResponse> EnableClsLogTopicOutcome;
                 typedef std::future<EnableClsLogTopicOutcome> EnableClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::EnableClsLogTopicRequest&, EnableClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableClsLogTopicAsyncHandler;
-                typedef Outcome<Core::Error, Model::GetDisableRecordsResponse> GetDisableRecordsOutcome;
-                typedef std::future<GetDisableRecordsOutcome> GetDisableRecordsOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::GetDisableRecordsRequest&, GetDisableRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetDisableRecordsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ListClsLogTopicsResponse> ListClsLogTopicsOutcome;
                 typedef std::future<ListClsLogTopicsOutcome> ListClsLogTopicsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::ListClsLogTopicsRequest&, ListClsLogTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListClsLogTopicsAsyncHandler;
@@ -254,9 +237,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdatePayTypeResponse> UpdatePayTypeOutcome;
                 typedef std::future<UpdatePayTypeOutcome> UpdatePayTypeOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::UpdatePayTypeRequest&, UpdatePayTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePayTypeAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpdateScdnDomainResponse> UpdateScdnDomainOutcome;
-                typedef std::future<UpdateScdnDomainOutcome> UpdateScdnDomainOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::UpdateScdnDomainRequest&, UpdateScdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateScdnDomainAsyncHandler;
 
 
 
@@ -286,15 +266,6 @@ namespace TencentCloud
                 CreateClsLogTopicOutcome CreateClsLogTopic(const Model::CreateClsLogTopicRequest &request);
                 void CreateClsLogTopicAsync(const Model::CreateClsLogTopicRequest& request, const CreateClsLogTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateClsLogTopicOutcomeCallable CreateClsLogTopicCallable(const Model::CreateClsLogTopicRequest& request);
-
-                /**
-                 *This API is used to recreate a failed event log task.
-                 * @param req CreateScdnFailedLogTaskRequest
-                 * @return CreateScdnFailedLogTaskOutcome
-                 */
-                CreateScdnFailedLogTaskOutcome CreateScdnFailedLogTask(const Model::CreateScdnFailedLogTaskRequest &request);
-                void CreateScdnFailedLogTaskAsync(const Model::CreateScdnFailedLogTaskRequest& request, const CreateScdnFailedLogTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateScdnFailedLogTaskOutcomeCallable CreateScdnFailedLogTaskCallable(const Model::CreateScdnFailedLogTaskRequest& request);
 
                 /**
                  *This API is used to delete a specified acceleration domain name.
@@ -358,6 +329,7 @@ If you have a strong requirement for data timeliness, it is recommended to use t
 
                 /**
                  *This API is used to query CDN IP ownership.
+This API is used to create and bind a policy. (Note: The API request frequency limit follows CDN's restriction: 200 requests/10 minutes).
                  * @param req DescribeCdnIpRequest
                  * @return DescribeCdnIpOutcome
                  */
@@ -366,7 +338,8 @@ If you have a strong requirement for data timeliness, it is recommended to use t
                 DescribeCdnIpOutcomeCallable DescribeCdnIpCallable(const Model::DescribeCdnIpRequest& request);
 
                 /**
-                 *This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
+                 ***This API is deprecated.**.
+This API is used to query the IP information of CDN origin-pull nodes. (Note: The replace API is DescribeIpStatus.).
                  * @param req DescribeCdnOriginIpRequest
                  * @return DescribeCdnOriginIpOutcome
                  */
@@ -507,23 +480,14 @@ If you have migrated your ECDN service to CDN, you can use the [DescribeIpStatus
                 DescribeReportDataOutcomeCallable DescribeReportDataCallable(const Model::DescribeReportDataRequest& request);
 
                 /**
-                 *This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-It corresponds to the **Pornography Detection** page on the CDN Console.
+                 *This API is used to query the URL list with domain violations detected by the CDN system scan and their status.
+This API is used to correspond to the content compliant webpage in the CDN console.
                  * @param req DescribeUrlViolationsRequest
                  * @return DescribeUrlViolationsOutcome
                  */
                 DescribeUrlViolationsOutcome DescribeUrlViolations(const Model::DescribeUrlViolationsRequest &request);
                 void DescribeUrlViolationsAsync(const Model::DescribeUrlViolationsRequest& request, const DescribeUrlViolationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUrlViolationsOutcomeCallable DescribeUrlViolationsCallable(const Model::DescribeUrlViolationsRequest& request);
-
-                /**
-                 *This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
-                 * @param req DisableCachesRequest
-                 * @return DisableCachesOutcome
-                 */
-                DisableCachesOutcome DisableCaches(const Model::DisableCachesRequest &request);
-                void DisableCachesAsync(const Model::DisableCachesRequest& request, const DisableCachesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DisableCachesOutcomeCallable DisableCachesCallable(const Model::DisableCachesRequest& request);
 
                 /**
                  *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
@@ -536,13 +500,13 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 DisableClsLogTopicOutcomeCallable DisableClsLogTopicCallable(const Model::DisableClsLogTopicRequest& request);
 
                 /**
-                 *This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
-                 * @param req EnableCachesRequest
-                 * @return EnableCachesOutcome
+                 *This API is used to copy the configuration of a reference domain to a new domain name. Self-owned certificates and customization options are not currently supported.
+                 * @param req DuplicateDomainConfigRequest
+                 * @return DuplicateDomainConfigOutcome
                  */
-                EnableCachesOutcome EnableCaches(const Model::EnableCachesRequest &request);
-                void EnableCachesAsync(const Model::EnableCachesRequest& request, const EnableCachesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                EnableCachesOutcomeCallable EnableCachesCallable(const Model::EnableCachesRequest& request);
+                DuplicateDomainConfigOutcome DuplicateDomainConfig(const Model::DuplicateDomainConfigRequest &request);
+                void DuplicateDomainConfigAsync(const Model::DuplicateDomainConfigRequest& request, const DuplicateDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DuplicateDomainConfigOutcomeCallable DuplicateDomainConfigCallable(const Model::DuplicateDomainConfigRequest& request);
 
                 /**
                  *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
@@ -552,15 +516,6 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 EnableClsLogTopicOutcome EnableClsLogTopic(const Model::EnableClsLogTopicRequest &request);
                 void EnableClsLogTopicAsync(const Model::EnableClsLogTopicRequest& request, const EnableClsLogTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnableClsLogTopicOutcomeCallable EnableClsLogTopicCallable(const Model::EnableClsLogTopicRequest& request);
-
-                /**
-                 *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
-                 * @param req GetDisableRecordsRequest
-                 * @return GetDisableRecordsOutcome
-                 */
-                GetDisableRecordsOutcome GetDisableRecords(const Model::GetDisableRecordsRequest &request);
-                void GetDisableRecordsAsync(const Model::GetDisableRecordsRequest& request, const GetDisableRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetDisableRecordsOutcomeCallable GetDisableRecordsCallable(const Model::GetDisableRecordsRequest& request);
 
                 /**
                  *This API is used to display the list of log topics. Note: a logset can contain up to 10 log topics.
@@ -696,15 +651,6 @@ This API is used for CloudAudit-related operations. The input parameters may con
                 UpdatePayTypeOutcome UpdatePayType(const Model::UpdatePayTypeRequest &request);
                 void UpdatePayTypeAsync(const Model::UpdatePayTypeRequest& request, const UpdatePayTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdatePayTypeOutcomeCallable UpdatePayTypeCallable(const Model::UpdatePayTypeRequest& request);
-
-                /**
-                 *This API is used to modify security configurations of SCDN acceleration domain names.
-                 * @param req UpdateScdnDomainRequest
-                 * @return UpdateScdnDomainOutcome
-                 */
-                UpdateScdnDomainOutcome UpdateScdnDomain(const Model::UpdateScdnDomainRequest &request);
-                void UpdateScdnDomainAsync(const Model::UpdateScdnDomainRequest& request, const UpdateScdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpdateScdnDomainOutcomeCallable UpdateScdnDomainCallable(const Model::UpdateScdnDomainRequest& request);
 
             };
         }

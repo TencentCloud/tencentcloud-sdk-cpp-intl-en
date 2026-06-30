@@ -190,56 +190,6 @@ CdnClient::CreateClsLogTopicOutcomeCallable CdnClient::CreateClsLogTopicCallable
     return prom->get_future();
 }
 
-CdnClient::CreateScdnFailedLogTaskOutcome CdnClient::CreateScdnFailedLogTask(const CreateScdnFailedLogTaskRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateScdnFailedLogTask");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateScdnFailedLogTaskResponse rsp = CreateScdnFailedLogTaskResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateScdnFailedLogTaskOutcome(rsp);
-        else
-            return CreateScdnFailedLogTaskOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateScdnFailedLogTaskOutcome(outcome.GetError());
-    }
-}
-
-void CdnClient::CreateScdnFailedLogTaskAsync(const CreateScdnFailedLogTaskRequest& request, const CreateScdnFailedLogTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const CreateScdnFailedLogTaskRequest&;
-    using Resp = CreateScdnFailedLogTaskResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "CreateScdnFailedLogTask", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CdnClient::CreateScdnFailedLogTaskOutcomeCallable CdnClient::CreateScdnFailedLogTaskCallable(const CreateScdnFailedLogTaskRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<CreateScdnFailedLogTaskOutcome>>();
-    CreateScdnFailedLogTaskAsync(
-    request,
-    [prom](
-        const CdnClient*,
-        const CreateScdnFailedLogTaskRequest&,
-        CreateScdnFailedLogTaskOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CdnClient::DeleteCdnDomainOutcome CdnClient::DeleteCdnDomain(const DeleteCdnDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCdnDomain");
@@ -1290,56 +1240,6 @@ CdnClient::DescribeUrlViolationsOutcomeCallable CdnClient::DescribeUrlViolations
     return prom->get_future();
 }
 
-CdnClient::DisableCachesOutcome CdnClient::DisableCaches(const DisableCachesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DisableCaches");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DisableCachesResponse rsp = DisableCachesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DisableCachesOutcome(rsp);
-        else
-            return DisableCachesOutcome(o.GetError());
-    }
-    else
-    {
-        return DisableCachesOutcome(outcome.GetError());
-    }
-}
-
-void CdnClient::DisableCachesAsync(const DisableCachesRequest& request, const DisableCachesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DisableCachesRequest&;
-    using Resp = DisableCachesResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DisableCaches", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CdnClient::DisableCachesOutcomeCallable CdnClient::DisableCachesCallable(const DisableCachesRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DisableCachesOutcome>>();
-    DisableCachesAsync(
-    request,
-    [prom](
-        const CdnClient*,
-        const DisableCachesRequest&,
-        DisableCachesOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CdnClient::DisableClsLogTopicOutcome CdnClient::DisableClsLogTopic(const DisableClsLogTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "DisableClsLogTopic");
@@ -1390,48 +1290,48 @@ CdnClient::DisableClsLogTopicOutcomeCallable CdnClient::DisableClsLogTopicCallab
     return prom->get_future();
 }
 
-CdnClient::EnableCachesOutcome CdnClient::EnableCaches(const EnableCachesRequest &request)
+CdnClient::DuplicateDomainConfigOutcome CdnClient::DuplicateDomainConfig(const DuplicateDomainConfigRequest &request)
 {
-    auto outcome = MakeRequest(request, "EnableCaches");
+    auto outcome = MakeRequest(request, "DuplicateDomainConfig");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        EnableCachesResponse rsp = EnableCachesResponse();
+        DuplicateDomainConfigResponse rsp = DuplicateDomainConfigResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return EnableCachesOutcome(rsp);
+            return DuplicateDomainConfigOutcome(rsp);
         else
-            return EnableCachesOutcome(o.GetError());
+            return DuplicateDomainConfigOutcome(o.GetError());
     }
     else
     {
-        return EnableCachesOutcome(outcome.GetError());
+        return DuplicateDomainConfigOutcome(outcome.GetError());
     }
 }
 
-void CdnClient::EnableCachesAsync(const EnableCachesRequest& request, const EnableCachesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void CdnClient::DuplicateDomainConfigAsync(const DuplicateDomainConfigRequest& request, const DuplicateDomainConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    using Req = const EnableCachesRequest&;
-    using Resp = EnableCachesResponse;
+    using Req = const DuplicateDomainConfigRequest&;
+    using Resp = DuplicateDomainConfigResponse;
 
     DoRequestAsync<Req, Resp>(
-        "EnableCaches", request, {{{"Content-Type", "application/json"}}},
+        "DuplicateDomainConfig", request, {{{"Content-Type", "application/json"}}},
         [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
         {
             handler(this, req, std::move(resp), context);
         });
 }
 
-CdnClient::EnableCachesOutcomeCallable CdnClient::EnableCachesCallable(const EnableCachesRequest &request)
+CdnClient::DuplicateDomainConfigOutcomeCallable CdnClient::DuplicateDomainConfigCallable(const DuplicateDomainConfigRequest &request)
 {
-    const auto prom = std::make_shared<std::promise<EnableCachesOutcome>>();
-    EnableCachesAsync(
+    const auto prom = std::make_shared<std::promise<DuplicateDomainConfigOutcome>>();
+    DuplicateDomainConfigAsync(
     request,
     [prom](
         const CdnClient*,
-        const EnableCachesRequest&,
-        EnableCachesOutcome resp,
+        const DuplicateDomainConfigRequest&,
+        DuplicateDomainConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1482,56 +1382,6 @@ CdnClient::EnableClsLogTopicOutcomeCallable CdnClient::EnableClsLogTopicCallable
         const CdnClient*,
         const EnableClsLogTopicRequest&,
         EnableClsLogTopicOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CdnClient::GetDisableRecordsOutcome CdnClient::GetDisableRecords(const GetDisableRecordsRequest &request)
-{
-    auto outcome = MakeRequest(request, "GetDisableRecords");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        GetDisableRecordsResponse rsp = GetDisableRecordsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return GetDisableRecordsOutcome(rsp);
-        else
-            return GetDisableRecordsOutcome(o.GetError());
-    }
-    else
-    {
-        return GetDisableRecordsOutcome(outcome.GetError());
-    }
-}
-
-void CdnClient::GetDisableRecordsAsync(const GetDisableRecordsRequest& request, const GetDisableRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const GetDisableRecordsRequest&;
-    using Resp = GetDisableRecordsResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "GetDisableRecords", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CdnClient::GetDisableRecordsOutcomeCallable CdnClient::GetDisableRecordsCallable(const GetDisableRecordsRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<GetDisableRecordsOutcome>>();
-    GetDisableRecordsAsync(
-    request,
-    [prom](
-        const CdnClient*,
-        const GetDisableRecordsRequest&,
-        GetDisableRecordsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2182,56 +2032,6 @@ CdnClient::UpdatePayTypeOutcomeCallable CdnClient::UpdatePayTypeCallable(const U
         const CdnClient*,
         const UpdatePayTypeRequest&,
         UpdatePayTypeOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
-CdnClient::UpdateScdnDomainOutcome CdnClient::UpdateScdnDomain(const UpdateScdnDomainRequest &request)
-{
-    auto outcome = MakeRequest(request, "UpdateScdnDomain");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        UpdateScdnDomainResponse rsp = UpdateScdnDomainResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return UpdateScdnDomainOutcome(rsp);
-        else
-            return UpdateScdnDomainOutcome(o.GetError());
-    }
-    else
-    {
-        return UpdateScdnDomainOutcome(outcome.GetError());
-    }
-}
-
-void CdnClient::UpdateScdnDomainAsync(const UpdateScdnDomainRequest& request, const UpdateScdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const UpdateScdnDomainRequest&;
-    using Resp = UpdateScdnDomainResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "UpdateScdnDomain", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CdnClient::UpdateScdnDomainOutcomeCallable CdnClient::UpdateScdnDomainCallable(const UpdateScdnDomainRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<UpdateScdnDomainOutcome>>();
-    UpdateScdnDomainAsync(
-    request,
-    [prom](
-        const CdnClient*,
-        const UpdateScdnDomainRequest&,
-        UpdateScdnDomainOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -253,19 +253,19 @@ If the domain name information is specified, this parameter can be ignored.
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-                     * @return Detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+                     * 获取Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+                     * @return Detail Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      * 
                      */
                     bool GetDetail() const;
 
                     /**
-                     * 设置The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-                     * @param _detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+                     * 设置Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+                     * @param _detail Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      * 
                      */
                     void SetDetail(const bool& _detail);
@@ -387,8 +387,8 @@ If the domain name information is specified, this parameter can be ignored.
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+                     * Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      */
                     bool m_detail;
                     bool m_detailHasBeenSet;

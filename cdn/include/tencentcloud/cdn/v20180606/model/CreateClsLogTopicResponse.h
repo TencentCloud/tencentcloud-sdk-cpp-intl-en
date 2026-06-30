@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TopicId Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetTopicId() const;
@@ -63,7 +61,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

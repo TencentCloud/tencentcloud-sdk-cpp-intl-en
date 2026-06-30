@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return PurgeLogs Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Specifies the detailed refresh record.
+                     * @return PurgeLogs Specifies the detailed refresh record.
                      * 
                      */
                     std::vector<PurgeTask> GetPurgeLogs() const;
@@ -61,10 +59,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PurgeLogsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Total number of tasks. for pagination.
+                     * @return TotalCount Total number of tasks. for pagination.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Specifies the detailed refresh record.
                      */
                     std::vector<PurgeTask> m_purgeLogs;
                     bool m_purgeLogsHasBeenSet;
 
                     /**
-                     * Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Total number of tasks. for pagination.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

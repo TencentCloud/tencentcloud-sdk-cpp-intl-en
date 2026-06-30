@@ -79,6 +79,67 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                      */
                     bool SwitchHasBeenSet() const;
 
+                    /**
+                     * 获取When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FallbackFormats When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<std::string> GetFallbackFormats() const;
+
+                    /**
+                     * 设置When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _fallbackFormats When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetFallbackFormats(const std::vector<std::string>& _fallbackFormats);
+
+                    /**
+                     * 判断参数 FallbackFormats 是否已赋值
+                     * @return FallbackFormats 是否已赋值
+                     * 
+                     */
+                    bool FallbackFormatsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -89,6 +150,22 @@ Note: This field may return·`null`, indicating that no valid values can be obta
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_fallbackFormats;
+                    bool m_fallbackFormatsHasBeenSet;
 
                 };
             }

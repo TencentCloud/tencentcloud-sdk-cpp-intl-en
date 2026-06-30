@@ -47,59 +47,59 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
-                     * @return Name Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+                     * 获取Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
+                     * @return Name Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
-                     * @param _name Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+                     * 设置Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
+                     * @param _name Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Filter field value.
-                     * @return Value Filter field value.
+                     * 获取Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
+                     * @return Value Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
                      * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
-                     * 设置Filter field value.
-                     * @param _value Filter field value.
+                     * 设置Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
+                     * @param _value Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
                      * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
@@ -160,24 +160,24 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
                 private:
 
                     /**
-                     * Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+                     * Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Filter field value.
+                     * Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
                      */
                     std::vector<std::string> m_value;
                     bool m_valueHasBeenSet;

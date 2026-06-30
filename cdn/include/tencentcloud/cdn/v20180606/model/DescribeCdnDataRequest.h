@@ -285,19 +285,19 @@ Note that `Project` will be ignored if `Domains` is specified.
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
-                     * @return Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+                     * 获取Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+                     * @return Detail Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      * 
                      */
                     bool GetDetail() const;
 
                     /**
-                     * 设置The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
-                     * @param _detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+                     * 设置Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+                     * @param _detail Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      * 
                      */
                     void SetDetail(const bool& _detail);
@@ -634,8 +634,8 @@ Note that `Project` will be ignored if `Domains` is specified.
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+                     * Queries multiple domain names and returns aggregated data by default (false).
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
                      */
                     bool m_detail;
                     bool m_detailHasBeenSet;

@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取StatementID value, fixed at 0 for Monitoring Dashboard.
-                     * @return StatementID StatementID value, fixed at 0 for Monitoring Dashboard.
+                     * 获取The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StatementID The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStatementID() const;
 
                     /**
-                     * 设置StatementID value, fixed at 0 for Monitoring Dashboard.
-                     * @param _statementID StatementID value, fixed at 0 for Monitoring Dashboard.
+                     * 设置The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _statementID The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStatementID(const int64_t& _statementID);
@@ -69,15 +73,19 @@ namespace TencentCloud
                     bool StatementIDHasBeenSet() const;
 
                     /**
-                     * 获取Query result data, returned in Columns-Values format.
-                     * @return Series Query result data, returned in Columns-Values format.
+                     * 获取Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Series Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SeriesInfos> GetSeries() const;
 
                     /**
-                     * 设置Query result data, returned in Columns-Values format.
-                     * @param _series Query result data, returned in Columns-Values format.
+                     * 设置Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _series Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSeries(const std::vector<SeriesInfos>& _series);
@@ -90,15 +98,19 @@ namespace TencentCloud
                     bool SeriesHasBeenSet() const;
 
                     /**
-                     * 获取Total value, fixed at 1 for Monitoring Dashboard.
-                     * @return Total Total value, fixed at 1 for Monitoring Dashboard.
+                     * 获取The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Total The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetTotal() const;
 
                     /**
-                     * 设置Total value, fixed at 1 for Monitoring Dashboard.
-                     * @param _total Total value, fixed at 1 for Monitoring Dashboard.
+                     * 设置The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _total The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTotal(const int64_t& _total);
@@ -113,19 +125,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * StatementID value, fixed at 0 for Monitoring Dashboard.
+                     * The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_statementID;
                     bool m_statementIDHasBeenSet;
 
                     /**
-                     * Query result data, returned in Columns-Values format.
+                     * Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SeriesInfos> m_series;
                     bool m_seriesHasBeenSet;
 
                     /**
-                     * Total value, fixed at 1 for Monitoring Dashboard.
+                     * The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

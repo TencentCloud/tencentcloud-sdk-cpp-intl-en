@@ -45,8 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TRTC Data Dashboard output parameters
-                     * @return Data TRTC Data Dashboard output parameters
+                     * 获取TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Data TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TRTCDataResult GetData() const;
@@ -61,7 +63,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TRTC Data Dashboard output parameters
+                     * TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TRTCDataResult m_data;
                     bool m_dataHasBeenSet;

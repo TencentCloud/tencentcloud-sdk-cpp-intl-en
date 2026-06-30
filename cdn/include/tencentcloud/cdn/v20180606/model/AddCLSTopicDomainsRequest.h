@@ -127,6 +127,27 @@ namespace TencentCloud
                      */
                     bool ChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+                     * @return InheritDomainTags Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+                     * 
+                     */
+                    bool GetInheritDomainTags() const;
+
+                    /**
+                     * 设置Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+                     * @param _inheritDomainTags Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+                     * 
+                     */
+                    void SetInheritDomainTags(const bool& _inheritDomainTags);
+
+                    /**
+                     * 判断参数 InheritDomainTags 是否已赋值
+                     * @return InheritDomainTags 是否已赋值
+                     * 
+                     */
+                    bool InheritDomainTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +173,12 @@ namespace TencentCloud
                      */
                     std::string m_channel;
                     bool m_channelHasBeenSet;
+
+                    /**
+                     * Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+                     */
+                    bool m_inheritDomainTags;
+                    bool m_inheritDomainTagsHasBeenSet;
 
                 };
             }

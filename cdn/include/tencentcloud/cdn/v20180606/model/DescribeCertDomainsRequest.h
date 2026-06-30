@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CertHasBeenSet() const;
 
                     /**
-                     * 获取Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
-                     * @return CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * 获取Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
+                     * @return CertId Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
-                     * @param _certId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * 设置Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
+                     * @param _certId Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_certHasBeenSet;
 
                     /**
-                     * Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;

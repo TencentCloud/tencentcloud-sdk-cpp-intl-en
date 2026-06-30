@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data columns
-                     * @return Columns Data columns
+                     * 获取Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Columns Data column
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetColumns() const;
 
                     /**
-                     * 设置Data columns
-                     * @param _columns Data columns
+                     * 设置Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _columns Data column
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetColumns(const std::vector<std::string>& _columns);
@@ -69,15 +73,19 @@ namespace TencentCloud
                     bool ColumnsHasBeenSet() const;
 
                     /**
-                     * 获取Data values
-                     * @return Values Data values
+                     * 获取Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Values Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<RowValues> GetValues() const;
 
                     /**
-                     * 设置Data values
-                     * @param _values Data values
+                     * 设置Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _values Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetValues(const std::vector<RowValues>& _values);
@@ -92,13 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data columns
+                     * Data column
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_columns;
                     bool m_columnsHasBeenSet;
 
                     /**
-                     * Data values
+                     * Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<RowValues> m_values;
                     bool m_valuesHasBeenSet;

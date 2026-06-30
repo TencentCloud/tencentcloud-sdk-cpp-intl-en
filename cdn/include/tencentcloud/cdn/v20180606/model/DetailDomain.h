@@ -75,6 +75,8 @@
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
 #include <tencentcloud/cdn/v20180606/model/OthersPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/ParamFilter.h>
+#include <tencentcloud/cdn/v20180606/model/AutoGuard.h>
 
 
 namespace TencentCloud
@@ -1819,6 +1821,52 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool OthersPrivateAccessHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParamFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ParamFilter GetParamFilter() const;
+
+                    /**
+                     * 设置Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _paramFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetParamFilter(const ParamFilter& _paramFilter);
+
+                    /**
+                     * 判断参数 ParamFilter 是否已赋值
+                     * @return ParamFilter 是否已赋值
+                     * 
+                     */
+                    bool ParamFilterHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoGuard 
+                     * 
+                     */
+                    AutoGuard GetAutoGuard() const;
+
+                    /**
+                     * 设置
+                     * @param _autoGuard 
+                     * 
+                     */
+                    void SetAutoGuard(const AutoGuard& _autoGuard);
+
+                    /**
+                     * 判断参数 AutoGuard 是否已赋值
+                     * @return AutoGuard 是否已赋值
+                     * 
+                     */
+                    bool AutoGuardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -2300,6 +2348,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     OthersPrivateAccess m_othersPrivateAccess;
                     bool m_othersPrivateAccessHasBeenSet;
+
+                    /**
+                     * Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ParamFilter m_paramFilter;
+                    bool m_paramFilterHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AutoGuard m_autoGuard;
+                    bool m_autoGuardHasBeenSet;
 
                 };
             }

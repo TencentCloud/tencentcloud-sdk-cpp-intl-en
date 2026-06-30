@@ -86,7 +86,9 @@ DetailDomain::DetailDomain() :
     m_hwPrivateAccessHasBeenSet(false),
     m_qnPrivateAccessHasBeenSet(false),
     m_httpsBillingHasBeenSet(false),
-    m_othersPrivateAccessHasBeenSet(false)
+    m_othersPrivateAccessHasBeenSet(false),
+    m_paramFilterHasBeenSet(false),
+    m_autoGuardHasBeenSet(false)
 {
 }
 
@@ -1121,6 +1123,40 @@ CoreInternalOutcome DetailDomain::Deserialize(const rapidjson::Value &value)
         m_othersPrivateAccessHasBeenSet = true;
     }
 
+    if (value.HasMember("ParamFilter") && !value["ParamFilter"].IsNull())
+    {
+        if (!value["ParamFilter"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.ParamFilter` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_paramFilter.Deserialize(value["ParamFilter"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_paramFilterHasBeenSet = true;
+    }
+
+    if (value.HasMember("AutoGuard") && !value["AutoGuard"].IsNull())
+    {
+        if (!value["AutoGuard"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DetailDomain.AutoGuard` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_autoGuard.Deserialize(value["AutoGuard"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_autoGuardHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -1722,6 +1758,24 @@ void DetailDomain::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_othersPrivateAccess.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_paramFilterHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ParamFilter";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_paramFilter.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_autoGuardHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoGuard";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_autoGuard.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -2781,5 +2835,37 @@ void DetailDomain::SetOthersPrivateAccess(const OthersPrivateAccess& _othersPriv
 bool DetailDomain::OthersPrivateAccessHasBeenSet() const
 {
     return m_othersPrivateAccessHasBeenSet;
+}
+
+ParamFilter DetailDomain::GetParamFilter() const
+{
+    return m_paramFilter;
+}
+
+void DetailDomain::SetParamFilter(const ParamFilter& _paramFilter)
+{
+    m_paramFilter = _paramFilter;
+    m_paramFilterHasBeenSet = true;
+}
+
+bool DetailDomain::ParamFilterHasBeenSet() const
+{
+    return m_paramFilterHasBeenSet;
+}
+
+AutoGuard DetailDomain::GetAutoGuard() const
+{
+    return m_autoGuard;
+}
+
+void DetailDomain::SetAutoGuard(const AutoGuard& _autoGuard)
+{
+    m_autoGuard = _autoGuard;
+    m_autoGuardHasBeenSet = true;
+}
+
+bool DetailDomain::AutoGuardHasBeenSet() const
+{
+    return m_autoGuardHasBeenSet;
 }
 

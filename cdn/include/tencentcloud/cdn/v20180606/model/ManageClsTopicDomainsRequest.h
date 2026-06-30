@@ -127,6 +127,27 @@ namespace TencentCloud
                      */
                     bool DomainAreaConfigsHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to inherit the domain name tag.
+                     * @return InheritDomainTags Specifies whether to inherit the domain name tag.
+                     * 
+                     */
+                    bool GetInheritDomainTags() const;
+
+                    /**
+                     * 设置Specifies whether to inherit the domain name tag.
+                     * @param _inheritDomainTags Specifies whether to inherit the domain name tag.
+                     * 
+                     */
+                    void SetInheritDomainTags(const bool& _inheritDomainTags);
+
+                    /**
+                     * 判断参数 InheritDomainTags 是否已赋值
+                     * @return InheritDomainTags 是否已赋值
+                     * 
+                     */
+                    bool InheritDomainTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +173,12 @@ namespace TencentCloud
                      */
                     std::vector<DomainAreaConfig> m_domainAreaConfigs;
                     bool m_domainAreaConfigsHasBeenSet;
+
+                    /**
+                     * Specifies whether to inherit the domain name tag.
+                     */
+                    bool m_inheritDomainTags;
+                    bool m_inheritDomainTagsHasBeenSet;
 
                 };
             }

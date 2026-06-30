@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return PushLogs Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Preheating history.
+                     * @return PushLogs Preheating history.
                      * 
                      */
                     std::vector<PushTask> GetPushLogs() const;
@@ -61,10 +59,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PushLogsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Total number of tasks. for pagination.
+                     * @return TotalCount Total number of tasks. for pagination.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -79,15 +75,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Preheating history.
                      */
                     std::vector<PushTask> m_pushLogs;
                     bool m_pushLogsHasBeenSet;
 
                     /**
-                     * Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Total number of tasks. for pagination.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

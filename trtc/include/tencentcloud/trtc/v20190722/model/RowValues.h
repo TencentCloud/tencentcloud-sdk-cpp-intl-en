@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data value
-                     * @return RowValue Data value
+                     * 获取Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RowValue Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetRowValue() const;
 
                     /**
-                     * 设置Data value
-                     * @param _rowValue Data value
+                     * 设置Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _rowValue Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRowValue(const std::vector<int64_t>& _rowValue);
@@ -67,13 +71,41 @@ namespace TencentCloud
                      */
                     bool RowValueHasBeenSet() const;
 
+                    /**
+                     * 获取Data value.
+                     * @return RowValueFloat Data value.
+                     * 
+                     */
+                    std::vector<double> GetRowValueFloat() const;
+
+                    /**
+                     * 设置Data value.
+                     * @param _rowValueFloat Data value.
+                     * 
+                     */
+                    void SetRowValueFloat(const std::vector<double>& _rowValueFloat);
+
+                    /**
+                     * 判断参数 RowValueFloat 是否已赋值
+                     * @return RowValueFloat 是否已赋值
+                     * 
+                     */
+                    bool RowValueFloatHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data value
+                     * Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_rowValue;
                     bool m_rowValueHasBeenSet;
+
+                    /**
+                     * Data value.
+                     */
+                    std::vector<double> m_rowValueFloat;
+                    bool m_rowValueFloatHasBeenSet;
 
                 };
             }

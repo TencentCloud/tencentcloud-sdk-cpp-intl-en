@@ -1490,6 +1490,56 @@ SqlserverClient::DeletePublishSubscribeOutcomeCallable SqlserverClient::DeletePu
     return prom->get_future();
 }
 
+SqlserverClient::DeleteRestoreTaskOutcome SqlserverClient::DeleteRestoreTask(const DeleteRestoreTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRestoreTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRestoreTaskResponse rsp = DeleteRestoreTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRestoreTaskOutcome(rsp);
+        else
+            return DeleteRestoreTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRestoreTaskOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DeleteRestoreTaskAsync(const DeleteRestoreTaskRequest& request, const DeleteRestoreTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRestoreTaskRequest&;
+    using Resp = DeleteRestoreTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRestoreTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::DeleteRestoreTaskOutcomeCallable SqlserverClient::DeleteRestoreTaskCallable(const DeleteRestoreTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRestoreTaskOutcome>>();
+    DeleteRestoreTaskAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const DeleteRestoreTaskRequest&,
+        DeleteRestoreTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SqlserverClient::DescribeAccountPrivilegeByDBOutcome SqlserverClient::DescribeAccountPrivilegeByDB(const DescribeAccountPrivilegeByDBRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAccountPrivilegeByDB");
@@ -4340,6 +4390,56 @@ SqlserverClient::DescribeUploadBackupInfoOutcomeCallable SqlserverClient::Descri
     return prom->get_future();
 }
 
+SqlserverClient::DescribeUploadIncrementalInfoOutcome SqlserverClient::DescribeUploadIncrementalInfo(const DescribeUploadIncrementalInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUploadIncrementalInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUploadIncrementalInfoResponse rsp = DescribeUploadIncrementalInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUploadIncrementalInfoOutcome(rsp);
+        else
+            return DescribeUploadIncrementalInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUploadIncrementalInfoOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::DescribeUploadIncrementalInfoAsync(const DescribeUploadIncrementalInfoRequest& request, const DescribeUploadIncrementalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUploadIncrementalInfoRequest&;
+    using Resp = DescribeUploadIncrementalInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUploadIncrementalInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::DescribeUploadIncrementalInfoOutcomeCallable SqlserverClient::DescribeUploadIncrementalInfoCallable(const DescribeUploadIncrementalInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUploadIncrementalInfoOutcome>>();
+    DescribeUploadIncrementalInfoAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const DescribeUploadIncrementalInfoRequest&,
+        DescribeUploadIncrementalInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SqlserverClient::DescribeXEventsOutcome SqlserverClient::DescribeXEvents(const DescribeXEventsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeXEvents");
@@ -4532,6 +4632,56 @@ SqlserverClient::InquiryPriceCreateDBInstancesOutcomeCallable SqlserverClient::I
         const SqlserverClient*,
         const InquiryPriceCreateDBInstancesRequest&,
         InquiryPriceCreateDBInstancesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SqlserverClient::InquiryPriceRenewDBInstanceOutcome SqlserverClient::InquiryPriceRenewDBInstance(const InquiryPriceRenewDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceRenewDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceRenewDBInstanceResponse rsp = InquiryPriceRenewDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceRenewDBInstanceOutcome(rsp);
+        else
+            return InquiryPriceRenewDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceRenewDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::InquiryPriceRenewDBInstanceAsync(const InquiryPriceRenewDBInstanceRequest& request, const InquiryPriceRenewDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const InquiryPriceRenewDBInstanceRequest&;
+    using Resp = InquiryPriceRenewDBInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "InquiryPriceRenewDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::InquiryPriceRenewDBInstanceOutcomeCallable SqlserverClient::InquiryPriceRenewDBInstanceCallable(const InquiryPriceRenewDBInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<InquiryPriceRenewDBInstanceOutcome>>();
+    InquiryPriceRenewDBInstanceAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const InquiryPriceRenewDBInstanceRequest&,
+        InquiryPriceRenewDBInstanceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -5182,6 +5332,56 @@ SqlserverClient::ModifyDBInstanceProjectOutcomeCallable SqlserverClient::ModifyD
         const SqlserverClient*,
         const ModifyDBInstanceProjectRequest&,
         ModifyDBInstanceProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SqlserverClient::ModifyDBInstanceRenewFlagOutcome SqlserverClient::ModifyDBInstanceRenewFlag(const ModifyDBInstanceRenewFlagRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceRenewFlag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceRenewFlagResponse rsp = ModifyDBInstanceRenewFlagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceRenewFlagOutcome(rsp);
+        else
+            return ModifyDBInstanceRenewFlagOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceRenewFlagOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::ModifyDBInstanceRenewFlagAsync(const ModifyDBInstanceRenewFlagRequest& request, const ModifyDBInstanceRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDBInstanceRenewFlagRequest&;
+    using Resp = ModifyDBInstanceRenewFlagResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDBInstanceRenewFlag", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::ModifyDBInstanceRenewFlagOutcomeCallable SqlserverClient::ModifyDBInstanceRenewFlagCallable(const ModifyDBInstanceRenewFlagRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDBInstanceRenewFlagOutcome>>();
+    ModifyDBInstanceRenewFlagAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const ModifyDBInstanceRenewFlagRequest&,
+        ModifyDBInstanceRenewFlagOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6390,6 +6590,56 @@ SqlserverClient::RemoveBackupsOutcomeCallable SqlserverClient::RemoveBackupsCall
     return prom->get_future();
 }
 
+SqlserverClient::RenewDBInstanceOutcome SqlserverClient::RenewDBInstance(const RenewDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewDBInstanceResponse rsp = RenewDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewDBInstanceOutcome(rsp);
+        else
+            return RenewDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::RenewDBInstanceAsync(const RenewDBInstanceRequest& request, const RenewDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RenewDBInstanceRequest&;
+    using Resp = RenewDBInstanceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RenewDBInstance", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::RenewDBInstanceOutcomeCallable SqlserverClient::RenewDBInstanceCallable(const RenewDBInstanceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RenewDBInstanceOutcome>>();
+    RenewDBInstanceAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const RenewDBInstanceRequest&,
+        RenewDBInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 SqlserverClient::RenewPostpaidDBInstanceOutcome SqlserverClient::RenewPostpaidDBInstance(const RenewPostpaidDBInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "RenewPostpaidDBInstance");
@@ -6832,6 +7082,106 @@ SqlserverClient::StartInstanceXEventOutcomeCallable SqlserverClient::StartInstan
         const SqlserverClient*,
         const StartInstanceXEventRequest&,
         StartInstanceXEventOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SqlserverClient::StartMigrationCheckOutcome SqlserverClient::StartMigrationCheck(const StartMigrationCheckRequest &request)
+{
+    auto outcome = MakeRequest(request, "StartMigrationCheck");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StartMigrationCheckResponse rsp = StartMigrationCheckResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StartMigrationCheckOutcome(rsp);
+        else
+            return StartMigrationCheckOutcome(o.GetError());
+    }
+    else
+    {
+        return StartMigrationCheckOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::StartMigrationCheckAsync(const StartMigrationCheckRequest& request, const StartMigrationCheckAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StartMigrationCheckRequest&;
+    using Resp = StartMigrationCheckResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StartMigrationCheck", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::StartMigrationCheckOutcomeCallable SqlserverClient::StartMigrationCheckCallable(const StartMigrationCheckRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StartMigrationCheckOutcome>>();
+    StartMigrationCheckAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const StartMigrationCheckRequest&,
+        StartMigrationCheckOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+SqlserverClient::StopMigrationOutcome SqlserverClient::StopMigration(const StopMigrationRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopMigration");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopMigrationResponse rsp = StopMigrationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopMigrationOutcome(rsp);
+        else
+            return StopMigrationOutcome(o.GetError());
+    }
+    else
+    {
+        return StopMigrationOutcome(outcome.GetError());
+    }
+}
+
+void SqlserverClient::StopMigrationAsync(const StopMigrationRequest& request, const StopMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StopMigrationRequest&;
+    using Resp = StopMigrationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StopMigration", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+SqlserverClient::StopMigrationOutcomeCallable SqlserverClient::StopMigrationCallable(const StopMigrationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StopMigrationOutcome>>();
+    StopMigrationAsync(
+    request,
+    [prom](
+        const SqlserverClient*,
+        const StopMigrationRequest&,
+        StopMigrationOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

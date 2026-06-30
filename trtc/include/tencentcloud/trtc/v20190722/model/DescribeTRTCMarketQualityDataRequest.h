@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User SDKAppId (e.g., 1400xxxxxx)
-                     * @return SdkAppId User SDKAppId (e.g., 1400xxxxxx)
+                     * 获取User SdkAppId (for example: 1400xxxxxx).
+                     * @return SdkAppId User SdkAppId (for example: 1400xxxxxx).
                      * 
                      */
                     std::string GetSdkAppId() const;
 
                     /**
-                     * 设置User SDKAppId (e.g., 1400xxxxxx)
-                     * @param _sdkAppId User SDKAppId (e.g., 1400xxxxxx)
+                     * 设置User SdkAppId (for example: 1400xxxxxx).
+                     * @param _sdkAppId User SdkAppId (for example: 1400xxxxxx).
                      * 
                      */
                     void SetSdkAppId(const std::string& _sdkAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
-                     * @return StartTime Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+                     * 获取Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
+                     * @return StartTime Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
-                     * @param _startTime Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+                     * 设置Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
+                     * @param _startTime Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time, format is YYYY-MM-DD.
-                     * @return EndTime Query end time, format is YYYY-MM-DD.
+                     * 获取Query end time in YYYY-MM-DD format.
+                     * @return EndTime Query end time in YYYY-MM-DD format.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time, format is YYYY-MM-DD.
-                     * @param _endTime Query end time, format is YYYY-MM-DD.
+                     * 设置Query end time in YYYY-MM-DD format.
+                     * @param _endTime Query end time in YYYY-MM-DD format.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,23 +106,23 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
-                     * @return Period The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+                     * 获取The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
+                     * @return Period The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
                      * 
                      */
                     std::string GetPeriod() const;
 
                     /**
-                     * 设置The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
-                     * @param _period The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+                     * 设置The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
+                     * @param _period The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
                      * 
                      */
                     void SetPeriod(const std::string& _period);
@@ -134,33 +134,60 @@ h: by hour. This returns data for the entire UTC hour of the query time range.
                      */
                     bool PeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the returned data is a decimal.
+                     * @return IsFloat Whether the returned data is a decimal.
+                     * 
+                     */
+                    bool GetIsFloat() const;
+
+                    /**
+                     * 设置Whether the returned data is a decimal.
+                     * @param _isFloat Whether the returned data is a decimal.
+                     * 
+                     */
+                    void SetIsFloat(const bool& _isFloat);
+
+                    /**
+                     * 判断参数 IsFloat 是否已赋值
+                     * @return IsFloat 是否已赋值
+                     * 
+                     */
+                    bool IsFloatHasBeenSet() const;
+
                 private:
 
                     /**
-                     * User SDKAppId (e.g., 1400xxxxxx)
+                     * User SdkAppId (for example: 1400xxxxxx).
                      */
                     std::string m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+                     * Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time, format is YYYY-MM-DD.
+                     * Query end time in YYYY-MM-DD format.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+                     * The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
                      */
                     std::string m_period;
                     bool m_periodHasBeenSet;
+
+                    /**
+                     * Whether the returned data is a decimal.
+                     */
+                    bool m_isFloat;
+                    bool m_isFloatHasBeenSet;
 
                 };
             }
