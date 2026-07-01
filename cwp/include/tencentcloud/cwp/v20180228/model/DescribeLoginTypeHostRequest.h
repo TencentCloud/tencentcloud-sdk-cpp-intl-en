@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sort order: [ASC: ascending | DESC: descending]</p>
-                     * @return Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+                     * 获取<p>Sort order: [ASC: ascending, DESC: descending]</p>
+                     * @return Order <p>Sort order: [ASC: ascending, DESC: descending]</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置<p>Sort order: [ASC: ascending | DESC: descending]</p>
-                     * @param _order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+                     * 设置<p>Sort order: [ASC: ascending, DESC: descending]</p>
+                     * @param _order <p>Sort order: [ASC: ascending, DESC: descending]</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Sort order: [ASC: ascending | DESC: descending]</p>
+                     * <p>Sort order: [ASC: ascending, DESC: descending]</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

@@ -5340,6 +5340,56 @@ MonitorClient::EnableSSOCamCheckOutcomeCallable MonitorClient::EnableSSOCamCheck
     return prom->get_future();
 }
 
+MonitorClient::ExportPrometheusReadOnlyDynamicAPIOutcome MonitorClient::ExportPrometheusReadOnlyDynamicAPI(const ExportPrometheusReadOnlyDynamicAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "ExportPrometheusReadOnlyDynamicAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ExportPrometheusReadOnlyDynamicAPIResponse rsp = ExportPrometheusReadOnlyDynamicAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ExportPrometheusReadOnlyDynamicAPIOutcome(rsp);
+        else
+            return ExportPrometheusReadOnlyDynamicAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return ExportPrometheusReadOnlyDynamicAPIOutcome(outcome.GetError());
+    }
+}
+
+void MonitorClient::ExportPrometheusReadOnlyDynamicAPIAsync(const ExportPrometheusReadOnlyDynamicAPIRequest& request, const ExportPrometheusReadOnlyDynamicAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ExportPrometheusReadOnlyDynamicAPIRequest&;
+    using Resp = ExportPrometheusReadOnlyDynamicAPIResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ExportPrometheusReadOnlyDynamicAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MonitorClient::ExportPrometheusReadOnlyDynamicAPIOutcomeCallable MonitorClient::ExportPrometheusReadOnlyDynamicAPICallable(const ExportPrometheusReadOnlyDynamicAPIRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ExportPrometheusReadOnlyDynamicAPIOutcome>>();
+    ExportPrometheusReadOnlyDynamicAPIAsync(
+    request,
+    [prom](
+        const MonitorClient*,
+        const ExportPrometheusReadOnlyDynamicAPIRequest&,
+        ExportPrometheusReadOnlyDynamicAPIOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MonitorClient::GetMonitorDataOutcome MonitorClient::GetMonitorData(const GetMonitorDataRequest &request)
 {
     auto outcome = MakeRequest(request, "GetMonitorData");
@@ -6332,6 +6382,56 @@ MonitorClient::ResumeGrafanaInstanceOutcomeCallable MonitorClient::ResumeGrafana
         const MonitorClient*,
         const ResumeGrafanaInstanceRequest&,
         ResumeGrafanaInstanceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MonitorClient::RoutePrometheusDynamicAPIOutcome MonitorClient::RoutePrometheusDynamicAPI(const RoutePrometheusDynamicAPIRequest &request)
+{
+    auto outcome = MakeRequest(request, "RoutePrometheusDynamicAPI");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RoutePrometheusDynamicAPIResponse rsp = RoutePrometheusDynamicAPIResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RoutePrometheusDynamicAPIOutcome(rsp);
+        else
+            return RoutePrometheusDynamicAPIOutcome(o.GetError());
+    }
+    else
+    {
+        return RoutePrometheusDynamicAPIOutcome(outcome.GetError());
+    }
+}
+
+void MonitorClient::RoutePrometheusDynamicAPIAsync(const RoutePrometheusDynamicAPIRequest& request, const RoutePrometheusDynamicAPIAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RoutePrometheusDynamicAPIRequest&;
+    using Resp = RoutePrometheusDynamicAPIResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RoutePrometheusDynamicAPI", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MonitorClient::RoutePrometheusDynamicAPIOutcomeCallable MonitorClient::RoutePrometheusDynamicAPICallable(const RoutePrometheusDynamicAPIRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RoutePrometheusDynamicAPIOutcome>>();
+    RoutePrometheusDynamicAPIAsync(
+    request,
+    [prom](
+        const MonitorClient*,
+        const RoutePrometheusDynamicAPIRequest&,
+        RoutePrometheusDynamicAPIOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
