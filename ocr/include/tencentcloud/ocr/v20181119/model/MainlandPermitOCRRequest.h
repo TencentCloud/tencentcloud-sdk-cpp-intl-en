@@ -133,6 +133,35 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     bool RetProfileHasBeenSet() const;
 
+                    /**
+                     * 获取The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+                     * @return CardSide The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+                     * 
+                     */
+                    std::string GetCardSide() const;
+
+                    /**
+                     * 设置The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+                     * @param _cardSide The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+                     * 
+                     */
+                    void SetCardSide(const std::string& _cardSide);
+
+                    /**
+                     * 判断参数 CardSide 是否已赋值
+                     * @return CardSide 是否已赋值
+                     * 
+                     */
+                    bool CardSideHasBeenSet() const;
+
                 private:
 
                     /**
@@ -159,6 +188,14 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
                      */
                     bool m_retProfile;
                     bool m_retProfileHasBeenSet;
+
+                    /**
+                     * The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+                     */
+                    std::string m_cardSide;
+                    bool m_cardSideHasBeenSet;
 
                 };
             }

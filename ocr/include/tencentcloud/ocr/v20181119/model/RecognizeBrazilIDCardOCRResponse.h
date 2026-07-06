@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MemberShipHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-                     * @return DataNascimento Birthday
+                     * 获取Date of birth
+                     * @return DataNascimento Date of birth
                      * 
                      */
                     std::string GetDataNascimento() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool IssuingAgencyHasBeenSet() const;
 
                     /**
-                     * 获取blood type
-                     * @return Fatorrh blood type
+                     * 获取Blood type
+                     * @return Fatorrh Blood type
                      * 
                      */
                     std::string GetFatorrh() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool DNIHasBeenSet() const;
 
                     /**
-                     * 获取universal registration
-                     * @return RegistroGeral universal registration
+                     * 获取General registry (Registro Geral)
+                     * @return RegistroGeral General registry (Registro Geral)
                      * 
                      */
                     std::string GetRegistroGeral() const;
@@ -254,7 +254,7 @@ namespace TencentCloud
                     bool m_memberShipHasBeenSet;
 
                     /**
-                     * Birthday
+                     * Date of birth
                      */
                     std::string m_dataNascimento;
                     bool m_dataNascimentoHasBeenSet;
@@ -266,7 +266,7 @@ namespace TencentCloud
                     bool m_issuingAgencyHasBeenSet;
 
                     /**
-                     * blood type
+                     * Blood type
                      */
                     std::string m_fatorrh;
                     bool m_fatorrhHasBeenSet;
@@ -296,7 +296,7 @@ namespace TencentCloud
                     bool m_dNIHasBeenSet;
 
                     /**
-                     * universal registration
+                     * General registry (Registro Geral)
                      */
                     std::string m_registroGeral;
                     bool m_registroGeralHasBeenSet;

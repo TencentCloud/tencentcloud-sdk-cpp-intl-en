@@ -102,6 +102,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoiceIdHasBeenSet() const;
 
                     /**
+                     * 获取<p>Audition audio URL.</p>
+                     * @return AudioUrl <p>Audition audio URL.</p>
+                     * 
+                     */
+                    std::string GetAudioUrl() const;
+
+                    /**
+                     * 判断参数 AudioUrl 是否已赋值
+                     * @return AudioUrl 是否已赋值
+                     * 
+                     */
+                    bool AudioUrlHasBeenSet() const;
+
+                    /**
                      * 获取<p>Extended information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtInfo <p>Extended information.</p>
@@ -143,6 +157,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
+
+                    /**
+                     * <p>Audition audio URL.</p>
+                     */
+                    std::string m_audioUrl;
+                    bool m_audioUrlHasBeenSet;
 
                     /**
                      * <p>Extended information.</p>

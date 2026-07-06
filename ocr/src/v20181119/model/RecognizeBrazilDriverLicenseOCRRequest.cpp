@@ -27,7 +27,8 @@ RecognizeBrazilDriverLicenseOCRRequest::RecognizeBrazilDriverLicenseOCRRequest()
     m_backImageBase64HasBeenSet(false),
     m_imageUrlHasBeenSet(false),
     m_backImageUrlHasBeenSet(false),
-    m_cropPortraitHasBeenSet(false)
+    m_cropPortraitHasBeenSet(false),
+    m_licenceVersionHasBeenSet(false)
 {
 }
 
@@ -76,6 +77,14 @@ string RecognizeBrazilDriverLicenseOCRRequest::ToJsonString() const
         string key = "CropPortrait";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_cropPortrait, allocator);
+    }
+
+    if (m_licenceVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LicenceVersion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_licenceVersion.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -164,6 +173,22 @@ void RecognizeBrazilDriverLicenseOCRRequest::SetCropPortrait(const bool& _cropPo
 bool RecognizeBrazilDriverLicenseOCRRequest::CropPortraitHasBeenSet() const
 {
     return m_cropPortraitHasBeenSet;
+}
+
+string RecognizeBrazilDriverLicenseOCRRequest::GetLicenceVersion() const
+{
+    return m_licenceVersion;
+}
+
+void RecognizeBrazilDriverLicenseOCRRequest::SetLicenceVersion(const string& _licenceVersion)
+{
+    m_licenceVersion = _licenceVersion;
+    m_licenceVersionHasBeenSet = true;
+}
+
+bool RecognizeBrazilDriverLicenseOCRRequest::LicenceVersionHasBeenSet() const
+{
+    return m_licenceVersionHasBeenSet;
 }
 
 

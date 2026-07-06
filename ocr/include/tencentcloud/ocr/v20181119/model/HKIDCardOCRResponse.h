@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool EnNameHasBeenSet() const;
 
                     /**
-                     * 获取Telecode for the name in Chinese
-                     * @return TelexCode Telecode for the name in Chinese
+                     * 获取Telecode of the name in Chinese
+                     * @return TelexCode Telecode of the name in Chinese
                      * 
                      */
                     std::string GetTelexCode() const;
@@ -162,8 +162,8 @@ namespace TencentCloud
                     bool SymbolHasBeenSet() const;
 
                     /**
-                     * 获取First issue date
-                     * @return FirstIssueDate First issue date
+                     * 获取Date of first issue
+                     * @return FirstIssueDate Date of first issue
                      * 
                      */
                     std::string GetFirstIssueDate() const;
@@ -176,8 +176,8 @@ namespace TencentCloud
                     bool FirstIssueDateHasBeenSet() const;
 
                     /**
-                     * 获取Last receipt date
-                     * @return CurrentIssueDate Last receipt date
+                     * 获取Date of last receipt
+                     * @return CurrentIssueDate Date of last receipt
                      * 
                      */
                     std::string GetCurrentIssueDate() const;
@@ -330,7 +330,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_enNameHasBeenSet;
 
                     /**
-                     * Telecode for the name in Chinese
+                     * Telecode of the name in Chinese
                      */
                     std::string m_telexCode;
                     bool m_telexCodeHasBeenSet;
@@ -369,13 +369,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_symbolHasBeenSet;
 
                     /**
-                     * First issue date
+                     * Date of first issue
                      */
                     std::string m_firstIssueDate;
                     bool m_firstIssueDateHasBeenSet;
 
                     /**
-                     * Last receipt date
+                     * Date of last receipt
                      */
                     std::string m_currentIssueDate;
                     bool m_currentIssueDateHasBeenSet;

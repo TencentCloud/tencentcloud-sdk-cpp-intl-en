@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detected coordinate information.
-                     * @return ItemList Detected coordinate information.
+                     * 获取Coordinate information of the detected four corners of the card.
+                     * @return ItemList Coordinate information of the detected four corners of the card.
                      * 
                      */
                     std::vector<CoordsItem> GetItemList() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Detected coordinate information.
+                     * Coordinate information of the detected four corners of the card.
                      */
                     std::vector<CoordsItem> m_itemList;
                     bool m_itemListHasBeenSet;

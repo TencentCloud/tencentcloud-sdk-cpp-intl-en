@@ -100,16 +100,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
-                     * @return Warn Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+                     * 获取This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @return Warn This field is deprecated and will always return an empty array. Usage is not recommended.
                      * @deprecated
                      */
                     std::vector<int64_t> GetWarn() const;
@@ -136,48 +128,36 @@ namespace TencentCloud
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
-                     * @return AdvancedInfo This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
-                     * 
+                     * 获取This field is deprecated and will always return "1". Usage is not recommended.
+                     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+                     * @deprecated
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
-                     * @return Type Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+                     * 获取Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
+                     * @return Type Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
                      * 
                      */
                     std::string GetType() const;
@@ -204,8 +184,8 @@ MyKid   Kid card
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Number on the back of Malaysia ID card 
-                     * @return MyKadNumber Number on the back of Malaysia ID card 
+                     * 获取Number on the back of the Malaysian ID card
+                     * @return MyKadNumber Number on the back of the Malaysian ID card
                      * 
                      */
                     std::string GetMyKadNumber() const;
@@ -274,11 +254,7 @@ MyKid   Kid card
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+                     * This field is deprecated and will always return an empty array. Usage is not recommended.
                      */
                     std::vector<int64_t> m_warn;
                     bool m_warnHasBeenSet;
@@ -290,26 +266,20 @@ MyKid   Kid card
                     bool m_imageHasBeenSet;
 
                     /**
-                     * This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
+                     * This field is deprecated and will always return "1". Usage is not recommended.
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;
 
                     /**
-                     * Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+                     * Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -321,7 +291,7 @@ MyKid   Kid card
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Number on the back of Malaysia ID card 
+                     * Number on the back of the Malaysian ID card
                      */
                     std::string m_myKadNumber;
                     bool m_myKadNumberHasBeenSet;

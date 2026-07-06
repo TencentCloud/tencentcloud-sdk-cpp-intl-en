@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name
-                     * @return Name Name
+                     * 获取The full name.
+                     * @return Name The full name.
                      * 
                      */
                     std::string GetName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Sex
-                     * @return Sex Sex
+                     * 获取Gender.
+                     * @return Sex Gender.
                      * 
                      */
                     std::string GetSex() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool CURPHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-                     * @return Birth Birthday
+                     * 获取Date of birth.
+                     * @return Birth Date of birth.
                      * 
                      */
                     std::string GetBirth() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool IssueDateHasBeenSet() const;
 
                     /**
-                     * 获取ValidDate
-                     * @return ValidDate ValidDate
+                     * 获取The validity period (expiration date).
+                     * @return ValidDate The validity period (expiration date).
                      * 
                      */
                     std::string GetValidDate() const;
@@ -242,13 +242,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name
+                     * The full name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Sex
+                     * Gender.
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
@@ -272,7 +272,7 @@ namespace TencentCloud
                     bool m_cURPHasBeenSet;
 
                     /**
-                     * Birthday
+                     * Date of birth.
                      */
                     std::string m_birth;
                     bool m_birthHasBeenSet;
@@ -290,7 +290,7 @@ namespace TencentCloud
                     bool m_issueDateHasBeenSet;
 
                     /**
-                     * ValidDate
+                     * The validity period (expiration date).
                      */
                     std::string m_validDate;
                     bool m_validDateHasBeenSet;

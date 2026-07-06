@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ocr/v20181119/model/MainlandTravelPermitBackInfos.h>
 
 
 namespace TencentCloud
@@ -170,8 +171,8 @@ namespace TencentCloud
                     bool IssueNumberHasBeenSet() const;
 
                     /**
-                     * 获取Document type
-                     * @return Type Document type
+                     * 获取Document type, such as: Mainland Travel Permit for Taiwan Residents, Mainland Travel Permit for Hong Kong and Macao Residents, or Exit-Entry Permit for Travelling to and from Hong Kong and Macao.
+                     * @return Type Document type, such as: Mainland Travel Permit for Taiwan Residents, Mainland Travel Permit for Hong Kong and Macao Residents, or Exit-Entry Permit for Travelling to and from Hong Kong and Macao.
                      * 
                      */
                     std::string GetType() const;
@@ -196,6 +197,60 @@ namespace TencentCloud
                      * 
                      */
                     bool ProfileHasBeenSet() const;
+
+                    /**
+                     * 获取Nationality of the document holder.
+                     * @return Nationality Nationality of the document holder.
+                     * 
+                     */
+                    std::string GetNationality() const;
+
+                    /**
+                     * 判断参数 Nationality 是否已赋值
+                     * @return Nationality 是否已赋值
+                     * 
+                     */
+                    bool NationalityHasBeenSet() const;
+
+                    /**
+                     * 获取Information on the back of the document. 
+Note: Only supported for the back side of the Mainland Travel Permit for Hong Kong and Macao Residents.
+                     * @return MainlandTravelPermitBackInfos Information on the back of the document. 
+Note: Only supported for the back side of the Mainland Travel Permit for Hong Kong and Macao Residents.
+                     * 
+                     */
+                    MainlandTravelPermitBackInfos GetMainlandTravelPermitBackInfos() const;
+
+                    /**
+                     * 判断参数 MainlandTravelPermitBackInfos 是否已赋值
+                     * @return MainlandTravelPermitBackInfos 是否已赋值
+                     * 
+                     */
+                    bool MainlandTravelPermitBackInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Warning information for the document. This field is only valid for international site requests. 
+Warning codes: 
+-9102: photocopy warning; 
+-9103: recapture warning; 
+-9104: Photoshopped document warning; 
+-9109: warning capability not enabled.
+                     * @return WarnCardInfos Warning information for the document. This field is only valid for international site requests. 
+Warning codes: 
+-9102: photocopy warning; 
+-9103: recapture warning; 
+-9104: Photoshopped document warning; 
+-9109: warning capability not enabled.
+                     * 
+                     */
+                    std::vector<int64_t> GetWarnCardInfos() const;
+
+                    /**
+                     * 判断参数 WarnCardInfos 是否已赋值
+                     * @return WarnCardInfos 是否已赋值
+                     * 
+                     */
+                    bool WarnCardInfosHasBeenSet() const;
 
                 private:
 
@@ -254,7 +309,7 @@ namespace TencentCloud
                     bool m_issueNumberHasBeenSet;
 
                     /**
-                     * Document type
+                     * Document type, such as: Mainland Travel Permit for Taiwan Residents, Mainland Travel Permit for Hong Kong and Macao Residents, or Exit-Entry Permit for Travelling to and from Hong Kong and Macao.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -264,6 +319,30 @@ namespace TencentCloud
                      */
                     std::string m_profile;
                     bool m_profileHasBeenSet;
+
+                    /**
+                     * Nationality of the document holder.
+                     */
+                    std::string m_nationality;
+                    bool m_nationalityHasBeenSet;
+
+                    /**
+                     * Information on the back of the document. 
+Note: Only supported for the back side of the Mainland Travel Permit for Hong Kong and Macao Residents.
+                     */
+                    MainlandTravelPermitBackInfos m_mainlandTravelPermitBackInfos;
+                    bool m_mainlandTravelPermitBackInfosHasBeenSet;
+
+                    /**
+                     * Warning information for the document. This field is only valid for international site requests. 
+Warning codes: 
+-9102: photocopy warning; 
+-9103: recapture warning; 
+-9104: Photoshopped document warning; 
+-9109: warning capability not enabled.
+                     */
+                    std::vector<int64_t> m_warnCardInfos;
+                    bool m_warnCardInfosHasBeenSet;
 
                 };
             }

@@ -47,82 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio stream encoding format.
-When audio transcoding is not needed, the value is:
-<li>copy.</li>
-When the outer parameter Container is mp3, the value is:
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
-<li>aac;</li>
-<li>mp3.</li>
+                     * 获取<p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Codec Audio stream encoding format.
-When audio transcoding is not needed, the value is:
-<li>copy.</li>
-When the outer parameter Container is mp3, the value is:
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
-<li>aac;</li>
-<li>mp3.</li>
+                     * @return Codec <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Audio stream encoding format.
-When audio transcoding is not needed, the value is:
-<li>copy.</li>
-When the outer parameter Container is mp3, the value is:
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
-<li>aac;</li>
-<li>mp3.</li>
+                     * 设置<p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _codec Audio stream encoding format.
-When audio transcoding is not needed, the value is:
-<li>copy.</li>
-When the outer parameter Container is mp3, the value is:
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
-<li>aac;</li>
-<li>mp3.</li>
+                     * @param _codec <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -136,15 +72,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @return Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 获取<p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the audio bitrate remains consistent with that of the original audio.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the audio bitrate remains consistent with that of the original audio.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @param _bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 设置<p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the audio bitrate remains consistent with that of the original audio.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the audio bitrate remains consistent with that of the original audio.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -157,30 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * 获取<p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SampleRate Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * @return SampleRate <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * 设置<p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sampleRate Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * @param _sampleRate <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -194,38 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-
+                     * 获取<p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioChannel Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-
+                     * @return AudioChannel <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
-                     * 设置Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-
+                     * 设置<p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _audioChannel Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-
+                     * @param _audioChannel <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -239,15 +147,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioChannelHasBeenSet() const;
 
                     /**
-                     * 获取The audio tracks to retain. All audio tracks are retained by default.
-                     * @return StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     * 获取<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<int64_t> GetStreamSelects() const;
 
                     /**
-                     * 设置The audio tracks to retain. All audio tracks are retained by default.
-                     * @param _streamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     * 设置<p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _streamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStreamSelects(const std::vector<int64_t>& _streamSelects);
@@ -262,58 +174,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Audio stream encoding format.
-When audio transcoding is not needed, the value is:
-<li>copy.</li>
-When the outer parameter Container is mp3, the value is:
-<li>mp3.</li>
-When the outer parameter Container is ogg or flac, the value is:
-<li>flac.</li>
-When the outer parameter Container is m4a, valid values are:
-<li>aac;</li>
-<li>ac3.</li>
-When the outer parameter Container is mp4 or flv, valid values are:
-<li>aac: more suitable for mp4;</li>
-<li>mp3: more suitable for flv;</li>
-<li>mp2.</li>
-When the outer parameter Container is hls, valid values are:
-<li>aac;</li>
-<li>mp3.</li>
+                     * <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the audio bitrate remains consistent with that of the original audio.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Sampling rate of the audio stream. Different encoding standards support different sampling rate options. The value of 0 indicates using the sampling rate value of the source audio.
-For details, see [Supported Range of Audio Sampling Rate](https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
-Unit: Hz.
-Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
+                     * <p>Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. Enter 0 to use the source audio sampling rate.<br>For details, see <a href="https://www.tencentcloud.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53">Audio Sampling Rate Range</a>.<br>Unit: Hz.<br>Note: Ensure the source audio stream sampling rate is within the supported range. Otherwise, transcoding may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * Audio channel mode. Valid values:
-<li>1: mono-channel.</li>
-<li>2: dual-channel.</li>
-<li>6: 5.1 surround sound.
-When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
-
+                     * <p>Audio channel mode. Valid values:</p><li>0: The number of audio channels follows that of the source.</li><li>1: Single channel.</li><li>2: Two channels.</li><li>6: 5.1 channels.</li>When the media container format is an audio format (mp3), the number of audio channels cannot be set to 5.1.<p>Default value: 2.<br>Note: If you set the audio channel to follow that of the source and the audio encoding format does not support the current audio channel, the transcoding task may fail.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
 
                     /**
-                     * The audio tracks to retain. All audio tracks are retained by default.
+                     * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_streamSelects;
                     bool m_streamSelectsHasBeenSet;

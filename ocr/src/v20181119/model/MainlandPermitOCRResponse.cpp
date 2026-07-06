@@ -34,7 +34,10 @@ MainlandPermitOCRResponse::MainlandPermitOCRResponse() :
     m_issueAddressHasBeenSet(false),
     m_issueNumberHasBeenSet(false),
     m_typeHasBeenSet(false),
-    m_profileHasBeenSet(false)
+    m_profileHasBeenSet(false),
+    m_nationalityHasBeenSet(false),
+    m_mainlandTravelPermitBackInfosHasBeenSet(false),
+    m_warnCardInfosHasBeenSet(false)
 {
 }
 
@@ -182,6 +185,46 @@ CoreInternalOutcome MainlandPermitOCRResponse::Deserialize(const string &payload
         m_profileHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Nationality") && !rsp["Nationality"].IsNull())
+    {
+        if (!rsp["Nationality"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Nationality` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_nationality = string(rsp["Nationality"].GetString());
+        m_nationalityHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("MainlandTravelPermitBackInfos") && !rsp["MainlandTravelPermitBackInfos"].IsNull())
+    {
+        if (!rsp["MainlandTravelPermitBackInfos"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `MainlandTravelPermitBackInfos` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_mainlandTravelPermitBackInfos.Deserialize(rsp["MainlandTravelPermitBackInfos"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_mainlandTravelPermitBackInfosHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WarnCardInfos") && !rsp["WarnCardInfos"].IsNull())
+    {
+        if (!rsp["WarnCardInfos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `WarnCardInfos` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["WarnCardInfos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_warnCardInfos.push_back((*itr).GetInt64());
+        }
+        m_warnCardInfosHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -278,6 +321,36 @@ string MainlandPermitOCRResponse::ToJsonString() const
         string key = "Profile";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_profile.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_nationalityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Nationality";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_nationality.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_mainlandTravelPermitBackInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MainlandTravelPermitBackInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_mainlandTravelPermitBackInfos.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_warnCardInfosHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WarnCardInfos";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_warnCardInfos.begin(); itr != m_warnCardInfos.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -400,6 +473,36 @@ string MainlandPermitOCRResponse::GetProfile() const
 bool MainlandPermitOCRResponse::ProfileHasBeenSet() const
 {
     return m_profileHasBeenSet;
+}
+
+string MainlandPermitOCRResponse::GetNationality() const
+{
+    return m_nationality;
+}
+
+bool MainlandPermitOCRResponse::NationalityHasBeenSet() const
+{
+    return m_nationalityHasBeenSet;
+}
+
+MainlandTravelPermitBackInfos MainlandPermitOCRResponse::GetMainlandTravelPermitBackInfos() const
+{
+    return m_mainlandTravelPermitBackInfos;
+}
+
+bool MainlandPermitOCRResponse::MainlandTravelPermitBackInfosHasBeenSet() const
+{
+    return m_mainlandTravelPermitBackInfosHasBeenSet;
+}
+
+vector<int64_t> MainlandPermitOCRResponse::GetWarnCardInfos() const
+{
+    return m_warnCardInfos;
+}
+
+bool MainlandPermitOCRResponse::WarnCardInfosHasBeenSet() const
+{
+    return m_warnCardInfosHasBeenSet;
 }
 
 

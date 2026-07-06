@@ -73,16 +73,16 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
-                     * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
-                     * 
+                     * 获取Image rotation angle in degrees. 0: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * @return Angel Image rotation angle in degrees. 0: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * @deprecated
                      */
                     double GetAngel() const;
 
                     /**
                      * 判断参数 Angel 是否已赋值
                      * @return Angel 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AngelHasBeenSet() const;
 
@@ -100,6 +100,20 @@ namespace TencentCloud
                      */
                     bool PdfPageSizeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Angle 
+                     * 
+                     */
+                    double GetAngle() const;
+
+                    /**
+                     * 判断参数 Angle 是否已赋值
+                     * @return Angle 是否已赋值
+                     * 
+                     */
+                    bool AngleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,7 +129,7 @@ namespace TencentCloud
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * Image rotation angle in degrees. 0: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      */
                     double m_angel;
                     bool m_angelHasBeenSet;
@@ -125,6 +139,12 @@ namespace TencentCloud
                      */
                     int64_t m_pdfPageSize;
                     bool m_pdfPageSizeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    double m_angle;
+                    bool m_angleHasBeenSet;
 
                 };
             }

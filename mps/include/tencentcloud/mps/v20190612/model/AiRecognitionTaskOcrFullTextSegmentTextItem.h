@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Confidence of a recognition segment. Value range: 0-100.
-                     * @return Confidence Confidence of a recognition segment. Value range: 0-100.
+                     * 获取<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of a recognition segment. Value range: 0-100.
-                     * @param _confidence Confidence of a recognition segment. Value range: 0-100.
+                     * 设置<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @param _confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 获取<p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
+                     * @return AreaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @param _areaCoordSet Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 设置<p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
+                     * @param _areaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Recognized text.
-                     * @return Text Recognized text.
+                     * 获取<p>Recognized text.</p>
+                     * @return Text <p>Recognized text.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Recognized text.
-                     * @param _text Recognized text.
+                     * 设置<p>Recognized text.</p>
+                     * @param _text <p>Recognized text.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Confidence of a recognition segment. Value range: 0-100.
+                     * <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Recognized text.
+                     * <p>Recognized text.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

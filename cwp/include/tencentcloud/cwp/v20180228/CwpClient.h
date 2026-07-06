@@ -4193,7 +4193,7 @@ This API is used to call the billing payment API for payment since prepaid order
                 DescribeLogTypeOutcomeCallable DescribeLogTypeCallable(const Model::DescribeLogTypeRequest& request);
 
                 /**
-                 *Retrieve the global configuration for uninstall protection
+                 *This API is used to obtain the global configuration for QR code login.
                  * @param req DescribeLoginTypeGlobalConfRequest
                  * @return DescribeLoginTypeGlobalConfOutcome
                  */

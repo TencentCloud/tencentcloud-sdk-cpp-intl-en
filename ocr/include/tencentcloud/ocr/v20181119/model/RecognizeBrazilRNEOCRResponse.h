@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取RNE
-                     * @return RNE RNE
+                     * 获取The RNE (Registro Nacional de Estrangeiros) number.
+                     * @return RNE The RNE (Registro Nacional de Estrangeiros) number.
                      * 
                      */
                     std::string GetRNE() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool RNEHasBeenSet() const;
 
                     /**
-                     * 获取Classification
-                     * @return CLASSIFICATION Classification
+                     * 获取The classification of the RNE document.
+                     * @return CLASSIFICATION The classification of the RNE document.
                      * 
                      */
                     std::string GetCLASSIFICATION() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool CLASSIFICATIONHasBeenSet() const;
 
                     /**
-                     * 获取Valid date
-                     * @return VALIDADE Valid date
+                     * 获取The validity period (expiry date) of the RNE document.
+                     * @return VALIDADE The validity period (expiry date) of the RNE document.
                      * 
                      */
                     std::string GetVALIDADE() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool VALIDADEHasBeenSet() const;
 
                     /**
-                     * 获取Name
-                     * @return NOME Name
+                     * 获取The full name.
+                     * @return NOME The full name.
                      * 
                      */
                     std::string GetNOME() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool NOMEHasBeenSet() const;
 
                     /**
-                     * 获取Family information
-                     * @return Membership Family information
+                     * 获取Family information (parents' names).
+                     * @return Membership Family information (parents' names).
                      * 
                      */
                     std::string GetMembership() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool NATURALIDADEHasBeenSet() const;
 
                     /**
-                     * 获取Issuing agency
-                     * @return IssuingAgency Issuing agency
+                     * 获取The issuing agency.
+                     * @return IssuingAgency The issuing agency.
                      * 
                      */
                     std::string GetIssuingAgency() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool IssuingAgencyHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-                     * @return DateOfBirth Birthday
+                     * 获取Date of birth.
+                     * @return DateOfBirth Date of birth.
                      * 
                      */
                     std::string GetDateOfBirth() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Date of entry
-                     * @return EntryDate Date of entry
+                     * 获取The date of entry into Brazil.
+                     * @return EntryDate The date of entry into Brazil.
                      * 
                      */
                     std::string GetEntryDate() const;
@@ -198,8 +198,8 @@ namespace TencentCloud
                     bool EntryDateHasBeenSet() const;
 
                     /**
-                     * 获取VIA
-                     * @return VIA VIA
+                     * 获取The VIA (document version/sequence number).
+                     * @return VIA The VIA (document version/sequence number).
                      * 
                      */
                     std::string GetVIA() const;
@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool VIAHasBeenSet() const;
 
                     /**
-                     * 获取Dispatch date
-                     * @return DispatchDate Dispatch date
+                     * 获取The issue date.
+                     * @return DispatchDate The issue date.
                      * 
                      */
                     std::string GetDispatchDate() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool DispatchDateHasBeenSet() const;
 
                     /**
-                     * 获取MRZ
-                     * @return MRZ MRZ
+                     * 获取The machine readable zone (MRZ) code.
+                     * @return MRZ The machine readable zone (MRZ) code.
                      * 
                      */
                     std::string GetMRZ() const;
@@ -256,31 +256,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * RNE
+                     * The RNE (Registro Nacional de Estrangeiros) number.
                      */
                     std::string m_rNE;
                     bool m_rNEHasBeenSet;
 
                     /**
-                     * Classification
+                     * The classification of the RNE document.
                      */
                     std::string m_cLASSIFICATION;
                     bool m_cLASSIFICATIONHasBeenSet;
 
                     /**
-                     * Valid date
+                     * The validity period (expiry date) of the RNE document.
                      */
                     std::string m_vALIDADE;
                     bool m_vALIDADEHasBeenSet;
 
                     /**
-                     * Name
+                     * The full name.
                      */
                     std::string m_nOME;
                     bool m_nOMEHasBeenSet;
 
                     /**
-                     * Family information
+                     * Family information (parents' names).
                      */
                     std::string m_membership;
                     bool m_membershipHasBeenSet;
@@ -298,13 +298,13 @@ namespace TencentCloud
                     bool m_nATURALIDADEHasBeenSet;
 
                     /**
-                     * Issuing agency
+                     * The issuing agency.
                      */
                     std::string m_issuingAgency;
                     bool m_issuingAgencyHasBeenSet;
 
                     /**
-                     * Birthday
+                     * Date of birth.
                      */
                     std::string m_dateOfBirth;
                     bool m_dateOfBirthHasBeenSet;
@@ -316,25 +316,25 @@ namespace TencentCloud
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Date of entry
+                     * The date of entry into Brazil.
                      */
                     std::string m_entryDate;
                     bool m_entryDateHasBeenSet;
 
                     /**
-                     * VIA
+                     * The VIA (document version/sequence number).
                      */
                     std::string m_vIA;
                     bool m_vIAHasBeenSet;
 
                     /**
-                     * Dispatch date
+                     * The issue date.
                      */
                     std::string m_dispatchDate;
                     bool m_dispatchDateHasBeenSet;
 
                     /**
-                     * MRZ
+                     * The machine readable zone (MRZ) code.
                      */
                     std::string m_mRZ;
                     bool m_mRZHasBeenSet;

@@ -117,6 +117,8 @@
 #include <tencentcloud/mps/v20190612/model/DeleteSubtitleEmbedTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteTranscodeTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteTranscodeTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/DeleteVoiceRequest.h>
+#include <tencentcloud/mps/v20190612/model/DeleteVoiceResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteWatermarkTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/DeleteWatermarkTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/DeleteWordSamplesRequest.h>
@@ -197,6 +199,10 @@
 #include <tencentcloud/mps/v20190612/model/DescribeWorkflowsResponse.h>
 #include <tencentcloud/mps/v20190612/model/DesignVoiceAsyncRequest.h>
 #include <tencentcloud/mps/v20190612/model/DesignVoiceAsyncResponse.h>
+#include <tencentcloud/mps/v20190612/model/DetectVideoSubtitleAreaRequest.h>
+#include <tencentcloud/mps/v20190612/model/DetectVideoSubtitleAreaResponse.h>
+#include <tencentcloud/mps/v20190612/model/DetectVideoWatermarkRequest.h>
+#include <tencentcloud/mps/v20190612/model/DetectVideoWatermarkResponse.h>
 #include <tencentcloud/mps/v20190612/model/DisableScheduleRequest.h>
 #include <tencentcloud/mps/v20190612/model/DisableScheduleResponse.h>
 #include <tencentcloud/mps/v20190612/model/DisableWorkflowRequest.h>
@@ -279,6 +285,8 @@
 #include <tencentcloud/mps/v20190612/model/TextTranslationResponse.h>
 #include <tencentcloud/mps/v20190612/model/UpdateProjectRequest.h>
 #include <tencentcloud/mps/v20190612/model/UpdateProjectResponse.h>
+#include <tencentcloud/mps/v20190612/model/UpdateVoiceRequest.h>
+#include <tencentcloud/mps/v20190612/model/UpdateVoiceResponse.h>
 
 
 namespace TencentCloud
@@ -434,6 +442,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTranscodeTemplateResponse> DeleteTranscodeTemplateOutcome;
                 typedef std::future<DeleteTranscodeTemplateOutcome> DeleteTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteTranscodeTemplateRequest&, DeleteTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTranscodeTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVoiceResponse> DeleteVoiceOutcome;
+                typedef std::future<DeleteVoiceOutcome> DeleteVoiceOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DeleteVoiceRequest&, DeleteVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVoiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteWatermarkTemplateResponse> DeleteWatermarkTemplateOutcome;
                 typedef std::future<DeleteWatermarkTemplateOutcome> DeleteWatermarkTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DeleteWatermarkTemplateRequest&, DeleteWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWatermarkTemplateAsyncHandler;
@@ -554,6 +565,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DesignVoiceAsyncResponse> DesignVoiceAsyncOutcome;
                 typedef std::future<DesignVoiceAsyncOutcome> DesignVoiceAsyncOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DesignVoiceAsyncRequest&, DesignVoiceAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DesignVoiceAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetectVideoSubtitleAreaResponse> DetectVideoSubtitleAreaOutcome;
+                typedef std::future<DetectVideoSubtitleAreaOutcome> DetectVideoSubtitleAreaOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DetectVideoSubtitleAreaRequest&, DetectVideoSubtitleAreaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectVideoSubtitleAreaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetectVideoWatermarkResponse> DetectVideoWatermarkOutcome;
+                typedef std::future<DetectVideoWatermarkOutcome> DetectVideoWatermarkOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DetectVideoWatermarkRequest&, DetectVideoWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectVideoWatermarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisableScheduleResponse> DisableScheduleOutcome;
                 typedef std::future<DisableScheduleOutcome> DisableScheduleOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DisableScheduleRequest&, DisableScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableScheduleAsyncHandler;
@@ -677,6 +694,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateProjectResponse> UpdateProjectOutcome;
                 typedef std::future<UpdateProjectOutcome> UpdateProjectOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::UpdateProjectRequest&, UpdateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateVoiceResponse> UpdateVoiceOutcome;
+                typedef std::future<UpdateVoiceOutcome> UpdateVoiceOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::UpdateVoiceRequest&, UpdateVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateVoiceAsyncHandler;
 
 
 
@@ -1134,6 +1154,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteTranscodeTemplateOutcomeCallable DeleteTranscodeTemplateCallable(const Model::DeleteTranscodeTemplateRequest& request);
 
                 /**
+                 *This API is used to delete a voice (created via voice cloning or design).
+                 * @param req DeleteVoiceRequest
+                 * @return DeleteVoiceOutcome
+                 */
+                DeleteVoiceOutcome DeleteVoice(const Model::DeleteVoiceRequest &request);
+                void DeleteVoiceAsync(const Model::DeleteVoiceRequest& request, const DeleteVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVoiceOutcomeCallable DeleteVoiceCallable(const Model::DeleteVoiceRequest& request);
+
+                /**
                  *This API is used to delete a custom watermarking template.
                  * @param req DeleteWatermarkTemplateRequest
                  * @return DeleteWatermarkTemplateOutcome
@@ -1489,13 +1518,31 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeWorkflowsOutcomeCallable DescribeWorkflowsCallable(const Model::DescribeWorkflowsRequest& request);
 
                 /**
-                 *This API is used to design a voice. It generates a voice ID based on a prompt.
+                 *This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
                  * @param req DesignVoiceAsyncRequest
                  * @return DesignVoiceAsyncOutcome
                  */
                 DesignVoiceAsyncOutcome DesignVoiceAsync(const Model::DesignVoiceAsyncRequest &request);
                 void DesignVoiceAsyncAsync(const Model::DesignVoiceAsyncRequest& request, const DesignVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DesignVoiceAsyncOutcomeCallable DesignVoiceAsyncCallable(const Model::DesignVoiceAsyncRequest& request);
+
+                /**
+                 *This API is used to quickly detect the hard subtitle area in a video file.
+                 * @param req DetectVideoSubtitleAreaRequest
+                 * @return DetectVideoSubtitleAreaOutcome
+                 */
+                DetectVideoSubtitleAreaOutcome DetectVideoSubtitleArea(const Model::DetectVideoSubtitleAreaRequest &request);
+                void DetectVideoSubtitleAreaAsync(const Model::DetectVideoSubtitleAreaRequest& request, const DetectVideoSubtitleAreaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetectVideoSubtitleAreaOutcomeCallable DetectVideoSubtitleAreaCallable(const Model::DetectVideoSubtitleAreaRequest& request);
+
+                /**
+                 *This API is used to quickly detect whether a video file contains a watermark.
+                 * @param req DetectVideoWatermarkRequest
+                 * @return DetectVideoWatermarkOutcome
+                 */
+                DetectVideoWatermarkOutcome DetectVideoWatermark(const Model::DetectVideoWatermarkRequest &request);
+                void DetectVideoWatermarkAsync(const Model::DetectVideoWatermarkRequest& request, const DetectVideoWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetectVideoWatermarkOutcomeCallable DetectVideoWatermarkCallable(const Model::DetectVideoWatermarkRequest& request);
 
                 /**
                  *This API is used to disable a scheme.
@@ -1870,7 +1917,7 @@ Live stream processing event notification supports HTTP callback and also suppor
                 ResetWorkflowOutcomeCallable ResetWorkflowCallable(const Model::ResetWorkflowRequest& request);
 
                 /**
-                 *This API is used to return the clone voice type Id or synthetic audio results synchronously.
+                 *This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
                  * @param req SyncDubbingRequest
                  * @return SyncDubbingOutcome
                  */
@@ -1904,6 +1951,15 @@ Live stream processing event notification supports HTTP callback and also suppor
                 UpdateProjectOutcome UpdateProject(const Model::UpdateProjectRequest &request);
                 void UpdateProjectAsync(const Model::UpdateProjectRequest& request, const UpdateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateProjectOutcomeCallable UpdateProjectCallable(const Model::UpdateProjectRequest& request);
+
+                /**
+                 *This API is used to update the voice information.
+                 * @param req UpdateVoiceRequest
+                 * @return UpdateVoiceOutcome
+                 */
+                UpdateVoiceOutcome UpdateVoice(const Model::UpdateVoiceRequest &request);
+                void UpdateVoiceAsync(const Model::UpdateVoiceRequest& request, const UpdateVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateVoiceOutcomeCallable UpdateVoiceCallable(const Model::UpdateVoiceRequest& request);
 
             };
         }

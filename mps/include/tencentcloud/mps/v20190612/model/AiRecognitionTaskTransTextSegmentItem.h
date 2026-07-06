@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The confidence score for a segment. Value range: 0-100.
-                     * @return Confidence The confidence score for a segment. Value range: 0-100.
+                     * 获取<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for a segment. Value range: 0-100.
-                     * @param _confidence The confidence score for a segment. Value range: 0-100.
+                     * 设置<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @param _confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The start time offset (seconds) of a segment.
-                     * @return StartTimeOffset The start time offset (seconds) of a segment.
+                     * 获取<p>Start time offset of the recognized segment, in seconds.</p>
+                     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置The start time offset (seconds) of a segment.
-                     * @param _startTimeOffset The start time offset (seconds) of a segment.
+                     * 设置<p>Start time offset of the recognized segment, in seconds.</p>
+                     * @param _startTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The end time offset (seconds) of a segment.
-                     * @return EndTimeOffset The end time offset (seconds) of a segment.
+                     * 获取<p>End time offset of the recognized segment, in seconds.</p>
+                     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置The end time offset (seconds) of a segment.
-                     * @param _endTimeOffset The end time offset (seconds) of a segment.
+                     * 设置<p>End time offset of the recognized segment, in seconds.</p>
+                     * @param _endTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The text transcript.
-                     * @return Text The text transcript.
+                     * 获取<p>Recognized text.</p>
+                     * @return Text <p>Recognized text.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置The text transcript.
-                     * @param _text The text transcript.
+                     * 设置<p>Recognized text.</p>
+                     * @param _text <p>Recognized text.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取The translation.
-                     * @return Trans The translation.
+                     * 获取<p>Translated text.</p>
+                     * @return Trans <p>Translated text.</p>
                      * 
                      */
                     std::string GetTrans() const;
 
                     /**
-                     * 设置The translation.
-                     * @param _trans The translation.
+                     * 设置<p>Translated text.</p>
+                     * @param _trans <p>Translated text.</p>
                      * 
                      */
                     void SetTrans(const std::string& _trans);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取Word timestamp information.
-                     * @return Wordlist Word timestamp information.
+                     * 获取<p>Word timestamp information.</p>
+                     * @return Wordlist <p>Word timestamp information.</p>
                      * 
                      */
                     std::vector<WordResult> GetWordlist() const;
 
                     /**
-                     * 设置Word timestamp information.
-                     * @param _wordlist Word timestamp information.
+                     * 设置<p>Word timestamp information.</p>
+                     * @param _wordlist <p>Word timestamp information.</p>
                      * 
                      */
                     void SetWordlist(const std::vector<WordResult>& _wordlist);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The confidence score for a segment. Value range: 0-100.
+                     * <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The start time offset (seconds) of a segment.
+                     * <p>Start time offset of the recognized segment, in seconds.</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * The end time offset (seconds) of a segment.
+                     * <p>End time offset of the recognized segment, in seconds.</p>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The text transcript.
+                     * <p>Recognized text.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * The translation.
+                     * <p>Translated text.</p>
                      */
                     std::string m_trans;
                     bool m_transHasBeenSet;
 
                     /**
-                     * Word timestamp information.
+                     * <p>Word timestamp information.</p>
                      */
                     std::vector<WordResult> m_wordlist;
                     bool m_wordlistHasBeenSet;

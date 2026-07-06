@@ -2390,6 +2390,56 @@ MpsClient::DeleteTranscodeTemplateOutcomeCallable MpsClient::DeleteTranscodeTemp
     return prom->get_future();
 }
 
+MpsClient::DeleteVoiceOutcome MpsClient::DeleteVoice(const DeleteVoiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVoice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVoiceResponse rsp = DeleteVoiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVoiceOutcome(rsp);
+        else
+            return DeleteVoiceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVoiceOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DeleteVoiceAsync(const DeleteVoiceRequest& request, const DeleteVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVoiceRequest&;
+    using Resp = DeleteVoiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVoice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DeleteVoiceOutcomeCallable MpsClient::DeleteVoiceCallable(const DeleteVoiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVoiceOutcome>>();
+    DeleteVoiceAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DeleteVoiceRequest&,
+        DeleteVoiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MpsClient::DeleteWatermarkTemplateOutcome MpsClient::DeleteWatermarkTemplate(const DeleteWatermarkTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteWatermarkTemplate");
@@ -4382,6 +4432,106 @@ MpsClient::DesignVoiceAsyncOutcomeCallable MpsClient::DesignVoiceAsyncCallable(c
         const MpsClient*,
         const DesignVoiceAsyncRequest&,
         DesignVoiceAsyncOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::DetectVideoSubtitleAreaOutcome MpsClient::DetectVideoSubtitleArea(const DetectVideoSubtitleAreaRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetectVideoSubtitleArea");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetectVideoSubtitleAreaResponse rsp = DetectVideoSubtitleAreaResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetectVideoSubtitleAreaOutcome(rsp);
+        else
+            return DetectVideoSubtitleAreaOutcome(o.GetError());
+    }
+    else
+    {
+        return DetectVideoSubtitleAreaOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DetectVideoSubtitleAreaAsync(const DetectVideoSubtitleAreaRequest& request, const DetectVideoSubtitleAreaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DetectVideoSubtitleAreaRequest&;
+    using Resp = DetectVideoSubtitleAreaResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DetectVideoSubtitleArea", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DetectVideoSubtitleAreaOutcomeCallable MpsClient::DetectVideoSubtitleAreaCallable(const DetectVideoSubtitleAreaRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DetectVideoSubtitleAreaOutcome>>();
+    DetectVideoSubtitleAreaAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DetectVideoSubtitleAreaRequest&,
+        DetectVideoSubtitleAreaOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::DetectVideoWatermarkOutcome MpsClient::DetectVideoWatermark(const DetectVideoWatermarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetectVideoWatermark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetectVideoWatermarkResponse rsp = DetectVideoWatermarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetectVideoWatermarkOutcome(rsp);
+        else
+            return DetectVideoWatermarkOutcome(o.GetError());
+    }
+    else
+    {
+        return DetectVideoWatermarkOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::DetectVideoWatermarkAsync(const DetectVideoWatermarkRequest& request, const DetectVideoWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DetectVideoWatermarkRequest&;
+    using Resp = DetectVideoWatermarkResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DetectVideoWatermark", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::DetectVideoWatermarkOutcomeCallable MpsClient::DetectVideoWatermarkCallable(const DetectVideoWatermarkRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DetectVideoWatermarkOutcome>>();
+    DetectVideoWatermarkAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const DetectVideoWatermarkRequest&,
+        DetectVideoWatermarkOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6432,6 +6582,56 @@ MpsClient::UpdateProjectOutcomeCallable MpsClient::UpdateProjectCallable(const U
         const MpsClient*,
         const UpdateProjectRequest&,
         UpdateProjectOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::UpdateVoiceOutcome MpsClient::UpdateVoice(const UpdateVoiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateVoice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateVoiceResponse rsp = UpdateVoiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateVoiceOutcome(rsp);
+        else
+            return UpdateVoiceOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateVoiceOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::UpdateVoiceAsync(const UpdateVoiceRequest& request, const UpdateVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateVoiceRequest&;
+    using Resp = UpdateVoiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateVoice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::UpdateVoiceOutcomeCallable MpsClient::UpdateVoiceCallable(const UpdateVoiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateVoiceOutcome>>();
+    UpdateVoiceAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const UpdateVoiceRequest&,
+        UpdateVoiceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

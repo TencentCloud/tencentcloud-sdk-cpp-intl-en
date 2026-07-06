@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool IssuingCountryHasBeenSet() const;
 
                     /**
-                     * 获取Country/region code
-                     * @return Nationality Country/region code
+                     * 获取Nationality code (MRZ field)
+                     * @return Nationality Nationality code (MRZ field)
                      * 
                      */
                     std::string GetNationality() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool WarnHasBeenSet() const;
 
                     /**
-                     * 获取Identity photo
-                     * @return Image Identity photo
+                     * 获取Base64-encoded identity photo
+                     * @return Image Base64-encoded identity photo
                      * 
                      */
                     std::string GetImage() const;
@@ -259,8 +259,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Document content in Information Zone
-                     * @return PassportRecognizeInfos Document content in Information Zone
+                     * 获取Document content in the visual zone
+                     * @return PassportRecognizeInfos Document content in the visual zone
                      * 
                      */
                     PassportRecognizeInfos GetPassportRecognizeInfos() const;
@@ -273,24 +273,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassportRecognizeInfosHasBeenSet() const;
 
                     /**
-                     * 获取Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-                     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * 获取Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
+                     * @return WarnCardInfos Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
                      * 
                      */
                     std::vector<int64_t> GetWarnCardInfos() const;
@@ -317,8 +313,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CardCountHasBeenSet() const;
 
                     /**
-                     * 获取complete or not
-                     * @return IsComplete complete or not
+                     * 获取Whether the passport information is complete.
+                     * @return IsComplete Whether the passport information is complete.
                      * 
                      */
                     bool GetIsComplete() const;
@@ -369,7 +365,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_issuingCountryHasBeenSet;
 
                     /**
-                     * Country/region code
+                     * Nationality code (MRZ field)
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
@@ -381,7 +377,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_warnHasBeenSet;
 
                     /**
-                     * Identity photo
+                     * Base64-encoded identity photo
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
@@ -425,21 +421,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Document content in Information Zone
+                     * Document content in the visual zone
                      */
                     PassportRecognizeInfos m_passportRecognizeInfos;
                     bool m_passportRecognizeInfosHasBeenSet;
 
                     /**
-                     * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;
@@ -451,7 +445,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cardCountHasBeenSet;
 
                     /**
-                     * complete or not
+                     * Whether the passport information is complete.
                      */
                     bool m_isComplete;
                     bool m_isCompleteHasBeenSet;

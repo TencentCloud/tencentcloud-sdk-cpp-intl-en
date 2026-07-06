@@ -147,6 +147,43 @@ namespace TencentCloud
                      */
                     bool CropPortraitHasBeenSet() const;
 
+                    /**
+                     * 获取Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+                     * @return LicenceVersion Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+                     * 
+                     */
+                    std::string GetLicenceVersion() const;
+
+                    /**
+                     * 设置Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+                     * @param _licenceVersion Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+                     * 
+                     */
+                    void SetLicenceVersion(const std::string& _licenceVersion);
+
+                    /**
+                     * 判断参数 LicenceVersion 是否已赋值
+                     * @return LicenceVersion 是否已赋值
+                     * 
+                     */
+                    bool LicenceVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +215,16 @@ namespace TencentCloud
                      */
                     bool m_cropPortrait;
                     bool m_cropPortraitHasBeenSet;
+
+                    /**
+                     * Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+                     */
+                    std::string m_licenceVersion;
+                    bool m_licenceVersionHasBeenSet;
 
                 };
             }

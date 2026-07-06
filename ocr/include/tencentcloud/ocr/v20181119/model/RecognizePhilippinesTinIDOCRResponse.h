@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取The name.
-                     * @return FullName The name.
+                     * 获取The full name.
+                     * @return FullName The full name.
                      * 
                      */
                     TextDetectionResult GetFullName() const;
@@ -143,7 +143,7 @@ namespace TencentCloud
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * The name.
+                     * The full name.
                      */
                     TextDetectionResult m_fullName;
                     bool m_fullNameHasBeenSet;

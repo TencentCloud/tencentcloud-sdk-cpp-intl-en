@@ -152,6 +152,27 @@ namespace TencentCloud
                     bool GenderHasBeenSet() const;
 
                     /**
+                     * 获取<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * 
+                     */
+                    std::string GetAge() const;
+
+                    /**
+                     * 设置<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @param _age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * 
+                     */
+                    void SetAge(const std::string& _age);
+
+                    /**
+                     * 判断参数 Age 是否已赋值
+                     * @return Age 是否已赋值
+                     * 
+                     */
+                    bool AgeHasBeenSet() const;
+
+                    /**
                      * 获取<p>List of supported languages. </p><p>For example: en.</p>
                      * @return Languages <p>List of supported languages. </p><p>For example: en.</p>
                      * 
@@ -266,6 +287,12 @@ namespace TencentCloud
                      */
                     std::string m_gender;
                     bool m_genderHasBeenSet;
+
+                    /**
+                     * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     */
+                    std::string m_age;
+                    bool m_ageHasBeenSet;
 
                     /**
                      * <p>List of supported languages. </p><p>For example: en.</p>

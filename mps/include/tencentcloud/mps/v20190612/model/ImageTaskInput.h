@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/ImageEncodeConfig.h>
 #include <tencentcloud/mps/v20190612/model/ImageEnhanceConfig.h>
 #include <tencentcloud/mps/v20190612/model/ImageEraseConfig.h>
+#include <tencentcloud/mps/v20190612/model/AiPosterSuiteConfig.h>
 
 
 namespace TencentCloud
@@ -50,19 +51,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _encodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _encodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEncodeConfig(const ImageEncodeConfig& _encodeConfig);
@@ -75,19 +76,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EncodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageEnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _enhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _enhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnhanceConfig(const ImageEnhanceConfig& _enhanceConfig);
@@ -100,19 +101,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取<p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageEraseConfig GetEraseConfig() const;
 
                     /**
-                     * 设置Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _eraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置<p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _eraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEraseConfig(const ImageEraseConfig& _eraseConfig);
@@ -124,28 +125,55 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool EraseConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AiPosterSuiteConfig 
+                     * 
+                     */
+                    AiPosterSuiteConfig GetAiPosterSuiteConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _aiPosterSuiteConfig 
+                     * 
+                     */
+                    void SetAiPosterSuiteConfig(const AiPosterSuiteConfig& _aiPosterSuiteConfig);
+
+                    /**
+                     * 判断参数 AiPosterSuiteConfig 是否已赋值
+                     * @return AiPosterSuiteConfig 是否已赋值
+                     * 
+                     */
+                    bool AiPosterSuiteConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
 
                     /**
-                     * Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageEnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageEraseConfig m_eraseConfig;
                     bool m_eraseConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AiPosterSuiteConfig m_aiPosterSuiteConfig;
+                    bool m_aiPosterSuiteConfigHasBeenSet;
 
                 };
             }

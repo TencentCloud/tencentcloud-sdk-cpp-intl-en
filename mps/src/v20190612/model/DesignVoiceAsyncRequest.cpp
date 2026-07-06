@@ -24,6 +24,8 @@ using namespace std;
 
 DesignVoiceAsyncRequest::DesignVoiceAsyncRequest() :
     m_promptHasBeenSet(false),
+    m_voiceProfileHasBeenSet(false),
+    m_textHasBeenSet(false),
     m_extParamHasBeenSet(false)
 {
 }
@@ -41,6 +43,23 @@ string DesignVoiceAsyncRequest::ToJsonString() const
         string key = "Prompt";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_prompt.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_voiceProfileHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VoiceProfile";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_voiceProfile.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_textHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Text";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_text.c_str(), allocator).Move(), allocator);
     }
 
     if (m_extParamHasBeenSet)
@@ -73,6 +92,38 @@ void DesignVoiceAsyncRequest::SetPrompt(const string& _prompt)
 bool DesignVoiceAsyncRequest::PromptHasBeenSet() const
 {
     return m_promptHasBeenSet;
+}
+
+VoiceProfile DesignVoiceAsyncRequest::GetVoiceProfile() const
+{
+    return m_voiceProfile;
+}
+
+void DesignVoiceAsyncRequest::SetVoiceProfile(const VoiceProfile& _voiceProfile)
+{
+    m_voiceProfile = _voiceProfile;
+    m_voiceProfileHasBeenSet = true;
+}
+
+bool DesignVoiceAsyncRequest::VoiceProfileHasBeenSet() const
+{
+    return m_voiceProfileHasBeenSet;
+}
+
+string DesignVoiceAsyncRequest::GetText() const
+{
+    return m_text;
+}
+
+void DesignVoiceAsyncRequest::SetText(const string& _text)
+{
+    m_text = _text;
+    m_textHasBeenSet = true;
+}
+
+bool DesignVoiceAsyncRequest::TextHasBeenSet() const
+{
+    return m_textHasBeenSet;
 }
 
 string DesignVoiceAsyncRequest::GetExtParam() const

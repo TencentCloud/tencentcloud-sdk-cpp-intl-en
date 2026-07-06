@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool HeadPortraitHasBeenSet() const;
 
                     /**
-                     * 获取The full name.
-                     * @return Name The full name.
+                     * 获取Full name of the license holder.
+                     * @return Name Full name of the license holder.
                      * 
                      */
                     TextDetectionResult GetName() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The last name.
-                     * @return LastName The last name.
+                     * 获取Last name / surname of the license holder.
+                     * @return LastName Last name / surname of the license holder.
                      * 
                      */
                     TextDetectionResult GetLastName() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool LastNameHasBeenSet() const;
 
                     /**
-                     * 获取The first name.
-                     * @return FirstName The first name.
+                     * 获取First name of the license holder.
+                     * @return FirstName First name of the license holder.
                      * 
                      */
                     TextDetectionResult GetFirstName() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool FirstNameHasBeenSet() const;
 
                     /**
-                     * 获取The middle name.
-                     * @return MiddleName The middle name.
+                     * 获取Middle name of the license holder.
+                     * @return MiddleName Middle name of the license holder.
                      * 
                      */
                     TextDetectionResult GetMiddleName() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool MiddleNameHasBeenSet() const;
 
                     /**
-                     * 获取The nationality.
-                     * @return Nationality The nationality.
+                     * 获取Nationality of the license holder.
+                     * @return Nationality Nationality of the license holder.
                      * 
                      */
                     TextDetectionResult GetNationality() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取The gender.
-                     * @return Sex The gender.
+                     * 获取Gender
+                     * @return Sex Gender
                      * 
                      */
                     TextDetectionResult GetSex() const;
@@ -143,8 +143,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取The address.
-                     * @return Address The address.
+                     * 获取Address of the license holder.
+                     * @return Address Address of the license holder.
                      * 
                      */
                     TextDetectionResult GetAddress() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取The license No.
-                     * @return LicenseNo The license No.
+                     * 获取Driver's license number.
+                     * @return LicenseNo Driver's license number.
                      * 
                      */
                     TextDetectionResult GetLicenseNo() const;
@@ -171,8 +171,8 @@ namespace TencentCloud
                     bool LicenseNoHasBeenSet() const;
 
                     /**
-                     * 获取The expiration date.
-                     * @return ExpiresDate The expiration date.
+                     * 获取Expiration date of the driver's license.
+                     * @return ExpiresDate Expiration date of the driver's license.
                      * 
                      */
                     TextDetectionResult GetExpiresDate() const;
@@ -185,8 +185,8 @@ namespace TencentCloud
                     bool ExpiresDateHasBeenSet() const;
 
                     /**
-                     * 获取The agency code.
-                     * @return AgencyCode The agency code.
+                     * 获取Code of the issuing agency.
+                     * @return AgencyCode Code of the issuing agency.
                      * 
                      */
                     TextDetectionResult GetAgencyCode() const;
@@ -199,8 +199,8 @@ namespace TencentCloud
                     bool AgencyCodeHasBeenSet() const;
 
                     /**
-                     * 获取The date of birth.
-                     * @return Birthday The date of birth.
+                     * 获取Date of birth of the license holder.
+                     * @return Birthday Date of birth of the license holder.
                      * 
                      */
                     TextDetectionResult GetBirthday() const;
@@ -221,67 +221,67 @@ namespace TencentCloud
                     bool m_headPortraitHasBeenSet;
 
                     /**
-                     * The full name.
+                     * Full name of the license holder.
                      */
                     TextDetectionResult m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The last name.
+                     * Last name / surname of the license holder.
                      */
                     TextDetectionResult m_lastName;
                     bool m_lastNameHasBeenSet;
 
                     /**
-                     * The first name.
+                     * First name of the license holder.
                      */
                     TextDetectionResult m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
-                     * The middle name.
+                     * Middle name of the license holder.
                      */
                     TextDetectionResult m_middleName;
                     bool m_middleNameHasBeenSet;
 
                     /**
-                     * The nationality.
+                     * Nationality of the license holder.
                      */
                     TextDetectionResult m_nationality;
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * The gender.
+                     * Gender
                      */
                     TextDetectionResult m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * The address.
+                     * Address of the license holder.
                      */
                     TextDetectionResult m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * The license No.
+                     * Driver's license number.
                      */
                     TextDetectionResult m_licenseNo;
                     bool m_licenseNoHasBeenSet;
 
                     /**
-                     * The expiration date.
+                     * Expiration date of the driver's license.
                      */
                     TextDetectionResult m_expiresDate;
                     bool m_expiresDateHasBeenSet;
 
                     /**
-                     * The agency code.
+                     * Code of the issuing agency.
                      */
                     TextDetectionResult m_agencyCode;
                     bool m_agencyCodeHasBeenSet;
 
                     /**
-                     * The date of birth.
+                     * Date of birth of the license holder.
                      */
                     TextDetectionResult m_birthday;
                     bool m_birthdayHasBeenSet;

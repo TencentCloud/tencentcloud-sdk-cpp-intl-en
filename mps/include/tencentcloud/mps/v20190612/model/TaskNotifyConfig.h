@@ -48,39 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
-                     * @return NotifyType Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+                     * 获取<p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
+                     * @return NotifyType <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
                      * 
                      */
                     std::string GetNotifyType() const;
 
                     /**
-                     * 设置Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
-                     * @param _notifyType Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+                     * 设置<p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
+                     * @param _notifyType <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
                      * 
                      */
                     void SetNotifyType(const std::string& _notifyType);
@@ -93,15 +69,15 @@ namespace TencentCloud
                     bool NotifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
-                     * @return NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * 获取<p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
+                     * @return NotifyMode <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
                      * 
                      */
                     std::string GetNotifyMode() const;
 
                     /**
-                     * 设置Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
-                     * @param _notifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * 设置<p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
+                     * @param _notifyMode <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
                      * 
                      */
                     void SetNotifyMode(const std::string& _notifyMode);
@@ -114,15 +90,15 @@ namespace TencentCloud
                     bool NotifyModeHasBeenSet() const;
 
                     /**
-                     * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 获取<p>HTTP callback URL. This is required if NotifyType is URL.</p>
+                     * @return NotifyUrl <p>HTTP callback URL. This is required if NotifyType is URL.</p>
                      * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
-                     * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 设置<p>HTTP callback URL. This is required if NotifyType is URL.</p>
+                     * @param _notifyUrl <p>HTTP callback URL. This is required if NotifyType is URL.</p>
                      * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
@@ -135,15 +111,15 @@ namespace TencentCloud
                     bool NotifyUrlHasBeenSet() const;
 
                     /**
-                     * 获取The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
-                     * @return CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * 获取<p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
+                     * @return CmqModel <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
                      * 
                      */
                     std::string GetCmqModel() const;
 
                     /**
-                     * 设置The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
-                     * @param _cmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * 设置<p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
+                     * @param _cmqModel <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
                      * 
                      */
                     void SetCmqModel(const std::string& _cmqModel);
@@ -156,15 +132,15 @@ namespace TencentCloud
                     bool CmqModelHasBeenSet() const;
 
                     /**
-                     * 获取The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
-                     * @return CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * 获取<p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
+                     * @return CmqRegion <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
                      * 
                      */
                     std::string GetCmqRegion() const;
 
                     /**
-                     * 设置The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
-                     * @param _cmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * 设置<p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
+                     * @param _cmqRegion <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
                      * 
                      */
                     void SetCmqRegion(const std::string& _cmqRegion);
@@ -177,15 +153,15 @@ namespace TencentCloud
                     bool CmqRegionHasBeenSet() const;
 
                     /**
-                     * 获取The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
-                     * @return TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * 获取<p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+                     * @return TopicName <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
-                     * @param _topicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * 设置<p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+                     * @param _topicName <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -198,15 +174,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
-                     * @return QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * 获取<p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+                     * @return QueueName <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
-                     * @param _queueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * 设置<p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
+                     * @param _queueName <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -219,22 +195,18 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+                     * 获取<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+                     * @return AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AwsSQS GetAwsSQS() const;
 
                     /**
-                     * 设置The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+                     * 设置<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _awsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+                     * @param _awsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -248,15 +220,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AwsSQSHasBeenSet() const;
 
                     /**
-                     * 获取key used to generate a callback signature.
-                     * @return NotifyKey key used to generate a callback signature.
+                     * 获取<p>Key used to generate the callback signature.</p>
+                     * @return NotifyKey <p>Key used to generate the callback signature.</p>
                      * 
                      */
                     std::string GetNotifyKey() const;
 
                     /**
-                     * 设置key used to generate a callback signature.
-                     * @param _notifyKey key used to generate a callback signature.
+                     * 设置<p>Key used to generate the callback signature.</p>
+                     * @param _notifyKey <p>Key used to generate the callback signature.</p>
                      * 
                      */
                     void SetNotifyKey(const std::string& _notifyKey);
@@ -271,63 +243,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Notification type. available values:.
-<li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-<Li>TDMQ-CMQ: message queue</li>.
-<li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-<Li>SCF: not recommended. additional configuration is required in the console.</li>.
-<Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-<font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+                     * <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
                      */
                     std::string m_notifyType;
                     bool m_notifyTypeHasBeenSet;
 
                     /**
-                     * Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
                      */
                     std::string m_notifyMode;
                     bool m_notifyModeHasBeenSet;
 
                     /**
-                     * HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * <p>HTTP callback URL. This is required if NotifyType is URL.</p>
                      */
                     std::string m_notifyUrl;
                     bool m_notifyUrlHasBeenSet;
 
                     /**
-                     * The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
                      */
                     std::string m_cmqModel;
                     bool m_cmqModelHasBeenSet;
 
                     /**
-                     * The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
                      */
                     std::string m_cmqRegion;
                     bool m_cmqRegionHasBeenSet;
 
                     /**
-                     * The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-
+                     * <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AwsSQS m_awsSQS;
                     bool m_awsSQSHasBeenSet;
 
                     /**
-                     * key used to generate a callback signature.
+                     * <p>Key used to generate the callback signature.</p>
                      */
                     std::string m_notifyKey;
                     bool m_notifyKeyHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Chinese last name
-                     * @return CnLastName Chinese last name
+                     * 获取Last name in Chinese
+                     * @return CnLastName Last name in Chinese
                      * 
                      */
                     std::string GetCnLastName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool CnLastNameHasBeenSet() const;
 
                     /**
-                     * 获取English last name
-                     * @return EnLastName English last name
+                     * 获取Last name in English
+                     * @return EnLastName Last name in English
                      * 
                      */
                     std::string GetEnLastName() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool EnLastNameHasBeenSet() const;
 
                     /**
-                     * 获取Last name code
-                     * @return LastNameCode Last name code
+                     * 获取Telecode of the last name in Chinese
+                     * @return LastNameCode Telecode of the last name in Chinese
                      * 
                      */
                     std::string GetLastNameCode() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool LastNameCodeHasBeenSet() const;
 
                     /**
-                     * 获取Chinese first name
-                     * @return CnFirstName Chinese first name
+                     * 获取First name in Chinese
+                     * @return CnFirstName First name in Chinese
                      * 
                      */
                     std::string GetCnFirstName() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool CnFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取English first name
-                     * @return EnFirstName English first name
+                     * 获取First name in English
+                     * @return EnFirstName First name in English
                      * 
                      */
                     std::string GetEnFirstName() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool EnFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取First name code
-                     * @return FirstNameCode First name code
+                     * 获取Telecode of the first name in Chinese
+                     * @return FirstNameCode Telecode of the first name in Chinese
                      * 
                      */
                     std::string GetFirstNameCode() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool FirstNameCodeHasBeenSet() const;
 
                     /**
-                     * 获取ID Number
-                     * @return ID ID Number
+                     * 获取Identity card number
+                     * @return ID Identity card number
                      * 
                      */
                     std::string GetID() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Birthday(DD-MM-YYYY)
-                     * @return Birthday Birthday(DD-MM-YYYY)
+                     * 获取Date of birth (DD-MM-YYYY)
+                     * @return Birthday Date of birth (DD-MM-YYYY)
                      * 
                      */
                     std::string GetBirthday() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取gender
-                     * @return Sex gender
+                     * 获取Gender
+                     * @return Sex Gender
                      * 
                      */
                     std::string GetSex() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取First issue Date (DD-MM-YYYY)
-                     * @return FirstIssueDate First issue Date (DD-MM-YYYY)
+                     * 获取Date of first issue (DD-MM-YYYY)
+                     * @return FirstIssueDate Date of first issue (DD-MM-YYYY)
                      * 
                      */
                     std::string GetFirstIssueDate() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool FirstIssueDateHasBeenSet() const;
 
                     /**
-                     * 获取Issue date (DD-MM-YYYY)
-                     * @return CurrentIssueDate Issue date (DD-MM-YYYY)
+                     * 获取Date of issue (DD-MM-YYYY)
+                     * @return CurrentIssueDate Date of issue (DD-MM-YYYY)
                      * 
                      */
                     std::string GetCurrentIssueDate() const;
@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool ValidityPeriodHasBeenSet() const;
 
                     /**
-                     * 获取ID symbol
-                     * @return Symbol ID symbol
+                     * 获取Document symbol
+                     * @return Symbol Document symbol
                      * 
                      */
                     std::string GetSymbol() const;
@@ -254,22 +254,24 @@ namespace TencentCloud
                     bool RetImageHasBeenSet() const;
 
                     /**
-                     * 获取Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
-                     * @return Angle Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
-                     * 
+                     * 获取This field is deprecated and will always return null. Usage is not recommended.
+                     * @return Angle This field is deprecated and will always return null. Usage is not recommended.
+                     * @deprecated
                      */
                     std::string GetAngle() const;
 
                     /**
                      * 判断参数 Angle 是否已赋值
                      * @return Angle 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AngleHasBeenSet() const;
 
                     /**
-                     * 获取Resident type.
-                     * @return ResidentType Resident type.
+                     * 获取Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
+                     * @return ResidentType Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
                      * 
                      */
                     std::string GetResidentType() const;
@@ -314,67 +316,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Chinese last name
+                     * Last name in Chinese
                      */
                     std::string m_cnLastName;
                     bool m_cnLastNameHasBeenSet;
 
                     /**
-                     * English last name
+                     * Last name in English
                      */
                     std::string m_enLastName;
                     bool m_enLastNameHasBeenSet;
 
                     /**
-                     * Last name code
+                     * Telecode of the last name in Chinese
                      */
                     std::string m_lastNameCode;
                     bool m_lastNameCodeHasBeenSet;
 
                     /**
-                     * Chinese first name
+                     * First name in Chinese
                      */
                     std::string m_cnFirstName;
                     bool m_cnFirstNameHasBeenSet;
 
                     /**
-                     * English first name
+                     * First name in English
                      */
                     std::string m_enFirstName;
                     bool m_enFirstNameHasBeenSet;
 
                     /**
-                     * First name code
+                     * Telecode of the first name in Chinese
                      */
                     std::string m_firstNameCode;
                     bool m_firstNameCodeHasBeenSet;
 
                     /**
-                     * ID Number
+                     * Identity card number
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Birthday(DD-MM-YYYY)
+                     * Date of birth (DD-MM-YYYY)
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * gender
+                     * Gender
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * First issue Date (DD-MM-YYYY)
+                     * Date of first issue (DD-MM-YYYY)
                      */
                     std::string m_firstIssueDate;
                     bool m_firstIssueDateHasBeenSet;
 
                     /**
-                     * Issue date (DD-MM-YYYY)
+                     * Date of issue (DD-MM-YYYY)
                      */
                     std::string m_currentIssueDate;
                     bool m_currentIssueDateHasBeenSet;
@@ -386,7 +388,7 @@ namespace TencentCloud
                     bool m_validityPeriodHasBeenSet;
 
                     /**
-                     * ID symbol
+                     * Document symbol
                      */
                     std::string m_symbol;
                     bool m_symbolHasBeenSet;
@@ -404,13 +406,14 @@ namespace TencentCloud
                     bool m_retImageHasBeenSet;
 
                     /**
-                     * Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+                     * This field is deprecated and will always return null. Usage is not recommended.
                      */
                     std::string m_angle;
                     bool m_angleHasBeenSet;
 
                     /**
-                     * Resident type.
+                     * Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
                      */
                     std::string m_residentType;
                     bool m_residentTypeHasBeenSet;

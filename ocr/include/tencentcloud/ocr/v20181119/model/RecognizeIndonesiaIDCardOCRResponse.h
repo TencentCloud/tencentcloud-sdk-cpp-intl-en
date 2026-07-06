@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool AlamatHasBeenSet() const;
 
                     /**
-                     * 获取The street.
-                     * @return RTRW The street.
+                     * 获取The neighborhood/community unit (RT/RW).
+                     * @return RTRW The neighborhood/community unit (RT/RW).
                      * 
                      */
                     std::string GetRTRW() const;
@@ -368,7 +368,7 @@ namespace TencentCloud
                     bool m_alamatHasBeenSet;
 
                     /**
-                     * The street.
+                     * The neighborhood/community unit (RT/RW).
                      */
                     std::string m_rTRW;
                     bool m_rTRWHasBeenSet;

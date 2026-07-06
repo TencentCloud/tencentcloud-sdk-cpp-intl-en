@@ -45,8 +45,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
-                     * @return Type Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+                     * 获取Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
+                     * @return Type Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
                      * 
                      */
                     uint64_t GetType() const;
@@ -59,8 +67,8 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Identifies the content of a brazil document.
-                     * @return Result Identifies the content of a brazil document.
+                     * 获取The recognized content of the Brazilian document.
+                     * @return Result The recognized content of the Brazilian document.
                      * 
                      */
                     BrazilCardInfo GetResult() const;
@@ -75,13 +83,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+                     * Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Identifies the content of a brazil document.
+                     * The recognized content of the Brazilian document.
                      */
                     BrazilCardInfo m_result;
                     bool m_resultHasBeenSet;

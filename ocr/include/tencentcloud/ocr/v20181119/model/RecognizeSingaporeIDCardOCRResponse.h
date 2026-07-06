@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool EnNameHasBeenSet() const;
 
                     /**
-                     * 获取gender
-                     * @return Sex gender
+                     * 获取Gender
+                     * @return Sex Gender
                      * 
                      */
                     std::string GetSex() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Birth Country
-                     * @return CountryOfBirth Birth Country
+                     * 获取Country of birth
+                     * @return CountryOfBirth Country of birth
                      * 
                      */
                     std::string GetCountryOfBirth() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool CountryOfBirthHasBeenSet() const;
 
                     /**
-                     * 获取Brithday
-                     * @return Birthday Brithday
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Address(back side)
-                     * @return Address Address(back side)
+                     * 获取Address (back side)
+                     * @return Address Address (back side)
                      * 
                      */
                     std::string GetAddress() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取License number
-                     * @return ID License number
+                     * 获取ID number
+                     * @return ID ID number
                      * 
                      */
                     std::string GetID() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool NRICCodeHasBeenSet() const;
 
                     /**
-                     * 获取Post code(back side)
-                     * @return PostCode Post code(back side)
+                     * 获取Postal code (back side)
+                     * @return PostCode Postal code (back side)
                      * 
                      */
                     std::string GetPostCode() const;
@@ -270,31 +270,31 @@ namespace TencentCloud
                     bool m_enNameHasBeenSet;
 
                     /**
-                     * gender
+                     * Gender
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Birth Country
+                     * Country of birth
                      */
                     std::string m_countryOfBirth;
                     bool m_countryOfBirthHasBeenSet;
 
                     /**
-                     * Brithday
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Address(back side)
+                     * Address (back side)
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * License number
+                     * ID number
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
@@ -312,7 +312,7 @@ namespace TencentCloud
                     bool m_nRICCodeHasBeenSet;
 
                     /**
-                     * Post code(back side)
+                     * Postal code (back side)
                      */
                     std::string m_postCode;
                     bool m_postCodeHasBeenSet;

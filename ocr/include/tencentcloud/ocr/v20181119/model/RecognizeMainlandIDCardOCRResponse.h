@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Sex((portrait side))
-                     * @return Sex Sex((portrait side))
+                     * 获取Gender (portrait side)
+                     * @return Sex Gender (portrait side)
                      * 
                      */
                     std::string GetSex() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Nation((portrait side))
-                     * @return Nation Nation((portrait side))
+                     * 获取Ethnicity (portrait side)
+                     * @return Nation Ethnicity (portrait side)
                      * 
                      */
                     std::string GetNation() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool NationHasBeenSet() const;
 
                     /**
-                     * 获取Brithday((portrait side))
-                     * @return Birth Brithday((portrait side))
+                     * 获取Date of birth (portrait side)
+                     * @return Birth Date of birth (portrait side)
                      * 
                      */
                     std::string GetBirth() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool IdNumHasBeenSet() const;
 
                     /**
-                     * 获取Card authority(national emblem side)
-                     * @return Authority Card authority(national emblem side)
+                     * 获取Issuing authority (national emblem side)
+                     * @return Authority Issuing authority (national emblem side)
                      * 
                      */
                     std::string GetAuthority() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool AuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Card valid date (national emblem side)
-                     * @return ValidDate Card valid date (national emblem side)
+                     * 获取Validity period (national emblem side)
+                     * @return ValidDate Validity period (national emblem side)
                      * 
                      */
                     std::string GetValidDate() const;
@@ -156,24 +156,22 @@ namespace TencentCloud
                     bool ValidDateHasBeenSet() const;
 
                     /**
-                     * 获取Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-                     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * 获取Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
+                     * @return WarnCardInfos Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
                      * 
                      */
                     std::vector<int64_t> GetWarnCardInfos() const;
@@ -222,19 +220,19 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Sex((portrait side))
+                     * Gender (portrait side)
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Nation((portrait side))
+                     * Ethnicity (portrait side)
                      */
                     std::string m_nation;
                     bool m_nationHasBeenSet;
 
                     /**
-                     * Brithday((portrait side))
+                     * Date of birth (portrait side)
                      */
                     std::string m_birth;
                     bool m_birthHasBeenSet;
@@ -252,27 +250,26 @@ namespace TencentCloud
                     bool m_idNumHasBeenSet;
 
                     /**
-                     * Card authority(national emblem side)
+                     * Issuing authority (national emblem side)
                      */
                     std::string m_authority;
                     bool m_authorityHasBeenSet;
 
                     /**
-                     * Card valid date (national emblem side)
+                     * Validity period (national emblem side)
                      */
                     std::string m_validDate;
                     bool m_validDateHasBeenSet;
 
                     /**
-                     * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;

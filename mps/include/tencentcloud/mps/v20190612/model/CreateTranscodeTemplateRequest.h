@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
-                     * @return Container Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+                     * 获取<p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+                     * @return Container <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
-                     * @param _container Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+                     * 设置<p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+                     * @param _container <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Name of a transcoding template. Length limit: 64 characters.
-                     * @return Name Name of a transcoding template. Length limit: 64 characters.
+                     * 获取<p>Transcoding template name. Length limit: 64 characters.</p>
+                     * @return Name <p>Transcoding template name. Length limit: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a transcoding template. Length limit: 64 characters.
-                     * @param _name Name of a transcoding template. Length limit: 64 characters.
+                     * 设置<p>Transcoding template name. Length limit: 64 characters.</p>
+                     * @param _name <p>Transcoding template name. Length limit: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 characters.
-                     * @return Comment Template description. Length limit: 256 characters.
+                     * 获取<p>Transcoding template description. Length limit: 256 characters.</p>
+                     * @return Comment <p>Transcoding template description. Length limit: 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 characters.
-                     * @param _comment Template description. Length limit: 256 characters.
+                     * 设置<p>Transcoding template description. Length limit: 256 characters.</p>
+                     * @param _comment <p>Transcoding template description. Length limit: 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -110,27 +110,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-                     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * 获取<p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+                     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-                     * @param _removeVideo Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * 设置<p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+                     * @param _removeVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -143,27 +131,15 @@ Default value: 0.
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-                     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * 获取<p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+                     * @return RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      * 
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
-                     * @param _removeAudio Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * 设置<p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
+                     * @param _removeAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
@@ -176,15 +152,15 @@ Default value: 0.
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-                     * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 获取<p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+                     * @return VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
-                     * 设置Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-                     * @param _videoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 设置<p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+                     * @param _videoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
@@ -197,15 +173,15 @@ Default value: 0.
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-                     * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 获取<p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+                     * @return AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
-                     * 设置Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-                     * @param _audioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 设置<p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+                     * @param _audioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
@@ -218,15 +194,15 @@ Default value: 0.
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
-                     * @return TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+                     * 获取<p>Top Speed Codec transcoding parameters.</p>
+                     * @return TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
-                     * @param _tEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+                     * 设置<p>Top Speed Codec transcoding parameters.</p>
+                     * @param _tEHDConfig <p>Top Speed Codec transcoding parameters.</p>
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -239,15 +215,15 @@ Default value: 0.
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video enhancement configuration.
-                     * @return EnhanceConfig Audio/Video enhancement configuration.
+                     * 获取<p>Audio/video enhancement configurations.</p>
+                     * @return EnhanceConfig <p>Audio/video enhancement configurations.</p>
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Audio/Video enhancement configuration.
-                     * @param _enhanceConfig Audio/Video enhancement configuration.
+                     * 设置<p>Audio/video enhancement configurations.</p>
+                     * @param _enhanceConfig <p>Audio/video enhancement configurations.</p>
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -260,15 +236,15 @@ Default value: 0.
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取Additional parameter, which is a serialized JSON string.
-                     * @return StdExtInfo Additional parameter, which is a serialized JSON string.
+                     * 获取<p>Extended parameter, which is a serialized JSON string.</p>
+                     * @return StdExtInfo <p>Extended parameter, which is a serialized JSON string.</p>
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置Additional parameter, which is a serialized JSON string.
-                     * @param _stdExtInfo Additional parameter, which is a serialized JSON string.
+                     * 设置<p>Extended parameter, which is a serialized JSON string.</p>
+                     * @param _stdExtInfo <p>Extended parameter, which is a serialized JSON string.</p>
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -283,67 +259,61 @@ Default value: 0.
                 private:
 
                     /**
-                     * Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
+                     * <p>Container format. Valid values: mp4, flv, hls, ts, webm, mkv, mxf, mov, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Name of a transcoding template. Length limit: 64 characters.
+                     * <p>Transcoding template name. Length limit: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 characters.
+                     * <p>Transcoding template description. Length limit: 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-Default value: 0.
+                     * <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>Default value: 0.
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
                      */
                     VideoTemplateInfo m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
                      */
                     AudioTemplateInfo m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+                     * <p>Top Speed Codec transcoding parameters.</p>
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * Audio/Video enhancement configuration.
+                     * <p>Audio/video enhancement configurations.</p>
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * Additional parameter, which is a serialized JSON string.
+                     * <p>Extended parameter, which is a serialized JSON string.</p>
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

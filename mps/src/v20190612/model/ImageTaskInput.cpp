@@ -23,7 +23,8 @@ using namespace std;
 ImageTaskInput::ImageTaskInput() :
     m_encodeConfigHasBeenSet(false),
     m_enhanceConfigHasBeenSet(false),
-    m_eraseConfigHasBeenSet(false)
+    m_eraseConfigHasBeenSet(false),
+    m_aiPosterSuiteConfigHasBeenSet(false)
 {
 }
 
@@ -83,6 +84,23 @@ CoreInternalOutcome ImageTaskInput::Deserialize(const rapidjson::Value &value)
         m_eraseConfigHasBeenSet = true;
     }
 
+    if (value.HasMember("AiPosterSuiteConfig") && !value["AiPosterSuiteConfig"].IsNull())
+    {
+        if (!value["AiPosterSuiteConfig"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageTaskInput.AiPosterSuiteConfig` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_aiPosterSuiteConfig.Deserialize(value["AiPosterSuiteConfig"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_aiPosterSuiteConfigHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -115,6 +133,15 @@ void ImageTaskInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_eraseConfig.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_aiPosterSuiteConfigHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AiPosterSuiteConfig";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_aiPosterSuiteConfig.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -166,5 +193,21 @@ void ImageTaskInput::SetEraseConfig(const ImageEraseConfig& _eraseConfig)
 bool ImageTaskInput::EraseConfigHasBeenSet() const
 {
     return m_eraseConfigHasBeenSet;
+}
+
+AiPosterSuiteConfig ImageTaskInput::GetAiPosterSuiteConfig() const
+{
+    return m_aiPosterSuiteConfig;
+}
+
+void ImageTaskInput::SetAiPosterSuiteConfig(const AiPosterSuiteConfig& _aiPosterSuiteConfig)
+{
+    m_aiPosterSuiteConfig = _aiPosterSuiteConfig;
+    m_aiPosterSuiteConfigHasBeenSet = true;
+}
+
+bool ImageTaskInput::AiPosterSuiteConfigHasBeenSet() const
+{
+    return m_aiPosterSuiteConfigHasBeenSet;
 }
 

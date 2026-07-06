@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool ThaiNameHasBeenSet() const;
 
                     /**
-                     * 获取Name in English
-                     * @return EnFirstName Name in English
+                     * 获取First name in English
+                     * @return EnFirstName First name in English
                      * 
                      */
                     std::string GetEnFirstName() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool EnFirstNameHasBeenSet() const;
 
                     /**
-                     * 获取Name in English
-                     * @return EnLastName Name in English
+                     * 获取Last name in English
+                     * @return EnLastName Last name in English
                      * 
                      */
                     std::string GetEnLastName() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取LaserID in the back of the card.
-                     * @return LaserID LaserID in the back of the card.
+                     * 获取Laser ID on the back of the card.
+                     * @return LaserID Laser ID on the back of the card.
                      * 
                      */
                     std::string GetLaserID() const;
@@ -342,13 +342,13 @@ true: complete; false: incomplete
                     bool m_thaiNameHasBeenSet;
 
                     /**
-                     * Name in English
+                     * First name in English
                      */
                     std::string m_enFirstName;
                     bool m_enFirstNameHasBeenSet;
 
                     /**
-                     * Name in English
+                     * Last name in English
                      */
                     std::string m_enLastName;
                     bool m_enLastNameHasBeenSet;
@@ -408,7 +408,7 @@ true: complete; false: incomplete
                     bool m_addressHasBeenSet;
 
                     /**
-                     * LaserID in the back of the card.
+                     * Laser ID on the back of the card.
                      */
                     std::string m_laserID;
                     bool m_laserIDHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name
-                     * @return NOME Name
+                     * 获取Name of the license holder.
+                     * @return NOME Name of the license holder.
                      * 
                      */
                     std::string GetNOME() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool NOMEHasBeenSet() const;
 
                     /**
-                     * 获取Driving license type
-                     * @return CatHab Driving license type
+                     * 获取Driver's license category.
+                     * @return CatHab Driver's license category.
                      * 
                      */
                     std::string GetCatHab() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool CatHabHasBeenSet() const;
 
                     /**
-                     * 获取CNH number
-                     * @return CNHNumber CNH number
+                     * 获取Driver's license number (CNH).
+                     * @return CNHNumber Driver's license number (CNH).
                      * 
                      */
                     std::string GetCNHNumber() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool CNHNumberHasBeenSet() const;
 
                     /**
-                     * 获取Valid date
-                     * @return VALIDADE Valid date
+                     * 获取Validity date (valid until).
+                     * @return VALIDADE Validity date (valid until).
                      * 
                      */
                     std::string GetVALIDADE() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VALIDADEHasBeenSet() const;
 
                     /**
-                     * 获取Qualification
-                     * @return QUALIFICATION Qualification
+                     * 获取Qualification information.
+                     * @return QUALIFICATION Qualification information.
                      * 
                      */
                     std::string GetQUALIFICATION() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool QUALIFICATIONHasBeenSet() const;
 
                     /**
-                     * 获取ID number
-                     * @return IDENTIDADE ID number
+                     * 获取ID number (Identity document number).
+                     * @return IDENTIDADE ID number (Identity document number).
                      * 
                      */
                     std::string GetIDENTIDADE() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool CPFHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-                     * @return NASCIMENTO Birthday
+                     * 获取Date of birth.
+                     * @return NASCIMENTO Date of birth.
                      * 
                      */
                     std::string GetNASCIMENTO() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool REGISTROHasBeenSet() const;
 
                     /**
-                     * 获取Remark
-                     * @return OBSERVATIONS Remark
+                     * 获取Remarks
+                     * @return OBSERVATIONS Remarks
                      * 
                      */
                     std::string GetOBSERVATIONS() const;
@@ -198,8 +198,8 @@ namespace TencentCloud
                     bool OBSERVATIONSHasBeenSet() const;
 
                     /**
-                     * 获取Issue date
-                     * @return IssueDate Issue date
+                     * 获取Date of issue.
+                     * @return IssueDate Date of issue.
                      * 
                      */
                     std::string GetIssueDate() const;
@@ -212,8 +212,8 @@ namespace TencentCloud
                     bool IssueDateHasBeenSet() const;
 
                     /**
-                     * 获取Issue location
-                     * @return LOCAL Issue location
+                     * 获取Place of issue.
+                     * @return LOCAL Place of issue.
                      * 
                      */
                     std::string GetLOCAL() const;
@@ -226,8 +226,8 @@ namespace TencentCloud
                     bool LOCALHasBeenSet() const;
 
                     /**
-                     * 获取Number in the back of the card
-                     * @return BackNumber Number in the back of the card
+                     * 获取Registration number on the back of the card.
+                     * @return BackNumber Registration number on the back of the card.
                      * 
                      */
                     std::string GetBackNumber() const;
@@ -240,16 +240,16 @@ namespace TencentCloud
                     bool BackNumberHasBeenSet() const;
 
                     /**
-                     * 获取Field confidence
-                     * @return AdvancedInfo Field confidence
-                     * 
+                     * 获取This field is deprecated and will always return "1". Usage is not recommended.
+                     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+                     * @deprecated
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
@@ -270,37 +270,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name
+                     * Name of the license holder.
                      */
                     std::string m_nOME;
                     bool m_nOMEHasBeenSet;
 
                     /**
-                     * Driving license type
+                     * Driver's license category.
                      */
                     std::string m_catHab;
                     bool m_catHabHasBeenSet;
 
                     /**
-                     * CNH number
+                     * Driver's license number (CNH).
                      */
                     std::string m_cNHNumber;
                     bool m_cNHNumberHasBeenSet;
 
                     /**
-                     * Valid date
+                     * Validity date (valid until).
                      */
                     std::string m_vALIDADE;
                     bool m_vALIDADEHasBeenSet;
 
                     /**
-                     * Qualification
+                     * Qualification information.
                      */
                     std::string m_qUALIFICATION;
                     bool m_qUALIFICATIONHasBeenSet;
 
                     /**
-                     * ID number
+                     * ID number (Identity document number).
                      */
                     std::string m_iDENTIDADE;
                     bool m_iDENTIDADEHasBeenSet;
@@ -312,7 +312,7 @@ namespace TencentCloud
                     bool m_cPFHasBeenSet;
 
                     /**
-                     * Birthday
+                     * Date of birth.
                      */
                     std::string m_nASCIMENTO;
                     bool m_nASCIMENTOHasBeenSet;
@@ -330,31 +330,31 @@ namespace TencentCloud
                     bool m_rEGISTROHasBeenSet;
 
                     /**
-                     * Remark
+                     * Remarks
                      */
                     std::string m_oBSERVATIONS;
                     bool m_oBSERVATIONSHasBeenSet;
 
                     /**
-                     * Issue date
+                     * Date of issue.
                      */
                     std::string m_issueDate;
                     bool m_issueDateHasBeenSet;
 
                     /**
-                     * Issue location
+                     * Place of issue.
                      */
                     std::string m_lOCAL;
                     bool m_lOCALHasBeenSet;
 
                     /**
-                     * Number in the back of the card
+                     * Registration number on the back of the card.
                      */
                     std::string m_backNumber;
                     bool m_backNumberHasBeenSet;
 
                     /**
-                     * Field confidence
+                     * This field is deprecated and will always return "1". Usage is not recommended.
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;

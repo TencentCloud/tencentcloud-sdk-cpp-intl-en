@@ -69,23 +69,23 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取The coordinates, represented in the coordinates of the four points.
-                     * @return Polygon The coordinates, represented in the coordinates of the four points.
-                     * 
+                     * 获取This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @return Polygon This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @deprecated
                      */
                     std::vector<Coord> GetPolygon() const;
 
                     /**
-                     * 设置The coordinates, represented in the coordinates of the four points.
-                     * @param _polygon The coordinates, represented in the coordinates of the four points.
-                     * 
+                     * 设置This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @param _polygon This field is deprecated and will always return an empty array. Usage is not recommended.
+                     * @deprecated
                      */
                     void SetPolygon(const std::vector<Coord>& _polygon);
 
                     /**
                      * 判断参数 Polygon 是否已赋值
                      * @return Polygon 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool PolygonHasBeenSet() const;
 
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_valueHasBeenSet;
 
                     /**
-                     * The coordinates, represented in the coordinates of the four points.
+                     * This field is deprecated and will always return an empty array. Usage is not recommended.
                      */
                     std::vector<Coord> m_polygon;
                     bool m_polygonHasBeenSet;

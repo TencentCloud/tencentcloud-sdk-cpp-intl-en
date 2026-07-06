@@ -73,6 +73,20 @@ namespace TencentCloud
                     bool VINHasBeenSet() const;
 
                     /**
+                     * 获取The last name.
+                     * @return LastName The last name.
+                     * 
+                     */
+                    TextDetectionResult GetLastName() const;
+
+                    /**
+                     * 判断参数 LastName 是否已赋值
+                     * @return LastName 是否已赋值
+                     * 
+                     */
+                    bool LastNameHasBeenSet() const;
+
+                    /**
                      * 获取The first name.
                      * @return FirstName The first name.
                      * 
@@ -87,18 +101,18 @@ namespace TencentCloud
                     bool FirstNameHasBeenSet() const;
 
                     /**
-                     * 获取The last name.
-                     * @return LastName The last name.
+                     * 获取
+                     * @return MiddleName 
                      * 
                      */
-                    TextDetectionResult GetLastName() const;
+                    TextDetectionResult GetMiddleName() const;
 
                     /**
-                     * 判断参数 LastName 是否已赋值
-                     * @return LastName 是否已赋值
+                     * 判断参数 MiddleName 是否已赋值
+                     * @return MiddleName 是否已赋值
                      * 
                      */
-                    bool LastNameHasBeenSet() const;
+                    bool MiddleNameHasBeenSet() const;
 
                     /**
                      * 获取The date of birth.
@@ -185,16 +199,22 @@ namespace TencentCloud
                     bool m_vINHasBeenSet;
 
                     /**
+                     * The last name.
+                     */
+                    TextDetectionResult m_lastName;
+                    bool m_lastNameHasBeenSet;
+
+                    /**
                      * The first name.
                      */
                     TextDetectionResult m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
-                     * The last name.
+                     * 
                      */
-                    TextDetectionResult m_lastName;
-                    bool m_lastNameHasBeenSet;
+                    TextDetectionResult m_middleName;
+                    bool m_middleNameHasBeenSet;
 
                     /**
                      * The date of birth.

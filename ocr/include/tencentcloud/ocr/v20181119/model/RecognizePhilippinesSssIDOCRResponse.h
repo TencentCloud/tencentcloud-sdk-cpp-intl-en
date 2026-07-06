@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool HeadPortraitHasBeenSet() const;
 
                     /**
-                     * 获取The common reference number (CRN).
-                     * @return LicenseNumber The common reference number (CRN).
+                     * 获取The license number (SSSID number).
+                     * @return LicenseNumber The license number (SSSID number).
                      * 
                      */
                     TextDetectionResult GetLicenseNumber() const;
@@ -109,7 +109,7 @@ namespace TencentCloud
                     bool m_headPortraitHasBeenSet;
 
                     /**
-                     * The common reference number (CRN).
+                     * The license number (SSSID number).
                      */
                     TextDetectionResult m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;

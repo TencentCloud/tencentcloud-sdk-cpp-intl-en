@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name
-                     * @return Name Name
+                     * 获取Name in Chinese
+                     * @return Name Name in Chinese
                      * 
                      */
                     std::string GetName() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool IssueAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Issuing place
-                     * @return IssueAddress Issuing place
+                     * 获取Place of issue
+                     * @return IssueAddress Place of issue
                      * 
                      */
                     std::string GetIssueAddress() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取base64 of the avatar image
-                     * @return PortraitImage base64 of the avatar image
+                     * 获取Base64-encoded profile photo of the document holder.
+                     * @return PortraitImage Base64-encoded profile photo of the document holder.
                      * 
                      */
                     std::string GetPortraitImage() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool PortraitImageHasBeenSet() const;
 
                     /**
-                     * 获取Return type
-                     * @return Type Return type
+                     * 获取Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
+                     * @return Type Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
                      * 
                      */
                     std::string GetType() const;
@@ -184,24 +184,22 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-                     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * 获取Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
+                     * @return WarnCardInfos Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
                      * 
                      */
                     std::vector<int64_t> GetWarnCardInfos() const;
@@ -216,7 +214,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name
+                     * Name in Chinese
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -252,7 +250,7 @@ namespace TencentCloud
                     bool m_issueAuthorityHasBeenSet;
 
                     /**
-                     * Issuing place
+                     * Place of issue
                      */
                     std::string m_issueAddress;
                     bool m_issueAddressHasBeenSet;
@@ -264,27 +262,26 @@ namespace TencentCloud
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * base64 of the avatar image
+                     * Base64-encoded profile photo of the document holder.
                      */
                     std::string m_portraitImage;
                     bool m_portraitImageHasBeenSet;
 
                     /**
-                     * Return type
+                     * Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+                     * Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;

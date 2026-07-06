@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/VoiceProfile.h>
 
 
 namespace TencentCloud
@@ -64,6 +65,48 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
+                     * 获取<p>Voice attribute.</p>
+                     * @return VoiceProfile <p>Voice attribute.</p>
+                     * 
+                     */
+                    VoiceProfile GetVoiceProfile() const;
+
+                    /**
+                     * 设置<p>Voice attribute.</p>
+                     * @param _voiceProfile <p>Voice attribute.</p>
+                     * 
+                     */
+                    void SetVoiceProfile(const VoiceProfile& _voiceProfile);
+
+                    /**
+                     * 判断参数 VoiceProfile 是否已赋值
+                     * @return VoiceProfile 是否已赋值
+                     * 
+                     */
+                    bool VoiceProfileHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Audition audio text. The length cannot exceed 500.</p>
+                     * @return Text <p>Audition audio text. The length cannot exceed 500.</p>
+                     * 
+                     */
+                    std::string GetText() const;
+
+                    /**
+                     * 设置<p>Audition audio text. The length cannot exceed 500.</p>
+                     * @param _text <p>Audition audio text. The length cannot exceed 500.</p>
+                     * 
+                     */
+                    void SetText(const std::string& _text);
+
+                    /**
+                     * 判断参数 Text 是否已赋值
+                     * @return Text 是否已赋值
+                     * 
+                     */
+                    bool TextHasBeenSet() const;
+
+                    /**
                      * 获取<p>Extended parameters in the format of a JSON string.</p>
                      * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
@@ -91,6 +134,18 @@ namespace TencentCloud
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
+
+                    /**
+                     * <p>Voice attribute.</p>
+                     */
+                    VoiceProfile m_voiceProfile;
+                    bool m_voiceProfileHasBeenSet;
+
+                    /**
+                     * <p>Audition audio text. The length cannot exceed 500.</p>
+                     */
+                    std::string m_text;
+                    bool m_textHasBeenSet;
 
                     /**
                      * <p>Extended parameters in the format of a JSON string.</p>

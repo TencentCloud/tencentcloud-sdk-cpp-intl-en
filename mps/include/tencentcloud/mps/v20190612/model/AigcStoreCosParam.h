@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information required for uploading AIGC result files to COS. The LVB_QCSRole role needs to be created and authorized.
+                * Information required for uploading AIGC result files to COS. The MPS_QcsRole role needs to be created and authorized.
                 */
                 class AigcStoreCosParam : public AbstractModel
                 {
