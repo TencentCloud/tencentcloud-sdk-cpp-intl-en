@@ -193,6 +193,27 @@ namespace TencentCloud
                     bool ImageInfosHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return OutputImageCount 
+                     * 
+                     */
+                    int64_t GetOutputImageCount() const;
+
+                    /**
+                     * 设置
+                     * @param _outputImageCount 
+                     * 
+                     */
+                    void SetOutputImageCount(const int64_t& _outputImageCount);
+
+                    /**
+                     * 判断参数 OutputImageCount 是否已赋值
+                     * @return OutputImageCount 是否已赋值
+                     * 
+                     */
+                    bool OutputImageCountHasBeenSet() const;
+
+                    /**
                      * 获取<p>Additional parameters required for the model.</p>
                      * @return ExtraParameters <p>Additional parameters required for the model.</p>
                      * 
@@ -319,6 +340,12 @@ namespace TencentCloud
                      */
                     std::vector<AigcImageInfo> m_imageInfos;
                     bool m_imageInfosHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_outputImageCount;
+                    bool m_outputImageCountHasBeenSet;
 
                     /**
                      * <p>Additional parameters required for the model.</p>

@@ -19,52 +19,68 @@ set(tokenhub_public_header
   )
 
 set(tokenhub_public_header_model
-  include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/GlossaryEntryInput.h
+  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntryInput.h
+  include/tencentcloud/tokenhub/v20260322/model/DescribeGlossariesResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/GlossaryItem.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoResponse.h
   include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesRequest.h
-  include/tencentcloud/tokenhub/v20260322/model/DescribeGlossariesRequest.h
-  include/tencentcloud/tokenhub/v20260322/model/RequestFilter.h
   include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesRequest.h
   include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesResponse.h
-  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntryInput.h
-  include/tencentcloud/tokenhub/v20260322/model/GlossaryEntryItem.h
-  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryResponse.h
-  include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesRequest.h
-  include/tencentcloud/tokenhub/v20260322/model/RequestSort.h
-  include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/DeleteApiKeyResponse.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntryInput.h
-  include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesResponse.h
-  include/tencentcloud/tokenhub/v20260322/model/DescribeGlossariesResponse.h
-  include/tencentcloud/tokenhub/v20260322/model/GlossaryItem.h
-  include/tencentcloud/tokenhub/v20260322/model/GlossaryEntryInput.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoRequest.h
   include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/DescribeGlossariesRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/GlossaryEntryItem.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/CreateApiKeyResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/DeleteApiKeyRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/RequestFilter.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/RequestSort.h
+  include/tencentcloud/tokenhub/v20260322/model/CreateApiKeyRequest.h
   )
 
 set(tokenhub_src
   src/v20260322/TokenhubClient.cpp
-  src/v20260322/model/ModifyGlossaryEntriesRequest.cpp
+  src/v20260322/model/GlossaryEntryInput.cpp
+  src/v20260322/model/DeleteGlossaryEntryInput.cpp
+  src/v20260322/model/DescribeGlossariesResponse.cpp
+  src/v20260322/model/DeleteGlossaryResponse.cpp
+  src/v20260322/model/DeleteGlossaryEntriesResponse.cpp
+  src/v20260322/model/GlossaryItem.cpp
+  src/v20260322/model/ModifyApiKeyInfoResponse.cpp
   src/v20260322/model/CreateGlossaryRequest.cpp
   src/v20260322/model/DescribeGlossaryEntriesResponse.cpp
   src/v20260322/model/DeleteGlossaryRequest.cpp
   src/v20260322/model/DescribeGlossaryEntriesRequest.cpp
-  src/v20260322/model/DescribeGlossariesRequest.cpp
-  src/v20260322/model/RequestFilter.cpp
   src/v20260322/model/DeleteGlossaryEntriesRequest.cpp
   src/v20260322/model/CreateGlossaryEntriesResponse.cpp
-  src/v20260322/model/DeleteGlossaryEntryInput.cpp
-  src/v20260322/model/GlossaryEntryItem.cpp
-  src/v20260322/model/DeleteGlossaryResponse.cpp
-  src/v20260322/model/CreateGlossaryEntriesRequest.cpp
-  src/v20260322/model/RequestSort.cpp
-  src/v20260322/model/ModifyGlossaryEntriesResponse.cpp
+  src/v20260322/model/DeleteApiKeyResponse.cpp
   src/v20260322/model/ModifyGlossaryEntryInput.cpp
-  src/v20260322/model/DeleteGlossaryEntriesResponse.cpp
-  src/v20260322/model/DescribeGlossariesResponse.cpp
-  src/v20260322/model/GlossaryItem.cpp
-  src/v20260322/model/GlossaryEntryInput.cpp
+  src/v20260322/model/ModifyApiKeyInfoRequest.cpp
   src/v20260322/model/CreateGlossaryResponse.cpp
+  src/v20260322/model/ModifyGlossaryEntriesRequest.cpp
+  src/v20260322/model/DescribeGlossariesRequest.cpp
+  src/v20260322/model/ModifyApiKeyStatusRequest.cpp
+  src/v20260322/model/CreateGlossaryEntriesRequest.cpp
+  src/v20260322/model/GlossaryEntryItem.cpp
+  src/v20260322/model/ModifyApiKeyStatusResponse.cpp
+  src/v20260322/model/CreateApiKeyResponse.cpp
+  src/v20260322/model/DeleteApiKeyRequest.cpp
+  src/v20260322/model/RequestFilter.cpp
+  src/v20260322/model/ModifyGlossaryEntriesResponse.cpp
+  src/v20260322/model/RequestSort.cpp
+  src/v20260322/model/CreateApiKeyRequest.cpp
   )
 
 set(tokenhub_include

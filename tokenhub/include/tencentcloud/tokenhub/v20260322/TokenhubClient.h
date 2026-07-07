@@ -23,10 +23,14 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/tokenhub/v20260322/model/CreateApiKeyRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/CreateApiKeyResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/CreateGlossaryRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/CreateGlossaryResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/DeleteApiKeyRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/DeleteApiKeyResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesRequest.h>
@@ -35,6 +39,10 @@
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossariesResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesResponse.h>
 
@@ -51,12 +59,18 @@ namespace TencentCloud
                 TokenhubClient(const Credential &credential, const std::string &region);
                 TokenhubClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CreateApiKeyResponse> CreateApiKeyOutcome;
+                typedef std::future<CreateApiKeyOutcome> CreateApiKeyOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::CreateApiKeyRequest&, CreateApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApiKeyAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateGlossaryResponse> CreateGlossaryOutcome;
                 typedef std::future<CreateGlossaryOutcome> CreateGlossaryOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::CreateGlossaryRequest&, CreateGlossaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGlossaryAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateGlossaryEntriesResponse> CreateGlossaryEntriesOutcome;
                 typedef std::future<CreateGlossaryEntriesOutcome> CreateGlossaryEntriesOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::CreateGlossaryEntriesRequest&, CreateGlossaryEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateGlossaryEntriesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteApiKeyResponse> DeleteApiKeyOutcome;
+                typedef std::future<DeleteApiKeyOutcome> DeleteApiKeyOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::DeleteApiKeyRequest&, DeleteApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApiKeyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteGlossaryResponse> DeleteGlossaryOutcome;
                 typedef std::future<DeleteGlossaryOutcome> DeleteGlossaryOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::DeleteGlossaryRequest&, DeleteGlossaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGlossaryAsyncHandler;
@@ -69,11 +83,28 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGlossaryEntriesResponse> DescribeGlossaryEntriesOutcome;
                 typedef std::future<DescribeGlossaryEntriesOutcome> DescribeGlossaryEntriesOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::DescribeGlossaryEntriesRequest&, DescribeGlossaryEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlossaryEntriesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyApiKeyInfoResponse> ModifyApiKeyInfoOutcome;
+                typedef std::future<ModifyApiKeyInfoOutcome> ModifyApiKeyInfoOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::ModifyApiKeyInfoRequest&, ModifyApiKeyInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiKeyInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyApiKeyStatusResponse> ModifyApiKeyStatusOutcome;
+                typedef std::future<ModifyApiKeyStatusOutcome> ModifyApiKeyStatusOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::ModifyApiKeyStatusRequest&, ModifyApiKeyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiKeyStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyGlossaryEntriesResponse> ModifyGlossaryEntriesOutcome;
                 typedef std::future<ModifyGlossaryEntriesOutcome> ModifyGlossaryEntriesOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::ModifyGlossaryEntriesRequest&, ModifyGlossaryEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGlossaryEntriesAsyncHandler;
 
 
+
+                /**
+                 *Create an API key.
+
+Create a new API key. Upon successful creation, return the API Key ID. Specify the platform kind, binding method, and initial state.
+                 * @param req CreateApiKeyRequest
+                 * @return CreateApiKeyOutcome
+                 */
+                CreateApiKeyOutcome CreateApiKey(const Model::CreateApiKeyRequest &request);
+                void CreateApiKeyAsync(const Model::CreateApiKeyRequest& request, const CreateApiKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateApiKeyOutcomeCallable CreateApiKeyCallable(const Model::CreateApiKeyRequest& request);
 
                 /**
                  *Create a Termbase.
@@ -96,6 +127,15 @@ Create terminology entries in batches under the designated Termbase. You can cre
                 CreateGlossaryEntriesOutcome CreateGlossaryEntries(const Model::CreateGlossaryEntriesRequest &request);
                 void CreateGlossaryEntriesAsync(const Model::CreateGlossaryEntriesRequest& request, const CreateGlossaryEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateGlossaryEntriesOutcomeCallable CreateGlossaryEntriesCallable(const Model::CreateGlossaryEntriesRequest& request);
+
+                /**
+                 *This API is used to delete specified api keys and clean up associated model binding relationships.
+                 * @param req DeleteApiKeyRequest
+                 * @return DeleteApiKeyOutcome
+                 */
+                DeleteApiKeyOutcome DeleteApiKey(const Model::DeleteApiKeyRequest &request);
+                void DeleteApiKeyAsync(const Model::DeleteApiKeyRequest& request, const DeleteApiKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteApiKeyOutcomeCallable DeleteApiKeyCallable(const Model::DeleteApiKeyRequest& request);
 
                 /**
                  *Delete a termbase.
@@ -140,6 +180,26 @@ Query specified entries in a Termbase. Support pagination.
                 DescribeGlossaryEntriesOutcome DescribeGlossaryEntries(const Model::DescribeGlossaryEntriesRequest &request);
                 void DescribeGlossaryEntriesAsync(const Model::DescribeGlossaryEntriesRequest& request, const DescribeGlossaryEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeGlossaryEntriesOutcomeCallable DescribeGlossaryEntriesCallable(const Model::DescribeGlossaryEntriesRequest& request);
+
+                /**
+                 *Refresh API key information.
+
+This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
+                 * @param req ModifyApiKeyInfoRequest
+                 * @return ModifyApiKeyInfoOutcome
+                 */
+                ModifyApiKeyInfoOutcome ModifyApiKeyInfo(const Model::ModifyApiKeyInfoRequest &request);
+                void ModifyApiKeyInfoAsync(const Model::ModifyApiKeyInfoRequest& request, const ModifyApiKeyInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyApiKeyInfoOutcomeCallable ModifyApiKeyInfoCallable(const Model::ModifyApiKeyInfoRequest& request);
+
+                /**
+                 *This API is used to enable or disable the status of an api key.
+                 * @param req ModifyApiKeyStatusRequest
+                 * @return ModifyApiKeyStatusOutcome
+                 */
+                ModifyApiKeyStatusOutcome ModifyApiKeyStatus(const Model::ModifyApiKeyStatusRequest &request);
+                void ModifyApiKeyStatusAsync(const Model::ModifyApiKeyStatusRequest& request, const ModifyApiKeyStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyApiKeyStatusOutcomeCallable ModifyApiKeyStatusCallable(const Model::ModifyApiKeyStatusRequest& request);
 
                 /**
                  *Batch modify terminology entries.
