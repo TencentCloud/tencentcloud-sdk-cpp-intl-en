@@ -14,24 +14,23 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityResponse.h>
+#include <tencentcloud/antiddos/v20250903/model/DescribeDDoSBlockRecordsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ses::V20201002::Model;
+using namespace TencentCloud::Antiddos::V20250903::Model;
 using namespace std;
 
-UpdateEmailIdentityResponse::UpdateEmailIdentityResponse() :
-    m_identityTypeHasBeenSet(false),
-    m_verifiedForSendingStatusHasBeenSet(false),
-    m_attributesHasBeenSet(false),
-    m_dKIMOptionHasBeenSet(false)
+DescribeDDoSBlockRecordsResponse::DescribeDDoSBlockRecordsResponse() :
+    m_totalCountHasBeenSet(false),
+    m_blockRecordsHasBeenSet(false),
+    m_unblockQuotaInfoHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome UpdateEmailIdentityResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDDoSBlockRecordsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,103 +64,93 @@ CoreInternalOutcome UpdateEmailIdentityResponse::Deserialize(const string &paylo
     }
 
 
-    if (rsp.HasMember("IdentityType") && !rsp["IdentityType"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["IdentityType"].IsString())
+        if (!rsp["TotalCount"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `IdentityType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_identityType = string(rsp["IdentityType"].GetString());
-        m_identityTypeHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("VerifiedForSendingStatus") && !rsp["VerifiedForSendingStatus"].IsNull())
+    if (rsp.HasMember("BlockRecords") && !rsp["BlockRecords"].IsNull())
     {
-        if (!rsp["VerifiedForSendingStatus"].IsBool())
-        {
-            return CoreInternalOutcome(Core::Error("response `VerifiedForSendingStatus` IsBool=false incorrectly").SetRequestId(requestId));
-        }
-        m_verifiedForSendingStatus = rsp["VerifiedForSendingStatus"].GetBool();
-        m_verifiedForSendingStatusHasBeenSet = true;
-    }
+        if (!rsp["BlockRecords"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BlockRecords` is not array type"));
 
-    if (rsp.HasMember("Attributes") && !rsp["Attributes"].IsNull())
-    {
-        if (!rsp["Attributes"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Attributes` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Attributes"];
+        const rapidjson::Value &tmpValue = rsp["BlockRecords"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            DNSAttributes item;
+            DDoSBlockRecord item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_attributes.push_back(item);
+            m_blockRecords.push_back(item);
         }
-        m_attributesHasBeenSet = true;
+        m_blockRecordsHasBeenSet = true;
     }
 
-    if (rsp.HasMember("DKIMOption") && !rsp["DKIMOption"].IsNull())
+    if (rsp.HasMember("UnblockQuotaInfo") && !rsp["UnblockQuotaInfo"].IsNull())
     {
-        if (!rsp["DKIMOption"].IsUint64())
+        if (!rsp["UnblockQuotaInfo"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `DKIMOption` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `UnblockQuotaInfo` is not object type").SetRequestId(requestId));
         }
-        m_dKIMOption = rsp["DKIMOption"].GetUint64();
-        m_dKIMOptionHasBeenSet = true;
+
+        CoreInternalOutcome outcome = m_unblockQuotaInfo.Deserialize(rsp["UnblockQuotaInfo"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_unblockQuotaInfoHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string UpdateEmailIdentityResponse::ToJsonString() const
+string DescribeDDoSBlockRecordsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_identityTypeHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IdentityType";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_identityType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_verifiedForSendingStatusHasBeenSet)
+    if (m_blockRecordsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "VerifiedForSendingStatus";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_verifiedForSendingStatus, allocator);
-    }
-
-    if (m_attributesHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Attributes";
+        string key = "BlockRecords";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_attributes.begin(); itr != m_attributes.end(); ++itr, ++i)
+        for (auto itr = m_blockRecords.begin(); itr != m_blockRecords.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
-    if (m_dKIMOptionHasBeenSet)
+    if (m_unblockQuotaInfoHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DKIMOption";
+        string key = "UnblockQuotaInfo";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_dKIMOption, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_unblockQuotaInfo.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -176,44 +165,34 @@ string UpdateEmailIdentityResponse::ToJsonString() const
 }
 
 
-string UpdateEmailIdentityResponse::GetIdentityType() const
+uint64_t DescribeDDoSBlockRecordsResponse::GetTotalCount() const
 {
-    return m_identityType;
+    return m_totalCount;
 }
 
-bool UpdateEmailIdentityResponse::IdentityTypeHasBeenSet() const
+bool DescribeDDoSBlockRecordsResponse::TotalCountHasBeenSet() const
 {
-    return m_identityTypeHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-bool UpdateEmailIdentityResponse::GetVerifiedForSendingStatus() const
+vector<DDoSBlockRecord> DescribeDDoSBlockRecordsResponse::GetBlockRecords() const
 {
-    return m_verifiedForSendingStatus;
+    return m_blockRecords;
 }
 
-bool UpdateEmailIdentityResponse::VerifiedForSendingStatusHasBeenSet() const
+bool DescribeDDoSBlockRecordsResponse::BlockRecordsHasBeenSet() const
 {
-    return m_verifiedForSendingStatusHasBeenSet;
+    return m_blockRecordsHasBeenSet;
 }
 
-vector<DNSAttributes> UpdateEmailIdentityResponse::GetAttributes() const
+DDoSUnblockQuota DescribeDDoSBlockRecordsResponse::GetUnblockQuotaInfo() const
 {
-    return m_attributes;
+    return m_unblockQuotaInfo;
 }
 
-bool UpdateEmailIdentityResponse::AttributesHasBeenSet() const
+bool DescribeDDoSBlockRecordsResponse::UnblockQuotaInfoHasBeenSet() const
 {
-    return m_attributesHasBeenSet;
-}
-
-uint64_t UpdateEmailIdentityResponse::GetDKIMOption() const
-{
-    return m_dKIMOption;
-}
-
-bool UpdateEmailIdentityResponse::DKIMOptionHasBeenSet() const
-{
-    return m_dKIMOptionHasBeenSet;
+    return m_unblockQuotaInfoHasBeenSet;
 }
 
 

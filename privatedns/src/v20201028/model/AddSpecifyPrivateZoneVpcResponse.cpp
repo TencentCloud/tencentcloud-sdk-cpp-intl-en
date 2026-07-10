@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/AddSpecifyPrivateZoneVpcResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ses::V20201002::Model;
+using namespace TencentCloud::Privatedns::V20201028::Model;
 using namespace std;
 
-UpdateEmailIdentityResponse::UpdateEmailIdentityResponse() :
-    m_identityTypeHasBeenSet(false),
-    m_verifiedForSendingStatusHasBeenSet(false),
-    m_attributesHasBeenSet(false),
-    m_dKIMOptionHasBeenSet(false)
+AddSpecifyPrivateZoneVpcResponse::AddSpecifyPrivateZoneVpcResponse() :
+    m_zoneIdHasBeenSet(false),
+    m_vpcSetHasBeenSet(false),
+    m_accountVpcSetHasBeenSet(false),
+    m_uniqIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome UpdateEmailIdentityResponse::Deserialize(const string &payload)
+CoreInternalOutcome AddSpecifyPrivateZoneVpcResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,103 +65,120 @@ CoreInternalOutcome UpdateEmailIdentityResponse::Deserialize(const string &paylo
     }
 
 
-    if (rsp.HasMember("IdentityType") && !rsp["IdentityType"].IsNull())
+    if (rsp.HasMember("ZoneId") && !rsp["ZoneId"].IsNull())
     {
-        if (!rsp["IdentityType"].IsString())
+        if (!rsp["ZoneId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `IdentityType` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `ZoneId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_identityType = string(rsp["IdentityType"].GetString());
-        m_identityTypeHasBeenSet = true;
+        m_zoneId = string(rsp["ZoneId"].GetString());
+        m_zoneIdHasBeenSet = true;
     }
 
-    if (rsp.HasMember("VerifiedForSendingStatus") && !rsp["VerifiedForSendingStatus"].IsNull())
+    if (rsp.HasMember("VpcSet") && !rsp["VpcSet"].IsNull())
     {
-        if (!rsp["VerifiedForSendingStatus"].IsBool())
-        {
-            return CoreInternalOutcome(Core::Error("response `VerifiedForSendingStatus` IsBool=false incorrectly").SetRequestId(requestId));
-        }
-        m_verifiedForSendingStatus = rsp["VerifiedForSendingStatus"].GetBool();
-        m_verifiedForSendingStatusHasBeenSet = true;
-    }
+        if (!rsp["VpcSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `VpcSet` is not array type"));
 
-    if (rsp.HasMember("Attributes") && !rsp["Attributes"].IsNull())
-    {
-        if (!rsp["Attributes"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Attributes` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Attributes"];
+        const rapidjson::Value &tmpValue = rsp["VpcSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            DNSAttributes item;
+            VpcInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_attributes.push_back(item);
+            m_vpcSet.push_back(item);
         }
-        m_attributesHasBeenSet = true;
+        m_vpcSetHasBeenSet = true;
     }
 
-    if (rsp.HasMember("DKIMOption") && !rsp["DKIMOption"].IsNull())
+    if (rsp.HasMember("AccountVpcSet") && !rsp["AccountVpcSet"].IsNull())
     {
-        if (!rsp["DKIMOption"].IsUint64())
+        if (!rsp["AccountVpcSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AccountVpcSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["AccountVpcSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `DKIMOption` IsUint64=false incorrectly").SetRequestId(requestId));
+            AccountVpcInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_accountVpcSet.push_back(item);
         }
-        m_dKIMOption = rsp["DKIMOption"].GetUint64();
-        m_dKIMOptionHasBeenSet = true;
+        m_accountVpcSetHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("UniqId") && !rsp["UniqId"].IsNull())
+    {
+        if (!rsp["UniqId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `UniqId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_uniqId = string(rsp["UniqId"].GetString());
+        m_uniqIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string UpdateEmailIdentityResponse::ToJsonString() const
+string AddSpecifyPrivateZoneVpcResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_identityTypeHasBeenSet)
+    if (m_zoneIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IdentityType";
+        string key = "ZoneId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_identityType.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_zoneId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_verifiedForSendingStatusHasBeenSet)
+    if (m_vpcSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "VerifiedForSendingStatus";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_verifiedForSendingStatus, allocator);
-    }
-
-    if (m_attributesHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Attributes";
+        string key = "VpcSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_attributes.begin(); itr != m_attributes.end(); ++itr, ++i)
+        for (auto itr = m_vpcSet.begin(); itr != m_vpcSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
-    if (m_dKIMOptionHasBeenSet)
+    if (m_accountVpcSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DKIMOption";
+        string key = "AccountVpcSet";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_dKIMOption, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_accountVpcSet.begin(); itr != m_accountVpcSet.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_uniqIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UniqId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_uniqId.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -176,44 +193,44 @@ string UpdateEmailIdentityResponse::ToJsonString() const
 }
 
 
-string UpdateEmailIdentityResponse::GetIdentityType() const
+string AddSpecifyPrivateZoneVpcResponse::GetZoneId() const
 {
-    return m_identityType;
+    return m_zoneId;
 }
 
-bool UpdateEmailIdentityResponse::IdentityTypeHasBeenSet() const
+bool AddSpecifyPrivateZoneVpcResponse::ZoneIdHasBeenSet() const
 {
-    return m_identityTypeHasBeenSet;
+    return m_zoneIdHasBeenSet;
 }
 
-bool UpdateEmailIdentityResponse::GetVerifiedForSendingStatus() const
+vector<VpcInfo> AddSpecifyPrivateZoneVpcResponse::GetVpcSet() const
 {
-    return m_verifiedForSendingStatus;
+    return m_vpcSet;
 }
 
-bool UpdateEmailIdentityResponse::VerifiedForSendingStatusHasBeenSet() const
+bool AddSpecifyPrivateZoneVpcResponse::VpcSetHasBeenSet() const
 {
-    return m_verifiedForSendingStatusHasBeenSet;
+    return m_vpcSetHasBeenSet;
 }
 
-vector<DNSAttributes> UpdateEmailIdentityResponse::GetAttributes() const
+vector<AccountVpcInfo> AddSpecifyPrivateZoneVpcResponse::GetAccountVpcSet() const
 {
-    return m_attributes;
+    return m_accountVpcSet;
 }
 
-bool UpdateEmailIdentityResponse::AttributesHasBeenSet() const
+bool AddSpecifyPrivateZoneVpcResponse::AccountVpcSetHasBeenSet() const
 {
-    return m_attributesHasBeenSet;
+    return m_accountVpcSetHasBeenSet;
 }
 
-uint64_t UpdateEmailIdentityResponse::GetDKIMOption() const
+string AddSpecifyPrivateZoneVpcResponse::GetUniqId() const
 {
-    return m_dKIMOption;
+    return m_uniqId;
 }
 
-bool UpdateEmailIdentityResponse::DKIMOptionHasBeenSet() const
+bool AddSpecifyPrivateZoneVpcResponse::UniqIdHasBeenSet() const
 {
-    return m_dKIMOptionHasBeenSet;
+    return m_uniqIdHasBeenSet;
 }
 
 

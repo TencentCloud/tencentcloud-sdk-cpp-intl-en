@@ -35,6 +35,10 @@
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeApiKeyRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeApiKeyResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeApiKeyListRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeApiKeyListResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossariesRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossariesResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesRequest.h>
@@ -77,6 +81,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteGlossaryEntriesResponse> DeleteGlossaryEntriesOutcome;
                 typedef std::future<DeleteGlossaryEntriesOutcome> DeleteGlossaryEntriesOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::DeleteGlossaryEntriesRequest&, DeleteGlossaryEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteGlossaryEntriesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiKeyResponse> DescribeApiKeyOutcome;
+                typedef std::future<DescribeApiKeyOutcome> DescribeApiKeyOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::DescribeApiKeyRequest&, DescribeApiKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApiKeyListResponse> DescribeApiKeyListOutcome;
+                typedef std::future<DescribeApiKeyListOutcome> DescribeApiKeyListOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::DescribeApiKeyListRequest&, DescribeApiKeyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApiKeyListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGlossariesResponse> DescribeGlossariesOutcome;
                 typedef std::future<DescribeGlossariesOutcome> DescribeGlossariesOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::DescribeGlossariesRequest&, DescribeGlossariesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGlossariesAsyncHandler;
@@ -158,6 +168,26 @@ Delete terminology entries in batches under the specified Termbase. You can dele
                 DeleteGlossaryEntriesOutcome DeleteGlossaryEntries(const Model::DeleteGlossaryEntriesRequest &request);
                 void DeleteGlossaryEntriesAsync(const Model::DeleteGlossaryEntriesRequest& request, const DeleteGlossaryEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteGlossaryEntriesOutcomeCallable DeleteGlossaryEntriesCallable(const Model::DeleteGlossaryEntriesRequest& request);
+
+                /**
+                 *This API is used to query API Key details based on API Key ID or key value, and return the plaintext key. At least one of ApiKeyId and ApiKey must be input, with priority given to ApiKeyId.
+                 * @param req DescribeApiKeyRequest
+                 * @return DescribeApiKeyOutcome
+                 */
+                DescribeApiKeyOutcome DescribeApiKey(const Model::DescribeApiKeyRequest &request);
+                void DescribeApiKeyAsync(const Model::DescribeApiKeyRequest& request, const DescribeApiKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiKeyOutcomeCallable DescribeApiKeyCallable(const Model::DescribeApiKeyRequest& request);
+
+                /**
+                 *Query API key list.
+
+Query the API key list of the current user with key values in masking display. Support pagination, filtering, and sorting.
+                 * @param req DescribeApiKeyListRequest
+                 * @return DescribeApiKeyListOutcome
+                 */
+                DescribeApiKeyListOutcome DescribeApiKeyList(const Model::DescribeApiKeyListRequest &request);
+                void DescribeApiKeyListAsync(const Model::DescribeApiKeyListRequest& request, const DescribeApiKeyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApiKeyListOutcomeCallable DescribeApiKeyListCallable(const Model::DescribeApiKeyListRequest& request);
 
                 /**
                  *Query the terminology repository list.

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of DNS records
-                     * @return TotalCount Number of DNS records
+                     * 获取Number of private DNS records.
+                     * @return TotalCount Number of private DNS records.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of DNS records
-                     * @return RecordSet List of DNS records
+                     * 获取Private DNS record list.
+                     * @return RecordSet Private DNS record list.
                      * 
                      */
                     std::vector<PrivateZoneRecord> GetRecordSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of DNS records
+                     * Number of private DNS records.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of DNS records
+                     * Private DNS record list.
                      */
                     std::vector<PrivateZoneRecord> m_recordSet;
                     bool m_recordSetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Private domain information
+                * Private domain information.
                 */
                 class PrivateZoneRecord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Record ID
-                     * @return RecordId Record ID
+                     * 获取Record ID.
+                     * @return RecordId Record ID.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Record ID
-                     * @param _recordId Record ID
+                     * 设置Record ID.
+                     * @param _recordId Record ID.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Private domain ID: zone-xxxxxxxx
-                     * @return ZoneId Private domain ID: zone-xxxxxxxx
+                     * 获取Private domain ID, which is in zone-xxxxxxxx format.
+                     * @return ZoneId Private domain ID, which is in zone-xxxxxxxx format.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Private domain ID: zone-xxxxxxxx
-                     * @param _zoneId Private domain ID: zone-xxxxxxxx
+                     * 设置Private domain ID, which is in zone-xxxxxxxx format.
+                     * @param _zoneId Private domain ID, which is in zone-xxxxxxxx format.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Subdomain
-                     * @return SubDomain Subdomain
+                     * 获取Subdomain name.
+                     * @return SubDomain Subdomain name.
                      * 
                      */
                     std::string GetSubDomain() const;
 
                     /**
-                     * 设置Subdomain
-                     * @param _subDomain Subdomain
+                     * 设置Subdomain name.
+                     * @param _subDomain Subdomain name.
                      * 
                      */
                     void SetSubDomain(const std::string& _subDomain);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SubDomainHasBeenSet() const;
 
                     /**
-                     * 获取Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
-                     * @return RecordType Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+                     * 获取Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+                     * @return RecordType Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
                      * 
                      */
                     std::string GetRecordType() const;
 
                     /**
-                     * 设置Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
-                     * @param _recordType Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+                     * 设置Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+                     * @param _recordType Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
                      * 
                      */
                     void SetRecordType(const std::string& _recordType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RecordTypeHasBeenSet() const;
 
                     /**
-                     * 获取Record value
-                     * @return RecordValue Record value
+                     * 获取Record value.
+                     * @return RecordValue Record value.
                      * 
                      */
                     std::string GetRecordValue() const;
 
                     /**
-                     * 设置Record value
-                     * @param _recordValue Record value
+                     * 设置Record value.
+                     * @param _recordValue Record value.
                      * 
                      */
                     void SetRecordValue(const std::string& _recordValue);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RecordValueHasBeenSet() const;
 
                     /**
-                     * 获取Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
-                     * @return TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+                     * 获取Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+                     * @return TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
                      * 
                      */
                     int64_t GetTTL() const;
 
                     /**
-                     * 设置Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
-                     * @param _tTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+                     * 设置Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+                     * @param _tTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
                      * 
                      */
                     void SetTTL(const int64_t& _tTL);
@@ -173,19 +173,19 @@ namespace TencentCloud
                     bool TTLHasBeenSet() const;
 
                     /**
-                     * 获取MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMX() const;
 
                     /**
-                     * 设置MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _mX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMX(const int64_t& _mX);
@@ -198,15 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MXHasBeenSet() const;
 
                     /**
-                     * 获取Record status: ENABLED
-                     * @return Status Record status: ENABLED
+                     * 获取Record status: ENABLED.
+                     * @return Status Record status: ENABLED.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Record status: ENABLED
-                     * @param _status Record status: ENABLED
+                     * 设置Record status: ENABLED.
+                     * @param _status Record status: ENABLED.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -219,19 +219,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Weight Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Weight Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _weight Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _weight Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -244,15 +244,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Record creation time
-                     * @return CreatedOn Record creation time
+                     * 获取Record creation time.
+                     * @return CreatedOn Record creation time.
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Record creation time
-                     * @param _createdOn Record creation time
+                     * 设置Record creation time.
+                     * @param _createdOn Record creation time.
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -265,15 +265,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Record update time
-                     * @return UpdatedOn Record update time
+                     * 获取Record update time.
+                     * @return UpdatedOn Record update time.
                      * 
                      */
                     std::string GetUpdatedOn() const;
 
                     /**
-                     * 设置Record update time
-                     * @param _updatedOn Record update time
+                     * 设置Record update time.
+                     * @param _updatedOn Record update time.
                      * 
                      */
                     void SetUpdatedOn(const std::string& _updatedOn);
@@ -287,18 +287,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Extra Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 设置Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _extra Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExtra(const std::string& _extra);
@@ -310,82 +314,115 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExtraHasBeenSet() const;
 
+                    /**
+                     * 获取0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Enabled 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    uint64_t GetEnabled() const;
+
+                    /**
+                     * 设置0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _enabled 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEnabled(const uint64_t& _enabled);
+
+                    /**
+                     * 判断参数 Enabled 是否已赋值
+                     * @return Enabled 是否已赋值
+                     * 
+                     */
+                    bool EnabledHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Record ID
+                     * Record ID.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Private domain ID: zone-xxxxxxxx
+                     * Private domain ID, which is in zone-xxxxxxxx format.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Subdomain
+                     * Subdomain name.
                      */
                     std::string m_subDomain;
                     bool m_subDomainHasBeenSet;
 
                     /**
-                     * Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+                     * Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
                      */
                     std::string m_recordType;
                     bool m_recordTypeHasBeenSet;
 
                     /**
-                     * Record value
+                     * Record value.
                      */
                     std::string m_recordValue;
                     bool m_recordValueHasBeenSet;
 
                     /**
-                     * Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+                     * Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
                      */
                     int64_t m_tTL;
                     bool m_tTLHasBeenSet;
 
                     /**
-                     * MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_mX;
                     bool m_mXHasBeenSet;
 
                     /**
-                     * Record status: ENABLED
+                     * Record status: ENABLED.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Record creation time
+                     * Record creation time.
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * Record update time
+                     * Record update time.
                      */
                     std::string m_updatedOn;
                     bool m_updatedOnHasBeenSet;
 
                     /**
                      * Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
+
+                    /**
+                     * 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_enabled;
+                    bool m_enabledHasBeenSet;
 
                 };
             }

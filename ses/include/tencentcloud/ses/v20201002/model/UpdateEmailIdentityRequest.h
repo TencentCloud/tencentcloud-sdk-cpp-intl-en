@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool EmailIdentityHasBeenSet() const;
 
+                    /**
+                     * 获取The  DKIMOption parameter is effective or not
+                     * @return NewAPI The  DKIMOption parameter is effective or not
+                     * 
+                     */
+                    bool GetNewAPI() const;
+
+                    /**
+                     * 设置The  DKIMOption parameter is effective or not
+                     * @param _newAPI The  DKIMOption parameter is effective or not
+                     * 
+                     */
+                    void SetNewAPI(const bool& _newAPI);
+
+                    /**
+                     * 判断参数 NewAPI 是否已赋值
+                     * @return NewAPI 是否已赋值
+                     * 
+                     */
+                    bool NewAPIHasBeenSet() const;
+
+                    /**
+                     * 获取dkim option, 0: 1024, 1: 2048, 2: both
+                     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+                     * 
+                     */
+                    uint64_t GetDKIMOption() const;
+
+                    /**
+                     * 设置dkim option, 0: 1024, 1: 2048, 2: both
+                     * @param _dKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+                     * 
+                     */
+                    void SetDKIMOption(const uint64_t& _dKIMOption);
+
+                    /**
+                     * 判断参数 DKIMOption 是否已赋值
+                     * @return DKIMOption 是否已赋值
+                     * 
+                     */
+                    bool DKIMOptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::string m_emailIdentity;
                     bool m_emailIdentityHasBeenSet;
+
+                    /**
+                     * The  DKIMOption parameter is effective or not
+                     */
+                    bool m_newAPI;
+                    bool m_newAPIHasBeenSet;
+
+                    /**
+                     * dkim option, 0: 1024, 1: 2048, 2: both
+                     */
+                    uint64_t m_dKIMOption;
+                    bool m_dKIMOptionHasBeenSet;
 
                 };
             }

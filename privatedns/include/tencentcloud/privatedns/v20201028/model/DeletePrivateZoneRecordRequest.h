@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Private domain ID
-                     * @return ZoneId Private domain ID
+                     * 获取Private domain ID.
+                     * @return ZoneId Private domain ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Private domain ID
-                     * @param _zoneId Private domain ID
+                     * 设置Private domain ID.
+                     * @param _zoneId Private domain ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Record ID
-                     * @return RecordId Record ID
+                     * 获取Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+                     * @return RecordId Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置Record ID
-                     * @param _recordId Record ID
+                     * 设置Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+                     * @param _recordId Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of record IDs. `RecordId` takes precedence.
-                     * @return RecordIdSet Array of record IDs. `RecordId` takes precedence.
+                     * 获取Record ID array, with RecordId preferred.
+                     * @return RecordIdSet Record ID array, with RecordId preferred.
                      * 
                      */
                     std::vector<std::string> GetRecordIdSet() const;
 
                     /**
-                     * 设置Array of record IDs. `RecordId` takes precedence.
-                     * @param _recordIdSet Array of record IDs. `RecordId` takes precedence.
+                     * 设置Record ID array, with RecordId preferred.
+                     * @param _recordIdSet Record ID array, with RecordId preferred.
                      * 
                      */
                     void SetRecordIdSet(const std::vector<std::string>& _recordIdSet);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Private domain ID
+                     * Private domain ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Record ID
+                     * Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Array of record IDs. `RecordId` takes precedence.
+                     * Record ID array, with RecordId preferred.
                      */
                     std::vector<std::string> m_recordIdSet;
                     bool m_recordIdSetHasBeenSet;

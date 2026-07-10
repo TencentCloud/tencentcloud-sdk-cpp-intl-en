@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/privatedns/v20201028/model/AddSpecifyPrivateZoneVpcRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/AddSpecifyPrivateZoneVpcResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/CreateEndPointAndEndPointServiceRequest.h>
@@ -43,6 +45,8 @@
 #include <tencentcloud/privatedns/v20201028/model/DeleteForwardRuleResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DeletePrivateZoneRecordRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DeletePrivateZoneRecordResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteSpecifyPrivateZoneVpcRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/DeleteSpecifyPrivateZoneVpcResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeAccountVpcListRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeAccountVpcListResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/DescribeAuditLogRequest.h>
@@ -83,6 +87,8 @@
 #include <tencentcloud/privatedns/v20201028/model/ModifyPrivateZoneVpcResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/ModifyRecordsStatusRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/ModifyRecordsStatusResponse.h>
+#include <tencentcloud/privatedns/v20201028/model/QueryAsyncBindVpcStatusRequest.h>
+#include <tencentcloud/privatedns/v20201028/model/QueryAsyncBindVpcStatusResponse.h>
 #include <tencentcloud/privatedns/v20201028/model/SubscribePrivateZoneServiceRequest.h>
 #include <tencentcloud/privatedns/v20201028/model/SubscribePrivateZoneServiceResponse.h>
 
@@ -99,6 +105,9 @@ namespace TencentCloud
                 PrivatednsClient(const Credential &credential, const std::string &region);
                 PrivatednsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AddSpecifyPrivateZoneVpcResponse> AddSpecifyPrivateZoneVpcOutcome;
+                typedef std::future<AddSpecifyPrivateZoneVpcOutcome> AddSpecifyPrivateZoneVpcOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::AddSpecifyPrivateZoneVpcRequest&, AddSpecifyPrivateZoneVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddSpecifyPrivateZoneVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEndPointResponse> CreateEndPointOutcome;
                 typedef std::future<CreateEndPointOutcome> CreateEndPointOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::CreateEndPointRequest&, CreateEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEndPointAsyncHandler;
@@ -129,6 +138,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeletePrivateZoneRecordResponse> DeletePrivateZoneRecordOutcome;
                 typedef std::future<DeletePrivateZoneRecordOutcome> DeletePrivateZoneRecordOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DeletePrivateZoneRecordRequest&, DeletePrivateZoneRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrivateZoneRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteSpecifyPrivateZoneVpcResponse> DeleteSpecifyPrivateZoneVpcOutcome;
+                typedef std::future<DeleteSpecifyPrivateZoneVpcOutcome> DeleteSpecifyPrivateZoneVpcOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::DeleteSpecifyPrivateZoneVpcRequest&, DeleteSpecifyPrivateZoneVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSpecifyPrivateZoneVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccountVpcListResponse> DescribeAccountVpcListOutcome;
                 typedef std::future<DescribeAccountVpcListOutcome> DescribeAccountVpcListOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::DescribeAccountVpcListRequest&, DescribeAccountVpcListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountVpcListAsyncHandler;
@@ -189,11 +201,23 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyRecordsStatusResponse> ModifyRecordsStatusOutcome;
                 typedef std::future<ModifyRecordsStatusOutcome> ModifyRecordsStatusOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::ModifyRecordsStatusRequest&, ModifyRecordsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRecordsStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryAsyncBindVpcStatusResponse> QueryAsyncBindVpcStatusOutcome;
+                typedef std::future<QueryAsyncBindVpcStatusOutcome> QueryAsyncBindVpcStatusOutcomeCallable;
+                typedef std::function<void(const PrivatednsClient*, const Model::QueryAsyncBindVpcStatusRequest&, QueryAsyncBindVpcStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryAsyncBindVpcStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::SubscribePrivateZoneServiceResponse> SubscribePrivateZoneServiceOutcome;
                 typedef std::future<SubscribePrivateZoneServiceOutcome> SubscribePrivateZoneServiceOutcomeCallable;
                 typedef std::function<void(const PrivatednsClient*, const Model::SubscribePrivateZoneServiceRequest&, SubscribePrivateZoneServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubscribePrivateZoneServiceAsyncHandler;
 
 
+
+                /**
+                 *This API is used to add the VPC associated with the private domain.
+                 * @param req AddSpecifyPrivateZoneVpcRequest
+                 * @return AddSpecifyPrivateZoneVpcOutcome
+                 */
+                AddSpecifyPrivateZoneVpcOutcome AddSpecifyPrivateZoneVpc(const Model::AddSpecifyPrivateZoneVpcRequest &request);
+                void AddSpecifyPrivateZoneVpcAsync(const Model::AddSpecifyPrivateZoneVpcRequest& request, const AddSpecifyPrivateZoneVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddSpecifyPrivateZoneVpcOutcomeCallable AddSpecifyPrivateZoneVpcCallable(const Model::AddSpecifyPrivateZoneVpcRequest& request);
 
                 /**
                  *This API is used to create an endpoint.
@@ -277,13 +301,22 @@ namespace TencentCloud
                 DeleteForwardRuleOutcomeCallable DeleteForwardRuleCallable(const Model::DeleteForwardRuleRequest& request);
 
                 /**
-                 *This API is used to delete a DNS record for a private domain.
+                 *This API is used to delete the private DNS records.
                  * @param req DeletePrivateZoneRecordRequest
                  * @return DeletePrivateZoneRecordOutcome
                  */
                 DeletePrivateZoneRecordOutcome DeletePrivateZoneRecord(const Model::DeletePrivateZoneRecordRequest &request);
                 void DeletePrivateZoneRecordAsync(const Model::DeletePrivateZoneRecordRequest& request, const DeletePrivateZoneRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeletePrivateZoneRecordOutcomeCallable DeletePrivateZoneRecordCallable(const Model::DeletePrivateZoneRecordRequest& request);
+
+                /**
+                 *This API is used to delete the VPC associated with the private domain.
+                 * @param req DeleteSpecifyPrivateZoneVpcRequest
+                 * @return DeleteSpecifyPrivateZoneVpcOutcome
+                 */
+                DeleteSpecifyPrivateZoneVpcOutcome DeleteSpecifyPrivateZoneVpc(const Model::DeleteSpecifyPrivateZoneVpcRequest &request);
+                void DeleteSpecifyPrivateZoneVpcAsync(const Model::DeleteSpecifyPrivateZoneVpcRequest& request, const DeleteSpecifyPrivateZoneVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteSpecifyPrivateZoneVpcOutcomeCallable DeleteSpecifyPrivateZoneVpcCallable(const Model::DeleteSpecifyPrivateZoneVpcRequest& request);
 
                 /**
                  *This API is used to get the VPC list of a Private DNS account.
@@ -376,7 +409,7 @@ namespace TencentCloud
                 DescribePrivateZoneListOutcomeCallable DescribePrivateZoneListCallable(const Model::DescribePrivateZoneListRequest& request);
 
                 /**
-                 *This API is used to get the list of records for a private domain.
+                 *This API is used to obtain the private domain record list.
                  * @param req DescribePrivateZoneRecordListRequest
                  * @return DescribePrivateZoneRecordListOutcome
                  */
@@ -464,6 +497,15 @@ namespace TencentCloud
                 ModifyRecordsStatusOutcome ModifyRecordsStatus(const Model::ModifyRecordsStatusRequest &request);
                 void ModifyRecordsStatusAsync(const Model::ModifyRecordsStatusRequest& request, const ModifyRecordsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyRecordsStatusOutcomeCallable ModifyRecordsStatusCallable(const Model::ModifyRecordsStatusRequest& request);
+
+                /**
+                 *This API is used to query the asynchronous VPC binding status.
+                 * @param req QueryAsyncBindVpcStatusRequest
+                 * @return QueryAsyncBindVpcStatusOutcome
+                 */
+                QueryAsyncBindVpcStatusOutcome QueryAsyncBindVpcStatus(const Model::QueryAsyncBindVpcStatusRequest &request);
+                void QueryAsyncBindVpcStatusAsync(const Model::QueryAsyncBindVpcStatusRequest& request, const QueryAsyncBindVpcStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryAsyncBindVpcStatusOutcomeCallable QueryAsyncBindVpcStatusCallable(const Model::QueryAsyncBindVpcStatusRequest& request);
 
                 /**
                  *This API is used to activate the Private DNS service.

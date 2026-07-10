@@ -40,6 +40,56 @@ PrivatednsClient::PrivatednsClient(const Credential &credential, const string &r
 }
 
 
+PrivatednsClient::AddSpecifyPrivateZoneVpcOutcome PrivatednsClient::AddSpecifyPrivateZoneVpc(const AddSpecifyPrivateZoneVpcRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddSpecifyPrivateZoneVpc");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddSpecifyPrivateZoneVpcResponse rsp = AddSpecifyPrivateZoneVpcResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddSpecifyPrivateZoneVpcOutcome(rsp);
+        else
+            return AddSpecifyPrivateZoneVpcOutcome(o.GetError());
+    }
+    else
+    {
+        return AddSpecifyPrivateZoneVpcOutcome(outcome.GetError());
+    }
+}
+
+void PrivatednsClient::AddSpecifyPrivateZoneVpcAsync(const AddSpecifyPrivateZoneVpcRequest& request, const AddSpecifyPrivateZoneVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddSpecifyPrivateZoneVpcRequest&;
+    using Resp = AddSpecifyPrivateZoneVpcResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddSpecifyPrivateZoneVpc", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PrivatednsClient::AddSpecifyPrivateZoneVpcOutcomeCallable PrivatednsClient::AddSpecifyPrivateZoneVpcCallable(const AddSpecifyPrivateZoneVpcRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddSpecifyPrivateZoneVpcOutcome>>();
+    AddSpecifyPrivateZoneVpcAsync(
+    request,
+    [prom](
+        const PrivatednsClient*,
+        const AddSpecifyPrivateZoneVpcRequest&,
+        AddSpecifyPrivateZoneVpcOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 PrivatednsClient::CreateEndPointOutcome PrivatednsClient::CreateEndPoint(const CreateEndPointRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateEndPoint");
@@ -532,6 +582,56 @@ PrivatednsClient::DeletePrivateZoneRecordOutcomeCallable PrivatednsClient::Delet
         const PrivatednsClient*,
         const DeletePrivateZoneRecordRequest&,
         DeletePrivateZoneRecordOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PrivatednsClient::DeleteSpecifyPrivateZoneVpcOutcome PrivatednsClient::DeleteSpecifyPrivateZoneVpc(const DeleteSpecifyPrivateZoneVpcRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSpecifyPrivateZoneVpc");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSpecifyPrivateZoneVpcResponse rsp = DeleteSpecifyPrivateZoneVpcResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSpecifyPrivateZoneVpcOutcome(rsp);
+        else
+            return DeleteSpecifyPrivateZoneVpcOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSpecifyPrivateZoneVpcOutcome(outcome.GetError());
+    }
+}
+
+void PrivatednsClient::DeleteSpecifyPrivateZoneVpcAsync(const DeleteSpecifyPrivateZoneVpcRequest& request, const DeleteSpecifyPrivateZoneVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteSpecifyPrivateZoneVpcRequest&;
+    using Resp = DeleteSpecifyPrivateZoneVpcResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteSpecifyPrivateZoneVpc", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PrivatednsClient::DeleteSpecifyPrivateZoneVpcOutcomeCallable PrivatednsClient::DeleteSpecifyPrivateZoneVpcCallable(const DeleteSpecifyPrivateZoneVpcRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteSpecifyPrivateZoneVpcOutcome>>();
+    DeleteSpecifyPrivateZoneVpcAsync(
+    request,
+    [prom](
+        const PrivatednsClient*,
+        const DeleteSpecifyPrivateZoneVpcRequest&,
+        DeleteSpecifyPrivateZoneVpcOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1532,6 +1632,56 @@ PrivatednsClient::ModifyRecordsStatusOutcomeCallable PrivatednsClient::ModifyRec
         const PrivatednsClient*,
         const ModifyRecordsStatusRequest&,
         ModifyRecordsStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+PrivatednsClient::QueryAsyncBindVpcStatusOutcome PrivatednsClient::QueryAsyncBindVpcStatus(const QueryAsyncBindVpcStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryAsyncBindVpcStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryAsyncBindVpcStatusResponse rsp = QueryAsyncBindVpcStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryAsyncBindVpcStatusOutcome(rsp);
+        else
+            return QueryAsyncBindVpcStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryAsyncBindVpcStatusOutcome(outcome.GetError());
+    }
+}
+
+void PrivatednsClient::QueryAsyncBindVpcStatusAsync(const QueryAsyncBindVpcStatusRequest& request, const QueryAsyncBindVpcStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const QueryAsyncBindVpcStatusRequest&;
+    using Resp = QueryAsyncBindVpcStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "QueryAsyncBindVpcStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+PrivatednsClient::QueryAsyncBindVpcStatusOutcomeCallable PrivatednsClient::QueryAsyncBindVpcStatusCallable(const QueryAsyncBindVpcStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<QueryAsyncBindVpcStatusOutcome>>();
+    QueryAsyncBindVpcStatusAsync(
+    request,
+    [prom](
+        const PrivatednsClient*,
+        const QueryAsyncBindVpcStatusRequest&,
+        QueryAsyncBindVpcStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

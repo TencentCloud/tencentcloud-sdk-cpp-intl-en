@@ -86,6 +86,20 @@ namespace TencentCloud
                      */
                     bool AttributesHasBeenSet() const;
 
+                    /**
+                     * 获取dkim option, 0: 1024, 1: 2048, 2: both
+                     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+                     * 
+                     */
+                    uint64_t GetDKIMOption() const;
+
+                    /**
+                     * 判断参数 DKIMOption 是否已赋值
+                     * @return DKIMOption 是否已赋值
+                     * 
+                     */
+                    bool DKIMOptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -105,6 +119,12 @@ namespace TencentCloud
                      */
                     std::vector<DNSAttributes> m_attributes;
                     bool m_attributesHasBeenSet;
+
+                    /**
+                     * dkim option, 0: 1024, 1: 2048, 2: both
+                     */
+                    uint64_t m_dKIMOption;
+                    bool m_dKIMOptionHasBeenSet;
 
                 };
             }

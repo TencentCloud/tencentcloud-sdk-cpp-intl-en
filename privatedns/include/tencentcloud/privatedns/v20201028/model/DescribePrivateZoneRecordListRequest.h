@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Private domain ID: zone-xxxxxx
-                     * @return ZoneId Private domain ID: zone-xxxxxx
+                     * 获取Private domain ID, which is in zone-xxxxxx format.
+                     * @return ZoneId Private domain ID, which is in zone-xxxxxx format.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Private domain ID: zone-xxxxxx
-                     * @param _zoneId Private domain ID: zone-xxxxxx
+                     * 设置Private domain ID, which is in zone-xxxxxx format.
+                     * @param _zoneId Private domain ID, which is in zone-xxxxxx format.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter parameter
-                     * @return Filters Filter parameter
+                     * 获取Filter parameters. (Valid values: Value and RecordType.)
+                     * @return Filters Filter parameters. (Valid values: Value and RecordType.)
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter parameter
-                     * @param _filters Filter parameter
+                     * 设置Filter parameters. (Valid values: Value and RecordType.)
+                     * @param _filters Filter parameters. (Valid values: Value and RecordType.)
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, starting from 0
-                     * @return Offset Pagination offset, starting from 0
+                     * 获取Pagination offset, starting from 0.
+                     * @return Offset Pagination offset, starting from 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, starting from 0
-                     * @param _offset Pagination offset, starting from 0
+                     * 设置Pagination offset, starting from 0.
+                     * @param _offset Pagination offset, starting from 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page. Maximum value: 100. Default value: 20
-                     * @return Limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 获取Pagination limit. Maximum value: 200. Default value: 20.
+                     * @return Limit Pagination limit. Maximum value: 200. Default value: 20.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page. Maximum value: 100. Default value: 20
-                     * @param _limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 设置Pagination limit. Maximum value: 200. Default value: 20.
+                     * @param _limit Pagination limit. Maximum value: 200. Default value: 20.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Private domain ID: zone-xxxxxx
+                     * Private domain ID, which is in zone-xxxxxx format.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter parameter
+                     * Filter parameters. (Valid values: Value and RecordType.)
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Pagination offset, starting from 0
+                     * Pagination offset, starting from 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page. Maximum value: 100. Default value: 20
+                     * Pagination limit. Maximum value: 200. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
