@@ -27,7 +27,9 @@ MainlandIDCard::MainlandIDCard() :
     m_birthdayHasBeenSet(false),
     m_addressHasBeenSet(false),
     m_licenseNumberHasBeenSet(false),
-    m_formattedAddressHasBeenSet(false)
+    m_formattedAddressHasBeenSet(false),
+    m_authorityHasBeenSet(false),
+    m_validDateHasBeenSet(false)
 {
 }
 
@@ -106,6 +108,26 @@ CoreInternalOutcome MainlandIDCard::Deserialize(const rapidjson::Value &value)
         m_formattedAddressHasBeenSet = true;
     }
 
+    if (value.HasMember("Authority") && !value["Authority"].IsNull())
+    {
+        if (!value["Authority"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MainlandIDCard.Authority` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_authority = string(value["Authority"].GetString());
+        m_authorityHasBeenSet = true;
+    }
+
+    if (value.HasMember("ValidDate") && !value["ValidDate"].IsNull())
+    {
+        if (!value["ValidDate"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `MainlandIDCard.ValidDate` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_validDate = string(value["ValidDate"].GetString());
+        m_validDateHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -167,6 +189,22 @@ void MainlandIDCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "FormattedAddress";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_formattedAddress.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_authorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Authority";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_authority.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_validDateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ValidDate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_validDate.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -282,5 +320,37 @@ void MainlandIDCard::SetFormattedAddress(const string& _formattedAddress)
 bool MainlandIDCard::FormattedAddressHasBeenSet() const
 {
     return m_formattedAddressHasBeenSet;
+}
+
+string MainlandIDCard::GetAuthority() const
+{
+    return m_authority;
+}
+
+void MainlandIDCard::SetAuthority(const string& _authority)
+{
+    m_authority = _authority;
+    m_authorityHasBeenSet = true;
+}
+
+bool MainlandIDCard::AuthorityHasBeenSet() const
+{
+    return m_authorityHasBeenSet;
+}
+
+string MainlandIDCard::GetValidDate() const
+{
+    return m_validDate;
+}
+
+void MainlandIDCard::SetValidDate(const string& _validDate)
+{
+    m_validDate = _validDate;
+    m_validDateHasBeenSet = true;
+}
+
+bool MainlandIDCard::ValidDateHasBeenSet() const
+{
+    return m_validDateHasBeenSet;
 }
 

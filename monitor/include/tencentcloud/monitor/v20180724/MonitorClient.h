@@ -895,7 +895,7 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 CreateExporterIntegrationOutcomeCallable CreateExporterIntegrationCallable(const Model::CreateExporterIntegrationRequest& request);
 
                 /**
-                 *This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
+                 *This API is used to create a yearly/monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
                  * @param req CreateGrafanaInstanceRequest
                  * @return CreateGrafanaInstanceOutcome
                  */
@@ -1098,7 +1098,7 @@ This API is used to enable individually creating enabled/disabled alert rules un
                 DeleteExporterIntegrationOutcomeCallable DeleteExporterIntegrationCallable(const Model::DeleteExporterIntegrationRequest& request);
 
                 /**
-                 *This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
+                 *This API is used to refund a yearly/monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
                  * @param req DeleteGrafanaInstanceRequest
                  * @return DeleteGrafanaInstanceOutcome
                  */
@@ -1988,7 +1988,7 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
                 ModifyPrometheusTempOutcomeCallable ModifyPrometheusTempCallable(const Model::ModifyPrometheusTempRequest& request);
 
                 /**
-                 *This API is used to renew a monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
+                 *This API is used to renew a yearly/monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
                  * @param req ResumeGrafanaInstanceRequest
                  * @return ResumeGrafanaInstanceOutcome
                  */

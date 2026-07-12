@@ -15,11 +15,56 @@
 #
 
 set(clb_public_header
-  include/tencentcloud/clb/v20180317/ClbClient.h
   include/tencentcloud/clb/v20230417/ClbClient.h
+  include/tencentcloud/clb/v20180317/ClbClient.h
   )
 
 set(clb_public_header_model
+  include/tencentcloud/clb/v20230417/model/LBChargePrepaid.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancerListByCertIdRequest.h
+  include/tencentcloud/clb/v20230417/model/ClassicalListener.h
+  include/tencentcloud/clb/v20230417/model/TargetRegionInfo.h
+  include/tencentcloud/clb/v20230417/model/SetCustomizedConfigForLoadBalancerRequest.h
+  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigListRequest.h
+  include/tencentcloud/clb/v20230417/model/ExtraInfo.h
+  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigAssociateListResponse.h
+  include/tencentcloud/clb/v20230417/model/CloneLoadBalancerResponse.h
+  include/tencentcloud/clb/v20230417/model/BatchModifyTargetWeightResponse.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancerListByCertIdResponse.h
+  include/tencentcloud/clb/v20230417/model/CreateLoadBalancerRequest.h
+  include/tencentcloud/clb/v20230417/model/LoadBalancerHealth.h
+  include/tencentcloud/clb/v20230417/model/DescribeTargetHealthRequest.h
+  include/tencentcloud/clb/v20230417/model/CloneLoadBalancerRequest.h
+  include/tencentcloud/clb/v20230417/model/Target.h
+  include/tencentcloud/clb/v20230417/model/RsWeightRule.h
+  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigListResponse.h
+  include/tencentcloud/clb/v20230417/model/CertIdRelatedWithLoadBalancers.h
+  include/tencentcloud/clb/v20230417/model/RuleHealth.h
+  include/tencentcloud/clb/v20230417/model/TagInfo.h
+  include/tencentcloud/clb/v20230417/model/ConfigListItem.h
+  include/tencentcloud/clb/v20230417/model/DescribeClassicalLBListenersResponse.h
+  include/tencentcloud/clb/v20230417/model/SnatIp.h
+  include/tencentcloud/clb/v20230417/model/DescribeTargetHealthResponse.h
+  include/tencentcloud/clb/v20230417/model/CreateLoadBalancerResponse.h
+  include/tencentcloud/clb/v20230417/model/ClusterItem.h
+  include/tencentcloud/clb/v20230417/model/BindDetailItem.h
+  include/tencentcloud/clb/v20230417/model/SetCustomizedConfigForLoadBalancerResponse.h
+  include/tencentcloud/clb/v20230417/model/AvailableZoneAffinityInfo.h
+  include/tencentcloud/clb/v20230417/model/Filter.h
+  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigAssociateListRequest.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersDetailRequest.h
+  include/tencentcloud/clb/v20230417/model/LoadBalancerDetail.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersRequest.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersResponse.h
+  include/tencentcloud/clb/v20230417/model/ZoneInfo.h
+  include/tencentcloud/clb/v20230417/model/ExclusiveCluster.h
+  include/tencentcloud/clb/v20230417/model/InternetAccessible.h
+  include/tencentcloud/clb/v20230417/model/DescribeClassicalLBListenersRequest.h
+  include/tencentcloud/clb/v20230417/model/TargetHealth.h
+  include/tencentcloud/clb/v20230417/model/ListenerHealth.h
+  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersDetailResponse.h
+  include/tencentcloud/clb/v20230417/model/BatchModifyTargetWeightRequest.h
+  include/tencentcloud/clb/v20230417/model/LoadBalancer.h
   include/tencentcloud/clb/v20180317/model/DeleteRewriteRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeTargetGroupListResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeQuotaRequest.h
@@ -275,56 +320,56 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DescribeCrossTargetsRequest.h
   include/tencentcloud/clb/v20180317/model/RegisterTargetGroupInstancesRequest.h
   include/tencentcloud/clb/v20180317/model/LoadBalancer.h
-  include/tencentcloud/clb/v20230417/model/LBChargePrepaid.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancerListByCertIdRequest.h
-  include/tencentcloud/clb/v20230417/model/ClassicalListener.h
-  include/tencentcloud/clb/v20230417/model/TargetRegionInfo.h
-  include/tencentcloud/clb/v20230417/model/SetCustomizedConfigForLoadBalancerRequest.h
-  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigListRequest.h
-  include/tencentcloud/clb/v20230417/model/ExtraInfo.h
-  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigAssociateListResponse.h
-  include/tencentcloud/clb/v20230417/model/CloneLoadBalancerResponse.h
-  include/tencentcloud/clb/v20230417/model/BatchModifyTargetWeightResponse.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancerListByCertIdResponse.h
-  include/tencentcloud/clb/v20230417/model/CreateLoadBalancerRequest.h
-  include/tencentcloud/clb/v20230417/model/LoadBalancerHealth.h
-  include/tencentcloud/clb/v20230417/model/DescribeTargetHealthRequest.h
-  include/tencentcloud/clb/v20230417/model/CloneLoadBalancerRequest.h
-  include/tencentcloud/clb/v20230417/model/Target.h
-  include/tencentcloud/clb/v20230417/model/RsWeightRule.h
-  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigListResponse.h
-  include/tencentcloud/clb/v20230417/model/CertIdRelatedWithLoadBalancers.h
-  include/tencentcloud/clb/v20230417/model/RuleHealth.h
-  include/tencentcloud/clb/v20230417/model/TagInfo.h
-  include/tencentcloud/clb/v20230417/model/ConfigListItem.h
-  include/tencentcloud/clb/v20230417/model/DescribeClassicalLBListenersResponse.h
-  include/tencentcloud/clb/v20230417/model/SnatIp.h
-  include/tencentcloud/clb/v20230417/model/DescribeTargetHealthResponse.h
-  include/tencentcloud/clb/v20230417/model/CreateLoadBalancerResponse.h
-  include/tencentcloud/clb/v20230417/model/ClusterItem.h
-  include/tencentcloud/clb/v20230417/model/BindDetailItem.h
-  include/tencentcloud/clb/v20230417/model/SetCustomizedConfigForLoadBalancerResponse.h
-  include/tencentcloud/clb/v20230417/model/AvailableZoneAffinityInfo.h
-  include/tencentcloud/clb/v20230417/model/Filter.h
-  include/tencentcloud/clb/v20230417/model/DescribeCustomizedConfigAssociateListRequest.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersDetailRequest.h
-  include/tencentcloud/clb/v20230417/model/LoadBalancerDetail.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersRequest.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersResponse.h
-  include/tencentcloud/clb/v20230417/model/ZoneInfo.h
-  include/tencentcloud/clb/v20230417/model/ExclusiveCluster.h
-  include/tencentcloud/clb/v20230417/model/InternetAccessible.h
-  include/tencentcloud/clb/v20230417/model/DescribeClassicalLBListenersRequest.h
-  include/tencentcloud/clb/v20230417/model/TargetHealth.h
-  include/tencentcloud/clb/v20230417/model/ListenerHealth.h
-  include/tencentcloud/clb/v20230417/model/DescribeLoadBalancersDetailResponse.h
-  include/tencentcloud/clb/v20230417/model/BatchModifyTargetWeightRequest.h
-  include/tencentcloud/clb/v20230417/model/LoadBalancer.h
   )
 
 set(clb_src
-  src/v20180317/ClbClient.cpp
   src/v20230417/ClbClient.cpp
+  src/v20180317/ClbClient.cpp
+  src/v20230417/model/LBChargePrepaid.cpp
+  src/v20230417/model/DescribeLoadBalancerListByCertIdRequest.cpp
+  src/v20230417/model/ClassicalListener.cpp
+  src/v20230417/model/TargetRegionInfo.cpp
+  src/v20230417/model/SetCustomizedConfigForLoadBalancerRequest.cpp
+  src/v20230417/model/DescribeCustomizedConfigListRequest.cpp
+  src/v20230417/model/ExtraInfo.cpp
+  src/v20230417/model/DescribeCustomizedConfigAssociateListResponse.cpp
+  src/v20230417/model/CloneLoadBalancerResponse.cpp
+  src/v20230417/model/BatchModifyTargetWeightResponse.cpp
+  src/v20230417/model/DescribeLoadBalancerListByCertIdResponse.cpp
+  src/v20230417/model/CreateLoadBalancerRequest.cpp
+  src/v20230417/model/LoadBalancerHealth.cpp
+  src/v20230417/model/DescribeTargetHealthRequest.cpp
+  src/v20230417/model/CloneLoadBalancerRequest.cpp
+  src/v20230417/model/Target.cpp
+  src/v20230417/model/RsWeightRule.cpp
+  src/v20230417/model/DescribeCustomizedConfigListResponse.cpp
+  src/v20230417/model/CertIdRelatedWithLoadBalancers.cpp
+  src/v20230417/model/RuleHealth.cpp
+  src/v20230417/model/TagInfo.cpp
+  src/v20230417/model/ConfigListItem.cpp
+  src/v20230417/model/DescribeClassicalLBListenersResponse.cpp
+  src/v20230417/model/SnatIp.cpp
+  src/v20230417/model/DescribeTargetHealthResponse.cpp
+  src/v20230417/model/CreateLoadBalancerResponse.cpp
+  src/v20230417/model/ClusterItem.cpp
+  src/v20230417/model/BindDetailItem.cpp
+  src/v20230417/model/SetCustomizedConfigForLoadBalancerResponse.cpp
+  src/v20230417/model/AvailableZoneAffinityInfo.cpp
+  src/v20230417/model/Filter.cpp
+  src/v20230417/model/DescribeCustomizedConfigAssociateListRequest.cpp
+  src/v20230417/model/DescribeLoadBalancersDetailRequest.cpp
+  src/v20230417/model/LoadBalancerDetail.cpp
+  src/v20230417/model/DescribeLoadBalancersRequest.cpp
+  src/v20230417/model/DescribeLoadBalancersResponse.cpp
+  src/v20230417/model/ZoneInfo.cpp
+  src/v20230417/model/ExclusiveCluster.cpp
+  src/v20230417/model/InternetAccessible.cpp
+  src/v20230417/model/DescribeClassicalLBListenersRequest.cpp
+  src/v20230417/model/TargetHealth.cpp
+  src/v20230417/model/ListenerHealth.cpp
+  src/v20230417/model/DescribeLoadBalancersDetailResponse.cpp
+  src/v20230417/model/BatchModifyTargetWeightRequest.cpp
+  src/v20230417/model/LoadBalancer.cpp
   src/v20180317/model/DeleteRewriteRequest.cpp
   src/v20180317/model/DescribeTargetGroupListResponse.cpp
   src/v20180317/model/DescribeQuotaRequest.cpp
@@ -580,51 +625,6 @@ set(clb_src
   src/v20180317/model/DescribeCrossTargetsRequest.cpp
   src/v20180317/model/RegisterTargetGroupInstancesRequest.cpp
   src/v20180317/model/LoadBalancer.cpp
-  src/v20230417/model/LBChargePrepaid.cpp
-  src/v20230417/model/DescribeLoadBalancerListByCertIdRequest.cpp
-  src/v20230417/model/ClassicalListener.cpp
-  src/v20230417/model/TargetRegionInfo.cpp
-  src/v20230417/model/SetCustomizedConfigForLoadBalancerRequest.cpp
-  src/v20230417/model/DescribeCustomizedConfigListRequest.cpp
-  src/v20230417/model/ExtraInfo.cpp
-  src/v20230417/model/DescribeCustomizedConfigAssociateListResponse.cpp
-  src/v20230417/model/CloneLoadBalancerResponse.cpp
-  src/v20230417/model/BatchModifyTargetWeightResponse.cpp
-  src/v20230417/model/DescribeLoadBalancerListByCertIdResponse.cpp
-  src/v20230417/model/CreateLoadBalancerRequest.cpp
-  src/v20230417/model/LoadBalancerHealth.cpp
-  src/v20230417/model/DescribeTargetHealthRequest.cpp
-  src/v20230417/model/CloneLoadBalancerRequest.cpp
-  src/v20230417/model/Target.cpp
-  src/v20230417/model/RsWeightRule.cpp
-  src/v20230417/model/DescribeCustomizedConfigListResponse.cpp
-  src/v20230417/model/CertIdRelatedWithLoadBalancers.cpp
-  src/v20230417/model/RuleHealth.cpp
-  src/v20230417/model/TagInfo.cpp
-  src/v20230417/model/ConfigListItem.cpp
-  src/v20230417/model/DescribeClassicalLBListenersResponse.cpp
-  src/v20230417/model/SnatIp.cpp
-  src/v20230417/model/DescribeTargetHealthResponse.cpp
-  src/v20230417/model/CreateLoadBalancerResponse.cpp
-  src/v20230417/model/ClusterItem.cpp
-  src/v20230417/model/BindDetailItem.cpp
-  src/v20230417/model/SetCustomizedConfigForLoadBalancerResponse.cpp
-  src/v20230417/model/AvailableZoneAffinityInfo.cpp
-  src/v20230417/model/Filter.cpp
-  src/v20230417/model/DescribeCustomizedConfigAssociateListRequest.cpp
-  src/v20230417/model/DescribeLoadBalancersDetailRequest.cpp
-  src/v20230417/model/LoadBalancerDetail.cpp
-  src/v20230417/model/DescribeLoadBalancersRequest.cpp
-  src/v20230417/model/DescribeLoadBalancersResponse.cpp
-  src/v20230417/model/ZoneInfo.cpp
-  src/v20230417/model/ExclusiveCluster.cpp
-  src/v20230417/model/InternetAccessible.cpp
-  src/v20230417/model/DescribeClassicalLBListenersRequest.cpp
-  src/v20230417/model/TargetHealth.cpp
-  src/v20230417/model/ListenerHealth.cpp
-  src/v20230417/model/DescribeLoadBalancersDetailResponse.cpp
-  src/v20230417/model/BatchModifyTargetWeightRequest.cpp
-  src/v20230417/model/LoadBalancer.cpp
   )
 
 set(clb_include
@@ -653,9 +653,9 @@ target_link_libraries(clb
   core)
 
 #install(FILES ${clb_public_header}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/clb/v20230417)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/clb/v20180317)
 #install(FILES ${clb_public_header_model}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/clb/v20230417/model)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/clb/v20180317/model)
 install(DIRECTORY ${clb_include}
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
 

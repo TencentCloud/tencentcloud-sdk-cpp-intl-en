@@ -29,7 +29,8 @@ OCRResult::OCRResult() :
     m_cardCutImageBase64HasBeenSet(false),
     m_cardBackCutImageBase64HasBeenSet(false),
     m_warnCardInfosHasBeenSet(false),
-    m_originalCardInfoHasBeenSet(false)
+    m_originalCardInfoHasBeenSet(false),
+    m_headImageBase64HasBeenSet(false)
 {
 }
 
@@ -145,6 +146,16 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         m_originalCardInfoHasBeenSet = true;
     }
 
+    if (value.HasMember("HeadImageBase64") && !value["HeadImageBase64"].IsNull())
+    {
+        if (!value["HeadImageBase64"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `OCRResult.HeadImageBase64` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_headImageBase64 = string(value["HeadImageBase64"].GetString());
+        m_headImageBase64HasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -229,6 +240,14 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "OriginalCardInfo";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_originalCardInfo.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_headImageBase64HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HeadImageBase64";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_headImageBase64.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -376,5 +395,21 @@ void OCRResult::SetOriginalCardInfo(const string& _originalCardInfo)
 bool OCRResult::OriginalCardInfoHasBeenSet() const
 {
     return m_originalCardInfoHasBeenSet;
+}
+
+string OCRResult::GetHeadImageBase64() const
+{
+    return m_headImageBase64;
+}
+
+void OCRResult::SetHeadImageBase64(const string& _headImageBase64)
+{
+    m_headImageBase64 = _headImageBase64;
+    m_headImageBase64HasBeenSet = true;
+}
+
+bool OCRResult::HeadImageBase64HasBeenSet() const
+{
+    return m_headImageBase64HasBeenSet;
 }
 

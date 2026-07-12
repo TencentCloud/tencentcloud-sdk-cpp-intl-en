@@ -15,11 +15,19 @@
 #
 
 set(monitor_public_header
-  include/tencentcloud/monitor/v20180724/MonitorClient.h
   include/tencentcloud/monitor/v20230616/MonitorClient.h
+  include/tencentcloud/monitor/v20180724/MonitorClient.h
   )
 
 set(monitor_public_header_model
+  include/tencentcloud/monitor/v20230616/model/PageByNoParams.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesRequest.h
+  include/tencentcloud/monitor/v20230616/model/PageByNoResult.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesResponse.h
+  include/tencentcloud/monitor/v20230616/model/AlarmLable.h
+  include/tencentcloud/monitor/v20230616/model/ChannelsReceivers.h
+  include/tencentcloud/monitor/v20230616/model/NotifyRelatedNotice.h
+  include/tencentcloud/monitor/v20230616/model/AlarmNotifyHistory.h
   include/tencentcloud/monitor/v20180724/model/ModifyAlarmPolicyInfoRequest.h
   include/tencentcloud/monitor/v20180724/model/AlarmPolicyTriggerTask.h
   include/tencentcloud/monitor/v20180724/model/DescribeOnCallFormRequest.h
@@ -465,19 +473,19 @@ set(monitor_public_header_model
   include/tencentcloud/monitor/v20180724/model/UpdateAlertRuleStateRequest.h
   include/tencentcloud/monitor/v20180724/model/SetDefaultAlarmPolicyResponse.h
   include/tencentcloud/monitor/v20180724/model/BindingPolicyObjectResponse.h
-  include/tencentcloud/monitor/v20230616/model/PageByNoParams.h
-  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesRequest.h
-  include/tencentcloud/monitor/v20230616/model/PageByNoResult.h
-  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesResponse.h
-  include/tencentcloud/monitor/v20230616/model/AlarmLable.h
-  include/tencentcloud/monitor/v20230616/model/ChannelsReceivers.h
-  include/tencentcloud/monitor/v20230616/model/NotifyRelatedNotice.h
-  include/tencentcloud/monitor/v20230616/model/AlarmNotifyHistory.h
   )
 
 set(monitor_src
-  src/v20180724/MonitorClient.cpp
   src/v20230616/MonitorClient.cpp
+  src/v20180724/MonitorClient.cpp
+  src/v20230616/model/PageByNoParams.cpp
+  src/v20230616/model/DescribeAlarmNotifyHistoriesRequest.cpp
+  src/v20230616/model/PageByNoResult.cpp
+  src/v20230616/model/DescribeAlarmNotifyHistoriesResponse.cpp
+  src/v20230616/model/AlarmLable.cpp
+  src/v20230616/model/ChannelsReceivers.cpp
+  src/v20230616/model/NotifyRelatedNotice.cpp
+  src/v20230616/model/AlarmNotifyHistory.cpp
   src/v20180724/model/ModifyAlarmPolicyInfoRequest.cpp
   src/v20180724/model/AlarmPolicyTriggerTask.cpp
   src/v20180724/model/DescribeOnCallFormRequest.cpp
@@ -923,14 +931,6 @@ set(monitor_src
   src/v20180724/model/UpdateAlertRuleStateRequest.cpp
   src/v20180724/model/SetDefaultAlarmPolicyResponse.cpp
   src/v20180724/model/BindingPolicyObjectResponse.cpp
-  src/v20230616/model/PageByNoParams.cpp
-  src/v20230616/model/DescribeAlarmNotifyHistoriesRequest.cpp
-  src/v20230616/model/PageByNoResult.cpp
-  src/v20230616/model/DescribeAlarmNotifyHistoriesResponse.cpp
-  src/v20230616/model/AlarmLable.cpp
-  src/v20230616/model/ChannelsReceivers.cpp
-  src/v20230616/model/NotifyRelatedNotice.cpp
-  src/v20230616/model/AlarmNotifyHistory.cpp
   )
 
 set(monitor_include
@@ -959,9 +959,9 @@ target_link_libraries(monitor
   core)
 
 #install(FILES ${monitor_public_header}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/monitor/v20230616)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/monitor/v20180724)
 #install(FILES ${monitor_public_header_model}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/monitor/v20230616/model)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/monitor/v20180724/model)
 install(DIRECTORY ${monitor_include}
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
 

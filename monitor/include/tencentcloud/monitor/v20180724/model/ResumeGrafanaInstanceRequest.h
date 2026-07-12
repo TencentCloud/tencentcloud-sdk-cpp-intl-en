@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCMG instance ID, such as “grafana-12345678”.
-                     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 获取TCMG instance ID, such as grafana-12345678.
+                     * @return InstanceId TCMG instance ID, such as grafana-12345678.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TCMG instance ID, such as “grafana-12345678”.
-                     * @param _instanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 设置TCMG instance ID, such as grafana-12345678.
+                     * @param _instanceId TCMG instance ID, such as grafana-12345678.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCMG instance ID, such as “grafana-12345678”.
+                     * TCMG instance ID, such as grafana-12345678.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

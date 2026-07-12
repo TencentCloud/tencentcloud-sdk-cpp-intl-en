@@ -126,6 +126,69 @@ namespace TencentCloud
                      */
                     bool SummaryHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Issue 
+                     * 
+                     */
+                    std::string GetIssue() const;
+
+                    /**
+                     * 设置
+                     * @param _issue 
+                     * 
+                     */
+                    void SetIssue(const std::string& _issue);
+
+                    /**
+                     * 判断参数 Issue 是否已赋值
+                     * @return Issue 是否已赋值
+                     * 
+                     */
+                    bool IssueHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Record 
+                     * 
+                     */
+                    std::string GetRecord() const;
+
+                    /**
+                     * 设置
+                     * @param _record 
+                     * 
+                     */
+                    void SetRecord(const std::string& _record);
+
+                    /**
+                     * 判断参数 Record 是否已赋值
+                     * @return Record 是否已赋值
+                     * 
+                     */
+                    bool RecordHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IncludeRecordInReport 
+                     * 
+                     */
+                    int64_t GetIncludeRecordInReport() const;
+
+                    /**
+                     * 设置
+                     * @param _includeRecordInReport 
+                     * 
+                     */
+                    void SetIncludeRecordInReport(const int64_t& _includeRecordInReport);
+
+                    /**
+                     * 判断参数 IncludeRecordInReport 是否已赋值
+                     * @return IncludeRecordInReport 是否已赋值
+                     * 
+                     */
+                    bool IncludeRecordInReportHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +214,24 @@ namespace TencentCloud
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_issue;
+                    bool m_issueHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_record;
+                    bool m_recordHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_includeRecordInReport;
+                    bool m_includeRecordInReportHasBeenSet;
 
                 };
             }

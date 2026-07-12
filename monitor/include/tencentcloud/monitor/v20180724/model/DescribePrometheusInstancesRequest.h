@@ -253,10 +253,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
                      * @return InstanceChargeType Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
                      * 
                      */
@@ -264,10 +264,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
                      * @param _instanceChargeType Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
                      * 
                      */
@@ -342,7 +342,7 @@ namespace TencentCloud
 
                     /**
                      * Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
                      */
                     int64_t m_instanceChargeType;

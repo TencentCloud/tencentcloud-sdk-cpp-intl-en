@@ -26,7 +26,10 @@ ModifyTaskRunStatusRequest::ModifyTaskRunStatusRequest() :
     m_taskIdHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_isExpectHasBeenSet(false),
-    m_summaryHasBeenSet(false)
+    m_summaryHasBeenSet(false),
+    m_issueHasBeenSet(false),
+    m_recordHasBeenSet(false),
+    m_includeRecordInReportHasBeenSet(false)
 {
 }
 
@@ -67,6 +70,30 @@ string ModifyTaskRunStatusRequest::ToJsonString() const
         string key = "Summary";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_summary.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_issueHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Issue";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_issue.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_recordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Record";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_record.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_includeRecordInReportHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IncludeRecordInReport";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_includeRecordInReport, allocator);
     }
 
 
@@ -139,6 +166,54 @@ void ModifyTaskRunStatusRequest::SetSummary(const string& _summary)
 bool ModifyTaskRunStatusRequest::SummaryHasBeenSet() const
 {
     return m_summaryHasBeenSet;
+}
+
+string ModifyTaskRunStatusRequest::GetIssue() const
+{
+    return m_issue;
+}
+
+void ModifyTaskRunStatusRequest::SetIssue(const string& _issue)
+{
+    m_issue = _issue;
+    m_issueHasBeenSet = true;
+}
+
+bool ModifyTaskRunStatusRequest::IssueHasBeenSet() const
+{
+    return m_issueHasBeenSet;
+}
+
+string ModifyTaskRunStatusRequest::GetRecord() const
+{
+    return m_record;
+}
+
+void ModifyTaskRunStatusRequest::SetRecord(const string& _record)
+{
+    m_record = _record;
+    m_recordHasBeenSet = true;
+}
+
+bool ModifyTaskRunStatusRequest::RecordHasBeenSet() const
+{
+    return m_recordHasBeenSet;
+}
+
+int64_t ModifyTaskRunStatusRequest::GetIncludeRecordInReport() const
+{
+    return m_includeRecordInReport;
+}
+
+void ModifyTaskRunStatusRequest::SetIncludeRecordInReport(const int64_t& _includeRecordInReport)
+{
+    m_includeRecordInReport = _includeRecordInReport;
+    m_includeRecordInReportHasBeenSet = true;
+}
+
+bool ModifyTaskRunStatusRequest::IncludeRecordInReportHasBeenSet() const
+{
+    return m_includeRecordInReportHasBeenSet;
 }
 
 

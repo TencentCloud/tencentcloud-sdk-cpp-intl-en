@@ -273,6 +273,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OriginalCardInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetHeadImageBase64() const;
+
+                    /**
+                     * 设置Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _headImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetHeadImageBase64(const std::string& _headImageBase64);
+
+                    /**
+                     * 判断参数 HeadImageBase64 是否已赋值
+                     * @return HeadImageBase64 是否已赋值
+                     * 
+                     */
+                    bool HeadImageBase64HasBeenSet() const;
+
                 private:
 
                     /**
@@ -337,6 +362,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_originalCardInfo;
                     bool m_originalCardInfoHasBeenSet;
+
+                    /**
+                     * Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_headImageBase64;
+                    bool m_headImageBase64HasBeenSet;
 
                 };
             }

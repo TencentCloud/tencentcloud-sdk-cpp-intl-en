@@ -107,27 +107,6 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Initial Grafana password
-                     * @return GrafanaInitPassword Initial Grafana password
-                     * 
-                     */
-                    std::string GetGrafanaInitPassword() const;
-
-                    /**
-                     * 设置Initial Grafana password
-                     * @param _grafanaInitPassword Initial Grafana password
-                     * 
-                     */
-                    void SetGrafanaInitPassword(const std::string& _grafanaInitPassword);
-
-                    /**
-                     * 判断参数 GrafanaInitPassword 是否已赋值
-                     * @return GrafanaInitPassword 是否已赋值
-                     * 
-                     */
-                    bool GrafanaInitPasswordHasBeenSet() const;
-
-                    /**
                      * 获取Whether to enable public network access
                      * @return EnableInternet Whether to enable public network access
                      * 
@@ -147,6 +126,27 @@ namespace TencentCloud
                      * 
                      */
                     bool EnableInternetHasBeenSet() const;
+
+                    /**
+                     * 获取Initial Grafana password
+                     * @return GrafanaInitPassword Initial Grafana password
+                     * 
+                     */
+                    std::string GetGrafanaInitPassword() const;
+
+                    /**
+                     * 设置Initial Grafana password
+                     * @param _grafanaInitPassword Initial Grafana password
+                     * 
+                     */
+                    void SetGrafanaInitPassword(const std::string& _grafanaInitPassword);
+
+                    /**
+                     * 判断参数 GrafanaInitPassword 是否已赋值
+                     * @return GrafanaInitPassword 是否已赋值
+                     * 
+                     */
+                    bool GrafanaInitPasswordHasBeenSet() const;
 
                     /**
                      * 获取Tag
@@ -169,6 +169,27 @@ namespace TencentCloud
                      */
                     bool TagSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AutoVoucher 
+                     * 
+                     */
+                    bool GetAutoVoucher() const;
+
+                    /**
+                     * 设置
+                     * @param _autoVoucher 
+                     * 
+                     */
+                    void SetAutoVoucher(const bool& _autoVoucher);
+
+                    /**
+                     * 判断参数 AutoVoucher 是否已赋值
+                     * @return AutoVoucher 是否已赋值
+                     * 
+                     */
+                    bool AutoVoucherHasBeenSet() const;
+
                 private:
 
                     /**
@@ -190,22 +211,28 @@ namespace TencentCloud
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * Initial Grafana password
-                     */
-                    std::string m_grafanaInitPassword;
-                    bool m_grafanaInitPasswordHasBeenSet;
-
-                    /**
                      * Whether to enable public network access
                      */
                     bool m_enableInternet;
                     bool m_enableInternetHasBeenSet;
 
                     /**
+                     * Initial Grafana password
+                     */
+                    std::string m_grafanaInitPassword;
+                    bool m_grafanaInitPasswordHasBeenSet;
+
+                    /**
                      * Tag
                      */
                     std::vector<PrometheusTag> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_autoVoucher;
+                    bool m_autoVoucherHasBeenSet;
 
                 };
             }

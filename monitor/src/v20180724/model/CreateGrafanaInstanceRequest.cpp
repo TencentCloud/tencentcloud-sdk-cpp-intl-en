@@ -26,9 +26,10 @@ CreateGrafanaInstanceRequest::CreateGrafanaInstanceRequest() :
     m_instanceNameHasBeenSet(false),
     m_vpcIdHasBeenSet(false),
     m_subnetIdsHasBeenSet(false),
-    m_grafanaInitPasswordHasBeenSet(false),
     m_enableInternetHasBeenSet(false),
-    m_tagSpecificationHasBeenSet(false)
+    m_grafanaInitPasswordHasBeenSet(false),
+    m_tagSpecificationHasBeenSet(false),
+    m_autoVoucherHasBeenSet(false)
 {
 }
 
@@ -68,20 +69,20 @@ string CreateGrafanaInstanceRequest::ToJsonString() const
         }
     }
 
-    if (m_grafanaInitPasswordHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "GrafanaInitPassword";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_grafanaInitPassword.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_enableInternetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "EnableInternet";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableInternet, allocator);
+    }
+
+    if (m_grafanaInitPasswordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GrafanaInitPassword";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_grafanaInitPassword.c_str(), allocator).Move(), allocator);
     }
 
     if (m_tagSpecificationHasBeenSet)
@@ -97,6 +98,14 @@ string CreateGrafanaInstanceRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_autoVoucherHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoVoucher";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoVoucher, allocator);
     }
 
 
@@ -155,22 +164,6 @@ bool CreateGrafanaInstanceRequest::SubnetIdsHasBeenSet() const
     return m_subnetIdsHasBeenSet;
 }
 
-string CreateGrafanaInstanceRequest::GetGrafanaInitPassword() const
-{
-    return m_grafanaInitPassword;
-}
-
-void CreateGrafanaInstanceRequest::SetGrafanaInitPassword(const string& _grafanaInitPassword)
-{
-    m_grafanaInitPassword = _grafanaInitPassword;
-    m_grafanaInitPasswordHasBeenSet = true;
-}
-
-bool CreateGrafanaInstanceRequest::GrafanaInitPasswordHasBeenSet() const
-{
-    return m_grafanaInitPasswordHasBeenSet;
-}
-
 bool CreateGrafanaInstanceRequest::GetEnableInternet() const
 {
     return m_enableInternet;
@@ -187,6 +180,22 @@ bool CreateGrafanaInstanceRequest::EnableInternetHasBeenSet() const
     return m_enableInternetHasBeenSet;
 }
 
+string CreateGrafanaInstanceRequest::GetGrafanaInitPassword() const
+{
+    return m_grafanaInitPassword;
+}
+
+void CreateGrafanaInstanceRequest::SetGrafanaInitPassword(const string& _grafanaInitPassword)
+{
+    m_grafanaInitPassword = _grafanaInitPassword;
+    m_grafanaInitPasswordHasBeenSet = true;
+}
+
+bool CreateGrafanaInstanceRequest::GrafanaInitPasswordHasBeenSet() const
+{
+    return m_grafanaInitPasswordHasBeenSet;
+}
+
 vector<PrometheusTag> CreateGrafanaInstanceRequest::GetTagSpecification() const
 {
     return m_tagSpecification;
@@ -201,6 +210,22 @@ void CreateGrafanaInstanceRequest::SetTagSpecification(const vector<PrometheusTa
 bool CreateGrafanaInstanceRequest::TagSpecificationHasBeenSet() const
 {
     return m_tagSpecificationHasBeenSet;
+}
+
+bool CreateGrafanaInstanceRequest::GetAutoVoucher() const
+{
+    return m_autoVoucher;
+}
+
+void CreateGrafanaInstanceRequest::SetAutoVoucher(const bool& _autoVoucher)
+{
+    m_autoVoucher = _autoVoucher;
+    m_autoVoucherHasBeenSet = true;
+}
+
+bool CreateGrafanaInstanceRequest::AutoVoucherHasBeenSet() const
+{
+    return m_autoVoucherHasBeenSet;
 }
 
 

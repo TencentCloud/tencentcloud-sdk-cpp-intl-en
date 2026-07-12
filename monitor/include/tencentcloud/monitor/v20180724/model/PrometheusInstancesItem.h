@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/PrometheusTag.h>
 #include <tencentcloud/monitor/v20180724/model/PrometheusInstanceGrantInfo.h>
+#include <tencentcloud/monitor/v20180724/model/PrometheusRuleKV.h>
 
 
 namespace TencentCloud
@@ -93,12 +94,12 @@ namespace TencentCloud
                     /**
                      * 获取Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
                      * @return InstanceChargeType Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
                      * 
@@ -108,12 +109,12 @@ namespace TencentCloud
                     /**
                      * 设置Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
                      * @param _instanceChargeType Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
                      * 
@@ -926,6 +927,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MigrationTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return InstanceAttributes 
+                     * 
+                     */
+                    std::vector<PrometheusRuleKV> GetInstanceAttributes() const;
+
+                    /**
+                     * 设置
+                     * @param _instanceAttributes 
+                     * 
+                     */
+                    void SetInstanceAttributes(const std::vector<PrometheusRuleKV>& _instanceAttributes);
+
+                    /**
+                     * 判断参数 InstanceAttributes 是否已赋值
+                     * @return InstanceAttributes 是否已赋值
+                     * 
+                     */
+                    bool InstanceAttributesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -943,7 +965,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
                      */
@@ -1169,6 +1191,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_migrationType;
                     bool m_migrationTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<PrometheusRuleKV> m_instanceAttributes;
+                    bool m_instanceAttributesHasBeenSet;
 
                 };
             }

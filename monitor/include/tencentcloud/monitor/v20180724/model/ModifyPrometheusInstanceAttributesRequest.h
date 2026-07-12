@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/monitor/v20180724/model/PrometheusRuleKV.h>
 
 
 namespace TencentCloud
@@ -41,27 +42,6 @@ namespace TencentCloud
                     ~ModifyPrometheusInstanceAttributesRequest() = default;
                     std::string ToJsonString() const;
 
-
-                    /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
-                     * 
-                     */
-                    std::string GetInstanceName() const;
-
-                    /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
-                     * 
-                     */
-                    void SetInstanceName(const std::string& _instanceName);
-
-                    /**
-                     * 判断参数 InstanceName 是否已赋值
-                     * @return InstanceName 是否已赋值
-                     * 
-                     */
-                    bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
@@ -85,15 +65,36 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
-                     * @return DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+                     * 获取Instance name
+                     * @return InstanceName Instance name
+                     * 
+                     */
+                    std::string GetInstanceName() const;
+
+                    /**
+                     * 设置Instance name
+                     * @param _instanceName Instance name
+                     * 
+                     */
+                    void SetInstanceName(const std::string& _instanceName);
+
+                    /**
+                     * 判断参数 InstanceName 是否已赋值
+                     * @return InstanceName 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+                     * @return DataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
                      * 
                      */
                     int64_t GetDataRetentionTime() const;
 
                     /**
-                     * 设置Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
-                     * @param _dataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+                     * 设置Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
+                     * @param _dataRetentionTime Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
                      * 
                      */
                     void SetDataRetentionTime(const int64_t& _dataRetentionTime);
@@ -105,13 +106,28 @@ namespace TencentCloud
                      */
                     bool DataRetentionTimeHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取
+                     * @return InstanceAttributes 
+                     * 
+                     */
+                    std::vector<PrometheusRuleKV> GetInstanceAttributes() const;
 
                     /**
-                     * Instance name
+                     * 设置
+                     * @param _instanceAttributes 
+                     * 
                      */
-                    std::string m_instanceName;
-                    bool m_instanceNameHasBeenSet;
+                    void SetInstanceAttributes(const std::vector<PrometheusRuleKV>& _instanceAttributes);
+
+                    /**
+                     * 判断参数 InstanceAttributes 是否已赋值
+                     * @return InstanceAttributes 是否已赋值
+                     * 
+                     */
+                    bool InstanceAttributesHasBeenSet() const;
+
+                private:
 
                     /**
                      * Instance ID
@@ -120,10 +136,22 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+                     * Instance name
+                     */
+                    std::string m_instanceName;
+                    bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
                      */
                     int64_t m_dataRetentionTime;
                     bool m_dataRetentionTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<PrometheusRuleKV> m_instanceAttributes;
+                    bool m_instanceAttributesHasBeenSet;
 
                 };
             }

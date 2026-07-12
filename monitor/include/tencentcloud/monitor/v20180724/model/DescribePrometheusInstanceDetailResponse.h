@@ -196,11 +196,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Instance billing mode. Valid values:
 
-`2`: Monthly subscription
+`2`: yearly/monthly subscription
 `3`: Pay-as-you-go
                      * @return InstanceChargeType Instance billing mode. Valid values:
 
-`2`: Monthly subscription
+`2`: yearly/monthly subscription
 `3`: Pay-as-you-go
                      * 
                      */
@@ -359,7 +359,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Instance billing mode. Valid values:
 
-`2`: Monthly subscription
+`2`: yearly/monthly subscription
 `3`: Pay-as-you-go
                      */
                     int64_t m_instanceChargeType;

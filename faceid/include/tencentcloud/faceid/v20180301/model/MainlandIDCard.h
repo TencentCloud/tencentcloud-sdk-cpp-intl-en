@@ -229,6 +229,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FormattedAddressHasBeenSet() const;
 
+                    /**
+                     * 获取Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Authority Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetAuthority() const;
+
+                    /**
+                     * 设置Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _authority Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetAuthority(const std::string& _authority);
+
+                    /**
+                     * 判断参数 Authority 是否已赋值
+                     * @return Authority 是否已赋值
+                     * 
+                     */
+                    bool AuthorityHasBeenSet() const;
+
+                    /**
+                     * 获取Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ValidDate Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetValidDate() const;
+
+                    /**
+                     * 设置Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _validDate Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetValidDate(const std::string& _validDate);
+
+                    /**
+                     * 判断参数 ValidDate 是否已赋值
+                     * @return ValidDate 是否已赋值
+                     * 
+                     */
+                    bool ValidDateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -281,6 +331,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_formattedAddress;
                     bool m_formattedAddressHasBeenSet;
+
+                    /**
+                     * Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_authority;
+                    bool m_authorityHasBeenSet;
+
+                    /**
+                     * Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_validDate;
+                    bool m_validDateHasBeenSet;
 
                 };
             }
