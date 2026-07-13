@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
-                     * @return SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * 获取Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+                     * @return SortElement Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
                      * 
                      */
                     std::string GetSortElement() const;
 
                     /**
-                     * 设置Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
-                     * @param _sortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * 设置Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+                     * @param _sortElement Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
                      * 
                      */
                     void SetSortElement(const std::string& _sortElement);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SortElementHasBeenSet() const;
 
                     /**
-                     * 获取Sort order: ASC, DESC
-                     * @return SortType Sort order: ASC, DESC
+                     * 获取Sorting method: ASC, DESC
+                     * @return SortType Sorting method: ASC, DESC
                      * 
                      */
                     std::string GetSortType() const;
 
                     /**
-                     * 设置Sort order: ASC, DESC
-                     * @param _sortType Sort order: ASC, DESC
+                     * 设置Sorting method: ASC, DESC
+                     * @param _sortType Sorting method: ASC, DESC
                      * 
                      */
                     void SetSortType(const std::string& _sortType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SortTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination parameters, started from which data entry
+                     * @return Offset Pagination parameters, started from which data entry
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination parameters, started from which data entry
+                     * @param _offset Pagination parameters, started from which data entry
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Page size.
+                     * @return Limit Page size.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Page size.
+                     * @param _limit Page size.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Connection name fuzzy search
+                     * @return Name Connection name fuzzy search
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Connection name fuzzy search
+                     * @param _name Connection name fuzzy search
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -204,31 +204,31 @@ namespace TencentCloud
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+                     * Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
                      */
                     std::string m_sortElement;
                     bool m_sortElementHasBeenSet;
 
                     /**
-                     * Sort order: ASC, DESC
+                     * Sorting method: ASC, DESC
                      */
                     std::string m_sortType;
                     bool m_sortTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination parameters, started from which data entry
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Page size.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Connection name fuzzy search
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

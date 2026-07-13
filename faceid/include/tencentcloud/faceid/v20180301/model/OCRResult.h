@@ -74,18 +74,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsPassHasBeenSet() const;
 
                     /**
-                     * 获取<p>Base64 of the ID image</p>
+                     * 获取<p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CardImageBase64 <p>Base64 of the ID image</p>
+                     * @return CardImageBase64 <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCardImageBase64() const;
 
                     /**
-                     * 设置<p>Base64 of the ID image</p>
+                     * 设置<p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cardImageBase64 <p>Base64 of the ID image</p>
+                     * @param _cardImageBase64 <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -274,18 +274,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalCardInfoHasBeenSet() const;
 
                     /**
-                     * 获取Base64 of the cropped portrait image extracted from the identity document</p>
+                     * 获取<p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+                     * @return HeadImageBase64 <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHeadImageBase64() const;
 
                     /**
-                     * 设置Base64 of the cropped portrait image extracted from the identity document</p>
+                     * 设置<p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+                     * @param _headImageBase64 <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -298,6 +298,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HeadImageBase64HasBeenSet() const;
 
+                    /**
+                     * 获取<p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CardBackImageBase64 <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetCardBackImageBase64() const;
+
+                    /**
+                     * 设置<p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _cardBackImageBase64 <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetCardBackImageBase64(const std::string& _cardBackImageBase64);
+
+                    /**
+                     * 判断参数 CardBackImageBase64 是否已赋值
+                     * @return CardBackImageBase64 是否已赋值
+                     * 
+                     */
+                    bool CardBackImageBase64HasBeenSet() const;
+
                 private:
 
                     /**
@@ -308,7 +333,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isPassHasBeenSet;
 
                     /**
-                     * <p>Base64 of the ID image</p>
+                     * <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cardImageBase64;
@@ -364,11 +389,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_originalCardInfoHasBeenSet;
 
                     /**
-                     * Base64 of the cropped portrait image extracted from the identity document</p>
+                     * <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_headImageBase64;
                     bool m_headImageBase64HasBeenSet;
+
+                    /**
+                     * <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cardBackImageBase64;
+                    bool m_cardBackImageBase64HasBeenSet;
 
                 };
             }

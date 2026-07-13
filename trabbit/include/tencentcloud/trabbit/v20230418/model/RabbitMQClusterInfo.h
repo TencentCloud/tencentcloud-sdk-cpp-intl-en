@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trabbit/v20230418/model/VpcEndpointInfo.h>
+#include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessTag.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster name.
-                     * @return ClusterName Cluster name.
+                     * 获取<p>Cluster name.</p>
+                     * @return ClusterName <p>Cluster name.</p>
                      * 
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Cluster name.
-                     * @param _clusterName Cluster name.
+                     * 设置<p>Cluster name.</p>
+                     * @param _clusterName <p>Cluster name.</p>
                      * 
                      */
                     void SetClusterName(const std::string& _clusterName);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool ClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取Region information
-                     * @return Region Region information
+                     * 获取<p>Regional information</p>
+                     * @return Region <p>Regional information</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region information
-                     * @param _region Region information
+                     * 设置<p>Regional information</p>
+                     * @param _region <p>Regional information</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time, in milliseconds
-                     * @return CreateTime Creation time, in milliseconds
+                     * 获取<p>Creation time in milliseconds</p>
+                     * @return CreateTime <p>Creation time in milliseconds</p>
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation time, in milliseconds
-                     * @param _createTime Creation time, in milliseconds
+                     * 设置<p>Creation time in milliseconds</p>
+                     * @param _createTime <p>Creation time in milliseconds</p>
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster description remark information
-                     * @return Remark Cluster description remark information
+                     * 获取<p>Cluster description information</p>
+                     * @return Remark <p>Cluster description information</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Cluster description remark information
-                     * @param _remark Cluster description remark information
+                     * 设置<p>Cluster description information</p>
+                     * @param _remark <p>Cluster description information</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取VPC and network information.
-                     * @return Vpcs VPC and network information.
+                     * 获取<p>VPC and network info</p>
+                     * @return Vpcs <p>VPC and network info</p>
                      * 
                      */
                     std::vector<VpcEndpointInfo> GetVpcs() const;
 
                     /**
-                     * 设置VPC and network information.
-                     * @param _vpcs VPC and network information.
+                     * 设置<p>VPC and network info</p>
+                     * @param _vpcs <p>VPC and network info</p>
                      * 
                      */
                     void SetVpcs(const std::vector<VpcEndpointInfo>& _vpcs);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool VpcsHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone information
-                     * @return ZoneIds Availability zone information
+                     * 获取<p>AZ information</p>
+                     * @return ZoneIds <p>AZ information</p>
                      * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
-                     * 设置Availability zone information
-                     * @param _zoneIds Availability zone information
+                     * 设置<p>AZ information</p>
+                     * @param _zoneIds <p>AZ information</p>
                      * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取number of virtual hosts.
-                     * @return VirtualHostNumber number of virtual hosts.
+                     * 获取<p>Number of virtual hosts</p>
+                     * @return VirtualHostNumber <p>Number of virtual hosts</p>
                      * 
                      */
                     int64_t GetVirtualHostNumber() const;
 
                     /**
-                     * 设置number of virtual hosts.
-                     * @param _virtualHostNumber number of virtual hosts.
+                     * 设置<p>Number of virtual hosts</p>
+                     * @param _virtualHostNumber <p>Number of virtual hosts</p>
                      * 
                      */
                     void SetVirtualHostNumber(const int64_t& _virtualHostNumber);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool VirtualHostNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of queues
-                     * @return QueueNumber Number of queues
+                     * 获取<p>Number of queues</p>
+                     * @return QueueNumber <p>Number of queues</p>
                      * 
                      */
                     int64_t GetQueueNumber() const;
 
                     /**
-                     * 设置Number of queues
-                     * @param _queueNumber Number of queues
+                     * 设置<p>Number of queues</p>
+                     * @param _queueNumber <p>Number of queues</p>
                      * 
                      */
                     void SetQueueNumber(const int64_t& _queueNumber);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool QueueNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages produced per second (measurement unit: messages/second).
-                     * @return MessagePublishRate Number of messages produced per second (measurement unit: messages/second).
+                     * 获取<p>Number of messages produced per second Unit: messages/second</p>
+                     * @return MessagePublishRate <p>Number of messages produced per second Unit: messages/second</p>
                      * 
                      */
                     double GetMessagePublishRate() const;
 
                     /**
-                     * 设置Number of messages produced per second (measurement unit: messages/second).
-                     * @param _messagePublishRate Number of messages produced per second (measurement unit: messages/second).
+                     * 设置<p>Number of messages produced per second Unit: messages/second</p>
+                     * @param _messagePublishRate <p>Number of messages produced per second Unit: messages/second</p>
                      * 
                      */
                     void SetMessagePublishRate(const double& _messagePublishRate);
@@ -258,15 +259,15 @@ namespace TencentCloud
                     bool MessagePublishRateHasBeenSet() const;
 
                     /**
-                     * 获取Number of accumulated messages. valid values: pieces.
-                     * @return MessageStackNumber Number of accumulated messages. valid values: pieces.
+                     * 获取<p>Number of accumulated messages Unit: unit</p>
+                     * @return MessageStackNumber <p>Number of accumulated messages Unit: unit</p>
                      * 
                      */
                     int64_t GetMessageStackNumber() const;
 
                     /**
-                     * 设置Number of accumulated messages. valid values: pieces.
-                     * @param _messageStackNumber Number of accumulated messages. valid values: pieces.
+                     * 设置<p>Number of accumulated messages Unit: unit</p>
+                     * @param _messageStackNumber <p>Number of accumulated messages Unit: unit</p>
                      * 
                      */
                     void SetMessageStackNumber(const int64_t& _messageStackNumber);
@@ -279,15 +280,15 @@ namespace TencentCloud
                     bool MessageStackNumberHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time
-                     * @return ExpireTime Expiration time
+                     * 获取<p>Expiration time</p>
+                     * @return ExpireTime <p>Expiration time</p>
                      * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time
-                     * @param _expireTime Expiration time
+                     * 设置<p>Expiration time</p>
+                     * @param _expireTime <p>Expiration time</p>
                      * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
@@ -300,15 +301,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取number of channels.
-                     * @return ChannelNumber number of channels.
+                     * 获取<p>Number of channels</p>
+                     * @return ChannelNumber <p>Number of channels</p>
                      * 
                      */
                     int64_t GetChannelNumber() const;
 
                     /**
-                     * 设置number of channels.
-                     * @param _channelNumber number of channels.
+                     * 设置<p>Number of channels</p>
+                     * @param _channelNumber <p>Number of channels</p>
                      * 
                      */
                     void SetChannelNumber(const int64_t& _channelNumber);
@@ -321,15 +322,15 @@ namespace TencentCloud
                     bool ChannelNumberHasBeenSet() const;
 
                     /**
-                     * 获取number of connections.
-                     * @return ConnectionNumber number of connections.
+                     * 获取<p>Number of connections</p>
+                     * @return ConnectionNumber <p>Number of connections</p>
                      * 
                      */
                     int64_t GetConnectionNumber() const;
 
                     /**
-                     * 设置number of connections.
-                     * @param _connectionNumber number of connections.
+                     * 设置<p>Number of connections</p>
+                     * @param _connectionNumber <p>Number of connections</p>
                      * 
                      */
                     void SetConnectionNumber(const int64_t& _connectionNumber);
@@ -342,15 +343,15 @@ namespace TencentCloud
                     bool ConnectionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of consumers.
-                     * @return ConsumerNumber Number of consumers.
+                     * 获取<p>Number of consumers</p>
+                     * @return ConsumerNumber <p>Number of consumers</p>
                      * 
                      */
                     int64_t GetConsumerNumber() const;
 
                     /**
-                     * 设置Number of consumers.
-                     * @param _consumerNumber Number of consumers.
+                     * 设置<p>Number of consumers</p>
+                     * @param _consumerNumber <p>Number of consumers</p>
                      * 
                      */
                     void SetConsumerNumber(const int64_t& _consumerNumber);
@@ -363,15 +364,15 @@ namespace TencentCloud
                     bool ConsumerNumberHasBeenSet() const;
 
                     /**
-                     * 获取Number of Exchanges.
-                     * @return ExchangeNumber Number of Exchanges.
+                     * 获取<p>Number of Exchanges</p>
+                     * @return ExchangeNumber <p>Number of Exchanges</p>
                      * 
                      */
                     int64_t GetExchangeNumber() const;
 
                     /**
-                     * 设置Number of Exchanges.
-                     * @param _exchangeNumber Number of Exchanges.
+                     * 设置<p>Number of Exchanges</p>
+                     * @param _exchangeNumber <p>Number of Exchanges</p>
                      * 
                      */
                     void SetExchangeNumber(const int64_t& _exchangeNumber);
@@ -384,15 +385,15 @@ namespace TencentCloud
                     bool ExchangeNumberHasBeenSet() const;
 
                     /**
-                     * 获取Cluster exception information.
-                     * @return ExceptionInformation Cluster exception information.
+                     * 获取<p>Cluster exception information</p>
+                     * @return ExceptionInformation <p>Cluster exception information</p>
                      * 
                      */
                     std::string GetExceptionInformation() const;
 
                     /**
-                     * 设置Cluster exception information.
-                     * @param _exceptionInformation Cluster exception information.
+                     * 设置<p>Cluster exception information</p>
+                     * @param _exceptionInformation <p>Cluster exception information</p>
                      * 
                      */
                     void SetExceptionInformation(const std::string& _exceptionInformation);
@@ -405,15 +406,15 @@ namespace TencentCloud
                     bool ExceptionInformationHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
-                     * @return ClusterStatus Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
+                     * 获取<p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+                     * @return ClusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
                      * 
                      */
                     int64_t GetClusterStatus() const;
 
                     /**
-                     * 设置Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
-                     * @param _clusterStatus Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
+                     * 设置<p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+                     * @param _clusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
                      * 
                      */
                     void SetClusterStatus(const int64_t& _clusterStatus);
@@ -426,15 +427,15 @@ namespace TencentCloud
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
-                     * @return AutoRenewFlag Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
+                     * 获取<p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
+                     * @return AutoRenewFlag <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
-                     * @param _autoRenewFlag Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
+                     * 设置<p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
+                     * @param _autoRenewFlag <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -447,15 +448,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
-                     * @return MirrorQueuePolicyFlag Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
+                     * 获取<p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
+                     * @return MirrorQueuePolicyFlag <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
                      * 
                      */
                     int64_t GetMirrorQueuePolicyFlag() const;
 
                     /**
-                     * 设置Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
-                     * @param _mirrorQueuePolicyFlag Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
+                     * 设置<p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
+                     * @param _mirrorQueuePolicyFlag <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
                      * 
                      */
                     void SetMirrorQueuePolicyFlag(const int64_t& _mirrorQueuePolicyFlag);
@@ -468,15 +469,15 @@ namespace TencentCloud
                     bool MirrorQueuePolicyFlagHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages consumed per second (measurement unit: messages/second).
-                     * @return MessageConsumeRate Number of messages consumed per second (measurement unit: messages/second).
+                     * 获取<p>Number of messages consumed per second Unit: messages/second</p>
+                     * @return MessageConsumeRate <p>Number of messages consumed per second Unit: messages/second</p>
                      * 
                      */
                     double GetMessageConsumeRate() const;
 
                     /**
-                     * 设置Number of messages consumed per second (measurement unit: messages/second).
-                     * @param _messageConsumeRate Number of messages consumed per second (measurement unit: messages/second).
+                     * 设置<p>Number of messages consumed per second Unit: messages/second</p>
+                     * @param _messageConsumeRate <p>Number of messages consumed per second Unit: messages/second</p>
                      * 
                      */
                     void SetMessageConsumeRate(const double& _messageConsumeRate);
@@ -489,15 +490,15 @@ namespace TencentCloud
                     bool MessageConsumeRateHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster version information.
-                     * @return ClusterVersion Specifies the cluster version information.
+                     * 获取<p>Cluster version information</p>
+                     * @return ClusterVersion <p>Cluster version information</p>
                      * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
-                     * 设置Specifies the cluster version information.
-                     * @param _clusterVersion Specifies the cluster version information.
+                     * 设置<p>Cluster version information</p>
+                     * @param _clusterVersion <p>Cluster version information</p>
                      * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
@@ -510,15 +511,15 @@ namespace TencentCloud
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. valid values: 0 (postpaid), 1 (prepaid).
-                     * @return PayMode Billing mode. valid values: 0 (postpaid), 1 (prepaid).
+                     * 获取<p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
+                     * @return PayMode <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
                      * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. valid values: 0 (postpaid), 1 (prepaid).
-                     * @param _payMode Billing mode. valid values: 0 (postpaid), 1 (prepaid).
+                     * 设置<p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
+                     * @param _payMode <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
                      * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
@@ -531,15 +532,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cluster type.
-                     * @return InstanceType Specifies the cluster type.
+                     * 获取<p>Cluster type.</p>
+                     * @return InstanceType <p>Cluster type.</p>
                      * 
                      */
                     uint64_t GetInstanceType() const;
 
                     /**
-                     * 设置Specifies the cluster type.
-                     * @param _instanceType Specifies the cluster type.
+                     * 设置<p>Cluster type.</p>
+                     * @param _instanceType <p>Cluster type.</p>
                      * 
                      */
                     void SetInstanceType(const uint64_t& _instanceType);
@@ -552,15 +553,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the message retention time, in hours.
-                     * @return MessageRetainTime Specifies the message retention time, in hours.
+                     * 获取<p>Message retention period Unit: hour</p>
+                     * @return MessageRetainTime <p>Message retention period Unit: hour</p>
                      * 
                      */
                     uint64_t GetMessageRetainTime() const;
 
                     /**
-                     * 设置Specifies the message retention time, in hours.
-                     * @param _messageRetainTime Specifies the message retention time, in hours.
+                     * 设置<p>Message retention period Unit: hour</p>
+                     * @param _messageRetainTime <p>Message retention period Unit: hour</p>
                      * 
                      */
                     void SetMessageRetainTime(const uint64_t& _messageRetainTime);
@@ -572,157 +573,346 @@ namespace TencentCloud
                      */
                     bool MessageRetainTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Traffic ratio of sending messages</p>
+                     * @return SendReceiveRatio <p>Traffic ratio of sending messages</p>
+                     * 
+                     */
+                    double GetSendReceiveRatio() const;
+
+                    /**
+                     * 设置<p>Traffic ratio of sending messages</p>
+                     * @param _sendReceiveRatio <p>Traffic ratio of sending messages</p>
+                     * 
+                     */
+                    void SetSendReceiveRatio(const double& _sendReceiveRatio);
+
+                    /**
+                     * 判断参数 SendReceiveRatio 是否已赋值
+                     * @return SendReceiveRatio 是否已赋值
+                     * 
+                     */
+                    bool SendReceiveRatioHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Message trace retention time in hours</p>
+                     * @return TraceTime <p>Message trace retention time in hours</p>
+                     * 
+                     */
+                    uint64_t GetTraceTime() const;
+
+                    /**
+                     * 设置<p>Message trace retention time in hours</p>
+                     * @param _traceTime <p>Message trace retention time in hours</p>
+                     * 
+                     */
+                    void SetTraceTime(const uint64_t& _traceTime);
+
+                    /**
+                     * 判断参数 TraceTime 是否已赋值
+                     * @return TraceTime 是否已赋值
+                     * 
+                     */
+                    bool TraceTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance tag list</p>
+                     * @return Tags <p>Instance tag list</p>
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessTag> GetTags() const;
+
+                    /**
+                     * 设置<p>Instance tag list</p>
+                     * @param _tags <p>Instance tag list</p>
+                     * 
+                     */
+                    void SetTags(const std::vector<RabbitMQServerlessTag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Elastic scaling enabled tps</p>
+                     * @return ElasticTpsFlag <p>Elastic scaling enabled tps</p>
+                     * 
+                     */
+                    bool GetElasticTpsFlag() const;
+
+                    /**
+                     * 设置<p>Elastic scaling enabled tps</p>
+                     * @param _elasticTpsFlag <p>Elastic scaling enabled tps</p>
+                     * 
+                     */
+                    void SetElasticTpsFlag(const bool& _elasticTpsFlag);
+
+                    /**
+                     * 判断参数 ElasticTpsFlag 是否已赋值
+                     * @return ElasticTpsFlag 是否已赋值
+                     * 
+                     */
+                    bool ElasticTpsFlagHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Elastic tps multiple, default is 1x</p>
+                     * @return ElasticTpsRatio <p>Elastic tps multiple, default is 1x</p>
+                     * 
+                     */
+                    double GetElasticTpsRatio() const;
+
+                    /**
+                     * 设置<p>Elastic tps multiple, default is 1x</p>
+                     * @param _elasticTpsRatio <p>Elastic tps multiple, default is 1x</p>
+                     * 
+                     */
+                    void SetElasticTpsRatio(const double& _elasticTpsRatio);
+
+                    /**
+                     * 判断参数 ElasticTpsRatio 是否已赋值
+                     * @return ElasticTpsRatio 是否已赋值
+                     * 
+                     */
+                    bool ElasticTpsRatioHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Maximum retry count</p>
+                     * @return MaxRedeliverCount <p>Maximum retry count</p>
+                     * 
+                     */
+                    uint64_t GetMaxRedeliverCount() const;
+
+                    /**
+                     * 设置<p>Maximum retry count</p>
+                     * @param _maxRedeliverCount <p>Maximum retry count</p>
+                     * 
+                     */
+                    void SetMaxRedeliverCount(const uint64_t& _maxRedeliverCount);
+
+                    /**
+                     * 判断参数 MaxRedeliverCount 是否已赋值
+                     * @return MaxRedeliverCount 是否已赋值
+                     * 
+                     */
+                    bool MaxRedeliverCountHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Consumption timeout period Unit: min</p>
+                     * @return ConsumerTimeout <p>Consumption timeout period Unit: min</p>
+                     * 
+                     */
+                    uint64_t GetConsumerTimeout() const;
+
+                    /**
+                     * 设置<p>Consumption timeout period Unit: min</p>
+                     * @param _consumerTimeout <p>Consumption timeout period Unit: min</p>
+                     * 
+                     */
+                    void SetConsumerTimeout(const uint64_t& _consumerTimeout);
+
+                    /**
+                     * 判断参数 ConsumerTimeout 是否已赋值
+                     * @return ConsumerTimeout 是否已赋值
+                     * 
+                     */
+                    bool ConsumerTimeoutHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Cluster name.
+                     * <p>Cluster name.</p>
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
-                     * Region information
+                     * <p>Regional information</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Creation time, in milliseconds
+                     * <p>Creation time in milliseconds</p>
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Cluster description remark information
+                     * <p>Cluster description information</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * VPC and network information.
+                     * <p>VPC and network info</p>
                      */
                     std::vector<VpcEndpointInfo> m_vpcs;
                     bool m_vpcsHasBeenSet;
 
                     /**
-                     * Availability zone information
+                     * <p>AZ information</p>
                      */
                     std::vector<int64_t> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * number of virtual hosts.
+                     * <p>Number of virtual hosts</p>
                      */
                     int64_t m_virtualHostNumber;
                     bool m_virtualHostNumberHasBeenSet;
 
                     /**
-                     * Number of queues
+                     * <p>Number of queues</p>
                      */
                     int64_t m_queueNumber;
                     bool m_queueNumberHasBeenSet;
 
                     /**
-                     * Number of messages produced per second (measurement unit: messages/second).
+                     * <p>Number of messages produced per second Unit: messages/second</p>
                      */
                     double m_messagePublishRate;
                     bool m_messagePublishRateHasBeenSet;
 
                     /**
-                     * Number of accumulated messages. valid values: pieces.
+                     * <p>Number of accumulated messages Unit: unit</p>
                      */
                     int64_t m_messageStackNumber;
                     bool m_messageStackNumberHasBeenSet;
 
                     /**
-                     * Expiration time
+                     * <p>Expiration time</p>
                      */
                     int64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * number of channels.
+                     * <p>Number of channels</p>
                      */
                     int64_t m_channelNumber;
                     bool m_channelNumberHasBeenSet;
 
                     /**
-                     * number of connections.
+                     * <p>Number of connections</p>
                      */
                     int64_t m_connectionNumber;
                     bool m_connectionNumberHasBeenSet;
 
                     /**
-                     * Number of consumers.
+                     * <p>Number of consumers</p>
                      */
                     int64_t m_consumerNumber;
                     bool m_consumerNumberHasBeenSet;
 
                     /**
-                     * Number of Exchanges.
+                     * <p>Number of Exchanges</p>
                      */
                     int64_t m_exchangeNumber;
                     bool m_exchangeNumberHasBeenSet;
 
                     /**
-                     * Cluster exception information.
+                     * <p>Cluster exception information</p>
                      */
                     std::string m_exceptionInformation;
                     bool m_exceptionInformationHasBeenSet;
 
                     /**
-                     * Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
+                     * <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
                      */
                     int64_t m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
 
                     /**
-                     * Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
+                     * <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
+                     * <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
                      */
                     int64_t m_mirrorQueuePolicyFlag;
                     bool m_mirrorQueuePolicyFlagHasBeenSet;
 
                     /**
-                     * Number of messages consumed per second (measurement unit: messages/second).
+                     * <p>Number of messages consumed per second Unit: messages/second</p>
                      */
                     double m_messageConsumeRate;
                     bool m_messageConsumeRateHasBeenSet;
 
                     /**
-                     * Specifies the cluster version information.
+                     * <p>Cluster version information</p>
                      */
                     std::string m_clusterVersion;
                     bool m_clusterVersionHasBeenSet;
 
                     /**
-                     * Billing mode. valid values: 0 (postpaid), 1 (prepaid).
+                     * <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Specifies the cluster type.
+                     * <p>Cluster type.</p>
                      */
                     uint64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Specifies the message retention time, in hours.
+                     * <p>Message retention period Unit: hour</p>
                      */
                     uint64_t m_messageRetainTime;
                     bool m_messageRetainTimeHasBeenSet;
+
+                    /**
+                     * <p>Traffic ratio of sending messages</p>
+                     */
+                    double m_sendReceiveRatio;
+                    bool m_sendReceiveRatioHasBeenSet;
+
+                    /**
+                     * <p>Message trace retention time in hours</p>
+                     */
+                    uint64_t m_traceTime;
+                    bool m_traceTimeHasBeenSet;
+
+                    /**
+                     * <p>Instance tag list</p>
+                     */
+                    std::vector<RabbitMQServerlessTag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * <p>Elastic scaling enabled tps</p>
+                     */
+                    bool m_elasticTpsFlag;
+                    bool m_elasticTpsFlagHasBeenSet;
+
+                    /**
+                     * <p>Elastic tps multiple, default is 1x</p>
+                     */
+                    double m_elasticTpsRatio;
+                    bool m_elasticTpsRatioHasBeenSet;
+
+                    /**
+                     * <p>Maximum retry count</p>
+                     */
+                    uint64_t m_maxRedeliverCount;
+                    bool m_maxRedeliverCountHasBeenSet;
+
+                    /**
+                     * <p>Consumption timeout period Unit: min</p>
+                     */
+                    uint64_t m_consumerTimeout;
+                    bool m_consumerTimeoutHasBeenSet;
 
                 };
             }

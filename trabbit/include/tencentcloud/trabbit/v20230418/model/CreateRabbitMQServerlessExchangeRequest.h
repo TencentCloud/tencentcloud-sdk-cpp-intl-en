@@ -231,6 +231,27 @@ namespace TencentCloud
                      */
                     bool AlternateExchangeHasBeenSet() const;
 
+                    /**
+                     * 获取exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+                     * @return DelayedExchangeType exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+                     * 
+                     */
+                    std::string GetDelayedExchangeType() const;
+
+                    /**
+                     * 设置exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+                     * @param _delayedExchangeType exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+                     * 
+                     */
+                    void SetDelayedExchangeType(const std::string& _delayedExchangeType);
+
+                    /**
+                     * 判断参数 DelayedExchangeType 是否已赋值
+                     * @return DelayedExchangeType 是否已赋值
+                     * 
+                     */
+                    bool DelayedExchangeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -286,6 +307,12 @@ namespace TencentCloud
                      */
                     std::string m_alternateExchange;
                     bool m_alternateExchangeHasBeenSet;
+
+                    /**
+                     * exchange type behind delay type, supports "fanout", "direct", "topic", "headers".
+                     */
+                    std::string m_delayedExchangeType;
+                    bool m_delayedExchangeTypeHasBeenSet;
 
                 };
             }

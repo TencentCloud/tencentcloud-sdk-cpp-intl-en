@@ -190,6 +190,56 @@ BillingClient::CreateAllocationUnitOutcomeCallable BillingClient::CreateAllocati
     return prom->get_future();
 }
 
+BillingClient::CreateBudgetOutcome BillingClient::CreateBudget(const CreateBudgetRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateBudget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateBudgetResponse rsp = CreateBudgetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateBudgetOutcome(rsp);
+        else
+            return CreateBudgetOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateBudgetOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::CreateBudgetAsync(const CreateBudgetRequest& request, const CreateBudgetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateBudgetRequest&;
+    using Resp = CreateBudgetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateBudget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::CreateBudgetOutcomeCallable BillingClient::CreateBudgetCallable(const CreateBudgetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateBudgetOutcome>>();
+    CreateBudgetAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const CreateBudgetRequest&,
+        CreateBudgetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::CreateGatherRuleOutcome BillingClient::CreateGatherRule(const CreateGatherRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateGatherRule");
@@ -432,6 +482,56 @@ BillingClient::DeleteAllocationUnitOutcomeCallable BillingClient::DeleteAllocati
         const BillingClient*,
         const DeleteAllocationUnitRequest&,
         DeleteAllocationUnitOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DeleteBudgetOutcome BillingClient::DeleteBudget(const DeleteBudgetRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBudget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBudgetResponse rsp = DeleteBudgetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBudgetOutcome(rsp);
+        else
+            return DeleteBudgetOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBudgetOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DeleteBudgetAsync(const DeleteBudgetRequest& request, const DeleteBudgetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteBudgetRequest&;
+    using Resp = DeleteBudgetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteBudget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DeleteBudgetOutcomeCallable BillingClient::DeleteBudgetCallable(const DeleteBudgetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteBudgetOutcome>>();
+    DeleteBudgetAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DeleteBudgetRequest&,
+        DeleteBudgetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1840,6 +1940,156 @@ BillingClient::DescribeBillSummaryForOrganizationOutcomeCallable BillingClient::
     return prom->get_future();
 }
 
+BillingClient::DescribeBudgetOutcome BillingClient::DescribeBudget(const DescribeBudgetRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBudget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBudgetResponse rsp = DescribeBudgetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBudgetOutcome(rsp);
+        else
+            return DescribeBudgetOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBudgetOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBudgetAsync(const DescribeBudgetRequest& request, const DescribeBudgetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBudgetRequest&;
+    using Resp = DescribeBudgetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBudget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeBudgetOutcomeCallable BillingClient::DescribeBudgetCallable(const DescribeBudgetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBudgetOutcome>>();
+    DescribeBudgetAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeBudgetRequest&,
+        DescribeBudgetOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeBudgetOperationLogOutcome BillingClient::DescribeBudgetOperationLog(const DescribeBudgetOperationLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBudgetOperationLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBudgetOperationLogResponse rsp = DescribeBudgetOperationLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBudgetOperationLogOutcome(rsp);
+        else
+            return DescribeBudgetOperationLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBudgetOperationLogOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBudgetOperationLogAsync(const DescribeBudgetOperationLogRequest& request, const DescribeBudgetOperationLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBudgetOperationLogRequest&;
+    using Resp = DescribeBudgetOperationLogResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBudgetOperationLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeBudgetOperationLogOutcomeCallable BillingClient::DescribeBudgetOperationLogCallable(const DescribeBudgetOperationLogRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBudgetOperationLogOutcome>>();
+    DescribeBudgetOperationLogAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeBudgetOperationLogRequest&,
+        DescribeBudgetOperationLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::DescribeBudgetRemindRecordListOutcome BillingClient::DescribeBudgetRemindRecordList(const DescribeBudgetRemindRecordListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBudgetRemindRecordList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBudgetRemindRecordListResponse rsp = DescribeBudgetRemindRecordListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBudgetRemindRecordListOutcome(rsp);
+        else
+            return DescribeBudgetRemindRecordListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBudgetRemindRecordListOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeBudgetRemindRecordListAsync(const DescribeBudgetRemindRecordListRequest& request, const DescribeBudgetRemindRecordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBudgetRemindRecordListRequest&;
+    using Resp = DescribeBudgetRemindRecordListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBudgetRemindRecordList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::DescribeBudgetRemindRecordListOutcomeCallable BillingClient::DescribeBudgetRemindRecordListCallable(const DescribeBudgetRemindRecordListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBudgetRemindRecordListOutcome>>();
+    DescribeBudgetRemindRecordListAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const DescribeBudgetRemindRecordListRequest&,
+        DescribeBudgetRemindRecordListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 BillingClient::DescribeCPQBillingMappingOutcome BillingClient::DescribeCPQBillingMapping(const DescribeCPQBillingMappingRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCPQBillingMapping");
@@ -2732,6 +2982,56 @@ BillingClient::ModifyAllocationUnitOutcomeCallable BillingClient::ModifyAllocati
         const BillingClient*,
         const ModifyAllocationUnitRequest&,
         ModifyAllocationUnitOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+BillingClient::ModifyBudgetOutcome BillingClient::ModifyBudget(const ModifyBudgetRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyBudget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyBudgetResponse rsp = ModifyBudgetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyBudgetOutcome(rsp);
+        else
+            return ModifyBudgetOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyBudgetOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::ModifyBudgetAsync(const ModifyBudgetRequest& request, const ModifyBudgetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyBudgetRequest&;
+    using Resp = ModifyBudgetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyBudget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+BillingClient::ModifyBudgetOutcomeCallable BillingClient::ModifyBudgetCallable(const ModifyBudgetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyBudgetOutcome>>();
+    ModifyBudgetAsync(
+    request,
+    [prom](
+        const BillingClient*,
+        const ModifyBudgetRequest&,
+        ModifyBudgetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

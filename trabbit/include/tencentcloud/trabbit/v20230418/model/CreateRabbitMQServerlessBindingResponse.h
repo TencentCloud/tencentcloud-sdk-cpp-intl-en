@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queue name.
-                     * @return InstanceId Queue name.
+                     * 获取<p>Queue name</p>
+                     * @return InstanceId <p>Queue name</p>
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取vhost parameter.
-                     * @return VirtualHost vhost parameter.
+                     * 获取<p>vhost parameter</p>
+                     * @return VirtualHost <p>vhost parameter</p>
                      * 
                      */
                     std::string GetVirtualHost() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取binding Id.
-                     * @return BindingId binding Id.
+                     * 获取<p>Routing relationship Id</p>
+                     * @return BindingId <p>Routing relationship Id</p>
                      * 
                      */
                     int64_t GetBindingId() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queue name.
+                     * <p>Queue name</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * vhost parameter.
+                     * <p>vhost parameter</p>
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * binding Id.
+                     * <p>Routing relationship Id</p>
                      */
                     int64_t m_bindingId;
                     bool m_bindingIdHasBeenSet;

@@ -26,7 +26,10 @@ ModifyRabbitMQServerlessInstanceRequest::ModifyRabbitMQServerlessInstanceRequest
     m_instanceIdHasBeenSet(false),
     m_clusterNameHasBeenSet(false),
     m_remarkHasBeenSet(false),
-    m_traceFlagHasBeenSet(false)
+    m_traceFlagHasBeenSet(false),
+    m_sendReceiveRatioHasBeenSet(false),
+    m_deleteAllTagsHasBeenSet(false),
+    m_instanceTagsHasBeenSet(false)
 {
 }
 
@@ -67,6 +70,37 @@ string ModifyRabbitMQServerlessInstanceRequest::ToJsonString() const
         string key = "TraceFlag";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_traceFlag, allocator);
+    }
+
+    if (m_sendReceiveRatioHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SendReceiveRatio";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_sendReceiveRatio, allocator);
+    }
+
+    if (m_deleteAllTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteAllTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteAllTags, allocator);
+    }
+
+    if (m_instanceTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceTags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceTags.begin(); itr != m_instanceTags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -139,6 +173,54 @@ void ModifyRabbitMQServerlessInstanceRequest::SetTraceFlag(const bool& _traceFla
 bool ModifyRabbitMQServerlessInstanceRequest::TraceFlagHasBeenSet() const
 {
     return m_traceFlagHasBeenSet;
+}
+
+double ModifyRabbitMQServerlessInstanceRequest::GetSendReceiveRatio() const
+{
+    return m_sendReceiveRatio;
+}
+
+void ModifyRabbitMQServerlessInstanceRequest::SetSendReceiveRatio(const double& _sendReceiveRatio)
+{
+    m_sendReceiveRatio = _sendReceiveRatio;
+    m_sendReceiveRatioHasBeenSet = true;
+}
+
+bool ModifyRabbitMQServerlessInstanceRequest::SendReceiveRatioHasBeenSet() const
+{
+    return m_sendReceiveRatioHasBeenSet;
+}
+
+bool ModifyRabbitMQServerlessInstanceRequest::GetDeleteAllTags() const
+{
+    return m_deleteAllTags;
+}
+
+void ModifyRabbitMQServerlessInstanceRequest::SetDeleteAllTags(const bool& _deleteAllTags)
+{
+    m_deleteAllTags = _deleteAllTags;
+    m_deleteAllTagsHasBeenSet = true;
+}
+
+bool ModifyRabbitMQServerlessInstanceRequest::DeleteAllTagsHasBeenSet() const
+{
+    return m_deleteAllTagsHasBeenSet;
+}
+
+vector<RabbitMQServerlessTag> ModifyRabbitMQServerlessInstanceRequest::GetInstanceTags() const
+{
+    return m_instanceTags;
+}
+
+void ModifyRabbitMQServerlessInstanceRequest::SetInstanceTags(const vector<RabbitMQServerlessTag>& _instanceTags)
+{
+    m_instanceTags = _instanceTags;
+    m_instanceTagsHasBeenSet = true;
+}
+
+bool ModifyRabbitMQServerlessInstanceRequest::InstanceTagsHasBeenSet() const
+{
+    return m_instanceTagsHasBeenSet;
 }
 
 

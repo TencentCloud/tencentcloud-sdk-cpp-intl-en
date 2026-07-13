@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance Id</p>
+                     * @return InstanceId <p>Instance Id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance Id</p>
+                     * @param _instanceId <p>Instance Id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Vhost parameter.
-                     * @return VirtualHost Vhost parameter.
+                     * 获取<p>Vhost parameter</p>
+                     * @return VirtualHost <p>Vhost parameter</p>
                      * 
                      */
                     std::string GetVirtualHost() const;
 
                     /**
-                     * 设置Vhost parameter.
-                     * @param _virtualHost Vhost parameter.
+                     * 设置<p>Vhost parameter</p>
+                     * @param _virtualHost <p>Vhost parameter</p>
                      * 
                      */
                     void SetVirtualHost(const std::string& _virtualHost);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset
-                     * @return Offset Pagination offset
+                     * 获取<p>Pagination offset.</p>
+                     * @return Offset <p>Pagination offset.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset
-                     * @param _offset Pagination offset
+                     * 设置<p>Pagination offset.</p>
+                     * @param _offset <p>Pagination offset.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination limit
-                     * @return Limit Pagination limit
+                     * 获取<p>Pagination limit.</p>
+                     * @return Limit <p>Pagination limit.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination limit
-                     * @param _limit Pagination limit
+                     * 设置<p>Pagination limit.</p>
+                     * @param _limit <p>Pagination limit.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Search keywords
-                     * @return SearchWord Search keywords
+                     * 获取<p>Search keyword</p>
+                     * @return SearchWord <p>Search keyword</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Search keywords
-                     * @param _searchWord Search keywords
+                     * 设置<p>Search keyword</p>
+                     * @param _searchWord <p>Search keyword</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
-                     * @return QueueType Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+                     * 获取<p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+                     * @return QueueType <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
                      * 
                      */
                     std::string GetQueueType() const;
 
                     /**
-                     * 设置Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
-                     * @param _queueType Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+                     * 设置<p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+                     * @param _queueType <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
                      * 
                      */
                     void SetQueueType(const std::string& _queueType);
@@ -169,35 +169,15 @@ namespace TencentCloud
                     bool QueueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
-                     * @return SortElement Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+                     * 获取<p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+                     * @return SortElement <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
                      * 
                      */
                     std::string GetSortElement() const;
 
                     /**
-                     * 设置Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
-                     * @param _sortElement Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+                     * 设置<p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+                     * @param _sortElement <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
                      * 
                      */
                     void SetSortElement(const std::string& _sortElement);
@@ -210,15 +190,15 @@ MessageRateOut specifies the consumption rate.
                     bool SortElementHasBeenSet() const;
 
                     /**
-                     * 获取Sort order. valid values: ascend or descend.
-                     * @return SortOrder Sort order. valid values: ascend or descend.
+                     * 获取<p>Sort order, asc or desc</p>
+                     * @return SortOrder <p>Sort order, asc or desc</p>
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置Sort order. valid values: ascend or descend.
-                     * @param _sortOrder Sort order. valid values: ascend or descend.
+                     * 设置<p>Sort order, asc or desc</p>
+                     * @param _sortOrder <p>Sort order, asc or desc</p>
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -233,54 +213,49 @@ MessageRateOut specifies the consumption rate.
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance Id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Vhost parameter.
+                     * <p>Vhost parameter</p>
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Pagination offset
+                     * <p>Pagination offset.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination limit
+                     * <p>Pagination limit.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Search keywords
+                     * <p>Search keyword</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+                     * <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
                      */
                     std::string m_queueType;
                     bool m_queueTypeHasBeenSet;
 
                     /**
-                     * Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+                     * <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
                      */
                     std::string m_sortElement;
                     bool m_sortElementHasBeenSet;
 
                     /**
-                     * Sort order. valid values: ascend or descend.
+                     * <p>Sort order, asc or desc</p>
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;

@@ -88,6 +88,153 @@ namespace TencentCloud
                      */
                     bool ConsumerTagHasBeenSet() const;
 
+                    /**
+                     * 获取Consume target queue
+                     * @return QueueName Consume target queue
+                     * 
+                     */
+                    std::string GetQueueName() const;
+
+                    /**
+                     * 设置Consume target queue
+                     * @param _queueName Consume target queue
+                     * 
+                     */
+                    void SetQueueName(const std::string& _queueName);
+
+                    /**
+                     * 判断参数 QueueName 是否已赋值
+                     * @return QueueName 是否已赋值
+                     * 
+                     */
+                    bool QueueNameHasBeenSet() const;
+
+                    /**
+                     * 获取Whether required for the consumer to manually ack
+                     * @return AckRequired Whether required for the consumer to manually ack
+                     * 
+                     */
+                    bool GetAckRequired() const;
+
+                    /**
+                     * 设置Whether required for the consumer to manually ack
+                     * @param _ackRequired Whether required for the consumer to manually ack
+                     * 
+                     */
+                    void SetAckRequired(const bool& _ackRequired);
+
+                    /**
+                     * 判断参数 AckRequired 是否已赋值
+                     * @return AckRequired 是否已赋值
+                     * 
+                     */
+                    bool AckRequiredHasBeenSet() const;
+
+                    /**
+                     * 获取Consumer qos value
+                     * @return PrefetchCount Consumer qos value
+                     * 
+                     */
+                    uint64_t GetPrefetchCount() const;
+
+                    /**
+                     * 设置Consumer qos value
+                     * @param _prefetchCount Consumer qos value
+                     * 
+                     */
+                    void SetPrefetchCount(const uint64_t& _prefetchCount);
+
+                    /**
+                     * 判断参数 PrefetchCount 是否已赋值
+                     * @return PrefetchCount 是否已赋值
+                     * 
+                     */
+                    bool PrefetchCountHasBeenSet() const;
+
+                    /**
+                     * 获取Consumer status
+                     * @return Active Consumer status
+                     * 
+                     */
+                    std::string GetActive() const;
+
+                    /**
+                     * 设置Consumer status
+                     * @param _active Consumer status
+                     * 
+                     */
+                    void SetActive(const std::string& _active);
+
+                    /**
+                     * 判断参数 Active 是否已赋值
+                     * @return Active 是否已赋值
+                     * 
+                     */
+                    bool ActiveHasBeenSet() const;
+
+                    /**
+                     * 获取Time of the last message submission
+                     * @return LastDeliveredTime Time of the last message submission
+                     * 
+                     */
+                    std::string GetLastDeliveredTime() const;
+
+                    /**
+                     * 设置Time of the last message submission
+                     * @param _lastDeliveredTime Time of the last message submission
+                     * 
+                     */
+                    void SetLastDeliveredTime(const std::string& _lastDeliveredTime);
+
+                    /**
+                     * 判断参数 LastDeliveredTime 是否已赋值
+                     * @return LastDeliveredTime 是否已赋值
+                     * 
+                     */
+                    bool LastDeliveredTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of unconfirmed messages of the consumer
+                     * @return UnAckMsgCount Number of unconfirmed messages of the consumer
+                     * 
+                     */
+                    int64_t GetUnAckMsgCount() const;
+
+                    /**
+                     * 设置Number of unconfirmed messages of the consumer
+                     * @param _unAckMsgCount Number of unconfirmed messages of the consumer
+                     * 
+                     */
+                    void SetUnAckMsgCount(const int64_t& _unAckMsgCount);
+
+                    /**
+                     * 判断参数 UnAckMsgCount 是否已赋值
+                     * @return UnAckMsgCount 是否已赋值
+                     * 
+                     */
+                    bool UnAckMsgCountHasBeenSet() const;
+
+                    /**
+                     * 获取channel belonging to the consumer
+                     * @return ChannelName channel belonging to the consumer
+                     * 
+                     */
+                    std::string GetChannelName() const;
+
+                    /**
+                     * 设置channel belonging to the consumer
+                     * @param _channelName channel belonging to the consumer
+                     * 
+                     */
+                    void SetChannelName(const std::string& _channelName);
+
+                    /**
+                     * 判断参数 ChannelName 是否已赋值
+                     * @return ChannelName 是否已赋值
+                     * 
+                     */
+                    bool ChannelNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -101,6 +248,48 @@ namespace TencentCloud
                      */
                     std::string m_consumerTag;
                     bool m_consumerTagHasBeenSet;
+
+                    /**
+                     * Consume target queue
+                     */
+                    std::string m_queueName;
+                    bool m_queueNameHasBeenSet;
+
+                    /**
+                     * Whether required for the consumer to manually ack
+                     */
+                    bool m_ackRequired;
+                    bool m_ackRequiredHasBeenSet;
+
+                    /**
+                     * Consumer qos value
+                     */
+                    uint64_t m_prefetchCount;
+                    bool m_prefetchCountHasBeenSet;
+
+                    /**
+                     * Consumer status
+                     */
+                    std::string m_active;
+                    bool m_activeHasBeenSet;
+
+                    /**
+                     * Time of the last message submission
+                     */
+                    std::string m_lastDeliveredTime;
+                    bool m_lastDeliveredTimeHasBeenSet;
+
+                    /**
+                     * Number of unconfirmed messages of the consumer
+                     */
+                    int64_t m_unAckMsgCount;
+                    bool m_unAckMsgCountHasBeenSet;
+
+                    /**
+                     * channel belonging to the consumer
+                     */
+                    std::string m_channelName;
+                    bool m_channelNameHasBeenSet;
 
                 };
             }

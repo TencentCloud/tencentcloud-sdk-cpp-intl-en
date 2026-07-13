@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Route relationship list
-                     * @return BindingInfoList Route relationship list
+                     * 获取<p>Route relationship list</p>
+                     * @return BindingInfoList <p>Route relationship list</p>
                      * 
                      */
                     std::vector<RabbitMQBindingListInfo> GetBindingInfoList() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool BindingInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Quantity
-                     * @return TotalCount Quantity
+                     * 获取<p>Quantity</p>
+                     * @return TotalCount <p>Quantity</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Route relationship list
+                     * <p>Route relationship list</p>
                      */
                     std::vector<RabbitMQBindingListInfo> m_bindingInfoList;
                     bool m_bindingInfoListHasBeenSet;
 
                     /**
-                     * Quantity
+                     * <p>Quantity</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

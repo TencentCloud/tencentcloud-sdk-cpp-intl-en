@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取standby switch
+                     * @return AlternateExchange standby switch
+                     * 
+                     */
+                    std::string GetAlternateExchange() const;
+
+                    /**
+                     * 设置standby switch
+                     * @param _alternateExchange standby switch
+                     * 
+                     */
+                    void SetAlternateExchange(const std::string& _alternateExchange);
+
+                    /**
+                     * 判断参数 AlternateExchange 是否已赋值
+                     * @return AlternateExchange 是否已赋值
+                     * 
+                     */
+                    bool AlternateExchangeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * standby switch
+                     */
+                    std::string m_alternateExchange;
+                    bool m_alternateExchangeHasBeenSet;
 
                 };
             }

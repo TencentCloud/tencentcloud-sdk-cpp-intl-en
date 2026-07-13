@@ -235,6 +235,27 @@ namespace TencentCloud
                      */
                     bool PublicNetworkTpsHasBeenSet() const;
 
+                    /**
+                     * 获取Feature list corresponding to the instance, yes means supported, no means unsupported
+                     * @return Features Feature list corresponding to the instance, yes means supported, no means unsupported
+                     * 
+                     */
+                    std::string GetFeatures() const;
+
+                    /**
+                     * 设置Feature list corresponding to the instance, yes means supported, no means unsupported
+                     * @param _features Feature list corresponding to the instance, yes means supported, no means unsupported
+                     * 
+                     */
+                    void SetFeatures(const std::string& _features);
+
+                    /**
+                     * 判断参数 Features 是否已赋值
+                     * @return Features 是否已赋值
+                     * 
+                     */
+                    bool FeaturesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -290,6 +311,12 @@ namespace TencentCloud
                      */
                     uint64_t m_publicNetworkTps;
                     bool m_publicNetworkTpsHasBeenSet;
+
+                    /**
+                     * Feature list corresponding to the instance, yes means supported, no means unsupported
+                     */
+                    std::string m_features;
+                    bool m_featuresHasBeenSet;
 
                 };
             }

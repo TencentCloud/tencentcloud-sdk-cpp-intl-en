@@ -126,6 +126,69 @@ namespace TencentCloud
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取MessageTTL parameter in milliseconds, dedicated to classic event type	
+                     * @return MessageTTL MessageTTL parameter in milliseconds, dedicated to classic event type	
+                     * 
+                     */
+                    int64_t GetMessageTTL() const;
+
+                    /**
+                     * 设置MessageTTL parameter in milliseconds, dedicated to classic event type	
+                     * @param _messageTTL MessageTTL parameter in milliseconds, dedicated to classic event type	
+                     * 
+                     */
+                    void SetMessageTTL(const int64_t& _messageTTL);
+
+                    /**
+                     * 判断参数 MessageTTL 是否已赋值
+                     * @return MessageTTL 是否已赋值
+                     * 
+                     */
+                    bool MessageTTLHasBeenSet() const;
+
+                    /**
+                     * 获取DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+                     * @return DeadLetterExchange DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+                     * 
+                     */
+                    std::string GetDeadLetterExchange() const;
+
+                    /**
+                     * 设置DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+                     * @param _deadLetterExchange DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+                     * 
+                     */
+                    void SetDeadLetterExchange(const std::string& _deadLetterExchange);
+
+                    /**
+                     * 判断参数 DeadLetterExchange 是否已赋值
+                     * @return DeadLetterExchange 是否已赋值
+                     * 
+                     */
+                    bool DeadLetterExchangeHasBeenSet() const;
+
+                    /**
+                     * 获取DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+                     * @return DeadLetterRoutingKey DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+                     * 
+                     */
+                    std::string GetDeadLetterRoutingKey() const;
+
+                    /**
+                     * 设置DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+                     * @param _deadLetterRoutingKey DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+                     * 
+                     */
+                    void SetDeadLetterRoutingKey(const std::string& _deadLetterRoutingKey);
+
+                    /**
+                     * 判断参数 DeadLetterRoutingKey 是否已赋值
+                     * @return DeadLetterRoutingKey 是否已赋值
+                     * 
+                     */
+                    bool DeadLetterRoutingKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +214,24 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * MessageTTL parameter in milliseconds, dedicated to classic event type	
+                     */
+                    int64_t m_messageTTL;
+                    bool m_messageTTLHasBeenSet;
+
+                    /**
+                     * DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+                     */
+                    std::string m_deadLetterExchange;
+                    bool m_deadLetterExchangeHasBeenSet;
+
+                    /**
+                     * DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+                     */
+                    std::string m_deadLetterRoutingKey;
+                    bool m_deadLetterRoutingKeyHasBeenSet;
 
                 };
             }

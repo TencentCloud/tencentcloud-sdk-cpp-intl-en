@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessTag.h>
 
 
 namespace TencentCloud
@@ -126,6 +127,69 @@ namespace TencentCloud
                      */
                     bool TraceFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Traffic throttling production consumption ratio
+                     * @return SendReceiveRatio Traffic throttling production consumption ratio
+                     * 
+                     */
+                    double GetSendReceiveRatio() const;
+
+                    /**
+                     * 设置Traffic throttling production consumption ratio
+                     * @param _sendReceiveRatio Traffic throttling production consumption ratio
+                     * 
+                     */
+                    void SetSendReceiveRatio(const double& _sendReceiveRatio);
+
+                    /**
+                     * 判断参数 SendReceiveRatio 是否已赋值
+                     * @return SendReceiveRatio 是否已赋值
+                     * 
+                     */
+                    bool SendReceiveRatioHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to delete all tags. Default value: false.
+                     * @return DeleteAllTags Specifies whether to delete all tags. Default value: false.
+                     * 
+                     */
+                    bool GetDeleteAllTags() const;
+
+                    /**
+                     * 设置Specifies whether to delete all tags. Default value: false.
+                     * @param _deleteAllTags Specifies whether to delete all tags. Default value: false.
+                     * 
+                     */
+                    void SetDeleteAllTags(const bool& _deleteAllTags);
+
+                    /**
+                     * 判断参数 DeleteAllTags 是否已赋值
+                     * @return DeleteAllTags 是否已赋值
+                     * 
+                     */
+                    bool DeleteAllTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Modified instance tag list
+                     * @return InstanceTags Modified instance tag list
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessTag> GetInstanceTags() const;
+
+                    /**
+                     * 设置Modified instance tag list
+                     * @param _instanceTags Modified instance tag list
+                     * 
+                     */
+                    void SetInstanceTags(const std::vector<RabbitMQServerlessTag>& _instanceTags);
+
+                    /**
+                     * 判断参数 InstanceTags 是否已赋值
+                     * @return InstanceTags 是否已赋值
+                     * 
+                     */
+                    bool InstanceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +215,24 @@ namespace TencentCloud
                      */
                     bool m_traceFlag;
                     bool m_traceFlagHasBeenSet;
+
+                    /**
+                     * Traffic throttling production consumption ratio
+                     */
+                    double m_sendReceiveRatio;
+                    bool m_sendReceiveRatioHasBeenSet;
+
+                    /**
+                     * Specifies whether to delete all tags. Default value: false.
+                     */
+                    bool m_deleteAllTags;
+                    bool m_deleteAllTagsHasBeenSet;
+
+                    /**
+                     * Modified instance tag list
+                     */
+                    std::vector<RabbitMQServerlessTag> m_instanceTags;
+                    bool m_instanceTagsHasBeenSet;
 
                 };
             }

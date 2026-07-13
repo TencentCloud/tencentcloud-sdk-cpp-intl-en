@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessEndpoint.h>
+#include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessTag.h>
 
 
 namespace TencentCloud
@@ -471,6 +472,48 @@ namespace TencentCloud
                      */
                     bool IsolatedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Serverless Extension Fields
+                     * @return ServerlessExt Serverless Extension Fields
+                     * 
+                     */
+                    std::string GetServerlessExt() const;
+
+                    /**
+                     * 设置Serverless Extension Fields
+                     * @param _serverlessExt Serverless Extension Fields
+                     * 
+                     */
+                    void SetServerlessExt(const std::string& _serverlessExt);
+
+                    /**
+                     * 判断参数 ServerlessExt 是否已赋值
+                     * @return ServerlessExt 是否已赋值
+                     * 
+                     */
+                    bool ServerlessExtHasBeenSet() const;
+
+                    /**
+                     * 获取Instance tag list.
+                     * @return Tags Instance tag list.
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessTag> GetTags() const;
+
+                    /**
+                     * 设置Instance tag list.
+                     * @param _tags Instance tag list.
+                     * 
+                     */
+                    void SetTags(const std::vector<RabbitMQServerlessTag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -593,6 +636,18 @@ namespace TencentCloud
                      */
                     uint64_t m_isolatedTime;
                     bool m_isolatedTimeHasBeenSet;
+
+                    /**
+                     * Serverless Extension Fields
+                     */
+                    std::string m_serverlessExt;
+                    bool m_serverlessExtHasBeenSet;
+
+                    /**
+                     * Instance tag list.
+                     */
+                    std::vector<RabbitMQServerlessTag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

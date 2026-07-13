@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trabbit/v20230418/model/RabbitMQServerlessKeyValuePair.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取binding id.
-                     * @return BindingId binding id.
+                     * 获取<p>Routing relationship id</p>
+                     * @return BindingId <p>Routing relationship id</p>
                      * 
                      */
                     int64_t GetBindingId() const;
 
                     /**
-                     * 设置binding id.
-                     * @param _bindingId binding id.
+                     * 设置<p>Routing relationship id</p>
+                     * @param _bindingId <p>Routing relationship id</p>
                      * 
                      */
                     void SetBindingId(const int64_t& _bindingId);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool BindingIdHasBeenSet() const;
 
                     /**
-                     * 获取Vhost parameter.
-                     * @return VirtualHost Vhost parameter.
+                     * 获取<p>Vhost parameter</p>
+                     * @return VirtualHost <p>Vhost parameter</p>
                      * 
                      */
                     std::string GetVirtualHost() const;
 
                     /**
-                     * 设置Vhost parameter.
-                     * @param _virtualHost Vhost parameter.
+                     * 设置<p>Vhost parameter</p>
+                     * @param _virtualHost <p>Vhost parameter</p>
                      * 
                      */
                     void SetVirtualHost(const std::string& _virtualHost);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Source exchange name.
-                     * @return Source Source exchange name.
+                     * 获取<p>Source exchange name</p>
+                     * @return Source <p>Source exchange name</p>
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Source exchange name.
-                     * @param _source Source exchange name.
+                     * 设置<p>Source exchange name</p>
+                     * @param _source <p>Source exchange name</p>
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取Target type. valid values: queue or exchange.
-                     * @return DestinationType Target type. valid values: queue or exchange.
+                     * 获取<p>Target type, queue or exchange</p>
+                     * @return DestinationType <p>Target type, queue or exchange</p>
                      * 
                      */
                     std::string GetDestinationType() const;
 
                     /**
-                     * 设置Target type. valid values: queue or exchange.
-                     * @param _destinationType Target type. valid values: queue or exchange.
+                     * 设置<p>Target type, queue or exchange</p>
+                     * @param _destinationType <p>Target type, queue or exchange</p>
                      * 
                      */
                     void SetDestinationType(const std::string& _destinationType);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool DestinationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target resource name.
-                     * @return Destination Target resource name.
+                     * 获取<p>Target resource name</p>
+                     * @return Destination <p>Target resource name</p>
                      * 
                      */
                     std::string GetDestination() const;
 
                     /**
-                     * 设置Target resource name.
-                     * @param _destination Target resource name.
+                     * 设置<p>Target resource name</p>
+                     * @param _destination <p>Target resource name</p>
                      * 
                      */
                     void SetDestination(const std::string& _destination);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool DestinationHasBeenSet() const;
 
                     /**
-                     * 获取Binding key.
-                     * @return RoutingKey Binding key.
+                     * 获取<p>Bind key</p>
+                     * @return RoutingKey <p>Bind key</p>
                      * 
                      */
                     std::string GetRoutingKey() const;
 
                     /**
-                     * 设置Binding key.
-                     * @param _routingKey Binding key.
+                     * 设置<p>Bind key</p>
+                     * @param _routingKey <p>Bind key</p>
                      * 
                      */
                     void SetRoutingKey(const std::string& _routingKey);
@@ -173,15 +174,15 @@ namespace TencentCloud
                     bool RoutingKeyHasBeenSet() const;
 
                     /**
-                     * 获取Source exchange type.
-                     * @return SourceExchangeType Source exchange type.
+                     * 获取<p>Source exchange type</p>
+                     * @return SourceExchangeType <p>Source exchange type</p>
                      * 
                      */
                     std::string GetSourceExchangeType() const;
 
                     /**
-                     * 设置Source exchange type.
-                     * @param _sourceExchangeType Source exchange type.
+                     * 设置<p>Source exchange type</p>
+                     * @param _sourceExchangeType <p>Source exchange type</p>
                      * 
                      */
                     void SetSourceExchangeType(const std::string& _sourceExchangeType);
@@ -194,15 +195,15 @@ namespace TencentCloud
                     bool SourceExchangeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -215,15 +216,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Modification time
-                     * @return ModifyTime Modification time
+                     * 获取<p>Modification time.</p>
+                     * @return ModifyTime <p>Modification time.</p>
                      * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
-                     * 设置Modification time
-                     * @param _modifyTime Modification time
+                     * 设置<p>Modification time.</p>
+                     * @param _modifyTime <p>Modification time.</p>
                      * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
@@ -235,61 +236,88 @@ namespace TencentCloud
                      */
                     bool ModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+                     * @return Arguments <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+                     * 
+                     */
+                    std::vector<RabbitMQServerlessKeyValuePair> GetArguments() const;
+
+                    /**
+                     * 设置<p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+                     * @param _arguments <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+                     * 
+                     */
+                    void SetArguments(const std::vector<RabbitMQServerlessKeyValuePair>& _arguments);
+
+                    /**
+                     * 判断参数 Arguments 是否已赋值
+                     * @return Arguments 是否已赋值
+                     * 
+                     */
+                    bool ArgumentsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * binding id.
+                     * <p>Routing relationship id</p>
                      */
                     int64_t m_bindingId;
                     bool m_bindingIdHasBeenSet;
 
                     /**
-                     * Vhost parameter.
+                     * <p>Vhost parameter</p>
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Source exchange name.
+                     * <p>Source exchange name</p>
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * Target type. valid values: queue or exchange.
+                     * <p>Target type, queue or exchange</p>
                      */
                     std::string m_destinationType;
                     bool m_destinationTypeHasBeenSet;
 
                     /**
-                     * Target resource name.
+                     * <p>Target resource name</p>
                      */
                     std::string m_destination;
                     bool m_destinationHasBeenSet;
 
                     /**
-                     * Binding key.
+                     * <p>Bind key</p>
                      */
                     std::string m_routingKey;
                     bool m_routingKeyHasBeenSet;
 
                     /**
-                     * Source exchange type.
+                     * <p>Source exchange type</p>
                      */
                     std::string m_sourceExchangeType;
                     bool m_sourceExchangeTypeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Modification time
+                     * <p>Modification time.</p>
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+                     */
+                    std::vector<RabbitMQServerlessKeyValuePair> m_arguments;
+                    bool m_argumentsHasBeenSet;
 
                 };
             }

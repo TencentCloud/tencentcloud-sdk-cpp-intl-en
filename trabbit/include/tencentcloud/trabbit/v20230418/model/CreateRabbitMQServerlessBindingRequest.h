@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance Id</p>
+                     * @return InstanceId <p>Instance Id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance Id</p>
+                     * @param _instanceId <p>Instance Id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Vhost parameter.
-                     * @return VirtualHost Vhost parameter.
+                     * 获取<p>Vhost parameter</p>
+                     * @return VirtualHost <p>Vhost parameter</p>
                      * 
                      */
                     std::string GetVirtualHost() const;
 
                     /**
-                     * 设置Vhost parameter.
-                     * @param _virtualHost Vhost parameter.
+                     * 设置<p>Vhost parameter</p>
+                     * @param _virtualHost <p>Vhost parameter</p>
                      * 
                      */
                     void SetVirtualHost(const std::string& _virtualHost);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Source exchange.
-                     * @return Source Source exchange.
+                     * 获取<p>Source exchange</p>
+                     * @return Source <p>Source exchange</p>
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Source exchange.
-                     * @param _source Source exchange.
+                     * 设置<p>Source exchange</p>
+                     * @param _source <p>Source exchange</p>
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取Target type. valid values: queue or exchange.
-                     * @return DestinationType Target type. valid values: queue or exchange.
+                     * 获取<p>Target type, value queue or exchange</p>
+                     * @return DestinationType <p>Target type, value queue or exchange</p>
                      * 
                      */
                     std::string GetDestinationType() const;
 
                     /**
-                     * 设置Target type. valid values: queue or exchange.
-                     * @param _destinationType Target type. valid values: queue or exchange.
+                     * 设置<p>Target type, value queue or exchange</p>
+                     * @param _destinationType <p>Target type, value queue or exchange</p>
                      * 
                      */
                     void SetDestinationType(const std::string& _destinationType);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool DestinationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target queue or exchange.
-                     * @return Destination Target queue or exchange.
+                     * 获取<p>Target queue or switch</p>
+                     * @return Destination <p>Target queue or switch</p>
                      * 
                      */
                     std::string GetDestination() const;
 
                     /**
-                     * 设置Target queue or exchange.
-                     * @param _destination Target queue or exchange.
+                     * 设置<p>Target queue or switch</p>
+                     * @param _destination <p>Target queue or switch</p>
                      * 
                      */
                     void SetDestination(const std::string& _destination);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool DestinationHasBeenSet() const;
 
                     /**
-                     * 获取Binding key.
-                     * @return RoutingKey Binding key.
+                     * 获取<p>Bind key</p>
+                     * @return RoutingKey <p>Bind key</p>
                      * 
                      */
                     std::string GetRoutingKey() const;
 
                     /**
-                     * 设置Binding key.
-                     * @param _routingKey Binding key.
+                     * 设置<p>Bind key</p>
+                     * @param _routingKey <p>Bind key</p>
                      * 
                      */
                     void SetRoutingKey(const std::string& _routingKey);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool RoutingKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Arguments 
+                     * 获取<p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
+                     * @return Arguments <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
                      * 
                      */
                     std::vector<RabbitMQServerlessKeyValuePair> GetArguments() const;
 
                     /**
-                     * 设置
-                     * @param _arguments 
+                     * 设置<p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
+                     * @param _arguments <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
                      * 
                      */
                     void SetArguments(const std::vector<RabbitMQServerlessKeyValuePair>& _arguments);
@@ -193,43 +193,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance Id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Vhost parameter.
+                     * <p>Vhost parameter</p>
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Source exchange.
+                     * <p>Source exchange</p>
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * Target type. valid values: queue or exchange.
+                     * <p>Target type, value queue or exchange</p>
                      */
                     std::string m_destinationType;
                     bool m_destinationTypeHasBeenSet;
 
                     /**
-                     * Target queue or exchange.
+                     * <p>Target queue or switch</p>
                      */
                     std::string m_destination;
                     bool m_destinationHasBeenSet;
 
                     /**
-                     * Binding key.
+                     * <p>Bind key</p>
                      */
                     std::string m_routingKey;
                     bool m_routingKeyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
                      */
                     std::vector<RabbitMQServerlessKeyValuePair> m_arguments;
                     bool m_argumentsHasBeenSet;

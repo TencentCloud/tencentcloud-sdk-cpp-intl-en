@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance Id</p>
+                     * @return InstanceId <p>Instance Id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance Id</p>
+                     * @param _instanceId <p>Instance Id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Vhost parameter.
-                     * @return VirtualHost Vhost parameter.
+                     * 获取<p>Vhost parameter</p>
+                     * @return VirtualHost <p>Vhost parameter</p>
                      * 
                      */
                     std::string GetVirtualHost() const;
 
                     /**
-                     * 设置Vhost parameter.
-                     * @param _virtualHost Vhost parameter.
+                     * 设置<p>Vhost parameter</p>
+                     * @param _virtualHost <p>Vhost parameter</p>
                      * 
                      */
                     void SetVirtualHost(const std::string& _virtualHost);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VirtualHostHasBeenSet() const;
 
                     /**
-                     * 获取Pagination Offset
-                     * @return Offset Pagination Offset
+                     * 获取<p>Pagination offset</p>
+                     * @return Offset <p>Pagination offset</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination Offset
-                     * @param _offset Pagination Offset
+                     * 设置<p>Pagination offset</p>
+                     * @param _offset <p>Pagination offset</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination Limit
-                     * @return Limit Pagination Limit
+                     * 获取<p>Pagination limit</p>
+                     * @return Limit <p>Pagination limit</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination Limit
-                     * @param _limit Pagination Limit
+                     * 设置<p>Pagination limit</p>
+                     * @param _limit <p>Pagination limit</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
-                     * @return SearchWord Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+                     * 获取<p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+                     * @return SearchWord <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
-                     * @param _searchWord Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+                     * 设置<p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+                     * @param _searchWord <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Search and filter precisely according to the source Exchange.
-                     * @return SourceExchange Search and filter precisely according to the source Exchange.
+                     * 获取<p>Precise search and filter based on source Exchange</p>
+                     * @return SourceExchange <p>Precise search and filter based on source Exchange</p>
                      * 
                      */
                     std::string GetSourceExchange() const;
 
                     /**
-                     * 设置Search and filter precisely according to the source Exchange.
-                     * @param _sourceExchange Search and filter precisely according to the source Exchange.
+                     * 设置<p>Precise search and filter based on source Exchange</p>
+                     * @param _sourceExchange <p>Precise search and filter based on source Exchange</p>
                      * 
                      */
                     void SetSourceExchange(const std::string& _sourceExchange);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SourceExchangeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
-                     * @return QueueName Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+                     * 获取<p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+                     * @return QueueName <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
                      * 
                      */
                     std::string GetQueueName() const;
 
                     /**
-                     * 设置Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
-                     * @param _queueName Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+                     * 设置<p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+                     * @param _queueName <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
                      * 
                      */
                     void SetQueueName(const std::string& _queueName);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
-                     * @return DestinationExchange Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+                     * 获取<p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
+                     * @return DestinationExchange <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
                      * 
                      */
                     std::string GetDestinationExchange() const;
 
                     /**
-                     * 设置Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
-                     * @param _destinationExchange Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+                     * 设置<p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
+                     * @param _destinationExchange <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
                      * 
                      */
                     void SetDestinationExchange(const std::string& _destinationExchange);
@@ -213,49 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * <p>Instance Id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Vhost parameter.
+                     * <p>Vhost parameter</p>
                      */
                     std::string m_virtualHost;
                     bool m_virtualHostHasBeenSet;
 
                     /**
-                     * Pagination Offset
+                     * <p>Pagination offset</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination Limit
+                     * <p>Pagination limit</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+                     * <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Search and filter precisely according to the source Exchange.
+                     * <p>Precise search and filter based on source Exchange</p>
                      */
                     std::string m_sourceExchange;
                     bool m_sourceExchangeHasBeenSet;
 
                     /**
-                     * Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+                     * <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
                      */
                     std::string m_queueName;
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+                     * <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
                      */
                     std::string m_destinationExchange;
                     bool m_destinationExchangeHasBeenSet;

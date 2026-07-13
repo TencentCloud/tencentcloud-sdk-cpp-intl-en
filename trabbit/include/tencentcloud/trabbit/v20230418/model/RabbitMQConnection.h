@@ -193,6 +193,111 @@ namespace TencentCloud
                      */
                     bool ChannelsHasBeenSet() const;
 
+                    /**
+                     * 获取Inbound traffic volume in bytes
+                     * @return IncomingBytes Inbound traffic volume in bytes
+                     * 
+                     */
+                    double GetIncomingBytes() const;
+
+                    /**
+                     * 设置Inbound traffic volume in bytes
+                     * @param _incomingBytes Inbound traffic volume in bytes
+                     * 
+                     */
+                    void SetIncomingBytes(const double& _incomingBytes);
+
+                    /**
+                     * 判断参数 IncomingBytes 是否已赋值
+                     * @return IncomingBytes 是否已赋值
+                     * 
+                     */
+                    bool IncomingBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Outbound traffic volume in bytes
+                     * @return OutgoingBytes Outbound traffic volume in bytes
+                     * 
+                     */
+                    double GetOutgoingBytes() const;
+
+                    /**
+                     * 设置Outbound traffic volume in bytes
+                     * @param _outgoingBytes Outbound traffic volume in bytes
+                     * 
+                     */
+                    void SetOutgoingBytes(const double& _outgoingBytes);
+
+                    /**
+                     * 判断参数 OutgoingBytes 是否已赋值
+                     * @return OutgoingBytes 是否已赋值
+                     * 
+                     */
+                    bool OutgoingBytesHasBeenSet() const;
+
+                    /**
+                     * 获取Heartbeat interval. Default 60s.
+                     * @return Heartbeat Heartbeat interval. Default 60s.
+                     * 
+                     */
+                    uint64_t GetHeartbeat() const;
+
+                    /**
+                     * 设置Heartbeat interval. Default 60s.
+                     * @param _heartbeat Heartbeat interval. Default 60s.
+                     * 
+                     */
+                    void SetHeartbeat(const uint64_t& _heartbeat);
+
+                    /**
+                     * 判断参数 Heartbeat 是否已赋值
+                     * @return Heartbeat 是否已赋值
+                     * 
+                     */
+                    bool HeartbeatHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of channels per link. Default 1024.
+                     * @return MaxChannel Maximum number of channels per link. Default 1024.
+                     * 
+                     */
+                    uint64_t GetMaxChannel() const;
+
+                    /**
+                     * 设置Maximum number of channels per link. Default 1024.
+                     * @param _maxChannel Maximum number of channels per link. Default 1024.
+                     * 
+                     */
+                    void SetMaxChannel(const uint64_t& _maxChannel);
+
+                    /**
+                     * 判断参数 MaxChannel 是否已赋值
+                     * @return MaxChannel 是否已赋值
+                     * 
+                     */
+                    bool MaxChannelHasBeenSet() const;
+
+                    /**
+                     * 获取Idle time point
+                     * @return IdleSince Idle time point
+                     * 
+                     */
+                    std::string GetIdleSince() const;
+
+                    /**
+                     * 设置Idle time point
+                     * @param _idleSince Idle time point
+                     * 
+                     */
+                    void SetIdleSince(const std::string& _idleSince);
+
+                    /**
+                     * 判断参数 IdleSince 是否已赋值
+                     * @return IdleSince 是否已赋值
+                     * 
+                     */
+                    bool IdleSinceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +341,36 @@ namespace TencentCloud
                      */
                     int64_t m_channels;
                     bool m_channelsHasBeenSet;
+
+                    /**
+                     * Inbound traffic volume in bytes
+                     */
+                    double m_incomingBytes;
+                    bool m_incomingBytesHasBeenSet;
+
+                    /**
+                     * Outbound traffic volume in bytes
+                     */
+                    double m_outgoingBytes;
+                    bool m_outgoingBytesHasBeenSet;
+
+                    /**
+                     * Heartbeat interval. Default 60s.
+                     */
+                    uint64_t m_heartbeat;
+                    bool m_heartbeatHasBeenSet;
+
+                    /**
+                     * Maximum number of channels per link. Default 1024.
+                     */
+                    uint64_t m_maxChannel;
+                    bool m_maxChannelHasBeenSet;
+
+                    /**
+                     * Idle time point
+                     */
+                    std::string m_idleSince;
+                    bool m_idleSinceHasBeenSet;
 
                 };
             }

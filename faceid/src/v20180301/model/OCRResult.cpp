@@ -30,7 +30,8 @@ OCRResult::OCRResult() :
     m_cardBackCutImageBase64HasBeenSet(false),
     m_warnCardInfosHasBeenSet(false),
     m_originalCardInfoHasBeenSet(false),
-    m_headImageBase64HasBeenSet(false)
+    m_headImageBase64HasBeenSet(false),
+    m_cardBackImageBase64HasBeenSet(false)
 {
 }
 
@@ -156,6 +157,16 @@ CoreInternalOutcome OCRResult::Deserialize(const rapidjson::Value &value)
         m_headImageBase64HasBeenSet = true;
     }
 
+    if (value.HasMember("CardBackImageBase64") && !value["CardBackImageBase64"].IsNull())
+    {
+        if (!value["CardBackImageBase64"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `OCRResult.CardBackImageBase64` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cardBackImageBase64 = string(value["CardBackImageBase64"].GetString());
+        m_cardBackImageBase64HasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -248,6 +259,14 @@ void OCRResult::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "HeadImageBase64";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_headImageBase64.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cardBackImageBase64HasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CardBackImageBase64";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cardBackImageBase64.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -411,5 +430,21 @@ void OCRResult::SetHeadImageBase64(const string& _headImageBase64)
 bool OCRResult::HeadImageBase64HasBeenSet() const
 {
     return m_headImageBase64HasBeenSet;
+}
+
+string OCRResult::GetCardBackImageBase64() const
+{
+    return m_cardBackImageBase64;
+}
+
+void OCRResult::SetCardBackImageBase64(const string& _cardBackImageBase64)
+{
+    m_cardBackImageBase64 = _cardBackImageBase64;
+    m_cardBackImageBase64HasBeenSet = true;
+}
+
+bool OCRResult::CardBackImageBase64HasBeenSet() const
+{
+    return m_cardBackImageBase64HasBeenSet;
 }
 
