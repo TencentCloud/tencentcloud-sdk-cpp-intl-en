@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/Tag.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Service region
-                     * @return ClsRegion Service region
+                     * 获取<p>Log service region</p>
+                     * @return ClsRegion <p>Log service region</p>
                      * 
                      */
                     std::string GetClsRegion() const;
 
                     /**
-                     * 设置Service region
-                     * @param _clsRegion Service region
+                     * 设置<p>Log service region</p>
+                     * @param _clsRegion <p>Log service region</p>
                      * 
                      */
                     void SetClsRegion(const std::string& _clsRegion);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool ClsRegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Logset ID
-                     * @return LogsetId Logset ID
+                     * 获取<p>Logset ID</p>
+                     * @return LogsetId <p>Logset ID</p>
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Logset ID
-                     * @param _logsetId Logset ID
+                     * 设置<p>Logset ID</p>
+                     * @param _logsetId <p>Logset ID</p>
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID
-                     * @return TopicId Log topic ID
+                     * 获取<p>Log topic ID.</p>
+                     * @return TopicId <p>Log topic ID.</p>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID
-                     * @param _topicId Log topic ID
+                     * 设置<p>Log topic ID.</p>
+                     * @param _topicId <p>Log topic ID.</p>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log configuration extended information, generally used for storage of additional log delivery configuration
-                     * @return Extend Log configuration extended information, generally used for storage of additional log delivery configuration
+                     * 获取<p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
+                     * @return Extend <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
                      * 
                      */
                     std::string GetExtend() const;
 
                     /**
-                     * 设置Log configuration extended information, generally used for storage of additional log delivery configuration
-                     * @param _extend Log configuration extended information, generally used for storage of additional log delivery configuration
+                     * 设置<p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
+                     * @param _extend <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
                      * 
                      */
                     void SetExtend(const std::string& _extend);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool ExtendHasBeenSet() const;
 
                     /**
-                     * 获取Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
-                     * @return LogType Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+                     * 获取<p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+                     * @return LogType <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
-                     * @param _logType Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+                     * 设置<p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+                     * @param _logType <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -173,15 +174,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task status: 0 Creating, 1 Creation completed, 2 Deleting
-                     * @return Status Task status: 0 Creating, 1 Creation completed, 2 Deleting
+                     * 获取<p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
+                     * @return Status <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status: 0 Creating, 1 Creation completed, 2 Deleting
-                     * @param _status Task status: 0 Creating, 1 Creation completed, 2 Deleting
+                     * 设置<p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
+                     * @param _status <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -193,49 +194,103 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Tag information of the topic associated with the delivery task</p>
+                     * @return TopicTags <p>Tag information of the topic associated with the delivery task</p>
+                     * 
+                     */
+                    std::vector<Tag> GetTopicTags() const;
+
+                    /**
+                     * 设置<p>Tag information of the topic associated with the delivery task</p>
+                     * @param _topicTags <p>Tag information of the topic associated with the delivery task</p>
+                     * 
+                     */
+                    void SetTopicTags(const std::vector<Tag>& _topicTags);
+
+                    /**
+                     * 判断参数 TopicTags 是否已赋值
+                     * @return TopicTags 是否已赋值
+                     * 
+                     */
+                    bool TopicTagsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Tag information of the logset associated with the delivery task</p>
+                     * @return LogsetTags <p>Tag information of the logset associated with the delivery task</p>
+                     * 
+                     */
+                    std::vector<Tag> GetLogsetTags() const;
+
+                    /**
+                     * 设置<p>Tag information of the logset associated with the delivery task</p>
+                     * @param _logsetTags <p>Tag information of the logset associated with the delivery task</p>
+                     * 
+                     */
+                    void SetLogsetTags(const std::vector<Tag>& _logsetTags);
+
+                    /**
+                     * 判断参数 LogsetTags 是否已赋值
+                     * @return LogsetTags 是否已赋值
+                     * 
+                     */
+                    bool LogsetTagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Service region
+                     * <p>Log service region</p>
                      */
                     std::string m_clsRegion;
                     bool m_clsRegionHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Logset ID
+                     * <p>Logset ID</p>
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Log topic ID
+                     * <p>Log topic ID.</p>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log configuration extended information, generally used for storage of additional log delivery configuration
+                     * <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
                      */
                     std::string m_extend;
                     bool m_extendHasBeenSet;
 
                     /**
-                     * Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+                     * <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Task status: 0 Creating, 1 Creation completed, 2 Deleting
+                     * <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * <p>Tag information of the topic associated with the delivery task</p>
+                     */
+                    std::vector<Tag> m_topicTags;
+                    bool m_topicTagsHasBeenSet;
+
+                    /**
+                     * <p>Tag information of the logset associated with the delivery task</p>
+                     */
+                    std::vector<Tag> m_logsetTags;
+                    bool m_logsetTagsHasBeenSet;
 
                 };
             }

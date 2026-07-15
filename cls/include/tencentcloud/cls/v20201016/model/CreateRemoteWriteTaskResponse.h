@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CLS_V20201016_MODEL_MODIFYCLOUDPRODUCTLOGCOLLECTIONRESPONSE_H_
-#define TENCENTCLOUD_CLS_V20201016_MODEL_MODIFYCLOUDPRODUCTLOGCOLLECTIONRESPONSE_H_
+#ifndef TENCENTCLOUD_CLS_V20201016_MODEL_CREATEREMOTEWRITETASKRESPONSE_H_
+#define TENCENTCLOUD_CLS_V20201016_MODEL_CREATEREMOTEWRITETASKRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,41 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ModifyCloudProductLogCollection response structure.
+                * CreateRemoteWriteTask response structure.
                 */
-                class ModifyCloudProductLogCollectionResponse : public AbstractModel
+                class CreateRemoteWriteTaskResponse : public AbstractModel
                 {
                 public:
-                    ModifyCloudProductLogCollectionResponse();
-                    ~ModifyCloudProductLogCollectionResponse() = default;
+                    CreateRemoteWriteTaskResponse();
+                    ~CreateRemoteWriteTaskResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取<p>Additional information. For example, failed to modify the topic or logset tag.</p>
-                     * @return Message <p>Additional information. For example, failed to modify the topic or logset tag.</p>
+                     * 获取RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TaskId RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::string GetMessage() const;
+                    std::string GetTaskId() const;
 
                     /**
-                     * 判断参数 Message 是否已赋值
-                     * @return Message 是否已赋值
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
                      * 
                      */
-                    bool MessageHasBeenSet() const;
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * <p>Additional information. For example, failed to modify the topic or logset tag.</p>
+                     * RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_message;
-                    bool m_messageHasBeenSet;
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -71,4 +74,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CLS_V20201016_MODEL_MODIFYCLOUDPRODUCTLOGCOLLECTIONRESPONSE_H_
+#endif // !TENCENTCLOUD_CLS_V20201016_MODEL_CREATEREMOTEWRITETASKRESPONSE_H_

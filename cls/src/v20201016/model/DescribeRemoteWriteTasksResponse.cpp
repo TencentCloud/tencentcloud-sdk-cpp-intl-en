@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cls/v20201016/model/ModifyCloudProductLogCollectionResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeRemoteWriteTasksResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cls::V20201016::Model;
 using namespace std;
 
-ModifyCloudProductLogCollectionResponse::ModifyCloudProductLogCollectionResponse() :
-    m_messageHasBeenSet(false)
+DescribeRemoteWriteTasksResponse::DescribeRemoteWriteTasksResponse() :
+    m_infosHasBeenSet(false),
+    m_totalCountHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeRemoteWriteTasksResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +63,67 @@ CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const s
     }
 
 
-    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
+    if (rsp.HasMember("Infos") && !rsp["Infos"].IsNull())
     {
-        if (!rsp["Message"].IsString())
+        if (!rsp["Infos"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Infos` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Infos"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
+            RemoteWriteInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_infos.push_back(item);
         }
-        m_message = string(rsp["Message"].GetString());
-        m_messageHasBeenSet = true;
+        m_infosHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    {
+        if (!rsp["TotalCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyCloudProductLogCollectionResponse::ToJsonString() const
+string DescribeRemoteWriteTasksResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_messageHasBeenSet)
+    if (m_infosHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Message";
+        string key = "Infos";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_infos.begin(); itr != m_infos.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +138,24 @@ string ModifyCloudProductLogCollectionResponse::ToJsonString() const
 }
 
 
-string ModifyCloudProductLogCollectionResponse::GetMessage() const
+vector<RemoteWriteInfo> DescribeRemoteWriteTasksResponse::GetInfos() const
 {
-    return m_message;
+    return m_infos;
 }
 
-bool ModifyCloudProductLogCollectionResponse::MessageHasBeenSet() const
+bool DescribeRemoteWriteTasksResponse::InfosHasBeenSet() const
 {
-    return m_messageHasBeenSet;
+    return m_infosHasBeenSet;
+}
+
+uint64_t DescribeRemoteWriteTasksResponse::GetTotalCount() const
+{
+    return m_totalCount;
+}
+
+bool DescribeRemoteWriteTasksResponse::TotalCountHasBeenSet() const
+{
+    return m_totalCountHasBeenSet;
 }
 
 

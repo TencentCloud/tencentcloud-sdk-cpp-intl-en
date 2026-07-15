@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ScheduledSql task id
-                     * @return TaskId ScheduledSql task id
+                     * 获取<p>ScheduledSql task id</p>
+                     * @return TaskId <p>ScheduledSql task id</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置ScheduledSql task id
-                     * @param _taskId ScheduledSql task id
+                     * 设置<p>ScheduledSql task id</p>
+                     * @param _taskId <p>ScheduledSql task id</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取ScheduledSql task name
-                     * @return Name ScheduledSql task name
+                     * 获取<p>ScheduledSql task name</p>
+                     * @return Name <p>ScheduledSql task name</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置ScheduledSql task name
-                     * @param _name ScheduledSql task name
+                     * 设置<p>ScheduledSql task name</p>
+                     * @param _name <p>ScheduledSql task name</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Source Log Topic ID
-                     * @return SrcTopicId Source Log Topic ID
+                     * 获取<p>Source log topic id.</p>
+                     * @return SrcTopicId <p>Source log topic id.</p>
                      * 
                      */
                     std::string GetSrcTopicId() const;
 
                     /**
-                     * 设置Source Log Topic ID
-                     * @param _srcTopicId Source Log Topic ID
+                     * 设置<p>Source log topic id.</p>
+                     * @param _srcTopicId <p>Source log topic id.</p>
                      * 
                      */
                     void SetSrcTopicId(const std::string& _srcTopicId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SrcTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Source Log Topic Name
-                     * @return SrcTopicName Source Log Topic Name
+                     * 获取<p>source log topic name</p>
+                     * @return SrcTopicName <p>source log topic name</p>
                      * 
                      */
                     std::string GetSrcTopicName() const;
 
                     /**
-                     * 设置Source Log Topic Name
-                     * @param _srcTopicName Source Log Topic Name
+                     * 设置<p>source log topic name</p>
+                     * @param _srcTopicName <p>source log topic name</p>
                      * 
                      */
                     void SetSrcTopicName(const std::string& _srcTopicName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SrcTopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled SQL analysis of target topic
-                     * @return DstResource Scheduled SQL analysis of target topic
+                     * 获取<p>Scheduled SQL analysis target topic</p>
+                     * @return DstResource <p>Scheduled SQL analysis target topic</p>
                      * 
                      */
                     ScheduledSqlResouceInfo GetDstResource() const;
 
                     /**
-                     * 设置Scheduled SQL analysis of target topic
-                     * @param _dstResource Scheduled SQL analysis of target topic
+                     * 设置<p>Scheduled SQL analysis target topic</p>
+                     * @param _dstResource <p>Scheduled SQL analysis target topic</p>
                      * 
                      */
                     void SetDstResource(const ScheduledSqlResouceInfo& _dstResource);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool DstResourceHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time. Format: yyyy-MM-dd HH:mm:ss
-                     * @return CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
+                     * 获取<p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @return CreateTime <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Task creation time. Format: yyyy-MM-dd HH:mm:ss
-                     * @param _createTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
+                     * 设置<p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _createTime <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task update time. Format: yyyy-MM-dd HH:mm:ss
-                     * @return UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
+                     * 获取<p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @return UpdateTime <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Task update time. Format: yyyy-MM-dd HH:mm:ss
-                     * @param _updateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
+                     * 设置<p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _updateTime <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
-                     * @return Status Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+                     * 获取<p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
+                     * @return Status <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
-                     * @param _status Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+                     * 设置<p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
+                     * @param _status <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task status: 1 Enabled, 2 Disabled
-                     * @return EnableFlag Task status: 1 Enabled, 2 Disabled
+                     * 获取<p>Task status: 1 Enabled, 2 Disabled</p>
+                     * @return EnableFlag <p>Task status: 1 Enabled, 2 Disabled</p>
                      * 
                      */
                     int64_t GetEnableFlag() const;
 
                     /**
-                     * 设置Task status: 1 Enabled, 2 Disabled
-                     * @param _enableFlag Task status: 1 Enabled, 2 Disabled
+                     * 设置<p>Task status: 1 Enabled, 2 Disabled</p>
+                     * @param _enableFlag <p>Task status: 1 Enabled, 2 Disabled</p>
                      * 
                      */
                     void SetEnableFlag(const int64_t& _enableFlag);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool EnableFlagHasBeenSet() const;
 
                     /**
-                     * 获取Queries statements
-                     * @return ScheduledSqlContent Queries statements
+                     * 获取<p>Query statement</p>
+                     * @return ScheduledSqlContent <p>Query statement</p>
                      * 
                      */
                     std::string GetScheduledSqlContent() const;
 
                     /**
-                     * 设置Queries statements
-                     * @param _scheduledSqlContent Queries statements
+                     * 设置<p>Query statement</p>
+                     * @param _scheduledSqlContent <p>Query statement</p>
                      * 
                      */
                     void SetScheduledSqlContent(const std::string& _scheduledSqlContent);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ScheduledSqlContentHasBeenSet() const;
 
                     /**
-                     * 获取Schedule start time. Format: yyyy-MM-dd HH:mm:ss
-                     * @return ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+                     * 获取<p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @return ProcessStartTime <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     std::string GetProcessStartTime() const;
 
                     /**
-                     * 设置Schedule start time. Format: yyyy-MM-dd HH:mm:ss
-                     * @param _processStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+                     * 设置<p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
+                     * @param _processStartTime <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
                      * 
                      */
                     void SetProcessStartTime(const std::string& _processStartTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool ProcessStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Schedule Type: 1 Continuous Running 2 Specified Time Range
-                     * @return ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * 获取<p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
+                     * @return ProcessType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
                      * 
                      */
                     int64_t GetProcessType() const;
 
                     /**
-                     * 设置Schedule Type: 1 Continuous Running 2 Specified Time Range
-                     * @param _processType Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * 设置<p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
+                     * @param _processType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
                      * 
                      */
                     void SetProcessType(const int64_t& _processType);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool ProcessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
-                     * @return ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+                     * 获取<p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
+                     * @return ProcessEndTime <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
                      * 
                      */
                     std::string GetProcessEndTime() const;
 
                     /**
-                     * 设置Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
-                     * @param _processEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+                     * 设置<p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
+                     * @param _processEndTime <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
                      * 
                      */
                     void SetProcessEndTime(const std::string& _processEndTime);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool ProcessEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling cycle (minutes), 1-1440 minutes
-                     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
+                     * 获取<p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+                     * @return ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
                      * 
                      */
                     int64_t GetProcessPeriod() const;
 
                     /**
-                     * 设置Scheduling cycle (minutes), 1-1440 minutes
-                     * @param _processPeriod Scheduling cycle (minutes), 1-1440 minutes
+                     * 设置<p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+                     * @param _processPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
                      * 
                      */
                     void SetProcessPeriod(const int64_t& _processPeriod);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool ProcessPeriodHasBeenSet() const;
 
                     /**
-                     * 获取Query Time Window. @m-15m, @m, meaning the last 15 minutes
-                     * @return ProcessTimeWindow Query Time Window. @m-15m, @m, meaning the last 15 minutes
+                     * 获取<p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
+                     * @return ProcessTimeWindow <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
                      * 
                      */
                     std::string GetProcessTimeWindow() const;
 
                     /**
-                     * 设置Query Time Window. @m-15m, @m, meaning the last 15 minutes
-                     * @param _processTimeWindow Query Time Window. @m-15m, @m, meaning the last 15 minutes
+                     * 设置<p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
+                     * @param _processTimeWindow <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
                      * 
                      */
                     void SetProcessTimeWindow(const std::string& _processTimeWindow);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool ProcessTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Execution delay (seconds), 0-120 seconds, default 60
-                     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+                     * 获取<p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+                     * @return ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
                      * 
                      */
                     int64_t GetProcessDelay() const;
 
                     /**
-                     * 设置Execution delay (seconds), 0-120 seconds, default 60
-                     * @param _processDelay Execution delay (seconds), 0-120 seconds, default 60
+                     * 设置<p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+                     * @param _processDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
                      * 
                      */
                     void SetProcessDelay(const int64_t& _processDelay);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool ProcessDelayHasBeenSet() const;
 
                     /**
-                     * 获取Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-                     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * 获取<p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+                     * @return SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
                      * 
                      */
                     std::string GetSrcTopicRegion() const;
 
                     /**
-                     * 设置Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-                     * @param _srcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * 设置<p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+                     * @param _srcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
                      * 
                      */
                     void SetSrcTopicRegion(const std::string& _srcTopicRegion);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool SrcTopicRegionHasBeenSet() const;
 
                     /**
-                     * 获取Syntax rules. 0: Lucene syntax; 1: CQL syntax.
-                     * @return SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+                     * 获取<p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
+                     * @return SyntaxRule <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
                      * 
                      */
                     uint64_t GetSyntaxRule() const;
 
                     /**
-                     * 设置Syntax rules. 0: Lucene syntax; 1: CQL syntax.
-                     * @param _syntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+                     * 设置<p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
+                     * @param _syntaxRule <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
                      * 
                      */
                     void SetSyntaxRule(const uint64_t& _syntaxRule);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool SyntaxRuleHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
-                     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 获取<p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
+                     * @return HasServicesLog <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
                      * 
                      */
                     uint64_t GetHasServicesLog() const;
 
                     /**
-                     * 设置Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
-                     * @param _hasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * 设置<p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
+                     * @param _hasServicesLog <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
                      * 
                      */
                     void SetHasServicesLog(const uint64_t& _hasServicesLog);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool HasServicesLogHasBeenSet() const;
 
                     /**
-                     * 获取Full-text search tag. 1: Off, 2: On.
-                     * @return FullQuery Full-text search tag. 1: Off, 2: On.
+                     * 获取<p>Full-text search tag. 1: Off, 2: On.</p>
+                     * @return FullQuery <p>Full-text search tag. 1: Off, 2: On.</p>
                      * 
                      */
                     uint64_t GetFullQuery() const;
 
                     /**
-                     * 设置Full-text search tag. 1: Off, 2: On.
-                     * @param _fullQuery Full-text search tag. 1: Off, 2: On.
+                     * 设置<p>Full-text search tag. 1: Off, 2: On.</p>
+                     * @param _fullQuery <p>Full-text search tag. 1: Off, 2: On.</p>
                      * 
                      */
                     void SetFullQuery(const uint64_t& _fullQuery);
@@ -467,127 +467,154 @@ namespace TencentCloud
                      */
                     bool FullQueryHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+                     * @return ProcessPeriodUnit <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+                     * 
+                     */
+                    int64_t GetProcessPeriodUnit() const;
+
+                    /**
+                     * 设置<p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+                     * @param _processPeriodUnit <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+                     * 
+                     */
+                    void SetProcessPeriodUnit(const int64_t& _processPeriodUnit);
+
+                    /**
+                     * 判断参数 ProcessPeriodUnit 是否已赋值
+                     * @return ProcessPeriodUnit 是否已赋值
+                     * 
+                     */
+                    bool ProcessPeriodUnitHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ScheduledSql task id
+                     * <p>ScheduledSql task id</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * ScheduledSql task name
+                     * <p>ScheduledSql task name</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Source Log Topic ID
+                     * <p>Source log topic id.</p>
                      */
                     std::string m_srcTopicId;
                     bool m_srcTopicIdHasBeenSet;
 
                     /**
-                     * Source Log Topic Name
+                     * <p>source log topic name</p>
                      */
                     std::string m_srcTopicName;
                     bool m_srcTopicNameHasBeenSet;
 
                     /**
-                     * Scheduled SQL analysis of target topic
+                     * <p>Scheduled SQL analysis target topic</p>
                      */
                     ScheduledSqlResouceInfo m_dstResource;
                     bool m_dstResourceHasBeenSet;
 
                     /**
-                     * Task creation time. Format: yyyy-MM-dd HH:mm:ss
+                     * <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Task update time. Format: yyyy-MM-dd HH:mm:ss
+                     * <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+                     * <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task status: 1 Enabled, 2 Disabled
+                     * <p>Task status: 1 Enabled, 2 Disabled</p>
                      */
                     int64_t m_enableFlag;
                     bool m_enableFlagHasBeenSet;
 
                     /**
-                     * Queries statements
+                     * <p>Query statement</p>
                      */
                     std::string m_scheduledSqlContent;
                     bool m_scheduledSqlContentHasBeenSet;
 
                     /**
-                     * Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+                     * <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
                      */
                     std::string m_processStartTime;
                     bool m_processStartTimeHasBeenSet;
 
                     /**
-                     * Schedule Type: 1 Continuous Running 2 Specified Time Range
+                     * <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
                      */
                     int64_t m_processType;
                     bool m_processTypeHasBeenSet;
 
                     /**
-                     * Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+                     * <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
                      */
                     std::string m_processEndTime;
                     bool m_processEndTimeHasBeenSet;
 
                     /**
-                     * Scheduling cycle (minutes), 1-1440 minutes
+                     * <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
                      */
                     int64_t m_processPeriod;
                     bool m_processPeriodHasBeenSet;
 
                     /**
-                     * Query Time Window. @m-15m, @m, meaning the last 15 minutes
+                     * <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
                      */
                     std::string m_processTimeWindow;
                     bool m_processTimeWindowHasBeenSet;
 
                     /**
-                     * Execution delay (seconds), 0-120 seconds, default 60
+                     * <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
                      */
                     int64_t m_processDelay;
                     bool m_processDelayHasBeenSet;
 
                     /**
-                     * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+                     * <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
                      */
                     std::string m_srcTopicRegion;
                     bool m_srcTopicRegionHasBeenSet;
 
                     /**
-                     * Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+                     * <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;
 
                     /**
-                     * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+                     * <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
                      */
                     uint64_t m_hasServicesLog;
                     bool m_hasServicesLogHasBeenSet;
 
                     /**
-                     * Full-text search tag. 1: Off, 2: On.
+                     * <p>Full-text search tag. 1: Off, 2: On.</p>
                      */
                     uint64_t m_fullQuery;
                     bool m_fullQueryHasBeenSet;
+
+                    /**
+                     * <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+                     */
+                    int64_t m_processPeriodUnit;
+                    bool m_processPeriodUnitHasBeenSet;
 
                 };
             }

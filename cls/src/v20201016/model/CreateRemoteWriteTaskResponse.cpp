@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cls/v20201016/model/ModifyCloudProductLogCollectionResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateRemoteWriteTaskResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cls::V20201016::Model;
 using namespace std;
 
-ModifyCloudProductLogCollectionResponse::ModifyCloudProductLogCollectionResponse() :
-    m_messageHasBeenSet(false)
+CreateRemoteWriteTaskResponse::CreateRemoteWriteTaskResponse() :
+    m_taskIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateRemoteWriteTaskResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,32 @@ CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const s
     }
 
 
-    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
+    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
     {
-        if (!rsp["Message"].IsString())
+        if (!rsp["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_message = string(rsp["Message"].GetString());
-        m_messageHasBeenSet = true;
+        m_taskId = string(rsp["TaskId"].GetString());
+        m_taskIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyCloudProductLogCollectionResponse::ToJsonString() const
+string CreateRemoteWriteTaskResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_messageHasBeenSet)
+    if (m_taskIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Message";
+        string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +102,14 @@ string ModifyCloudProductLogCollectionResponse::ToJsonString() const
 }
 
 
-string ModifyCloudProductLogCollectionResponse::GetMessage() const
+string CreateRemoteWriteTaskResponse::GetTaskId() const
 {
-    return m_message;
+    return m_taskId;
 }
 
-bool ModifyCloudProductLogCollectionResponse::MessageHasBeenSet() const
+bool CreateRemoteWriteTaskResponse::TaskIdHasBeenSet() const
 {
-    return m_messageHasBeenSet;
+    return m_taskIdHasBeenSet;
 }
 
 

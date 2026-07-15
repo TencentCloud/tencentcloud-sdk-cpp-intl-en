@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/DlcInfo.h>
+#include <tencentcloud/cls/v20201016/model/DlcFailHandle.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID.
-                     * @return TaskId Task ID.
+                     * 获取<p>Task id.</p>
+                     * @return TaskId <p>Task id.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID.
-                     * @param _taskId Task ID.
+                     * 设置<p>Task id.</p>
+                     * @param _taskId <p>Task id.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Account id.
-                     * @return Uin Account id.
+                     * 获取<p>Account id.</p>
+                     * @return Uin <p>Account id.</p>
                      * 
                      */
                     uint64_t GetUin() const;
 
                     /**
-                     * 设置Account id.
-                     * @param _uin Account id.
+                     * 设置<p>Account id.</p>
+                     * @param _uin <p>Account id.</p>
                      * 
                      */
                     void SetUin(const uint64_t& _uin);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID.
-                     * @return TopicId Log topic ID.
+                     * 获取<p>Log topic id.</p>
+                     * @return TopicId <p>Log topic id.</p>
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID.
-                     * @param _topicId Log topic ID.
+                     * 设置<p>Log topic id.</p>
+                     * @param _topicId <p>Log topic id.</p>
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Task name.
-                     * @return Name Task name.
+                     * 获取<p>Task name.</p>
+                     * @return Name <p>Task name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task name.
-                     * @param _name Task name.
+                     * 设置<p>Task name.</p>
+                     * @param _name <p>Task name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
-                     * @return DeliverType Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+                     * 获取<p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+                     * @return DeliverType <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
                      * 
                      */
                     uint64_t GetDeliverType() const;
 
                     /**
-                     * 设置Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
-                     * @param _deliverType Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+                     * 设置<p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+                     * @param _deliverType <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
                      * 
                      */
                     void SetDeliverType(const uint64_t& _deliverType);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool DeliverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Delivery file size in MB
-                     * @return MaxSize Delivery file size in MB
+                     * 获取<p>Delivery file size, in MB.</p>
+                     * @return MaxSize <p>Delivery file size, in MB.</p>
                      * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
-                     * 设置Delivery file size in MB
-                     * @param _maxSize Delivery file size in MB
+                     * 设置<p>Delivery file size, in MB.</p>
+                     * @param _maxSize <p>Delivery file size, in MB.</p>
                      * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool MaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Delivery interval in seconds
-                     * @return Interval Delivery interval in seconds
+                     * 获取<p>Delivery interval in seconds</p>
+                     * @return Interval <p>Delivery interval in seconds</p>
                      * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
-                     * 设置Delivery interval in seconds
-                     * @param _interval Delivery interval in seconds
+                     * 设置<p>Delivery interval in seconds</p>
+                     * @param _interval <p>Delivery interval in seconds</p>
                      * 
                      */
                     void SetInterval(const uint64_t& _interval);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the delivery time range
-                     * @return StartTime Start time of the delivery time range
+                     * 获取<p>Start time of the delivery time range</p>
+                     * @return StartTime <p>Start time of the delivery time range</p>
                      * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time of the delivery time range
-                     * @param _startTime Start time of the delivery time range
+                     * 设置<p>Start time of the delivery time range</p>
+                     * @param _startTime <p>Start time of the delivery time range</p>
                      * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the delivery time range
-                     * @return EndTime End time of the delivery time range
+                     * 获取<p>End time of the delivery time range</p>
+                     * @return EndTime <p>End time of the delivery time range</p>
                      * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End time of the delivery time range
-                     * @param _endTime End time of the delivery time range
+                     * 设置<p>End time of the delivery time range</p>
+                     * @param _endTime <p>End time of the delivery time range</p>
                      * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取dlc configuration message
-                     * @return DlcInfo dlc configuration message
+                     * 获取<p>dlc configuration message</p>
+                     * @return DlcInfo <p>dlc configuration message</p>
                      * 
                      */
                     DlcInfo GetDlcInfo() const;
 
                     /**
-                     * 设置dlc configuration message
-                     * @param _dlcInfo dlc configuration message
+                     * 设置<p>dlc configuration message</p>
+                     * @param _dlcInfo <p>dlc configuration message</p>
                      * 
                      */
                     void SetDlcInfo(const DlcInfo& _dlcInfo);
@@ -258,15 +259,15 @@ namespace TencentCloud
                     bool DlcInfoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable delivery service log. 1 for disabled, 2 for enabled
-                     * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * 获取<p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+                     * @return HasServicesLog <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
                      * 
                      */
                     uint64_t GetHasServicesLog() const;
 
                     /**
-                     * 设置Whether to enable delivery service log. 1 for disabled, 2 for enabled
-                     * @param _hasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * 设置<p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+                     * @param _hasServicesLog <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
                      * 
                      */
                     void SetHasServicesLog(const uint64_t& _hasServicesLog);
@@ -279,15 +280,15 @@ namespace TencentCloud
                     bool HasServicesLogHasBeenSet() const;
 
                     /**
-                     * 获取Task status.
-                     * @return Status Task status.
+                     * 获取<p>Task status.</p>
+                     * @return Status <p>Task status.</p>
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Task status.
-                     * @param _status Task status.
+                     * 设置<p>Task status.</p>
+                     * @param _status <p>Task status.</p>
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -300,15 +301,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Task progress. Historic delivery tasks take effect.
-                     * @return Progress Task progress. Historic delivery tasks take effect.
+                     * 获取<p>Task progress. Historic delivery tasks take effect.</p>
+                     * @return Progress <p>Task progress. Historic delivery tasks take effect.</p>
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress. Historic delivery tasks take effect.
-                     * @param _progress Task progress. Historic delivery tasks take effect.
+                     * 设置<p>Task progress. Historic delivery tasks take effect.</p>
+                     * @param _progress <p>Task progress. Historic delivery tasks take effect.</p>
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -321,15 +322,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Topic type of logs. 0: standard topic; 1: metric topic.
-                     * @return BizType Topic type of logs. 0: standard topic; 1: metric topic.
+                     * 获取<p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+                     * @return BizType <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
                      * 
                      */
                     uint64_t GetBizType() const;
 
                     /**
-                     * 设置Topic type of logs. 0: standard topic; 1: metric topic.
-                     * @param _bizType Topic type of logs. 0: standard topic; 1: metric topic.
+                     * 设置<p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+                     * @param _bizType <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
                      * 
                      */
                     void SetBizType(const uint64_t& _bizType);
@@ -342,15 +343,15 @@ namespace TencentCloud
                     bool BizTypeHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time.
-                     * @return CreateTime Task creation time.
+                     * 获取<p>Task creation time.</p>
+                     * @return CreateTime <p>Task creation time.</p>
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Task creation time.
-                     * @param _createTime Task creation time.
+                     * 设置<p>Task creation time.</p>
+                     * @param _createTime <p>Task creation time.</p>
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -363,15 +364,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task modification time.
-                     * @return UpdateTime Task modification time.
+                     * 获取<p>Task last modified.</p>
+                     * @return UpdateTime <p>Task last modified.</p>
                      * 
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Task modification time.
-                     * @param _updateTime Task modification time.
+                     * 设置<p>Task last modified.</p>
+                     * @param _updateTime <p>Task last modified.</p>
                      * 
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
@@ -383,103 +384,184 @@ namespace TencentCloud
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * @return AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * 
+                     */
+                    bool GetAutoCreateField() const;
+
+                    /**
+                     * 设置<p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * @param _autoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * 
+                     */
+                    void SetAutoCreateField(const bool& _autoCreateField);
+
+                    /**
+                     * 判断参数 AutoCreateField 是否已赋值
+                     * @return AutoCreateField 是否已赋值
+                     * 
+                     */
+                    bool AutoCreateFieldHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Store logs with delivery failure in a DLC table</p>
+                     * @return DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+                     * 
+                     */
+                    DlcFailHandle GetDlcFailHandle() const;
+
+                    /**
+                     * 设置<p>Store logs with delivery failure in a DLC table</p>
+                     * @param _dlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+                     * 
+                     */
+                    void SetDlcFailHandle(const DlcFailHandle& _dlcFailHandle);
+
+                    /**
+                     * 判断参数 DlcFailHandle 是否已赋值
+                     * @return DlcFailHandle 是否已赋值
+                     * 
+                     */
+                    bool DlcFailHandleHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+                     * @return DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+                     * 
+                     */
+                    std::string GetDSLFilter() const;
+
+                    /**
+                     * 设置<p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+                     * @param _dSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+                     * 
+                     */
+                    void SetDSLFilter(const std::string& _dSLFilter);
+
+                    /**
+                     * 判断参数 DSLFilter 是否已赋值
+                     * @return DSLFilter 是否已赋值
+                     * 
+                     */
+                    bool DSLFilterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task ID.
+                     * <p>Task id.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Account id.
+                     * <p>Account id.</p>
                      */
                     uint64_t m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Log topic ID.
+                     * <p>Log topic id.</p>
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Task name.
+                     * <p>Task name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+                     * <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
                      */
                     uint64_t m_deliverType;
                     bool m_deliverTypeHasBeenSet;
 
                     /**
-                     * Delivery file size in MB
+                     * <p>Delivery file size, in MB.</p>
                      */
                     uint64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;
 
                     /**
-                     * Delivery interval in seconds
+                     * <p>Delivery interval in seconds</p>
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Start time of the delivery time range
+                     * <p>Start time of the delivery time range</p>
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the delivery time range
+                     * <p>End time of the delivery time range</p>
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * dlc configuration message
+                     * <p>dlc configuration message</p>
                      */
                     DlcInfo m_dlcInfo;
                     bool m_dlcInfoHasBeenSet;
 
                     /**
-                     * Whether to enable delivery service log. 1 for disabled, 2 for enabled
+                     * <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
                      */
                     uint64_t m_hasServicesLog;
                     bool m_hasServicesLogHasBeenSet;
 
                     /**
-                     * Task status.
+                     * <p>Task status.</p>
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Task progress. Historic delivery tasks take effect.
+                     * <p>Task progress. Historic delivery tasks take effect.</p>
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Topic type of logs. 0: standard topic; 1: metric topic.
+                     * <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
                      */
                     uint64_t m_bizType;
                     bool m_bizTypeHasBeenSet;
 
                     /**
-                     * Task creation time.
+                     * <p>Task creation time.</p>
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Task modification time.
+                     * <p>Task last modified.</p>
                      */
                     uint64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     */
+                    bool m_autoCreateField;
+                    bool m_autoCreateFieldHasBeenSet;
+
+                    /**
+                     * <p>Store logs with delivery failure in a DLC table</p>
+                     */
+                    DlcFailHandle m_dlcFailHandle;
+                    bool m_dlcFailHandleHasBeenSet;
+
+                    /**
+                     * <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+                     */
+                    std::string m_dSLFilter;
+                    bool m_dSLFilterHasBeenSet;
 
                 };
             }

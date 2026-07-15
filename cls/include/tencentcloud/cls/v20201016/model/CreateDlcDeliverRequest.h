@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/DlcInfo.h>
+#include <tencentcloud/cls/v20201016/model/DlcFailHandle.h>
 
 
 namespace TencentCloud
@@ -232,6 +233,69 @@ namespace TencentCloud
                      */
                     bool HasServicesLogHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * @return AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * 
+                     */
+                    bool GetAutoCreateField() const;
+
+                    /**
+                     * 设置<p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * @param _autoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     * 
+                     */
+                    void SetAutoCreateField(const bool& _autoCreateField);
+
+                    /**
+                     * 判断参数 AutoCreateField 是否已赋值
+                     * @return AutoCreateField 是否已赋值
+                     * 
+                     */
+                    bool AutoCreateFieldHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Store delivery failure logs in DLC tables</p>
+                     * @return DlcFailHandle <p>Store delivery failure logs in DLC tables</p>
+                     * 
+                     */
+                    DlcFailHandle GetDlcFailHandle() const;
+
+                    /**
+                     * 设置<p>Store delivery failure logs in DLC tables</p>
+                     * @param _dlcFailHandle <p>Store delivery failure logs in DLC tables</p>
+                     * 
+                     */
+                    void SetDlcFailHandle(const DlcFailHandle& _dlcFailHandle);
+
+                    /**
+                     * 判断参数 DlcFailHandle 是否已赋值
+                     * @return DlcFailHandle 是否已赋值
+                     * 
+                     */
+                    bool DlcFailHandleHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+                     * @return DSLFilter <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+                     * 
+                     */
+                    std::string GetDSLFilter() const;
+
+                    /**
+                     * 设置<p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+                     * @param _dSLFilter <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+                     * 
+                     */
+                    void SetDSLFilter(const std::string& _dSLFilter);
+
+                    /**
+                     * 判断参数 DSLFilter 是否已赋值
+                     * @return DSLFilter 是否已赋值
+                     * 
+                     */
+                    bool DSLFilterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +351,24 @@ namespace TencentCloud
                      */
                     uint64_t m_hasServicesLog;
                     bool m_hasServicesLogHasBeenSet;
+
+                    /**
+                     * <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+                     */
+                    bool m_autoCreateField;
+                    bool m_autoCreateFieldHasBeenSet;
+
+                    /**
+                     * <p>Store delivery failure logs in DLC tables</p>
+                     */
+                    DlcFailHandle m_dlcFailHandle;
+                    bool m_dlcFailHandleHasBeenSet;
+
+                    /**
+                     * <p>Log pre-filtering - Perform pre-filtering on original data for data ingestion into Splunk</p>
+                     */
+                    std::string m_dSLFilter;
+                    bool m_dSLFilterHasBeenSet;
 
                 };
             }

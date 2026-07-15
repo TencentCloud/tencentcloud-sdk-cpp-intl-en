@@ -1840,6 +1840,56 @@ ClsClient::CreateRecordingRuleYamlTaskOutcomeCallable ClsClient::CreateRecording
     return prom->get_future();
 }
 
+ClsClient::CreateRemoteWriteTaskOutcome ClsClient::CreateRemoteWriteTask(const CreateRemoteWriteTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRemoteWriteTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRemoteWriteTaskResponse rsp = CreateRemoteWriteTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRemoteWriteTaskOutcome(rsp);
+        else
+            return CreateRemoteWriteTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRemoteWriteTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::CreateRemoteWriteTaskAsync(const CreateRemoteWriteTaskRequest& request, const CreateRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateRemoteWriteTaskRequest&;
+    using Resp = CreateRemoteWriteTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateRemoteWriteTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::CreateRemoteWriteTaskOutcomeCallable ClsClient::CreateRemoteWriteTaskCallable(const CreateRemoteWriteTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateRemoteWriteTaskOutcome>>();
+    CreateRemoteWriteTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const CreateRemoteWriteTaskRequest&,
+        CreateRemoteWriteTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::CreateScheduledSqlOutcome ClsClient::CreateScheduledSql(const CreateScheduledSqlRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateScheduledSql");
@@ -3532,6 +3582,56 @@ ClsClient::DeleteRecordingRuleYamlTaskOutcomeCallable ClsClient::DeleteRecording
         const ClsClient*,
         const DeleteRecordingRuleYamlTaskRequest&,
         DeleteRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::DeleteRemoteWriteTaskOutcome ClsClient::DeleteRemoteWriteTask(const DeleteRemoteWriteTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRemoteWriteTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRemoteWriteTaskResponse rsp = DeleteRemoteWriteTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRemoteWriteTaskOutcome(rsp);
+        else
+            return DeleteRemoteWriteTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRemoteWriteTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DeleteRemoteWriteTaskAsync(const DeleteRemoteWriteTaskRequest& request, const DeleteRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteRemoteWriteTaskRequest&;
+    using Resp = DeleteRemoteWriteTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteRemoteWriteTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DeleteRemoteWriteTaskOutcomeCallable ClsClient::DeleteRemoteWriteTaskCallable(const DeleteRemoteWriteTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteRemoteWriteTaskOutcome>>();
+    DeleteRemoteWriteTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DeleteRemoteWriteTaskRequest&,
+        DeleteRemoteWriteTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6140,6 +6240,56 @@ ClsClient::DescribeRecordingRuleYamlTaskOutcomeCallable ClsClient::DescribeRecor
     return prom->get_future();
 }
 
+ClsClient::DescribeRemoteWriteTasksOutcome ClsClient::DescribeRemoteWriteTasks(const DescribeRemoteWriteTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRemoteWriteTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRemoteWriteTasksResponse rsp = DescribeRemoteWriteTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRemoteWriteTasksOutcome(rsp);
+        else
+            return DescribeRemoteWriteTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRemoteWriteTasksOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeRemoteWriteTasksAsync(const DescribeRemoteWriteTasksRequest& request, const DescribeRemoteWriteTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeRemoteWriteTasksRequest&;
+    using Resp = DescribeRemoteWriteTasksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeRemoteWriteTasks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeRemoteWriteTasksOutcomeCallable ClsClient::DescribeRemoteWriteTasksCallable(const DescribeRemoteWriteTasksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeRemoteWriteTasksOutcome>>();
+    DescribeRemoteWriteTasksAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeRemoteWriteTasksRequest&,
+        DescribeRemoteWriteTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeScheduledSqlInfoOutcome ClsClient::DescribeScheduledSqlInfo(const DescribeScheduledSqlInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeScheduledSqlInfo");
@@ -8232,6 +8382,56 @@ ClsClient::ModifyRecordingRuleYamlTaskOutcomeCallable ClsClient::ModifyRecording
         const ClsClient*,
         const ModifyRecordingRuleYamlTaskRequest&,
         ModifyRecordingRuleYamlTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+ClsClient::ModifyRemoteWriteTaskOutcome ClsClient::ModifyRemoteWriteTask(const ModifyRemoteWriteTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRemoteWriteTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRemoteWriteTaskResponse rsp = ModifyRemoteWriteTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRemoteWriteTaskOutcome(rsp);
+        else
+            return ModifyRemoteWriteTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRemoteWriteTaskOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::ModifyRemoteWriteTaskAsync(const ModifyRemoteWriteTaskRequest& request, const ModifyRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyRemoteWriteTaskRequest&;
+    using Resp = ModifyRemoteWriteTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyRemoteWriteTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::ModifyRemoteWriteTaskOutcomeCallable ClsClient::ModifyRemoteWriteTaskCallable(const ModifyRemoteWriteTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyRemoteWriteTaskOutcome>>();
+    ModifyRemoteWriteTaskAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const ModifyRemoteWriteTaskRequest&,
+        ModifyRemoteWriteTaskOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

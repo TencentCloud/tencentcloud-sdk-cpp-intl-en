@@ -34,8 +34,11 @@ CreateScheduledSqlRequest::CreateScheduledSqlRequest() :
     m_processTimeWindowHasBeenSet(false),
     m_processDelayHasBeenSet(false),
     m_srcTopicRegionHasBeenSet(false),
+    m_processPeriodUnitHasBeenSet(false),
     m_processEndTimeHasBeenSet(false),
-    m_syntaxRuleHasBeenSet(false)
+    m_syntaxRuleHasBeenSet(false),
+    m_hasServicesLogHasBeenSet(false),
+    m_fullQueryHasBeenSet(false)
 {
 }
 
@@ -135,6 +138,14 @@ string CreateScheduledSqlRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_srcTopicRegion.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_processPeriodUnitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProcessPeriodUnit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_processPeriodUnit, allocator);
+    }
+
     if (m_processEndTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -149,6 +160,22 @@ string CreateScheduledSqlRequest::ToJsonString() const
         string key = "SyntaxRule";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_syntaxRule, allocator);
+    }
+
+    if (m_hasServicesLogHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HasServicesLog";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_hasServicesLog, allocator);
+    }
+
+    if (m_fullQueryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullQuery";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_fullQuery, allocator);
     }
 
 
@@ -335,6 +362,22 @@ bool CreateScheduledSqlRequest::SrcTopicRegionHasBeenSet() const
     return m_srcTopicRegionHasBeenSet;
 }
 
+int64_t CreateScheduledSqlRequest::GetProcessPeriodUnit() const
+{
+    return m_processPeriodUnit;
+}
+
+void CreateScheduledSqlRequest::SetProcessPeriodUnit(const int64_t& _processPeriodUnit)
+{
+    m_processPeriodUnit = _processPeriodUnit;
+    m_processPeriodUnitHasBeenSet = true;
+}
+
+bool CreateScheduledSqlRequest::ProcessPeriodUnitHasBeenSet() const
+{
+    return m_processPeriodUnitHasBeenSet;
+}
+
 uint64_t CreateScheduledSqlRequest::GetProcessEndTime() const
 {
     return m_processEndTime;
@@ -365,6 +408,38 @@ void CreateScheduledSqlRequest::SetSyntaxRule(const uint64_t& _syntaxRule)
 bool CreateScheduledSqlRequest::SyntaxRuleHasBeenSet() const
 {
     return m_syntaxRuleHasBeenSet;
+}
+
+uint64_t CreateScheduledSqlRequest::GetHasServicesLog() const
+{
+    return m_hasServicesLog;
+}
+
+void CreateScheduledSqlRequest::SetHasServicesLog(const uint64_t& _hasServicesLog)
+{
+    m_hasServicesLog = _hasServicesLog;
+    m_hasServicesLogHasBeenSet = true;
+}
+
+bool CreateScheduledSqlRequest::HasServicesLogHasBeenSet() const
+{
+    return m_hasServicesLogHasBeenSet;
+}
+
+uint64_t CreateScheduledSqlRequest::GetFullQuery() const
+{
+    return m_fullQuery;
+}
+
+void CreateScheduledSqlRequest::SetFullQuery(const uint64_t& _fullQuery)
+{
+    m_fullQuery = _fullQuery;
+    m_fullQueryHasBeenSet = true;
+}
+
+bool CreateScheduledSqlRequest::FullQueryHasBeenSet() const
+{
+    return m_fullQueryHasBeenSet;
 }
 
 

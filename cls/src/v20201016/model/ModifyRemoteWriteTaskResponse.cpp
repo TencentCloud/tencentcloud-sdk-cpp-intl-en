@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cls/v20201016/model/ModifyCloudProductLogCollectionResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyRemoteWriteTaskResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cls::V20201016::Model;
 using namespace std;
 
-ModifyCloudProductLogCollectionResponse::ModifyCloudProductLogCollectionResponse() :
-    m_messageHasBeenSet(false)
+ModifyRemoteWriteTaskResponse::ModifyRemoteWriteTaskResponse()
 {
 }
 
-CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyRemoteWriteTaskResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,33 +61,15 @@ CoreInternalOutcome ModifyCloudProductLogCollectionResponse::Deserialize(const s
     }
 
 
-    if (rsp.HasMember("Message") && !rsp["Message"].IsNull())
-    {
-        if (!rsp["Message"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Message` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_message = string(rsp["Message"].GetString());
-        m_messageHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyCloudProductLogCollectionResponse::ToJsonString() const
+string ModifyRemoteWriteTaskResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_messageHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Message";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_message.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -101,15 +82,5 @@ string ModifyCloudProductLogCollectionResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-string ModifyCloudProductLogCollectionResponse::GetMessage() const
-{
-    return m_message;
-}
-
-bool ModifyCloudProductLogCollectionResponse::MessageHasBeenSet() const
-{
-    return m_messageHasBeenSet;
-}
 
 

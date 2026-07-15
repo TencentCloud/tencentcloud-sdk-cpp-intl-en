@@ -95,6 +95,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateRecordingRuleTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateRecordingRuleYamlTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateRecordingRuleYamlTaskResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateRemoteWriteTaskRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateRemoteWriteTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateScheduledSqlRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateSearchViewRequest.h>
@@ -163,6 +165,8 @@
 #include <tencentcloud/cls/v20201016/model/DeleteRecordingRuleTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteRecordingRuleYamlTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteRecordingRuleYamlTaskResponse.h>
+#include <tencentcloud/cls/v20201016/model/DeleteRemoteWriteTaskRequest.h>
+#include <tencentcloud/cls/v20201016/model/DeleteRemoteWriteTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteScheduledSqlRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteSearchViewRequest.h>
@@ -267,6 +271,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeRecordingRuleTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeRecordingRuleYamlTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeRecordingRuleYamlTaskResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeRemoteWriteTasksRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeRemoteWriteTasksResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeScheduledSqlInfoRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeScheduledSqlInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeSearchViewsRequest.h>
@@ -351,6 +357,8 @@
 #include <tencentcloud/cls/v20201016/model/ModifyRecordingRuleTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyRecordingRuleYamlTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyRecordingRuleYamlTaskResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyRemoteWriteTaskRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyRemoteWriteTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyScheduledSqlRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyScheduledSqlResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifySearchViewRequest.h>
@@ -511,6 +519,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRecordingRuleYamlTaskResponse> CreateRecordingRuleYamlTaskOutcome;
                 typedef std::future<CreateRecordingRuleYamlTaskOutcome> CreateRecordingRuleYamlTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateRecordingRuleYamlTaskRequest&, CreateRecordingRuleYamlTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRecordingRuleYamlTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRemoteWriteTaskResponse> CreateRemoteWriteTaskOutcome;
+                typedef std::future<CreateRemoteWriteTaskOutcome> CreateRemoteWriteTaskOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateRemoteWriteTaskRequest&, CreateRemoteWriteTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRemoteWriteTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateScheduledSqlResponse> CreateScheduledSqlOutcome;
                 typedef std::future<CreateScheduledSqlOutcome> CreateScheduledSqlOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateScheduledSqlRequest&, CreateScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScheduledSqlAsyncHandler;
@@ -613,6 +624,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRecordingRuleYamlTaskResponse> DeleteRecordingRuleYamlTaskOutcome;
                 typedef std::future<DeleteRecordingRuleYamlTaskOutcome> DeleteRecordingRuleYamlTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteRecordingRuleYamlTaskRequest&, DeleteRecordingRuleYamlTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordingRuleYamlTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRemoteWriteTaskResponse> DeleteRemoteWriteTaskOutcome;
+                typedef std::future<DeleteRemoteWriteTaskOutcome> DeleteRemoteWriteTaskOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DeleteRemoteWriteTaskRequest&, DeleteRemoteWriteTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRemoteWriteTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteScheduledSqlResponse> DeleteScheduledSqlOutcome;
                 typedef std::future<DeleteScheduledSqlOutcome> DeleteScheduledSqlOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteScheduledSqlRequest&, DeleteScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteScheduledSqlAsyncHandler;
@@ -769,6 +783,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRecordingRuleYamlTaskResponse> DescribeRecordingRuleYamlTaskOutcome;
                 typedef std::future<DescribeRecordingRuleYamlTaskOutcome> DescribeRecordingRuleYamlTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeRecordingRuleYamlTaskRequest&, DescribeRecordingRuleYamlTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordingRuleYamlTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRemoteWriteTasksResponse> DescribeRemoteWriteTasksOutcome;
+                typedef std::future<DescribeRemoteWriteTasksOutcome> DescribeRemoteWriteTasksOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeRemoteWriteTasksRequest&, DescribeRemoteWriteTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRemoteWriteTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeScheduledSqlInfoResponse> DescribeScheduledSqlInfoOutcome;
                 typedef std::future<DescribeScheduledSqlInfoOutcome> DescribeScheduledSqlInfoOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeScheduledSqlInfoRequest&, DescribeScheduledSqlInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScheduledSqlInfoAsyncHandler;
@@ -895,6 +912,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyRecordingRuleYamlTaskResponse> ModifyRecordingRuleYamlTaskOutcome;
                 typedef std::future<ModifyRecordingRuleYamlTaskOutcome> ModifyRecordingRuleYamlTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyRecordingRuleYamlTaskRequest&, ModifyRecordingRuleYamlTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRecordingRuleYamlTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRemoteWriteTaskResponse> ModifyRemoteWriteTaskOutcome;
+                typedef std::future<ModifyRemoteWriteTaskOutcome> ModifyRemoteWriteTaskOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyRemoteWriteTaskRequest&, ModifyRemoteWriteTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRemoteWriteTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyScheduledSqlResponse> ModifyScheduledSqlOutcome;
                 typedef std::future<ModifyScheduledSqlOutcome> ModifyScheduledSqlOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyScheduledSqlRequest&, ModifyScheduledSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyScheduledSqlAsyncHandler;
@@ -1295,6 +1315,15 @@ Note:
                 CreateRecordingRuleYamlTaskOutcomeCallable CreateRecordingRuleYamlTaskCallable(const Model::CreateRecordingRuleYamlTaskRequest& request);
 
                 /**
+                 *This API is used to create a remote write delivery task.
+                 * @param req CreateRemoteWriteTaskRequest
+                 * @return CreateRemoteWriteTaskOutcome
+                 */
+                CreateRemoteWriteTaskOutcome CreateRemoteWriteTask(const Model::CreateRemoteWriteTaskRequest &request);
+                void CreateRemoteWriteTaskAsync(const Model::CreateRemoteWriteTaskRequest& request, const CreateRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRemoteWriteTaskOutcomeCallable CreateRemoteWriteTaskCallable(const Model::CreateRemoteWriteTaskRequest& request);
+
+                /**
                  *This API is used to create a scheduled SQL analysis task.
                  * @param req CreateScheduledSqlRequest
                  * @return CreateScheduledSqlOutcome
@@ -1599,6 +1628,15 @@ Note:
                 DeleteRecordingRuleYamlTaskOutcome DeleteRecordingRuleYamlTask(const Model::DeleteRecordingRuleYamlTaskRequest &request);
                 void DeleteRecordingRuleYamlTaskAsync(const Model::DeleteRecordingRuleYamlTaskRequest& request, const DeleteRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteRecordingRuleYamlTaskOutcomeCallable DeleteRecordingRuleYamlTaskCallable(const Model::DeleteRecordingRuleYamlTaskRequest& request);
+
+                /**
+                 *This API is used to delete a RemoteWrite task.
+                 * @param req DeleteRemoteWriteTaskRequest
+                 * @return DeleteRemoteWriteTaskOutcome
+                 */
+                DeleteRemoteWriteTaskOutcome DeleteRemoteWriteTask(const Model::DeleteRemoteWriteTaskRequest &request);
+                void DeleteRemoteWriteTaskAsync(const Model::DeleteRemoteWriteTaskRequest& request, const DeleteRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRemoteWriteTaskOutcomeCallable DeleteRemoteWriteTaskCallable(const Model::DeleteRemoteWriteTaskRequest& request);
 
                 /**
                  *This API is used to delete a scheduled SQL analysis task.
@@ -2069,6 +2107,15 @@ Note:
                 DescribeRecordingRuleYamlTaskOutcomeCallable DescribeRecordingRuleYamlTaskCallable(const Model::DescribeRecordingRuleYamlTaskRequest& request);
 
                 /**
+                 *This API is used to obtain the list of RemoteWrite delivery tasks.
+                 * @param req DescribeRemoteWriteTasksRequest
+                 * @return DescribeRemoteWriteTasksOutcome
+                 */
+                DescribeRemoteWriteTasksOutcome DescribeRemoteWriteTasks(const Model::DescribeRemoteWriteTasksRequest &request);
+                void DescribeRemoteWriteTasksAsync(const Model::DescribeRemoteWriteTasksRequest& request, const DescribeRemoteWriteTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRemoteWriteTasksOutcomeCallable DescribeRemoteWriteTasksCallable(const Model::DescribeRemoteWriteTasksRequest& request);
+
+                /**
                  *This API is used to access the scheduled SQL analysis task list.
                  * @param req DescribeScheduledSqlInfoRequest
                  * @return DescribeScheduledSqlInfoOutcome
@@ -2447,6 +2494,15 @@ Note: Modifying the interface will directly overwrite historical data and change
                 ModifyRecordingRuleYamlTaskOutcome ModifyRecordingRuleYamlTask(const Model::ModifyRecordingRuleYamlTaskRequest &request);
                 void ModifyRecordingRuleYamlTaskAsync(const Model::ModifyRecordingRuleYamlTaskRequest& request, const ModifyRecordingRuleYamlTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyRecordingRuleYamlTaskOutcomeCallable ModifyRecordingRuleYamlTaskCallable(const Model::ModifyRecordingRuleYamlTaskRequest& request);
+
+                /**
+                 *This API is used to modify a RemoteWrite task.
+                 * @param req ModifyRemoteWriteTaskRequest
+                 * @return ModifyRemoteWriteTaskOutcome
+                 */
+                ModifyRemoteWriteTaskOutcome ModifyRemoteWriteTask(const Model::ModifyRemoteWriteTaskRequest &request);
+                void ModifyRemoteWriteTaskAsync(const Model::ModifyRemoteWriteTaskRequest& request, const ModifyRemoteWriteTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRemoteWriteTaskOutcomeCallable ModifyRemoteWriteTaskCallable(const Model::ModifyRemoteWriteTaskRequest& request);
 
                 /**
                  *This API is used to modify a scheduled SQL analysis task.
