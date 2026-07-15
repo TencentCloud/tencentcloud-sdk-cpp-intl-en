@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
-                     * @return TaskId The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+                     * 获取<p>Task ID returned when the AIGC video generation task is created.</p>
+                     * @return TaskId <p>Task ID returned when the AIGC video generation task is created.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
-                     * @param _taskId The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+                     * 设置<p>Task ID returned when the AIGC video generation task is created.</p>
+                     * @param _taskId <p>Task ID returned when the AIGC video generation task is created.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+                     * <p>Task ID returned when the AIGC video generation task is created.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

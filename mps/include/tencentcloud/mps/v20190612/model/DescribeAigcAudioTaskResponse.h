@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
-                     * @return Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+                     * 获取<p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
+                     * @return Status <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
                      * 
                      */
                     std::string GetStatus() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取When the task status is FAIL, the failure information is returned.
-                     * @return Message When the task status is FAIL, the failure information is returned.
+                     * 获取<p>If the task status is FAIL, the failure information is returned.</p>
+                     * @return Message <p>If the task status is FAIL, the failure information is returned.</p>
                      * 
                      */
                     std::string GetMessage() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Output audio information.
-                     * @return AudioInfos Output audio information.
+                     * 获取<p>Output audio information.</p>
+                     * @return AudioInfos <p>Output audio information.</p>
                      * 
                      */
                     std::vector<AigcAudioOutputAudioInfo> GetAudioInfos() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取Output video information. Only returned for scenarios such as video dubbing.
-                     * @return VideoInfos Output video information. Only returned for scenarios such as video dubbing.
+                     * 获取<p>Output video information, which is only available for scenarios such as video dubbing.</p>
+                     * @return VideoInfos <p>Output video information, which is only available for scenarios such as video dubbing.</p>
                      * 
                      */
                     std::vector<AigcAudioOutputVideoInfo> GetVideoInfos() const;
@@ -104,25 +104,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+                     * <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * When the task status is FAIL, the failure information is returned.
+                     * <p>If the task status is FAIL, the failure information is returned.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Output audio information.
+                     * <p>Output audio information.</p>
                      */
                     std::vector<AigcAudioOutputAudioInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * Output video information. Only returned for scenarios such as video dubbing.
+                     * <p>Output video information, which is only available for scenarios such as video dubbing.</p>
                      */
                     std::vector<AigcAudioOutputVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;

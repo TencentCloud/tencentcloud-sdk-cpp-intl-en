@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_AIGCAUDIOOUTPUTAUDIOINFO_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_AIGCAUDIOOUTPUTAUDIOINFO_H_
+#ifndef TENCENTCLOUD_KMS_V20190118_MODEL_REGIONQPS_H_
+#define TENCENTCLOUD_KMS_V20190118_MODEL_REGIONQPS_H_
 
 #include <string>
 #include <vector>
@@ -28,79 +28,79 @@
 
 namespace TencentCloud
 {
-    namespace Mps
+    namespace Kms
     {
-        namespace V20190612
+        namespace V20190118
         {
             namespace Model
             {
                 /**
-                * Output audio information of the AIGC audio generation task.
+                * Region extra QPS package
                 */
-                class AigcAudioOutputAudioInfo : public AbstractModel
+                class RegionQps : public AbstractModel
                 {
                 public:
-                    AigcAudioOutputAudioInfo();
-                    ~AigcAudioOutputAudioInfo() = default;
+                    RegionQps();
+                    ~RegionQps() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取<p>Audio URL.</p>
-                     * @return Url <p>Audio URL.</p>
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
-                    std::string GetUrl() const;
+                    std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Audio URL.</p>
-                     * @param _url <p>Audio URL.</p>
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
-                    void SetUrl(const std::string& _url);
+                    void SetRegion(const std::string& _region);
 
                     /**
-                     * 判断参数 Url 是否已赋值
-                     * @return Url 是否已赋值
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
                      * 
                      */
-                    bool UrlHasBeenSet() const;
+                    bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio duration.</p>
-                     * @return Duration <p>Audio duration.</p>
+                     * 获取<p>qps size</p>
+                     * @return Qps <p>qps size</p>
                      * 
                      */
-                    int64_t GetDuration() const;
+                    uint64_t GetQps() const;
 
                     /**
-                     * 设置<p>Audio duration.</p>
-                     * @param _duration <p>Audio duration.</p>
+                     * 设置<p>qps size</p>
+                     * @param _qps <p>qps size</p>
                      * 
                      */
-                    void SetDuration(const int64_t& _duration);
+                    void SetQps(const uint64_t& _qps);
 
                     /**
-                     * 判断参数 Duration 是否已赋值
-                     * @return Duration 是否已赋值
+                     * 判断参数 Qps 是否已赋值
+                     * @return Qps 是否已赋值
                      * 
                      */
-                    bool DurationHasBeenSet() const;
+                    bool QpsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * <p>Audio URL.</p>
+                     * <p>Region.</p>
                      */
-                    std::string m_url;
-                    bool m_urlHasBeenSet;
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
 
                     /**
-                     * <p>Audio duration.</p>
+                     * <p>qps size</p>
                      */
-                    int64_t m_duration;
-                    bool m_durationHasBeenSet;
+                    uint64_t m_qps;
+                    bool m_qpsHasBeenSet;
 
                 };
             }
@@ -108,4 +108,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_AIGCAUDIOOUTPUTAUDIOINFO_H_
+#endif // !TENCENTCLOUD_KMS_V20190118_MODEL_REGIONQPS_H_

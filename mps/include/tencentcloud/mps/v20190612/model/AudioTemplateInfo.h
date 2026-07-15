@@ -156,6 +156,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TrackChannelInfoHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+                     * @return AudioLanguage <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+                     * 
+                     */
+                    std::string GetAudioLanguage() const;
+
+                    /**
+                     * 设置<p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+                     * @param _audioLanguage <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+                     * 
+                     */
+                    void SetAudioLanguage(const std::string& _audioLanguage);
+
+                    /**
+                     * 判断参数 AudioLanguage 是否已赋值
+                     * @return AudioLanguage 是否已赋值
+                     * 
+                     */
+                    bool AudioLanguageHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+                     * @return AudioName <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+                     * 
+                     */
+                    std::string GetAudioName() const;
+
+                    /**
+                     * 设置<p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+                     * @param _audioName <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+                     * 
+                     */
+                    void SetAudioName(const std::string& _audioName);
+
+                    /**
+                     * 判断参数 AudioName 是否已赋值
+                     * @return AudioName 是否已赋值
+                     * 
+                     */
+                    bool AudioNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+                     * @return DefaultTrack <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+                     * 
+                     */
+                    bool GetDefaultTrack() const;
+
+                    /**
+                     * 设置<p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+                     * @param _defaultTrack <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+                     * 
+                     */
+                    void SetDefaultTrack(const bool& _defaultTrack);
+
+                    /**
+                     * 判断参数 DefaultTrack 是否已赋值
+                     * @return DefaultTrack 是否已赋值
+                     * 
+                     */
+                    bool DefaultTrackHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +251,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AudioTrackChannelInfo m_trackChannelInfo;
                     bool m_trackChannelInfoHasBeenSet;
+
+                    /**
+                     * <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+                     */
+                    std::string m_audioLanguage;
+                    bool m_audioLanguageHasBeenSet;
+
+                    /**
+                     * <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+                     */
+                    std::string m_audioName;
+                    bool m_audioNameHasBeenSet;
+
+                    /**
+                     * <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+                     */
+                    bool m_defaultTrack;
+                    bool m_defaultTrackHasBeenSet;
 
                 };
             }

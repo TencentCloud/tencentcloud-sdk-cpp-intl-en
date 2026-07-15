@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Verification type. The value is fixed to `DOMAIN`.
-                     * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+                     * 获取<p>Validation type. Fixed value: DOMAIN</p>
+                     * @return IdentityType <p>Validation type. Fixed value: DOMAIN</p>
                      * 
                      */
                     std::string GetIdentityType() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool IdentityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Verification passed or not.
-                     * @return VerifiedForSendingStatus Verification passed or not.
+                     * 获取<p>Whether verified</p>
+                     * @return VerifiedForSendingStatus <p>Whether verified</p>
                      * 
                      */
                     bool GetVerifiedForSendingStatus() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool VerifiedForSendingStatusHasBeenSet() const;
 
                     /**
-                     * 获取DNS information that needs to be configured.
-                     * @return Attributes DNS information that needs to be configured.
+                     * 获取<p>DNS information needs to be configured</p>
+                     * @return Attributes <p>DNS information needs to be configured</p>
                      * 
                      */
                     std::vector<DNSAttributes> GetAttributes() const;
@@ -86,25 +86,45 @@ namespace TencentCloud
                      */
                     bool AttributesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+                     * @return DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+                     * 
+                     */
+                    uint64_t GetDKIMOption() const;
+
+                    /**
+                     * 判断参数 DKIMOption 是否已赋值
+                     * @return DKIMOption 是否已赋值
+                     * 
+                     */
+                    bool DKIMOptionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Verification type. The value is fixed to `DOMAIN`.
+                     * <p>Validation type. Fixed value: DOMAIN</p>
                      */
                     std::string m_identityType;
                     bool m_identityTypeHasBeenSet;
 
                     /**
-                     * Verification passed or not.
+                     * <p>Whether verified</p>
                      */
                     bool m_verifiedForSendingStatus;
                     bool m_verifiedForSendingStatusHasBeenSet;
 
                     /**
-                     * DNS information that needs to be configured.
+                     * <p>DNS information needs to be configured</p>
                      */
                     std::vector<DNSAttributes> m_attributes;
                     bool m_attributesHasBeenSet;
+
+                    /**
+                     * <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+                     */
+                    uint64_t m_dKIMOption;
+                    bool m_dKIMOptionHasBeenSet;
 
                 };
             }

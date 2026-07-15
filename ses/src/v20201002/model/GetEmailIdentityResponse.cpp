@@ -26,7 +26,9 @@ using namespace std;
 GetEmailIdentityResponse::GetEmailIdentityResponse() :
     m_identityTypeHasBeenSet(false),
     m_verifiedForSendingStatusHasBeenSet(false),
-    m_attributesHasBeenSet(false)
+    m_attributesHasBeenSet(false),
+    m_dKIMOptionHasBeenSet(false),
+    m_tagListHasBeenSet(false)
 {
 }
 
@@ -104,6 +106,36 @@ CoreInternalOutcome GetEmailIdentityResponse::Deserialize(const string &payload)
         m_attributesHasBeenSet = true;
     }
 
+    if (rsp.HasMember("DKIMOption") && !rsp["DKIMOption"].IsNull())
+    {
+        if (!rsp["DKIMOption"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `DKIMOption` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_dKIMOption = rsp["DKIMOption"].GetUint64();
+        m_dKIMOptionHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TagList") && !rsp["TagList"].IsNull())
+    {
+        if (!rsp["TagList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `TagList` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["TagList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TagList item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagList.push_back(item);
+        }
+        m_tagListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -139,6 +171,29 @@ string GetEmailIdentityResponse::ToJsonString() const
 
         int i=0;
         for (auto itr = m_attributes.begin(); itr != m_attributes.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_dKIMOptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DKIMOption";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_dKIMOption, allocator);
+    }
+
+    if (m_tagListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagList.begin(); itr != m_tagList.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -185,6 +240,26 @@ vector<DNSAttributes> GetEmailIdentityResponse::GetAttributes() const
 bool GetEmailIdentityResponse::AttributesHasBeenSet() const
 {
     return m_attributesHasBeenSet;
+}
+
+uint64_t GetEmailIdentityResponse::GetDKIMOption() const
+{
+    return m_dKIMOption;
+}
+
+bool GetEmailIdentityResponse::DKIMOptionHasBeenSet() const
+{
+    return m_dKIMOptionHasBeenSet;
+}
+
+vector<TagList> GetEmailIdentityResponse::GetTagList() const
+{
+    return m_tagList;
+}
+
+bool GetEmailIdentityResponse::TagListHasBeenSet() const
+{
+    return m_tagListHasBeenSet;
 }
 
 

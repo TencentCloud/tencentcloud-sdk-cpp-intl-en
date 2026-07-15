@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain to be verified.
-                     * @return EmailIdentity Domain to be verified.
+                     * 获取<p>Domain name for request verification</p>
+                     * @return EmailIdentity <p>Domain name for request verification</p>
                      * 
                      */
                     std::string GetEmailIdentity() const;
 
                     /**
-                     * 设置Domain to be verified.
-                     * @param _emailIdentity Domain to be verified.
+                     * 设置<p>Domain name for request verification</p>
+                     * @param _emailIdentity <p>Domain name for request verification</p>
                      * 
                      */
                     void SetEmailIdentity(const std::string& _emailIdentity);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EmailIdentityHasBeenSet() const;
 
                     /**
-                     * 获取The  DKIMOption parameter is effective or not
-                     * @return NewAPI The  DKIMOption parameter is effective or not
+                     * 获取<p>Match the new and old APIs in the console</p>
+                     * @return NewAPI <p>Match the new and old APIs in the console</p>
                      * 
                      */
                     bool GetNewAPI() const;
 
                     /**
-                     * 设置The  DKIMOption parameter is effective or not
-                     * @param _newAPI The  DKIMOption parameter is effective or not
+                     * 设置<p>Match the new and old APIs in the console</p>
+                     * @param _newAPI <p>Match the new and old APIs in the console</p>
                      * 
                      */
                     void SetNewAPI(const bool& _newAPI);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NewAPIHasBeenSet() const;
 
                     /**
-                     * 获取dkim option, 0: 1024, 1: 2048, 2: both
-                     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+                     * 获取<p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+                     * @return DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
                      * 
                      */
                     uint64_t GetDKIMOption() const;
 
                     /**
-                     * 设置dkim option, 0: 1024, 1: 2048, 2: both
-                     * @param _dKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+                     * 设置<p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+                     * @param _dKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
                      * 
                      */
                     void SetDKIMOption(const uint64_t& _dKIMOption);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain to be verified.
+                     * <p>Domain name for request verification</p>
                      */
                     std::string m_emailIdentity;
                     bool m_emailIdentityHasBeenSet;
 
                     /**
-                     * The  DKIMOption parameter is effective or not
+                     * <p>Match the new and old APIs in the console</p>
                      */
                     bool m_newAPI;
                     bool m_newAPIHasBeenSet;
 
                     /**
-                     * dkim option, 0: 1024, 1: 2048, 2: both
+                     * <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
                      */
                     uint64_t m_dKIMOption;
                     bool m_dKIMOptionHasBeenSet;

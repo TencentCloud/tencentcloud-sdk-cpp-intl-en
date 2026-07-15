@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ses/v20201002/model/DNSAttributes.h>
+#include <tencentcloud/ses/v20201002/model/TagList.h>
 
 
 namespace TencentCloud
@@ -45,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Verification type. The value is fixed to `DOMAIN`.
-                     * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+                     * 获取<p>Validation type. Fixed value: DOMAIN</p>
+                     * @return IdentityType <p>Validation type. Fixed value: DOMAIN</p>
                      * 
                      */
                     std::string GetIdentityType() const;
@@ -59,8 +60,8 @@ namespace TencentCloud
                     bool IdentityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Verification passed or not.
-                     * @return VerifiedForSendingStatus Verification passed or not.
+                     * 获取<p>Whether verified</p>
+                     * @return VerifiedForSendingStatus <p>Whether verified</p>
                      * 
                      */
                     bool GetVerifiedForSendingStatus() const;
@@ -73,8 +74,8 @@ namespace TencentCloud
                     bool VerifiedForSendingStatusHasBeenSet() const;
 
                     /**
-                     * 获取DNS configuration details.
-                     * @return Attributes DNS configuration details.
+                     * 获取<p>DNS configuration detail</p>
+                     * @return Attributes <p>DNS configuration detail</p>
                      * 
                      */
                     std::vector<DNSAttributes> GetAttributes() const;
@@ -86,25 +87,65 @@ namespace TencentCloud
                      */
                     bool AttributesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>dkim key length</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: both</li></ul>
+                     * @return DKIMOption <p>dkim key length</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: both</li></ul>
+                     * 
+                     */
+                    uint64_t GetDKIMOption() const;
+
+                    /**
+                     * 判断参数 DKIMOption 是否已赋值
+                     * @return DKIMOption 是否已赋值
+                     * 
+                     */
+                    bool DKIMOptionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>tag</p>
+                     * @return TagList <p>tag</p>
+                     * 
+                     */
+                    std::vector<TagList> GetTagList() const;
+
+                    /**
+                     * 判断参数 TagList 是否已赋值
+                     * @return TagList 是否已赋值
+                     * 
+                     */
+                    bool TagListHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Verification type. The value is fixed to `DOMAIN`.
+                     * <p>Validation type. Fixed value: DOMAIN</p>
                      */
                     std::string m_identityType;
                     bool m_identityTypeHasBeenSet;
 
                     /**
-                     * Verification passed or not.
+                     * <p>Whether verified</p>
                      */
                     bool m_verifiedForSendingStatus;
                     bool m_verifiedForSendingStatusHasBeenSet;
 
                     /**
-                     * DNS configuration details.
+                     * <p>DNS configuration detail</p>
                      */
                     std::vector<DNSAttributes> m_attributes;
                     bool m_attributesHasBeenSet;
+
+                    /**
+                     * <p>dkim key length</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: both</li></ul>
+                     */
+                    uint64_t m_dKIMOption;
+                    bool m_dKIMOptionHasBeenSet;
+
+                    /**
+                     * <p>tag</p>
+                     */
+                    std::vector<TagList> m_tagList;
+                    bool m_tagListHasBeenSet;
 
                 };
             }

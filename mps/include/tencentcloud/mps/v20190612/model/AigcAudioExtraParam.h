@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extended parameters for AIGC audio generation.
                 */
                 class AigcAudioExtraParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResourceId 
+                     * 获取<p>Resource ID. Specify this based on your needs.</p>
+                     * @return ResourceId <p>Resource ID. Specify this based on your needs.</p>
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置
-                     * @param _resourceId 
+                     * 设置<p>Resource ID. Specify this based on your needs.</p>
+                     * @param _resourceId <p>Resource ID. Specify this based on your needs.</p>
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Resource ID. Specify this based on your needs.</p>
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

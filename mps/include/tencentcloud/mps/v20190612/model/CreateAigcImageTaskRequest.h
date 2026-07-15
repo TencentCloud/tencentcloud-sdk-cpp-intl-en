@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool ImageInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputImageCount 
+                     * 获取<p>Specifies the number of output images. One image is supported by default.</p>
+                     * @return OutputImageCount <p>Specifies the number of output images. One image is supported by default.</p>
                      * 
                      */
                     int64_t GetOutputImageCount() const;
 
                     /**
-                     * 设置
-                     * @param _outputImageCount 
+                     * 设置<p>Specifies the number of output images. One image is supported by default.</p>
+                     * @param _outputImageCount <p>Specifies the number of output images. One image is supported by default.</p>
                      * 
                      */
                     void SetOutputImageCount(const int64_t& _outputImageCount);
@@ -342,7 +342,7 @@ namespace TencentCloud
                     bool m_imageInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specifies the number of output images. One image is supported by default.</p>
                      */
                     int64_t m_outputImageCount;
                     bool m_outputImageCountHasBeenSet;

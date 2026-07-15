@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Send time.
-                     * @return DeliverTime Send time.
+                     * 获取<p>Send time</p>
+                     * @return DeliverTime <p>Send time</p>
                      * 
                      */
                     std::string GetDeliverTime() const;
 
                     /**
-                     * 设置Send time.
-                     * @param _deliverTime Send time.
+                     * 设置<p>Send time</p>
+                     * @param _deliverTime <p>Send time</p>
                      * 
                      */
                     void SetDeliverTime(const std::string& _deliverTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DeliverTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sender address.
-                     * @return OriginalMailFrom Sender address.
+                     * 获取<p>Sender address</p>
+                     * @return OriginalMailFrom <p>Sender address</p>
                      * 
                      */
                     std::string GetOriginalMailFrom() const;
 
                     /**
-                     * 设置Sender address.
-                     * @param _originalMailFrom Sender address.
+                     * 设置<p>Sender address</p>
+                     * @param _originalMailFrom <p>Sender address</p>
                      * 
                      */
                     void SetOriginalMailFrom(const std::string& _originalMailFrom);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalMailFromHasBeenSet() const;
 
                     /**
-                     * 获取Receive email.
-                     * @return OriginalRcptTo Receive email.
+                     * 获取<p>Receive email address</p>
+                     * @return OriginalRcptTo <p>Receive email address</p>
                      * 
                      */
                     std::string GetOriginalRcptTo() const;
 
                     /**
-                     * 设置Receive email.
-                     * @param _originalRcptTo Receive email.
+                     * 设置<p>Receive email address</p>
+                     * @param _originalRcptTo <p>Receive email address</p>
                      * 
                      */
                     void SetOriginalRcptTo(const std::string& _originalRcptTo);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OriginalRcptToHasBeenSet() const;
 
                     /**
-                     * 获取Sender domain name.
-                     * @return FromDomain Sender domain name.
+                     * 获取<p>Sender domain name</p>
+                     * @return FromDomain <p>Sender domain name</p>
                      * 
                      */
                     std::string GetFromDomain() const;
 
                     /**
-                     * 设置Sender domain name.
-                     * @param _fromDomain Sender domain name.
+                     * 设置<p>Sender domain name</p>
+                     * @param _fromDomain <p>Sender domain name</p>
                      * 
                      */
                     void SetFromDomain(const std::string& _fromDomain);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FromDomainHasBeenSet() const;
 
                     /**
-                     * 获取Complaint time.
-                     * @return ComplainTime Complaint time.
+                     * 获取<p>Complaint time</p>
+                     * @return ComplainTime <p>Complaint time</p>
                      * 
                      */
                     std::string GetComplainTime() const;
 
                     /**
-                     * 设置Complaint time.
-                     * @param _complainTime Complaint time.
+                     * 设置<p>Complaint time</p>
+                     * @param _complainTime <p>Complaint time</p>
                      * 
                      */
                     void SetComplainTime(const std::string& _complainTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ComplainTimeHasBeenSet() const;
 
                     /**
-                     * 获取Recipient domain name.
-                     * @return Mta Recipient domain name.
+                     * 获取<p>Recipient domain name</p>
+                     * @return Mta <p>Recipient domain name</p>
                      * 
                      */
                     std::string GetMta() const;
 
                     /**
-                     * 设置Recipient domain name.
-                     * @param _mta Recipient domain name.
+                     * 设置<p>Recipient domain name</p>
+                     * @param _mta <p>Recipient domain name</p>
                      * 
                      */
                     void SetMta(const std::string& _mta);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MtaHasBeenSet() const;
 
                     /**
-                     * 获取Source IP
-                     * @return SourceIp Source IP
+                     * 获取<p>Source ip</p>
+                     * @return SourceIp <p>Source ip</p>
                      * 
                      */
                     std::string GetSourceIp() const;
 
                     /**
-                     * 设置Source IP
-                     * @param _sourceIp Source IP
+                     * 设置<p>Source ip</p>
+                     * @param _sourceIp <p>Source ip</p>
                      * 
                      */
                     void SetSourceIp(const std::string& _sourceIp);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SourceIpHasBeenSet() const;
 
                     /**
-                     * 获取Data time.
-                     * @return InsertTime Data time.
+                     * 获取<p>Data time</p>
+                     * @return InsertTime <p>Data time</p>
                      * 
                      */
                     std::string GetInsertTime() const;
 
                     /**
-                     * 设置Data time.
-                     * @param _insertTime Data time.
+                     * 设置<p>Data time</p>
+                     * @param _insertTime <p>Data time</p>
                      * 
                      */
                     void SetInsertTime(const std::string& _insertTime);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool InsertTimeHasBeenSet() const;
 
                     /**
-                     * 获取Template ID
-                     * @return TemplateId Template ID
+                     * 获取<p>Template ID</p>
+                     * @return TemplateId <p>Template ID</p>
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Template ID
-                     * @param _templateId Template ID
+                     * 设置<p>Template ID</p>
+                     * @param _templateId <p>Template ID</p>
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取bulkId
-                     * @return BulkId bulkId
+                     * 获取<p>bulkId</p>
+                     * @return BulkId <p>bulkId</p>
                      * 
                      */
                     std::string GetBulkId() const;
 
                     /**
-                     * 设置bulkId
-                     * @param _bulkId bulkId
+                     * 设置<p>bulkId</p>
+                     * @param _bulkId <p>bulkId</p>
                      * 
                      */
                     void SetBulkId(const std::string& _bulkId);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool BulkIdHasBeenSet() const;
 
                     /**
-                     * 获取Message-Id in mail.
-                     * @return MessageId Message-Id in mail.
+                     * 获取<p>Message-Id of the mail</p>
+                     * @return MessageId <p>Message-Id of the mail</p>
                      * 
                      */
                     std::string GetMessageId() const;
 
                     /**
-                     * 设置Message-Id in mail.
-                     * @param _messageId Message-Id in mail.
+                     * 设置<p>Message-Id of the mail</p>
+                     * @param _messageId <p>Message-Id of the mail</p>
                      * 
                      */
                     void SetMessageId(const std::string& _messageId);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MessageIdHasBeenSet() const;
 
                     /**
-                     * 获取Complaint time.
-                     * @return AbuseTime Complaint time.
+                     * 获取<p>Complaint time</p>
+                     * @return AbuseTime <p>Complaint time</p>
                      * 
                      */
                     std::string GetAbuseTime() const;
 
                     /**
-                     * 设置Complaint time.
-                     * @param _abuseTime Complaint time.
+                     * 设置<p>Complaint time</p>
+                     * @param _abuseTime <p>Complaint time</p>
                      * 
                      */
                     void SetAbuseTime(const std::string& _abuseTime);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool AbuseTimeHasBeenSet() const;
 
                     /**
-                     * 获取Email subject.
-                     * @return Subject Email subject.
+                     * 获取<p>Email Subject</p>
+                     * @return Subject <p>Email Subject</p>
                      * 
                      */
                     std::string GetSubject() const;
 
                     /**
-                     * 设置Email subject.
-                     * @param _subject Email subject.
+                     * 设置<p>Email Subject</p>
+                     * @param _subject <p>Email Subject</p>
                      * 
                      */
                     void SetSubject(const std::string& _subject);
@@ -322,79 +322,79 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Send time.
+                     * <p>Send time</p>
                      */
                     std::string m_deliverTime;
                     bool m_deliverTimeHasBeenSet;
 
                     /**
-                     * Sender address.
+                     * <p>Sender address</p>
                      */
                     std::string m_originalMailFrom;
                     bool m_originalMailFromHasBeenSet;
 
                     /**
-                     * Receive email.
+                     * <p>Receive email address</p>
                      */
                     std::string m_originalRcptTo;
                     bool m_originalRcptToHasBeenSet;
 
                     /**
-                     * Sender domain name.
+                     * <p>Sender domain name</p>
                      */
                     std::string m_fromDomain;
                     bool m_fromDomainHasBeenSet;
 
                     /**
-                     * Complaint time.
+                     * <p>Complaint time</p>
                      */
                     std::string m_complainTime;
                     bool m_complainTimeHasBeenSet;
 
                     /**
-                     * Recipient domain name.
+                     * <p>Recipient domain name</p>
                      */
                     std::string m_mta;
                     bool m_mtaHasBeenSet;
 
                     /**
-                     * Source IP
+                     * <p>Source ip</p>
                      */
                     std::string m_sourceIp;
                     bool m_sourceIpHasBeenSet;
 
                     /**
-                     * Data time.
+                     * <p>Data time</p>
                      */
                     std::string m_insertTime;
                     bool m_insertTimeHasBeenSet;
 
                     /**
-                     * Template ID
+                     * <p>Template ID</p>
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * bulkId
+                     * <p>bulkId</p>
                      */
                     std::string m_bulkId;
                     bool m_bulkIdHasBeenSet;
 
                     /**
-                     * Message-Id in mail.
+                     * <p>Message-Id of the mail</p>
                      */
                     std::string m_messageId;
                     bool m_messageIdHasBeenSet;
 
                     /**
-                     * Complaint time.
+                     * <p>Complaint time</p>
                      */
                     std::string m_abuseTime;
                     bool m_abuseTimeHasBeenSet;
 
                     /**
-                     * Email subject.
+                     * <p>Email Subject</p>
                      */
                     std::string m_subject;
                     bool m_subjectHasBeenSet;

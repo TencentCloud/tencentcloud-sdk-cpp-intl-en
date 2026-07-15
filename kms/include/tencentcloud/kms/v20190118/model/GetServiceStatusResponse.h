@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/kms/v20190118/model/ExclusiveHSM.h>
 #include <tencentcloud/kms/v20190118/model/DestinationSyncConfig.h>
+#include <tencentcloud/kms/v20190118/model/RegionQps.h>
 
 
 namespace TencentCloud
@@ -46,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the KMS service has been activated. true: activated
-                     * @return ServiceEnabled Whether the KMS service has been activated. true: activated
+                     * 获取<p>Whether the KMS service is enabled. true means enabled</p>
+                     * @return ServiceEnabled <p>Whether the KMS service is enabled. true means enabled</p>
                      * 
                      */
                     bool GetServiceEnabled() const;
@@ -60,8 +61,8 @@ namespace TencentCloud
                     bool ServiceEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
-                     * @return InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+                     * 获取<p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
+                     * @return InvalidType <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
                      * 
                      */
                     int64_t GetInvalidType() const;
@@ -74,8 +75,8 @@ namespace TencentCloud
                     bool InvalidTypeHasBeenSet() const;
 
                     /**
-                     * 获取0: Basic Edition, 1: Ultimate Edition
-                     * @return UserLevel 0: Basic Edition, 1: Ultimate Edition
+                     * 获取<p>0-Standard Edition, 1-Flagship Edition</p>
+                     * @return UserLevel <p>0-Standard Edition, 1-Flagship Edition</p>
                      * 
                      */
                     uint64_t GetUserLevel() const;
@@ -88,8 +89,8 @@ namespace TencentCloud
                     bool UserLevelHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
-                     * @return ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+                     * 获取<p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
+                     * @return ProExpireTime <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
                      * 
                      */
                     uint64_t GetProExpireTime() const;
@@ -102,8 +103,8 @@ namespace TencentCloud
                     bool ProExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
-                     * @return ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+                     * 获取<p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
+                     * @return ProRenewFlag <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
                      * 
                      */
                     uint64_t GetProRenewFlag() const;
@@ -116,8 +117,8 @@ namespace TencentCloud
                     bool ProRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Flagship edition purchase record unique identifier. if not activated, the return value is empty.
-                     * @return ProResourceId Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+                     * 获取<p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
+                     * @return ProResourceId <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
                      * 
                      */
                     std::string GetProResourceId() const;
@@ -130,8 +131,8 @@ namespace TencentCloud
                     bool ProResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the KMS-managed version.
-                     * @return ExclusiveVSMEnabled Whether to enable the KMS-managed version.
+                     * 获取<p>Whether to enable managed by KMS</p>
+                     * @return ExclusiveVSMEnabled <p>Whether to enable managed by KMS</p>
                      * 
                      */
                     bool GetExclusiveVSMEnabled() const;
@@ -144,8 +145,8 @@ namespace TencentCloud
                     bool ExclusiveVSMEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the exclusive edition of KMS.
-                     * @return ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
+                     * 获取<p>Whether to enable KMS exclusive edition</p>
+                     * @return ExclusiveHSMEnabled <p>Whether to enable KMS exclusive edition</p>
                      * 
                      */
                     bool GetExclusiveHSMEnabled() const;
@@ -158,8 +159,8 @@ namespace TencentCloud
                     bool ExclusiveHSMEnabledHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the KMS subscription information.
-                     * @return SubscriptionInfo Specifies the KMS subscription information.
+                     * 获取<p>KMS subscription information.</p>
+                     * @return SubscriptionInfo <p>KMS subscription information.</p>
                      * 
                      */
                     std::string GetSubscriptionInfo() const;
@@ -172,8 +173,8 @@ namespace TencentCloud
                     bool SubscriptionInfoHasBeenSet() const;
 
                     /**
-                     * 获取Returns the amount of KMS user secret keys used.
-                     * @return CmkUserCount Returns the amount of KMS user secret keys used.
+                     * 获取<p>Return the usage quantity of KMS user secret key</p>
+                     * @return CmkUserCount <p>Return the usage quantity of KMS user secret key</p>
                      * 
                      */
                     uint64_t GetCmkUserCount() const;
@@ -186,8 +187,8 @@ namespace TencentCloud
                     bool CmkUserCountHasBeenSet() const;
 
                     /**
-                     * 获取Returns the specification quantity of KMS user secret keys.
-                     * @return CmkLimit Returns the specification quantity of KMS user secret keys.
+                     * 获取<p>Return the specification quantity of KMS user secret keys</p>
+                     * @return CmkLimit <p>Return the specification quantity of KMS user secret keys</p>
                      * 
                      */
                     uint64_t GetCmkLimit() const;
@@ -200,8 +201,8 @@ namespace TencentCloud
                     bool CmkLimitHasBeenSet() const;
 
                     /**
-                     * 获取Return dedicated cluster group.
-                     * @return ExclusiveHSMList Return dedicated cluster group.
+                     * 获取<p>Return the dedicated cluster group</p>
+                     * @return ExclusiveHSMList <p>Return the dedicated cluster group</p>
                      * 
                      */
                     std::vector<ExclusiveHSM> GetExclusiveHSMList() const;
@@ -214,8 +215,8 @@ namespace TencentCloud
                     bool ExclusiveHSMListHasBeenSet() const;
 
                     /**
-                     * 获取Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
-                     * @return IsAllowedDataKeyHosted Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+                     * 获取<p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
+                     * @return IsAllowedDataKeyHosted <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
                      * 
                      */
                     bool GetIsAllowedDataKeyHosted() const;
@@ -228,8 +229,8 @@ namespace TencentCloud
                     bool IsAllowedDataKeyHostedHasBeenSet() const;
 
                     /**
-                     * 获取Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
-                     * @return DataKeyLimit Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+                     * 获取<p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
+                     * @return DataKeyLimit <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
                      * 
                      */
                     uint64_t GetDataKeyLimit() const;
@@ -242,8 +243,8 @@ namespace TencentCloud
                     bool DataKeyLimitHasBeenSet() const;
 
                     /**
-                     * 获取Valid when IsAllowedDataKeyHosted is 1. data key free quota.
-                     * @return FreeDataKeyLimit Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+                     * 获取<p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
+                     * @return FreeDataKeyLimit <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
                      * 
                      */
                     uint64_t GetFreeDataKeyLimit() const;
@@ -256,8 +257,8 @@ namespace TencentCloud
                     bool FreeDataKeyLimitHasBeenSet() const;
 
                     /**
-                     * 获取Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
-                     * @return DataKeyUsedCount Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+                     * 获取<p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
+                     * @return DataKeyUsedCount <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
                      * 
                      */
                     uint64_t GetDataKeyUsedCount() const;
@@ -270,8 +271,8 @@ namespace TencentCloud
                     bool DataKeyUsedCountHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the target region of the sync task.
-                     * @return SyncTaskList Specifies the target region of the sync task.
+                     * 获取<p>Target region info of the sync task</p>
+                     * @return SyncTaskList <p>Target region info of the sync task</p>
                      * 
                      */
                     std::vector<DestinationSyncConfig> GetSyncTaskList() const;
@@ -284,8 +285,8 @@ namespace TencentCloud
                     bool SyncTaskListHasBeenSet() const;
 
                     /**
-                     * 获取Whether synchronization task is supported. true: supported; false: unsupported.
-                     * @return IsAllowedSync Whether synchronization task is supported. true: supported; false: unsupported.
+                     * 获取<p>Whether sync task is supported. true: supported, false: unsupported.</p>
+                     * @return IsAllowedSync <p>Whether sync task is supported. true: supported, false: unsupported.</p>
                      * 
                      */
                     bool GetIsAllowedSync() const;
@@ -297,115 +298,175 @@ namespace TencentCloud
                      */
                     bool IsAllowedSyncHasBeenSet() const;
 
+                    /**
+                     * 获取<p>QPS in the region</p>
+                     * @return QpsLimit <p>QPS in the region</p>
+                     * 
+                     */
+                    uint64_t GetQpsLimit() const;
+
+                    /**
+                     * 判断参数 QpsLimit 是否已赋值
+                     * @return QpsLimit 是否已赋值
+                     * 
+                     */
+                    bool QpsLimitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Total QPS value</p>
+                     * @return QpsTotalLimit <p>Total QPS value</p>
+                     * 
+                     */
+                    uint64_t GetQpsTotalLimit() const;
+
+                    /**
+                     * 判断参数 QpsTotalLimit 是否已赋值
+                     * @return QpsTotalLimit 是否已赋值
+                     * 
+                     */
+                    bool QpsTotalLimitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>QPS in the region</p>
+                     * @return RegionsQps <p>QPS in the region</p>
+                     * 
+                     */
+                    std::vector<RegionQps> GetRegionsQps() const;
+
+                    /**
+                     * 判断参数 RegionsQps 是否已赋值
+                     * @return RegionsQps 是否已赋值
+                     * 
+                     */
+                    bool RegionsQpsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether the KMS service has been activated. true: activated
+                     * <p>Whether the KMS service is enabled. true means enabled</p>
                      */
                     bool m_serviceEnabled;
                     bool m_serviceEnabledHasBeenSet;
 
                     /**
-                     * Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+                     * <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
                      */
                     int64_t m_invalidType;
                     bool m_invalidTypeHasBeenSet;
 
                     /**
-                     * 0: Basic Edition, 1: Ultimate Edition
+                     * <p>0-Standard Edition, 1-Flagship Edition</p>
                      */
                     uint64_t m_userLevel;
                     bool m_userLevelHasBeenSet;
 
                     /**
-                     * Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+                     * <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
                      */
                     uint64_t m_proExpireTime;
                     bool m_proExpireTimeHasBeenSet;
 
                     /**
-                     * Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+                     * <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
                      */
                     uint64_t m_proRenewFlag;
                     bool m_proRenewFlagHasBeenSet;
 
                     /**
-                     * Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+                     * <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
                      */
                     std::string m_proResourceId;
                     bool m_proResourceIdHasBeenSet;
 
                     /**
-                     * Whether to enable the KMS-managed version.
+                     * <p>Whether to enable managed by KMS</p>
                      */
                     bool m_exclusiveVSMEnabled;
                     bool m_exclusiveVSMEnabledHasBeenSet;
 
                     /**
-                     * Whether to enable the exclusive edition of KMS.
+                     * <p>Whether to enable KMS exclusive edition</p>
                      */
                     bool m_exclusiveHSMEnabled;
                     bool m_exclusiveHSMEnabledHasBeenSet;
 
                     /**
-                     * Specifies the KMS subscription information.
+                     * <p>KMS subscription information.</p>
                      */
                     std::string m_subscriptionInfo;
                     bool m_subscriptionInfoHasBeenSet;
 
                     /**
-                     * Returns the amount of KMS user secret keys used.
+                     * <p>Return the usage quantity of KMS user secret key</p>
                      */
                     uint64_t m_cmkUserCount;
                     bool m_cmkUserCountHasBeenSet;
 
                     /**
-                     * Returns the specification quantity of KMS user secret keys.
+                     * <p>Return the specification quantity of KMS user secret keys</p>
                      */
                     uint64_t m_cmkLimit;
                     bool m_cmkLimitHasBeenSet;
 
                     /**
-                     * Return dedicated cluster group.
+                     * <p>Return the dedicated cluster group</p>
                      */
                     std::vector<ExclusiveHSM> m_exclusiveHSMList;
                     bool m_exclusiveHSMListHasBeenSet;
 
                     /**
-                     * Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+                     * <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
                      */
                     bool m_isAllowedDataKeyHosted;
                     bool m_isAllowedDataKeyHostedHasBeenSet;
 
                     /**
-                     * Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+                     * <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
                      */
                     uint64_t m_dataKeyLimit;
                     bool m_dataKeyLimitHasBeenSet;
 
                     /**
-                     * Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+                     * <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
                      */
                     uint64_t m_freeDataKeyLimit;
                     bool m_freeDataKeyLimitHasBeenSet;
 
                     /**
-                     * Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+                     * <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
                      */
                     uint64_t m_dataKeyUsedCount;
                     bool m_dataKeyUsedCountHasBeenSet;
 
                     /**
-                     * Specifies the target region of the sync task.
+                     * <p>Target region info of the sync task</p>
                      */
                     std::vector<DestinationSyncConfig> m_syncTaskList;
                     bool m_syncTaskListHasBeenSet;
 
                     /**
-                     * Whether synchronization task is supported. true: supported; false: unsupported.
+                     * <p>Whether sync task is supported. true: supported, false: unsupported.</p>
                      */
                     bool m_isAllowedSync;
                     bool m_isAllowedSyncHasBeenSet;
+
+                    /**
+                     * <p>QPS in the region</p>
+                     */
+                    uint64_t m_qpsLimit;
+                    bool m_qpsLimitHasBeenSet;
+
+                    /**
+                     * <p>Total QPS value</p>
+                     */
+                    uint64_t m_qpsTotalLimit;
+                    bool m_qpsTotalLimitHasBeenSet;
+
+                    /**
+                     * <p>QPS in the region</p>
+                     */
+                    std::vector<RegionQps> m_regionsQps;
+                    bool m_regionsQpsHasBeenSet;
 
                 };
             }

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
-                     * @return EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * 获取<p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+                     * @return EmailIdentity <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
                      * 
                      */
                     std::string GetEmailIdentity() const;
 
                     /**
-                     * 设置Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
-                     * @param _emailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * 设置<p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+                     * @param _emailIdentity <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
                      * 
                      */
                     void SetEmailIdentity(const std::string& _emailIdentity);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool EmailIdentityHasBeenSet() const;
 
                     /**
-                     * 获取Generated dkim key length. valid values: 0 (1024), 1 (2048).
-                     * @return DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * 获取<p>Generated dkim key length. 0:1024, 1:2048</p>
+                     * @return DKIMOption <p>Generated dkim key length. 0:1024, 1:2048</p>
                      * 
                      */
                     uint64_t GetDKIMOption() const;
 
                     /**
-                     * 设置Generated dkim key length. valid values: 0 (1024), 1 (2048).
-                     * @param _dKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * 设置<p>Generated dkim key length. 0:1024, 1:2048</p>
+                     * @param _dKIMOption <p>Generated dkim key length. 0:1024, 1:2048</p>
                      * 
                      */
                     void SetDKIMOption(const uint64_t& _dKIMOption);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DKIMOptionHasBeenSet() const;
 
                     /**
-                     * 获取tag.
-                     * @return TagList tag.
+                     * 获取<p>tag</p>
+                     * @return TagList <p>tag</p>
                      * 
                      */
                     std::vector<TagList> GetTagList() const;
 
                     /**
-                     * 设置tag.
-                     * @param _tagList tag.
+                     * 设置<p>tag</p>
+                     * @param _tagList <p>tag</p>
                      * 
                      */
                     void SetTagList(const std::vector<TagList>& _tagList);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
                      */
                     std::string m_emailIdentity;
                     bool m_emailIdentityHasBeenSet;
 
                     /**
-                     * Generated dkim key length. valid values: 0 (1024), 1 (2048).
+                     * <p>Generated dkim key length. 0:1024, 1:2048</p>
                      */
                     uint64_t m_dKIMOption;
                     bool m_dKIMOptionHasBeenSet;
 
                     /**
-                     * tag.
+                     * <p>tag</p>
                      */
                     std::vector<TagList> m_tagList;
                     bool m_tagListHasBeenSet;

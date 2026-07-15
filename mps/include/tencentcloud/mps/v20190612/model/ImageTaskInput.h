@@ -126,15 +126,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EraseConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiPosterSuiteConfig 
+                     * 获取<p>AI image set configuration.</p>
+                     * @return AiPosterSuiteConfig <p>AI image set configuration.</p>
                      * 
                      */
                     AiPosterSuiteConfig GetAiPosterSuiteConfig() const;
 
                     /**
-                     * 设置
-                     * @param _aiPosterSuiteConfig 
+                     * 设置<p>AI image set configuration.</p>
+                     * @param _aiPosterSuiteConfig <p>AI image set configuration.</p>
                      * 
                      */
                     void SetAiPosterSuiteConfig(const AiPosterSuiteConfig& _aiPosterSuiteConfig);
@@ -170,7 +170,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_eraseConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>AI image set configuration.</p>
                      */
                     AiPosterSuiteConfig m_aiPosterSuiteConfig;
                     bool m_aiPosterSuiteConfigHasBeenSet;

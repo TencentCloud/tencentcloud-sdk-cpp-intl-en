@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Globally unique CMK ID
-                     * @return KeyId Globally unique CMK ID
+                     * 获取<p>Globally unique ID of the CMK.</p>
+                     * @return KeyId <p>Globally unique ID of the CMK.</p>
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Globally unique CMK ID
-                     * @param _keyId Globally unique CMK ID
+                     * 设置<p>Globally unique ID of the CMK.</p>
+                     * @param _keyId <p>Globally unique ID of the CMK.</p>
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias that makes a key more recognizable and understandable
-                     * @return Alias Alias that makes a key more recognizable and understandable
+                     * 获取<p>An alias name as a key that is easier to identify and understand</p>
+                     * @return Alias <p>An alias name as a key that is easier to identify and understand</p>
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias that makes a key more recognizable and understandable
-                     * @param _alias Alias that makes a key more recognizable and understandable
+                     * 设置<p>An alias name as a key that is easier to identify and understand</p>
+                     * @param _alias <p>An alias name as a key that is easier to identify and understand</p>
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Key creation time
-                     * @return CreateTime Key creation time
+                     * 获取<p>Key creation time</p>
+                     * @return CreateTime <p>Key creation time</p>
                      * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Key creation time
-                     * @param _createTime Key creation time
+                     * 设置<p>Key creation time</p>
+                     * @param _createTime <p>Key creation time</p>
                      * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取CMK description
-                     * @return Description CMK description
+                     * 获取<p>Description of the CMK.</p>
+                     * @return Description <p>Description of the CMK.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置CMK description
-                     * @param _description CMK description
+                     * 设置<p>Description of the CMK.</p>
+                     * @param _description <p>Description of the CMK.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
-                     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+                     * 获取<p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+                     * @return KeyState <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
                      * 
                      */
                     std::string GetKeyState() const;
 
                     /**
-                     * 设置CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
-                     * @param _keyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+                     * 设置<p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+                     * @param _keyState <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
                      * 
                      */
                     void SetKeyState(const std::string& _keyState);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool KeyStateHasBeenSet() const;
 
                     /**
-                     * 获取CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
-                     * @return KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * 获取<p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+                     * @return KeyUsage <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
                      * 
                      */
                     std::string GetKeyUsage() const;
 
                     /**
-                     * 设置CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
-                     * @param _keyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * 设置<p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+                     * @param _keyUsage <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
                      * 
                      */
                     void SetKeyUsage(const std::string& _keyUsage);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool KeyUsageHasBeenSet() const;
 
                     /**
-                     * 获取CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-                     * @return Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+                     * 获取<p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+                     * @return Type <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-                     * @param _type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+                     * 设置<p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+                     * @param _type <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Creator
-                     * @return CreatorUin Creator
+                     * 获取<p>Creator.</p>
+                     * @return CreatorUin <p>Creator.</p>
                      * 
                      */
                     uint64_t GetCreatorUin() const;
 
                     /**
-                     * 设置Creator
-                     * @param _creatorUin Creator
+                     * 设置<p>Creator.</p>
+                     * @param _creatorUin <p>Creator.</p>
                      * 
                      */
                     void SetCreatorUin(const uint64_t& _creatorUin);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool CreatorUinHasBeenSet() const;
 
                     /**
-                     * 获取Whether key rotation is enabled
-                     * @return KeyRotationEnabled Whether key rotation is enabled
+                     * 获取<p>Is key rotation function enabled?</p>
+                     * @return KeyRotationEnabled <p>Is key rotation function enabled?</p>
                      * 
                      */
                     bool GetKeyRotationEnabled() const;
 
                     /**
-                     * 设置Whether key rotation is enabled
-                     * @param _keyRotationEnabled Whether key rotation is enabled
+                     * 设置<p>Is key rotation function enabled?</p>
+                     * @param _keyRotationEnabled <p>Is key rotation function enabled?</p>
                      * 
                      */
                     void SetKeyRotationEnabled(const bool& _keyRotationEnabled);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool KeyRotationEnabledHasBeenSet() const;
 
                     /**
-                     * 获取CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
-                     * @return Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+                     * 获取<p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+                     * @return Owner <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
                      * 
                      */
                     std::string GetOwner() const;
 
                     /**
-                     * 设置CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
-                     * @param _owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+                     * 设置<p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+                     * @param _owner <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
                      * 
                      */
                     void SetOwner(const std::string& _owner);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool OwnerHasBeenSet() const;
 
                     /**
-                     * 获取Time of next rotation if key rotation is enabled
-                     * @return NextRotateTime Time of next rotation if key rotation is enabled
+                     * 获取<p>The time when the next rotation occurs with key rotation enabled</p>
+                     * @return NextRotateTime <p>The time when the next rotation occurs with key rotation enabled</p>
                      * 
                      */
                     uint64_t GetNextRotateTime() const;
 
                     /**
-                     * 设置Time of next rotation if key rotation is enabled
-                     * @param _nextRotateTime Time of next rotation if key rotation is enabled
+                     * 设置<p>The time when the next rotation occurs with key rotation enabled</p>
+                     * @param _nextRotateTime <p>The time when the next rotation occurs with key rotation enabled</p>
                      * 
                      */
                     void SetNextRotateTime(const uint64_t& _nextRotateTime);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool NextRotateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The time when scheduled deletion occurs.
-                     * @return DeletionDate The time when scheduled deletion occurs.
+                     * 获取<p>The time when schedule deletion</p>
+                     * @return DeletionDate <p>The time when schedule deletion</p>
                      * 
                      */
                     uint64_t GetDeletionDate() const;
 
                     /**
-                     * 设置The time when scheduled deletion occurs.
-                     * @param _deletionDate The time when scheduled deletion occurs.
+                     * 设置<p>The time when schedule deletion</p>
+                     * @param _deletionDate <p>The time when schedule deletion</p>
                      * 
                      */
                     void SetDeletionDate(const uint64_t& _deletionDate);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool DeletionDateHasBeenSet() const;
 
                     /**
-                     * 获取CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
-                     * @return Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+                     * 获取<p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+                     * @return Origin <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
-                     * @param _origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+                     * 设置<p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+                     * @param _origin <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
-                     * @return ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+                     * 获取<p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+                     * @return ValidTo <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
                      * 
                      */
                     uint64_t GetValidTo() const;
 
                     /**
-                     * 设置Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
-                     * @param _validTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+                     * 设置<p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+                     * @param _validTo <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
                      * 
                      */
                     void SetValidTo(const uint64_t& _validTo);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool ValidToHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-                     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * 获取<p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+                     * @return ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-                     * @param _resourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * 设置<p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+                     * @param _resourceId <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-                     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * 获取<p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+                     * @return HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
                      * 
                      */
                     std::string GetHsmClusterId() const;
 
                     /**
-                     * 设置HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-                     * @param _hsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * 设置<p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+                     * @param _hsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
                      * 
                      */
                     void SetHsmClusterId(const std::string& _hsmClusterId);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool HsmClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Key rotation period (days).
-                     * @return RotateDays Key rotation period (days).
+                     * 获取<p>Key rotation cycle (days)</p>
+                     * @return RotateDays <p>Key rotation cycle (days)</p>
                      * 
                      */
                     uint64_t GetRotateDays() const;
 
                     /**
-                     * 设置Key rotation period (days).
-                     * @param _rotateDays Key rotation period (days).
+                     * 设置<p>Key rotation cycle (days)</p>
+                     * @param _rotateDays <p>Key rotation cycle (days)</p>
                      * 
                      */
                     void SetRotateDays(const uint64_t& _rotateDays);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool RotateDaysHasBeenSet() const;
 
                     /**
-                     * 获取Last disorderly rotation time (Unix timestamp).
-                     * @return LastRotateTime Last disorderly rotation time (Unix timestamp).
+                     * 获取<p>Last rotation time (Unix timestamp).</p>
+                     * @return LastRotateTime <p>Last rotation time (Unix timestamp).</p>
                      * 
                      */
                     uint64_t GetLastRotateTime() const;
 
                     /**
-                     * 设置Last disorderly rotation time (Unix timestamp).
-                     * @param _lastRotateTime Last disorderly rotation time (Unix timestamp).
+                     * 设置<p>Last rotation time (Unix timestamp).</p>
+                     * @param _lastRotateTime <p>Last rotation time (Unix timestamp).</p>
                      * 
                      */
                     void SetLastRotateTime(const uint64_t& _lastRotateTime);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool LastRotateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
-                     * @return IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * 获取<p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+                     * @return IsSyncReplica <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
                      * 
                      */
                     int64_t GetIsSyncReplica() const;
 
                     /**
-                     * 设置Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
-                     * @param _isSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * 设置<p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+                     * @param _isSyncReplica <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
                      * 
                      */
                     void SetIsSyncReplica(const int64_t& _isSyncReplica);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool IsSyncReplicaHasBeenSet() const;
 
                     /**
-                     * 获取Synchronous original region.
-                     * @return SourceRegion Synchronous original region.
+                     * 获取<p>Synchronous original region</p>
+                     * @return SourceRegion <p>Synchronous original region</p>
                      * 
                      */
                     std::string GetSourceRegion() const;
 
                     /**
-                     * 设置Synchronous original region.
-                     * @param _sourceRegion Synchronous original region.
+                     * 设置<p>Synchronous original region</p>
+                     * @param _sourceRegion <p>Synchronous original region</p>
                      * 
                      */
                     void SetSourceRegion(const std::string& _sourceRegion);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool SourceRegionHasBeenSet() const;
 
                     /**
-                     * 获取The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-                     * @return SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * 获取<p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+                     * @return SyncStatus <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
                      * 
                      */
                     int64_t GetSyncStatus() const;
 
                     /**
-                     * 设置The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-                     * @param _syncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * 设置<p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+                     * @param _syncStatus <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
                      * 
                      */
                     void SetSyncStatus(const int64_t& _syncStatus);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool SyncStatusHasBeenSet() const;
 
                     /**
-                     * 获取Describes the synchronous result.
-                     * @return SyncMessages Describes the synchronous result.
+                     * 获取<p>Synchronous result description</p>
+                     * @return SyncMessages <p>Synchronous result description</p>
                      * 
                      */
                     std::string GetSyncMessages() const;
 
                     /**
-                     * 设置Describes the synchronous result.
-                     * @param _syncMessages Describes the synchronous result.
+                     * 设置<p>Synchronous result description</p>
+                     * @param _syncMessages <p>Synchronous result description</p>
                      * 
                      */
                     void SetSyncMessages(const std::string& _syncMessages);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool SyncMessagesHasBeenSet() const;
 
                     /**
-                     * 获取Start time of synchronization.
-                     * @return SyncStartTime Start time of synchronization.
+                     * 获取<p>Start time of synchronization</p>
+                     * @return SyncStartTime <p>Start time of synchronization</p>
                      * 
                      */
                     uint64_t GetSyncStartTime() const;
 
                     /**
-                     * 设置Start time of synchronization.
-                     * @param _syncStartTime Start time of synchronization.
+                     * 设置<p>Start time of synchronization</p>
+                     * @param _syncStartTime <p>Start time of synchronization</p>
                      * 
                      */
                     void SetSyncStartTime(const uint64_t& _syncStartTime);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool SyncStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the synchronous end time.
-                     * @return SyncEndTime Specifies the synchronous end time.
+                     * 获取<p>Synchronous end time</p>
+                     * @return SyncEndTime <p>Synchronous end time</p>
                      * 
                      */
                     uint64_t GetSyncEndTime() const;
 
                     /**
-                     * 设置Specifies the synchronous end time.
-                     * @param _syncEndTime Specifies the synchronous end time.
+                     * 设置<p>Synchronous end time</p>
+                     * @param _syncEndTime <p>Synchronous end time</p>
                      * 
                      */
                     void SetSyncEndTime(const uint64_t& _syncEndTime);
@@ -551,15 +551,15 @@ namespace TencentCloud
                     bool SyncEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Synchronous original cluster. if empty, it is a public cloud public cluster.
-                     * @return SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * 获取<p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+                     * @return SourceHsmClusterId <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
                      * 
                      */
                     std::string GetSourceHsmClusterId() const;
 
                     /**
-                     * 设置Synchronous original cluster. if empty, it is a public cloud public cluster.
-                     * @param _sourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * 设置<p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+                     * @param _sourceHsmClusterId <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
                      * 
                      */
                     void SetSourceHsmClusterId(const std::string& _sourceHsmClusterId);
@@ -572,15 +572,15 @@ namespace TencentCloud
                     bool SourceHsmClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Member account appId.
-                     * @return AccountAppId Member account appId.
+                     * 获取<p>Member account appId</p>
+                     * @return AccountAppId <p>Member account appId</p>
                      * 
                      */
                     uint64_t GetAccountAppId() const;
 
                     /**
-                     * 设置Member account appId.
-                     * @param _accountAppId Member account appId.
+                     * 设置<p>Member account appId</p>
+                     * @param _accountAppId <p>Member account appId</p>
                      * 
                      */
                     void SetAccountAppId(const uint64_t& _accountAppId);
@@ -593,15 +593,15 @@ namespace TencentCloud
                     bool AccountAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Member account UIN
-                     * @return AccountUin Member account UIN
+                     * 获取<p>member account uin</p>
+                     * @return AccountUin <p>member account uin</p>
                      * 
                      */
                     uint64_t GetAccountUin() const;
 
                     /**
-                     * 设置Member account UIN
-                     * @param _accountUin Member account UIN
+                     * 设置<p>member account uin</p>
+                     * @param _accountUin <p>member account uin</p>
                      * 
                      */
                     void SetAccountUin(const uint64_t& _accountUin);
@@ -614,15 +614,15 @@ namespace TencentCloud
                     bool AccountUinHasBeenSet() const;
 
                     /**
-                     * 获取Member account name.
-                     * @return AccountName Member account name.
+                     * 获取<p>Member account name</p>
+                     * @return AccountName <p>Member account name</p>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Member account name.
-                     * @param _accountName Member account name.
+                     * 设置<p>Member account name</p>
+                     * @param _accountName <p>Member account name</p>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -637,169 +637,169 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Globally unique CMK ID
+                     * <p>Globally unique ID of the CMK.</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Alias that makes a key more recognizable and understandable
+                     * <p>An alias name as a key that is easier to identify and understand</p>
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Key creation time
+                     * <p>Key creation time</p>
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * CMK description
+                     * <p>Description of the CMK.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+                     * <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
                      */
                     std::string m_keyState;
                     bool m_keyStateHasBeenSet;
 
                     /**
-                     * CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+                     * <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
                      */
                     std::string m_keyUsage;
                     bool m_keyUsageHasBeenSet;
 
                     /**
-                     * CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+                     * <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Creator
+                     * <p>Creator.</p>
                      */
                     uint64_t m_creatorUin;
                     bool m_creatorUinHasBeenSet;
 
                     /**
-                     * Whether key rotation is enabled
+                     * <p>Is key rotation function enabled?</p>
                      */
                     bool m_keyRotationEnabled;
                     bool m_keyRotationEnabledHasBeenSet;
 
                     /**
-                     * CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+                     * <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
                      */
                     std::string m_owner;
                     bool m_ownerHasBeenSet;
 
                     /**
-                     * Time of next rotation if key rotation is enabled
+                     * <p>The time when the next rotation occurs with key rotation enabled</p>
                      */
                     uint64_t m_nextRotateTime;
                     bool m_nextRotateTimeHasBeenSet;
 
                     /**
-                     * The time when scheduled deletion occurs.
+                     * <p>The time when schedule deletion</p>
                      */
                     uint64_t m_deletionDate;
                     bool m_deletionDateHasBeenSet;
 
                     /**
-                     * CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+                     * <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+                     * <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
                      */
                     uint64_t m_validTo;
                     bool m_validToHasBeenSet;
 
                     /**
-                     * Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+                     * <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+                     * <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
                      */
                     std::string m_hsmClusterId;
                     bool m_hsmClusterIdHasBeenSet;
 
                     /**
-                     * Key rotation period (days).
+                     * <p>Key rotation cycle (days)</p>
                      */
                     uint64_t m_rotateDays;
                     bool m_rotateDaysHasBeenSet;
 
                     /**
-                     * Last disorderly rotation time (Unix timestamp).
+                     * <p>Last rotation time (Unix timestamp).</p>
                      */
                     uint64_t m_lastRotateTime;
                     bool m_lastRotateTimeHasBeenSet;
 
                     /**
-                     * Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+                     * <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
                      */
                     int64_t m_isSyncReplica;
                     bool m_isSyncReplicaHasBeenSet;
 
                     /**
-                     * Synchronous original region.
+                     * <p>Synchronous original region</p>
                      */
                     std::string m_sourceRegion;
                     bool m_sourceRegionHasBeenSet;
 
                     /**
-                     * The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+                     * <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
                      */
                     int64_t m_syncStatus;
                     bool m_syncStatusHasBeenSet;
 
                     /**
-                     * Describes the synchronous result.
+                     * <p>Synchronous result description</p>
                      */
                     std::string m_syncMessages;
                     bool m_syncMessagesHasBeenSet;
 
                     /**
-                     * Start time of synchronization.
+                     * <p>Start time of synchronization</p>
                      */
                     uint64_t m_syncStartTime;
                     bool m_syncStartTimeHasBeenSet;
 
                     /**
-                     * Specifies the synchronous end time.
+                     * <p>Synchronous end time</p>
                      */
                     uint64_t m_syncEndTime;
                     bool m_syncEndTimeHasBeenSet;
 
                     /**
-                     * Synchronous original cluster. if empty, it is a public cloud public cluster.
+                     * <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
                      */
                     std::string m_sourceHsmClusterId;
                     bool m_sourceHsmClusterIdHasBeenSet;
 
                     /**
-                     * Member account appId.
+                     * <p>Member account appId</p>
                      */
                     uint64_t m_accountAppId;
                     bool m_accountAppIdHasBeenSet;
 
                     /**
-                     * Member account UIN
+                     * <p>member account uin</p>
                      */
                     uint64_t m_accountUin;
                     bool m_accountUinHasBeenSet;
 
                     /**
-                     * Member account name.
+                     * <p>Member account name</p>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/SmartSubtitleTaskFullTextSegmentItem.h>
 #include <tencentcloud/mps/v20190612/model/SubtitleResult.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
 
@@ -47,6 +48,31 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取<p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SegmentSet <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::vector<SmartSubtitleTaskFullTextSegmentItem> GetSegmentSet() const;
+
+                    /**
+                     * 设置<p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _segmentSet <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetSegmentSet(const std::vector<SmartSubtitleTaskFullTextSegmentItem>& _segmentSet);
+
+                    /**
+                     * 判断参数 SegmentSet 是否已赋值
+                     * @return SegmentSet 是否已赋值
+                     * 
+                     */
+                    bool SegmentSetHasBeenSet() const;
 
                     /**
                      * 获取<p>Subtitle recognition result</p>
@@ -124,6 +150,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SmartSubtitleTaskFullTextSegmentItem> m_segmentSet;
+                    bool m_segmentSetHasBeenSet;
 
                     /**
                      * <p>Subtitle recognition result</p>

@@ -738,7 +738,7 @@ Smart subtitle (full speech, speech hotword, and speech translation).
                 CreateAdaptiveDynamicStreamingTemplateOutcomeCallable CreateAdaptiveDynamicStreamingTemplateCallable(const Model::CreateAdaptiveDynamicStreamingTemplateRequest& request);
 
                 /**
-                 *This API is used to create AIGC audio generation tasks.
+                 *This API is used to create AI audio generation tasks.
                  * @param req CreateAigcAudioTaskRequest
                  * @return CreateAigcAudioTaskOutcome
                  */
@@ -1217,7 +1217,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAdaptiveDynamicStreamingTemplatesOutcomeCallable DescribeAdaptiveDynamicStreamingTemplatesCallable(const Model::DescribeAdaptiveDynamicStreamingTemplatesRequest& request);
 
                 /**
-                 *This API is used to query the progress of AIGC audio generation tasks and obtain the generation results.
+                 *This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
                  * @param req DescribeAigcAudioTaskRequest
                  * @return DescribeAigcAudioTaskOutcome
                  */

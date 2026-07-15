@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取<p>Email Subject</p>
-                     * @return Subject <p>Email Subject</p>
+                     * 获取<p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
+                     * @return Subject <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
                      * 
                      */
                     std::string GetSubject() const;
 
                     /**
-                     * 设置<p>Email Subject</p>
-                     * @param _subject <p>Email Subject</p>
+                     * 设置<p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
+                     * @param _subject <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
                      * 
                      */
                     void SetSubject(const std::string& _subject);
@@ -348,7 +348,7 @@ namespace TencentCloud
                     bool m_fromEmailAddressHasBeenSet;
 
                     /**
-                     * <p>Email Subject</p>
+                     * <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
                      */
                     std::string m_subject;
                     bool m_subjectHasBeenSet;

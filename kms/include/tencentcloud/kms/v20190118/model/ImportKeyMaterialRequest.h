@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
-                     * @return EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+                     * 获取<p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+                     * @return EncryptedKeyMaterial <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
                      * 
                      */
                     std::string GetEncryptedKeyMaterial() const;
 
                     /**
-                     * 设置Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
-                     * @param _encryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+                     * 设置<p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+                     * @param _encryptedKeyMaterial <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
                      * 
                      */
                     void SetEncryptedKeyMaterial(const std::string& _encryptedKeyMaterial);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool EncryptedKeyMaterialHasBeenSet() const;
 
                     /**
-                     * 获取Import token obtained by calling `GetParametersForImport`.
-                     * @return ImportToken Import token obtained by calling `GetParametersForImport`.
+                     * 获取<p>Import token obtained by calling GetParametersForImport.</p>
+                     * @return ImportToken <p>Import token obtained by calling GetParametersForImport.</p>
                      * 
                      */
                     std::string GetImportToken() const;
 
                     /**
-                     * 设置Import token obtained by calling `GetParametersForImport`.
-                     * @param _importToken Import token obtained by calling `GetParametersForImport`.
+                     * 设置<p>Import token obtained by calling GetParametersForImport.</p>
+                     * @param _importToken <p>Import token obtained by calling GetParametersForImport.</p>
                      * 
                      */
                     void SetImportToken(const std::string& _importToken);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ImportTokenHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
-                     * @return KeyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+                     * 获取<p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+                     * @return KeyId <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
-                     * @param _keyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+                     * 设置<p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+                     * @param _keyId <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
-                     * @return ValidTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+                     * 获取<p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
+                     * @return ValidTo <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
                      * 
                      */
                     uint64_t GetValidTo() const;
 
                     /**
-                     * 设置Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
-                     * @param _validTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+                     * 设置<p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
+                     * @param _validTo <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
                      * 
                      */
                     void SetValidTo(const uint64_t& _validTo);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+                     * <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
                      */
                     std::string m_encryptedKeyMaterial;
                     bool m_encryptedKeyMaterialHasBeenSet;
 
                     /**
-                     * Import token obtained by calling `GetParametersForImport`.
+                     * <p>Import token obtained by calling GetParametersForImport.</p>
                      */
                     std::string m_importToken;
                     bool m_importTokenHasBeenSet;
 
                     /**
-                     * Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+                     * <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+                     * <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
                      */
                     uint64_t m_validTo;
                     bool m_validToHasBeenSet;

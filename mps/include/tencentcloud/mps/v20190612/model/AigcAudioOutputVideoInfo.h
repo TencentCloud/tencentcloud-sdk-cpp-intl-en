@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output video information of the AIGC audio generation task.
                 */
                 class AigcAudioOutputVideoInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取<p>Video URL.</p>
+                     * @return Url <p>Video URL.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置<p>Video URL.</p>
+                     * @param _url <p>Video URL.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取<p>Video duration.</p>
+                     * @return Duration <p>Video duration.</p>
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置<p>Video duration.</p>
+                     * @param _duration <p>Video duration.</p>
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Video URL.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video duration.</p>
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;

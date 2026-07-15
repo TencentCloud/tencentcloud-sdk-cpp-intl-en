@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Reference audio information.
                 */
                 class AigcAudioReferenceAudioInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Reference audio URL, which must be accessible from the public network.</p>
+                     * @return AudioUrl <p>Reference audio URL, which must be accessible from the public network.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>Reference audio URL, which must be accessible from the public network.</p>
+                     * @param _audioUrl <p>Reference audio URL, which must be accessible from the public network.</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Reference audio URL, which must be accessible from the public network.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
