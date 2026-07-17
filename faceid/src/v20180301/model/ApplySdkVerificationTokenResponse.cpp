@@ -24,7 +24,8 @@ using namespace TencentCloud::Faceid::V20180301::Model;
 using namespace std;
 
 ApplySdkVerificationTokenResponse::ApplySdkVerificationTokenResponse() :
-    m_sdkTokenHasBeenSet(false)
+    m_sdkTokenHasBeenSet(false),
+    m_serverParamInfoHasBeenSet(false)
 {
 }
 
@@ -72,6 +73,16 @@ CoreInternalOutcome ApplySdkVerificationTokenResponse::Deserialize(const string 
         m_sdkTokenHasBeenSet = true;
     }
 
+    if (rsp.HasMember("ServerParamInfo") && !rsp["ServerParamInfo"].IsNull())
+    {
+        if (!rsp["ServerParamInfo"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ServerParamInfo` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_serverParamInfo = string(rsp["ServerParamInfo"].GetString());
+        m_serverParamInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -88,6 +99,14 @@ string ApplySdkVerificationTokenResponse::ToJsonString() const
         string key = "SdkToken";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_sdkToken.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_serverParamInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ServerParamInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_serverParamInfo.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,6 +129,16 @@ string ApplySdkVerificationTokenResponse::GetSdkToken() const
 bool ApplySdkVerificationTokenResponse::SdkTokenHasBeenSet() const
 {
     return m_sdkTokenHasBeenSet;
+}
+
+string ApplySdkVerificationTokenResponse::GetServerParamInfo() const
+{
+    return m_serverParamInfo;
+}
+
+bool ApplySdkVerificationTokenResponse::ServerParamInfoHasBeenSet() const
+{
+    return m_serverParamInfoHasBeenSet;
 }
 
 

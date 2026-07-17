@@ -123,32 +123,32 @@ Default value: 4
                     /**
                      * 获取Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * @return IdCardType Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * 
@@ -158,32 +158,32 @@ Mainland id card.
                     /**
                      * 设置Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * @param _idCardType Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      * 
@@ -455,15 +455,15 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                     bool AllowExpiredDocumentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
-                     * @return SkipResultPage <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+                     * 获取<p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+                     * @return SkipResultPage <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
                      * 
                      */
                     bool GetSkipResultPage() const;
 
                     /**
-                     * 设置<p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
-                     * @param _skipResultPage <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+                     * 设置<p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+                     * @param _skipResultPage <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
                      * 
                      */
                     void SetSkipResultPage(const bool& _skipResultPage);
@@ -542,6 +542,115 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool EnableForgeryDetectionImagesHasBeenSet() const;
 
+                    /**
+                     * 获取Encrypted metadata generated by the SDK
+                     * @return MetaData Encrypted metadata generated by the SDK
+                     * 
+                     */
+                    std::string GetMetaData() const;
+
+                    /**
+                     * 设置Encrypted metadata generated by the SDK
+                     * @param _metaData Encrypted metadata generated by the SDK
+                     * 
+                     */
+                    void SetMetaData(const std::string& _metaData);
+
+                    /**
+                     * 判断参数 MetaData 是否已赋值
+                     * @return MetaData 是否已赋值
+                     * 
+                     */
+                    bool MetaDataHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+                     * @return SkipLaunchPage <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetSkipLaunchPage() const;
+
+                    /**
+                     * 设置<p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+                     * @param _skipLaunchPage <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    void SetSkipLaunchPage(const bool& _skipLaunchPage);
+
+                    /**
+                     * 判断参数 SkipLaunchPage 是否已赋值
+                     * @return SkipLaunchPage 是否已赋值
+                     * 
+                     */
+                    bool SkipLaunchPageHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+                     * @return SkipOcrConfirmPage <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetSkipOcrConfirmPage() const;
+
+                    /**
+                     * 设置<p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+                     * @param _skipOcrConfirmPage <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    void SetSkipOcrConfirmPage(const bool& _skipOcrConfirmPage);
+
+                    /**
+                     * 判断参数 SkipOcrConfirmPage 是否已赋值
+                     * @return SkipOcrConfirmPage 是否已赋值
+                     * 
+                     */
+                    bool SkipOcrConfirmPageHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+                     * @return HideProgressBar <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetHideProgressBar() const;
+
+                    /**
+                     * 设置<p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+                     * @param _hideProgressBar <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    void SetHideProgressBar(const bool& _hideProgressBar);
+
+                    /**
+                     * 判断参数 HideProgressBar 是否已赋值
+                     * @return HideProgressBar 是否已赋值
+                     * 
+                     */
+                    bool HideProgressBarHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+                     * @return AllowUploadPhoto <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetAllowUploadPhoto() const;
+
+                    /**
+                     * 设置<p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+                     * @param _allowUploadPhoto <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    void SetAllowUploadPhoto(const bool& _allowUploadPhoto);
+
+                    /**
+                     * 判断参数 AllowUploadPhoto 是否已赋值
+                     * @return AllowUploadPhoto 是否已赋值
+                     * 
+                     */
+                    bool AllowUploadPhotoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -568,17 +677,17 @@ Default value: 4
                     /**
                      * Specifies the identity document type used for authentication. valid values:.  
 
-HK (default): hong kong (china) identity card.
+1. HK (default): hong kong (china) identity card.
 2. ML: malaysian identity card.
-Indonesian identity card.
+3. Indonesian identity card.
 4. PhilippinesVoteID: specifies the voter card in the philippines.
 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
 6. PhilippinesTinID: specifies the philippines tin id.
 7. PhilippinesSSSID: specifies the SSSID in the philippines.
 8. philippines UMID: specifies the philippines UMID.
 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-ThailandIDCard: specifies the thai identity card.
-Mainland id card.
+10. ThailandIDCard: specifies the thai identity card.
+11. Mainland id card.
 12. SingaporeIDCard: specifies the Singapore id card.
 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
                      */
@@ -657,7 +766,7 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                     bool m_allowExpiredDocumentHasBeenSet;
 
                     /**
-                     * <p>Whether to display the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
+                     * <p>Controls visibility of the final result page</p><p>Enumeration values:</p><ul><li>true: Do not display the result page</li><li>false: Display the result page</li></ul><p>Default value: false</p>
                      */
                     bool m_skipResultPage;
                     bool m_skipResultPageHasBeenSet;
@@ -680,6 +789,37 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool m_enableForgeryDetectionImages;
                     bool m_enableForgeryDetectionImagesHasBeenSet;
+
+                    /**
+                     * Encrypted metadata generated by the SDK
+                     */
+                    std::string m_metaData;
+                    bool m_metaDataHasBeenSet;
+
+                    /**
+                     * <p>Controls visibility of the launch page</p><p>Enumeration values:</p><ul><li>true: Do not display the launch page</li><li>false: Display the launch page</li></ul><p>Default value: false</p>
+                     */
+                    bool m_skipLaunchPage;
+                    bool m_skipLaunchPageHasBeenSet;
+
+                    /**
+                     * <p>Controls visibility of the information confirmation page </p><p>Enumeration values:</p><ul><li>true: Do not display the information confirmation page</li><li>false: Display the information confirmation page</li></ul><p>Default value: false</p>
+                     */
+                    bool m_skipOcrConfirmPage;
+                    bool m_skipOcrConfirmPageHasBeenSet;
+
+                    /**
+                     * <p>Controls whether to hide the top progress bar across all pages of the entire process </p><p>Enumeration values:</p><ul><li>true: Do not display the progress bar</li><li>false: Display the progress bar</li></ul><p>Default value: false</p>
+                     */
+                    bool m_hideProgressBar;
+                    bool m_hideProgressBarHasBeenSet;
+
+                    /**
+                     * <p>Whether uploading photos from the album is permitted for verification during the ID validation phase (prohibited when single-angle multi-image forgery detection is enabled)
+ </p><p>Enumeration values:</p><ul><li>true: Album photo upload for verification enabled</li><li>false: Album photo upload for verification disabled</li></ul><p>Default value: false</p>
+                     */
+                    bool m_allowUploadPhoto;
+                    bool m_allowUploadPhotoHasBeenSet;
 
                 };
             }

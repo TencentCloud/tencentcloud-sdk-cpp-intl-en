@@ -38,7 +38,12 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_skipResultPageHasBeenSet(false),
     m_cardOcrDisplayFieldsHasBeenSet(false),
     m_retryLimitHasBeenSet(false),
-    m_enableForgeryDetectionImagesHasBeenSet(false)
+    m_enableForgeryDetectionImagesHasBeenSet(false),
+    m_metaDataHasBeenSet(false),
+    m_skipLaunchPageHasBeenSet(false),
+    m_skipOcrConfirmPageHasBeenSet(false),
+    m_hideProgressBarHasBeenSet(false),
+    m_allowUploadPhotoHasBeenSet(false)
 {
 }
 
@@ -185,6 +190,46 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "EnableForgeryDetectionImages";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableForgeryDetectionImages, allocator);
+    }
+
+    if (m_metaDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MetaData";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_metaData.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_skipLaunchPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipLaunchPage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_skipLaunchPage, allocator);
+    }
+
+    if (m_skipOcrConfirmPageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SkipOcrConfirmPage";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_skipOcrConfirmPage, allocator);
+    }
+
+    if (m_hideProgressBarHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HideProgressBar";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_hideProgressBar, allocator);
+    }
+
+    if (m_allowUploadPhotoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllowUploadPhoto";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_allowUploadPhoto, allocator);
     }
 
 
@@ -449,6 +494,86 @@ void ApplySdkVerificationTokenRequest::SetEnableForgeryDetectionImages(const boo
 bool ApplySdkVerificationTokenRequest::EnableForgeryDetectionImagesHasBeenSet() const
 {
     return m_enableForgeryDetectionImagesHasBeenSet;
+}
+
+string ApplySdkVerificationTokenRequest::GetMetaData() const
+{
+    return m_metaData;
+}
+
+void ApplySdkVerificationTokenRequest::SetMetaData(const string& _metaData)
+{
+    m_metaData = _metaData;
+    m_metaDataHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::MetaDataHasBeenSet() const
+{
+    return m_metaDataHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetSkipLaunchPage() const
+{
+    return m_skipLaunchPage;
+}
+
+void ApplySdkVerificationTokenRequest::SetSkipLaunchPage(const bool& _skipLaunchPage)
+{
+    m_skipLaunchPage = _skipLaunchPage;
+    m_skipLaunchPageHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SkipLaunchPageHasBeenSet() const
+{
+    return m_skipLaunchPageHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetSkipOcrConfirmPage() const
+{
+    return m_skipOcrConfirmPage;
+}
+
+void ApplySdkVerificationTokenRequest::SetSkipOcrConfirmPage(const bool& _skipOcrConfirmPage)
+{
+    m_skipOcrConfirmPage = _skipOcrConfirmPage;
+    m_skipOcrConfirmPageHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::SkipOcrConfirmPageHasBeenSet() const
+{
+    return m_skipOcrConfirmPageHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetHideProgressBar() const
+{
+    return m_hideProgressBar;
+}
+
+void ApplySdkVerificationTokenRequest::SetHideProgressBar(const bool& _hideProgressBar)
+{
+    m_hideProgressBar = _hideProgressBar;
+    m_hideProgressBarHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::HideProgressBarHasBeenSet() const
+{
+    return m_hideProgressBarHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetAllowUploadPhoto() const
+{
+    return m_allowUploadPhoto;
+}
+
+void ApplySdkVerificationTokenRequest::SetAllowUploadPhoto(const bool& _allowUploadPhoto)
+{
+    m_allowUploadPhoto = _allowUploadPhoto;
+    m_allowUploadPhotoHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::AllowUploadPhotoHasBeenSet() const
+{
+    return m_allowUploadPhotoHasBeenSet;
 }
 
 
