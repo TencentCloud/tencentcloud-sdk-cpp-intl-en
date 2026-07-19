@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>CI/CD key ID.</p>
-                     * @return PipelineId <p>CI/CD key ID.</p>
+                     * 获取<p>CICD ID</p>
+                     * @return PipelineId <p>CICD ID</p>
                      * 
                      */
                     std::string GetPipelineId() const;
 
                     /**
-                     * 设置<p>CI/CD key ID.</p>
-                     * @param _pipelineId <p>CI/CD key ID.</p>
+                     * 设置<p>CICD ID</p>
+                     * @param _pipelineId <p>CICD ID</p>
                      * 
                      */
                     void SetPipelineId(const std::string& _pipelineId);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>CI/CD key ID.</p>
+                     * <p>CICD ID</p>
                      */
                     std::string m_pipelineId;
                     bool m_pipelineIdHasBeenSet;

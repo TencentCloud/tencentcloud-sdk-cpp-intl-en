@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Mini program appid.</p>
-                     * @return MNPId <p>Mini program appid.</p>
+                     * 获取<p>Mini program or mini game appid.</p>
+                     * @return MNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置<p>Mini program appid.</p>
-                     * @param _mNPId <p>Mini program appid.</p>
+                     * 设置<p>Mini program or mini game appid.</p>
+                     * @param _mNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>CI/CD key ID.</p>
-                     * @return PipelineId <p>CI/CD key ID.</p>
+                     * 获取<p>CICD ID</p>
+                     * @return PipelineId <p>CICD ID</p>
                      * 
                      */
                     std::string GetPipelineId() const;
 
                     /**
-                     * 设置<p>CI/CD key ID.</p>
-                     * @param _pipelineId <p>CI/CD key ID.</p>
+                     * 设置<p>CICD ID</p>
+                     * @param _pipelineId <p>CICD ID</p>
                      * 
                      */
                     void SetPipelineId(const std::string& _pipelineId);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * <p>Mini program appid.</p>
+                     * <p>Mini program or mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * <p>CI/CD key ID.</p>
+                     * <p>CICD ID</p>
                      */
                     std::string m_pipelineId;
                     bool m_pipelineIdHasBeenSet;

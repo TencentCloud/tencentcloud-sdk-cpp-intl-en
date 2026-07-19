@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcsas/v20250106/model/CategoryInfo.h>
+#include <tencentcloud/tcsas/v20250106/model/AgeRatingItem.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mini program or mini game appid.
-                     * @return MNPId Mini program or mini game appid.
+                     * 获取<p>Mini program or mini game appid.</p>
+                     * @return MNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     std::string GetMNPId() const;
 
                     /**
-                     * 设置Mini program or mini game appid.
-                     * @param _mNPId Mini program or mini game appid.
+                     * 设置<p>Mini program or mini game appid.</p>
+                     * @param _mNPId <p>Mini program or mini game appid.</p>
                      * 
                      */
                     void SetMNPId(const std::string& _mNPId);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool MNPIdHasBeenSet() const;
 
                     /**
-                     * 获取Mini program or mini game icon.
-                     * @return MNPIcon Mini program or mini game icon.
+                     * 获取<p>Mini program or mini game icon.</p>
+                     * @return MNPIcon <p>Mini program or mini game icon.</p>
                      * 
                      */
                     std::string GetMNPIcon() const;
 
                     /**
-                     * 设置Mini program or mini game icon.
-                     * @param _mNPIcon Mini program or mini game icon.
+                     * 设置<p>Mini program or mini game icon.</p>
+                     * @param _mNPIcon <p>Mini program or mini game icon.</p>
                      * 
                      */
                     void SetMNPIcon(const std::string& _mNPIcon);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool MNPIconHasBeenSet() const;
 
                     /**
-                     * 获取Mini program or mini game name.
-                     * @return MNPName Mini program or mini game name.
+                     * 获取<p>Mini program or mini game name.</p>
+                     * @return MNPName <p>Mini program or mini game name.</p>
                      * 
                      */
                     std::string GetMNPName() const;
 
                     /**
-                     * 设置Mini program or mini game name.
-                     * @param _mNPName Mini program or mini game name.
+                     * 设置<p>Mini program or mini game name.</p>
+                     * @param _mNPName <p>Mini program or mini game name.</p>
                      * 
                      */
                     void SetMNPName(const std::string& _mNPName);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool MNPNameHasBeenSet() const;
 
                     /**
-                     * 获取Mini program or mini game information.
-                     * @return MNPIntro Mini program or mini game information.
+                     * 获取<p>Mini program or mini game introduction.</p>
+                     * @return MNPIntro <p>Mini program or mini game introduction.</p>
                      * 
                      */
                     std::string GetMNPIntro() const;
 
                     /**
-                     * 设置Mini program or mini game information.
-                     * @param _mNPIntro Mini program or mini game information.
+                     * 设置<p>Mini program or mini game introduction.</p>
+                     * @param _mNPIntro <p>Mini program or mini game introduction.</p>
                      * 
                      */
                     void SetMNPIntro(const std::string& _mNPIntro);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool MNPIntroHasBeenSet() const;
 
                     /**
-                     * 获取Creator.
-                     * @return CreateUser Creator.
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator.
-                     * @param _createUser Creator.
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createTime Creation time.
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modifier.
-                     * @return UpdateUser Last modifier.
+                     * 获取<p>Last modifier.</p>
+                     * @return UpdateUser <p>Last modifier.</p>
                      * 
                      */
                     std::string GetUpdateUser() const;
 
                     /**
-                     * 设置Last modifier.
-                     * @param _updateUser Last modifier.
+                     * 设置<p>Last modifier.</p>
+                     * @param _updateUser <p>Last modifier.</p>
                      * 
                      */
                     void SetUpdateUser(const std::string& _updateUser);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool UpdateUserHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time.
-                     * @return UpdateTime Last modified time.
+                     * 获取<p>Last modified time.</p>
+                     * @return UpdateTime <p>Last modified time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time.
-                     * @param _updateTime Last modified time.
+                     * 设置<p>Last modified time.</p>
+                     * @param _updateTime <p>Last modified time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
-                     * @return OnlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+                     * 获取<p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
+                     * @return OnlineStatus <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
                      * 
                      */
                     int64_t GetOnlineStatus() const;
 
                     /**
-                     * 设置Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
-                     * @param _onlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+                     * 设置<p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
+                     * @param _onlineStatus <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
                      * 
                      */
                     void SetOnlineStatus(const int64_t& _onlineStatus);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool OnlineStatusHasBeenSet() const;
 
                     /**
-                     * 获取Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
-                     * @return EngineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+                     * 获取<p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
+                     * @return EngineType <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
                      * 
                      */
                     int64_t GetEngineType() const;
 
                     /**
-                     * 设置Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
-                     * @param _engineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+                     * 设置<p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
+                     * @param _engineType <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
                      * 
                      */
                     void SetEngineType(const int64_t& _engineType);
@@ -258,15 +259,15 @@ namespace TencentCloud
                     bool EngineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Category information.
-                     * @return CategoryList Category information.
+                     * 获取<p>Category information.</p>
+                     * @return CategoryList <p>Category information.</p>
                      * 
                      */
                     std::vector<CategoryInfo> GetCategoryList() const;
 
                     /**
-                     * 设置Category information.
-                     * @param _categoryList Category information.
+                     * 设置<p>Category information.</p>
+                     * @param _categoryList <p>Category information.</p>
                      * 
                      */
                     void SetCategoryList(const std::vector<CategoryInfo>& _categoryList);
@@ -279,15 +280,15 @@ namespace TencentCloud
                     bool CategoryListHasBeenSet() const;
 
                     /**
-                     * 获取Team ID.
-                     * @return TeamId Team ID.
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID.
-                     * @param _teamId Team ID.
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -300,15 +301,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name.
-                     * @return TeamName Team name.
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name.
-                     * @param _teamName Team name.
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -321,15 +322,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Team type ID.
-                     * @return TeamTypeId Team type ID.
+                     * 获取<p>Team type ID.</p>
+                     * @return TeamTypeId <p>Team type ID.</p>
                      * 
                      */
                     int64_t GetTeamTypeId() const;
 
                     /**
-                     * 设置Team type ID.
-                     * @param _teamTypeId Team type ID.
+                     * 设置<p>Team type ID.</p>
+                     * @param _teamTypeId <p>Team type ID.</p>
                      * 
                      */
                     void SetTeamTypeId(const int64_t& _teamTypeId);
@@ -341,91 +342,118 @@ namespace TencentCloud
                      */
                     bool TeamTypeIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Age rating information.</p>
+                     * @return AgeRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    std::vector<AgeRatingItem> GetAgeRatings() const;
+
+                    /**
+                     * 设置<p>Age rating information.</p>
+                     * @param _ageRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    void SetAgeRatings(const std::vector<AgeRatingItem>& _ageRatings);
+
+                    /**
+                     * 判断参数 AgeRatings 是否已赋值
+                     * @return AgeRatings 是否已赋值
+                     * 
+                     */
+                    bool AgeRatingsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Mini program or mini game appid.
+                     * <p>Mini program or mini game appid.</p>
                      */
                     std::string m_mNPId;
                     bool m_mNPIdHasBeenSet;
 
                     /**
-                     * Mini program or mini game icon.
+                     * <p>Mini program or mini game icon.</p>
                      */
                     std::string m_mNPIcon;
                     bool m_mNPIconHasBeenSet;
 
                     /**
-                     * Mini program or mini game name.
+                     * <p>Mini program or mini game name.</p>
                      */
                     std::string m_mNPName;
                     bool m_mNPNameHasBeenSet;
 
                     /**
-                     * Mini program or mini game information.
+                     * <p>Mini program or mini game introduction.</p>
                      */
                     std::string m_mNPIntro;
                     bool m_mNPIntroHasBeenSet;
 
                     /**
-                     * Creator.
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modifier.
+                     * <p>Last modifier.</p>
                      */
                     std::string m_updateUser;
                     bool m_updateUserHasBeenSet;
 
                     /**
-                     * Last modified time.
+                     * <p>Last modified time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+                     * <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
                      */
                     int64_t m_onlineStatus;
                     bool m_onlineStatusHasBeenSet;
 
                     /**
-                     * Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+                     * <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
                      */
                     int64_t m_engineType;
                     bool m_engineTypeHasBeenSet;
 
                     /**
-                     * Category information.
+                     * <p>Category information.</p>
                      */
                     std::vector<CategoryInfo> m_categoryList;
                     bool m_categoryListHasBeenSet;
 
                     /**
-                     * Team ID.
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name.
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Team type ID.
+                     * <p>Team type ID.</p>
                      */
                     int64_t m_teamTypeId;
                     bool m_teamTypeIdHasBeenSet;
+
+                    /**
+                     * <p>Age rating information.</p>
+                     */
+                    std::vector<AgeRatingItem> m_ageRatings;
+                    bool m_ageRatingsHasBeenSet;
 
                 };
             }

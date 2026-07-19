@@ -38,7 +38,8 @@ DescribeMPAllStageVersionsResp::DescribeMPAllStageVersionsResp() :
     m_showCaseHasBeenSet(false),
     m_rollbackVersionHasBeenSet(false),
     m_statusHasBeenSet(false),
-    m_versionCurrentStatusHasBeenSet(false)
+    m_versionCurrentStatusHasBeenSet(false),
+    m_ageRatingsHasBeenSet(false)
 {
 }
 
@@ -227,6 +228,26 @@ CoreInternalOutcome DescribeMPAllStageVersionsResp::Deserialize(const rapidjson:
         m_versionCurrentStatusHasBeenSet = true;
     }
 
+    if (value.HasMember("AgeRatings") && !value["AgeRatings"].IsNull())
+    {
+        if (!value["AgeRatings"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMPAllStageVersionsResp.AgeRatings` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AgeRatings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AgeRatingItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_ageRatings.push_back(item);
+        }
+        m_ageRatingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -376,6 +397,21 @@ void DescribeMPAllStageVersionsResp::ToJsonObject(rapidjson::Value &value, rapid
         string key = "VersionCurrentStatus";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_versionCurrentStatus, allocator);
+    }
+
+    if (m_ageRatingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AgeRatings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ageRatings.begin(); itr != m_ageRatings.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -667,5 +703,21 @@ void DescribeMPAllStageVersionsResp::SetVersionCurrentStatus(const int64_t& _ver
 bool DescribeMPAllStageVersionsResp::VersionCurrentStatusHasBeenSet() const
 {
     return m_versionCurrentStatusHasBeenSet;
+}
+
+vector<AgeRatingItem> DescribeMPAllStageVersionsResp::GetAgeRatings() const
+{
+    return m_ageRatings;
+}
+
+void DescribeMPAllStageVersionsResp::SetAgeRatings(const vector<AgeRatingItem>& _ageRatings)
+{
+    m_ageRatings = _ageRatings;
+    m_ageRatingsHasBeenSet = true;
+}
+
+bool DescribeMPAllStageVersionsResp::AgeRatingsHasBeenSet() const
+{
+    return m_ageRatingsHasBeenSet;
 }
 

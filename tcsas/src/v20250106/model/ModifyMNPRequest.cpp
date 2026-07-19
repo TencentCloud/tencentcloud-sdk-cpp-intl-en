@@ -30,7 +30,8 @@ ModifyMNPRequest::ModifyMNPRequest() :
     m_mNPIdHasBeenSet(false),
     m_platformIdHasBeenSet(false),
     m_mNPIconHasBeenSet(false),
-    m_i18nListHasBeenSet(false)
+    m_i18nListHasBeenSet(false),
+    m_ageRatingsHasBeenSet(false)
 {
 }
 
@@ -106,6 +107,21 @@ string ModifyMNPRequest::ToJsonString() const
 
         int i=0;
         for (auto itr = m_i18nList.begin(); itr != m_i18nList.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_ageRatingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AgeRatings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ageRatings.begin(); itr != m_ageRatings.end(); ++itr, ++i)
         {
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
@@ -246,6 +262,22 @@ void ModifyMNPRequest::SetI18nList(const vector<MNPI18NSyncDto>& _i18nList)
 bool ModifyMNPRequest::I18nListHasBeenSet() const
 {
     return m_i18nListHasBeenSet;
+}
+
+vector<AgeRatingItemReq> ModifyMNPRequest::GetAgeRatings() const
+{
+    return m_ageRatings;
+}
+
+void ModifyMNPRequest::SetAgeRatings(const vector<AgeRatingItemReq>& _ageRatings)
+{
+    m_ageRatings = _ageRatings;
+    m_ageRatingsHasBeenSet = true;
+}
+
+bool ModifyMNPRequest::AgeRatingsHasBeenSet() const
+{
+    return m_ageRatingsHasBeenSet;
 }
 
 

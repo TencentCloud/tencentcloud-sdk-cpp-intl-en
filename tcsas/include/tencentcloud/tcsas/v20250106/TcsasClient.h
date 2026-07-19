@@ -25,6 +25,12 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/tcsas/v20250106/model/AddTeamMemberRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/AddTeamMemberResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ApproveMNPPaymentEnableRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ApproveMNPPaymentEnableResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ApprovePaymentMerchantBindingRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ApprovePaymentMerchantBindingResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/ChangePaymentBoundMerchantRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/ChangePaymentBoundMerchantResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ConfigureMNGPreviewRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ConfigureMNGPreviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewRequest.h>
@@ -211,6 +217,8 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPOfflinePackageURLResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPageAnalysisDetailRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPageAnalysisDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPPaymentApprovalInfoRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPPaymentApprovalInfoResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPPreviewResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryRequest.h>
@@ -259,6 +267,8 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeUserListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DisableApplicationSensitiveAPIRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DisableApplicationSensitiveAPIResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DisableMNPPaymentRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DisableMNPPaymentResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/EnableApplicationSensitiveAPIRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/EnableApplicationSensitiveAPIResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ModifyApplicationRequest.h>
@@ -289,6 +299,8 @@
 #include <tencentcloud/tcsas/v20250106/model/ProcessMNPApprovalResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/QueryMNPMerchantInfoRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/QueryMNPMerchantInfoResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ReleaseMNGVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ReleaseMNGVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ReleaseMNPVersionRequest.h>
@@ -297,6 +309,10 @@
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNGResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/RemoveMNPResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/RequestPaymentEnableRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/RequestPaymentEnableResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/RequestPaymentMerchantBindingRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/RequestPaymentMerchantBindingResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/ResetMNPAppSecretRequest.h>
@@ -305,6 +321,10 @@
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNGVersionResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNPVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/RollbackMNPVersionResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/UnbindMNPPaymentMerchantRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/UnbindMNPPaymentMerchantResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/UnbindPaymentMerchantRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/UnbindPaymentMerchantResponse.h>
 
 
 namespace TencentCloud
@@ -322,6 +342,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddTeamMemberResponse> AddTeamMemberOutcome;
                 typedef std::future<AddTeamMemberOutcome> AddTeamMemberOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::AddTeamMemberRequest&, AddTeamMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddTeamMemberAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApproveMNPPaymentEnableResponse> ApproveMNPPaymentEnableOutcome;
+                typedef std::future<ApproveMNPPaymentEnableOutcome> ApproveMNPPaymentEnableOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ApproveMNPPaymentEnableRequest&, ApproveMNPPaymentEnableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApproveMNPPaymentEnableAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApprovePaymentMerchantBindingResponse> ApprovePaymentMerchantBindingOutcome;
+                typedef std::future<ApprovePaymentMerchantBindingOutcome> ApprovePaymentMerchantBindingOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ApprovePaymentMerchantBindingRequest&, ApprovePaymentMerchantBindingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApprovePaymentMerchantBindingAsyncHandler;
+                typedef Outcome<Core::Error, Model::ChangePaymentBoundMerchantResponse> ChangePaymentBoundMerchantOutcome;
+                typedef std::future<ChangePaymentBoundMerchantOutcome> ChangePaymentBoundMerchantOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::ChangePaymentBoundMerchantRequest&, ChangePaymentBoundMerchantOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangePaymentBoundMerchantAsyncHandler;
                 typedef Outcome<Core::Error, Model::ConfigureMNGPreviewResponse> ConfigureMNGPreviewOutcome;
                 typedef std::future<ConfigureMNGPreviewOutcome> ConfigureMNGPreviewOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ConfigureMNGPreviewRequest&, ConfigureMNGPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfigureMNGPreviewAsyncHandler;
@@ -601,6 +630,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPPageAnalysisDetailResponse> DescribeMNPPageAnalysisDetailOutcome;
                 typedef std::future<DescribeMNPPageAnalysisDetailOutcome> DescribeMNPPageAnalysisDetailOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPPageAnalysisDetailRequest&, DescribeMNPPageAnalysisDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPageAnalysisDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPPaymentApprovalInfoResponse> DescribeMNPPaymentApprovalInfoOutcome;
+                typedef std::future<DescribeMNPPaymentApprovalInfoOutcome> DescribeMNPPaymentApprovalInfoOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPPaymentApprovalInfoRequest&, DescribeMNPPaymentApprovalInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPaymentApprovalInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPPreviewResponse> DescribeMNPPreviewOutcome;
                 typedef std::future<DescribeMNPPreviewOutcome> DescribeMNPPreviewOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPPreviewRequest&, DescribeMNPPreviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPPreviewAsyncHandler;
@@ -673,6 +705,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableApplicationSensitiveAPIResponse> DisableApplicationSensitiveAPIOutcome;
                 typedef std::future<DisableApplicationSensitiveAPIOutcome> DisableApplicationSensitiveAPIOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DisableApplicationSensitiveAPIRequest&, DisableApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableApplicationSensitiveAPIAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableMNPPaymentResponse> DisableMNPPaymentOutcome;
+                typedef std::future<DisableMNPPaymentOutcome> DisableMNPPaymentOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DisableMNPPaymentRequest&, DisableMNPPaymentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableMNPPaymentAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableApplicationSensitiveAPIResponse> EnableApplicationSensitiveAPIOutcome;
                 typedef std::future<EnableApplicationSensitiveAPIOutcome> EnableApplicationSensitiveAPIOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::EnableApplicationSensitiveAPIRequest&, EnableApplicationSensitiveAPIOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableApplicationSensitiveAPIAsyncHandler;
@@ -718,6 +753,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ProcessMNPSensitiveAPIPermissionApprovalResponse> ProcessMNPSensitiveAPIPermissionApprovalOutcome;
                 typedef std::future<ProcessMNPSensitiveAPIPermissionApprovalOutcome> ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest&, ProcessMNPSensitiveAPIPermissionApprovalOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMNPSensitiveAPIPermissionApprovalAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryMNPMerchantInfoResponse> QueryMNPMerchantInfoOutcome;
+                typedef std::future<QueryMNPMerchantInfoOutcome> QueryMNPMerchantInfoOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::QueryMNPMerchantInfoRequest&, QueryMNPMerchantInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryMNPMerchantInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReleaseMNGVersionResponse> ReleaseMNGVersionOutcome;
                 typedef std::future<ReleaseMNGVersionOutcome> ReleaseMNGVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ReleaseMNGVersionRequest&, ReleaseMNGVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseMNGVersionAsyncHandler;
@@ -730,6 +768,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveMNPResponse> RemoveMNPOutcome;
                 typedef std::future<RemoveMNPOutcome> RemoveMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::RemoveMNPRequest&, RemoveMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveMNPAsyncHandler;
+                typedef Outcome<Core::Error, Model::RequestPaymentEnableResponse> RequestPaymentEnableOutcome;
+                typedef std::future<RequestPaymentEnableOutcome> RequestPaymentEnableOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::RequestPaymentEnableRequest&, RequestPaymentEnableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RequestPaymentEnableAsyncHandler;
+                typedef Outcome<Core::Error, Model::RequestPaymentMerchantBindingResponse> RequestPaymentMerchantBindingOutcome;
+                typedef std::future<RequestPaymentMerchantBindingOutcome> RequestPaymentMerchantBindingOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::RequestPaymentMerchantBindingRequest&, RequestPaymentMerchantBindingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RequestPaymentMerchantBindingAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetMNGAppSecretResponse> ResetMNGAppSecretOutcome;
                 typedef std::future<ResetMNGAppSecretOutcome> ResetMNGAppSecretOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::ResetMNGAppSecretRequest&, ResetMNGAppSecretOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetMNGAppSecretAsyncHandler;
@@ -742,6 +786,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RollbackMNPVersionResponse> RollbackMNPVersionOutcome;
                 typedef std::future<RollbackMNPVersionOutcome> RollbackMNPVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::RollbackMNPVersionRequest&, RollbackMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollbackMNPVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindMNPPaymentMerchantResponse> UnbindMNPPaymentMerchantOutcome;
+                typedef std::future<UnbindMNPPaymentMerchantOutcome> UnbindMNPPaymentMerchantOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::UnbindMNPPaymentMerchantRequest&, UnbindMNPPaymentMerchantOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindMNPPaymentMerchantAsyncHandler;
+                typedef Outcome<Core::Error, Model::UnbindPaymentMerchantResponse> UnbindPaymentMerchantOutcome;
+                typedef std::future<UnbindPaymentMerchantOutcome> UnbindPaymentMerchantOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::UnbindPaymentMerchantRequest&, UnbindPaymentMerchantOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindPaymentMerchantAsyncHandler;
 
 
 
@@ -753,6 +803,33 @@ namespace TencentCloud
                 AddTeamMemberOutcome AddTeamMember(const Model::AddTeamMemberRequest &request);
                 void AddTeamMemberAsync(const Model::AddTeamMemberRequest& request, const AddTeamMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddTeamMemberOutcomeCallable AddTeamMemberCallable(const Model::AddTeamMemberRequest& request);
+
+                /**
+                 *This API is used to allow the superapp to approve the activation of mini program payment.
+                 * @param req ApproveMNPPaymentEnableRequest
+                 * @return ApproveMNPPaymentEnableOutcome
+                 */
+                ApproveMNPPaymentEnableOutcome ApproveMNPPaymentEnable(const Model::ApproveMNPPaymentEnableRequest &request);
+                void ApproveMNPPaymentEnableAsync(const Model::ApproveMNPPaymentEnableRequest& request, const ApproveMNPPaymentEnableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApproveMNPPaymentEnableOutcomeCallable ApproveMNPPaymentEnableCallable(const Model::ApproveMNPPaymentEnableRequest& request);
+
+                /**
+                 *This API is used to allow the superapp to approve the payment merchant binding request of a mini program team.
+                 * @param req ApprovePaymentMerchantBindingRequest
+                 * @return ApprovePaymentMerchantBindingOutcome
+                 */
+                ApprovePaymentMerchantBindingOutcome ApprovePaymentMerchantBinding(const Model::ApprovePaymentMerchantBindingRequest &request);
+                void ApprovePaymentMerchantBindingAsync(const Model::ApprovePaymentMerchantBindingRequest& request, const ApprovePaymentMerchantBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApprovePaymentMerchantBindingOutcomeCallable ApprovePaymentMerchantBindingCallable(const Model::ApprovePaymentMerchantBindingRequest& request);
+
+                /**
+                 *This API is used to change the bound payment merchant.
+                 * @param req ChangePaymentBoundMerchantRequest
+                 * @return ChangePaymentBoundMerchantOutcome
+                 */
+                ChangePaymentBoundMerchantOutcome ChangePaymentBoundMerchant(const Model::ChangePaymentBoundMerchantRequest &request);
+                void ChangePaymentBoundMerchantAsync(const Model::ChangePaymentBoundMerchantRequest& request, const ChangePaymentBoundMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ChangePaymentBoundMerchantOutcomeCallable ChangePaymentBoundMerchantCallable(const Model::ChangePaymentBoundMerchantRequest& request);
 
                 /**
                  *This API is used to configure the preview of a mini game.
@@ -1592,6 +1669,15 @@ namespace TencentCloud
                 DescribeMNPPageAnalysisDetailOutcomeCallable DescribeMNPPageAnalysisDetailCallable(const Model::DescribeMNPPageAnalysisDetailRequest& request);
 
                 /**
+                 *This API is used to query the mini program payment approval information.
+                 * @param req DescribeMNPPaymentApprovalInfoRequest
+                 * @return DescribeMNPPaymentApprovalInfoOutcome
+                 */
+                DescribeMNPPaymentApprovalInfoOutcome DescribeMNPPaymentApprovalInfo(const Model::DescribeMNPPaymentApprovalInfoRequest &request);
+                void DescribeMNPPaymentApprovalInfoAsync(const Model::DescribeMNPPaymentApprovalInfoRequest& request, const DescribeMNPPaymentApprovalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPPaymentApprovalInfoOutcomeCallable DescribeMNPPaymentApprovalInfoCallable(const Model::DescribeMNPPaymentApprovalInfoRequest& request);
+
+                /**
                  *This API is used to query the mini program preview details.
                  * @param req DescribeMNPPreviewRequest
                  * @return DescribeMNPPreviewOutcome
@@ -1808,6 +1894,15 @@ namespace TencentCloud
                 DisableApplicationSensitiveAPIOutcomeCallable DisableApplicationSensitiveAPICallable(const Model::DisableApplicationSensitiveAPIRequest& request);
 
                 /**
+                 *This API is used to allow the superapp to actively disable mini program payment.
+                 * @param req DisableMNPPaymentRequest
+                 * @return DisableMNPPaymentOutcome
+                 */
+                DisableMNPPaymentOutcome DisableMNPPayment(const Model::DisableMNPPaymentRequest &request);
+                void DisableMNPPaymentAsync(const Model::DisableMNPPaymentRequest& request, const DisableMNPPaymentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableMNPPaymentOutcomeCallable DisableMNPPaymentCallable(const Model::DisableMNPPaymentRequest& request);
+
+                /**
                  *This API is used to enable a superapp sensitive API.
                  * @param req EnableApplicationSensitiveAPIRequest
                  * @return EnableApplicationSensitiveAPIOutcome
@@ -1943,6 +2038,15 @@ namespace TencentCloud
                 ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable ProcessMNPSensitiveAPIPermissionApprovalCallable(const Model::ProcessMNPSensitiveAPIPermissionApprovalRequest& request);
 
                 /**
+                 *This API is used to query the merchant information of a mini program.
+                 * @param req QueryMNPMerchantInfoRequest
+                 * @return QueryMNPMerchantInfoOutcome
+                 */
+                QueryMNPMerchantInfoOutcome QueryMNPMerchantInfo(const Model::QueryMNPMerchantInfoRequest &request);
+                void QueryMNPMerchantInfoAsync(const Model::QueryMNPMerchantInfoRequest& request, const QueryMNPMerchantInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryMNPMerchantInfoOutcomeCallable QueryMNPMerchantInfoCallable(const Model::QueryMNPMerchantInfoRequest& request);
+
+                /**
                  *This API is used to release a mini game version.
                  * @param req ReleaseMNGVersionRequest
                  * @return ReleaseMNGVersionOutcome
@@ -1979,6 +2083,24 @@ namespace TencentCloud
                 RemoveMNPOutcomeCallable RemoveMNPCallable(const Model::RemoveMNPRequest& request);
 
                 /**
+                 *This API is used to request the activation of mini program payment.
+                 * @param req RequestPaymentEnableRequest
+                 * @return RequestPaymentEnableOutcome
+                 */
+                RequestPaymentEnableOutcome RequestPaymentEnable(const Model::RequestPaymentEnableRequest &request);
+                void RequestPaymentEnableAsync(const Model::RequestPaymentEnableRequest& request, const RequestPaymentEnableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RequestPaymentEnableOutcomeCallable RequestPaymentEnableCallable(const Model::RequestPaymentEnableRequest& request);
+
+                /**
+                 *This API is used to request the binding of a payment merchant to a team.
+                 * @param req RequestPaymentMerchantBindingRequest
+                 * @return RequestPaymentMerchantBindingOutcome
+                 */
+                RequestPaymentMerchantBindingOutcome RequestPaymentMerchantBinding(const Model::RequestPaymentMerchantBindingRequest &request);
+                void RequestPaymentMerchantBindingAsync(const Model::RequestPaymentMerchantBindingRequest& request, const RequestPaymentMerchantBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RequestPaymentMerchantBindingOutcomeCallable RequestPaymentMerchantBindingCallable(const Model::RequestPaymentMerchantBindingRequest& request);
+
+                /**
                  *This API is used to reset a mini game secret key.
                  * @param req ResetMNGAppSecretRequest
                  * @return ResetMNGAppSecretOutcome
@@ -2013,6 +2135,24 @@ namespace TencentCloud
                 RollbackMNPVersionOutcome RollbackMNPVersion(const Model::RollbackMNPVersionRequest &request);
                 void RollbackMNPVersionAsync(const Model::RollbackMNPVersionRequest& request, const RollbackMNPVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RollbackMNPVersionOutcomeCallable RollbackMNPVersionCallable(const Model::RollbackMNPVersionRequest& request);
+
+                /**
+                 *This API is used to allow a mini program team to actively unbind the payment merchant.
+                 * @param req UnbindMNPPaymentMerchantRequest
+                 * @return UnbindMNPPaymentMerchantOutcome
+                 */
+                UnbindMNPPaymentMerchantOutcome UnbindMNPPaymentMerchant(const Model::UnbindMNPPaymentMerchantRequest &request);
+                void UnbindMNPPaymentMerchantAsync(const Model::UnbindMNPPaymentMerchantRequest& request, const UnbindMNPPaymentMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindMNPPaymentMerchantOutcomeCallable UnbindMNPPaymentMerchantCallable(const Model::UnbindMNPPaymentMerchantRequest& request);
+
+                /**
+                 *This API is used to allow the superapp to actively unbind the payment merchant.
+                 * @param req UnbindPaymentMerchantRequest
+                 * @return UnbindPaymentMerchantOutcome
+                 */
+                UnbindPaymentMerchantOutcome UnbindPaymentMerchant(const Model::UnbindPaymentMerchantRequest &request);
+                void UnbindPaymentMerchantAsync(const Model::UnbindPaymentMerchantRequest& request, const UnbindPaymentMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UnbindPaymentMerchantOutcomeCallable UnbindPaymentMerchantCallable(const Model::UnbindPaymentMerchantRequest& request);
 
             };
         }

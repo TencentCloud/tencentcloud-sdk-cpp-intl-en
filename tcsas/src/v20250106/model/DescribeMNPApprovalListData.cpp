@@ -39,7 +39,8 @@ DescribeMNPApprovalListData::DescribeMNPApprovalListData() :
     m_mNPTypeHasBeenSet(false),
     m_approvalUserHasBeenSet(false),
     m_approvalTimeHasBeenSet(false),
-    m_approvalNoteHasBeenSet(false)
+    m_approvalNoteHasBeenSet(false),
+    m_ageRatingsHasBeenSet(false)
 {
 }
 
@@ -238,6 +239,26 @@ CoreInternalOutcome DescribeMNPApprovalListData::Deserialize(const rapidjson::Va
         m_approvalNoteHasBeenSet = true;
     }
 
+    if (value.HasMember("AgeRatings") && !value["AgeRatings"].IsNull())
+    {
+        if (!value["AgeRatings"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPApprovalListData.AgeRatings` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AgeRatings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AgeRatingItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_ageRatings.push_back(item);
+        }
+        m_ageRatingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -395,6 +416,21 @@ void DescribeMNPApprovalListData::ToJsonObject(rapidjson::Value &value, rapidjso
         string key = "ApprovalNote";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_approvalNote.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ageRatingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AgeRatings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ageRatings.begin(); itr != m_ageRatings.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -702,5 +738,21 @@ void DescribeMNPApprovalListData::SetApprovalNote(const string& _approvalNote)
 bool DescribeMNPApprovalListData::ApprovalNoteHasBeenSet() const
 {
     return m_approvalNoteHasBeenSet;
+}
+
+vector<AgeRatingItem> DescribeMNPApprovalListData::GetAgeRatings() const
+{
+    return m_ageRatings;
+}
+
+void DescribeMNPApprovalListData::SetAgeRatings(const vector<AgeRatingItem>& _ageRatings)
+{
+    m_ageRatings = _ageRatings;
+    m_ageRatingsHasBeenSet = true;
+}
+
+bool DescribeMNPApprovalListData::AgeRatingsHasBeenSet() const
+{
+    return m_ageRatingsHasBeenSet;
 }
 

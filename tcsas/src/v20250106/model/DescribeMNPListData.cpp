@@ -37,7 +37,8 @@ DescribeMNPListData::DescribeMNPListData() :
     m_effectMNPVersionIdHasBeenSet(false),
     m_effectMNPVersionHasBeenSet(false),
     m_teamIdHasBeenSet(false),
-    m_teamTypeIdHasBeenSet(false)
+    m_teamTypeIdHasBeenSet(false),
+    m_ageRatingsHasBeenSet(false)
 {
 }
 
@@ -216,6 +217,26 @@ CoreInternalOutcome DescribeMNPListData::Deserialize(const rapidjson::Value &val
         m_teamTypeIdHasBeenSet = true;
     }
 
+    if (value.HasMember("AgeRatings") && !value["AgeRatings"].IsNull())
+    {
+        if (!value["AgeRatings"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPListData.AgeRatings` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AgeRatings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AgeRatingItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_ageRatings.push_back(item);
+        }
+        m_ageRatingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -357,6 +378,21 @@ void DescribeMNPListData::ToJsonObject(rapidjson::Value &value, rapidjson::Docum
         string key = "TeamTypeId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_teamTypeId, allocator);
+    }
+
+    if (m_ageRatingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AgeRatings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ageRatings.begin(); itr != m_ageRatings.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -632,5 +668,21 @@ void DescribeMNPListData::SetTeamTypeId(const int64_t& _teamTypeId)
 bool DescribeMNPListData::TeamTypeIdHasBeenSet() const
 {
     return m_teamTypeIdHasBeenSet;
+}
+
+vector<AgeRatingItem> DescribeMNPListData::GetAgeRatings() const
+{
+    return m_ageRatings;
+}
+
+void DescribeMNPListData::SetAgeRatings(const vector<AgeRatingItem>& _ageRatings)
+{
+    m_ageRatings = _ageRatings;
+    m_ageRatingsHasBeenSet = true;
+}
+
+bool DescribeMNPListData::AgeRatingsHasBeenSet() const
+{
+    return m_ageRatingsHasBeenSet;
 }
 

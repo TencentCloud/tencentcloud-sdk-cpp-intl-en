@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Package name.
-                     * @return Name Package name.
+                     * 获取<p>Package name.</p>
+                     * @return Name <p>Package name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Package name.
-                     * @param _name Package name.
+                     * 设置<p>Package name.</p>
+                     * @param _name <p>Package name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Package size. 
-                     * @return Size Package size. 
+                     * 获取<p>Package size.</p>
+                     * @return Size <p>Package size.</p>
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Package size. 
-                     * @param _size Package size. 
+                     * 设置<p>Package size.</p>
+                     * @param _size <p>Package size.</p>
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Package name.
+                     * <p>Package name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Package size. 
+                     * <p>Package size.</p>
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

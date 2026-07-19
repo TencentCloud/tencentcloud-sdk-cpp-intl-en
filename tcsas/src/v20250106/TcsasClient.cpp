@@ -90,6 +90,156 @@ TcsasClient::AddTeamMemberOutcomeCallable TcsasClient::AddTeamMemberCallable(con
     return prom->get_future();
 }
 
+TcsasClient::ApproveMNPPaymentEnableOutcome TcsasClient::ApproveMNPPaymentEnable(const ApproveMNPPaymentEnableRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApproveMNPPaymentEnable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApproveMNPPaymentEnableResponse rsp = ApproveMNPPaymentEnableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApproveMNPPaymentEnableOutcome(rsp);
+        else
+            return ApproveMNPPaymentEnableOutcome(o.GetError());
+    }
+    else
+    {
+        return ApproveMNPPaymentEnableOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ApproveMNPPaymentEnableAsync(const ApproveMNPPaymentEnableRequest& request, const ApproveMNPPaymentEnableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApproveMNPPaymentEnableRequest&;
+    using Resp = ApproveMNPPaymentEnableResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApproveMNPPaymentEnable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ApproveMNPPaymentEnableOutcomeCallable TcsasClient::ApproveMNPPaymentEnableCallable(const ApproveMNPPaymentEnableRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApproveMNPPaymentEnableOutcome>>();
+    ApproveMNPPaymentEnableAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ApproveMNPPaymentEnableRequest&,
+        ApproveMNPPaymentEnableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ApprovePaymentMerchantBindingOutcome TcsasClient::ApprovePaymentMerchantBinding(const ApprovePaymentMerchantBindingRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApprovePaymentMerchantBinding");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApprovePaymentMerchantBindingResponse rsp = ApprovePaymentMerchantBindingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApprovePaymentMerchantBindingOutcome(rsp);
+        else
+            return ApprovePaymentMerchantBindingOutcome(o.GetError());
+    }
+    else
+    {
+        return ApprovePaymentMerchantBindingOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ApprovePaymentMerchantBindingAsync(const ApprovePaymentMerchantBindingRequest& request, const ApprovePaymentMerchantBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ApprovePaymentMerchantBindingRequest&;
+    using Resp = ApprovePaymentMerchantBindingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ApprovePaymentMerchantBinding", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ApprovePaymentMerchantBindingOutcomeCallable TcsasClient::ApprovePaymentMerchantBindingCallable(const ApprovePaymentMerchantBindingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ApprovePaymentMerchantBindingOutcome>>();
+    ApprovePaymentMerchantBindingAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ApprovePaymentMerchantBindingRequest&,
+        ApprovePaymentMerchantBindingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::ChangePaymentBoundMerchantOutcome TcsasClient::ChangePaymentBoundMerchant(const ChangePaymentBoundMerchantRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChangePaymentBoundMerchant");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChangePaymentBoundMerchantResponse rsp = ChangePaymentBoundMerchantResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChangePaymentBoundMerchantOutcome(rsp);
+        else
+            return ChangePaymentBoundMerchantOutcome(o.GetError());
+    }
+    else
+    {
+        return ChangePaymentBoundMerchantOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::ChangePaymentBoundMerchantAsync(const ChangePaymentBoundMerchantRequest& request, const ChangePaymentBoundMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ChangePaymentBoundMerchantRequest&;
+    using Resp = ChangePaymentBoundMerchantResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ChangePaymentBoundMerchant", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::ChangePaymentBoundMerchantOutcomeCallable TcsasClient::ChangePaymentBoundMerchantCallable(const ChangePaymentBoundMerchantRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ChangePaymentBoundMerchantOutcome>>();
+    ChangePaymentBoundMerchantAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const ChangePaymentBoundMerchantRequest&,
+        ChangePaymentBoundMerchantOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::ConfigureMNGPreviewOutcome TcsasClient::ConfigureMNGPreview(const ConfigureMNGPreviewRequest &request)
 {
     auto outcome = MakeRequest(request, "ConfigureMNGPreview");
@@ -4740,6 +4890,56 @@ TcsasClient::DescribeMNPPageAnalysisDetailOutcomeCallable TcsasClient::DescribeM
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNPPaymentApprovalInfoOutcome TcsasClient::DescribeMNPPaymentApprovalInfo(const DescribeMNPPaymentApprovalInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPPaymentApprovalInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPPaymentApprovalInfoResponse rsp = DescribeMNPPaymentApprovalInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPPaymentApprovalInfoOutcome(rsp);
+        else
+            return DescribeMNPPaymentApprovalInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPPaymentApprovalInfoOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPPaymentApprovalInfoAsync(const DescribeMNPPaymentApprovalInfoRequest& request, const DescribeMNPPaymentApprovalInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPPaymentApprovalInfoRequest&;
+    using Resp = DescribeMNPPaymentApprovalInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPPaymentApprovalInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPPaymentApprovalInfoOutcomeCallable TcsasClient::DescribeMNPPaymentApprovalInfoCallable(const DescribeMNPPaymentApprovalInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPPaymentApprovalInfoOutcome>>();
+    DescribeMNPPaymentApprovalInfoAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPPaymentApprovalInfoRequest&,
+        DescribeMNPPaymentApprovalInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNPPreviewOutcome TcsasClient::DescribeMNPPreview(const DescribeMNPPreviewRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNPPreview");
@@ -5940,6 +6140,56 @@ TcsasClient::DisableApplicationSensitiveAPIOutcomeCallable TcsasClient::DisableA
     return prom->get_future();
 }
 
+TcsasClient::DisableMNPPaymentOutcome TcsasClient::DisableMNPPayment(const DisableMNPPaymentRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableMNPPayment");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableMNPPaymentResponse rsp = DisableMNPPaymentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableMNPPaymentOutcome(rsp);
+        else
+            return DisableMNPPaymentOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableMNPPaymentOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DisableMNPPaymentAsync(const DisableMNPPaymentRequest& request, const DisableMNPPaymentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DisableMNPPaymentRequest&;
+    using Resp = DisableMNPPaymentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DisableMNPPayment", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DisableMNPPaymentOutcomeCallable TcsasClient::DisableMNPPaymentCallable(const DisableMNPPaymentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DisableMNPPaymentOutcome>>();
+    DisableMNPPaymentAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DisableMNPPaymentRequest&,
+        DisableMNPPaymentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::EnableApplicationSensitiveAPIOutcome TcsasClient::EnableApplicationSensitiveAPI(const EnableApplicationSensitiveAPIRequest &request)
 {
     auto outcome = MakeRequest(request, "EnableApplicationSensitiveAPI");
@@ -6690,6 +6940,56 @@ TcsasClient::ProcessMNPSensitiveAPIPermissionApprovalOutcomeCallable TcsasClient
     return prom->get_future();
 }
 
+TcsasClient::QueryMNPMerchantInfoOutcome TcsasClient::QueryMNPMerchantInfo(const QueryMNPMerchantInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryMNPMerchantInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryMNPMerchantInfoResponse rsp = QueryMNPMerchantInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryMNPMerchantInfoOutcome(rsp);
+        else
+            return QueryMNPMerchantInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryMNPMerchantInfoOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::QueryMNPMerchantInfoAsync(const QueryMNPMerchantInfoRequest& request, const QueryMNPMerchantInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const QueryMNPMerchantInfoRequest&;
+    using Resp = QueryMNPMerchantInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "QueryMNPMerchantInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::QueryMNPMerchantInfoOutcomeCallable TcsasClient::QueryMNPMerchantInfoCallable(const QueryMNPMerchantInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<QueryMNPMerchantInfoOutcome>>();
+    QueryMNPMerchantInfoAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const QueryMNPMerchantInfoRequest&,
+        QueryMNPMerchantInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::ReleaseMNGVersionOutcome TcsasClient::ReleaseMNGVersion(const ReleaseMNGVersionRequest &request)
 {
     auto outcome = MakeRequest(request, "ReleaseMNGVersion");
@@ -6890,6 +7190,106 @@ TcsasClient::RemoveMNPOutcomeCallable TcsasClient::RemoveMNPCallable(const Remov
     return prom->get_future();
 }
 
+TcsasClient::RequestPaymentEnableOutcome TcsasClient::RequestPaymentEnable(const RequestPaymentEnableRequest &request)
+{
+    auto outcome = MakeRequest(request, "RequestPaymentEnable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RequestPaymentEnableResponse rsp = RequestPaymentEnableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RequestPaymentEnableOutcome(rsp);
+        else
+            return RequestPaymentEnableOutcome(o.GetError());
+    }
+    else
+    {
+        return RequestPaymentEnableOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::RequestPaymentEnableAsync(const RequestPaymentEnableRequest& request, const RequestPaymentEnableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RequestPaymentEnableRequest&;
+    using Resp = RequestPaymentEnableResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RequestPaymentEnable", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::RequestPaymentEnableOutcomeCallable TcsasClient::RequestPaymentEnableCallable(const RequestPaymentEnableRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RequestPaymentEnableOutcome>>();
+    RequestPaymentEnableAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const RequestPaymentEnableRequest&,
+        RequestPaymentEnableOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::RequestPaymentMerchantBindingOutcome TcsasClient::RequestPaymentMerchantBinding(const RequestPaymentMerchantBindingRequest &request)
+{
+    auto outcome = MakeRequest(request, "RequestPaymentMerchantBinding");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RequestPaymentMerchantBindingResponse rsp = RequestPaymentMerchantBindingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RequestPaymentMerchantBindingOutcome(rsp);
+        else
+            return RequestPaymentMerchantBindingOutcome(o.GetError());
+    }
+    else
+    {
+        return RequestPaymentMerchantBindingOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::RequestPaymentMerchantBindingAsync(const RequestPaymentMerchantBindingRequest& request, const RequestPaymentMerchantBindingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RequestPaymentMerchantBindingRequest&;
+    using Resp = RequestPaymentMerchantBindingResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RequestPaymentMerchantBinding", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::RequestPaymentMerchantBindingOutcomeCallable TcsasClient::RequestPaymentMerchantBindingCallable(const RequestPaymentMerchantBindingRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RequestPaymentMerchantBindingOutcome>>();
+    RequestPaymentMerchantBindingAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const RequestPaymentMerchantBindingRequest&,
+        RequestPaymentMerchantBindingOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::ResetMNGAppSecretOutcome TcsasClient::ResetMNGAppSecret(const ResetMNGAppSecretRequest &request)
 {
     auto outcome = MakeRequest(request, "ResetMNGAppSecret");
@@ -7082,6 +7482,106 @@ TcsasClient::RollbackMNPVersionOutcomeCallable TcsasClient::RollbackMNPVersionCa
         const TcsasClient*,
         const RollbackMNPVersionRequest&,
         RollbackMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::UnbindMNPPaymentMerchantOutcome TcsasClient::UnbindMNPPaymentMerchant(const UnbindMNPPaymentMerchantRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindMNPPaymentMerchant");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindMNPPaymentMerchantResponse rsp = UnbindMNPPaymentMerchantResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindMNPPaymentMerchantOutcome(rsp);
+        else
+            return UnbindMNPPaymentMerchantOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindMNPPaymentMerchantOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::UnbindMNPPaymentMerchantAsync(const UnbindMNPPaymentMerchantRequest& request, const UnbindMNPPaymentMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UnbindMNPPaymentMerchantRequest&;
+    using Resp = UnbindMNPPaymentMerchantResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UnbindMNPPaymentMerchant", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::UnbindMNPPaymentMerchantOutcomeCallable TcsasClient::UnbindMNPPaymentMerchantCallable(const UnbindMNPPaymentMerchantRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UnbindMNPPaymentMerchantOutcome>>();
+    UnbindMNPPaymentMerchantAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const UnbindMNPPaymentMerchantRequest&,
+        UnbindMNPPaymentMerchantOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::UnbindPaymentMerchantOutcome TcsasClient::UnbindPaymentMerchant(const UnbindPaymentMerchantRequest &request)
+{
+    auto outcome = MakeRequest(request, "UnbindPaymentMerchant");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UnbindPaymentMerchantResponse rsp = UnbindPaymentMerchantResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UnbindPaymentMerchantOutcome(rsp);
+        else
+            return UnbindPaymentMerchantOutcome(o.GetError());
+    }
+    else
+    {
+        return UnbindPaymentMerchantOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::UnbindPaymentMerchantAsync(const UnbindPaymentMerchantRequest& request, const UnbindPaymentMerchantAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UnbindPaymentMerchantRequest&;
+    using Resp = UnbindPaymentMerchantResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UnbindPaymentMerchant", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::UnbindPaymentMerchantOutcomeCallable TcsasClient::UnbindPaymentMerchantCallable(const UnbindPaymentMerchantRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UnbindPaymentMerchantOutcome>>();
+    UnbindPaymentMerchantAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const UnbindPaymentMerchantRequest&,
+        UnbindPaymentMerchantOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

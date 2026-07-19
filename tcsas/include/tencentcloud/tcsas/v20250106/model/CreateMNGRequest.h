@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcsas/v20250106/model/MNPI18NSyncDto.h>
+#include <tencentcloud/tcsas/v20250106/model/AgeRatingItemReq.h>
 
 
 namespace TencentCloud
@@ -211,6 +212,27 @@ namespace TencentCloud
                      */
                     bool I18nListHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Age rating information.</p>
+                     * @return AgeRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    std::vector<AgeRatingItemReq> GetAgeRatings() const;
+
+                    /**
+                     * 设置<p>Age rating information.</p>
+                     * @param _ageRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    void SetAgeRatings(const std::vector<AgeRatingItemReq>& _ageRatings);
+
+                    /**
+                     * 判断参数 AgeRatings 是否已赋值
+                     * @return AgeRatings 是否已赋值
+                     * 
+                     */
+                    bool AgeRatingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -260,6 +282,12 @@ namespace TencentCloud
                      */
                     std::vector<MNPI18NSyncDto> m_i18nList;
                     bool m_i18nListHasBeenSet;
+
+                    /**
+                     * <p>Age rating information.</p>
+                     */
+                    std::vector<AgeRatingItemReq> m_ageRatings;
+                    bool m_ageRatingsHasBeenSet;
 
                 };
             }

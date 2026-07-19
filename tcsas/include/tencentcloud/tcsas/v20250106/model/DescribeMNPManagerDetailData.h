@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcsas/v20250106/model/MNPDetailI18nVO.h>
+#include <tencentcloud/tcsas/v20250106/model/AgeRatingItem.h>
 
 
 namespace TencentCloud
@@ -321,15 +322,15 @@ namespace TencentCloud
                     bool I18nListHasBeenSet() const;
 
                     /**
-                     * 获取Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
-                     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * 获取<p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+                     * @return TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
                      * 
                      */
                     int64_t GetTeamTypeId() const;
 
                     /**
-                     * 设置Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
-                     * @param _teamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * 设置<p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+                     * @param _teamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
                      * 
                      */
                     void SetTeamTypeId(const int64_t& _teamTypeId);
@@ -340,6 +341,52 @@ namespace TencentCloud
                      * 
                      */
                     bool TeamTypeIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Age rating information.</p>
+                     * @return AgeRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    std::vector<AgeRatingItem> GetAgeRatings() const;
+
+                    /**
+                     * 设置<p>Age rating information.</p>
+                     * @param _ageRatings <p>Age rating information.</p>
+                     * 
+                     */
+                    void SetAgeRatings(const std::vector<AgeRatingItem>& _ageRatings);
+
+                    /**
+                     * 判断参数 AgeRatings 是否已赋值
+                     * @return AgeRatings 是否已赋值
+                     * 
+                     */
+                    bool AgeRatingsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MerchantId <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    std::string GetMerchantId() const;
+
+                    /**
+                     * 设置<p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _merchantId <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetMerchantId(const std::string& _merchantId);
+
+                    /**
+                     * 判断参数 MerchantId 是否已赋值
+                     * @return MerchantId 是否已赋值
+                     * 
+                     */
+                    bool MerchantIdHasBeenSet() const;
 
                 private:
 
@@ -422,10 +469,23 @@ namespace TencentCloud
                     bool m_i18nListHasBeenSet;
 
                     /**
-                     * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+                     * <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
                      */
                     int64_t m_teamTypeId;
                     bool m_teamTypeIdHasBeenSet;
+
+                    /**
+                     * <p>Age rating information.</p>
+                     */
+                    std::vector<AgeRatingItem> m_ageRatings;
+                    bool m_ageRatingsHasBeenSet;
+
+                    /**
+                     * <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_merchantId;
+                    bool m_merchantIdHasBeenSet;
 
                 };
             }

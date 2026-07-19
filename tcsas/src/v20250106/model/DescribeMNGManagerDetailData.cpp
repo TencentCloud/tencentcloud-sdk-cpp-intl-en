@@ -34,7 +34,9 @@ DescribeMNGManagerDetailData::DescribeMNGManagerDetailData() :
     m_teamIdHasBeenSet(false),
     m_statusHasBeenSet(false),
     m_i18nListHasBeenSet(false),
-    m_teamTypeIdHasBeenSet(false)
+    m_teamTypeIdHasBeenSet(false),
+    m_ageRatingsHasBeenSet(false),
+    m_merchantIdHasBeenSet(false)
 {
 }
 
@@ -193,6 +195,36 @@ CoreInternalOutcome DescribeMNGManagerDetailData::Deserialize(const rapidjson::V
         m_teamTypeIdHasBeenSet = true;
     }
 
+    if (value.HasMember("AgeRatings") && !value["AgeRatings"].IsNull())
+    {
+        if (!value["AgeRatings"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeMNGManagerDetailData.AgeRatings` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AgeRatings"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AgeRatingItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_ageRatings.push_back(item);
+        }
+        m_ageRatingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("MerchantId") && !value["MerchantId"].IsNull())
+    {
+        if (!value["MerchantId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNGManagerDetailData.MerchantId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_merchantId = string(value["MerchantId"].GetString());
+        m_merchantIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -317,6 +349,29 @@ void DescribeMNGManagerDetailData::ToJsonObject(rapidjson::Value &value, rapidjs
         string key = "TeamTypeId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_teamTypeId, allocator);
+    }
+
+    if (m_ageRatingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AgeRatings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_ageRatings.begin(); itr != m_ageRatings.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_merchantIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MerchantId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_merchantId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -544,5 +599,37 @@ void DescribeMNGManagerDetailData::SetTeamTypeId(const int64_t& _teamTypeId)
 bool DescribeMNGManagerDetailData::TeamTypeIdHasBeenSet() const
 {
     return m_teamTypeIdHasBeenSet;
+}
+
+vector<AgeRatingItem> DescribeMNGManagerDetailData::GetAgeRatings() const
+{
+    return m_ageRatings;
+}
+
+void DescribeMNGManagerDetailData::SetAgeRatings(const vector<AgeRatingItem>& _ageRatings)
+{
+    m_ageRatings = _ageRatings;
+    m_ageRatingsHasBeenSet = true;
+}
+
+bool DescribeMNGManagerDetailData::AgeRatingsHasBeenSet() const
+{
+    return m_ageRatingsHasBeenSet;
+}
+
+string DescribeMNGManagerDetailData::GetMerchantId() const
+{
+    return m_merchantId;
+}
+
+void DescribeMNGManagerDetailData::SetMerchantId(const string& _merchantId)
+{
+    m_merchantId = _merchantId;
+    m_merchantIdHasBeenSet = true;
+}
+
+bool DescribeMNGManagerDetailData::MerchantIdHasBeenSet() const
+{
+    return m_merchantIdHasBeenSet;
 }
 

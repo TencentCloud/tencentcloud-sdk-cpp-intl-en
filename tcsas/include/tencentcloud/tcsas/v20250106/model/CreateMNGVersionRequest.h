@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool MNPVersionIntroHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
-                     * @return VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * 获取<p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
+                     * @return VersionType <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
                      * 
                      */
                     int64_t GetVersionType() const;
 
                     /**
-                     * 设置<p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
-                     * @param _versionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * 设置<p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
+                     * @param _versionType <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
                      * 
                      */
                     void SetVersionType(const int64_t& _versionType);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool VersionTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Compilation condition.</p>
-                     * @return CompileCondition <p>Compilation condition.</p>
+                     * 获取<p>Compilation conditions.</p>
+                     * @return CompileCondition <p>Compilation conditions.</p>
                      * 
                      */
                     std::string GetCompileCondition() const;
 
                     /**
-                     * 设置<p>Compilation condition.</p>
-                     * @param _compileCondition <p>Compilation condition.</p>
+                     * 设置<p>Compilation conditions.</p>
+                     * @param _compileCondition <p>Compilation conditions.</p>
                      * 
                      */
                     void SetCompileCondition(const std::string& _compileCondition);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CompileConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>CI/CD key ID.</p>
-                     * @return PipelineId <p>CI/CD key ID.</p>
+                     * 获取<p>CICD ID</p>
+                     * @return PipelineId <p>CICD ID</p>
                      * 
                      */
                     std::string GetPipelineId() const;
 
                     /**
-                     * 设置<p>CI/CD key ID.</p>
-                     * @param _pipelineId <p>CI/CD key ID.</p>
+                     * 设置<p>CICD ID</p>
+                     * @param _pipelineId <p>CICD ID</p>
                      * 
                      */
                     void SetPipelineId(const std::string& _pipelineId);
@@ -285,13 +285,13 @@ namespace TencentCloud
                     bool m_mNPVersionIntroHasBeenSet;
 
                     /**
-                     * <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+                     * <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
                      */
                     int64_t m_versionType;
                     bool m_versionTypeHasBeenSet;
 
                     /**
-                     * <p>Compilation condition.</p>
+                     * <p>Compilation conditions.</p>
                      */
                     std::string m_compileCondition;
                     bool m_compileConditionHasBeenSet;
@@ -303,7 +303,7 @@ namespace TencentCloud
                     bool m_compileConfigHasBeenSet;
 
                     /**
-                     * <p>CI/CD key ID.</p>
+                     * <p>CICD ID</p>
                      */
                     std::string m_pipelineId;
                     bool m_pipelineIdHasBeenSet;
