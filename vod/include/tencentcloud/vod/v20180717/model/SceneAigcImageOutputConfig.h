@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
-                     * @return EncodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+                     * 获取<p>Output image encoding format parameters.</p>
+                     * @return EncodeConfig <p>Output image encoding format parameters.</p>
                      * 
                      */
                     ImageSceneAigcEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置<p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
-                     * @param _encodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+                     * 设置<p>Output image encoding format parameters.</p>
+                     * @param _encodeConfig <p>Output image encoding format parameters.</p>
                      * 
                      */
                     void SetEncodeConfig(const ImageSceneAigcEncodeConfig& _encodeConfig);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ImageHeightHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
-                     * @return Resolution <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+                     * 获取<p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+                     * @return Resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置<p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
-                     * @param _resolution <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+                     * 设置<p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+                     * @param _resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -269,7 +269,7 @@ namespace TencentCloud
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+                     * <p>Output image encoding format parameters.</p>
                      */
                     ImageSceneAigcEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
@@ -287,7 +287,7 @@ namespace TencentCloud
                     bool m_imageHeightHasBeenSet;
 
                     /**
-                     * <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+                     * <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;

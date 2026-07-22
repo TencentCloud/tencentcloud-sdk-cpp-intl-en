@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/AigcUsageDataItem.h>
+#include <tencentcloud/vod/v20180717/model/AigcTextDetail.h>
 
 
 namespace TencentCloud
@@ -58,6 +59,22 @@ namespace TencentCloud
                      */
                     bool AigcUsageDataSetHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Detailed log</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AigcTextDetails <p>Detailed log</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    AigcTextDetail GetAigcTextDetails() const;
+
+                    /**
+                     * 判断参数 AigcTextDetails 是否已赋值
+                     * @return AigcTextDetails 是否已赋值
+                     * 
+                     */
+                    bool AigcTextDetailsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -65,6 +82,13 @@ namespace TencentCloud
                      */
                     std::vector<AigcUsageDataItem> m_aigcUsageDataSet;
                     bool m_aigcUsageDataSetHasBeenSet;
+
+                    /**
+                     * <p>Detailed log</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AigcTextDetail m_aigcTextDetails;
+                    bool m_aigcTextDetailsHasBeenSet;
 
                 };
             }

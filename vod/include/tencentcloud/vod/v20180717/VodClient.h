@@ -465,6 +465,8 @@
 #include <tencentcloud/vod/v20180717/model/SplitMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/StartCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/StartCDNDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/UpdateAigcApiTokenRequest.h>
+#include <tencentcloud/vod/v20180717/model/UpdateAigcApiTokenResponse.h>
 #include <tencentcloud/vod/v20180717/model/VerifyDomainRecordRequest.h>
 #include <tencentcloud/vod/v20180717/model/VerifyDomainRecordResponse.h>
 
@@ -1144,6 +1146,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartCDNDomainResponse> StartCDNDomainOutcome;
                 typedef std::future<StartCDNDomainOutcome> StartCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::StartCDNDomainRequest&, StartCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartCDNDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAigcApiTokenResponse> UpdateAigcApiTokenOutcome;
+                typedef std::future<UpdateAigcApiTokenOutcome> UpdateAigcApiTokenOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::UpdateAigcApiTokenRequest&, UpdateAigcApiTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAigcApiTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::VerifyDomainRecordResponse> VerifyDomainRecordOutcome;
                 typedef std::future<VerifyDomainRecordOutcome> VerifyDomainRecordOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::VerifyDomainRecordRequest&, VerifyDomainRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyDomainRecordAsyncHandler;
@@ -1331,7 +1336,7 @@ Since AGC content generation is an async task, real-time usage data cannot be ob
                 CreateAigcSubjectOutcomeCallable CreateAigcSubjectCallable(const Model::CreateAigcSubjectRequest& request);
 
                 /**
-                 *This API is used to generate AIGC videos. API calls will occur actual fee. Refer to the video-on-demand [AIGC video generation billing documentation](https://www.tencentcloud.com/zh/document/product/266/14666#96b3b59a-f9e1-49e9-966a-bedb70a4bf12). The feature settlement mode is [pay-as-you-go](https://www.tencentcloud.com/document/product/266/2838?from_cn_redirect=1). Daily billing customers will be charged on the second day for usage on the day, while monthly billing customers will be billed on the 1st of the next month for usage in the previous month.
+                 *This API is used to generate AIGC videos. API calls incur actual fees. Refer to the video-on-demand (VOD) AIGC video generation billing documentation. The feature settlement mode is pay-as-you-go. Daily billing customers will be billed on the second day for usage on the day. Monthly billing customers will be billed on the 1st of the next month for usage in the previous month.
                  * @param req CreateAigcVideoRedrawTaskRequest
                  * @return CreateAigcVideoRedrawTaskOutcome
                  */
@@ -1592,7 +1597,7 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
                 CreateSampleSnapshotTemplateOutcomeCallable CreateSampleSnapshotTemplateCallable(const Model::CreateSampleSnapshotTemplateRequest& request);
 
                 /**
-                 *This API is used to generate scenario-based AIGC images. <b>This interface is in beta. If you need to use it, please contact us. API calls will incur actual fees.</b>
+                 *This API is used to generate scenario-based AIGC images. API calls will incur actual fees. Refer to the on-demand video AIGC image generation billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac). The feature's settlement mode is postpaid (https://www.tencentcloud.com/document/product/266/2838?from_cn_redirect=1). For daily billing customers, usage on the day will be billed on the second day. For monthly billing customers, usage fees from the previous month will be unified and billed on the 1st of the next month.
                  * @param req CreateSceneAigcImageTaskRequest
                  * @return CreateSceneAigcImageTaskOutcome
                  */
@@ -3451,6 +3456,15 @@ The advantage of editing not being solidified is that the editing operation is r
                 StartCDNDomainOutcome StartCDNDomain(const Model::StartCDNDomainRequest &request);
                 void StartCDNDomainAsync(const Model::StartCDNDomainRequest& request, const StartCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartCDNDomainOutcomeCallable StartCDNDomainCallable(const Model::StartCDNDomainRequest& request);
+
+                /**
+                 *This API is used to create a Token for invoking the AIGC API. After creation, data sync has a delay. It becomes queryable or deletable after about 30 seconds.
+                 * @param req UpdateAigcApiTokenRequest
+                 * @return UpdateAigcApiTokenOutcome
+                 */
+                UpdateAigcApiTokenOutcome UpdateAigcApiToken(const Model::UpdateAigcApiTokenRequest &request);
+                void UpdateAigcApiTokenAsync(const Model::UpdateAigcApiTokenRequest& request, const UpdateAigcApiTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAigcApiTokenOutcomeCallable UpdateAigcApiTokenCallable(const Model::UpdateAigcApiTokenRequest& request);
 
                 /**
                  *This API is used to verify the domain name resolution value.

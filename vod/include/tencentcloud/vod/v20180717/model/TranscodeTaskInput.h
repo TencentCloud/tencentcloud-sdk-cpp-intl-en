@@ -30,6 +30,7 @@
 #include <tencentcloud/vod/v20180717/model/BlindWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/MosaicInput.h>
 #include <tencentcloud/vod/v20180717/model/HeadTailTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/OverrideTranscodeParameter.h>
 #include <tencentcloud/vod/v20180717/model/SubtitleInfoInput.h>
 
 
@@ -243,6 +244,27 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
+                     * 获取<p>Custom video transcoding parameters.</p>
+                     * @return OverrideParameter <p>Custom video transcoding parameters.</p>
+                     * 
+                     */
+                    OverrideTranscodeParameter GetOverrideParameter() const;
+
+                    /**
+                     * 设置<p>Custom video transcoding parameters.</p>
+                     * @param _overrideParameter <p>Custom video transcoding parameters.</p>
+                     * 
+                     */
+                    void SetOverrideParameter(const OverrideTranscodeParameter& _overrideParameter);
+
+                    /**
+                     * 判断参数 OverrideParameter 是否已赋值
+                     * @return OverrideParameter 是否已赋值
+                     * 
+                     */
+                    bool OverrideParameterHasBeenSet() const;
+
+                    /**
                      * 获取<p>List of subtitle suppression information. Up to 2 are supported.</p>
                      * @return SubtitleInfoSet <p>List of subtitle suppression information. Up to 2 are supported.</p>
                      * 
@@ -318,6 +340,12 @@ namespace TencentCloud
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
+
+                    /**
+                     * <p>Custom video transcoding parameters.</p>
+                     */
+                    OverrideTranscodeParameter m_overrideParameter;
+                    bool m_overrideParameterHasBeenSet;
 
                     /**
                      * <p>List of subtitle suppression information. Up to 2 are supported.</p>

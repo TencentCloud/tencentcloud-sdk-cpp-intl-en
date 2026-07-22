@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input video file information for the AIGC video conversion task.</p>
-                     * @return FileInfo <p>Input video file information for the AIGC video conversion task.</p>
+                     * 获取<p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+                     * @return FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
                      * 
                      */
                     AigcVideoRedrawTaskInputFileInfo GetFileInfo() const;
 
                     /**
-                     * 设置<p>Input video file information for the AIGC video conversion task.</p>
-                     * @param _fileInfo <p>Input video file information for the AIGC video conversion task.</p>
+                     * 设置<p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+                     * @param _fileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
                      * 
                      */
                     void SetFileInfo(const AigcVideoRedrawTaskInputFileInfo& _fileInfo);
@@ -200,7 +200,7 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Input video file information for the AIGC video conversion task.</p>
+                     * <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
                      */
                     AigcVideoRedrawTaskInputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;

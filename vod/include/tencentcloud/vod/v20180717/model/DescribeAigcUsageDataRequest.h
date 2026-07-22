@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
-                     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+                     * 获取<p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+                     * @return AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      * 
                      */
                     std::string GetAigcType() const;
 
                     /**
-                     * 设置<p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
-                     * @param _aigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+                     * 设置<p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+                     * @param _aigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      * 
                      */
                     void SetAigcType(const std::string& _aigcType);
@@ -168,6 +168,69 @@ namespace TencentCloud
                      */
                     bool APIKeysHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Query cursor</p>
+                     * @return ScrollToken <p>Query cursor</p>
+                     * 
+                     */
+                    std::string GetScrollToken() const;
+
+                    /**
+                     * 设置<p>Query cursor</p>
+                     * @param _scrollToken <p>Query cursor</p>
+                     * 
+                     */
+                    void SetScrollToken(const std::string& _scrollToken);
+
+                    /**
+                     * 判断参数 ScrollToken 是否已赋值
+                     * @return ScrollToken 是否已赋值
+                     * 
+                     */
+                    bool ScrollTokenHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Size per page, maximum 200, it will be truncated to 200</p>
+                     * @return PageSize <p>Size per page, maximum 200, it will be truncated to 200</p>
+                     * 
+                     */
+                    uint64_t GetPageSize() const;
+
+                    /**
+                     * 设置<p>Size per page, maximum 200, it will be truncated to 200</p>
+                     * @param _pageSize <p>Size per page, maximum 200, it will be truncated to 200</p>
+                     * 
+                     */
+                    void SetPageSize(const uint64_t& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     * 
+                     */
+                    bool PageSizeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+                     * @return ReqId <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+                     * 
+                     */
+                    std::string GetReqId() const;
+
+                    /**
+                     * 设置<p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+                     * @param _reqId <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+                     * 
+                     */
+                    void SetReqId(const std::string& _reqId);
+
+                    /**
+                     * 判断参数 ReqId 是否已赋值
+                     * @return ReqId 是否已赋值
+                     * 
+                     */
+                    bool ReqIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,7 +246,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+                     * <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      */
                     std::string m_aigcType;
                     bool m_aigcTypeHasBeenSet;
@@ -205,6 +268,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_aPIKeys;
                     bool m_aPIKeysHasBeenSet;
+
+                    /**
+                     * <p>Query cursor</p>
+                     */
+                    std::string m_scrollToken;
+                    bool m_scrollTokenHasBeenSet;
+
+                    /**
+                     * <p>Size per page, maximum 200, it will be truncated to 200</p>
+                     */
+                    uint64_t m_pageSize;
+                    bool m_pageSizeHasBeenSet;
+
+                    /**
+                     * <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+                     */
+                    std::string m_reqId;
+                    bool m_reqIdHasBeenSet;
 
                 };
             }

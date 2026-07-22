@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取FileId for image processing.
-                     * @return FileId FileId for image processing.
+                     * 获取<p>FileId of image processing.</p>
+                     * @return FileId <p>FileId of image processing.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置FileId for image processing.
-                     * @param _fileId FileId for image processing.
+                     * 设置<p>FileId of image processing.</p>
+                     * @param _fileId <p>FileId of image processing.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -70,15 +70,36 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Image processing parameter.
-                     * @return ImageTaskInput Image processing parameter.
+                     * 获取<p>Image URL.</p>
+                     * @return Url <p>Image URL.</p>
+                     * 
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置<p>Image URL.</p>
+                     * @param _url <p>Image URL.</p>
+                     * 
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     * 
+                     */
+                    bool UrlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Image processing parameter.</p>
+                     * @return ImageTaskInput <p>Image processing parameter.</p>
                      * 
                      */
                     ProcessImageAsyncTaskInput GetImageTaskInput() const;
 
                     /**
-                     * 设置Image processing parameter.
-                     * @param _imageTaskInput Image processing parameter.
+                     * 设置<p>Image processing parameter.</p>
+                     * @param _imageTaskInput <p>Image processing parameter.</p>
                      * 
                      */
                     void SetImageTaskInput(const ProcessImageAsyncTaskInput& _imageTaskInput);
@@ -91,15 +112,15 @@ namespace TencentCloud
                     bool ImageTaskInputHasBeenSet() const;
 
                     /**
-                     * 获取Output media file configuration for image processing tasks.
-                     * @return OutputConfig Output media file configuration for image processing tasks.
+                     * 获取<p>Output media file configuration for the image processing task.</p>
+                     * @return OutputConfig <p>Output media file configuration for the image processing task.</p>
                      * 
                      */
                     ProcessImageAsyncOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Output media file configuration for image processing tasks.
-                     * @param _outputConfig Output media file configuration for image processing tasks.
+                     * 设置<p>Output media file configuration for the image processing task.</p>
+                     * @param _outputConfig <p>Output media file configuration for the image processing task.</p>
                      * 
                      */
                     void SetOutputConfig(const ProcessImageAsyncOutputConfig& _outputConfig);
@@ -114,19 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * FileId for image processing.
+                     * <p>FileId of image processing.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Image processing parameter.
+                     * <p>Image URL.</p>
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
+
+                    /**
+                     * <p>Image processing parameter.</p>
                      */
                     ProcessImageAsyncTaskInput m_imageTaskInput;
                     bool m_imageTaskInputHasBeenSet;
 
                     /**
-                     * Output media file configuration for image processing tasks.
+                     * <p>Output media file configuration for the image processing task.</p>
                      */
                     ProcessImageAsyncOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/KnowledgeAnalysisInfo.h>
 
 
 namespace TencentCloud
@@ -67,6 +68,27 @@ namespace TencentCloud
                      */
                     bool BasesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Media analysis information in the knowledge base</p>
+                     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 
+                     */
+                    std::vector<KnowledgeAnalysisInfo> GetKnowledgeAnalysisInfos() const;
+
+                    /**
+                     * 设置<p>Media analysis information in the knowledge base</p>
+                     * @param _knowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 
+                     */
+                    void SetKnowledgeAnalysisInfos(const std::vector<KnowledgeAnalysisInfo>& _knowledgeAnalysisInfos);
+
+                    /**
+                     * 判断参数 KnowledgeAnalysisInfos 是否已赋值
+                     * @return KnowledgeAnalysisInfos 是否已赋值
+                     * 
+                     */
+                    bool KnowledgeAnalysisInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +96,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_bases;
                     bool m_basesHasBeenSet;
+
+                    /**
+                     * <p>Media analysis information in the knowledge base</p>
+                     */
+                    std::vector<KnowledgeAnalysisInfo> m_knowledgeAnalysisInfos;
+                    bool m_knowledgeAnalysisInfosHasBeenSet;
 
                 };
             }

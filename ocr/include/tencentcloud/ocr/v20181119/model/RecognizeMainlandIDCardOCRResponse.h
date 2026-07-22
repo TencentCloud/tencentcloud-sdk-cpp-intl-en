@@ -156,22 +156,24 @@ namespace TencentCloud
                     bool ValidDateHasBeenSet() const;
 
                     /**
-                     * 获取Warning information for the ID card. Valid warning codes: 
--9101 (incomplete card border), 
--9102 (photocopied document), 
--9103 (re-photographed document), 
--9104 (PS-altered document), 
--9107 (reflective document), 
--9108 (blurry image), 
--9109 (warning capability not enabled).
-                     * @return WarnCardInfos Warning information for the ID card. Valid warning codes: 
--9101 (incomplete card border), 
--9102 (photocopied document), 
--9103 (re-photographed document), 
--9104 (PS-altered document), 
--9107 (reflective document), 
--9108 (blurry image), 
--9109 (warning capability not enabled).
+                     * 获取Card Warning Information
+
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry certificate 
+-9109 This capability is not enabled. Please contact customer support to activate the alert service.
+                     * @return WarnCardInfos Card Warning Information
+
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry certificate 
+-9109 This capability is not enabled. Please contact customer support to activate the alert service.
                      * 
                      */
                     std::vector<int64_t> GetWarnCardInfos() const;
@@ -262,14 +264,15 @@ namespace TencentCloud
                     bool m_validDateHasBeenSet;
 
                     /**
-                     * Warning information for the ID card. Valid warning codes: 
--9101 (incomplete card border), 
--9102 (photocopied document), 
--9103 (re-photographed document), 
--9104 (PS-altered document), 
--9107 (reflective document), 
--9108 (blurry image), 
--9109 (warning capability not enabled).
+                     * Card Warning Information
+
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry certificate 
+-9109 This capability is not enabled. Please contact customer support to activate the alert service.
                      */
                     std::vector<int64_t> m_warnCardInfos;
                     bool m_warnCardInfosHasBeenSet;

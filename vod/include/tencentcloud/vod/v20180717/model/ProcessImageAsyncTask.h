@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/ImageEncodeConfig.h>
 #include <tencentcloud/vod/v20180717/model/ImageEnhanceConfig.h>
+#include <tencentcloud/vod/v20180717/model/ImageBeautyConfig.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image async processing configuration
+                * Image async processing configuration.
                 */
                 class ProcessImageAsyncTask : public AbstractModel
                 {
@@ -49,18 +50,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image transcoding output configuration.
+                     * 获取<p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncodeConfig Image transcoding output configuration.
+                     * @return EncodeConfig <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置Image transcoding output configuration.
+                     * 设置<p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _encodeConfig Image transcoding output configuration.
+                     * @param _encodeConfig <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -74,18 +75,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取Image enhancement configuration.
+                     * 获取<p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnhanceConfig Image enhancement configuration.
+                     * @return EnhanceConfig <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ImageEnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Image enhancement configuration.
+                     * 设置<p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enhanceConfig Image enhancement configuration.
+                     * @param _enhanceConfig <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -98,21 +99,53 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnhanceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BeautyConfig <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    ImageBeautyConfig GetBeautyConfig() const;
+
+                    /**
+                     * 设置<p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _beautyConfig <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetBeautyConfig(const ImageBeautyConfig& _beautyConfig);
+
+                    /**
+                     * 判断参数 BeautyConfig 是否已赋值
+                     * @return BeautyConfig 是否已赋值
+                     * 
+                     */
+                    bool BeautyConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Image transcoding output configuration.
+                     * <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
 
                     /**
-                     * Image enhancement configuration.
+                     * <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ImageEnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
+
+                    /**
+                     * <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ImageBeautyConfig m_beautyConfig;
+                    bool m_beautyConfigHasBeenSet;
 
                 };
             }

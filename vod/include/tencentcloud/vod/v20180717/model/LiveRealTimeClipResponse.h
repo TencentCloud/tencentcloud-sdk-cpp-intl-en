@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Edited Video Playback URL
-                     * @return Url Edited Video Playback URL
+                     * 获取<p>Edited Video Playback URL.</p>
+                     * @return Url <p>Edited Video Playback URL.</p>
                      * 
                      */
                     std::string GetUrl() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Unique identifier of media file for post-editing solidified video.
-                     * @return FileId Unique identifier of media file for post-editing solidified video.
+                     * 获取<p>Unique identifier of media file for post-editing solidified video.</p>
+                     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
                      * 
                      */
                     std::string GetFileId() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Edited video task flow ID after solidification.
-                     * @return VodTaskId Edited video task flow ID after solidification.
+                     * 获取<p>ID of the edited video task flow after solidification.</p>
+                     * @return VodTaskId <p>ID of the edited video task flow after solidification.</p>
                      * 
                      */
                     std::string GetVodTaskId() const;
@@ -88,9 +88,9 @@ namespace TencentCloud
                     bool VodTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Edited Video Metadata
+                     * 获取<p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaData Edited Video Metadata
+                     * @return MetaData <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -104,8 +104,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取<span id="p_segmentset">Edited video clip information.</span>
-                     * @return SegmentSet <span id="p_segmentset">Edited video clip information.</span>
+                     * 获取<p><span id="p_segmentset">Edited video clip information.</span></p>
+                     * @return SegmentSet <p><span id="p_segmentset">Edited video clip information.</span></p>
                      * 
                      */
                     std::vector<LiveRealTimeClipMediaSegmentInfo> GetSegmentSet() const;
@@ -120,32 +120,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Edited Video Playback URL
+                     * <p>Edited Video Playback URL.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Unique identifier of media file for post-editing solidified video.
+                     * <p>Unique identifier of media file for post-editing solidified video.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Edited video task flow ID after solidification.
+                     * <p>ID of the edited video task flow after solidification.</p>
                      */
                     std::string m_vodTaskId;
                     bool m_vodTaskIdHasBeenSet;
 
                     /**
-                     * Edited Video Metadata
+                     * <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * <span id="p_segmentset">Edited video clip information.</span>
+                     * <p><span id="p_segmentset">Edited video clip information.</span></p>
                      */
                     std::vector<LiveRealTimeClipMediaSegmentInfo> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trimmed video address
-                     * @return Url Trimmed video address
+                     * 获取<p>Trimmed video address.</p>
+                     * @return Url <p>Trimmed video address.</p>
                      * 
                      */
                     std::string GetUrl() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
-                     * @return MetaData Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+                     * 获取<p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
+                     * @return MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
                      * 
                      */
                     MediaMetaData GetMetaData() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取Unique identifier of the media file for post-editing solidified video.
-                     * @return FileId Unique identifier of the media file for post-editing solidified video.
+                     * 获取<p>Unique identifier of media file for post-editing solidified video.</p>
+                     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
                      * 
                      */
                     std::string GetFileId() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Edited video task flow ID after solidification.
-                     * @return TaskId Edited video task flow ID after solidification.
+                     * 获取<p>ID of the edited video task flow after solidification.</p>
+                     * @return TaskId <p>ID of the edited video task flow after solidification.</p>
                      * 
                      */
                     std::string GetTaskId() const;
@@ -103,25 +103,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Trimmed video address
+                     * <p>Trimmed video address.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+                     * <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * Unique identifier of the media file for post-editing solidified video.
+                     * <p>Unique identifier of media file for post-editing solidified video.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Edited video task flow ID after solidification.
+                     * <p>ID of the edited video task flow after solidification.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
