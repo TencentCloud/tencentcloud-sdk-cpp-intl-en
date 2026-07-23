@@ -15,10 +15,27 @@
 #
 
 set(rce_public_header
+  include/tencentcloud/rce/v20260130/RceClient.h
   include/tencentcloud/rce/v20201103/RceClient.h
   )
 
 set(rce_public_header_model
+  include/tencentcloud/rce/v20260130/model/RiskLabel.h
+  include/tencentcloud/rce/v20260130/model/Environment.h
+  include/tencentcloud/rce/v20260130/model/AssessEnvironmentRiskRsp.h
+  include/tencentcloud/rce/v20260130/model/IPLocation.h
+  include/tencentcloud/rce/v20260130/model/DataScore.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskRsp.h
+  include/tencentcloud/rce/v20260130/model/AssessEnvironmentRiskResponse.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskPremiumProResponse.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskProRequest.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskPremiumProRequest.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskProResponse.h
+  include/tencentcloud/rce/v20260130/model/IPNetwork.h
+  include/tencentcloud/rce/v20260130/model/AssessDeviceRiskPremiumRsp.h
+  include/tencentcloud/rce/v20260130/model/AssessEnvironmentRiskRequest.h
+  include/tencentcloud/rce/v20260130/model/Device.h
+  include/tencentcloud/rce/v20260130/model/Decision.h
   include/tencentcloud/rce/v20201103/model/DescribeRiskAssessmentRequest.h
   include/tencentcloud/rce/v20201103/model/OutputRiskAssessmentExtraInfoPair.h
   include/tencentcloud/rce/v20201103/model/OutputRiskAssessment.h
@@ -28,7 +45,24 @@ set(rce_public_header_model
   )
 
 set(rce_src
+  src/v20260130/RceClient.cpp
   src/v20201103/RceClient.cpp
+  src/v20260130/model/RiskLabel.cpp
+  src/v20260130/model/Environment.cpp
+  src/v20260130/model/AssessEnvironmentRiskRsp.cpp
+  src/v20260130/model/IPLocation.cpp
+  src/v20260130/model/DataScore.cpp
+  src/v20260130/model/AssessDeviceRiskRsp.cpp
+  src/v20260130/model/AssessEnvironmentRiskResponse.cpp
+  src/v20260130/model/AssessDeviceRiskPremiumProResponse.cpp
+  src/v20260130/model/AssessDeviceRiskProRequest.cpp
+  src/v20260130/model/AssessDeviceRiskPremiumProRequest.cpp
+  src/v20260130/model/AssessDeviceRiskProResponse.cpp
+  src/v20260130/model/IPNetwork.cpp
+  src/v20260130/model/AssessDeviceRiskPremiumRsp.cpp
+  src/v20260130/model/AssessEnvironmentRiskRequest.cpp
+  src/v20260130/model/Device.cpp
+  src/v20260130/model/Decision.cpp
   src/v20201103/model/DescribeRiskAssessmentRequest.cpp
   src/v20201103/model/OutputRiskAssessmentExtraInfoPair.cpp
   src/v20201103/model/OutputRiskAssessment.cpp
