@@ -48,18 +48,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
                      * @return Period Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
                      * @param _period Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -73,13 +73,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
                      * @return RenewFlag Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
                      * 
@@ -88,13 +88,13 @@ namespace TencentCloud
 
                     /**
                      * 设置Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
                      * @param _renewFlag Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
                      * 
@@ -112,15 +112,15 @@ namespace TencentCloud
 
                     /**
                      * Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
                      * Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
                      */

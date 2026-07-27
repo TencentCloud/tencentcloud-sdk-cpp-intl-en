@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Event ID
-                     * @return Ids Event ID
+                     * 获取<p>Event ID.</p>
+                     * @return Ids <p>Event ID.</p>
                      * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
-                     * 设置Event ID
-                     * @param _ids Event ID
+                     * 设置<p>Event ID.</p>
+                     * @param _ids <p>Event ID.</p>
                      * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Event ID
+                     * <p>Event ID.</p>
                      */
                     std::vector<uint64_t> m_ids;
                     bool m_idsHasBeenSet;

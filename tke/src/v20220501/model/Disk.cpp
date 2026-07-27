@@ -25,7 +25,10 @@ Disk::Disk() :
     m_diskSizeHasBeenSet(false),
     m_autoFormatAndMountHasBeenSet(false),
     m_fileSystemHasBeenSet(false),
-    m_mountTargetHasBeenSet(false)
+    m_mountTargetHasBeenSet(false),
+    m_diskIdHasBeenSet(false),
+    m_encryptHasBeenSet(false),
+    m_kmsKeyIdHasBeenSet(false)
 {
 }
 
@@ -84,6 +87,36 @@ CoreInternalOutcome Disk::Deserialize(const rapidjson::Value &value)
         m_mountTargetHasBeenSet = true;
     }
 
+    if (value.HasMember("DiskId") && !value["DiskId"].IsNull())
+    {
+        if (!value["DiskId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.DiskId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_diskId = string(value["DiskId"].GetString());
+        m_diskIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("Encrypt") && !value["Encrypt"].IsNull())
+    {
+        if (!value["Encrypt"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.Encrypt` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encrypt = string(value["Encrypt"].GetString());
+        m_encryptHasBeenSet = true;
+    }
+
+    if (value.HasMember("KmsKeyId") && !value["KmsKeyId"].IsNull())
+    {
+        if (!value["KmsKeyId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.KmsKeyId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_kmsKeyId = string(value["KmsKeyId"].GetString());
+        m_kmsKeyIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +162,30 @@ void Disk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         string key = "MountTarget";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_mountTarget.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_diskIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_diskId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Encrypt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encrypt.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_kmsKeyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KmsKeyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_kmsKeyId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -212,5 +269,53 @@ void Disk::SetMountTarget(const string& _mountTarget)
 bool Disk::MountTargetHasBeenSet() const
 {
     return m_mountTargetHasBeenSet;
+}
+
+string Disk::GetDiskId() const
+{
+    return m_diskId;
+}
+
+void Disk::SetDiskId(const string& _diskId)
+{
+    m_diskId = _diskId;
+    m_diskIdHasBeenSet = true;
+}
+
+bool Disk::DiskIdHasBeenSet() const
+{
+    return m_diskIdHasBeenSet;
+}
+
+string Disk::GetEncrypt() const
+{
+    return m_encrypt;
+}
+
+void Disk::SetEncrypt(const string& _encrypt)
+{
+    m_encrypt = _encrypt;
+    m_encryptHasBeenSet = true;
+}
+
+bool Disk::EncryptHasBeenSet() const
+{
+    return m_encryptHasBeenSet;
+}
+
+string Disk::GetKmsKeyId() const
+{
+    return m_kmsKeyId;
+}
+
+void Disk::SetKmsKeyId(const string& _kmsKeyId)
+{
+    m_kmsKeyId = _kmsKeyId;
+    m_kmsKeyIdHasBeenSet = true;
+}
+
+bool Disk::KmsKeyIdHasBeenSet() const
+{
+    return m_kmsKeyIdHasBeenSet;
 }
 

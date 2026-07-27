@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size (GB)
-                     * @return DiskSize Cloud disk size (GB)
+                     * 获取Cloud disk size (G)
+                     * @return DiskSize Cloud disk size (G)
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size (GB)
-                     * @param _diskSize Cloud disk size (GB)
+                     * 设置Cloud disk size (G)
+                     * @param _diskSize Cloud disk size (G)
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -151,6 +151,81 @@ namespace TencentCloud
                      */
                     bool MountTargetHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return DiskId Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetDiskId() const;
+
+                    /**
+                     * 设置Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _diskId Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetDiskId(const std::string& _diskId);
+
+                    /**
+                     * 判断参数 DiskId 是否已赋值
+                     * @return DiskId 是否已赋值
+                     * 
+                     */
+                    bool DiskIdHasBeenSet() const;
+
+                    /**
+                     * 获取Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return Encrypt Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetEncrypt() const;
+
+                    /**
+                     * 设置Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _encrypt Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetEncrypt(const std::string& _encrypt);
+
+                    /**
+                     * 判断参数 Encrypt 是否已赋值
+                     * @return Encrypt 是否已赋值
+                     * 
+                     */
+                    bool EncryptHasBeenSet() const;
+
+                    /**
+                     * 获取Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @return KmsKeyId Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    std::string GetKmsKeyId() const;
+
+                    /**
+                     * 设置Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * @param _kmsKeyId Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     * 
+                     */
+                    void SetKmsKeyId(const std::string& _kmsKeyId);
+
+                    /**
+                     * 判断参数 KmsKeyId 是否已赋值
+                     * @return KmsKeyId 是否已赋值
+                     * 
+                     */
+                    bool KmsKeyIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -160,7 +235,7 @@ namespace TencentCloud
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Cloud disk size (GB)
+                     * Cloud disk size (G)
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
@@ -182,6 +257,27 @@ namespace TencentCloud
                      */
                     std::string m_mountTarget;
                     bool m_mountTargetHasBeenSet;
+
+                    /**
+                     * Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_diskId;
+                    bool m_diskIdHasBeenSet;
+
+                    /**
+                     * Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_encrypt;
+                    bool m_encryptHasBeenSet;
+
+                    /**
+                     * Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+                     */
+                    std::string m_kmsKeyId;
+                    bool m_kmsKeyIdHasBeenSet;
 
                 };
             }

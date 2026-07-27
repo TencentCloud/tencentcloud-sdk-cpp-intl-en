@@ -35,7 +35,13 @@ PassportRecognizeInfos::PassportRecognizeInfos() :
     m_signatureHasBeenSet(false),
     m_issuePlaceHasBeenSet(false),
     m_issuingAuthorityHasBeenSet(false),
-    m_birthPlaceHasBeenSet(false)
+    m_birthPlaceHasBeenSet(false),
+    m_passportFlagHasBeenSet(false),
+    m_middleNameHasBeenSet(false),
+    m_fatherNameHasBeenSet(false),
+    m_motherNameHasBeenSet(false),
+    m_titleHasBeenSet(false),
+    m_postnameHasBeenSet(false)
 {
 }
 
@@ -194,6 +200,66 @@ CoreInternalOutcome PassportRecognizeInfos::Deserialize(const rapidjson::Value &
         m_birthPlaceHasBeenSet = true;
     }
 
+    if (value.HasMember("PassportFlag") && !value["PassportFlag"].IsNull())
+    {
+        if (!value["PassportFlag"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.PassportFlag` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_passportFlag = string(value["PassportFlag"].GetString());
+        m_passportFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("MiddleName") && !value["MiddleName"].IsNull())
+    {
+        if (!value["MiddleName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.MiddleName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_middleName = string(value["MiddleName"].GetString());
+        m_middleNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("FatherName") && !value["FatherName"].IsNull())
+    {
+        if (!value["FatherName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.FatherName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fatherName = string(value["FatherName"].GetString());
+        m_fatherNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("MotherName") && !value["MotherName"].IsNull())
+    {
+        if (!value["MotherName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.MotherName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_motherName = string(value["MotherName"].GetString());
+        m_motherNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("Title") && !value["Title"].IsNull())
+    {
+        if (!value["Title"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.Title` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_title = string(value["Title"].GetString());
+        m_titleHasBeenSet = true;
+    }
+
+    if (value.HasMember("Postname") && !value["Postname"].IsNull())
+    {
+        if (!value["Postname"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `PassportRecognizeInfos.Postname` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_postname = string(value["Postname"].GetString());
+        m_postnameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -319,6 +385,54 @@ void PassportRecognizeInfos::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "BirthPlace";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_birthPlace.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passportFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PassportFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_passportFlag.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_middleNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MiddleName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_middleName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fatherNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FatherName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fatherName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_motherNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MotherName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_motherName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_titleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Title";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_title.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_postnameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Postname";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_postname.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -562,5 +676,101 @@ void PassportRecognizeInfos::SetBirthPlace(const string& _birthPlace)
 bool PassportRecognizeInfos::BirthPlaceHasBeenSet() const
 {
     return m_birthPlaceHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetPassportFlag() const
+{
+    return m_passportFlag;
+}
+
+void PassportRecognizeInfos::SetPassportFlag(const string& _passportFlag)
+{
+    m_passportFlag = _passportFlag;
+    m_passportFlagHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::PassportFlagHasBeenSet() const
+{
+    return m_passportFlagHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetMiddleName() const
+{
+    return m_middleName;
+}
+
+void PassportRecognizeInfos::SetMiddleName(const string& _middleName)
+{
+    m_middleName = _middleName;
+    m_middleNameHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::MiddleNameHasBeenSet() const
+{
+    return m_middleNameHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetFatherName() const
+{
+    return m_fatherName;
+}
+
+void PassportRecognizeInfos::SetFatherName(const string& _fatherName)
+{
+    m_fatherName = _fatherName;
+    m_fatherNameHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::FatherNameHasBeenSet() const
+{
+    return m_fatherNameHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetMotherName() const
+{
+    return m_motherName;
+}
+
+void PassportRecognizeInfos::SetMotherName(const string& _motherName)
+{
+    m_motherName = _motherName;
+    m_motherNameHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::MotherNameHasBeenSet() const
+{
+    return m_motherNameHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetTitle() const
+{
+    return m_title;
+}
+
+void PassportRecognizeInfos::SetTitle(const string& _title)
+{
+    m_title = _title;
+    m_titleHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::TitleHasBeenSet() const
+{
+    return m_titleHasBeenSet;
+}
+
+string PassportRecognizeInfos::GetPostname() const
+{
+    return m_postname;
+}
+
+void PassportRecognizeInfos::SetPostname(const string& _postname)
+{
+    m_postname = _postname;
+    m_postnameHasBeenSet = true;
+}
+
+bool PassportRecognizeInfos::PostnameHasBeenSet() const
+{
+    return m_postnameHasBeenSet;
 }
 

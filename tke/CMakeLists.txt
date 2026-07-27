@@ -404,6 +404,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20220501/model/Label.h
   include/tencentcloud/tke/v20220501/model/HealthCheckPolicyBinding.h
   include/tencentcloud/tke/v20220501/model/CreateHealthCheckPolicyRequest.h
+  include/tencentcloud/tke/v20220501/model/ModifyClusterMachineRequest.h
   include/tencentcloud/tke/v20220501/model/InstanceExtraArgs.h
   include/tencentcloud/tke/v20220501/model/MachineUpgradeSettings.h
   include/tencentcloud/tke/v20220501/model/UpdateNativeNodePoolParam.h
@@ -413,6 +414,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20220501/model/MachineSetScaling.h
   include/tencentcloud/tke/v20220501/model/ModifyNodePoolRequest.h
   include/tencentcloud/tke/v20220501/model/Annotation.h
+  include/tencentcloud/tke/v20220501/model/ModifyClusterMachineResponse.h
   include/tencentcloud/tke/v20220501/model/DescribeClusterInstancesRequest.h
   include/tencentcloud/tke/v20220501/model/DeleteHealthCheckPolicyResponse.h
   include/tencentcloud/tke/v20220501/model/TagSpecification.h
@@ -836,6 +838,7 @@ set(tke_src
   src/v20220501/model/Label.cpp
   src/v20220501/model/HealthCheckPolicyBinding.cpp
   src/v20220501/model/CreateHealthCheckPolicyRequest.cpp
+  src/v20220501/model/ModifyClusterMachineRequest.cpp
   src/v20220501/model/InstanceExtraArgs.cpp
   src/v20220501/model/MachineUpgradeSettings.cpp
   src/v20220501/model/UpdateNativeNodePoolParam.cpp
@@ -845,6 +848,7 @@ set(tke_src
   src/v20220501/model/MachineSetScaling.cpp
   src/v20220501/model/ModifyNodePoolRequest.cpp
   src/v20220501/model/Annotation.cpp
+  src/v20220501/model/ModifyClusterMachineResponse.cpp
   src/v20220501/model/DescribeClusterInstancesRequest.cpp
   src/v20220501/model/DeleteHealthCheckPolicyResponse.cpp
   src/v20220501/model/TagSpecification.cpp
