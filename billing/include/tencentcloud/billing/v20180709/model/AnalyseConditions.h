@@ -240,14 +240,14 @@ namespace TencentCloud
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
                      * @return FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
                      * 
                      */
                     std::string GetFeeType() const;
@@ -257,14 +257,14 @@ costBeforeTax: pre-tax price
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
                      * @param _feeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
                      * 
                      */
                     void SetFeeType(const std::string& _feeType);
@@ -400,8 +400,8 @@ costBeforeTax: pre-tax price
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
                      */
                     std::string m_feeType;
                     bool m_feeTypeHasBeenSet;

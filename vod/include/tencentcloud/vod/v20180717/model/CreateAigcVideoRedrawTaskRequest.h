@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/AigcVideoRedrawTaskInputFileInfo.h>
+#include <tencentcloud/vod/v20180717/model/AigcVideoRedrawTaskInfo.h>
 #include <tencentcloud/vod/v20180717/model/AigcVideoRedrawOutputConfig.h>
 
 
@@ -85,6 +86,27 @@ namespace TencentCloud
                      * 
                      */
                     bool FileInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Parameters for the AIGC video conversion task.</p>
+                     * @return TaskInfo <p>Parameters for the AIGC video conversion task.</p>
+                     * 
+                     */
+                    AigcVideoRedrawTaskInfo GetTaskInfo() const;
+
+                    /**
+                     * 设置<p>Parameters for the AIGC video conversion task.</p>
+                     * @param _taskInfo <p>Parameters for the AIGC video conversion task.</p>
+                     * 
+                     */
+                    void SetTaskInfo(const AigcVideoRedrawTaskInfo& _taskInfo);
+
+                    /**
+                     * 判断参数 TaskInfo 是否已赋值
+                     * @return TaskInfo 是否已赋值
+                     * 
+                     */
+                    bool TaskInfoHasBeenSet() const;
 
                     /**
                      * 获取<p>Output media file configuration for the AIGC video conversion task.</p>
@@ -204,6 +226,12 @@ namespace TencentCloud
                      */
                     AigcVideoRedrawTaskInputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;
+
+                    /**
+                     * <p>Parameters for the AIGC video conversion task.</p>
+                     */
+                    AigcVideoRedrawTaskInfo m_taskInfo;
+                    bool m_taskInfoHasBeenSet;
 
                     /**
                      * <p>Output media file configuration for the AIGC video conversion task.</p>
