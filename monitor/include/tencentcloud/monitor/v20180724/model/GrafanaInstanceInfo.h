@@ -283,15 +283,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid value: `1` (monthly subscription).
-                     * @return InstanceChargeType Billing mode. Valid value: `1` (monthly subscription).
+                     * 获取Billing mode. Valid value: `1` (yearly/monthly subscription).
+                     * @return InstanceChargeType Billing mode. Valid value: `1` (yearly/monthly subscription).
                      * 
                      */
                     int64_t GetInstanceChargeType() const;
 
                     /**
-                     * 设置Billing mode. Valid value: `1` (monthly subscription).
-                     * @param _instanceChargeType Billing mode. Valid value: `1` (monthly subscription).
+                     * 设置Billing mode. Valid value: `1` (yearly/monthly subscription).
+                     * @param _instanceChargeType Billing mode. Valid value: `1` (yearly/monthly subscription).
                      * 
                      */
                     void SetInstanceChargeType(const int64_t& _instanceChargeType);
@@ -520,7 +520,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Billing mode. Valid value: `1` (monthly subscription).
+                     * Billing mode. Valid value: `1` (yearly/monthly subscription).
                      */
                     int64_t m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
