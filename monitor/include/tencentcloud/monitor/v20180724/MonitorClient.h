@@ -125,6 +125,8 @@
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticeResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticeCallbacksRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticeCallbacksResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmNoticesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeAlarmPoliciesRequest.h>
@@ -502,6 +504,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAlarmNoticeCallbacksResponse> DescribeAlarmNoticeCallbacksOutcome;
                 typedef std::future<DescribeAlarmNoticeCallbacksOutcome> DescribeAlarmNoticeCallbacksOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeAlarmNoticeCallbacksRequest&, DescribeAlarmNoticeCallbacksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmNoticeCallbacksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse> DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcome;
+                typedef std::future<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcome> DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest&, DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAlarmNoticesResponse> DescribeAlarmNoticesOutcome;
                 typedef std::future<DescribeAlarmNoticesOutcome> DescribeAlarmNoticesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeAlarmNoticesRequest&, DescribeAlarmNoticesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmNoticesAsyncHandler;
@@ -1287,6 +1292,15 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribeAlarmNoticeCallbacksOutcome DescribeAlarmNoticeCallbacks(const Model::DescribeAlarmNoticeCallbacksRequest &request);
                 void DescribeAlarmNoticeCallbacksAsync(const Model::DescribeAlarmNoticeCallbacksRequest& request, const DescribeAlarmNoticeCallbacksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAlarmNoticeCallbacksOutcomeCallable DescribeAlarmNoticeCallbacksCallable(const Model::DescribeAlarmNoticeCallbacksRequest& request);
+
+                /**
+                 *This API is used to query the user information configured in the notification template.
+                 * @param req DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest
+                 * @return DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcome
+                 */
+                DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcome DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(const Model::DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest &request);
+                void DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDAsync(const Model::DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest& request, const DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDOutcomeCallable DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDCallable(const Model::DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest& request);
 
                 /**
                  *This API is used to query the list of notification templates.
